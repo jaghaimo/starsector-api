@@ -1,0 +1,184 @@
+package com.fs.starfarer.api.impl.campaign.ids;
+
+public class Stats {
+	
+	// outposts - these are admin stats, so, applied in "CharacterStatsSkillEffect"
+	public static final String SUPPLY_BONUS_MOD = "supply_bonus";
+	public static final String DEMAND_REDUCTION_MOD = "demand_reduction";
+	
+	// markets 
+	//- old, will probably replace these two?
+	public static final String OFFICER_NUM_MULT = "officer_num_mult";
+	public static final String OFFICER_LEVEL_MULT = "officer_level_mult";
+	
+	public static final String PRODUCTION_QUALITY_MOD = "production_quality_mod";
+	public static final String FLEET_QUALITY_MOD = "fleet_quality_mod";
+	public static final String COMBAT_FLEET_SIZE_MULT = "combat_fleet_size_mult";
+	public static final String COMBAT_FLEET_SPAWN_RATE_MULT = "combat_fleet_spawn_rate_mult";
+	
+	public static final String PATROL_NUM_HEAVY_MOD = "patrol_num_heavy_mod";
+	public static final String PATROL_NUM_MEDIUM_MOD = "patrol_num_medium_mod";
+	public static final String PATROL_NUM_LIGHT_MOD = "patrol_num_light_mod";
+	
+	public static final String GROUND_DEFENSES_MOD = "ground_defenses_mod";
+	
+	/**
+	 * Does not include structures.
+	 */
+	public static final String MAX_INDUSTRIES = "max_industries";
+	
+	// fleets
+	public static final String PLANETARY_OPERATIONS_MOD = "ground_attack_mod";
+	
+	public static final String CAN_SEE_NASCENT_POINTS = "can_see_nascent_points"; // not actually used, can always see
+	
+	public static final String SURVEY_MAX_HAZARD = "survey_max_hazard";
+	public static final String SURVEY_COST_MULT = "survey_cost_mult"; // unused/unimplemented
+	//public static final String SALVAGE_MAX_RATING = "salvage_max_rating";
+	
+	public static final String NAVIGATION_PENALTY_MULT = "nav_penalty_mult";
+	public static final String COORDINATED_MANEUVERS_MAX = "coord_maneuvers_max";
+	public static final String ELECTRONIC_WARFARE_MAX = "electronic_warfare_max";
+	
+	public static final String FUEL_SALVAGE_VALUE_MULT_FLEET = "fuel_salvage_value_mult_fleet";
+	public static final String SALVAGE_VALUE_MULT_FLEET_INCLUDES_RARE = "salvage_value_bonus_fleet";
+	public static final String BATTLE_SALVAGE_MULT_FLEET = "battle_salvage_value_bonus_fleet";
+	
+	public static final String COMMAND_POINT_RATE_COMMANDER = "command_point_rate";
+	public static final String NON_COMBAT_CREW_LOSS_MULT = "overall_crew_loss_mult";
+	
+	public static final String OWN_WEAPON_RECOVERY_MOD = "own_weapon_recovery_mod";
+	public static final String OWN_WING_RECOVERY_MOD = "own_wing_recovery_mod";
+	
+	public static final String ENEMY_WEAPON_RECOVERY_MOD = "enemy_weapon_recovery_mod";
+	public static final String ENEMY_WING_RECOVERY_MOD = "enemy_wing_recovery_mod";
+	
+	public static final String SHIP_RECOVERY_MOD = "ship_recovery_mod";
+	public static final String SHIP_DMOD_REDUCTION = "ship_dmod_reduction_mod";
+	
+	public static final String OFFICER_SHIP_RECOVERY_MOD = "officer_ship_recovery_mod";
+	
+	public static final String RECOVERED_CR_MIN = "ship_recovery_cr_min";
+	public static final String RECOVERED_CR_MAX = "ship_recovery_cr_max";
+	public static final String RECOVERED_HULL_MIN = "ship_recovery_hull_min";
+	public static final String RECOVERED_HULL_MAX = "ship_recovery_hull_max";
+	
+	
+	// fleet ability modifiers
+	public static final String GO_DARK_DETECTED_AT_MULT = "go_dark_effectiveness";
+	public static final String GO_DARK_BURN_PENALTY_MULT = "go_dark_burn_penalty_mult";
+	public static final String SENSOR_BURST_BURN_PENALTY_MULT = "sensor_burst_penalty_mult";
+	public static final String SUSTAINED_BURN_BONUS = "sustained_burn_bonus";
+	public static final String EMERGENCY_BURN_CR_MULT = "emergency_burn_mult";
+	public static final String DIRECT_JUMP_CR_MULT = "direct_jump_cr_mult";
+	
+	
+	// fleet members
+	public static final String FLEET_GROUND_SUPPORT = "ground_support";
+	public static final String FLEET_BOMBARD_COST_REDUCTION = "fleet_bombard_cost_reduction";
+	
+	public static final String CORONA_EFFECT_MULT = "corona_resistance";
+	public static final String BOARDING_CHANCE_MULT = "boarding_chance_mult";
+	
+	/**
+	 * 25% of this modifier applies to post-combat salvage.
+	 */
+	public static final String SALVAGE_VALUE_MULT_MOD = "salvage_value_bonus_ship";
+	
+	//public static final String BATTLE_SALVAGE_VALUE_MULT_MOD = "battle_salvage_value_bonus_ship";
+	public static final String HULL_DAMAGE_CR_LOSS = "hull_damage_cr_loss";
+	public static final String SURVEY_COST_REDUCTION = "survey_cost_reduction_";
+	public static final String FLEET_BURN_BONUS = "fleet_burn_bonus";
+	public static String getSurveyCostReductionId(String commodityId) {
+		return SURVEY_COST_REDUCTION + commodityId;
+	}
+	
+	// ships
+	public static final String MAX_LOGISTICS_HULLMODS_MOD = "max_logistics_hullmods_mod";
+	
+	public static final String PD_IGNORES_FLARES = "pd_ignores_flares";
+	public static final String PD_BEST_TARGET_LEADING = "pd_best_target_leading";
+	
+	public static final String SHIELD_PIERCED_MULT = "shield_pierced_mult";
+	public static final String PHASE_TIME_BONUS_MULT = "phase_time_mult";
+	
+	public static final String FIGHTER_CREW_LOSS_MULT = "fighter_crew_loss_mult";
+	
+	public static final String EXPLOSION_RADIUS_MULT = "explosion_radius_mult";
+	public static final String EXPLOSION_DAMAGE_MULT = "explosion_damage_mult";
+	
+	public static final String COORDINATED_MANEUVERS_FLAT = "coord_maneuvers_flat";
+	public static final String ELECTRONIC_WARFARE_FLAT = "electronic_warfare_flat";
+	public static final String ELECTRONIC_WARFARE_PENALTY_MULT = "electronic_warfare_penalty_mult";
+	public static final String COMMAND_POINT_RATE_FLAT = "command_point_rate_flat";
+	public static final String INDIVIDUAL_SHIP_RECOVERY_MOD = "individual_ship_recovery_mod";
+	
+	public static final String INSTA_REPAIR_FRACTION = "insta_repair_fraction";
+	
+	public static final String CR_MALFUNCION_RANGE = "cr_malfunction_range_mult";
+	
+	public static final String REPLACEMENT_RATE_DECREASE_MULT = "replacement_rate_decrease_mult";
+	public static final String REPLACEMENT_RATE_INCREASE_MULT = "replacement_rate_increase_mult";
+	
+	public static final String DMOD_EFFECT_MULT = "dmod_effect_mult";
+	public static final String DMOD_REDUCE_MAINTENANCE = "dmod_reduce_maintenance";
+	
+	
+	// OP cost reductions - used from core, but specified as dynamic stats to avoid adding all the
+	// always-there stats to MutableShipStats.
+	public static final String SMALL_BALLISTIC_MOD = "small_ballistic_mod";
+	public static final String MEDIUM_BALLISTIC_MOD = "medium_ballistic_mod";
+	public static final String LARGE_BALLISTIC_MOD = "large_ballistic_mod";
+	
+	public static final String ALL_FIGHTER_COST_MOD = "all_fighter_cost_mod";
+	public static final String FIGHTER_COST_MOD = "fighter_cost_mod";
+	public static final String BOMBER_COST_MOD = "bomber_cost_mod";
+	public static final String INTERCEPTOR_COST_MOD = "interceptor_cost_mod";
+	public static final String SUPPORT_COST_MOD = "support_cost_mod";
+	
+	public static final String SMALL_ENERGY_MOD = "small_energy_mod";
+	public static final String MEDIUM_ENERGY_MOD = "medium_energy_mod";
+	public static final String LARGE_ENERGY_MOD = "large_energy_mod";
+	
+	public static final String SMALL_MISSILE_MOD = "small_missile_mod";
+	public static final String MEDIUM_MISSILE_MOD = "medium_missile_mod";
+	public static final String LARGE_MISSILE_MOD = "large_missile_mod";
+	
+	public static final String SMALL_PD_MOD = "small_pd_mod";
+	public static final String MEDIUM_PD_MOD = "medium_pd_mod";
+	public static final String LARGE_PD_MOD = "large_pd_mod";
+	
+	public static final String SMALL_BEAM_MOD = "small_beam_mod";
+	public static final String MEDIUM_BEAM_MOD = "medium_beam_mod";
+	public static final String LARGE_BEAM_MOD = "large_beam_mod";
+		
+	
+	
+	/**
+	 * Base chance is 0.5. 
+	 */
+	public static final String MODULE_DETACH_CHANCE_MULT = "module_detach_chance_mult";
+	
+	public static final String DO_NOT_FIRE_THROUGH = "do_not_fire_through";
+	
+	
+//	public static final String SALVAGE_COST_REDUCTION = "survey_cost_reduction_";
+//	public static String getSalvageCostReductionId(String commodityId) {
+//		return SALVAGE_COST_REDUCTION + commodityId;
+//	}
+	
+	// markets
+	public static final String TRADE_IMPACT_MULT_PREFIX = "trade_impact_mult_";
+	public static String getPlayerTradeRepImpactMultId(String commodityId) {
+		return TRADE_IMPACT_MULT_PREFIX + commodityId;
+	}
+	public static String getPlayerBuyRepImpactMultId(String commodityId) {
+		return TRADE_IMPACT_MULT_PREFIX + commodityId + "_buy";
+	}
+	public static String getPlayerSellRepImpactMultId(String commodityId) {
+		return TRADE_IMPACT_MULT_PREFIX + commodityId + "_sell";
+	}
+	
+
+	
+}

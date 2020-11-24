@@ -1,0 +1,170 @@
+/**
+ * 
+ */
+package com.fs.starfarer.api.impl.campaign.shared;
+
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
+import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.SectorAPI;
+import com.fs.starfarer.api.campaign.econ.MonthlyReport;
+import com.fs.starfarer.api.impl.campaign.CoreScript;
+import com.fs.starfarer.api.util.TimeoutTracker;
+
+public class SharedData {
+	
+	protected TimeoutTracker<String> marketsThatSentRelief = new TimeoutTracker<String>();
+	protected TimeoutTracker<String> marketsThatSentTradeFleet = new TimeoutTracker<String>();
+	//private TimeoutTracker<String> starSystemCustomsTimeout = new TimeoutTracker<String>();
+	
+	// faction, then star system
+	protected Map<String, TimeoutTracker<String>> starSystemCustomsTimeout = new LinkedHashMap<String, TimeoutTracker<String>>();
+	
+	//protected SectorActivityTracker activityTracker = new SectorActivityTracker();
+	protected PlayerActivityTracker playerActivityTracker = new PlayerActivityTracker();
+	
+	protected Set<String> marketsWithoutTradeFleetSpawn = new HashSet<String>();
+	//protected Set<String> marketsWithoutPatrolSpawn = new HashSet<String>();
+	
+	private PersonBountyEventData personBountyEventData = new PersonBountyEventData();
+
+	protected float playerPreLosingBattleFP = -1;
+	protected float playerPreLosingBattleCrew = -1;
+	protected long playerLosingBattleTimestamp = 0;
+	
+	protected MonthlyReport previousReport = new MonthlyReport();
+	protected MonthlyReport currentReport = new MonthlyReport();
+	
+	public SharedData() {
+	}
+	
+	public MonthlyReport getPreviousReport() {
+		if (previousReport == null) previousReport = new MonthlyReport();
+		return previousReport;
+	}
+	public MonthlyReport getCurrentReport() {
+		if (currentReport == null) currentReport = new MonthlyReport();
+		return currentReport;
+	}
+	public void setCurrentReport(MonthlyReport currentReport) {
+		this.currentReport = currentReport;
+	}
+	public void setPreviousReport(MonthlyReport previousReport) {
+		this.previousReport = previousReport;
+	}
+	
+	public void rollOverReport() {
+		previousReport = currentReport;
+		currentReport = new MonthlyReport();
+	}
+
+	public long getPlayerLosingBattleTimestamp() {
+		return playerLosingBattleTimestamp;
+	}
+
+	public void setPlayerLosingBattleTimestamp(long playerLosingBattleTimestamp) {
+		this.playerLosingBattleTimestamp = playerLosingBattleTimestamp;
+	}
+
+	public float getPlayerPreLosingBattleFP() {
+		return playerPreLosingBattleFP;
+	}
+
+	public void setPlayerPreLosingBattleFP(float playerPreLosingBattleFP) {
+		this.playerPreLosingBattleFP = playerPreLosingBattleFP;
+	}
+
+	public float getPlayerPreLosingBattleCrew() {
+		return playerPreLosingBattleCrew;
+	}
+
+	public void setPlayerPreLosingBattleCrew(float playerPreLosingBattleCrew) {
+		this.playerPreLosingBattleCrew = playerPreLosingBattleCrew;
+	}
+
+	protected Object readResolve() {
+		if (starSystemCustomsTimeout == null) {
+			starSystemCustomsTimeout = new LinkedHashMap<String, TimeoutTracker<String>>();
+		}
+		if (personBountyEventData == null) {
+			personBountyEventData = new PersonBountyEventData();
+		}
+		return this;
+	}
+
+	public PersonBountyEventData getPersonBountyEventData() {
+		return personBountyEventData;
+	}
+
+	public void advance(float amount) {
+		
+		SectorAPI sector = Global.getSector();
+		if (sector.isPaused()) {
+			return;
+		}
+		
+		float days = sector.getClock().convertToDays(amount);
+		
+		marketsThatSentRelief.advance(days);
+		marketsThatSentTradeFleet.advance(days);
+		
+		for (TimeoutTracker<String> curr : starSystemCustomsTimeout.values()) {
+			curr.advance(days);
+		}
+		
+		//activityTracker.advance(days);
+		playerActivityTracker.advance(days);
+	}
+	
+
+	
+//	public SectorActivityTracker getActivityTracker() {
+//		return activityTracker;
+//	}
+
+	public TimeoutTracker<String> getMarketsThatSentRelief() {
+		return marketsThatSentRelief;
+	}
+	public TimeoutTracker<String> getMarketsThatSentTradeFleet() {
+		return marketsThatSentTradeFleet;
+	}
+	
+	public PlayerActivityTracker getPlayerActivityTracker() {
+		return playerActivityTracker;
+	}
+
+	public static SharedData getData() {
+		Object data = Global.getSector().getPersistentData().get(CoreScript.SHARED_DATA_KEY);
+		if (data == null) {
+			data = new SharedData();
+			Global.getSector().getPersistentData().put(CoreScript.SHARED_DATA_KEY, data);
+		}
+		return (SharedData) data;
+	}
+
+	public Set<String> getMarketsWithoutTradeFleetSpawn() {
+		return marketsWithoutTradeFleetSpawn;
+	}
+
+
+	public void resetCustomsTimeouts() {
+		starSystemCustomsTimeout.clear();
+	}
+	
+	public TimeoutTracker<String> getStarSystemCustomsTimeout(String factionId) {
+		TimeoutTracker<String> tracker = starSystemCustomsTimeout.get(factionId);
+		if (tracker == null) {
+			tracker = new TimeoutTracker<String>();
+			starSystemCustomsTimeout.put(factionId, tracker);
+		}
+		return tracker;
+	}
+	
+}
+
+
+
+
