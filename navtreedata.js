@@ -1,0 +1,102 @@
+/*
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
+
+ The MIT License (MIT)
+
+ Copyright (C) 1997-2020 by Dimitri van Heesch
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
+*/
+var NAVTREE =
+[
+  [ "Starsector API", "index.html", [
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
+    ] ]
+  ] ]
+];
+
+var NAVTREEINDEX =
+[
+"annotated.html",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a7b89a90f6b3eff7f661c700fdc445c74",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#abe88b1985fce5dd01221fbefe3f1e41b",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html#a3d5e1d5b9288539a914fcf5cd50eb854",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript.html#a01c1d1c211796519b90e7abe487f5c68",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a145d353081cf7f9216a867f511799e5a",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a3e78fb350363a1cb6415bcce38fb42cc",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RogueAICore.html#a75fc65ee27ea1fad3f2f753a2f89e39c",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a5eddf5d69ca432e008174a62c17f038a",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PopulationAndInfrastructure.html#a47089a22cb71415137e6d1213b60b8b5",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html#a15efae49efd5f654938c91e737157b51",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableAggroAssignmentAI.html#af31c80ec576e29655246c0c35ca28151",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SourceBasedFleetManager.html#a299b7c5142bd1496b7931d555c3594bd",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a56ed0b01144ba61f191efa4d0dcd0aff",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a952fc5b4c8f5b34818f52d124916b73a",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a92aa8e711cf38b3af65ec05356bb6d30",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a7cbfda0de9d84c7b22200a7646e507d7",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html#ae36ba6fe2f850cb274223292d6f1a45f",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#ad0cfc41d4ca95478e02f074d7a6bac62",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a709064547c5e5029353bcf390599c3c9",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1TestCampaignMission.html#aa3fd4bc67bdc889025b7acec1da3c7bc",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NebulaEditor.html#a318c67c8e3c7252c6f20b89325bdb117",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#ae4defae247f944ec92c0100cd8af7ba7",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCharacterPoints.html",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a15fdf8188b8c10a2fc8c40f91cb0773a",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html#a8540e4acd611ace82639741bd14ce144",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a3d95c856632b640e517702224fcb6bda",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a957e47b0c88f3b1b4d7a0318ba84ae4d",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a55bce653ddcdd6abf7cab6c85c0735e0",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a11ebaf9e02c7d170c377932aaac9f128",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html#aed65078068a9daebf5c781c205a44791",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec.html#af0480ce4be7b57b0b26673c83edd049a",
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a3c3218ba678a7060bdd04a0362c403fc",
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventType.html#a29a6cfe06393eaf4f6c10fe4682c048f",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a8445913c036b1110feca893054a3b8d0",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a6cdef0efd31d52321de0991182154e01",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html#a9bae832690156e5a84ffa18aa799d6dd",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a9adc07b042d3a6c7e293f1fb031912d6",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubConverterPlugin.html#a429195dd2ff95f988a38867f9fecc71d",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a850f994ea44fd653a5f71505261e7294",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a96caedc810a8cc40118d9c6d788928d9",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html#a35c07d1d22dd1b7e8bf152ca05dac6fd",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageSectionAPI.html",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#ae2fa6d87ad24871f6c83dbeffeb2d2c5",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a6c318f4c2b2d0bcdf73dff72462ec98a",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI_1_1PersonDataAPI.html",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a14606a920af6a40b2488ed0348e83c1f",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EngagementResultAPI.html#a3a8f09a2a60ff5b967ca7013c9345fdf",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a6a76c12dcdf3555a187afb157bb7f554",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#ab8260122c884394d4bdae8b4dbd8737d",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a48f6ee2f1f30ab2078fe80ee7e46d0c5",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#ab19972bcb749dcfe489fb03b16007231",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html#a6bd38261dbe91d5e6f478ba87df9b221",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSpecAPI.html#af90790fb13618fa3019c4cdef862feb7",
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#ac0cec9cb682c7f9a85d9388aa295155a"
+];
+
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';

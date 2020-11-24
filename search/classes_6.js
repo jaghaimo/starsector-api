@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['galatiamarketscript_2111',['GalatiaMarketScript',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatiaMarketScript.html',1,'com::fs::starfarer::api::impl::campaign::tutorial']]],
+  ['galatianacademystipend_2112',['GalatianAcademyStipend',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html',1,'com::fs::starfarer::api::impl::campaign::tutorial']]],
+  ['gamestate_2113',['GameState',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1GameState.html',1,'com::fs::starfarer::api']]],
+  ['genericcampaignentitysprite_2114',['GenericCampaignEntitySprite',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericCampaignEntitySprite.html',1,'com::fs::starfarer::api::impl::campaign']]],
+  ['genericfielditemmanager_2115',['GenericFieldItemManager',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html',1,'com::fs::starfarer::api::impl::campaign']]],
+  ['genericfielditemsprite_2116',['GenericFieldItemSprite',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemSprite.html',1,'com::fs::starfarer::api::impl::campaign']]],
+  ['genericmissionmanager_2117',['GenericMissionManager',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1GenericMissionManager.html',1,'com::fs::starfarer::api::impl::campaign::intel']]],
+  ['genericpluginmanagerapi_2118',['GenericPluginManagerAPI',['../interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GenericPluginManagerAPI.html',1,'com::fs::starfarer::api::campaign']]],
+  ['giveotherfleetassignment_2119',['GiveOtherFleetAssignment',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1GiveOtherFleetAssignment.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['glitchedsensorarray_2120',['GlitchedSensorArray',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GlitchedSensorArray.html',1,'com::fs::starfarer::api::impl::hullmods']]],
+  ['global_2121',['Global',['../classcom_1_1fs_1_1starfarer_1_1api_1_1Global.html',1,'com::fs::starfarer::api']]],
+  ['godarkability_2122',['GoDarkAbility',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html',1,'com::fs::starfarer::api::impl::campaign::abilities']]],
+  ['godarkabilityai_2123',['GoDarkAbilityAI',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1GoDarkAbilityAI.html',1,'com::fs::starfarer::api::impl::campaign::abilities::ai']]],
+  ['graviticscanability_2124',['GraviticScanAbility',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html',1,'com::fs::starfarer::api::impl::campaign::abilities']]],
+  ['graviticscandata_2125',['GraviticScanData',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanData.html',1,'com::fs::starfarer::api::impl::campaign::abilities']]],
+  ['gravityconditiongenerator_2126',['GravityConditionGenerator',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1GravityConditionGenerator.html',1,'com::fs::starfarer::api::impl::campaign::procgen']]],
+  ['grounddefenses_2127',['GroundDefenses',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GroundDefenses.html',1,'com::fs::starfarer::api::impl::campaign::econ::impl']]],
+  ['groundsupport_2128',['GroundSupport',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1GroundSupport.html',1,'com::fs::starfarer::api::impl::hullmods']]],
+  ['guidedmissileai_2129',['GuidedMissileAI',['../interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1GuidedMissileAI.html',1,'com::fs::starfarer::api::combat']]],
+  ['gunneryimplants_2130',['GunneryImplants',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1GunneryImplants.html',1,'com::fs::starfarer::api::impl::campaign::skills']]]
+];

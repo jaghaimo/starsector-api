@@ -1,0 +1,27 @@
+<map id="com.fs.starfarer.api.campaign.CampaignEventListener" name="com.fs.starfarer.api.campaign.CampaignEventListener">
+<area shape="rect" id="node1" title=" " alt="" coords="5,528,200,569"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html" title=" " alt="" coords="282,201,477,243"/>
+<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html" title=" " alt="" coords="248,821,511,863"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListenerAndScript.html" title=" " alt="" coords="587,5,834,47"/>
+<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html" title=" " alt="" coords="600,71,821,112"/>
+<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html" title=" " alt="" coords="579,136,842,177"/>
+<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManager.html" title=" " alt="" coords="583,201,838,243"/>
+<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2.html" title=" " alt="" coords="583,267,838,308"/>
+<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker.html" title=" " alt="" coords="579,332,842,373"/>
+<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html" title=" " alt="" coords="579,397,842,439"/>
+<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html" title=" " alt="" coords="579,463,842,504"/>
+<area shape="rect" id="node12" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html" title=" " alt="" coords="579,528,842,569"/>
+<area shape="rect" id="node13" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html" title=" " alt="" coords="579,593,842,635"/>
+<area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html" title=" " alt="" coords="579,659,842,700"/>
+<area shape="rect" id="node16" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html" title=" " alt="" coords="579,724,842,765"/>
+<area shape="rect" id="node17" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html" title=" " alt="" coords="579,789,842,831"/>
+<area shape="rect" id="node18" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html" title=" " alt="" coords="559,855,863,896"/>
+<area shape="rect" id="node19" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html" title=" " alt="" coords="579,920,842,961"/>
+<area shape="rect" id="node20" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html" title=" " alt="" coords="579,985,842,1027"/>
+<area shape="rect" id="node21" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html" title=" " alt="" coords="579,1051,842,1092"/>
+<area shape="rect" id="node22" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html" title=" " alt="" coords="579,1116,842,1157"/>
+<area shape="rect" id="node23" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html" title=" " alt="" coords="579,1181,842,1223"/>
+<area shape="rect" id="node24" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1TestMissionEvent.html" title=" " alt="" coords="573,1247,849,1288"/>
+<area shape="rect" id="node25" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html" title=" " alt="" coords="579,1312,842,1353"/>
+<area shape="rect" id="node15" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventCommSniffer.html" title=" " alt="" coords="911,659,1173,700"/>
+</map>
