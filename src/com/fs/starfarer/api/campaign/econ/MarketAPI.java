@@ -12,11 +12,12 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CommDirectoryAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.FactionAPI.ShipPickParams;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.FactionAPI.ShipPickParams;
+import com.fs.starfarer.api.campaign.rules.HasMemory;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.MutableStat;
@@ -28,7 +29,7 @@ import com.fs.starfarer.api.fleet.ShipRolePick;
 import com.fs.starfarer.api.impl.campaign.econ.impl.ConstructionQueue;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 
-public interface MarketAPI {
+public interface MarketAPI extends HasMemory {
 	
 	public static enum MarketInteractionMode {
 		LOCAL,
@@ -237,6 +238,11 @@ public interface MarketAPI {
 	void setPlanetConditionMarketOnly(boolean isPlanetConditionMarketOnly);
 	void setName(String name);
 	MutableStat getHazard();
+	
+	/**
+	 * 1f = 100%.
+	 * @return
+	 */
 	float getHazardValue();
 	
 //	boolean isSurveyed();
@@ -330,6 +336,11 @@ public interface MarketAPI {
 	
 	float getIncentiveCredits();
 	void setIncentiveCredits(float incentiveCredits);
+	
+	boolean isImmigrationIncentivesOn();
+	void setImmigrationIncentivesOn(Boolean incentivesOn);
+	
+	
 	boolean isFreePort();
 	void setFreePort(boolean freePort);
 	boolean isImmigrationClosed();
@@ -394,6 +405,15 @@ public interface MarketAPI {
 	float getShortageCounteringCost();
 	void addSubmarket(SubmarketAPI submarket);
 	ConstructionQueue getConstructionQueue();
+	boolean isInHyperspace();
+	
+	LinkedHashSet<String> getSuppressedConditions();
+	boolean isConditionSuppressed(String id);
+	void suppressCondition(String id);
+	void unsuppressCondition(String id);
+	float getImmigrationIncentivesCost();
+	boolean isInvalidMissionTarget();
+	void setInvalidMissionTarget(Boolean invalidMissionTarget);
 }
 
 

@@ -43,4 +43,6 @@ public interface FactionDoctrineAPI {
 	float getAutofitRandomizeProbability();
 	void setAutofitRandomizeProbability(float autofitRandomizeProbability);
 	int getTotalStrengthPoints();
+	boolean isStrictComposition();
+	void setStrictComposition(boolean strictComposition);
 }

@@ -19,5 +19,7 @@ public interface CommDirectoryAPI {
 	void removeEntry(String id);
 	void clear();
 	List<CommDirectoryEntryAPI> getEntriesCopy();
+	CommDirectoryEntryAPI getEntryForPerson(PersonAPI person);
+	CommDirectoryEntryAPI getEntryForPerson(String personId);
 
 }

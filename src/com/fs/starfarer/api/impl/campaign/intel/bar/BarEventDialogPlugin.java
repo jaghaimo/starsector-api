@@ -28,7 +28,7 @@ public class BarEventDialogPlugin implements InteractionDialogPlugin {
 	public void init(InteractionDialogAPI dialog) {
 		this.dialog = dialog;
 		
-		event.init(dialog);
+		event.init(dialog, memoryMap);
 		if (event.isDialogFinished()) {
 			endEvent();
 		} else {
@@ -39,7 +39,8 @@ public class BarEventDialogPlugin implements InteractionDialogPlugin {
 	}
 	public void optionSelected(String optionText, Object optionData) {
 		if (optionText != null) {
-			dialog.getTextPanel().addParagraph(optionText, Global.getSettings().getColor("buttonText"));
+			//dialog.getTextPanel().addParagraph(optionText, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(optionData);
 		}
 		if (optionData == DumpMemory.OPTION_ID) {
 			new DumpMemory().execute(null, dialog, null, getMemoryMap());
@@ -48,7 +49,6 @@ public class BarEventDialogPlugin implements InteractionDialogPlugin {
 			DevMenuOptions.execute(dialog, (String) optionData);
 			return;
 		}
-		
 		
 		event.optionSelected(optionText, optionData);
 		if (event.isDialogFinished()) {

@@ -48,6 +48,10 @@ public class PulsarBeamTerrainPlugin extends BaseRingTerrain implements PulsarRe
 		}
 	}
 	
+	public String getNameForTooltip() {
+		return "Pulsar Beam";
+	}
+	
 	@Override
 	protected Object readResolve() {
 		super.readResolve();
@@ -386,7 +390,13 @@ public class PulsarBeamTerrainPlugin extends BaseRingTerrain implements PulsarRe
 		//return "corona_" + (float) Math.random();
 	}
 
-
+	public boolean hasAIFlag(Object flag, CampaignFleetAPI fleet) {
+		if (fleet != null && containsEntity(fleet)) {
+			return hasAIFlag(flag);
+		}
+		return false;
+	}
+	
 	public boolean hasAIFlag(Object flag) {
 		return flag == TerrainAIFlags.CR_DRAIN ||
 				flag == TerrainAIFlags.BREAK_OTHER_ORBITS ||

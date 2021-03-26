@@ -16,6 +16,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
@@ -25,7 +26,6 @@ import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropD
 import com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial;
-import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.ExtraSalvage;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
 
@@ -115,10 +115,11 @@ public class RedPlanet extends BaseCommandPlugin {
 		planet.addDropRandom(d);
 		
 		CargoAPI salvage = SalvageEntity.generateSalvage(random, 1f, 1f, 1f, 1f, planet.getDropValue(), planet.getDropRandom());
-		ExtraSalvage extra = BaseSalvageSpecial.getExtraSalvage(memoryMap);
-		if (extra != null) {
-			salvage.addAll(extra.cargo);
-			BaseSalvageSpecial.clearExtraSalvage(memoryMap);
+		CargoAPI extra = BaseSalvageSpecial.getCombinedExtraSalvage(memoryMap);
+		salvage.addAll(extra);
+		BaseSalvageSpecial.clearExtraSalvage(memoryMap);
+		if (!extra.isEmpty()) {
+			ListenerUtil.reportExtraSalvageShown(planet);
 		}
 		salvage.addSpecial(new SpecialItemData("industry_bp", "planetaryshield"), 1);
 		salvage.sort();

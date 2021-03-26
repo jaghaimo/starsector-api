@@ -131,6 +131,10 @@ public class SpatialAnomalyTerrainPlugin extends BaseRingTerrain implements Auro
 		return super.getTerrainName();
 	}
 	
+	public String getNameForTooltip() {
+		return getTerrainName();
+	}
+	
 	public String getEffectCategory() {
 		return "spatial_anomaly";
 	}

@@ -5,6 +5,7 @@ import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.characters.CharacterCreationData;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.ui.CustomPanelAPI;
 
 public interface VisualPanelAPI {
 	void setVisualFade(float in, float out);
@@ -12,6 +13,8 @@ public interface VisualPanelAPI {
 	void showFleetInfo(String titleOne, CampaignFleetAPI one, String titleTwo, CampaignFleetAPI two);
 	void showFleetInfo(String titleOne, CampaignFleetAPI one, String titleTwo, CampaignFleetAPI two, FleetEncounterContextPlugin context);
 	void showPersonInfo(PersonAPI person);
+	void showSecondPerson(PersonAPI person);
+	void hideSecondPerson();
 	void showPlanetInfo(SectorEntityToken planet);
 	void showFleetMemberInfo(FleetMemberAPI member);
 	
@@ -25,7 +28,7 @@ public interface VisualPanelAPI {
 	 					  float displayWidth, float displayHeight);
 	void showImageVisual(InteractionDialogImageVisual visual);
 	
-	void showCustomPanel(float width, float height, CustomUIPanelPlugin plugin);
+	CustomPanelAPI showCustomPanel(float width, float height, CustomUIPanelPlugin plugin);
 	
 	void fadeVisualOut();
 	
@@ -64,4 +67,8 @@ public interface VisualPanelAPI {
 	void restoreSavedVisual();
 
 	void closeCoreUI();
+
+	void showPersonInfo(PersonAPI person, boolean minimalMode, boolean withRelBar);
+	void showThirdPerson(PersonAPI person);
+	void hideThirdPerson();
 }

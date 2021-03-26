@@ -18,4 +18,21 @@ public interface LabelAPI {
 	void setAlignment(Alignment mid);
 	void setText(String text);
 	String getText();
+	void setOpacity(float opacity);
+	float getOpacity();
+	PositionAPI getPosition();
+	
+	void italicize();
+	/**
+	 * @param shear amount of shear to the right
+	 */
+	void italicize(float shear);
+	void unitalicize();
+	PositionAPI autoSizeToWidth(float width);
+	
+	float computeTextWidth(String in);
+	float computeTextHeight(String in);
+	void flash(float durIn, float durOut);
+	void render(float alphaMult);
+	void advance(float amount);
 }

@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
@@ -12,8 +11,9 @@ import com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
-import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
+import com.fs.starfarer.api.impl.campaign.ids.Planets;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Pair;
 
@@ -23,7 +23,7 @@ public class Farming extends BaseIndustry implements MarketImmigrationModifier {
 	public static Set<String> AQUA_PLANETS = new HashSet<String>();
 	
 	static {
-		AQUA_PLANETS.add(StarTypes.PLANET_WATER);
+		AQUA_PLANETS.add(Planets.PLANET_WATER);
 	}
 	
 	public void apply() {
@@ -158,18 +158,35 @@ public class Farming extends BaseIndustry implements MarketImmigrationModifier {
 			return super.getCurrentImage();
 		}
 		float size = market.getSize();
-		PlanetAPI planet = market.getPlanetEntity();
-		if (size <= 3) {
+		//PlanetAPI planet = market.getPlanetEntity();
+		if (size <= SIZE_FOR_SMALL_IMAGE) {
 			return Global.getSettings().getSpriteName("industry", "farming_low");
 		}
-		if (size <= 5) {
-			return Global.getSettings().getSpriteName("industry", "farming_med");
-		}
-		if (size >= 7) {
+		if (size >= SIZE_FOR_LARGE_IMAGE) {
 			return Global.getSettings().getSpriteName("industry", "farming_high");
 		}
+		return Global.getSettings().getSpriteName("industry", "farming_med");
+		//return super.getCurrentImage();
+	}
 	
-		return super.getCurrentImage();
+	@Override
+	protected boolean canImproveToIncreaseProduction() {
+		return true;
+	}
+	
+	
+	@Override
+	public RaidDangerLevel adjustCommodityDangerLevel(String commodityId, RaidDangerLevel level) {
+		boolean aquaculture = Industries.AQUACULTURE.equals(getId());
+		if (aquaculture) return level;
+		return level.prev();
+	}
+
+	@Override
+	public RaidDangerLevel adjustItemDangerLevel(String itemId, String data, RaidDangerLevel level) {
+		boolean aquaculture = Industries.AQUACULTURE.equals(getId());
+		if (aquaculture) return level;
+		return level.prev();
 	}
 	
 }

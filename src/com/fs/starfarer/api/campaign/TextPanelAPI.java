@@ -2,6 +2,7 @@ package com.fs.starfarer.api.campaign;
 
 import java.awt.Color;
 
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Highlights;
@@ -47,4 +48,7 @@ public interface TextPanelAPI {
 	TooltipMakerAPI beginTooltip();
 	void addTooltip();
 	void updateSize();
+	boolean addCostPanel(String title, Color color, Color dark, Object ... params);
+	boolean addCostPanel(String title, Object ... params);
+	void addSkillPanel(PersonAPI person, boolean admin);
 }

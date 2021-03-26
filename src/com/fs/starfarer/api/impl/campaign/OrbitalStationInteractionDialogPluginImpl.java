@@ -78,7 +78,8 @@ public class OrbitalStationInteractionDialogPluginImpl implements InteractionDia
 		OptionId option = (OptionId) optionData;
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(option);
 		}
 		
 		switch (option) {

@@ -135,7 +135,7 @@ public class InvestigationEventSmugglingV2 extends BaseEventPlugin {
 				Global.getSector().reportEventStage(this, "player_guilty_smuggling", null, MessagePriority.ENSURE_DELIVERY,  new BaseOnMessageDeliveryScript() {
 					public void beforeDelivery(CommMessageAPI message) {
 						Global.getSector().adjustPlayerReputation(
-								new RepActionEnvelope(RepActions.SMUGGLING_INVESTIGATION_GUILTY, null, message, true), 
+								new RepActionEnvelope(RepActions.SMUGGLING_INVESTIGATION_GUILTY, null, null, true), 
 								market.getFactionId());
 					}
 				});

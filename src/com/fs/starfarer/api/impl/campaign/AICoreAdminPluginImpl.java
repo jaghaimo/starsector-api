@@ -23,9 +23,9 @@ public class AICoreAdminPluginImpl implements AICoreAdminPlugin {
 		person.setRankId(null);
 		person.setPostId(Ranks.POST_ADMINISTRATOR);
 		
-		person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
-		person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
-		person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
+		person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
+		person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
+		person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
 		
 		
 		return person;

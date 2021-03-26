@@ -9,11 +9,6 @@ public class DeliveryBarEventCreator extends BaseBarEventCreator {
 	}
 
 	@Override
-	public float getBarEventFrequencyWeight() {
-		return super.getBarEventFrequencyWeight();
-	}
-	
-	@Override
 	public boolean isPriority() {
 		return true;
 	}

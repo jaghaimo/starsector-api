@@ -21,6 +21,7 @@ import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.DModManager;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.VariantSource;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
@@ -182,9 +183,16 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 		
 		//if (tier != 0) return 0f;
 		
-		if (tier == 1) return Math.min(0.9f, 0.5f + quality);
-		if (tier == 2) return Math.min(0.9f, 0.25f + quality * 0.5f);
-		if (tier == 3) return Math.min(0.9f, 0.125f + quality * 0.25f);
+//		if (tier == 1) return Math.min(0.9f, 0.5f + quality);
+//		if (tier == 2) return Math.min(0.9f, 0.25f + quality * 0.5f);
+//		if (tier == 3) return Math.min(0.9f, 0.125f + quality * 0.25f);
+		
+		// since whether to upgrade or not is now randomized, higher probability of
+		// better tier weapons being available (as they may still not end up being used)
+		if (tier == 1) return Math.min(0.9f, 0.75f + quality);
+		if (tier == 2) return Math.min(0.9f, 0.5f + quality * 0.5f);
+		if (tier == 3) return Math.min(0.9f, 0.25f + quality * 0.25f);
+		
 		return 1f;
 	}
 	
@@ -205,7 +213,8 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 		CoreAutofitPlugin auto = new CoreAutofitPlugin(fleet.getCommander());
 		auto.setRandom(random);
 
-		auto.setChecked(CoreAutofitPlugin.UPGRADE, true);
+		boolean upgrade = random.nextFloat() < Math.min(0.1f + p.quality * 0.5f, 0.5f);
+		auto.setChecked(CoreAutofitPlugin.UPGRADE, upgrade);
 		
 		//auto.setChecked(CoreAutofitPlugin.RANDOMIZE, true);
 		//auto.getOptions().get(4).checked = true; // upgrade
@@ -284,10 +293,11 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 		
 		//System.out.println("Quality: " + quality + ", Average: " + averageDmods);
 		
+		boolean forceAutofit = fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_FORCE_AUTOFIT_ON_NO_AUTOFIT_SHIPS);
 		int memberIndex = 0;
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 			
-			if (member.getHullSpec().hasTag(Items.TAG_NO_AUTOFIT)) {
+			if (!forceAutofit && member.getHullSpec().hasTag(Items.TAG_NO_AUTOFIT)) {
 				continue;
 			}
 			
@@ -400,10 +410,16 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 			}
 			
 			boolean randomize = random.nextFloat() < faction.getDoctrine().getAutofitRandomizeProbability();
+			if (member.isStation()) randomize = false;
 			auto.setChecked(CoreAutofitPlugin.RANDOMIZE, randomize);
 			
 			memberIndex++;
-			auto.doFit(currVariant, target, this);
+			
+			int maxSmods = 0;
+			if (p.averageSMods != null && !member.isCivilian()) {
+				maxSmods = getMaxSMods(currVariant, p.averageSMods, dmodRandom) - currVariant.getSMods().size();
+			}
+			auto.doFit(currVariant, target, maxSmods, this);
 			currVariant.setSource(VariantSource.REFIT);
 			member.setVariant(currVariant, false, false);
 			
@@ -432,13 +448,26 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 		
 	}
 	
-	public static int getNumDModsToAdd(ShipVariantAPI variant, float averageDmods, Random random) {
-		int dmods = (int) Math.round(averageDmods + random.nextFloat() * 3f - 2f);
+	public static int getNumDModsToAdd(ShipVariantAPI variant, float averageDMods, Random random) {
+		int dmods = (int) Math.round(averageDMods + random.nextDouble() * 3f - 2f);
 		if (dmods > 5) dmods = 5;
 		int dmodsAlready = DModManager.getNumDMods(variant);
 		dmods -= dmodsAlready;
 		
 		return Math.max(0, dmods);
+	}
+	
+	public static int getMaxSMods(ShipVariantAPI variant, int averageSMods, Random random) {
+		float f = random.nextFloat();
+		int sMods = averageSMods;
+		if (f < 0.25f) {
+			sMods = averageSMods - 1;
+		} else if (f < 0.5f) {
+			sMods = averageSMods + 1;
+		}
+		if (sMods > 3) sMods = 3;
+		if (sMods < 0) sMods = 0;
+		return sMods;
 	}
 	
 	public static float getAverageDmodsForQuality(float quality) {

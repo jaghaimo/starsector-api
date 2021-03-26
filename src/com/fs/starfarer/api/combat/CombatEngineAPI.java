@@ -7,7 +7,11 @@ import java.util.Map;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.campaign.CombatDamageData;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
+import com.fs.starfarer.api.combat.listeners.CombatListenerManagerAPI;
 import com.fs.starfarer.api.loading.DamagingExplosionSpec;
+import com.fs.starfarer.api.loading.WeaponSlotAPI;
+import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.mission.FleetSide;
 
 /**
@@ -91,6 +95,11 @@ public interface CombatEngineAPI {
 			boolean bypassShields, boolean dealsSoftFlux, 
 			Object source);
 	
+	void applyDamage(Object damageModifierParam, CombatEntityAPI entity, Vector2f point, 
+			float damageAmount, DamageType damageType, float empAmount,
+			boolean bypassShields, boolean dealsSoftFlux, 
+			Object source, boolean playSound);
+	
 	/**
 	 * Particle with a somewhat brighter middle.
 	 * @param brightness from 0 to 1
@@ -162,7 +171,7 @@ public interface CombatEngineAPI {
 	 * @param core
 	 * @return
 	 */
-	public CombatEntityAPI spawnEmpArc(ShipAPI damageSource,
+	public EmpArcEntityAPI spawnEmpArc(ShipAPI damageSource,
 										Vector2f point,
 										CombatEntityAPI pointAnchor,
 										CombatEntityAPI empTargetEntity,
@@ -177,7 +186,7 @@ public interface CombatEngineAPI {
 	/**
 	 * Same as spawnEmpArc, but goes through shields if they're blocking the line from the point to the chosen target.
 	 */
-	public CombatEntityAPI spawnEmpArcPierceShields(ShipAPI damageSource,
+	public EmpArcEntityAPI spawnEmpArcPierceShields(ShipAPI damageSource,
 													Vector2f point, CombatEntityAPI pointAnchor,
 													CombatEntityAPI empTargetEntity, DamageType damageType,
 													float damAmount, float empDamAmount, float maxRange,
@@ -300,10 +309,117 @@ public interface CombatEngineAPI {
 
 	void removeObject(Object object);
 
-	void addLayeredRenderingPlugin(CombatLayeredRenderingPlugin plugin);
+	CombatEntityAPI addLayeredRenderingPlugin(CombatLayeredRenderingPlugin plugin);
 
 	boolean isEnemyInFullRetreat();
 
+
+	boolean isMissileAlive(MissileAPI missile);
+
+	void spawnMuzzleFlashOrSmoke(ShipAPI ship, WeaponSlotAPI slot, WeaponSpecAPI spec, int barrel, float targetAngle);
+
+	CollisionGridAPI getAiGridMissiles();
+	CollisionGridAPI getAiGridShips();
+	CollisionGridAPI getAiGridAsteroids();
+
+	/**
+	 * Visible (i.e. not under fog) or recently seen.
+	 * @param owner
+	 * @param other
+	 * @return
+	 */
+	boolean isAwareOf(int owner, CombatEntityAPI other);
+
+	/**
+	 * Gives strafe left/right and accelerate forward/backward/decelerate commands to accomplish this.
+	 * @param missile
+	 * @param desiredHeading
+	 * @param desiredSpeed
+	 */
+	void headInDirectionWithoutTurning(MissileAPI missile, float desiredHeading, float desiredSpeed);
+
+	/**
+	 * Gives strafe left/right and accelerate forward/backward/decelerate commands to accomplish this.
+	 * @param ship
+	 * @param desiredHeading
+	 * @param desiredSpeed
+	 */
+	void headInDirectionWithoutTurning(ShipAPI ship, float desiredHeading, float desiredSpeed);
+
+	/**
+	 * accuracyFactor: 1 = best accuracy, 
+	 * >1 (up to around 2 at most normally) poor accuracy, <1 = leading target too much, not used.
+	 * @param from
+	 * @param accuracyFactor
+	 * @param to
+	 * @param projSpeed
+	 * @return
+	 */
+	Vector2f getAimPointWithLeadForAutofire(CombatEntityAPI from, float accuracyFactor, CombatEntityAPI to, float projSpeed);
+
+	CombatListenerManagerAPI getListenerManager();
+
+	void applyDamageModifiersToSpawnedProjectileWithNullWeapon(ShipAPI source, WeaponType type, boolean isBeam, DamageAPI damage);
+
+	void addHitParticle(Vector2f loc, Vector2f vel, float size, float brightness, float durationIn, float totalDuration, Color color);
+
+	/**
+	 * Duration gets auto-computed.
+	 * @param loc
+	 * @param vel
+	 * @param size
+	 * @param brightness
+	 * @param color
+	 */
+	void addHitParticle(Vector2f loc, Vector2f vel, float size, float brightness, Color color);
+
+	EmpArcEntityAPI spawnEmpArcVisual(Vector2f from, CombatEntityAPI fromAnchor, Vector2f to, CombatEntityAPI toAnchor,
+									  float thickness, Color fringe, Color core);
+
+	void addSmoothParticle(Vector2f loc, Vector2f vel, float size,
+			float brightness, float rampUpFraction, float totalDuration,
+			Color color);
+
+	void addNegativeParticle(Vector2f loc, Vector2f vel, float size, float rampUpFraction, float totalDuration, Color color);
+
+	void addNebulaParticle(Vector2f loc, Vector2f vel, float size,
+			float endSizeMult, float rampUpFraction,
+			float fullBrightnessFraction, float totalDuration, Color color);
+
+	void addNegativeNebulaParticle(Vector2f loc, Vector2f vel, float size,
+			float endSizeMult, float rampUpFraction,
+			float fullBrightnessFraction, float totalDuration, Color color);
+
+	void addNebulaSmokeParticle(Vector2f loc, Vector2f vel, float size,
+			float endSizeMult, float rampUpFraction,
+			float fullBrightnessFraction, float totalDuration, Color color);
+
+	boolean hasAttachedFloaty(CombatEntityAPI entity);
+
+	void addNebulaParticle(Vector2f loc, Vector2f vel, float size,
+			float endSizeMult, float rampUpFraction,
+			float fullBrightnessFraction, float totalDuration, Color color,
+			boolean expandAsSqrt);
+
+	void addSwirlyNebulaParticle(Vector2f loc, Vector2f vel, float size,
+			float endSizeMult, float rampUpFraction,
+			float fullBrightnessFraction, float totalDuration, Color color,
+			boolean expandAsSqrt);
+
+	void addNegativeSwirlyNebulaParticle(Vector2f loc, Vector2f vel,
+			float size, float endSizeMult, float rampUpFraction,
+			float fullBrightnessFraction, float totalDuration, Color color);
+
+	boolean isInPlay(Object object);
+
+	void setCombatNotOverForAtLeast(float seconds);
+	void setCombatNotOverFor(float seconds);
+	float getCombatNotOverFor();
+
+	void setCustomExit(String buttonTitle, String confirmString);
+	String getCustomExitButtonTitle();
+	String getCustomExitButtonConfirmString();
+	
 	//float getElapsedInCurrentFrame();
 
 }

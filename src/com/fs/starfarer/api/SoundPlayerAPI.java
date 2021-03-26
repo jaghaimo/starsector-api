@@ -98,6 +98,8 @@ public interface SoundPlayerAPI {
 	void playCustomMusic(int fadeOutIfAny, int fadeIn, String musicSetId, boolean looping);
 
 	void playUILoop(String id, float pitch, float volume);
+
+	void playLoop(String id, Object playingEntity, float pitch, float volume, Vector2f loc, Vector2f vel, float fadeIn, float fadeOut);
 }
 
 

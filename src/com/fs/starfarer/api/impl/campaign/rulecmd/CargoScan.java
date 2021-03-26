@@ -13,11 +13,12 @@ import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
+import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
@@ -26,16 +27,21 @@ import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class CargoScan extends BaseCommandPlugin {
 
-	public static final String PODS_FOUND = "$scan_podsFound";
-	public static final String CONTRABAND_FOUND = "$scan_contrabandFound";
-	public static final String SUSPICOUS_CARGO_FOUND = "$scan_suspiciousCargoFound";
-	public static final String RESULT_KEY = "$scan_cargoScanResult";
+	public static String PODS_FOUND = "$scan_podsFound";
+	public static String CONTRABAND_FOUND = "$scan_contrabandFound";
+	public static String SUSPICOUS_CARGO_FOUND = "$scan_suspiciousCargoFound";
+	//public static String DEMAND_BOARDING = "$scan_demandBoarding";
+	public static String RESULT_KEY = "$scan_cargoScanResult";
+	
+	public static float INSPECTION_DAMAGE_MULT = 0.2f;
+	public static float CHANCE_TO_FIND_ILLEGAL_MULT = 2f;
 	
 	public static class CargoScanResult {
-		private CargoAPI legalFound, illegalFound;
+		protected CargoAPI legalFound, illegalFound;
 		public CargoAPI getLegalFound() {
 			return legalFound;
 		}
@@ -48,6 +54,8 @@ public class CargoScan extends BaseCommandPlugin {
 		public void setIllegalFound(CargoAPI illegalFound) {
 			this.illegalFound = illegalFound;
 		}
+		
+		protected List<FleetMemberAPI> shipsToDamage = new ArrayList<FleetMemberAPI>();
 	}
 	
 	
@@ -61,6 +69,7 @@ public class CargoScan extends BaseCommandPlugin {
 		FactionAPI faction = other.getFaction();
 		
 		CargoScanResult result = new CargoScanResult();
+		
 		float totalLegal = 0;
 		float totalLegalCargo = 0;
 		float totalIllegal = 0;
@@ -92,9 +101,9 @@ public class CargoScan extends BaseCommandPlugin {
 		float shieldedMult = (0.25f + 0.75f * unshieldedFraction);
 		
 		MarketAPI market = Misc.getSourceMarket(other);
+		float level = market.getMemory().getFloat(MemFlags.MEMORY_MARKET_SMUGGLING_SUSPICION_LEVEL);
 		float suspicionMult = 0f;
 		if (market != null) {
-			float level = market.getMemory().getFloat(MemFlags.MEMORY_MARKET_SMUGGLING_SUSPICION_LEVEL);
 			if (level >= 0.05f) {
 				suspicionMult = 0.5f + 0.5f * level;
 			}
@@ -104,10 +113,22 @@ public class CargoScan extends BaseCommandPlugin {
 		
 		
 		boolean suspicious = false;
+		boolean suspiciousDueToLevel = false;
 		if (totalLegalCargo > 50 || totalLegalCargo > playerFleet.getCargo().getMaxCapacity() * 0.5f) {
 			totalLegalCargo *= suspicionMult;
 			suspicious = totalLegalCargo * guiltMult * (float) Math.random() > 
 							 	playerFleet.getCargo().getMaxCapacity() * (float) Math.random();
+		}
+		
+//		suspicious = false;
+//		level = 10f;
+		
+		if (!suspicious && level >= 0.5f) {
+			float r = (float) Math.random();
+			suspicious |= r * r < level;
+			if (suspicious) {
+				suspiciousDueToLevel = true;
+			}
 		}
 		
 		if (totalLegal + totalIllegal > 0) {
@@ -140,7 +161,11 @@ public class CargoScan extends BaseCommandPlugin {
 				
 				chanceToFind *= guiltMult;
 				chanceToFind *= shieldedMult;
+				chanceToFind *= CHANCE_TO_FIND_ILLEGAL_MULT;
 				
+//				if (chanceToFind > 0 && !legal) {
+//					System.out.println("fwefwef");
+//				}
 				if (legal) {
 					legalFound.addFromStack(stack);
 				} else if ((float) Math.random() < chanceToFind) {
@@ -155,6 +180,26 @@ public class CargoScan extends BaseCommandPlugin {
 		}
 		//illegalFound.clear();
 		
+		//boolean boarding = !suspicious && level >= 0.5f && illegalFound.isEmpty();
+		if (suspicious && illegalFound.isEmpty()) {
+			WeightedRandomPicker<FleetMemberAPI> picker = new WeightedRandomPicker<FleetMemberAPI>();
+			for (FleetMemberAPI member : playerFleet.getFleetData().getMembersListCopy()) {
+				if (member.isMothballed() && member.getRepairTracker().getBaseCR() < 0.2f) continue;
+				picker.add(member, member.getFleetPointCost());
+			}
+			if (picker.isEmpty()) {
+				suspicious = false;
+			} else {
+				float totalDamage = Math.min(playerFleet.getFleetPoints(), other.getFleetPoints()) * INSPECTION_DAMAGE_MULT;
+				float picked = 0f;
+				while (picked < totalDamage && !picker.isEmpty()) {
+					FleetMemberAPI pick = picker.pickAndRemove();
+					result.shipsToDamage.add(pick);
+					picked += pick.getFleetPointCost();
+				}
+			}
+		}
+		
 		result.setLegalFound(legalFound);
 		result.setIllegalFound(illegalFound);
 		
@@ -166,15 +211,15 @@ public class CargoScan extends BaseCommandPlugin {
 		float maxPodsDist = 1500f;
 		OUTER: for (SectorEntityToken entity : other.getContainingLocation().getAllEntities()) {
 			if (Entities.CARGO_PODS.equals(entity.getCustomEntityType())) {
-				VisibilityLevel level = entity.getVisibilityLevelTo(other);
+				VisibilityLevel vLevel = entity.getVisibilityLevelTo(other);
 				if (entity.getCustomPlugin() instanceof CargoPodsEntityPlugin) {
 					float dist = Misc.getDistance(playerFleet, entity);
 					if (dist > maxPodsDist) continue;
 					
 					CargoPodsEntityPlugin plugin = (CargoPodsEntityPlugin) entity.getCustomPlugin();
 					if (plugin.getElapsed() <= 1f && entity.getCargo() != null) {
-						if (level == VisibilityLevel.COMPOSITION_DETAILS ||
-								level == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS) {
+						if (vLevel == VisibilityLevel.COMPOSITION_DETAILS ||
+								vLevel == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS) {
 							for (CargoStackAPI stack : entity.getCargo().getStacksCopy()) {
 								boolean legal = !faction.isIllegal(stack);
 								if (!legal) {
@@ -211,7 +256,11 @@ public class CargoScan extends BaseCommandPlugin {
 			text.addParagraph(para);
 			text.highlightInLastPara(hl, highlights.toArray(new String [0]));
 		} else if (suspicious) {
-			text.addParagraph("Suspicious cargo found!", hl);
+			if (suspiciousDueToLevel) {
+				text.addParagraph("Vessels flagged for inspection due to overall suspicion level!", hl);
+			} else {
+				text.addParagraph("Suspicious cargo found!", hl);
+			}
 		} else {
 			text.addParagraph("No contraband or suspicious cargo found.");
 		}

@@ -315,7 +315,7 @@ public class PirateRaidActionStage extends ActionStage implements FleetActionDel
 				info.addPara("The raiding forces have been successful in raiding the following colonies:", opad);
 				float initPad = opad;
 				for (MarketAPI market : raided) {
-					BaseIntelPlugin.addMarketToList(info, market, initPad);
+					BaseIntelPlugin.addMarketToList(info, market, initPad, tc);
 					initPad = 0f;
 				}
 			}

@@ -17,4 +17,7 @@ public interface CommDirectoryEntryAPI {
 	String getText();
 
 	void setEntryData(Object entryData);
+
+	boolean isHidden();
+	void setHidden(boolean hidden);
 }

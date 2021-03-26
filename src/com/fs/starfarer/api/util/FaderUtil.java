@@ -31,6 +31,14 @@ public class FaderUtil  {
 		setBounce(bounceUp, bounceDown);
 	}
 	
+	public State getState() {
+		return state;
+	}
+
+	public void setState(State state) {
+		this.state = state;
+	}
+
 	public void setBounceDown(boolean bounceDown) {
 		this.bounceDown = bounceDown;
 	}

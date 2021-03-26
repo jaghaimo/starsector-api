@@ -177,7 +177,8 @@ public class ScavengeAbility extends BaseDurationAbility {
 	
 	@Override
 	public boolean isUsable() {
-		if (getDebrisField() == null) return false;
+		DebrisFieldTerrainPlugin debris = getDebrisField();
+		if (debris == null || debris.isScavenged()) return false;
 		return super.isUsable();
 	}
 	
@@ -185,15 +186,23 @@ public class ScavengeAbility extends BaseDurationAbility {
 		CampaignFleetAPI fleet = getFleet();
 		if (fleet == null) return null;
 		
+		DebrisFieldTerrainPlugin scavenged = null; 
+		DebrisFieldTerrainPlugin usable = null; 
 		for (CampaignTerrainAPI curr : fleet.getContainingLocation().getTerrainCopy()) {
 			if (curr.getPlugin() instanceof DebrisFieldTerrainPlugin) {
 				DebrisFieldTerrainPlugin debris = (DebrisFieldTerrainPlugin) curr.getPlugin();
 				if (debris.containsEntity(fleet)) {
-					return debris;
+					if (debris.isScavenged()) {
+						scavenged = debris;
+					} else {
+						usable = debris;
+					}
+					//return debris;
 				}
 			}
 		}
-		return null;
+		if (usable != null) return usable;
+		return scavenged;
 	}
 
 	@Override
@@ -204,11 +213,13 @@ public class ScavengeAbility extends BaseDurationAbility {
 		tooltip.addTitle(spec.getName());
 
 		float pad = 10f;
-		tooltip.addPara("Pick through a debris field looking for anything useful.", pad);
+		tooltip.addPara("Pick through a debris field looking for anything of value.", pad);
 		
 		DebrisFieldTerrainPlugin debris = getDebrisField();
 		if (debris == null) {
-			tooltip.addPara("Your fleet is currently not inside a debris field.", Misc.getNegativeHighlightColor(), pad);
+			tooltip.addPara("Your fleet is not currently inside a debris field.", Misc.getNegativeHighlightColor(), pad);
+		} else if (debris.isScavenged()) {
+			tooltip.addPara("Your fleet is inside a debris field, but it contains nothing of value.", Misc.getNegativeHighlightColor(), pad);
 		} else {
 			tooltip.addPara("Your fleet is inside a debris field and can begin scavenging.", Misc.getPositiveHighlightColor(), pad);
 		}

@@ -275,6 +275,20 @@ public interface CampaignFleetAPI extends SectorEntityToken, FleetOrStubAPI {
 	 */
 	float getEffectiveStrength();
 	int getNumMembersFast();
+	
+	void goSlowOneFrame(boolean stop);
+	boolean wasSlowMoving();
+	int getNumShips();
+	void updateFleetView();
+	
+	/**
+	 * Only works for the player fleet.
+	 * @return
+	 */
+	boolean hasShipsWithUniqueSig();
+	boolean getGoSlowStop();
+	void goSlowOneFrame();
+	boolean getGoSlowOneFrame();
 }
 
 

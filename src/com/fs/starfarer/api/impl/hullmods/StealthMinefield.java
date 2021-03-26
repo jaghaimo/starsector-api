@@ -12,6 +12,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -32,7 +33,7 @@ public class StealthMinefield extends BaseHullMod {
 	
 	
 	@Override
-	public void advanceInCombat(ShipAPI ship, float amount) {
+	public void advanceInCombat(ShipAPI ship, float amount) { 
 		super.advanceInCombat(ship, amount);
 
 		//if (true) return;
@@ -107,8 +108,10 @@ public class StealthMinefield extends BaseHullMod {
 															  currLoc, 
 															  mineDir, null);
 		if (source != null) {
-			float extraDamageMult = source.getMutableStats().getMissileWeaponDamageMult().getModifiedValue();
-			mine.getDamage().setMultiplier(mine.getDamage().getMultiplier() * extraDamageMult);
+			Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(
+											source, WeaponType.MISSILE, false, mine.getDamage());
+//			float extraDamageMult = source.getMutableStats().getMissileWeaponDamageMult().getModifiedValue();
+//			mine.getDamage().setMultiplier(mine.getDamage().getMultiplier() * extraDamageMult);
 		}
 		
 		mine.setFlightTime((float) Math.random());

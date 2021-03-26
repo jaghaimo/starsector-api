@@ -69,7 +69,7 @@ public class CargoPodsResponse implements EveryFrameScript {
 			}
 		}
 		
-		if (closest != null) {
+		if (closest != null && minDist < 500f) {
 			respond(closest);
 			elapsed = 10f; // make it "done"
 		}

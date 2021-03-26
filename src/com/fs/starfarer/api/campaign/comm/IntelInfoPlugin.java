@@ -6,6 +6,7 @@ import java.util.Set;
 
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.StoryPointActionDelegate;
 import com.fs.starfarer.api.ui.CustomPanelAPI;
 import com.fs.starfarer.api.ui.IntelUIAPI;
 import com.fs.starfarer.api.ui.SectorMapAPI;
@@ -56,7 +57,7 @@ public interface IntelInfoPlugin {
 		TIER_0,
 		TIER_1,
 		TIER_2,
-		TIER_3,
+		TIER_3, // default
 		TIER_4,
 		TIER_5,
 		TIER_6,
@@ -80,8 +81,6 @@ public interface IntelInfoPlugin {
 	boolean canTurnImportantOff();
 	
 	
-	
-	
 	Color getBackgroundGlowColor();
 	
 //	void createIntelListInfo(TooltipMakerAPI info);
@@ -96,6 +95,7 @@ public interface IntelInfoPlugin {
 	boolean hasLargeDescription();
 	void createLargeDescription(CustomPanelAPI panel, float width, float height);
 	
+	void notifyPlayerAboutToOpenIntelScreen();
 	boolean shouldRemoveIntel();
 	Set<String> getIntelTags(SectorMapAPI map);
 	boolean isImportant();
@@ -106,6 +106,7 @@ public interface IntelInfoPlugin {
 	
 	
 	boolean doesButtonHaveConfirmDialog(Object buttonId);
+	StoryPointActionDelegate getButtonStoryPointActionDelegate(Object buttonId);
 	float getConfirmationPromptWidth(Object buttonId);
 	void createConfirmationPrompt(Object buttonId, TooltipMakerAPI prompt);
 	String getConfirmText(Object buttonId);
@@ -114,6 +115,7 @@ public interface IntelInfoPlugin {
 	
 	void buttonPressConfirmed(Object buttonId, IntelUIAPI ui);
 	void buttonPressCancelled(Object buttonId, IntelUIAPI ui);
+	void storyActionConfirmed(Object buttonId, IntelUIAPI ui);
 	
 	void setPlayerVisibleTimestamp(Long timestamp);
 	Long getPlayerVisibleTimestamp();
@@ -157,6 +159,10 @@ public interface IntelInfoPlugin {
 	
 	boolean forceAddNextFrame();
 	void setForceAddNextFrame(boolean add);
+
+	boolean isEnded();
+
+	boolean isEnding();
 
 
 }

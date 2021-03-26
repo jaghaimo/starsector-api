@@ -1,6 +1,9 @@
 package com.fs.starfarer.api.characters;
 
+import java.awt.Color;
 import java.util.Set;
+
+import com.fs.starfarer.api.characters.LevelBasedEffect.ScopeDescription;
 
 public interface SkillSpecAPI {
 
@@ -23,6 +26,26 @@ public interface SkillSpecAPI {
 	boolean hasTag(String tag);
 	boolean isAdminSkill();
 	boolean isAdmiralSkill();
+	
+	String getAuthor();
+	void setAuthor(String author);
+	int getTier();
+	void setTier(int tier);
+	
+	boolean isElite();
+	void setElite(boolean elite);
+	boolean isPermanent();
+	void setPermanent(boolean permanent);
+	ScopeDescription getScope();
+	void setScope(ScopeDescription scope);
+	ScopeDescription getScope2();
+	void setScope2(ScopeDescription scope2);
+	String getScopeStr();
+	void setScopeStr(String scopeStr);
+	String getScopeStr2();
+	void setScopeStr2(String scopeStr2);
+	Color getGoverningAptitudeColor();
+	String getGoverningAptitudeName();
 	
 
 }

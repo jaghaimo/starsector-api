@@ -39,5 +39,6 @@ public interface ResourceCostPanelAPI {
 	
 	void addCost(String commodityId, String text);
 	void addCost(String commodityId, String text, Color color);
+	void setLastCostConsumed(boolean consumed);
 
 }

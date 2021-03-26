@@ -34,6 +34,9 @@ public class NGCAddDevStartingScript extends BaseCommandPlugin {
 		final MemoryAPI memory = memoryMap.get(MemKeys.LOCAL);
 		data.addScript(new Script() {
 			public void run() {
+				
+				Global.getSector().getPlayerStats().addStoryPoints(100);
+				
 				CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
 				fleet.getFleetData().addFleetMember("hammerhead_Balanced");
 				fleet.getFleetData().addFleetMember("tarsus_Standard");
@@ -70,7 +73,7 @@ public class NGCAddDevStartingScript extends BaseCommandPlugin {
 				PersonAPI mainContact = TutorialMissionIntel.createMainContact(ancyra);
 				PersonAPI jangalaContact = TutorialMissionIntel.getJangalaContact();
 				
-				TutorialMissionIntel.endGalatiaPortionOfMission(true);
+				TutorialMissionIntel.endGalatiaPortionOfMission(true, false);
 					
 				mainContact.getRelToPlayer().setRel(0.2f);
 				jangalaContact.getRelToPlayer().setRel(0.1f);

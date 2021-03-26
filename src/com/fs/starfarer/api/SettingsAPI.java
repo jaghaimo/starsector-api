@@ -17,8 +17,10 @@ import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetSpecAPI;
 import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketSpecAPI;
 import com.fs.starfarer.api.characters.MarketConditionSpecAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.CombatReadinessPlugin;
@@ -26,19 +28,23 @@ import com.fs.starfarer.api.combat.ShipAIConfig;
 import com.fs.starfarer.api.combat.ShipAIPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+import com.fs.starfarer.api.combat.ShipSystemSpecAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.loading.AbilitySpecAPI;
+import com.fs.starfarer.api.loading.BarEventSpec;
 import com.fs.starfarer.api.loading.Description;
+import com.fs.starfarer.api.loading.Description.Type;
 import com.fs.starfarer.api.loading.EventSpecAPI;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
+import com.fs.starfarer.api.loading.PersonMissionSpec;
 import com.fs.starfarer.api.loading.RoleEntryAPI;
 import com.fs.starfarer.api.loading.TerrainSpecAPI;
 import com.fs.starfarer.api.loading.WeaponSpecAPI;
-import com.fs.starfarer.api.loading.Description.Type;
 import com.fs.starfarer.api.plugins.LevelupPlugin;
+import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.ListMap;
 
@@ -50,6 +56,16 @@ import com.fs.starfarer.api.util.ListMap;
 public interface SettingsAPI {
 	int getBattleSize();
 	
+	/**
+	 * Can be used outside the campaign, unlike FactoryAPI.createPerson().
+	 * @return
+	 */
+	PersonAPI createPerson();
+	
+	LabelAPI createLabel(String text, String font);
+	
+	float getBonusXP(String key);
+	
 	float getFloat(String key);
 	boolean getBoolean(String key);
 	ClassLoader getScriptClassLoader();
@@ -58,6 +74,8 @@ public interface SettingsAPI {
 	void setDevMode(boolean devMode);
 	
 	Color getColor(String id);
+	
+	Object getInstanceOfScript(String className);
 	
 	/**
 	 * Gets a string from a given category in strings.json
@@ -147,8 +165,21 @@ public interface SettingsAPI {
 	
 	JSONObject getMergedJSONForMod(String path, String masterMod) throws IOException, JSONException;
 	
+	
+	/**
+	 * Virtual pixels, i.e. divided by getScreenScaleMult().
+	 * @return
+	 */
 	float getScreenWidth();
+	
+	/**
+	 * Virtual pixels, i.e. divided by getScreenScaleMult().
+	 * @return
+	 */
 	float getScreenHeight();
+	
+	float getScreenWidthPixels();
+	float getScreenHeightPixels();
 	
 	/**
 	 * Gets entry from descriptions.csv. 
@@ -182,6 +213,12 @@ public interface SettingsAPI {
 	
 	ShipVariantAPI getVariant(String variantId);
 
+	/**
+	 * Plugins returned by this method are cached and persistent across multiple saves. They should not have
+	 * any data members that point at campaign data or it will cause a memory leak.
+	 * @param id
+	 * @return
+	 */
 	Object getPlugin(String id);
 
 	List<String> getSortedSkillIds();
@@ -346,7 +383,7 @@ public interface SettingsAPI {
 	boolean doesVariantExist(String variantId);
 
 	void addCommodityInfoToTooltip(TooltipMakerAPI tooltip, float initPad, CommoditySpecAPI spec, 
-								   boolean withText, boolean withSell, boolean withBuy);
+								   int max, boolean withText, boolean withSell, boolean withBuy);
 
 	
 	JSONObject getJSONObject(String key) throws JSONException;
@@ -362,7 +399,51 @@ public interface SettingsAPI {
 	List<MarketConditionSpecAPI> getAllMarketConditionSpecs();
 	List<SubmarketSpecAPI> getAllSubmarketSpecs();
 
+	float getMinArmorFraction();
 
+	float getMaxArmorDamageReduction();
 
+	ShipSystemSpecAPI getShipSystemSpec(String id);
+	List<ShipSystemSpecAPI> getAllShipSystemSpecs();
+
+	float getScreenScaleMult();
+	int getAASamples();
+
+	/**
+	 * Converted to virtual screen coordinates, i.e. adjusted for screen scaling.
+	 * @return
+	 */
+	int getMouseX();
+	
+	/**
+	 * Converted to virtual screen coordinates, i.e. adjusted for screen scaling.
+	 * @return
+	 */
+	int getMouseY();
+
+	int getShippingCapacity(MarketAPI market, boolean inFaction);
+	JSONObject getSettingsJSON();
+	/**
+	 * Must be called after making any changes to result of getSettingsJSON().
+	 */
+	void resetCached();
+
+	void setFloat(String key, Float value);
+	void setBoolean(String key, Boolean value);
+
+	List<PersonMissionSpec> getAllMissionSpecs();
+	PersonMissionSpec getMissionSpec(String id);
+	
+	List<BarEventSpec> getAllBarEventSpecs();
+	BarEventSpec getBarEventSpec(String id);
+
+	void setAutoTurnMode(boolean autoTurnMode);
+	boolean isAutoTurnMode();
+
+	boolean isShowDamageFloaties();
+
+	float getFloatFromArray(String key, int index);
+
+	int getIntFromArray(String key, int index);
 
 }

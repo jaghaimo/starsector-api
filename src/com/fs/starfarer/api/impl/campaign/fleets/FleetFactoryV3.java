@@ -17,15 +17,16 @@ import org.apache.log4j.Logger;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
+import com.fs.starfarer.api.campaign.FactionAPI.ShipPickParams;
 import com.fs.starfarer.api.campaign.FactionDoctrineAPI;
 import com.fs.starfarer.api.campaign.FleetInflater;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
-import com.fs.starfarer.api.campaign.FactionAPI.ShipPickParams;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.characters.SkillSpecAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
@@ -33,20 +34,25 @@ import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.fleet.ShipRolePick;
 import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent;
 import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent.SkillPickPreference;
+import com.fs.starfarer.api.impl.campaign.fleets.GenerateFleetOfficersPlugin.GenerateFleetOfficersPickData;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.ShipRoles;
+import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.loading.AbilitySpecAPI;
+import com.fs.starfarer.api.plugins.CreateFleetPlugin;
 import com.fs.starfarer.api.plugins.OfficerLevelupPlugin;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class FleetFactoryV3 {
 
+	public static String KEY_SPAWN_FP_MULT = "$spawnFPMult";
+	
 	//public static float IMPORTED_QUALITY_PENALTY = Global.getSettings().getFloat("fleetQualityPenaltyForImports");
 	public static float BASE_QUALITY_WHEN_NO_MARKET = 0.5f;
 	
@@ -95,6 +101,8 @@ public class FleetFactoryV3 {
 	public static float getNumShipsMultForStability(float stability) {
 		return 1f + (stability - 5f) * 0.05f;
 	}
+	
+	
 	public static float getNumShipsMultForMarketSize(float marketSize) {
 		if (marketSize < 3) marketSize = 3;
 		
@@ -138,6 +146,12 @@ public class FleetFactoryV3 {
 	}
 	
 	public static CampaignFleetAPI createFleet(FleetParamsV3 params) {
+		
+		CreateFleetPlugin plugin = Global.getSector().getGenericPlugins().pickPlugin(CreateFleetPlugin.class, params);
+		if (plugin != null) {
+			return plugin.createFleet(params);
+		}
+		
 		Global.getSettings().profilerBegin("FleetFactoryV3.createFleet()");
 		try {
 			
@@ -192,6 +206,8 @@ public class FleetFactoryV3 {
 		CampaignFleetAPI fleet = createEmptyFleet(factionId, params.fleetType, market);
 		fleet.getFleetData().setOnlySyncMemberLists(true);
 		
+		Misc.getSalvageSeed(fleet); // will set it
+		
 //		if (true) {
 //			fleet.getFleetData().setOnlySyncMemberLists(false);
 //			fleet.getFleetData().addFleetMember("atlas_Standard");
@@ -219,6 +235,7 @@ public class FleetFactoryV3 {
 		Random random = new Random();
 		if (params.random != null) random = params.random;
 		
+		//Misc.setSpawnFPMult(fleet, numShipsMult);
 		
 		float combatPts = params.combatPts * numShipsMult;
 		
@@ -242,28 +259,41 @@ public class FleetFactoryV3 {
 		float dC = (float) doctrine.getCarriers() + random.nextInt(3) - 2;
 		float dP = (float) doctrine.getPhaseShips() + random.nextInt(3) - 2;
 		
-		float r1 = random.nextFloat();
-		float r2 = random.nextFloat();
-		float min = Math.min(r1, r2);
-		float max = Math.max(r1, r2);
+		boolean strict = doctrine.isStrictComposition();
+		if (strict) {
+			dW = (float) doctrine.getWarships() - 1;
+			dC = (float) doctrine.getCarriers() - 1;
+			dP = (float) doctrine.getPhaseShips() -1;
+		}
 		
-		float mag = 1f;
-		float v1 = min;
-		float v2 = max - min;
-		float v3 = 1f - max;
+		if (!strict) {
+			float r1 = random.nextFloat();
+			float r2 = random.nextFloat();
+			float min = Math.min(r1, r2);
+			float max = Math.max(r1, r2);
+			
+			float mag = 1f;
+			float v1 = min;
+			float v2 = max - min;
+			float v3 = 1f - max;
+			
+			v1 *= mag;
+			v2 *= mag;
+			v3 *= mag;
+			
+			v1 -= mag/3f;
+			v2 -= mag/3f;
+			v3 -= mag/3f;
+			
+			//System.out.println(v1 + "," + v2 + "," + v3);
+			dW += v1;
+			dC += v2;
+			dP += v3;
+		}
 		
-		v1 *= mag;
-		v2 *= mag;
-		v3 *= mag;
-		
-		v1 -= mag/3f;
-		v2 -= mag/3f;
-		v3 -= mag/3f;
-		
-		//System.out.println(v1 + "," + v2 + "," + v3);
-		dW += v1;
-		dC += v2;
-		dP += v3;
+		if (doctrine.getWarships() <= 0) dW = 0;
+		if (doctrine.getCarriers() <= 0) dC = 0;
+		if (doctrine.getPhaseShips() <= 0) dP = 0;
 		
 		
 //		float dW = (float) doctrine.getWarships() + random.nextInt(2) - 1;
@@ -278,10 +308,13 @@ public class FleetFactoryV3 {
 		
 		params.mode = mode;
 		params.banPhaseShipsEtc = banPhaseShipsEtc;
-		
-		if (banPhaseShipsEtc) {
-			dP = 0;
-		};
+
+		// with the phase AI changes: allow phase ships in smaller fleets
+		// but still ban the "etc" (i.e. hyperion, ships with damper field, etc - 
+		// anything not in the "combatSmallForSmallFleet" role
+//		if (banPhaseShipsEtc) {
+//			dP = 0;
+//		};
 		
 		if (dW < 0) dW = 0;
 		if (dC < 0) dC = 0;
@@ -333,31 +366,34 @@ public class FleetFactoryV3 {
 		
 		
 		//System.out.println("FLEET POINTS: " + getFP(fleet));
-		
-		int extraOfficers = 0;
 		int maxShips = Global.getSettings().getInt("maxShipsInAIFleet");
+		if (params.maxNumShips != null) {
+			maxShips = params.maxNumShips;
+		}
 		if (fleet.getFleetData().getNumMembers() > maxShips) {
 			if (params.doNotPrune == null || !params.doNotPrune) {
 				float targetFP = getFP(fleet);
-				sizeOverride = 5;
-				addCombatFleetPoints(fleet, random, warships, carriers, phase, params);
-				addFreighterFleetPoints(fleet, random, freighterPts, params);
-				addTankerFleetPoints(fleet, random, tankerPts, params);
-				addTransportFleetPoints(fleet, random, transportPts, params);
-				addLinerFleetPoints(fleet, random, linerPts, params);
-				addUtilityFleetPoints(fleet, random, utilityPts, params);
-				sizeOverride = 0;
+				if (params.doNotAddShipsBeforePruning == null || !params.doNotAddShipsBeforePruning) {
+					sizeOverride = 5;
+					addCombatFleetPoints(fleet, random, warships, carriers, phase, params);
+					addFreighterFleetPoints(fleet, random, freighterPts, params);
+					addTankerFleetPoints(fleet, random, tankerPts, params);
+					addTransportFleetPoints(fleet, random, transportPts, params);
+					addLinerFleetPoints(fleet, random, linerPts, params);
+					addUtilityFleetPoints(fleet, random, utilityPts, params);
+					sizeOverride = 0;
+				}
 			
 				int size = doctrine.getShipSize();
-				pruneFleet(size, fleet, targetFP, random);
+				pruneFleet(maxShips, size, fleet, targetFP, random);
 				
 				float currFP = getFP(fleet);
 				//currFP = getFP(fleet);
-				if (currFP < targetFP) {
-					extraOfficers = (int) Math.round ((targetFP / Math.max(10f, currFP) - 1f) * 10f);
-					if (extraOfficers > 30) extraOfficers = 30;
-					if (extraOfficers < 0) extraOfficers = 0;
-				}
+//				if (currFP < targetFP) {
+//					extraOfficers = (int) Math.round ((targetFP / Math.max(10f, currFP) - 1f) * 10f);
+//					if (extraOfficers > 30) extraOfficers = 30;
+//					if (extraOfficers < 0) extraOfficers = 0;
+//				}
 			}
 			
 			fleet.getFleetData().sort();
@@ -372,9 +408,24 @@ public class FleetFactoryV3 {
 		fleet.getFleetData().sort();
 		
 		if (params.withOfficers) {
-			addCommanderAndOfficers(fleet, params, extraOfficers, random);
+			addCommanderAndOfficers(fleet, params, random);
 		}
 		
+		if (fleet.getFlagship() != null) {
+			if (params.flagshipVariantId != null) {
+				fleet.getFlagship().setVariant(Global.getSettings().getVariant(params.flagshipVariantId), false, true);
+			} else if (params.flagshipVariant != null) {
+				fleet.getFlagship().setVariant(params.flagshipVariant, false, true);
+			}
+		}
+		
+		if (params.onlyRetainFlagship != null && params.onlyRetainFlagship) {
+			for (FleetMemberAPI curr : fleet.getFleetData().getMembersListCopy()) {
+				if (curr.isFlagship()) continue;
+				fleet.getFleetData().removeFleetMember(curr);
+			}
+		}
+		//fleet.getFlagship()
 		fleet.forceSync();
 		
 		//FleetFactoryV2.doctrine = null;
@@ -392,6 +443,9 @@ public class FleetFactoryV3 {
 		
 		DefaultFleetInflaterParams p = new DefaultFleetInflaterParams();
 		p.quality = quality;
+		if (params.averageSMods != null) {
+			p.averageSMods = params.averageSMods;
+		}
 		p.persistent = true;
 		p.seed = random.nextLong();
 		p.mode = mode;
@@ -412,6 +466,12 @@ public class FleetFactoryV3 {
 			member.getRepairTracker().setCR(member.getRepairTracker().getMaxCR());
 		}
 		
+		float requestedPoints = params.getTotalPts();
+		float actualPoints = fleet.getFleetPoints();
+		
+		Misc.setSpawnFPMult(fleet, actualPoints / Math.max(1f, requestedPoints));
+		
+		
 		return fleet;
 		
 		} finally {
@@ -419,8 +479,8 @@ public class FleetFactoryV3 {
 		}
 	}
 	
-	public static void pruneFleet(int doctrineSize, CampaignFleetAPI fleet, float targetFP, Random random) {
-		int maxShips = Global.getSettings().getInt("maxShipsInAIFleet");
+	public static void pruneFleet(int maxShips, int doctrineSize, CampaignFleetAPI fleet, float targetFP, Random random) {
+		//int maxShips = Global.getSettings().getInt("maxShipsInAIFleet");
 		
 		float combatFP = 0;
 		float civFP = 0;
@@ -479,6 +539,11 @@ public class FleetFactoryV3 {
 		l = (float) liner.size() / total;
 		o = (float) other.size() / total;
 		
+		f *= keepCiv;
+		t *= keepCiv;
+		l *= keepCiv;
+		o *= keepCiv;
+		
 		if (f > 0) f = Math.round(f);
 		if (t > 0) t = Math.round(t);
 		if (l > 0) l = Math.round(l);
@@ -490,7 +555,7 @@ public class FleetFactoryV3 {
 		if (other.size() > 0 && o < 1) o = 1;
 		
 		int extra = (int) ((f + t + l + o) - keepCiv);
-		if (extra < 0) keepCombat += Math.abs(extra);
+		//if (extra < 0) keepCombat += Math.abs(extra);
 		if (extra > 0 && o >= 2) {
 			extra--;
 			o--;
@@ -523,6 +588,8 @@ public class FleetFactoryV3 {
 		Collections.sort(other, c);
 		
 		int [] ratio = new int [] { 4, 2, 1, 1 };
+		//int [] ratio = new int [] { 1, 2, 2, 1 };
+		
 		//doctrineSize = 2;
 //		if (doctrineSize == 4) {
 //			ratio = new int [] { 3, 3, 1, 1 };
@@ -560,26 +627,61 @@ public class FleetFactoryV3 {
 				copy.set(i, f2);
 				copy.set(copy.size() - 1 - i, f1);
 			}
+//			
+//			float fpGoal = currFP - targetFP;
+//			float fpDone = 0;
+//			for (FleetMemberAPI curr : copy) {
+//				if (curr.isCivilian()) continue;
+//				for (FleetMemberAPI replace : combat) {
+//					float fpCurr = curr.getFleetPointCost();
+//					float fpReplace = replace.getFleetPointCost();
+//					if (fpCurr > fpReplace) {
+//						fpDone += fpCurr - fpReplace;
+//						combat.remove(replace);
+//						fleet.getFleetData().removeFleetMember(curr);
+//						fleet.getFleetData().addFleetMember(replace);
+//						break;
+//					}
+//				}
+//				if (fpDone >= fpGoal) {
+//					break;
+//				}
+//			}
 			
 			float fpGoal = currFP - targetFP;
 			float fpDone = 0;
 			for (FleetMemberAPI curr : copy) {
 				if (curr.isCivilian()) continue;
+				FleetMemberAPI best = null;
+				float bestDiff = 0f;
 				for (FleetMemberAPI replace : combat) {
 					float fpCurr = curr.getFleetPointCost();
 					float fpReplace = replace.getFleetPointCost();
 					if (fpCurr > fpReplace) {
-						fpDone += fpCurr - fpReplace;
-						combat.remove(replace);
-						fleet.getFleetData().removeFleetMember(curr);
-						fleet.getFleetData().addFleetMember(replace);
-						break;
+						float fpDiff = fpCurr - fpReplace;
+						if (fpDone + fpDiff <= fpGoal) {
+							best = replace;
+							bestDiff = fpDiff;
+							break;
+						} else {
+							if (fpDiff < bestDiff) {
+								best = replace;
+								bestDiff = fpDiff;
+							}
+						}
 					}
+				}
+				if (best != null) {
+					fpDone += bestDiff;
+					combat.remove(best);
+					fleet.getFleetData().removeFleetMember(curr);
+					fleet.getFleetData().addFleetMember(best);
 				}
 				if (fpDone >= fpGoal) {
 					break;
 				}
-			}	
+			}
+			
 		}
 		
 	}
@@ -597,14 +699,15 @@ public class FleetFactoryV3 {
 		WeightedRandomPicker<HullSize> picker = makePicker(ratio, random);
 		for (int i = 0; i < num; i++) {
 			if (picker.isEmpty()) picker = makePicker(ratio, random);
-			HullSize size = picker.pickAndRemove();
-			
-			for (FleetMemberAPI member : from) {
-				if (member.getHullSpec().getHullSize() == size) {
-					to.add(member);
-					from.remove(member);
-					added++;
-					break;
+			OUTER: while (!picker.isEmpty()) {
+				HullSize size = picker.pickAndRemove();
+				for (FleetMemberAPI member : from) {
+					if (member.getHullSpec().getHullSize() == size) {
+						to.add(member);
+						from.remove(member);
+						added++;
+						break OUTER;
+					}
 				}
 			}
 			
@@ -744,53 +847,248 @@ public class FleetFactoryV3 {
 	}
 	
 	public static void addCommanderAndOfficers(CampaignFleetAPI fleet, FleetParamsV3 params, Random random) {
-		addCommanderAndOfficers(fleet, params, 0, random);
-	}
-	public static void addCommanderAndOfficers(CampaignFleetAPI fleet, FleetParamsV3 params, int extraOfficers, Random random) {
-		OfficerLevelupPlugin plugin = (OfficerLevelupPlugin) Global.getSettings().getPlugin("officerLevelUp");
-		int min = 5;
-		int max = plugin.getMaxLevel(null);
-		if (max > params.officerLevelLimit) max = params.officerLevelLimit;
 		
-		FactionAPI faction = fleet.getFaction();
-		
-		List<FleetMemberAPI> members = fleet.getFleetData().getMembersListCopy();
-		float combatPoints = 0f;
-		for (FleetMemberAPI member : members) {
-			if (member.isCivilian()) continue;
-			combatPoints += member.getFleetPointCost();
+		if (true) {
+			addCommanderAndOfficersV2(fleet, params, random);
+			return;
 		}
+//		
+//		OfficerLevelupPlugin plugin = (OfficerLevelupPlugin) Global.getSettings().getPlugin("officerLevelUp");
+//		int min = 5;
+//		int max = plugin.getMaxLevel(null);
+//		if (max > params.officerLevelLimit) max = params.officerLevelLimit;
+//		
+//		FactionAPI faction = fleet.getFaction();
+//		
+//		List<FleetMemberAPI> members = fleet.getFleetData().getMembersListCopy();
+//		float combatPoints = 0f;
+//		for (FleetMemberAPI member : members) {
+//			if (member.isCivilian()) continue;
+//			combatPoints += member.getFleetPointCost();
+//		}
+//		
+//		boolean debug = true;
+//		debug = false;
+//		
+//		FactionDoctrineAPI doctrine = faction.getDoctrine();
+//		if (params.doctrineOverride != null) {
+//			doctrine = params.doctrineOverride;
+//		}
+//		
+//		float doctrineBonus = ((float) doctrine.getOfficerQuality() - 1f) * 0.25f;
+//		float fleetSizeBonus = combatPoints / 50f * 0.2f;
+//		if (fleetSizeBonus > 1f) fleetSizeBonus = 1f;
+//		
+//		float officerLevelValue = doctrineBonus * 0.7f + fleetSizeBonus * 0.3f;
+//		float commanderLevelValue = Math.max(officerLevelValue, doctrineBonus * 0.3f + fleetSizeBonus * 0.7f);
+//		
+//		if (debug) System.out.println("officerLevelValue: " + officerLevelValue);
+//		if (debug) System.out.println("commanderLevelValue: " + commanderLevelValue);
+//		
+//		int maxLevel = (int)(min + Math.round((float)(max - min) * officerLevelValue));
+//		maxLevel += params.officerLevelBonus;
+//		int minLevel = maxLevel - 4;
+//		
+//		if (maxLevel > max) maxLevel = max;
+//		if (minLevel > max) minLevel = max;
+//		
+//		if (minLevel < min) minLevel = min;
+//		if (maxLevel < min) maxLevel = min;
+//		
+//		
+//		
+//		WeightedRandomPicker<FleetMemberAPI> picker = new WeightedRandomPicker<FleetMemberAPI>(random);
+//		WeightedRandomPicker<FleetMemberAPI> flagshipPicker = new WeightedRandomPicker<FleetMemberAPI>(random);
+//		
+//		int maxSize = 0;
+//		for (FleetMemberAPI member : members) {
+//			if (member.isFighterWing()) continue;
+//			if (member.isFlagship()) continue;
+//			if (!member.getCaptain().isDefault()) continue;
+//			int size = member.getHullSpec().getHullSize().ordinal();
+//			if (size > maxSize) {
+//				maxSize = size;
+//			}
+//		}
+//		for (FleetMemberAPI member : members) {
+//			if (member.isFighterWing()) continue;
+//			if (member.isFlagship()) continue;
+//			if (!member.getCaptain().isDefault()) continue;
+//			
+//			float q = 1f;
+//			if (member.isCivilian()) q *= 0.0001f;
+//			
+//			float weight = (float) member.getFleetPointCost() * q;
+//			int size = member.getHullSpec().getHullSize().ordinal();
+//			if (size >= maxSize) {
+//				flagshipPicker.add(member, weight);
+//				weight *= 1000f;
+//			}
+//			
+//			picker.add(member, weight);
+//		}
+//		
+//		
+//		int baseOfficers = Global.getSettings().getInt("baseNumOfficers");
+//		int numOfficersIncludingCommander = 1 + random.nextInt(baseOfficers + 1);
+//		
+//		
+//		boolean commander = true;
+//		for (int i = 0; i < numOfficersIncludingCommander; i++) {
+//			FleetMemberAPI member = null;
+//			
+//			if (commander) {
+//				member = flagshipPicker.pickAndRemove();
+//			}
+//			if (member == null) {
+//				member = picker.pickAndRemove();
+//			} else {
+//				picker.remove(member);
+//			}
+//			
+//			if (member == null) {
+//				break; // out of ships that need officers
+//			}
+//			
+//			int level = (int) Math.min(max, Math.round(minLevel + random.nextFloat() * (maxLevel - minLevel)));
+//			if (Misc.isEasy()) {
+//				 level = (int) Math.ceil((float) level * Global.getSettings().getFloat("easyOfficerLevelMult"));
+//			}
+//			
+//			if (level <= 0) continue;
+//			
+//			float weight = getMemberWeight(member);
+//			float fighters = member.getVariant().getFittedWings().size();
+//			boolean wantCarrierSkills = weight > 0 && fighters / weight >= 0.5f;
+//			SkillPickPreference pref = SkillPickPreference.GENERIC;
+//			if (wantCarrierSkills) pref = SkillPickPreference.CARRIER;
+//			
+//			PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), level, pref, random);
+//			if (person.getPersonalityAPI().getId().equals(Personalities.TIMID)) {
+//				person.setPersonality(Personalities.CAUTIOUS);
+//			}
+//			
+//			if (commander) {
+//				if (params.commander != null) {
+//					person = params.commander;
+//				} else {
+//					addCommanderSkills(person, fleet, params, random);
+//				}
+//				person.setRankId(Ranks.SPACE_COMMANDER);
+//				person.setPostId(Ranks.POST_FLEET_COMMANDER);
+//				fleet.setCommander(person);
+//				fleet.getFleetData().setFlagship(member);
+//				commander = false;
+//				
+//				int officerNumLimit = person.getStats().getOfficerNumber().getModifiedInt();
+//				int aboveBase = officerNumLimit - baseOfficers + params.officerNumberBonus;
+//				
+//				if (aboveBase < 0) aboveBase = 0;
+//				numOfficersIncludingCommander += aboveBase;
+//				
+//				numOfficersIncludingCommander *= params.officerNumberMult;
+//				if (numOfficersIncludingCommander < 1) numOfficersIncludingCommander = 1;
+//				
+//				
+//				int maxOfficers = Global.getSettings().getInt("maxOfficersInAIFleet") + 1;
+//				if (numOfficersIncludingCommander > maxOfficers) {
+//					maxLevel += (numOfficersIncludingCommander - maxOfficers) * 2;
+//					numOfficersIncludingCommander = maxOfficers;
+//					
+//					minLevel = maxLevel - 4;
+//					if (maxLevel > max) maxLevel = max;
+//					if (minLevel > max) minLevel = max;
+//					
+//					if (minLevel < min) minLevel = min;
+//					if (maxLevel < min) maxLevel = min;
+//				}
+//			} else {
+//				member.setCaptain(person);
+//			}
+//		}
+	}
+	
+	
+	public static void addCommanderAndOfficersV2(CampaignFleetAPI fleet, FleetParamsV3 params, Random random) {
 		
-		boolean debug = true;
-		debug = false;
-		
+		GenerateFleetOfficersPickData pickData = new GenerateFleetOfficersPickData(fleet, params);
+		GenerateFleetOfficersPlugin genPlugin = Global.getSector().getGenericPlugins().pickPlugin(GenerateFleetOfficersPlugin.class, pickData);
+		if (genPlugin != null) {
+			genPlugin.addCommanderAndOfficers(fleet, params, random);
+			return;
+		}
+
+		FactionAPI faction = fleet.getFaction();
 		FactionDoctrineAPI doctrine = faction.getDoctrine();
 		if (params.doctrineOverride != null) {
 			doctrine = params.doctrineOverride;
 		}
+		List<FleetMemberAPI> members = fleet.getFleetData().getMembersListCopy();
+		if (members.isEmpty()) return;
 		
-		float doctrineBonus = ((float) doctrine.getOfficerQuality() - 1f) * 0.25f;
-		float fleetSizeBonus = combatPoints / 50f * 0.2f;
-		if (fleetSizeBonus > 1f) fleetSizeBonus = 1f;
+		float combatPoints = 0f;
+		float combatShips = 0f;
+		for (FleetMemberAPI member : members) {
+			if (member.isCivilian()) continue;
+			if (member.isFighterWing()) continue;
+			combatPoints += member.getFleetPointCost();
+			combatShips++;
+		}
+		if (combatPoints < 1f) combatPoints = 1f;
+		if (combatShips < 1f) combatShips = 1f;
 		
-		float officerLevelValue = doctrineBonus * 0.7f + fleetSizeBonus * 0.3f;
-		float commanderLevelValue = Math.max(officerLevelValue, doctrineBonus * 0.3f + fleetSizeBonus * 0.7f);
-		
-		if (debug) System.out.println("officerLevelValue: " + officerLevelValue);
-		if (debug) System.out.println("commanderLevelValue: " + commanderLevelValue);
-		
-		int maxLevel = (int)(min + Math.round((float)(max - min) * officerLevelValue));
-		maxLevel += params.officerLevelBonus;
-		int minLevel = maxLevel - 4;
-		
-		if (maxLevel > max) maxLevel = max;
-		if (minLevel > max) minLevel = max;
-		
-		if (minLevel < min) minLevel = min;
-		if (maxLevel < min) maxLevel = min;
+		boolean debug = true;
+		debug = false;
 		
 		
+		int maxCommanderLevel = Global.getSettings().getInt("maxAIFleetCommanderLevel");
+		float mercMult = Global.getSettings().getFloat("officerAIMaxMercsMult");
+		//float mercFP = Global.getSettings().getFloat("officerAIMercsStartingFP");
+		int maxOfficers = Global.getSettings().getInt("officerAIMax");
+		int baseMaxOfficerLevel = Global.getSettings().getInt("officerMaxLevel");
+		OfficerLevelupPlugin plugin = (OfficerLevelupPlugin) Global.getSettings().getPlugin("officerLevelUp");
 		
+		float officerQualityMult = (doctrine.getOfficerQuality() - 1f) / 4f;
+		if (officerQualityMult > 1f) officerQualityMult = 1f;
+		
+//		float baseFPPerOfficer = Global.getSettings().getFloat("baseFPPerOfficer");
+//		float fpPerBaseOfficer = baseFPPerOfficer - (baseFPPerOfficer * 0.5f * officerQualityMult);  
+//		float fpPerExtraOfficer = fpPerBaseOfficer * 1f;
+		
+		float baseShipsForMaxOfficerLevel = Global.getSettings().getFloat("baseCombatShipsForMaxOfficerLevel");
+		float baseCombatShipsPerOfficer = Global.getSettings().getFloat("baseCombatShipsPerOfficer");
+		float combatShipsPerOfficer = baseCombatShipsPerOfficer * (1f - officerQualityMult * 0.5f);
+		
+		//float fleetSizeOfficerQualityMult = combatPoints / (fpPerBaseOfficer * maxOfficers);
+		float fleetSizeOfficerQualityMult = combatShips / (baseShipsForMaxOfficerLevel *  (1f - officerQualityMult * 0.5f));
+		if (fleetSizeOfficerQualityMult > 1) fleetSizeOfficerQualityMult = 1;
+		
+		//int numOfficers = (int) (combatPoints / fpPerBaseOfficer) + params.officerNumberBonus;
+		int numOfficers = (int) Math.min(maxOfficers, combatShips / combatShipsPerOfficer);
+		//numOfficers += (int) Math.max(0, (combatPoints - mercFP) / fpPerExtraOfficer);
+		numOfficers += params.officerNumberBonus;
+		numOfficers = Math.round(numOfficers * params.officerNumberMult);
+		
+		if (debug) System.out.println("numOfficers: " + numOfficers);
+		
+		maxOfficers += (int)((float)doctrine.getOfficerQuality() * mercMult) + params.officerNumberBonus;
+		
+//		if (params.maxOfficers >= 0) maxOfficers = params.maxOfficers;
+//		if (params.minOfficers >= 0 && numOfficers < params.minOfficers) numOfficers = params.minOfficers;
+		
+		if (numOfficers > maxOfficers) numOfficers = maxOfficers;
+		
+		//int maxOfficerLevel = (int) Math.round((officerQualityMult * 0.75f + fleetSizeOfficerQualityMult * 1f) * (float) baseMaxOfficerLevel);
+		int maxOfficerLevel = (int)Math.round(((float)doctrine.getOfficerQuality() / 2f) +  
+								(fleetSizeOfficerQualityMult * 1f) * (float) baseMaxOfficerLevel);
+		if (maxOfficerLevel < 1) maxOfficerLevel = 1;
+		maxOfficerLevel += params.officerLevelBonus;
+		if (maxOfficerLevel < 1) maxOfficerLevel = 1;
+		
+		if (debug) System.out.println("maxOfficers: " + maxOfficers);
+		if (debug) System.out.println("maxOfficerLevel: " + maxOfficerLevel);
+		
+
 		WeightedRandomPicker<FleetMemberAPI> picker = new WeightedRandomPicker<FleetMemberAPI>(random);
 		WeightedRandomPicker<FleetMemberAPI> flagshipPicker = new WeightedRandomPicker<FleetMemberAPI>(random);
 		
@@ -798,6 +1096,7 @@ public class FleetFactoryV3 {
 		for (FleetMemberAPI member : members) {
 			if (member.isFighterWing()) continue;
 			if (member.isFlagship()) continue;
+			if (member.isCivilian()) continue;
 			if (!member.getCaptain().isDefault()) continue;
 			int size = member.getHullSpec().getHullSize().ordinal();
 			if (size > maxSize) {
@@ -807,119 +1106,132 @@ public class FleetFactoryV3 {
 		for (FleetMemberAPI member : members) {
 			if (member.isFighterWing()) continue;
 			if (member.isFlagship()) continue;
+			if (member.isCivilian()) continue;
 			if (!member.getCaptain().isDefault()) continue;
 			
-			float q = 1f;
-			if (member.isCivilian()) q *= 0.0001f;
-			
-			float weight = (float) member.getFleetPointCost() * q;
+			float weight = (float) member.getFleetPointCost();
 			int size = member.getHullSpec().getHullSize().ordinal();
 			if (size >= maxSize) {
 				flagshipPicker.add(member, weight);
-				weight *= 1000f;
 			}
 			
 			picker.add(member, weight);
 		}
 		
+		if (picker.isEmpty()) {
+			picker.add(members.get(0), 1f);
+		}
+		if (flagshipPicker.isEmpty()) {
+			flagshipPicker.add(members.get(0), 1f);
+		}
 		
-		int baseOfficers = Global.getSettings().getInt("baseNumOfficers");
-		int numOfficersIncludingCommander = 1 + random.nextInt(baseOfficers + 1);
 		
+		FleetMemberAPI flagship = flagshipPicker.pickAndRemove();
+		picker.remove(flagship);
+		int commanderLevel = maxOfficerLevel;
+		int commanderLevelLimit = maxCommanderLevel;
+//		if (commanderLevelLimit > params.officerLevelLimit) commanderLevelLimit = params.officerLevelLimit;
+//		if (commanderLevelLimit > maxCommanderLevel) commanderLevelLimit = maxCommanderLevel;
+		if (params.commanderLevelLimit != 0) {
+			commanderLevelLimit = params.commanderLevelLimit;
+		}
+		if (commanderLevel > commanderLevelLimit) commanderLevel = commanderLevelLimit;
 		
-		boolean commander = true;
-		for (int i = 0; i < numOfficersIncludingCommander; i++) {
-			FleetMemberAPI member = null;
-			
-			if (commander) {
-				member = flagshipPicker.pickAndRemove();
+		SkillPickPreference pref = getSkillPrefForShip(flagship);
+		PersonAPI commander = params.commander;
+		if (commander == null) {
+			commander = OfficerManagerEvent.createOfficer(fleet.getFaction(), commanderLevel, pref, false, null, true, true, -1, random);
+			if (commander.getPersonalityAPI().getId().equals(Personalities.TIMID)) {
+				commander.setPersonality(Personalities.CAUTIOUS);
 			}
-			if (member == null) {
-				member = picker.pickAndRemove();
-			} else {
-				picker.remove(member);
-			}
-			
+			addCommanderSkills(commander, fleet, params, random);
+		}
+		
+		commander.setRankId(Ranks.SPACE_COMMANDER);
+		commander.setPostId(Ranks.POST_FLEET_COMMANDER);
+		fleet.setCommander(commander);
+		fleet.getFleetData().setFlagship(flagship);
+		
+		int commanderOfficerLevelBonus = (int) commander.getStats().getDynamic().getMod(Stats.OFFICER_MAX_LEVEL_MOD).computeEffective(0);
+		int officerLevelLimit = plugin.getMaxLevel(null) + commanderOfficerLevelBonus;
+		//if (officerLevelLimit > params.officerLevelLimit) officerLevelLimit = params.officerLevelLimit;
+		if (params.officerLevelLimit != 0) {
+			officerLevelLimit = params.officerLevelLimit;
+		}
+		
+		if (debug) {
+			System.out.println("Created level " + commander.getStats().getLevel() + " commander");
+			System.out.println("Max officer level bonus: " + commanderOfficerLevelBonus + " (due to commander skill)");
+			System.out.println("Adding up to " + numOfficers + " officers");
+		}
+		
+		int added = 0;
+		for (int i = 0; i < numOfficers; i++) {
+			FleetMemberAPI member = picker.pickAndRemove();
 			if (member == null) {
 				break; // out of ships that need officers
 			}
 			
-			int level = (int) Math.min(max, Math.round(minLevel + random.nextFloat() * (maxLevel - minLevel)));
+			int level = maxOfficerLevel - random.nextInt(3);
 			if (Misc.isEasy()) {
 				 level = (int) Math.ceil((float) level * Global.getSettings().getFloat("easyOfficerLevelMult"));
 			}
+			if (level < 1) level = 1;
+			if (level > officerLevelLimit) level = officerLevelLimit;
 			
-			if (commander && extraOfficers > 0) {
-				level += extraOfficers;
-				if (level > max) level = max;
-				
-			}
-			
-			if (level <= 0) continue;
-			
-			float weight = getMemberWeight(member);
-			float fighters = member.getVariant().getFittedWings().size();
-			boolean wantCarrierSkills = weight > 0 && fighters / weight >= 0.5f;
-			SkillPickPreference pref = SkillPickPreference.NON_CARRIER;
-			if (wantCarrierSkills) pref = SkillPickPreference.CARRIER;
-			
-			PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), level, true, pref, random);
+			pref = getSkillPrefForShip(member);
+			PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), level, pref, false, fleet, true, true, -1, random);
 			if (person.getPersonalityAPI().getId().equals(Personalities.TIMID)) {
 				person.setPersonality(Personalities.CAUTIOUS);
 			}
 			
-			if (commander) {
-				if (params.commander != null) {
-					person = params.commander;
-				} else {
-					addCommanderSkills(person, fleet, params, random);
-				}
-				person.setRankId(Ranks.SPACE_COMMANDER);
-				person.setPostId(Ranks.POST_FLEET_COMMANDER);
-				fleet.setCommander(person);
-				fleet.getFleetData().setFlagship(member);
-				commander = false;
-				
-				int officerNumLimit = person.getStats().getOfficerNumber().getModifiedInt();
-				int aboveBase = officerNumLimit - baseOfficers + params.officerNumberBonus;
-				
-				aboveBase += extraOfficers;
-				
-				if (aboveBase < 0) aboveBase = 0;
-				numOfficersIncludingCommander += aboveBase;
-				
-				numOfficersIncludingCommander *= params.officerNumberMult;
-				if (numOfficersIncludingCommander < 1) numOfficersIncludingCommander = 1;
-				
-				
-				int maxOfficers = Global.getSettings().getInt("maxOfficersInAIFleet") + 1;
-				if (numOfficersIncludingCommander > maxOfficers) {
-					maxLevel += (numOfficersIncludingCommander - maxOfficers) * 2;
-					numOfficersIncludingCommander = maxOfficers;
-					
-					minLevel = maxLevel - 4;
-					if (maxLevel > max) maxLevel = max;
-					if (minLevel > max) minLevel = max;
-					
-					if (minLevel < min) minLevel = min;
-					if (maxLevel < min) maxLevel = min;
-				}
-				
-				if (debug) {
-					System.out.println("Adding " + (aboveBase - extraOfficers) + " extra officers due to commander skill");
-					if (extraOfficers > 0) {
-						System.out.println("Adding " + extraOfficers + " extra officers due to fleet size");
-					}
-				}
-			} else {
-				member.setCaptain(person);
+			if (debug) {
+				System.out.println("Added level " + person.getStats().getLevel() + " officer");
 			}
+			added++;
+			member.setCaptain(person);
 		}
+		
+		if (debug) {
+			System.out.println("Added " + added + " officers total");
+		}
+		
+	}
+	
+	public static SkillPickPreference getSkillPrefForShip(FleetMemberAPI member) {
+		float weight = getMemberWeight(member);
+		float fighters = member.getVariant().getFittedWings().size();
+		boolean wantCarrierSkills = weight > 0 && fighters / weight >= 0.5f;
+		SkillPickPreference pref = SkillPickPreference.GENERIC;
+		if (wantCarrierSkills) {
+			pref = SkillPickPreference.CARRIER;
+		} else if (member.isPhaseShip()) {
+			pref = SkillPickPreference.PHASE;
+		}
+		
+		return pref;
 	}
 	
 	
 	public static void addCommanderSkills(PersonAPI commander, CampaignFleetAPI fleet, FleetParamsV3 params, Random random) {
+		if (params != null && params.noCommanderSkills != null && params.noCommanderSkills) return;
+		
 		if (random == null) random = new Random();
+		
+		MutableCharacterStatsAPI stats = commander.getStats();
+		int level = stats.getLevel();
+		
+		int forOne = Global.getSettings().getInt("commanderLevelForOneSkill");
+		int forTwo = Global.getSettings().getInt("commanderLevelForTwoSkills");
+		
+		int numSkills = 0;
+		if (level >= forTwo) {
+			numSkills = 2;
+		} else if (level >= forOne) {
+			numSkills = 1;
+		}
+
+		if (numSkills <= 0) return;
 		
 		FactionDoctrineAPI doctrine = fleet.getFaction().getDoctrine();
 		if (params != null && params.doctrineOverride != null) {
@@ -927,33 +1239,34 @@ public class FleetFactoryV3 {
 		}
 		
 		List<String> skills = new ArrayList<String>(doctrine.getCommanderSkills());
+		
+		Iterator<String> iter = skills.iterator();
+		while (iter.hasNext()) {
+			String id = iter.next();
+			SkillSpecAPI spec = Global.getSettings().getSkillSpec(id);
+			if (spec != null && spec.hasTag(Skills.TAG_PLAYER_ONLY)) {
+				iter.remove();
+			}
+		}
+		
+		
 		if (skills.isEmpty()) return;
 		
 		if (random.nextFloat() < doctrine.getCommanderSkillsShuffleProbability()) {
 			Collections.shuffle(skills, random);
 		}
 
-		OfficerLevelupPlugin plugin = (OfficerLevelupPlugin) Global.getSettings().getPlugin("officerLevelUp");
-		int min = 5;
-		int max = plugin.getMaxLevel(null);
-		
-		int maxPoints = 6;
-		
-		int points = (int)((float)maxPoints * ((float)commander.getStats().getLevel() - min) / (float)(max - min));
-		if (points <= 0) return;
-		
-		MutableCharacterStatsAPI stats = commander.getStats();
 		stats.setSkipRefresh(true);
 		
 		boolean debug = true;
 		debug = false;
-		if (debug) System.out.println("Generating commander skills, person level " + stats.getLevel() + ", points: " + points);
+		if (debug) System.out.println("Generating commander skills, person level " + stats.getLevel() + ", skills: " + numSkills);
+		int picks = 0;
 		for (String skillId : skills) {
-			int spend = Math.min(points, 3);
-			if (debug) System.out.println("Adding " + spend + " points to " + skillId);
-			stats.setSkillLevel(skillId, spend);
-			points -= spend;
-			if (points <= 0) {
+			if (debug) System.out.println("Selected skill: [" + skillId + "]");
+			stats.setSkillLevel(skillId, 1);
+			picks++;
+			if (picks >= numSkills) {
 				break;
 			}
 		}
@@ -961,7 +1274,6 @@ public class FleetFactoryV3 {
 		
 		stats.setSkipRefresh(false);
 		stats.refreshCharacterStatsEffects();
-		
 	}
 	
 	
@@ -995,10 +1307,14 @@ public class FleetFactoryV3 {
 		MarketAPI closestMatchingSize = null;
 		
 		
+		FactionAPI creationFaction = Global.getSector().getFaction(params.factionId);
+		boolean independent = Factions.INDEPENDENT.equals(params.factionId) || 
+							  Factions.SCAVENGERS.equals(params.factionId) ||
+							  creationFaction.getCustomBoolean(Factions.CUSTOM_SPAWNS_AS_INDEPENDENT);
+		
 		for (MarketAPI market : allMarkets) {
 			if (market.getPrimaryEntity() == null) continue;
 			
-			boolean independent = Factions.INDEPENDENT.equals(params.factionId) || Factions.SCAVENGERS.equals(params.factionId);
 			if (independent) {
 				boolean hostileToIndependent = market.getFaction().isHostileTo(Factions.INDEPENDENT);
 				if (hostileToIndependent) continue;
@@ -1475,6 +1791,16 @@ public class FleetFactoryV3 {
 			capitalPicker.clear();
 		}
 		
+		if (params.minShipSize >= 2) {
+			smallPicker.clear();
+		}
+		if (params.minShipSize >= 3) {
+			mediumPicker.clear();
+		}
+		if (params.minShipSize >= 4) {
+			largePicker.clear();
+		}
+		
 		
 		int size = doctrine.getShipSize();
 		//size = getAdjustedDoctrineSize(size, fleet);
@@ -1499,6 +1825,10 @@ public class FleetFactoryV3 {
 			if (params.maxShipSize <= 1) medium = 0;
 			if (params.maxShipSize <= 2) large = 0;
 			if (params.maxShipSize <= 3) capital = 0;
+			
+			if (params.minShipSize >= 2) small = 0;
+			if (params.minShipSize >= 3) medium = 0;
+			if (params.minShipSize >= 4) large = 0;
 
 			int smallPre = small / 2;
 			small -= smallPre;

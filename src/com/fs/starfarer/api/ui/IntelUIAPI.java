@@ -10,4 +10,5 @@ public interface IntelUIAPI {
 	void recreateIntelUI();
 	void showDialog(SectorEntityToken target, String ruleId);
 	void showDialog(SectorEntityToken target, InteractionDialogPlugin plugin);
+	void updateIntelList();
 }

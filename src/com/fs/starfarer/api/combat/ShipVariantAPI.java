@@ -2,6 +2,7 @@ package com.fs.starfarer.api.combat;
 
 import java.util.Collection;
 import java.util.EnumSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -24,7 +25,7 @@ public interface ShipVariantAPI {
 	Collection<String> getHullMods();
 	
 	/**
-	 * Doesn't clear out built-in hullmods, as opposed to getHullMods().clear().
+	 * Doesn't clear out built-in hullmods (or permamods), as opposed to getHullMods().clear().
 	 */
 	void clearHullMods();
 	
@@ -103,6 +104,7 @@ public interface ShipVariantAPI {
 	void clearPermaMods();
 	void removePermaMod(String modId);
 	void addPermaMod(String modId);
+	void addPermaMod(String modId, boolean isSMod);
 
 	boolean isCarrier();
 
@@ -170,6 +172,14 @@ public interface ShipVariantAPI {
 
 	boolean isTransport();
 	String getVariantFilePath();
+
+	LinkedHashSet<String> getSMods();
+
+	String getFullDesignationWithHullNameForShip();
+
+	void refreshBuiltInWings();
+
+
 
 }
 

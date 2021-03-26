@@ -13,7 +13,28 @@ package com.fs.starfarer.api.impl.campaign.ids;
  */
 public class MemFlags {
 
+	public static final String PLAYER_ATROCITIES = "$atrocities";
+	
+	public static final String STORY_CRITICAL = "$story_critical";
+	
+	/**
+	 * For stuff like the Galatia Academy, where the market is fake and doesn't have the standard buy/sell/fleet/etc
+	 * interaction options.
+	 */
+	public static final String MARKET_HAS_CUSTOM_INTERACTION_OPTIONS = "$hasCustomInteractionOptions";
+	
+	public static final String MARKET_EXTRA_SUSPICION = "$marketExtraSuspicion";
+	public static final String PATROL_EXTRA_SUSPICION = "$patrolExtraSuspicion";
+	
+	public static final String CAN_ONLY_BE_ENGAGED_WHEN_VISIBLE_TO_PLAYER = "$canOnlyBeEngagedWhenVisibleToPlayer";
+	
 	public static final String RECENTLY_SALVAGED = "$recentlySalvaged";
+	
+	public static final String FLEET_DO_NOT_IGNORE_PLAYER = "$cfai_doNotIgnorePlayer";
+	public static final String FLEET_IGNORES_OTHER_FLEETS = "$cfai_ignoreOtherFleets";
+	public static final String FLEET_IGNORED_BY_OTHER_FLEETS = "$cfai_ignoredByOtherFleets";
+	
+	public static final String FLEET_PATROL_DISTANCE = "$cfai_patrolDist";
 	
 	public static final String RECENTLY_RAIDED = "$recentlyRaided";
 	public static final String RECENTLY_BOMBARDED = "$recentlyBombarded";
@@ -24,6 +45,7 @@ public class MemFlags {
 	
 	public static final String STAR_SYSTEM_IN_ANCHOR_MEMORY = "$anchor_starSystem";
 	
+	public static final String PREV_SALVAGE_SPECIAL_DATA = "$prevSalvageSpecialData";
 	public static final String SALVAGE_SPECIAL_DATA = "$salvageSpecialData";
 	public static final String SALVAGE_SEED = "$salvageSeed";
 	public static final String SALVAGE_SPEC_ID_OVERRIDE = "$salvageSpecId";
@@ -68,16 +90,24 @@ public class MemFlags {
 	public static final String MEMORY_KEY_PIRATE = "$isPirate";
 	public static final String MEMORY_KEY_FLEET_TYPE = "$fleetType";
 	
+	public static final String MEMORY_KEY_FORCE_TRANSPONDER_OFF = "$forceTOff";
+	
 	public static final String MEMORY_KEY_SKIP_TRANSPONDER_STATUS_INFO = "$skipTInfo";
 	
 	
 	
+	public static final String MEMORY_KEY_AVOID_PLAYER_SLOWLY = "$cfai_avoidPlayerSlowly";
+	public static final String MEMORY_KEY_NEVER_AVOID_PLAYER_SLOWLY = "$cfai_neverAvoidPlayerSlowly";
+	
 	public static final String MEMORY_KEY_MAKE_HOSTILE = "$cfai_makeHostile";
 	public static final String MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF = "$cfai_makeHostileWhileTOff";
 	public static final String MEMORY_KEY_MAKE_NON_HOSTILE = "$cfai_makeNonHostile";
+	public static final String MEMORY_KEY_MAKE_ALWAYS_PURSUE = "$cfai_makeAlwaysPursue";
 	public static final String MEMORY_KEY_MAKE_PREVENT_DISENGAGE = "$cfai_makePreventDisengage";
 	public static final String MEMORY_KEY_MAKE_ALLOW_DISENGAGE = "$cfai_makeAllowDisengage";
 	public static final String MEMORY_KEY_MAKE_AGGRESSIVE = "$cfai_makeAggressive";
+	public static final String MEMORY_KEY_MAKE_HOLD_VS_STRONGER = "$cfai_holdVsStronger";
+	public static final String MEMORY_KEY_MAKE_AGGRESSIVE_ONE_BATTLE_ONLY = "$cfai_makeAggressiveLastsOneBattle";
 	public static final String MEMORY_KEY_MAKE_NON_AGGRESSIVE = "$cfai_makeNonAggressive";
 	public static final String MEMORY_KEY_RECENTLY_DEFEATED_BY_PLAYER = "$cfai_recentlyDefeatedByPlayer";
 	public static final String MEMORY_KEY_NO_JUMP = "$cfai_noJump";
@@ -98,6 +128,9 @@ public class MemFlags {
 	public static final String MEMORY_KEY_LOW_REP_IMPACT = "$lowRepImpact";
 	public static final String MEMORY_KEY_NO_REP_IMPACT = "$noRepImpact";
 	
+	public static final String MEMORY_KEY_DO_NOT_SHOW_FLEET_DESC = "$shownFleetDescAlready";
+	public static final String MEMORY_KEY_FORCE_AUTOFIT_ON_NO_AUTOFIT_SHIPS = "$overrideNoAutofit";
+	
 	public static final String MEMORY_KEY_MISSION_IMPORTANT = "$missionImportant";
 	
 	
@@ -105,6 +138,8 @@ public class MemFlags {
 	public static final String MEMORY_KEY_REQUIRES_DISCRETION = "$requiresDiscretionToDeal";
 	
 	public static final String MARKET_DO_NOT_INIT_COMM_LISTINGS = "$doNotInitCommListings";
+
+	public static String HIDDEN_BASE_MEM_FLAG = "$core_hiddenBase";
 	
 	
 }

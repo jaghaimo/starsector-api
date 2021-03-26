@@ -38,7 +38,9 @@ public class SustainedBurnAbility extends BaseToggleAbility {
 		CampaignFleetAPI fleet = getFleet();
 		if (fleet == null) return;
 		
-		fleet.setVelocity(0, 0);
+		if (!fleet.getMemoryWithoutUpdate().is("$sb_active", true)) {
+			fleet.setVelocity(0, 0);
+		}
 	}
 
 	@Override
@@ -54,6 +56,8 @@ public class SustainedBurnAbility extends BaseToggleAbility {
 			deactivate();
 			return;
 		}
+		
+		fleet.getMemoryWithoutUpdate().set("$sb_active", true, 0.3f);
 		
 		if (level > 0 && level < 1 && amount > 0) {
 			float activateSeconds = getActivationDays() * Global.getSector().getClock().getSecondsPerDay();
@@ -94,6 +98,9 @@ public class SustainedBurnAbility extends BaseToggleAbility {
 		float burn = Misc.getBurnLevelForSpeed(fleet.getVelocity().length());
 		if (burn > 1) {
 			float dir = Misc.getDesiredMoveDir(fleet);
+//			if (fleet.isPlayerFleet()) {
+//				System.out.println("DIR: " + dir);
+//			}
 			float velDir = Misc.getAngleInDegrees(fleet.getVelocity());
 			float diff = Misc.getAngleDiff(dir, velDir);
 			//float pad = 90f;

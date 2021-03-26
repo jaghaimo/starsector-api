@@ -16,6 +16,7 @@ public class SleeperPodsSpecial extends BaseSalvageSpecial {
 	
 	public static enum SleeperSpecialType {
 		CREW,
+		MARINES,
 		OFFICER,
 		ADMIN,
 		ORGANS,
@@ -98,6 +99,9 @@ public class SleeperPodsSpecial extends BaseSalvageSpecial {
 		case CREW:
 			initCrew();
 			break;
+		case MARINES:
+			initMarines();
+			break;
 		case OFFICER:
 			initOfficer();
 			break;
@@ -117,6 +121,19 @@ public class SleeperPodsSpecial extends BaseSalvageSpecial {
 		} else {
 			addText("While making a preliminary assessment, your salvage crews " +
 					"find some occupied sleeper pods still running on backup power.");
+			
+			options.clearOptions();
+			options.addOption("Attempt to open the pods", OPEN);
+			options.addOption("Not now", NOT_NOW);
+		}			
+	}
+	
+	protected void initMarines() {
+		if (quantity <= 0) { 
+			initNothing();
+		} else {
+			addText("While making a preliminary assessment, your salvage crews " +
+			"find some occupied mil-grade sleeper pods still running on backup power.");
 			
 			options.clearOptions();
 			options.addOption("Attempt to open the pods", OPEN);
@@ -164,6 +181,14 @@ public class SleeperPodsSpecial extends BaseSalvageSpecial {
 				
 				playerFleet.getCargo().addCommodity(Commodities.CREW, quantity);
 				AddRemoveCommodity.addCommodityGainText(Commodities.CREW, quantity, text);
+				
+				break;
+			case MARINES:
+				addText("One by one, the pods begin to open as the thawing process completes. " +
+				"Most of the occupants come through alive, if somewhat dazed.");
+				
+				playerFleet.getCargo().addCommodity(Commodities.MARINES, quantity);
+				AddRemoveCommodity.addCommodityGainText(Commodities.MARINES, quantity, text);
 				
 				break;
 			case OFFICER:

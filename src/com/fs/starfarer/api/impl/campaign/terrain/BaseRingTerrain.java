@@ -92,6 +92,10 @@ public abstract class BaseRingTerrain extends BaseTerrain {
 		return params.middleRadius + params.bandWidthInEngine / 2f + 50f;
 	}
 	
+	public RingParams getRingParams() {
+		return params;
+	}
+
 	public float getProximitySoundFactor() {
 		float width = params.bandWidthInEngine / 2f + getExtraSoundRadius() + Global.getSector().getPlayerFleet().getRadius();
 		if (width <= 1f) return 1f;
@@ -126,6 +130,13 @@ public abstract class BaseRingTerrain extends BaseTerrain {
 	
 	public float getOptimalEffectRadius(Vector2f locFrom) {
 		return params.middleRadius;
+	}
+	
+	public String getNameAOrAn() {
+		if (getTerrainName() != null) {
+			return Misc.getAOrAnFor(getTerrainName());
+		}
+		return "a";
 	}
 }
 

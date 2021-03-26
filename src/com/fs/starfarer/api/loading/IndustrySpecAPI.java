@@ -4,6 +4,7 @@ import java.util.Set;
 
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 
 public interface IndustrySpecAPI {
 
@@ -40,6 +41,8 @@ public interface IndustrySpecAPI {
 	Industry getUpgradePluginInstance(MarketAPI market);
 	String getData();
 	void setData(String data);
+	RaidDangerLevel getDisruptDanger();
+	void setDisruptDanger(RaidDangerLevel disruptDanger);
 	
 
 }

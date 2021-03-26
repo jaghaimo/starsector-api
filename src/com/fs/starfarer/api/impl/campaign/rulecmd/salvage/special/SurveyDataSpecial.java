@@ -249,7 +249,7 @@ public class SurveyDataSpecial extends BaseSalvageSpecial {
 //								planet.getSpec().getIconColor());
 //		text.setFontInsignia();
 		
-		SurveyPlugin plugin = (SurveyPlugin) Global.getSettings().getPlugin("surveyPlugin");
+		SurveyPlugin plugin = (SurveyPlugin) Global.getSettings().getNewPluginInstance("surveyPlugin");
 		plugin.init(Global.getSector().getPlayerFleet(), planet);
 		long xp = plugin.getXP();
 		if (xp > 0) {

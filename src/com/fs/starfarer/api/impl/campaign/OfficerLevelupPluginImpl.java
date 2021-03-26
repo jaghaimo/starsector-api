@@ -5,12 +5,17 @@ import java.util.List;
 import java.util.Random;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.ids.Skills;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.plugins.OfficerLevelupPlugin;
+import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.SkillData;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
+import com.fs.starfarer.api.util.SkillData.SkillsForAptitude;
 
 public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 
@@ -37,21 +42,101 @@ public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 			      f2 * mult2 * base +
 			      f3 * mult3 * base;
 		
-		return (long) r;
+		return (long) r * 6;
 	}
 
 	public int getMaxLevel(PersonAPI person) {
-		return (int) Global.getSettings().getFloat("officerMaxLevel");
+		int bonus = 0;
+		if (person != null) {
+			MutableCharacterStatsAPI stats = person.getFleetCommanderStats();
+			if (stats != null) {
+				bonus = (int) stats.getDynamic().getMod(Stats.OFFICER_MAX_LEVEL_MOD).computeEffective(0);
+			}
+		}
+		return (int) Global.getSettings().getFloat("officerMaxLevel") + bonus;
+	}
+	
+	public int getMaxEliteSkills(PersonAPI person) {
+		int bonus = 0;
+		if (person != null) {
+			MutableCharacterStatsAPI stats = person.getFleetCommanderStats();
+			if (stats != null) {
+				bonus = (int) stats.getDynamic().getMod(Stats.OFFICER_MAX_ELITE_SKILLS_MOD).computeEffective(0);
+			}
+		}
+		return (int) Global.getSettings().getFloat("officerMaxEliteSkills") + bonus;
 	}
 
+	public List<String> pickLevelupSkillsV2(PersonAPI person, Random random) {
+		if (random == null) random = new Random();
+		
+		
+		List<SkillSpecAPI> leftovers = new ArrayList<SkillSpecAPI>();
+		List<List<SkillSpecAPI>> unknownTiers = new ArrayList<List<SkillSpecAPI>>();
+		
+		MutableCharacterStatsAPI stats = person.getStats();
+		int level = stats.getLevel();
+		
+		for (String ap : SkillData.getAptitudes().keySet()) {
+			SkillsForAptitude skills = SkillData.getSkills(ap);
+			int tier = 0;
+			for (List<SkillSpecAPI> list : skills.tiers) {
+				tier++;
+				
+				List<SkillSpecAPI> unknown = new ArrayList<SkillSpecAPI>();
+				for (SkillSpecAPI skill : list) {
+					if (!skill.isCombatOfficerSkill()) continue;
+					if (skill.hasTag(Skills.TAG_DEPRECATED)) continue;
+					if (stats.getSkillLevel(skill.getId()) <= 0) {
+						unknown.add(skill);
+					}
+				}
+				if (list.size() == unknown.size() && (tier < 4 || level >= 3)) {
+					unknownTiers.add(list);
+				} else {
+					leftovers.addAll(unknown);
+				}
+			}
+		}
+		
+		int max = 4;
+		if (Misc.isMentored(person)) {
+			max = 6;
+		}
+		List<String> result = new ArrayList<String>();
+		
+		if (!unknownTiers.isEmpty()) {
+			WeightedRandomPicker<List<SkillSpecAPI>> picker = new WeightedRandomPicker<List<SkillSpecAPI>>(random);
+			picker.addAll(unknownTiers);
+			while (!picker.isEmpty() && result.size() < max) {
+				List<SkillSpecAPI> pick = picker.pickAndRemove();
+				for (SkillSpecAPI s : pick) {
+					if (result.size() >= max) break; 
+					result.add(s.getId());
+				}
+			}
+		}
+		
+		if (!leftovers.isEmpty()) {
+			WeightedRandomPicker<SkillSpecAPI> picker = new WeightedRandomPicker<SkillSpecAPI>(random);
+			picker.addAll(leftovers);
+			while (!picker.isEmpty() && result.size() < max) {
+				SkillSpecAPI pick = picker.pickAndRemove();
+				result.add(pick.getId());
+			}
+		}
+		
+		return result;
+	}
 	public List<String> pickLevelupSkills(PersonAPI person, Random random) {
+		if (true) return pickLevelupSkillsV2(person, random);
 		if (random == null) random = new Random();
 		
 		boolean hasCarrierSkills = false;
 		for (SkillLevelAPI skill : person.getStats().getSkillsCopy()) {
 			if (!skill.getSkill().isCombatOfficerSkill()) continue;
 			
-			if (skill.getSkill().hasTag(Tags.SKILL_CARRIER)) {
+			if (skill.getSkill().hasTag(Skills.TAG_CARRIER)) {
 				hasCarrierSkills = true;
 				break;
 			}
@@ -74,7 +159,7 @@ public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 					knownSkillCount++;
 					addSkill(person, knownSkills, skillId);
 				}
-				if (skill.hasTag(Tags.SKILL_CARRIER)) {
+				if (skill.hasTag(Skills.TAG_CARRIER)) {
 					addSkill(person, carrierSkills, skillId);
 					if (level > 0) addSkill(person, knownCarrierSkills, skillId);
 				} else {

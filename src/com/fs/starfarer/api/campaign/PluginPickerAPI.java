@@ -10,6 +10,7 @@ public interface PluginPickerAPI {
 	FleetStubConverterPlugin pickFleetStubConverter(FleetStubAPI stub);
 	ImmigrationPlugin pickImmigrationPlugin(MarketAPI market);
 	AICoreAdminPlugin pickAICoreAdminPlugin(String commodityId);
+	AICoreOfficerPlugin pickAICoreOfficerPlugin(String commodityId);
 	FleetInflater pickFleetInflater(CampaignFleetAPI fleet, Object params);
 
 }

@@ -16,6 +16,8 @@ package com.fs.starfarer.api.campaign.ai;
  */
 public class FleetAIFlags {
 	
+	public static final String USE_EB_FOR_TRAVEL = "$ai_useEBForTravel";
+	
 	/**
 	 * SectorEntityToken, set if actively pursuing something.
 	 */
@@ -64,6 +66,15 @@ public class FleetAIFlags {
 	 * Vector2f, last location where the target was seen.
 	 */
 	public static final String LAST_SEEN_TARGET_LOC = "$ai_lastSeenTargetLoc";
+	
+	
+	/**
+	 * Does not get reset when the target changes. Used for an outside script to indicate where the fleet
+	 * should start looking for a target it's trying to intercept. 
+	 */
+	public static final String PLACE_TO_LOOK_FOR_TARGET = "$ai_placeToLook";
+	
+	public static final String SEEN_TARGET_JUMPING_FROM = "$ai_seenTargetJumpingFrom";
 	
 	/**
 	 * Float, direction the target was going when last seen.

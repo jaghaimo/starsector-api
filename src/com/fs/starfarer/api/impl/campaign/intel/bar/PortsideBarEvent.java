@@ -1,11 +1,14 @@
 package com.fs.starfarer.api.impl.campaign.intel.bar;
 
+import java.util.Map;
+
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 
 public interface PortsideBarEvent {
 
-	void init(InteractionDialogAPI dialog);
+	void init(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap);
 	
 	boolean isDialogFinished();
 	boolean endWithContinue();
@@ -17,9 +20,13 @@ public interface PortsideBarEvent {
 
 	void advance(float amount);
 
-	void addPromptAndOption(InteractionDialogAPI dialog);
+	void addPromptAndOption(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap);
 
 	void wasShownAtMarket(MarketAPI market);
+
+	String getBarEventId();
+
+	boolean isAlwaysShow();
 
 
 }

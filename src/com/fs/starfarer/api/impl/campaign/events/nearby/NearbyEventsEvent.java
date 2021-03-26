@@ -28,10 +28,10 @@ import com.fs.starfarer.api.campaign.events.CampaignEventTarget;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
-import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
+import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin.DerelictShipData;
 import com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin;
 import com.fs.starfarer.api.impl.campaign.fleets.PirateFleetManager;
@@ -49,7 +49,6 @@ import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager;
 import com.fs.starfarer.api.impl.campaign.intel.misc.DistressCallIntel;
-import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RuinsFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner;
@@ -58,9 +57,9 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial.TransmitterTrapSpecialData;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.Misc.Token;
 import com.fs.starfarer.api.util.TimeoutTracker;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
-import com.fs.starfarer.api.util.Misc.Token;
 
 /**
  * 
@@ -147,7 +146,7 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 		WeightedRandomPicker<String> factions = SalvageSpecialAssigner.getNearbyFactions(null, playerFleet,
 																					 	 15f, 5f, 5f);
 		
-		DerelictShipData params = DerelictShipEntityPlugin.createRandom(factions.pick(), null, null);
+		DerelictShipData params = DerelictShipEntityPlugin.createRandom(factions.pick(), null, null, 0f);
 		if (params != null) {
 			ShipVariantAPI variant = Global.getSettings().getVariant(params.ship.variantId);
 			params.durationDays = DerelictShipEntityPlugin.getBaseDuration(variant.getHullSize());
@@ -157,7 +156,7 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 								Entities.WRECK, Factions.NEUTRAL, params);
 			entity.addTag(Tags.EXPIRES);
 			entity.setDiscoverable(false);
-			SalvageSpecialAssigner.assignSpecials(entity);
+			SalvageSpecialAssigner.assignSpecials(entity, false);
 			
 
 			float distFromPlayer = 3000f + (float) Math.random() * 2000f;
@@ -250,6 +249,7 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 		picker.add(DistressEventType.DERELICT_SHIP, 10f);
 
 		DistressEventType type = picker.pick();
+		if (TEST_MODE) type = DistressEventType.PIRATE_AMBUSH;
 		
 		if (type == DistressEventType.NORMAL) {
 			generateDistressCallNormal(system);
@@ -278,7 +278,7 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 		
 		WeightedRandomPicker<String> factions = SalvageSpecialAssigner.getNearbyFactions(null, system.getLocation(),
 			 	 																		 15f, 5f, 5f);
-		DerelictShipData params = DerelictShipEntityPlugin.createRandom(factions.pick(), null, null);
+		DerelictShipData params = DerelictShipEntityPlugin.createRandom(factions.pick(), null, null, DerelictShipEntityPlugin.getDefaultSModProb());
 		if (params == null) return;
 		
 		params.durationDays = 60f;
@@ -290,7 +290,7 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 		float maxRadius = Math.max(300, jumpPoint.getCircularOrbitRadius() * 0.33f);
 		if (radius > maxRadius) radius = maxRadius;
 		
-		float orbitDays = radius / (5f + StarSystemGenerator.random.nextFloat() * 20f);
+		float orbitDays = radius / (5f + Misc.random.nextFloat() * 20f);
 		float angle = (float) Math.random() * 360f;
 		derelict.setCircularOrbit(jumpPoint, angle, radius, orbitDays);
 		
@@ -304,7 +304,7 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 		
 		WeightedRandomPicker<String> factions = SalvageSpecialAssigner.getNearbyFactions(null, system.getLocation(),
 			 	 																		 15f, 5f, 5f);
-		DerelictShipData params = DerelictShipEntityPlugin.createRandom(factions.pick(), null, null);
+		DerelictShipData params = DerelictShipEntityPlugin.createRandom(factions.pick(), null, null, DerelictShipEntityPlugin.getDefaultSModProb());
 		if (params == null) return;
 		
 		params.durationDays = 60f;
@@ -316,7 +316,7 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 		float maxRadius = Math.max(300, jumpPoint.getCircularOrbitRadius() * 0.33f);
 		if (radius > maxRadius) radius = maxRadius;
 		
-		float orbitDays = radius / (5f + StarSystemGenerator.random.nextFloat() * 20f);
+		float orbitDays = radius / (5f + Misc.random.nextFloat() * 20f);
 		float angle = (float) Math.random() * 360f;
 		derelict.setCircularOrbit(jumpPoint, angle, radius, orbitDays);
 		
@@ -472,6 +472,7 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 			
 			CampaignFleetAPI fleet = PirateFleetManager.createPirateFleet(points, null, data.location.getLocation());
 			if (fleet != null) {
+				fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_LOW_REP_IMPACT, true);
 				data.location.addEntity(fleet);
 				Vector2f loc = Misc.getPointAtRadius(data.jumpPoint.getLocation(), 500f + (float) Math.random() * 200f);
 				fleet.setLocation(loc.x, loc.y);
@@ -485,6 +486,7 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 			
 			CampaignFleetAPI fleet = PirateFleetManager.createPirateFleet(points, null, data.location.getLocation());
 			if (fleet != null) {
+				fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_LOW_REP_IMPACT, true);
 				data.location.addEntity(fleet);
 				Vector2f loc = Misc.getPointAtRadius(data.jumpPoint.getLocation(), 500f + (float) Math.random() * 200f);
 				fleet.setLocation(loc.x, loc.y);

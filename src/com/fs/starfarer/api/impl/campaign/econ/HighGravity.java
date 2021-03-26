@@ -22,7 +22,7 @@ public class HighGravity extends BaseHazardCondition {
 	protected void createTooltipAfterDescription(TooltipMakerAPI tooltip, boolean expanded) {
 		super.createTooltipAfterDescription(tooltip, expanded);
 		
-		tooltip.addPara("%s accessibility.", 
+		tooltip.addPara("%s accessibility", 
 						10f, Misc.getHighlightColor(),
 						"-" + (int)ACCESS_BONUS + "%");
 	}

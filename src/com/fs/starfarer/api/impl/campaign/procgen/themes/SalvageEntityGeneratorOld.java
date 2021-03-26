@@ -119,6 +119,11 @@ public class SalvageEntityGeneratorOld {
 		return spec;
 	}
 	
+	public static boolean hasSalvageSpec(String id) {
+		SalvageEntityGenDataSpec spec = (SalvageEntityGenDataSpec) Global.getSettings().getSpec(SalvageEntityGenDataSpec.class, id, true);
+		return spec != null;
+	}
+	
 //	public static SalvageEntityGenDataSpec getSalvageSpec(String id, boolean nullOnNotFound) {
 //		SalvageEntityGenDataSpec spec = (SalvageEntityGenDataSpec) Global.getSettings().getSpec(SalvageEntityGenDataSpec.class, id, true);
 //		return spec;

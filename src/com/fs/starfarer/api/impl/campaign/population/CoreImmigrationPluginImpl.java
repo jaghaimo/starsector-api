@@ -3,30 +3,30 @@ package com.fs.starfarer.api.impl.campaign.population;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.comm.CommMessageAPI.MessageClickAction;
 import com.fs.starfarer.api.campaign.econ.ImmigrationPlugin;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.intel.MessageIntel;
 import com.fs.starfarer.api.util.Misc;
 
 public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 	
-	//public static float INCENTIVE_USE_FRACTION = 0.15f; 
-	//public static float INCENTIVE_MIN_PERCENT = 1f;
-	public static float INCENTIVE_MIN_PERCENT = 0.2f;
+	public static float GROWTH_NO_INDUSTRIES = 0.01f; 
+	public static float IMMIGRATION_PER_HAZARD = Global.getSettings().getFloat("immigrationPerHazard");
+	public static float HAZARD_SIZE_MULT = Global.getSettings().getFloat("immigrationHazardMultExtraPerColonySizeAbove3");
 	
-	public static final float FACTION_HOSTILITY_IMPACT = 2f; 
+	public static float INCENTIVE_CREDITS_PER_POINT = Global.getSettings().getFloat("immigrationIncentiveCostPerPoint");
+	public static float INCENTIVE_POINTS_EXTRA = Global.getSettings().getFloat("immigrationIncentivePointsAboveHazardPenalty");
+	
+	public static final float FACTION_HOSTILITY_IMPACT = 2f;
 	
 	protected MarketAPI market;
 	
-	public static float IMMIGRATION_PER_HAZARD = Global.getSettings().getFloat("immigrationPerHazard");
 	
 	public CoreImmigrationPluginImpl(MarketAPI market) {
 		this.market = market;
@@ -41,9 +41,11 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 //			System.out.println("wefwefwe");
 //		}
 		
+		float f = days / 30f; // incoming is per month
+		
 		boolean firstTime = !market.wasIncomingSetBefore();
 		Global.getSettings().profilerBegin("Computing incoming");
-		market.setIncoming(computeIncoming());
+		market.setIncoming(computeIncoming(uiUpdateOnly, f));
 		Global.getSettings().profilerEnd();
 		
 //		if (market.getName().equals("Jangala")) {
@@ -59,7 +61,6 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 		
 		if (uiUpdateOnly) return;
 		
-		float f = days / 30f; // incoming is per month
 		
 		int iter = 1;
 		if (firstTime) {
@@ -72,20 +73,8 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 			f = (iter - i) * 0.1f;
 		}
 		
-//		if (market.isPlayerOwned()) {
-//			System.out.println("ewfwefew");
-//		}
-		float incentiveCreditsUsed = getIncentivePercentPerMonth() * getCreditsForOnePercentPopulationIncrease();
-		incentiveCreditsUsed *= f;
-		if (incentiveCreditsUsed <= 0) {
-			market.setIncentiveCredits(0f);
-		} else {
-			market.setIncentiveCredits(Math.max(0, market.getIncentiveCredits() - incentiveCreditsUsed));
-		}
-		
 		PopulationComposition pop = market.getPopulation();
 		PopulationComposition inc = market.getIncoming();
-		
 		
 		for (String id : inc.getComp().keySet()) {
 			pop.add(id, inc.get(id) * f);
@@ -97,6 +86,7 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 		
 		
 		float newWeight = pop.getWeightValue() + inc.getWeightValue() * f;
+		//newWeight = pop.getWeightValue() + inc.getWeightValue() * f + 2000;
 		if (newWeight < min || Global.getSector().isInNewGameAdvance()) newWeight = min;
 		if (newWeight > max) {
 			increaseMarketSize();
@@ -131,12 +121,10 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 		pop.normalize();
 		
 		}
-//		market.getPopulation().setWeight(getWeightForMarketSize(market.getSize()));
-//		market.getPopulation().normalize();
 	}
 	
 	public void increaseMarketSize() {
-		if (market.getSize() >= 10 || !market.isPlayerOwned()) {
+		if (market.getSize() >= Misc.MAX_COLONY_SIZE || !market.isPlayerOwned()) {
 			market.getPopulation().setWeight(getWeightForMarketSizeStatic(market.getSize()));
 			market.getPopulation().normalize();
 			return;
@@ -150,6 +138,7 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 					Misc.getTextColor(), 
 					new String[] {"" + (int)Math.round(market.getSize())},
 					Misc.getHighlightColor());
+			
 			intel.setIcon(Global.getSector().getPlayerFaction().getCrest());
 			intel.setSound(BaseIntelPlugin.getSoundMajorPosting());
 			Global.getSector().getCampaignUI().addMessage(intel, MessageClickAction.COLONY_INFO, market);
@@ -157,7 +146,7 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 	}
 	
 	public static void increaseMarketSize(MarketAPI market) {
-		if (market.getSize() >= 10) return;
+		if (market.getSize() >= Misc.MAX_COLONY_SIZE) return;
 		
 		for (int i = 0; i <= 10; i++) {
 			market.removeCondition("population_" + i);
@@ -168,6 +157,10 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 		market.setSize(market.getSize() + 1);
 		market.reapplyConditions();
 		market.reapplyIndustries();
+		
+		if (market.getSize() >= Misc.MAX_COLONY_SIZE) {
+			market.setImmigrationIncentivesOn(false);
+		}
 	}
 	
 	public static void reduceMarketSize(MarketAPI market) {
@@ -191,7 +184,7 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 	public static final float ZERO_STABILITY_PENALTY = -5;
 	public static final float MAX_DIST_PENALTY = -5;
 	
-	public PopulationComposition computeIncoming() {
+	public PopulationComposition computeIncoming(boolean uiUpdateOnly, float f) {
 		PopulationComposition inc = new PopulationComposition();
 		
 		float stability = market.getStabilityValue();
@@ -201,14 +194,14 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 //		} else {
 //			inc.getWeight().modifyFlat("inc_st", ZERO_STABILITY_PENALTY, "Stability");
 //		}
-		if (stability < 10) {
-			inc.getWeight().modifyFlat("inc_st", stability - 10, "Instability");
+		if (stability < 5) {
+			inc.getWeight().modifyFlat("inc_st", stability - 5, "Instability");
 		}
 		
 		int numInd = Misc.getNumIndustries(market);
-		if (numInd <= 0) {
+		if (numInd <= 0 && GROWTH_NO_INDUSTRIES != 0 && market.getSize() > 3) {
 			float weight = getWeightForMarketSize(market.getSize());
-			float penalty = -Math.round(weight * 0.01f);
+			float penalty = -Math.round(weight * GROWTH_NO_INDUSTRIES);
 			inc.getWeight().modifyFlat("inc_noInd", penalty, "No industries");
 		}
 		
@@ -220,9 +213,12 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 		inc.getWeight().modifyFlat("inc_access", accessibilityMod, "Accessibility");
 		
 		
-		float hazMod = Math.round((market.getHazardValue() - 1f) / IMMIGRATION_PER_HAZARD);
+		float hazMod = getImmigrationHazardPenalty(market);
 		if (hazMod != 0) {
-			inc.getWeight().modifyFlat("inc_hazard", -hazMod, "Hazard rating");
+			float hazardSizeMult = getImmigrationHazardPenaltySizeMult(market);
+			inc.getWeight().modifyFlat("inc_hazard", hazMod, 
+					"Hazard rating (" + Strings.X + Misc.getRoundedValueMaxOneAfterDecimal(hazardSizeMult) + 
+					" based on colony size)");
 		}
 		
 //		float dMult = getDistFromCoreMult(market);
@@ -264,7 +260,7 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 			float sDiff = biggestInSystem.getSize() - market.getSize();
 			sDiff *= 2;
 			if (sDiff > 0) {
-				inc.getWeight().modifyFlat("inc_insys", sDiff, "Larger non-hostile market in same system");
+				inc.getWeight().modifyFlat("inc_insys", sDiff, "Larger non-hostile colony in same system");
 			} else if (sDiff < 0) {
 				//inc.getWeight().modifyFlat("inc_insys", sDiff, "Smaller non-hostile market in same system");
 			}
@@ -292,7 +288,7 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 		}
 		inc.add(bulkFaction, 10f * numIndustries);
 		
-		applyIncentives(inc);
+		applyIncentives(inc, uiUpdateOnly, f);
 		
 		
 		for (MarketImmigrationModifier mod : market.getAllImmigrationModifiers()) {
@@ -315,107 +311,43 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 	}
 	
 	
-//	public PopulationComposition computeIncomingOld() {
-//		PopulationComposition inc = new PopulationComposition();
-//		
-//		float s1 = market.getStabilityValue();
-//		
-//		float negative = 0;
-//		//Global.getSettings().profilerBegin("Getting in-reach markets");
-//		List<MarketAPI> inReach = Global.getSector().getEconomy().getMarketsWithinReach(market);
-//		//Global.getSettings().profilerEnd();
-//		for (MarketAPI curr : inReach) {
-//			if (curr == market) continue;
-//			if (curr.isWaystation()) continue;
-//			
-//			String fid = curr.getFactionId();
-//			float s2 = curr.getStabilityValue();
-//			
-//			float sDiff = s1 - s2;
-//						
-//			float incomingFromMarket = curr.getSize() * sDiff;
-//			if (incomingFromMarket > 0) {
-//				float rel = curr.getFaction().getRelationship(market.getFactionId());
-//				float mult = 0.5f + (rel + 1f) / 2f;
-//				if (mult <= 0.75f) mult = 0.5f;
-//				//if (mult >= 1.25f) mult = 1.25f;
-//				
-//				incomingFromMarket *= mult;
-//				
-//				float c = 0.33f * Math.max(0, 0.5f - curr.getStabilityValue() / 10f);
-//
-//				inc.add(fid, incomingFromMarket * (1f - c * 2f));
-//				if (c > 0) {
-//					inc.add(Factions.PIRATES, incomingFromMarket * c);
-//					inc.add(Factions.POOR, incomingFromMarket * c);
-//				}
-//				//inc.add(fid, incomingFromMarket);
-//			} else {
-//				negative += Math.abs(incomingFromMarket);
-//			}
-//		}
-//		
-//		float maxNegative = (getWeightForMarketSize(market.getSize() + 1) - getWeightForMarketSize(market.getSize())) * 0.05f;
-//		if (negative > maxNegative) negative = maxNegative;
-//		
-//		float maxMarketImmigration = 50f + negative;
-//		
-//		inc.updateWeight();
-//		if (inc.getWeight() > maxMarketImmigration) {
-//			inc.setWeight(maxMarketImmigration);
-//			inc.normalize();
-//		}
-//		
-//		//Global.getSettings().profilerEnd();
-//		
-//		float f = getDistFromCoreMult(market);
-//		
-//		int coreIndependent = (int) Math.round(f * 10);
-//		
-//		inc.add(Factions.PIRATES, 1);
-//		inc.add(Factions.POOR, 1);
-//		inc.add(Factions.INDEPENDENT, coreIndependent);
-//
-//		inc.updateWeight();
-//		
-//		applyIncentives(inc);
-//		
-//		
-//		float hazMult = (float) Math.pow(0.75f, market.getHazardValue() / 0.25f);
-//		market.getIncomingImmigrationMod().modifyMult("core_hazard", hazMult, "Hazard rating");
-//		
-//		for (MarketImmigrationModifier mod : market.getAllImmigrationModifiers()) {
-//			mod.modifyIncoming(market, inc);
-//		}
-//		
-//		inc.normalize();
-//		
-////		if (market.getName().equals("Jangala")) {
-////			System.out.println("wefwefwe");
-////		}
-//		
-//		float in = market.getIncomingImmigrationMod().computeEffective(inc.getWeight());
-//		inc.setWeight(in);
-//		inc.normalize();
-//		
-//		negative = market.getOutgoingImmigrationMod().computeEffective(negative);
-//		inc.setWeight(in - negative);
-//		inc.setLeaving(negative);
-//		
-//		return inc;
-//	}
+	public static float getImmigrationHazardPenalty(MarketAPI market) {
+		float hazMod = Math.round((market.getHazardValue() - 1f) / IMMIGRATION_PER_HAZARD);
+		if (hazMod < 0) hazMod = 0;
+		float hazardSizeMult = getImmigrationHazardPenaltySizeMult(market);
+		return -hazMod * hazardSizeMult; 
+	}
 	
-	protected void applyIncentives(PopulationComposition inc) {
+	public static float getImmigrationHazardPenaltySizeMult(MarketAPI market) {
+		float hazardSizeMult = 1f + (market.getSize() - 3f) * HAZARD_SIZE_MULT;
+		return hazardSizeMult; 
+	}
+	
+	
+	
+	
+	protected void applyIncentives(PopulationComposition inc, boolean uiUpdateOnly, float f) {
 //		if (market.getName().equals("Jangala")) {
 //			System.out.println("ewfwfew");
 //		}
-		float percent = getIncentivePercentPerMonth();
-		if (percent <= 0) return;
+		if (!market.isImmigrationIncentivesOn()) return;
+		if (market.getSize() >= Misc.MAX_COLONY_SIZE) {
+			market.setImmigrationIncentivesOn(false);
+			return;
+		}
 		
-		float pts = getPopulationPointsForFraction(0.01f * percent);
 		
-		//inc.addWeight(percent * pts);
-		inc.getWeight().modifyFlat("inc_incentives", pts, "Growth incentives");
+		float points = -getImmigrationHazardPenalty(market) + INCENTIVE_POINTS_EXTRA;
+		//float cost = INCENTIVE_CREDITS_PER_POINT * points * f;
+		float cost = market.getImmigrationIncentivesCost() * f;
+		
+		if (points > 0) {
+			inc.getWeight().modifyFlat("inc_incentives", points, "Hazard pay");
+			if (!uiUpdateOnly) {
+				market.setIncentiveCredits(market.getIncentiveCredits() + cost);
+			}
+		}
+
 	}
 	
 	public float getPopulationPointsForFraction(float fraction) {
@@ -432,70 +364,9 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 		return points / (max - min);
 	}
 	
-	public float getCreditsForIncreaseFraction(float fraction) {
-		float points = getPopulationPointsForFraction(fraction);
-		float cost = points * getCreditsPerPopulationPoint();
-		return cost;
-	}
-	
-	public int getCreditsForOnePercentPopulationIncrease() {
-		return (int) getCreditsForIncreaseFraction(0.01f);
-	}
-	
-	
-	public float getIncentivePercentPerMonth() {
-		float incentives = market.getIncentiveCredits();
-		if (incentives <= 0) return 0f;
-		
-		float per = getCreditsForOnePercentPopulationIncrease();
-		
-		float percent = incentives / per;
-		
-		float usePercent = percent * getIncentiveUseRate();
-		
-		if (usePercent <= INCENTIVE_MIN_PERCENT) {
-			//return Math.min(percent, INCENTIVE_MIN_PERCENT);
-			return INCENTIVE_MIN_PERCENT;
-		}
-		
-		return usePercent;
-	}
-	
-	
-	private static float base = Global.getSettings().getFloat("immigrationIncentiveBaseCost");
-	public float getCreditsPerPopulationPoint() {
-		//float f = getIncentiveCostDistMult();
-		float f = 1f;
-		//f /= market.getIncomingImmigrationMod().getMult();
-		return base * f;
-	}
-	
-//	public float getIncentiveCostDistMult() {
-//		float f = getDistFromCoreMult(market);
-//		f = 0.5f + (f - 0.1f) / 0.9f * 0.5f;
-//		f = Math.round(f * 20f) / 20f;
-//		f = 1/f;
-//		return f;
-//	}
-//
-//	public static float getDistFromCoreMult(MarketAPI market) {
-//		float distFromCore = Misc.getDistanceLY(market.getLocationInHyperspace(), new Vector2f());
-//		float threshold = 10;
-//		float maxDist = 30 + threshold;
-//		
-//		float min = 0.1f;
-//		float f = 1f;
-//		if (distFromCore > threshold) {
-//			f = 1f - Math.min(1f, (distFromCore - threshold) / (maxDist - threshold));
-//		}
-//		if (f < min) f = min;
-//		return f;
-//	}
-	
-	
 	public static float getWeightForMarketSizeStatic(float size) {
 		//return (float) (100f * Math.pow(2, size - 3));
-		return (float) (200f * Math.pow(2, size - 3));
+		return (float) (300f * Math.pow(2, size - 3));
 	}
 	public float getWeightForMarketSize(float size) {
 		return getWeightForMarketSizeStatic(size);
@@ -513,32 +384,6 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 //		return 100000;
 	}
 	
-	public float getIncentiveUseRate() {
-		return getIncentiveUseRate(market.getSize());
-	}
-	
-	public static float [] INCENTIVE_USE_RATE = null;
-	public static float getIncentiveUseRate(int size) {
-		if (INCENTIVE_USE_RATE == null) {
-			try {
-				INCENTIVE_USE_RATE = new float [10];
-				JSONArray a = Global.getSettings().getJSONArray("immigrationIncentiveUseRatePerMonth");
-				for (int i = 0; i < INCENTIVE_USE_RATE.length; i++) {
-					INCENTIVE_USE_RATE[i] = (float) a.getDouble(i);
-				}
-			} catch (JSONException e) {
-				throw new RuntimeException(e);
-			}
-		}
-		size--;
-		if (size < 0) size = 0;
-		if (size > 9) size = 9;
-		return INCENTIVE_USE_RATE[size];
-//		if (size <= 3) return 1;
-//		if (size <= 5) return 2;
-//		if (size <= 7) return 3;
-//		return 4;
-	}
 }
 
 

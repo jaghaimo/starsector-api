@@ -11,27 +11,26 @@ import org.apache.log4j.Logger;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
+import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
-import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
-import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
-import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
-import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
+import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
@@ -39,7 +38,6 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
-import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager;
 import com.fs.starfarer.api.impl.campaign.procgen.Constellation;
@@ -323,7 +321,7 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		}
 		int personLevel = (int) (5 + level * 1.5f);
 		person = OfficerManagerEvent.createOfficer(Global.getSector().getFaction(factionId), 
-												   personLevel, true, false);
+												   personLevel, false);
 	}
 	
 	private void pickBountyType() {
@@ -337,71 +335,71 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		bountyType = picker.pick();
 	}
 	
-	private String getTargetDesc() {
-		//targetDesc = person.getName().getFullName() + " is known to be a highly capable combat officer in command of a sizeable fleet.";
-		
-		ShipHullSpecAPI spec = flagship.getVariant().getHullSpec();
-		String shipType = spec.getHullNameWithDashClass() + " " + spec.getDesignation().toLowerCase(); 
-
-		String heOrShe = "he";
-		String hisOrHer = "his";
-		if (person.isFemale()) {
-			heOrShe = "she";
-			hisOrHer = "her";
-		}
-		
-		String levelDesc = "";
-		int personLevel = person.getStats().getLevel();
-		if (personLevel <= 5) {
-			levelDesc = "an unremarkable officer";
-		} else if (personLevel <= 10) {
-			levelDesc = "a capable officer";
-		} else if (personLevel <= 15) {
-			levelDesc = "a highly capable officer";
-		} else {
-			levelDesc = "an exceptionally capable officer";
-		}
-		
-		String skillDesc = "";
-		
-		if (person.getStats().getSkillLevel(Skills.OFFICER_MANAGEMENT) > 0) {
-			skillDesc = "having a high number of skilled subordinates";
-		} else if (person.getStats().getSkillLevel(Skills.ELECTRONIC_WARFARE) > 0) {
-			skillDesc = "being proficient in electronic warfare";
-		} else if (person.getStats().getSkillLevel(Skills.FIGHTER_DOCTRINE) > 0) {
-			skillDesc = "a noteworthy level of skill in running carrier operations";
-		} else if (person.getStats().getSkillLevel(Skills.COORDINATED_MANEUVERS) > 0) {
-			skillDesc = "a high effectiveness in coordinating the maneuvers of ships during combat";
-		}
-		
-		if (!skillDesc.isEmpty() && levelDesc.contains("unremarkable")) {
-			levelDesc = "an otherwise unremarkable officer";
-		}
-		
-		String fleetDesc = "";
-		if (level < 3) {
-			fleetDesc = "small";
-		} else if (level <= 5) {
-			fleetDesc = "medium-sized";
-		} else if (level <= 8) {
-			fleetDesc = "large";
-		} else {
-			fleetDesc = "very large";
-		}
-		
-		String targetDesc = String.format("%s is in command of a %s fleet and was last seen using a %s as %s flagship.",
-						person.getName().getFullName(), fleetDesc, shipType, hisOrHer);					
-		
-		if (skillDesc.isEmpty()) {
-			targetDesc += String.format(" %s is known to be %s.", Misc.ucFirst(heOrShe), levelDesc);
-		} else {
-			targetDesc += String.format(" %s is %s known for %s.", Misc.ucFirst(heOrShe), levelDesc, skillDesc);
-		}
-		
-		//targetDesc += "\n\nLevel: " + level;
-		
-		return targetDesc;
-	}
+//	private String getTargetDesc() {
+//		//targetDesc = person.getName().getFullName() + " is known to be a highly capable combat officer in command of a sizeable fleet.";
+//		
+//		ShipHullSpecAPI spec = flagship.getVariant().getHullSpec();
+//		String shipType = spec.getHullNameWithDashClass() + " " + spec.getDesignation().toLowerCase(); 
+//
+//		String heOrShe = "he";
+//		String hisOrHer = "his";
+//		if (person.isFemale()) {
+//			heOrShe = "she";
+//			hisOrHer = "her";
+//		}
+//		
+//		String levelDesc = "";
+//		int personLevel = person.getStats().getLevel();
+//		if (personLevel <= 5) {
+//			levelDesc = "an unremarkable officer";
+//		} else if (personLevel <= 10) {
+//			levelDesc = "a capable officer";
+//		} else if (personLevel <= 15) {
+//			levelDesc = "a highly capable officer";
+//		} else {
+//			levelDesc = "an exceptionally capable officer";
+//		}
+//		
+//		String skillDesc = "";
+//		
+//		if (person.getStats().getSkillLevel(Skills.OFFICER_MANAGEMENT) > 0) {
+//			skillDesc = "having a high number of skilled subordinates";
+//		} else if (person.getStats().getSkillLevel(Skills.ELECTRONIC_WARFARE) > 0) {
+//			skillDesc = "being proficient in electronic warfare";
+//		} else if (person.getStats().getSkillLevel(Skills.CARRIER_GROUP) > 0) {
+//			skillDesc = "a noteworthy level of skill in running carrier operations";
+//		} else if (person.getStats().getSkillLevel(Skills.COORDINATED_MANEUVERS) > 0) {
+//			skillDesc = "a high effectiveness in coordinating the maneuvers of ships during combat";
+//		}
+//		
+//		if (!skillDesc.isEmpty() && levelDesc.contains("unremarkable")) {
+//			levelDesc = "an otherwise unremarkable officer";
+//		}
+//		
+//		String fleetDesc = "";
+//		if (level < 3) {
+//			fleetDesc = "small";
+//		} else if (level <= 5) {
+//			fleetDesc = "medium-sized";
+//		} else if (level <= 8) {
+//			fleetDesc = "large";
+//		} else {
+//			fleetDesc = "very large";
+//		}
+//		
+//		String targetDesc = String.format("%s is in command of a %s fleet and was last seen using a %s as %s flagship.",
+//						person.getName().getFullName(), fleetDesc, shipType, hisOrHer);					
+//		
+//		if (skillDesc.isEmpty()) {
+//			targetDesc += String.format(" %s is known to be %s.", Misc.ucFirst(heOrShe), levelDesc);
+//		} else {
+//			targetDesc += String.format(" %s is %s known for %s.", Misc.ucFirst(heOrShe), levelDesc, skillDesc);
+//		}
+//		
+//		//targetDesc += "\n\nLevel: " + level;
+//		
+//		return targetDesc;
+//	}
 
 	@Override
 	protected void advanceImpl(float amount) {
@@ -486,7 +484,11 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 	public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner, BattleAPI battle) {
 		if (isDone() || result != null) return;
 		
-		if (battle.isInvolved(fleet) && !battle.isPlayerInvolved()) {
+		// also credit the player if they're in the same location as the fleet and nearby
+		float distToPlayer = Misc.getDistance(fleet, Global.getSector().getPlayerFleet());
+		boolean playerInvolved = battle.isPlayerInvolved() || (fleet.isInCurrentLocation() && distToPlayer < 2000f);
+		
+		if (battle.isInvolved(fleet) && !playerInvolved) {
 			if (fleet.getFlagship() == null || fleet.getFlagship().getCaptain() != person) {
 				fleet.setCommander(fleet.getFaction().createRandomPerson());
 				//Global.getSector().reportEventStage(this, "other_end", market.getPrimaryEntity(), messagePriority);
@@ -498,14 +500,15 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		}
 		
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
-		if (!battle.isPlayerInvolved() || !battle.isInvolved(fleet) || battle.onPlayerSide(fleet)) {
+		if (!playerInvolved || !battle.isInvolved(fleet) || battle.onPlayerSide(fleet)) {
 			return;
 		}
 		
 		 // didn't destroy the original flagship
 		if (fleet.getFlagship() != null && fleet.getFlagship().getCaptain() == person) return;
 		
-		int payment = (int) (bountyCredits * battle.getPlayerInvolvementFraction());
+		//int payment = (int) (bountyCredits * battle.getPlayerInvolvementFraction());
+		int payment = (int) bountyCredits; // don't bother about reducing the payout if the player didn't do it all themselves
 		if (payment <= 0) {
 			result = new BountyResult(BountyResultType.END_OTHER, 0, null);
 			sendUpdateIfPlayerHasIntel(result, true);
@@ -603,6 +606,10 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 //		}
 		//params.random = random;
 		fleet = FleetFactoryV3.createFleet(params);
+		
+//		fleet.getFleetData().addFleetMember("station_small_Standard");
+//		fleet.getFleetData().sort();
+		
 		if (fleet == null || fleet.isEmpty()) {
 			endImmediately();
 			return;
@@ -632,6 +639,7 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		fleet.getAI().addAssignment(FleetAssignment.ORBIT_AGGRESSIVE, hideoutLocation, 1000000f, null);
 		
 		flagship = fleet.getFlagship();
+
 	}
 
 	public boolean runWhilePaused() {

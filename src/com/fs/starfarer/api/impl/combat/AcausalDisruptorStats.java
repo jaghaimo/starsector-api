@@ -18,10 +18,10 @@ import com.fs.starfarer.api.util.Misc;
 
 public class AcausalDisruptorStats extends BaseShipSystemScript {
 	//public static final float ENERGY_DAM_PENALTY_MULT = 0.5f;
-	public static final float ENERGY_DAM_PENALTY_MULT = 1f;
+	public static float ENERGY_DAM_PENALTY_MULT = 1f;
 	
-	public static final float DISRUPTION_DUR = 1f;
-	public static final float MIN_DISRUPTION_RANGE = 500f;
+	public static float DISRUPTION_DUR = 1f;
+	protected static float MIN_DISRUPTION_RANGE = 500f;
 	
 	public static final Color OVERLOAD_COLOR = new Color(255,155,255,255);
 	
@@ -114,8 +114,11 @@ public class AcausalDisruptorStats extends BaseShipSystemScript {
 	}
 	
 	
-	protected float getMaxRange(ShipAPI ship) {
-		if (true) return MIN_DISRUPTION_RANGE;
+	public static float getMaxRange(ShipAPI ship) {
+		if (true) {
+			return ship.getMutableStats().getSystemRangeBonus().computeEffective(MIN_DISRUPTION_RANGE);
+			//return MIN_DISRUPTION_RANGE;
+		}
 		
 		float range = 0f;
 		

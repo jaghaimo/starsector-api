@@ -4,10 +4,13 @@ import java.awt.Color;
 
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.util.Misc;
 
 public class CorruptPLClerkSuppliesBarEvent extends BaseGetCommodityBarEvent {
@@ -24,7 +27,7 @@ public class CorruptPLClerkSuppliesBarEvent extends BaseGetCommodityBarEvent {
 			return false;
 		}
 		if (market.getId().equals("kazeron")) return false;
-		if (market.getStabilityValue() > 5) return false;
+		if (market.getStabilityValue() > 7) return false;
 		
 		if (!market.hasSpaceport()) return false;
 		
@@ -47,6 +50,23 @@ public class CorruptPLClerkSuppliesBarEvent extends BaseGetCommodityBarEvent {
 	}
 	
 	@Override
+	protected void doExtraConfirmActions() {
+		ContactIntel.addPotentialContact(person, market, text);
+	}
+
+	@Override
+	protected void adjustPerson(PersonAPI person) {
+		super.adjustPerson(person);
+		person.setImportanceAndVoice(pickLowImportance(), random);
+		person.addTag(Tags.CONTACT_TRADE);
+	}
+	
+	@Override
+	protected String getPersonPost() {
+		return Ranks.POST_SUPPLY_MANAGER;
+	}
+
+	@Override
 	protected String getPersonFaction() {
 		return Factions.PERSEAN;
 	}
@@ -55,6 +75,7 @@ public class CorruptPLClerkSuppliesBarEvent extends BaseGetCommodityBarEvent {
 	protected String getPersonRank() {
 		return Ranks.CITIZEN;
 	}
+	
 	
 	@Override
 	protected int computeQuantity() {

@@ -1,8 +1,6 @@
 package com.fs.starfarer.api.impl.campaign;
 
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.util.Misc;
 
 public class CryosleeperEntityPlugin extends BaseCustomEntityPlugin {
 
@@ -17,9 +15,9 @@ public class CryosleeperEntityPlugin extends BaseCustomEntityPlugin {
 	}
 	
 	public void advance(float amount) {
-		for (MarketAPI market : Misc.getMarketsInLocation(entity.getContainingLocation())) {
-			
-		}
+//		for (MarketAPI market : Misc.getMarketsInLocation(entity.getContainingLocation())) {
+//			
+//		}
 	}
 	
 }

@@ -29,7 +29,7 @@ public class CoreEventProbabilityManager extends BaseCampaignEventListener imple
 		if (firstFrame) {
 			eventManager.startEvent(null, Events.REP_TRACKER, null);
 			//eventManager.startEvent(null, Events.TRADE_INFO, null);
-			eventManager.startEvent(null, Events.OFFICER_MANAGER, null);
+			//eventManager.startEvent(null, Events.OFFICER_MANAGER, null);
 			eventManager.startEvent(null, Events.NEARBY_EVENTS, null);
 			firstFrame = false;
 		}

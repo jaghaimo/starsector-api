@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.campaign;
 
+import java.util.GregorianCalendar;
+
 
 /**
  * @author Alex Mosolov
@@ -28,4 +30,7 @@ public interface CampaignClockAPI {
 	CampaignClockAPI createClock(long timestamp);
 	String getDateString();
 	float convertToSeconds(float days);
+	String getShortDate();
+	String getCycleString();
+	GregorianCalendar getCal();
 }

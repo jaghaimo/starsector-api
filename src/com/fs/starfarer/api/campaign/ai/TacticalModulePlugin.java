@@ -75,6 +75,9 @@ public interface TacticalModulePlugin {
 
 
 	float getPursuitDays();
+
+
+	SectorEntityToken getPriorityTarget();
 }
 
 

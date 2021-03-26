@@ -7,6 +7,7 @@ import org.json.JSONObject;
 
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.DamageType;
+import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.OnHitEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
@@ -32,13 +33,15 @@ public class DamagingExplosionSpec implements Cloneable {
 	private Color particleColor = new Color(255,255,255,255);
 	private Color explosionColor = new Color(255,255,255,255);
 
-	private DamageType damageType;
+	private DamageType damageType = DamageType.ENERGY;
 	private String soundSetId;
 	
 	private boolean showGraphic = true;
 	private boolean useDetailedExplosion = true;
 	
 	private OnHitEffectPlugin effect;
+	
+	private MutableStat modifier = new MutableStat(1f);
 	
 	public static float getShipExplosionRadius(ShipAPI ship) {
 		float mult = ship.getMutableStats().getDynamic().getValue(Stats.EXPLOSION_RADIUS_MULT);
@@ -287,7 +290,14 @@ public class DamagingExplosionSpec implements Cloneable {
 	public CollisionClass getCollisionClassByFighter() {
 		return collisionClassByFighter;
 	}
-	
+
+	public MutableStat getModifier() {
+		return modifier;
+	}
+
+	public void setModifier(MutableStat modifier) {
+		this.modifier = modifier;
+	}
 	
 	
 }

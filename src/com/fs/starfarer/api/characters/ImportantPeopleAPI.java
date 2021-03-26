@@ -1,6 +1,7 @@
 package com.fs.starfarer.api.characters;
 
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import com.fs.starfarer.api.campaign.FactionAPI;
@@ -41,6 +42,7 @@ public interface ImportantPeopleAPI {
 	
 	PersonDataAPI getData(PersonAPI person);
 	PersonDataAPI getData(String id);
+	PersonAPI getPerson(String id);
 	
 	boolean canCheckOutPerson(PersonAPI person, String reasonId);
 	void checkOutPerson(PersonAPI person, String reasonId);
@@ -56,6 +58,14 @@ public interface ImportantPeopleAPI {
 
 	boolean isCheckedOutForAnything(PersonAPI person);
 
+	PersonDataAPI getPerson(Random random, FactionAPI faction,
+			MarketAPI market, String checkoutReason, String defaultRank,
+			String... postIds);
+
+	boolean isLastGetPersonResultWasExistingPerson();
+
+	void excludeFromGetPerson(PersonAPI person);
+	void resetExcludeFromGetPerson();
 
 	
 	

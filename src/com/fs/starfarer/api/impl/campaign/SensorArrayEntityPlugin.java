@@ -14,6 +14,7 @@ public class SensorArrayEntityPlugin extends BaseCampaignObjectivePlugin {
 
 	public static float SENSOR_BONUS = 700f;
 	public static float SENSOR_BONUS_MAKESHIFT = 400f;
+	//public static float SENSOR_PENALTY_MULT_FROM_HACK = 0.75f;
 	
 	public void init(SectorEntityToken entity, Object pluginParams) {
 		super.init(entity, pluginParams);
@@ -32,13 +33,18 @@ public class SensorArrayEntityPlugin extends BaseCampaignObjectivePlugin {
 			if (fleet.isInHyperspaceTransition()) continue;
 			
 			if (fleet.getFaction() == entity.getFaction() || (isHacked() && fleet.getFaction().isPlayerFaction())) {
-				
 				String desc = "Sensor array";
 				float bonus = SENSOR_BONUS;
 				if (isMakeshift()) {
 					desc = "Makeshift sensor array";
 					bonus = SENSOR_BONUS_MAKESHIFT;
 				}
+				
+//				if (fleet.getFaction() == entity.getFaction() && isHacked() && !entity.getFaction().isPlayerFaction()) {
+//					fleet.getStats().addTemporaryModMult(0.1f, id,
+//							desc, SENSOR_PENALTY_MULT_FROM_HACK, 
+//							fleet.getStats().getSensorRangeMod());
+//				}
 				
 				StatMod curr = fleet.getStats().getSensorRangeMod().getFlatBonus(id);
 				if (curr == null || curr.value <= bonus) {
@@ -62,6 +68,9 @@ public class SensorArrayEntityPlugin extends BaseCampaignObjectivePlugin {
 		}
 		text.addPara(BaseIntelPlugin.INDENT + "%s sensor range for all same-faction fleets in system",
 				pad, Misc.getHighlightColor(), "+" + bonus);
+		
+//		text.addPara(BaseIntelPlugin.INDENT + "%s sensor range to same-faction fleets when hacked",
+//				0f, Misc.getHighlightColor(), "-" + (int) Math.round((1f - SENSOR_PENALTY_MULT_FROM_HACK) * 100f) + "%");
 	}
 
 	public void printNonFunctionalAndHackDescription(TextPanelAPI text) {
@@ -83,6 +92,9 @@ public class SensorArrayEntityPlugin extends BaseCampaignObjectivePlugin {
 		}
 		text.addPara("%s sensor range for in-system fleets",
 				pad, Misc.getHighlightColor(), "+" + bonus);
+		
+//		text.addPara("%s%% sensor range when hacked",
+//				pad, Misc.getHighlightColor(), "-" + (int) Math.round((1f - SENSOR_PENALTY_MULT_FROM_HACK) * 100f));
 		
 		super.addHackStatusToTooltip(text, pad);
 	}

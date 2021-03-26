@@ -34,12 +34,9 @@ public class TachyonLanceEffect implements BeamEffectPlugin {
 				//piercedShield = true;
 				
 				if (!hitShield || piercedShield) {
-					Vector2f dir = Vector2f.sub(beam.getTo(), beam.getFrom(), new Vector2f());
-					if (dir.lengthSquared() > 0) dir.normalise();
-					dir.scale(50f);
-					Vector2f point = Vector2f.sub(beam.getTo(), dir, new Vector2f());
-					float emp = beam.getWeapon().getDamage().getFluxComponent() * 0.5f;
-					float dam = beam.getWeapon().getDamage().getDamage() * 0.25f;
+					Vector2f point = beam.getRayEndPrevFrame();
+					float emp = beam.getDamage().getFluxComponent() * 0.5f;
+					float dam = beam.getDamage().getDamage() * 0.25f;
 					engine.spawnEmpArcPierceShields(
 									   beam.getSource(), point, beam.getDamageTarget(), beam.getDamageTarget(),
 									   DamageType.ENERGY, 

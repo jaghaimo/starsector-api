@@ -5,10 +5,12 @@ import java.util.Random;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.FactionDoctrineAPI;
 import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
+import com.fs.starfarer.api.campaign.FactionDoctrineAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers;
 import com.fs.starfarer.api.util.Misc;
 
 /**
@@ -23,6 +25,10 @@ import com.fs.starfarer.api.util.Misc;
  * Copyright 2015 Fractal Softworks, LLC
  */
 public class FleetParamsV3 {
+	/**
+	 * Use setSource() to set the source or directly call updateQualityAndProducerFromSourceMarket()
+	 * to set the quality. Otherwise, the market's quality won't get used. 
+	 */
 	public MarketAPI source;
 	
 	public Vector2f locInHyper;
@@ -43,8 +49,14 @@ public class FleetParamsV3 {
 	 */
 	public int maxShipSize = 1000;
 	
+	/**
+	 *  0: fighter, 4: capital, only affects combat ships; smaller ships will still be added with remaining fleet points.
+	 */
+	public int minShipSize = 0;
+	
 	public float qualityMod = 0f;
 	public Float qualityOverride = null;
+	public Integer averageSMods = null;
 	public boolean withOfficers = true;
 //	public boolean applyDoctrineFleetSize = true;
 //	public boolean applyMarketSizeToFleetSize = true;
@@ -52,21 +64,34 @@ public class FleetParamsV3 {
 	public Boolean ignoreMarketFleetSizeMult = null;
 	public Boolean onlyApplyFleetSizeToCombatShips = null;
 	public Boolean doNotPrune = null;
+	public Boolean doNotAddShipsBeforePruning = null;
 	public ShipPickMode modeOverride = null;
 	
 	public int officerLevelBonus = 0;
 	public int officerNumberBonus = 0;
 	public float officerNumberMult = 1;
-	public int officerLevelLimit = 1000;
+	public int officerLevelLimit = 0;
+	public int commanderLevelLimit = 0;
+//	public int maxOfficers = -1;
+//	public int minOfficers = -1;
 	public Random random = null;
 	public PersonAPI commander;
 	
+	public Boolean noCommanderSkills;
 	public Boolean forceAllowPhaseShipsEtc;
 	public Boolean treatCombatFreighterSettingAsFraction;
 	public FactionDoctrineAPI doctrineOverride = null;
 	//public Boolean forceNoTimestamp;
 	public Long timestamp;
+	
+	public Integer maxNumShips;
+	public Boolean onlyRetainFlagship;
+	public String flagshipVariantId;
+	public ShipVariantAPI flagshipVariant;
 	//public Boolean allowEmptyFleet = null;
+	
+	public HubMissionWithTriggers.OfficerQuality aiCores = null;
+	public boolean doNotIntegrateAICores = false;
 	
 	// Used in FleetFactoryV3 to pass some data between methods. Do not use directly.
 	public transient ShipPickMode mode;
@@ -139,9 +164,18 @@ public class FleetParamsV3 {
 		this.qualityMod = qualityMod;
 	}
 	
+	public void setSource(MarketAPI source, boolean updateQuality) {
+		this.source = source;
+		if (updateQuality) {
+			updateQualityAndProducerFromSourceMarket();
+		}
+	}
+	
 	
 	public void updateQualityAndProducerFromSourceMarket() {
-		this.quality = Misc.getShipQuality(source, factionId);
+		if (source != null) {
+			this.quality = Misc.getShipQuality(source, factionId);
+		}
 		
 //		this.quality = 0f;
 //		if (producer != null) {

@@ -18,12 +18,13 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.input.InputEventAPI;
 
 public class ElectronicWarfareScript extends BaseEveryFrameCombatPlugin {
-	public static final Object KEY_STATUS = new Object();
+	public static Object KEY_STATUS = new Object();
 	
-	public static final float BASE_MAXIMUM = 10;
-	public static final float PER_JAMMER = 5;
+	public static float BASE_MAXIMUM = 10;
 	
-	public static final String PENALTY_ID = "electronic_warfare_penalty";
+	public static float PER_JAMMER = 5;
+	
+	public static String PENALTY_ID = "electronic_warfare_penalty";
 	
 	private CombatEngineAPI engine;
 	public void init(CombatEngineAPI engine) {

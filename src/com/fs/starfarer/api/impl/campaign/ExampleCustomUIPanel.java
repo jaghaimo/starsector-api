@@ -19,7 +19,7 @@ public class ExampleCustomUIPanel implements CustomUIPanelPlugin {
 	private float mouseX, mouseY;
 	
 	public ExampleCustomUIPanel() {
-		sprite = Global.getSettings().getSprite("graphics/ships/wolf_ff.png");
+		sprite = Global.getSettings().getSprite("graphics/ships/wolf/wolf_base.png");
 	}
 
 	public void positionChanged(PositionAPI position) {
@@ -79,9 +79,16 @@ public class ExampleCustomUIPanel implements CustomUIPanelPlugin {
 			GL11.glVertex2f(x + w, y);
 		}
 		GL11.glEnd();
-
+		
+//		mouseX = Mouse.getX();
+//		mouseY = Mouse.getY();
 		sprite.setAlphaMult(alphaMult);
 		sprite.renderAtCenter(mouseX, mouseY);
+		
+	}
+
+	public void renderBelow(float alphaMult) {
+		// TODO Auto-generated method stub
 		
 	}
 

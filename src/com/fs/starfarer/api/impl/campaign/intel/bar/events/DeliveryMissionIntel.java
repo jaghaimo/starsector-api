@@ -8,24 +8,25 @@ import org.apache.log4j.Logger;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
-import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.MissionCompletionRep;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
+import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel;
+import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
@@ -36,6 +37,8 @@ import com.fs.starfarer.api.util.Misc;
 
 
 public class DeliveryMissionIntel extends BaseMissionIntel {
+	public static float PROB_PIRATE_ENCOUNTER = 0.5f;
+	
 	public static float PROB_CONSEQUENCES = 0.75f;
 	public static float PROB_CONSEQUENCES_ESCROW = 0.25f;
 	
@@ -54,9 +57,50 @@ public class DeliveryMissionIntel extends BaseMissionIntel {
 		setMissionState(MissionState.ACCEPTED);
 		missionAccepted();
 		Global.getSector().addScript(this);
+
+		// doesn't quite connect up as far as easily making the mission fail etc
+//		if ((float) Math.random() < PROB_PIRATE_ENCOUNTER) {
+//			Random random = new Random();
+//			String id = "dmi_" + Misc.genUID();
+//			
+//			float reward = event.getReward();
+//			FleetSize size = FleetSize.LARGE;
+//			String type = FleetTypes.PATROL_LARGE;
+//			String repLoss = DelayedFleetEncounter.TRIGGER_REP_LOSS_HIGH;
+//			if (reward <= 20000) {
+//				size = FleetSize.SMALL;
+//				type = FleetTypes.PATROL_SMALL;
+//				repLoss = DelayedFleetEncounter.TRIGGER_REP_LOSS_MINOR;
+//			} else if (reward <= 50000) {
+//				size = FleetSize.MEDIUM;
+//				type = FleetTypes.PATROL_MEDIUM;
+//				repLoss = DelayedFleetEncounter.TRIGGER_REP_LOSS_MEDIUM;
+//			}
+//			
+//			
+//			String comName = getCommodity().getCommodity().getLowerCaseName();
+//			
+//			DelayedFleetEncounter e = new DelayedFleetEncounter(random, id);
+//			e.setDelayNone();
+//			e.setLocationInnerSector(false, null);
+//			e.beginCreate();
+//			e.triggerCreateFleet(size, FleetQuality.DEFAULT, Factions.PIRATES, type, new Vector2f());
+//			e.setFleetWantsThing(Factions.PIRATES, 
+//					"the " + comName + " shipment", "it",
+//					"the " + comName + " shipment you're running for " + event.getPerson().getNameString(),
+//					0,
+//					true, ComplicationRepImpact.FULL,
+//					repLoss, event.getPerson());
+//			e.triggerSetFleetMemoryValue("$dmi_commodity", event.getCommodityId());
+//			e.triggerSetFleetMemoryValue("$dmi_quantity", event.getQuantity());
+//			e.triggerSetStandardAggroInterceptFlags();
+//			e.triggerMakeLowRepImpact();
+//			e.endCreate();
+//		}
 	}
 	
 	public void missionAccepted() {
+		Misc.makeImportant(event.getDestination().getPrimaryEntity(), "deliveryEvent");
 	}
 	
 	public DeliveryBarEvent getEvent() {
@@ -101,6 +145,8 @@ public class DeliveryMissionIntel extends BaseMissionIntel {
 		setMissionResult(new MissionResult(event.getReward() + event.getEscrow(), rep, null));
 		setMissionState(MissionState.COMPLETED);
 		endMission();
+		
+		ContactIntel.addPotentialContact(event.getPerson(), event.getMarket(), dialog.getTextPanel());
 	}
 	
 	public boolean hasEnough() {
@@ -137,6 +183,8 @@ public class DeliveryMissionIntel extends BaseMissionIntel {
 		CargoStackAPI stack = Global.getFactory().createCargoStack(CargoItemType.RESOURCES, event.getCommodityId(), null);
 		stack.setSize(event.getQuantity());
 		tradeData.addToTrackedPlayerSold(stack, totalReward);
+		
+		Misc.affectAvailabilityWithinReason(getCommodity(), event.getQuantity());
 	}
 	
 	
@@ -145,6 +193,8 @@ public class DeliveryMissionIntel extends BaseMissionIntel {
 			endAfterDelay();
 			return; // to fix crash for saves that are already in a bad state
 		}
+		
+		Misc.makeUnimportant(event.getDestination().getPrimaryEntity(), "deliveryEvent");
 		
 		if (!event.getMarket().isPlayerOwned()) {
 			if (isFailed() || isAbandoned()) {

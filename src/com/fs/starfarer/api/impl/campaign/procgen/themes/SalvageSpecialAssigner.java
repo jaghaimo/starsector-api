@@ -15,10 +15,9 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
-import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
-import com.fs.starfarer.api.impl.campaign.CoreCampaignPluginImpl;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin.DerelictShipData;
 import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin.DerelictType;
@@ -51,9 +50,17 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class SalvageSpecialAssigner {
 
+	public static int MIN_PODS_OFFICER_LEVEL = Global.getSettings().getInt("minSleeperPodsOfficerLevel");
+	public static int MAX_PODS_OFFICER_LEVEL = Global.getSettings().getInt("maxSleeperPodsOfficerLevel");
+	public static int MAX_NORMAL_OFFICER_LEVEL = Global.getSettings().getInt("officerMaxLevel");
+	
 	public static class SpecialCreationContext {
 		public String themeId;
+		public boolean onNewGame = true;
 		public List<SectorEntityToken> all = new ArrayList<SectorEntityToken>();
+		public SpecialCreationContext() {
+		}
+		
 	}
 	
 	public static interface SpecialCreator {
@@ -100,8 +107,9 @@ public class SalvageSpecialAssigner {
 		
 		picker.add(new NothingSpecialCreator(), 10f);
 		picker.add(new ShipRecoverySpecialCreator(random, 0, 0, false, null, null), 30f);
+		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, p * 0.125f, p * 0.25f, null), 2f);
 		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, p * 0.25f, p * 0.5f, null), 20f);
-		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 15f);
+		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, MAX_NORMAL_OFFICER_LEVEL, officerFactions), 15f);
 		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 1, officerFactions), 2f);
 		picker.add(new CargoManifestSpecialCreator(random, valuableCargo, c * 0.25f, c * 0.5f), 10f);
 		picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 5f);
@@ -126,10 +134,11 @@ public class SalvageSpecialAssigner {
 		
 		picker.add(new NothingSpecialCreator(), 60f);
 		picker.add(new ShipRecoverySpecialCreator(random, 1, 3, true, null, recoverableShipFactions), 10f);
+		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 10, 20, null), 2f);
 		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 20, 40, null), 6f);
 		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 1, 5, null), 3f);
-		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, recoverableShipFactions), 1f);
-		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, recoverableShipFactions), 0.2f);
+		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, MAX_PODS_OFFICER_LEVEL, recoverableShipFactions), 1f);
+		picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 1, recoverableShipFactions), 0.2f);
 		picker.add(new CargoManifestSpecialCreator(random, valuableCargo, 10, 50), 10f);
 		picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 10f);
 		picker.add(new BreadcrumbSpecialCreator(random, null), 10f);
@@ -210,7 +219,10 @@ public class SalvageSpecialAssigner {
 					Factions.TRITACHYON, 10f, Factions.HEGEMONY, 7f, Factions.INDEPENDENT, 3f);
 		}
 		
-		
+		int maxPodsOfficerLevel = MAX_PODS_OFFICER_LEVEL;
+		if (context != null && !context.onNewGame) {
+			maxPodsOfficerLevel = MAX_NORMAL_OFFICER_LEVEL;
+		}
 		
 		WeightedRandomPicker<String> remnantsFaction = Misc.createStringPicker(random, Factions.REMNANTS, 10f);
 		WeightedRandomPicker<String> piratesFaction = Misc.createStringPicker(random, Factions.PIRATES, 10f);
@@ -249,14 +261,18 @@ public class SalvageSpecialAssigner {
 			float sizeMult = TechMining.getTechMiningRuinSizeModifier(entity.getMarket());
 			
 			picker.add(new NothingSpecialCreator(), 30f);
+			picker.add(new ShipRecoverySpecialCreator(random, 1, 2, false, DerelictType.CIVILIAN, recoverableShipFactions), 5f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 3, false, DerelictType.SMALL, recoverableShipFactions), 10f);
+			picker.add(new ShipRecoverySpecialCreator(random, 1, 1, false, DerelictType.MEDIUM, recoverableShipFactions), 3f);
+			picker.add(new ShipRecoverySpecialCreator(random, 1, 1, false, DerelictType.LARGE, recoverableShipFactions), 1f);
 			if (sizeMult > 0) {
+				picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 100 * sizeMult, 200 * sizeMult, null), 2f);
 				picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 500 * sizeMult, 1000 * sizeMult, null), 6f);
 				picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 50 * sizeMult, 500 * sizeMult, null), 3f);
 			}
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 1f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 1f);
 			// min/max doesn't matter for ADMIN
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 5f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 1, officerFactions), 5f);
 			
 			picker.add(new CargoManifestSpecialCreator(random, industryCargo, 500 * sizeMult, 2500 * sizeMult), 15f);
 			picker.add(new CargoManifestSpecialCreator(random, valuableCargo, 500 * sizeMult, 2500 * sizeMult), 15f);
@@ -284,9 +300,10 @@ public class SalvageSpecialAssigner {
 			
 			picker.add(new NothingSpecialCreator(), 40f);
 			picker.add(new ShipRecoverySpecialCreator(random, 0, 0, false, null, null), 30f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, p * 0.125f, p * 0.25f, null), 2f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, p * 0.25f, p * 0.5f, null), 7f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, p * 0.1f, p * 0.2f, null), 3f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 10f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 10f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 1, officerFactions), 0.2f);
 			picker.add(new CargoManifestSpecialCreator(random, valuableCargo, c * 0.25f, c * 0.5f), 10f);
 			picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 10f);
@@ -307,9 +324,10 @@ public class SalvageSpecialAssigner {
 		if (debris) {
 			picker.add(new NothingSpecialCreator(), 60f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 3, true, null, recoverableShipFactions), 10f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 10, 30, null), 2f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 10, 50, null), 6f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 1, 5, null), 3f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 1f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 1f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);
 			picker.add(new CargoManifestSpecialCreator(random, valuableCargo, 10, 50), 10f);
 			picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 10f);
@@ -320,9 +338,10 @@ public class SalvageSpecialAssigner {
 		if (Entities.STATION_MINING_REMNANT.equals(type) || Entities.STATION_MINING.equals(type)) {
 			picker.add(new NothingSpecialCreator(), 30f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 3, false, DerelictType.CIVILIAN, recoverableShipFactions), 10f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 10, 20, null), 1f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 100, 200, null), 6f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 5, 50, null), 3f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 1f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 1f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 3f);
 			picker.add(new CargoManifestSpecialCreator(random, industryCargo, 50, 250), 30f);
 			picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 20f);
@@ -333,9 +352,10 @@ public class SalvageSpecialAssigner {
 		if (Entities.STATION_RESEARCH_REMNANT.equals(type) || Entities.STATION_RESEARCH.equals(type)) {
 			picker.add(new NothingSpecialCreator(), 30f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 3, false, DerelictType.CIVILIAN, recoverableShipFactions), 10f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 50, 100, null), 2f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 100, 200, null), 6f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 5, 50, null), 3f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 1f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 1f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 3f);
 			picker.add(new CargoManifestSpecialCreator(random, valuableCargo, 10, 30), 10f);
 			picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 10f);
@@ -346,9 +366,10 @@ public class SalvageSpecialAssigner {
 		if (Entities.ORBITAL_HABITAT_REMNANT.equals(type) || Entities.ORBITAL_HABITAT.equals(type)) {
 			picker.add(new NothingSpecialCreator(), 40f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 3, false, DerelictType.CIVILIAN, recoverableShipFactions), 20f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 50, 100, null), 6f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.CREW, 100, 200, null), 20f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ORGANS, 5, 50, null), 5f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 10f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 10f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 5f);
 			picker.add(new CargoManifestSpecialCreator(random, habCargo, 10, 30), 10f);
 			picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 5f);
@@ -361,7 +382,8 @@ public class SalvageSpecialAssigner {
 		if (weapons.contains(type)) {
 			picker.add(new NothingSpecialCreator(), 30f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 1, false, DerelictType.SMALL, recoverableShipFactions), 10f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 2f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.MARINES, 50, 100, null), 1f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 2f);
 			picker.add(new CargoManifestSpecialCreator(random, valuableCargo, 10, 30), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);
 		}
@@ -371,7 +393,7 @@ public class SalvageSpecialAssigner {
 		if (weaponsSmall.contains(type)) {
 			picker.add(new NothingSpecialCreator(), 30f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 1, false, DerelictType.SMALL, recoverableShipFactions), 10f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 1f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 1f);
 			picker.add(new CargoManifestSpecialCreator(random, valuableCargo, 10, 30), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);
 		}		
@@ -381,7 +403,7 @@ public class SalvageSpecialAssigner {
 		if (supplies.contains(type)) {
 			picker.add(new NothingSpecialCreator(), 30f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 1, false, DerelictType.SMALL, recoverableShipFactions), 10f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 1f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 1f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);
 			picker.add(new CargoManifestSpecialCreator(random, valuableCargo, 10, 30), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);
@@ -391,7 +413,7 @@ public class SalvageSpecialAssigner {
 		if (suppliesSmall.contains(type)) {
 			picker.add(new NothingSpecialCreator(), 30f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 1, false, DerelictType.SMALL, recoverableShipFactions), 10f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 1f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 1f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);
 			picker.add(new CargoManifestSpecialCreator(random, valuableCargo, 10, 30), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);
@@ -402,7 +424,7 @@ public class SalvageSpecialAssigner {
 		if (equipment.contains(type)) {
 			picker.add(new NothingSpecialCreator(), 30f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 1, false, DerelictType.SMALL, recoverableShipFactions), 10f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 1f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 1f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);
 			picker.add(new CargoManifestSpecialCreator(random, industryCargo, 10, 30), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);
@@ -412,7 +434,7 @@ public class SalvageSpecialAssigner {
 		if (equipmentSmall.contains(type)) {
 			picker.add(new NothingSpecialCreator(), 30f);
 			picker.add(new ShipRecoverySpecialCreator(random, 1, 1, false, DerelictType.SMALL, recoverableShipFactions), 10f);
-			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, 1, 15, officerFactions), 1f);
+			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.OFFICER, MIN_PODS_OFFICER_LEVEL, maxPodsOfficerLevel, officerFactions), 1f);
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);
 			picker.add(new CargoManifestSpecialCreator(random, industryCargo, 10, 30), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);
@@ -424,7 +446,12 @@ public class SalvageSpecialAssigner {
 	
 	
 	public static void assignSpecials(SectorEntityToken entity) {
+		assignSpecials(entity, true);
+	}
+	
+	public static void assignSpecials(SectorEntityToken entity, boolean onNewGame) {
 		SpecialCreationContext context = new SpecialCreationContext();
+		context.onNewGame = onNewGame;
 		
 		SpecialCreator creator = pickSpecialFor(entity, context);
 		if (creator == null) return;
@@ -452,7 +479,7 @@ public class SalvageSpecialAssigner {
 			for (PlanetAPI planet : data.system.getPlanets()) {
 				if (planet.getMarket() != null && 
 						planet.getMarket().isPlanetConditionMarketOnly() && 
-						CoreCampaignPluginImpl.hasRuins(planet.getMarket())) {
+						Misc.hasRuins(planet.getMarket())) {
 					context.all.add(planet);
 				}
 			}
@@ -539,7 +566,7 @@ public class SalvageSpecialAssigner {
 				if (badCondition) {
 					condition = DerelictShipEntityPlugin.pickBadCondition(random);
 				}
-				DerelictShipData dsd = DerelictShipEntityPlugin.createRandom(factionId, type, random);
+				DerelictShipData dsd = DerelictShipEntityPlugin.createRandom(factionId, type, random, 0f);
 				if (dsd == null || dsd.ship == null) continue;
 				
 				dsd.ship.condition = condition;
@@ -564,11 +591,16 @@ public class SalvageSpecialAssigner {
 										 WeightedRandomPicker<String> officerFactions) {
 			if (min < 1) min = 1;
 			if (max < 1) max = 1;
+			if (min > max) min = max;
 			this.random = random;
 			this.type = type;
 			this.min = (int) min;
 			this.max = (int) max;
 			this.officerFactions = officerFactions;
+			
+//			if (type == SleeperSpecialType.OFFICER && max == 15) {
+//				System.out.println("ewfwefwe");
+//			}
 		}
 
 
@@ -576,19 +608,35 @@ public class SalvageSpecialAssigner {
 			SleeperPodsSpecialData data = new SleeperPodsSpecialData(type, null);
 			
 			if (type == SleeperSpecialType.OFFICER) {
+//				if (entity.getContainingLocation().getName().startsWith("Dalar's")) {
+//					System.out.println("wefwefwe");
+//				}
 				String factionId = officerFactions.pick();
 				FactionAPI faction = Global.getSector().getFaction(factionId);
 				int level = min + random.nextInt(max - min + 1);
 				
-				SkillPickPreference pref = SkillPickPreference.EITHER;
+				SkillPickPreference pref = SkillPickPreference.GENERIC;
 				float f = random.nextFloat();
-				if (f < 0.25f) {
+				if (f < 0.05f) {
+					pref = SkillPickPreference.ANY;
+				} else if (f < 0.1f) {
+					pref = SkillPickPreference.PHASE;
+				} else if (f < 0.25f) {
 					pref = SkillPickPreference.CARRIER;
-				} else if (f < 0.5f) {
-					pref = SkillPickPreference.NON_CARRIER;
 				}
 				
-				PersonAPI officer = OfficerManagerEvent.createOfficer(faction, level, true, pref, true, random);
+				//pref = SkillPickPreference.CARRIER;
+				
+				
+				WeightedRandomPicker<Integer> numElite = new WeightedRandomPicker<Integer>(random);
+				numElite.add(0, 20f);
+				numElite.add(1, 10f);
+				numElite.add(2, level);
+				numElite.add(3, level / 2f);
+				int eliteSkillNumOverride = numElite.pick();
+				
+				PersonAPI officer = OfficerManagerEvent.createOfficer(faction, level, pref, true, null, true, 
+																	  true, eliteSkillNumOverride, random);
 				data.officer = officer;
 				data.min = 1;
 				data.max = 1;
@@ -756,6 +804,11 @@ public class SalvageSpecialAssigner {
 					if (other == entity) continue;
 					// only breadcrumb to larger ships
 					if (!isLargeShipOrNonShip(other)) continue;
+					if (other.hasTag(Tags.EXPIRES)) continue;
+					if (other.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
+					if (other.getContainingLocation() != null && other.getContainingLocation().hasTag(Tags.THEME_HIDDEN)) continue;
+					
+					if (other.getMemoryWithoutUpdate() != null && other.getMemoryWithoutUpdate().getBoolean("$ttWeaponsCache")) continue;
 					picker.add(other);
 				}
 			}

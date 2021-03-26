@@ -8,13 +8,21 @@ import java.util.Random;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Sounds;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.BaseOptionStoryPointActionDelegate;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.StoryOptionParams;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
@@ -24,6 +32,8 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 	
 	public static String KEY_SAW_DELIVERY_EVENT_RECENTLY = "$core_dmi_sawRecently";
 	public static String KEY_ACCEPTED_AT_THIS_MARKET_RECENTLY = "$core_dmi_acceptedAtThisMarket";
+	
+	public static float PROB_HIGHER_CAPACITY = 0.25f;
 	
 	public static float FAILED_RECENTLY_DURATION = 365f;
 	public static float SAW_RECENTLY_DURATION = 180f;
@@ -125,7 +135,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 			
 			illegal = dest.isIllegal(com.getId());
 			
-			score += distLY;
+			score += Math.min(distLY, 10f);
 			
 			if (fromHasPA) score += 10f;
 			if (fromHasCells) score += 5f;
@@ -141,7 +151,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 	protected void computeData(MarketAPI market) {
 		
 		data = null;
-		destination = null;;
+		destination = null;
 		reward = 0;
 		duration = 0;
 		faction = null;
@@ -168,6 +178,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 		for (MarketAPI other : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (other == market) continue;
 			if (other.isHidden()) continue;
+			if (other.isInvalidMissionTarget()) continue;
 			
 			if (other.getEconGroup() == null && market.getEconGroup() != null) continue;
 			if (other.getEconGroup() != null && !other.getEconGroup().equals(market.getEconGroup())) continue;
@@ -224,6 +235,12 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 		
 		CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();
 		quantity = (int) cargo.getMaxCapacity();
+		
+		if (random.nextFloat() < PROB_HIGHER_CAPACITY) {
+			quantity *= 1f + random.nextFloat() * 3f;
+			quantity = (int) quantity;
+		}
+		
 		// don't want mission at market to update quantity as player changes their fleet up
 		if (playerCargoCap == 0) {
 			playerCargoCap = quantity;
@@ -303,6 +320,56 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 		data = pick;
 	}
 	
+	protected int getNegotiatedAmount() {
+		return (int) (reward * 1.5f);
+	}
+	
+	protected void addStoryOption() {
+		String id = "negotiate_id";
+		options.addOption("Negotiate a higher fee for the delivery", id);
+		
+		StoryOptionParams params = new StoryOptionParams(id, 1, "negotiateDeliveryFee", Sounds.STORY_POINT_SPEND_INDUSTRY,
+				"Negotiated higher fee for delivery of " + data.comFrom.getCommodity().getLowerCaseName() + " to " + data.dest.getName());
+		
+		SetStoryOption.set(dialog, params, 
+			new BaseOptionStoryPointActionDelegate(dialog, params) {
+
+				@Override
+				public void confirm() {
+					super.confirm();
+					reward = getNegotiatedAmount();
+					dialog.getTextPanel().addPara(getNegotiatedText());
+					OptionPanelAPI options = dialog.getOptionPanel();
+					options.clearOptions();
+					options.addOption("Continue", OPTION_CONFIRM);
+					//optionSelected(null, OPTION_CONFIRM);
+				}
+				
+				@Override
+				public String getTitle() {
+					//return "Negotiating delivery fee";
+					return null;
+				}
+
+				@Override
+				public void createDescription(TooltipMakerAPI info) {
+					float opad = 10f;
+					
+					info.addSpacer(-opad);
+					
+					info.setParaInsigniaLarge();
+					info.addPara("You're able to negotiate the delivery fee from %s up to " +
+							"%s.", 0f, Misc.getHighlightColor(),
+							Misc.getDGSCredits(reward),
+							Misc.getDGSCredits(getNegotiatedAmount()));
+					
+					info.addSpacer(opad * 2f);
+					addActionCostSection(info);
+				}
+			
+		});
+	}
+	
 	@Override
 	protected boolean canAccept() {
 		if (escrow <= 0) return true;
@@ -333,6 +400,13 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 		market.getMemoryWithoutUpdate().set(KEY_ACCEPTED_AT_THIS_MARKET_RECENTLY, true, 
 							ACCEPTED_AT_THIS_MARKET_DURATION * (0.75f + random.nextFloat() * 0.5f));
 	}
+	
+	@Override
+	protected void adjustPerson(PersonAPI person) {
+		super.adjustPerson(person);
+		person.setImportanceAndVoice(pickImportance(), random);
+		person.addTag(Tags.CONTACT_TRADE);
+	}
 
 	@Override
 	protected String getPersonFaction() {
@@ -346,7 +420,9 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 	
 	@Override
 	protected String getPersonPost() {
-		return Ranks.CITIZEN;
+		//return Ranks.CITIZEN;
+		return pickOne(Ranks.POST_TRADER, Ranks.POST_COMMODITIES_AGENT, 
+		 			   Ranks.POST_MERCHANT, Ranks.POST_INVESTOR);
 	}
 	
 	@Override
@@ -357,12 +433,12 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 	@Override
 	protected String getPrompt() {
 		if (faction.getId().equals(Factions.INDEPENDENT)) {
-			return "A concerned-looking " + getManOrWoman() + 
-				   " is sitting at a corner table, glumly examining " + getHisOrHer() + " tripad.";
+			return "At a corner table, a concerned-looking " + getManOrWoman() + 
+				   " glumly examines " + getHisOrHer() + " TriPad.";
 		} else {
-			return "A concerned-looking " + getManOrWoman() + 
+			return "At a corner table, a concerned-looking " + getManOrWoman() + 
 				   " in " + faction.getPersonNamePrefixAOrAn() + " " + faction.getPersonNamePrefix() + " uniform " + 
-				   " is sitting at a corner table, glumly examining " + getHisOrHer() + " tripad.";
+				   " glumly examines " + getHisOrHer() + " TriPad.";
 		}
 	}
 	
@@ -378,7 +454,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 			String sir = "sir";
 			if (Global.getSector().getPlayerPerson().isFemale()) sir = "ma'am";
 			str = "\"Oh, it's you, " + sir + "!\", " + getHeOrShe() + 
-			" exclaims excitedly. \"We've got a little logistical problem that could use " +
+			" exclaims. Taking a moment to recover " + getHisOrHer() + " composure, " + getHeOrShe() + " says \"We've got a little logistical problem that could use " +
 			"your personal touch. " +
 			   "There are %s units of " + data.comFrom.getCommodity().getLowerCaseName() + " that urgently need to be delivered " +
 			   " to %s" + 
@@ -390,7 +466,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 				str += "However, recent Pather cell activity has been making that difficult, and the regular trade fleets " +
 				"aren't quite up to the task.\"";
 			} else {
-				str += "But, well, you know how trader captains are like. " +
+				str += "But, well, you know what trader captains are like. " +
 						"There have been some disagreements over hazard pay, and it's left us in the lurch.\"";
 			}
 		} else {
@@ -414,7 +490,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 		
 		String where = "located in hyperspace,";
 		if (data.dest.getStarSystem() != null) {
-			where = "located in the " + data.dest.getStarSystem().getNameWithLowercaseType() + ", which is ";
+			where = "located in the " + data.dest.getStarSystem().getNameWithLowercaseType() + ", which is";
 		}
 		str += "\n\nYou recall that " + data.dest.getName() + " is under %s control, and " + where + " %s light-years away. ";
 		
@@ -490,6 +566,12 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 			return "Agree to handle the contract";
 		}
 		return "Accept the delivery contract";
+	}
+	
+	protected String getNegotiatedText() {
+		return "\"You drive a hard bargain! Very well, it's a deal.\" " + Misc.ucFirst(getHeOrShe()) + 
+				" does not appear too displeased. You consider that the initial offer " +
+				"was probably on the low side."; 
 	}
 	
 	@Override

@@ -2,28 +2,17 @@ package com.fs.starfarer.api.campaign.impl.items;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CargoTransferHandlerAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
-import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
-import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class IndustryBlueprintItemPlugin extends BaseSpecialItemPlugin implements BlueprintProviderItem {
 
@@ -122,11 +111,8 @@ public class IndustryBlueprintItemPlugin extends BaseSpecialItemPlugin implement
 		Color b = Misc.getButtonTextColor();
 		b = Misc.getPositiveHighlightColor();
 		
-		String weaponId = stack.getSpecialDataIfSpecial().getData();
-		boolean known = Global.getSector().getPlayerFaction().knowsWeapon(weaponId);
-		
-		List<String> weapons = new ArrayList<String>();
-		weapons.add(weaponId);
+		String industryId = stack.getSpecialDataIfSpecial().getData();
+		boolean known = Global.getSector().getPlayerFaction().knowsIndustry(industryId);
 		
 		tooltip.addPara(industry.getDesc(), opad);
 		
@@ -166,72 +152,72 @@ public class IndustryBlueprintItemPlugin extends BaseSpecialItemPlugin implement
 		}
 	}
 
-	@Override
-	public String resolveDropParamsToSpecificItemData(String params, Random random) throws JSONException {
-		if (params == null || params.isEmpty()) return null;
-		
-		
-		JSONObject json = new JSONObject(params);
-		
-		int tier = json.optInt("tier", -1);
-		Set<String> tags = new HashSet<String>();
-		if (json.has("tags")) {
-			JSONArray tagsArray = json.getJSONArray("tags");
-			for (int i = 0; i < tagsArray.length(); i++) {
-				tags.add(tagsArray.getString(i));
-			}
-		}
-		
-		return pickWeapon(tier, tags, random);
-	}
-
-	
-	protected String pickWeapon(int tier, Set<String> tags, Random random) {
-		List<WeaponSpecAPI> specs = Global.getSettings().getAllWeaponSpecs();
-		
-		Iterator<WeaponSpecAPI> iter = specs.iterator();
-		while (iter.hasNext()) {
-			WeaponSpecAPI curr = iter.next();
-			if (curr.getAIHints().contains(AIHints.SYSTEM)) {
-				iter.remove();
-			}
-		}
-		
-		if (tier >= 0) {
-			iter = specs.iterator();
-			while (iter.hasNext()) {
-				WeaponSpecAPI curr = iter.next();
-				if (curr.getTier() != tier) iter.remove();
-			}
-		}
-		
-		if (!tags.isEmpty()) {
-			iter = specs.iterator();
-			while (iter.hasNext()) {
-				WeaponSpecAPI curr = iter.next();
-				for (String tag : tags) {
-					boolean not = tag.startsWith("!");
-					tag = not ? tag.substring(1) : tag;
-					boolean has = curr.hasTag(tag);
-					if (not == has) {
-						iter.remove();
-						break;
-					}
-				}
-			}
-		}
-		
-		WeightedRandomPicker<WeaponSpecAPI> picker = new WeightedRandomPicker<WeaponSpecAPI>(random);
-		for (WeaponSpecAPI spec : specs) {
-			picker.add(spec, 1f * spec.getRarity());
-		}
-		WeaponSpecAPI pick = picker.pick();
-		if (pick == null) {
-			return null;
-		} else {
-			return pick.getWeaponId(); 
-		}
-	}
+//	@Override
+//	public String resolveDropParamsToSpecificItemData(String params, Random random) throws JSONException {
+//		if (params == null || params.isEmpty()) return null;
+//		
+//		
+//		JSONObject json = new JSONObject(params);
+//		
+//		int tier = json.optInt("tier", -1);
+//		Set<String> tags = new HashSet<String>();
+//		if (json.has("tags")) {
+//			JSONArray tagsArray = json.getJSONArray("tags");
+//			for (int i = 0; i < tagsArray.length(); i++) {
+//				tags.add(tagsArray.getString(i));
+//			}
+//		}
+//		
+//		return pickWeapon(tier, tags, random);
+//	}
+//
+//	
+//	protected String pickWeapon(int tier, Set<String> tags, Random random) {
+//		List<WeaponSpecAPI> specs = Global.getSettings().getAllWeaponSpecs();
+//		
+//		Iterator<WeaponSpecAPI> iter = specs.iterator();
+//		while (iter.hasNext()) {
+//			WeaponSpecAPI curr = iter.next();
+//			if (curr.getAIHints().contains(AIHints.SYSTEM)) {
+//				iter.remove();
+//			}
+//		}
+//		
+//		if (tier >= 0) {
+//			iter = specs.iterator();
+//			while (iter.hasNext()) {
+//				WeaponSpecAPI curr = iter.next();
+//				if (curr.getTier() != tier) iter.remove();
+//			}
+//		}
+//		
+//		if (!tags.isEmpty()) {
+//			iter = specs.iterator();
+//			while (iter.hasNext()) {
+//				WeaponSpecAPI curr = iter.next();
+//				for (String tag : tags) {
+//					boolean not = tag.startsWith("!");
+//					tag = not ? tag.substring(1) : tag;
+//					boolean has = curr.hasTag(tag);
+//					if (not == has) {
+//						iter.remove();
+//						break;
+//					}
+//				}
+//			}
+//		}
+//		
+//		WeightedRandomPicker<WeaponSpecAPI> picker = new WeightedRandomPicker<WeaponSpecAPI>(random);
+//		for (WeaponSpecAPI spec : specs) {
+//			picker.add(spec, 1f * spec.getRarity());
+//		}
+//		WeaponSpecAPI pick = picker.pick();
+//		if (pick == null) {
+//			return null;
+//		} else {
+//			return pick.getWeaponId(); 
+//		}
+//	}
 	
 }
 

@@ -84,7 +84,7 @@ public interface AutofitPlugin {
 	
 	//void init(AutofitPluginDelegate delegate);
 	List<AutofitOption> getOptions();
-	void doFit(ShipVariantAPI current, ShipVariantAPI target, AutofitPluginDelegate delegate);
+	void doFit(ShipVariantAPI current, ShipVariantAPI target, int maxSMods, AutofitPluginDelegate delegate);
 	float getRating(ShipVariantAPI current, ShipVariantAPI target, AutofitPluginDelegate delegate);
 	int getCreditCost();
 	

@@ -8,6 +8,7 @@ import com.fs.starfarer.api.campaign.RuleBasedDialog;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
 
@@ -28,6 +29,11 @@ public class EndConversation extends BaseCommandPlugin {
 			}
 		}
 		
+		MemoryAPI memory = memoryMap.get(MemKeys.LOCAL);
+		if (memory != null && memory.getBoolean("$doNotFireOnConvEnd")) {
+			doNotFire = true;
+		}
+		
 		if (!withContinue) {
 			new ShowDefaultVisual().execute(null, dialog, Misc.tokenize(""), memoryMap);
 		}
@@ -42,7 +48,9 @@ public class EndConversation extends BaseCommandPlugin {
 					((RuleBasedDialog) dialog.getPlugin()).reinit(withContinue);
 				} else {
 					MemoryAPI local = memoryMap.get(MemKeys.LOCAL);
-					if (local != null && local.getBoolean("$hasMarket") && !local.contains("$menuState")) {
+					MemoryAPI marketMem = memoryMap.get(MemKeys.MARKET);
+					boolean custom = marketMem != null && marketMem.getBoolean(MemFlags.MARKET_HAS_CUSTOM_INTERACTION_OPTIONS);
+					if (!custom && local != null && local.getBoolean("$hasMarket") && !local.contains("$menuState")) {
 						FireBest.fire(null, dialog, memoryMap, "MarketPostOpen");
 					} else {
 						FireAll.fire(null, dialog, memoryMap, "PopulateOptions");

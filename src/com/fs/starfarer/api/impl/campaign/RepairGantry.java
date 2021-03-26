@@ -67,7 +67,8 @@ public class RepairGantry extends BaseHullMod {
 		Color h = Misc.getHighlightColor();
 		Color bad = Misc.getNegativeHighlightColor();
 		
-		tooltip.addPara("Each additional ship with a salvage gantry provides diminishing returns.", opad);
+		tooltip.addPara("Each additional ship with a salvage gantry provides diminishing returns. " +
+				"The higher the highest recovery bonus from a single ship in the fleet, the later diminishing returns kick in.", opad);
 		
 		if (isForModSpec || ship == null) return;
 		if (Global.getSettings().getCurrentState() == GameState.TITLE) return;

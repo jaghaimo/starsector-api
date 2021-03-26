@@ -11,7 +11,7 @@ import com.fs.starfarer.api.util.Misc;
 
 public class GoDarkAbility extends BaseToggleAbility {
 
-	public static final float MAX_BURN_MULT = 0.5f;
+	//public static final float MAX_BURN_MULT = 0.5f;
 	public static final float DETECTABILITY_MULT = 0.5f;
 	
 //	public String getSpriteName() {
@@ -56,10 +56,14 @@ public class GoDarkAbility extends BaseToggleAbility {
 		if (level < 1) level = 0;
 		
 		float d = fleet.getStats().getDynamic().getValue(Stats.GO_DARK_DETECTED_AT_MULT);
-		float b = fleet.getStats().getDynamic().getValue(Stats.GO_DARK_BURN_PENALTY_MULT);
+		//float b = fleet.getStats().getDynamic().getValue(Stats.GO_DARK_BURN_PENALTY_MULT);
 		
 		fleet.getStats().getDetectedRangeMod().modifyMult(getModId(), 1f + (DETECTABILITY_MULT * d - 1f) * level, "Going dark");
-		fleet.getStats().getFleetwideMaxBurnMod().modifyMult(getModId(), 1f + (MAX_BURN_MULT - 1f) * level * b, "Going dark");
+//		float MAX_BURN_MULT = 0.5f;
+//		float b = 1f;
+//		fleet.getStats().getFleetwideMaxBurnMod().modifyMult(getModId(), 1f + (MAX_BURN_MULT - 1f) * level * b, "Going dark");
+		
+		fleet.goSlowOneFrame();
 		
 		for (FleetMemberViewAPI view : fleet.getViews()) {
 			view.getContrailColor().shift(getModId(), new Color(0,0,0,0), 1f, 1f, 1f);
@@ -90,7 +94,7 @@ public class GoDarkAbility extends BaseToggleAbility {
 		if (fleet == null) return;
 		
 		fleet.getStats().getDetectedRangeMod().unmodify(getModId());
-		fleet.getStats().getFleetwideMaxBurnMod().unmodifyMult(getModId());		
+		//fleet.getStats().getFleetwideMaxBurnMod().unmodifyMult(getModId());		
 	}
 	
 //	@Override
@@ -131,14 +135,26 @@ public class GoDarkAbility extends BaseToggleAbility {
 		float pad = 10f;
 		
 		
+//		tooltip.addPara("Turns off all non-essential systems, reducing the range" +
+//				" at which the fleet can be detected by %s and reducing the maximum burn" +
+//				" level by %s.", pad, 
+//				highlight,
+//				"" + (int)((1f - DETECTABILITY_MULT) * 100f) + "%",
+//				"" + (int)((1f - MAX_BURN_MULT) * 100f) + "%"
+//		);
 		tooltip.addPara("Turns off all non-essential systems, reducing the range" +
-				" at which the fleet can be detected by %s and reducing the maximum burn" +
-				" level by %s", pad, 
+				" at which the fleet can be detected by %s and forcing the fleet to %s*." +
+				"", pad, 
 				highlight,
 				"" + (int)((1f - DETECTABILITY_MULT) * 100f) + "%",
-				"" + (int)((1f - MAX_BURN_MULT) * 100f) + "%"
+				"move slowly"
 		);
 		//tooltip.addPara("Disables the transponder when activated.", pad);
+		
+		tooltip.addPara("*A fleet is considered slow-moving at a burn level of half that of its slowest ship.", gray, pad);		
+//		tooltip.addPara("*Maximum burn level of %s", pad, gray, 
+//				Misc.getDarkHighlightColor(), 
+//				"" + Misc.getGoSlowBurnLevel(getFleet()));
 		addIncompatibleToTooltip(tooltip, expanded);
 	}
 

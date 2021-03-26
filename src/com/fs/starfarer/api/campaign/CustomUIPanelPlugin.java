@@ -14,6 +14,11 @@ public interface CustomUIPanelPlugin {
 	void positionChanged(PositionAPI position);
 	
 	/**
+	 * Below any UI elements in the panel.
+	 * @param alphaMult
+	 */
+	void renderBelow(float alphaMult);
+	/**
 	 * alphaMult is the transparency the panel should be rendered at.
 	 * @param alphaMult
 	 */

@@ -28,8 +28,8 @@ import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
-import com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseAssignmentAI.FleetActionDelegate;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.LabelAPI;
@@ -467,7 +467,7 @@ public class RaidIntel extends BaseIntelPlugin implements RouteFleetSpawner {
 								"at risk from the raid:", opad);
 						float initPad = opad;
 						for (MarketAPI market : unsafe) {
-							addMarketToList(info, market, initPad);
+							addMarketToList(info, market, initPad, tc);
 							initPad = 0f;
 						}
 						

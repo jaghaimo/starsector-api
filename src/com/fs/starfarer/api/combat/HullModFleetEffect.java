@@ -26,6 +26,19 @@ public interface HullModFleetEffect {
 	
 	
 	/**
+	 * Whether the advanceInCampaign() method should be called for this hullmod.
+	 * @return
+	 */
+	boolean withAdvanceInCampaign();
+	
+	/**
+	 * Whether the withOnFleetSync() method should be called for this hullmod.
+	 * @return
+	 */
+	boolean withOnFleetSync();
+	
+	
+	/**
 	 * Called when anything about the fleet composition changes, including hullmod changes.
 	 * Also called for all fleets, including fleets without ships with this hullmod.
 	 * @param fleet

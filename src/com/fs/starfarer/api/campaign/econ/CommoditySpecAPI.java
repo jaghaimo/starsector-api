@@ -2,6 +2,8 @@ package com.fs.starfarer.api.campaign.econ;
 
 import java.util.Set;
 
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
+
 public interface CommoditySpecAPI {
 	String getOrigin();
 	String getIconName();
@@ -14,6 +16,7 @@ public interface CommoditySpecAPI {
 	boolean isPrimary();
 	boolean isExotic();
 	boolean isMeta();
+	boolean isNonEcon();
 	String getId();
 	String getName();
 	
@@ -25,6 +28,8 @@ public interface CommoditySpecAPI {
 	float getBasePrice();
 	Set<String> getTags();
 	boolean hasTag(String tag);
+	
+	void setBasePrice(float price);
 	
 	
 	/**
@@ -46,7 +51,10 @@ public interface CommoditySpecAPI {
 	
 	float getExportValue();
 	void setExportValue(float exportValue);
+	String getSoundId();
 	
+	RaidDangerLevel getBaseDanger();
+	void setBaseDanger(RaidDangerLevel danger);
 }
 
 

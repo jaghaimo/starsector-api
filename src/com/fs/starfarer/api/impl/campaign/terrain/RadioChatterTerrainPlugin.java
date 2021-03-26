@@ -157,6 +157,10 @@ public class RadioChatterTerrainPlugin extends BaseRingTerrain {
 		return null;
 	}
 	
+	public String getNameForTooltip() {
+		return null;
+	}
+	
 	public String getEffectCategory() {
 		return "radio_chatter";
 	}

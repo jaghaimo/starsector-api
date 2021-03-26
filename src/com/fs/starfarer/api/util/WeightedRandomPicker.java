@@ -138,7 +138,9 @@ public class WeightedRandomPicker<T> implements Cloneable {
 		return weights.get(index);
 	}
 	public void setWeight(int index, float weight) {
+		float w = getWeight(index);
 		weights.set(index, weight);
+		total += weight - w;
 	}
 
 	public T pickAndRemove() {
@@ -161,7 +163,7 @@ public class WeightedRandomPicker<T> implements Cloneable {
 		if (ignoreWeights) {
 			int index;
 			if (random != null) {
-				index = (int) (random.nextFloat() * items.size());
+				index = (int) (random.nextDouble() * items.size());
 			} else {
 				index = (int) (Math.random() * items.size());
 			}
@@ -174,6 +176,8 @@ public class WeightedRandomPicker<T> implements Cloneable {
 		} else {
 			random = (float) (Math.random() * total);
 		}
+		if (random > total) random = total;
+		
 		float weightSoFar = 0f;
 		int index = 0;
 		for (Float weight : weights) {

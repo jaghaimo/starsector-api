@@ -1,25 +1,35 @@
 package com.fs.starfarer.api.impl.campaign.procgen;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.Map;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignClockAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogPlugin;
+import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
+import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionManager;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager.PunExData;
+import com.fs.starfarer.api.impl.campaign.plog.PLEntry;
+import com.fs.starfarer.api.impl.campaign.plog.PLIntel;
+import com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog;
+import com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl;
 import com.fs.starfarer.api.util.Misc;
 
 public class EventTestPluginImpl implements InteractionDialogPlugin {
@@ -30,6 +40,10 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 		PUNITIVE_EXPEDITION,
 		INSPECTION,
 		PICK_STRENGTH,
+		PRINT_LOG,
+		ADD_LOG_INTEL,
+		INCREASE_COLONY_SIZE,
+		FINISH_CONSTRUCTION,
 		LEAVE,
 	}
 	
@@ -97,13 +111,21 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 		OptionId option = (OptionId) optionData;
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
-			textPanel.addParagraph("");
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(option);
+			//textPanel.addParagraph("");
 		}
 		
 		switch (option) {
 		case INIT:
 			createInitialOptions();
+			
+			
+			PersonAPI player = Global.getSector().getPlayerPerson();
+			MutableCharacterStatsAPI stats = player.getStats();
+//			stats.addXP((long) (6000f * (float) Math.random() + 100f), textPanel, true);
+//			stats.spendStoryPoints(2, true, textPanel, false, 1f, null);
+			
 			break;
 		case PIRATE_RAID:
 			MarketAPI market = getNearestMarket(false);
@@ -116,6 +138,26 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 			}
 			//addText("")
 			break;	
+		case INCREASE_COLONY_SIZE:
+			market = getNearestMarket(false);
+			if (market != null) {
+				int was = market.getSize();
+				CoreImmigrationPluginImpl plugin = new CoreImmigrationPluginImpl(market);
+				plugin.increaseMarketSize();
+				textPanel.addPara("Size of " + market.getName() + " increased from " + was + " to " + market.getSize());
+			}
+			break;
+		case FINISH_CONSTRUCTION:
+			market = getNearestMarket(false);
+			if (market != null) {
+				for (Industry curr : new ArrayList<Industry>(market.getIndustries())) {
+					if (curr.isBuilding()) {
+						curr.finishBuildingOrUpgrading();
+						textPanel.addPara("Finished building or upgrading " + curr.getCurrentName());
+					}
+				}
+			}
+			break;
 		case PUNITIVE_EXPEDITION:
 			options.clearOptions();
 			for (PunExData data : PunitiveExpeditionManager.getInstance().getData().values()) {
@@ -141,6 +183,43 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 			options.addOption("800", 800);
 			options.addOption("1000", 1000);
 			options.addOption("Leave", OptionId.LEAVE, null);
+			break;
+		case PRINT_LOG:
+			textPanel.addPara("Player log:");
+			String log = "";
+			for (PLEntry e : PlaythroughLog.getInstance().getEntries()) {
+				CampaignClockAPI clock = Global.getSector().getClock().createClock(e.getTimestamp());
+				log += clock.getShortDate() + " " + e.getText() + "\n";
+			}
+			textPanel.setFontVictor();
+			textPanel.addPara(log);
+			textPanel.setFontInsignia();
+			
+			LocationAPI loc = Global.getSector().getCurrentLocation();
+			String tags = "";
+			for (String tag : Global.getSector().getCurrentLocation().getTags()) {
+				tags += "    " + tag + "\n";
+			}
+			textPanel.addPara("\nTags for " + loc.getName() + ":\n" + tags);
+			
+			break;
+		case ADD_LOG_INTEL:
+			PLIntel intel = new PLIntel();
+			Global.getSector().getIntelManager().addIntel(intel, false, textPanel);
+			
+//			PromoteOfficerIntel intel = new PromoteOfficerIntel(textPanel);
+//			Global.getSector().getIntelManager().addIntel(intel, false, textPanel);
+			
+//			dialog.showCustomProductionPicker(new BaseCustomProductionPickerDelegateImpl());
+			
+			//Global.getSector().getIntelManager().addIntel(intel, false, textPanel);
+			
+//			for (int i = 0; i < 12 * 3; i++) {
+//				for (int j = 0; j < 10; j++) {
+//					PlaythroughLog.getInstance().reportEconomyTick(i);
+//				}
+//				PlaythroughLog.getInstance().reportEconomyMonthEnd();
+//			}
 			break;
 		case LEAVE:
 			//Global.getSector().setPaused(false);
@@ -185,6 +264,13 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 		}
 		options.addOption("Send a punitive expedition", OptionId.PUNITIVE_EXPEDITION);
 		options.addOption("Send an AI inspection", OptionId.INSPECTION);
+		options.addOption("Print player log", OptionId.PRINT_LOG);
+		options.addOption("Add player log intel", OptionId.ADD_LOG_INTEL);
+		
+		if (market != null) {
+			options.addOption("Increase size of " + market.getName() + " to " + (market.getSize() + 1), OptionId.INCREASE_COLONY_SIZE);
+			options.addOption("Finish construction on " + market.getName(), OptionId.FINISH_CONSTRUCTION);
+		}
 		
 		options.addOption("Leave", OptionId.LEAVE, null);
 	}

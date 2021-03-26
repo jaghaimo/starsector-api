@@ -57,7 +57,7 @@ public class RemnantStationFleetManager extends SourceBasedFleetManager {
 				0f, // utilityPts
 				0f // qualityMod
 		);
-		params.officerNumberBonus = 10;
+		//params.officerNumberBonus = 10;
 		params.random = random;
 		
 		CampaignFleetAPI fleet = FleetFactoryV3.createFleet(params);

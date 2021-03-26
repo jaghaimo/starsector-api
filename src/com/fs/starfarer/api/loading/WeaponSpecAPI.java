@@ -104,4 +104,19 @@ public interface WeaponSpecAPI {
 	 * @return
 	 */
 	float getBurstDuration();
+	float getAutofireAccBonus();
+	void setAutofireAccBonus(float autofireAccBonus);
+	Object getProjectileSpec();
+	float getBeamChargeupTime();
+	float getBeamChargedownTime();
+	boolean isUnaffectedByProjectileSpeedBonuses();
+	void setUnaffectedByProjectileSpeedBonuses(boolean unaffectedByProjectileSpeedBonuses);
+	float getChargeTime();
+	WeaponType getMountType();
+	void setMountType(WeaponType mountType);
+	float getExtraArcForAI();
+	void setExtraArcForAI(float extraArcForAI);
+	void setWeaponName(String weaponName);
+	float getMaxRange();
+	void setMaxRange(float maxRange);
 }

@@ -138,10 +138,14 @@ public class HIActionStage extends ActionStage implements FleetActionDelegate {
 	public void performRaid(CampaignFleetAPI fleet, MarketAPI market) {
 		removeMilScripts();
 		
+		if (market == null) {
+			market = target;
+		}
+		
 		HegemonyInspectionIntel intel = ((HegemonyInspectionIntel)this.intel);
 		
 		status = RaidStageStatus.SUCCESS;
-		boolean hostile = target.getFaction().isHostileTo(intel.getFaction());
+		boolean hostile = market.getFaction().isHostileTo(intel.getFaction());
 		AntiInspectionOrders orders = intel.getOrders();
 		
 		if (hostile || orders == AntiInspectionOrders.RESIST) {
@@ -150,12 +154,12 @@ public class HIActionStage extends ActionStage implements FleetActionDelegate {
 			float str = intel.getAssembleStage().getOrigSpawnFP() * 3f;
 			if (fleet != null) str = MarketCMD.getRaidStr(fleet);
 			
-			float re = MarketCMD.getRaidEffectiveness(target, str);
+			float re = MarketCMD.getRaidEffectiveness(market, str);
 			MarketCMD.applyRaidStabiltyPenalty(market, 
 					Misc.ucFirst(intel.getFaction().getPersonNamePrefix()) + " inspection", re);
-			Misc.setFlagWithReason(target.getMemoryWithoutUpdate(), MemFlags.RECENTLY_RAIDED, 
+			Misc.setFlagWithReason(market.getMemoryWithoutUpdate(), MemFlags.RECENTLY_RAIDED, 
 								   intel.getFaction().getId(), true, 30f);
-		
+			Misc.setRaidedTimestamp(market);
 			removeCoresAndApplyResult(fleet);
 		} else if (orders == AntiInspectionOrders.BRIBE) {
 			intel.setOutcome(HegemonyInspectionOutcome.BRIBED);

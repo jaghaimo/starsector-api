@@ -123,8 +123,9 @@ public class BaseRaidStage implements RaidStage {
 			if (stragglers.contains(route)) continue;
 			CampaignFleetAPI fleet = route.getActiveFleet();
 			if (fleet != null) {
-				float mult = Misc.getAdjustedFP(1f, route.getMarket());
-				if (mult < 1) mult = 1f;
+//				float mult = Misc.getAdjustedFP(1f, route.getMarket());
+//				if (mult < 1) mult = 1f;
+				float mult = Misc.getSpawnFPMult(fleet);
 				madeItFP += fleet.getFleetPoints() / mult;
 			} else {
 				madeItFP += route.getExtra().fp;

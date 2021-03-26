@@ -21,8 +21,8 @@ public enum DamageType {
 		this.description = description;
 	}
 	
-	private final String displayName;
-	private final String description;
+	private String displayName;
+	private String description;
 	private float shieldMult;
 	private float armorMult;
 	private float hullMult;
@@ -42,5 +42,22 @@ public enum DamageType {
 	public String getDescription() {
 		return description;
 	}
+	public void setDisplayName(String displayName) {
+		this.displayName = displayName;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public void setShieldMult(float shieldMult) {
+		this.shieldMult = shieldMult;
+	}
+	public void setArmorMult(float armorMult) {
+		this.armorMult = armorMult;
+	}
+	public void setHullMult(float hullMult) {
+		this.hullMult = hullMult;
+	}
+	
+	
 	
 }

@@ -1,19 +1,20 @@
 package com.fs.starfarer.api.impl.campaign;
 
+import java.awt.Color;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.FleetDataAPI;
 import com.fs.starfarer.api.campaign.BuffManagerAPI.Buff;
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
+import com.fs.starfarer.api.campaign.FleetDataAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.HullModEffect;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.MutableStat;
-import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
@@ -264,5 +265,23 @@ public class TowCable implements HullModEffect {
 
 	public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
 		
+	}
+
+	public Color getBorderColor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Color getNameColor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public int getDisplaySortOrder() {
+		return 100;
+	}
+	
+	public int getDisplayCategoryIndex() {
+		return -1;
 	}
 }

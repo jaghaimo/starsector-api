@@ -96,7 +96,7 @@ public interface FleetMemberAPI {
 	void setCaptain(PersonAPI commander);
 	
 	/**
-	 * Based on deployment points, modified by CR and ordnance points actually used by the variant.
+	 * Based on fleet points, modified by CR and ordnance points actually used by the variant.
 	 * 
 	 * Not modified by hull status or captain quality.
 	 * @return
@@ -140,7 +140,8 @@ public interface FleetMemberAPI {
 	 * Transient, not saved.
 	 */
 	void setAlly(boolean isAlly);
-	void setFleetCommanderForStats(PersonAPI alternateFleetCommander);
+	void setFleetCommanderForStats(PersonAPI alternateFleetCommander, FleetDataAPI fleetForStats);
+	FleetDataAPI getFleetDataForStats();
 	PersonAPI getFleetCommanderForStats();
 	void updateStats();
 
@@ -172,6 +173,13 @@ public interface FleetMemberAPI {
 
 	Vector2f getOverrideSpriteSize();
 	void setOverrideSpriteSize(Vector2f overrideSpriteSize);
+
+
+	boolean isPhaseShip();
+
+
+	void setId(String id);
+
 
 }
 

@@ -17,11 +17,16 @@ import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignTerrainAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.FactionProductionAPI;
+import com.fs.starfarer.api.campaign.FactionProductionAPI.ItemInProductionAPI;
+import com.fs.starfarer.api.campaign.FactionProductionAPI.ProductionItemType;
 import com.fs.starfarer.api.campaign.FleetInflater;
+import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.PlayerMarketTransaction;
@@ -31,19 +36,15 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.SpecialItemPlugin;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
-import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
-import com.fs.starfarer.api.campaign.FactionProductionAPI.ItemInProductionAPI;
-import com.fs.starfarer.api.campaign.FactionProductionAPI.ProductionItemType;
-import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.comm.CommMessageAPI.MessageClickAction;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.campaign.econ.MonthlyReport;
-import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
+import com.fs.starfarer.api.campaign.econ.MonthlyReport;
 import com.fs.starfarer.api.campaign.econ.MonthlyReport.FDNode;
+import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AdminData;
 import com.fs.starfarer.api.characters.OfficerDataAPI;
@@ -78,6 +79,7 @@ import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.Debri
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
+import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -421,7 +423,7 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 			for (FleetMemberAPI loss : Misc.getSnapshotMembersLost(fleet)) {
 				//if (loss.getVariant().isStockVariant()) {
 				if (!loss.getVariant().hasTag(Tags.SHIP_RECOVERABLE)) { // was not recoverable by player
-					if (!loss.isStation()) {
+					if (!loss.isStation() && !fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_NO_SHIP_RECOVERY)) {
 						recoverySpecialChoices.add(loss);
 					}
 				}
@@ -455,7 +457,7 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 			for (FleetMemberAPI loss : Misc.getSnapshotMembersLost(fleet)) {
 				//if (loss.getVariant().isStockVariant()) {
 				if (!loss.getVariant().hasTag(Tags.SHIP_RECOVERABLE)) { // was not recoverable by player
-					if (!loss.isStation()) {
+					if (!loss.isStation() && !fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_NO_SHIP_RECOVERY)) {
 						recoverySpecialChoices.add(loss);
 					}
 				} else {
@@ -512,7 +514,7 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 				if (!member.getVariant().isStockVariant()) variantId = member.getVariant().getOriginalVariant();
 				if (variantId == null) continue;
 				DerelictShipData params = new DerelictShipData(new PerShipData(variantId,
-										DerelictShipEntityPlugin.pickBadCondition(null)), false);
+										DerelictShipEntityPlugin.pickBadCondition(null), 0f), false);
 				params.durationDays = DerelictShipEntityPlugin.getBaseDuration(member.getHullSpec().getHullSize());
 				CustomCampaignEntityAPI entity = (CustomCampaignEntityAPI) BaseThemeGenerator.addSalvageEntity(
 												 primaryWinner.getContainingLocation(),
@@ -568,7 +570,7 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 		if (debris == null) {
 			DebrisFieldParams params = new DebrisFieldParams(
 					200f, // field radius - should not go above 1000 for performance reasons
-					1f, // density, visual - affects number of debris pieces
+					-1f, // density, visual - affects number of debris pieces
 					1f, // duration in days 
 					1f); // days the field will keep generating glowing pieces
 			params.source = DebrisFieldSource.BATTLE;
@@ -644,7 +646,7 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 						if (pick != null) {
 							String variantId = pick.getVariant().getHullVariantId();
 							if (!pick.getVariant().isStockVariant()) variantId = pick.getVariant().getOriginalVariant();
-							data.addShip(variantId, ShipCondition.WRECKED);
+							data.addShip(variantId, ShipCondition.WRECKED, 0f);
 						}
 					}
 				}
@@ -692,7 +694,7 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 		
 		CargoPodsResponse script = new CargoPodsResponse(pods);
 		pods.getContainingLocation().addScript(script);
-		
+		ListenerUtil.reportPlayerLeftCargoPods(pods);
 //		pods.getMemoryWithoutUpdate().set(CargoPods.LOCKED, true);
 //		pods.getMemoryWithoutUpdate().set(CargoPods.CAN_UNLOCK, true);
 		//pods.getMemoryWithoutUpdate().set(CargoPods.TRAPPED, true);
@@ -708,6 +710,8 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 		
 		CustomCampaignEntityAPI pods = Misc.addCargoPods(playerFleet.getContainingLocation(), playerFleet.getLocation());
 		pods.getCargo().addAll(cargo);
+		
+		ListenerUtil.reportPlayerLeftCargoPods(pods);
 	}
 
 	protected Random prodRandom = new Random();
@@ -734,6 +738,7 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 		
 		int capacity = prod.getMonthlyProductionCapacity();
 		capacity = Math.min(capacity, credits);
+		//capacity = 1000000;
 		
 		int remainingValue = capacity + prod.getAccruedProduction();
 		//if (remainingValue <= 0) return;
@@ -798,7 +803,10 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 				
 				if (pick.getType() == ProductionItemType.SHIP) {
 					List<String> variants = Global.getSettings().getHullIdToVariantListMap().get(pick.getSpecId());
-					if (variants.isEmpty()) continue;
+					if (variants.isEmpty()) {
+						variants.add(pick.getSpecId() + "_Hull");
+						continue;
+					}
 					
 					int index = random.nextInt(variants.size());
 					//cargo.addMothballedShip(FleetMemberType.SHIP, variants.get(index), null);
@@ -818,9 +826,21 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 			}
 		}
 		
+		int weaponCost = 0;
 		ships.inflateIfNeeded();
 		for (FleetMemberAPI member : ships.getFleetData().getMembersListCopy()) {
 			cargo.getMothballedShips().addFleetMember(member);
+			for (String wingId : member.getVariant().getNonBuiltInWings()) {
+				FighterWingSpecAPI spec = Global.getSettings().getFighterWingSpec(wingId);
+				weaponCost += spec.getBaseValue();
+			}
+			for (String slotId : member.getVariant().getNonBuiltInWeaponSlots()) {
+				WeaponSpecAPI spec = member.getVariant().getWeaponSpec(slotId);
+				weaponCost += spec.getBaseValue();
+			}
+		}
+		if (!DebugFlags.WEAPONS_HAVE_COST) {
+			weaponCost = 0;
 		}
 		
 		// add some supplies, fuel, and crew
@@ -852,11 +872,12 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 			if (!market.isPlayerOwned()) continue;
 		
 			for (Industry ind : market.getIndustries()) {
-				CargoAPI added = ind.generateCargoForGatheringPoint(random);
+				Random curr = Misc.getRandom(random.nextLong(), 11);
+				CargoAPI added = ind.generateCargoForGatheringPoint(curr);
 				if (added != null && (!added.isEmpty() || 
 						(added.getMothballedShips() != null && !added.getMothballedShips().getMembersListCopy().isEmpty()))) {
 					String title = ind.getCargoTitleForGatheringPoint();
-					data.getCargo(title).addAll(added);
+					data.getCargo(title).addAll(added, true);
 				}
 			}
 		}
@@ -884,20 +905,31 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 				production.tooltipCreator = report.getMonthlyReportTooltip();
 				
 				production.upkeep += totalCost;
+				
+				if (weaponCost > 0) {
+					FDNode productionWeapons = report.getNode(marketsNode, MonthlyReport.PRODUCTION_WEAPONS);
+					productionWeapons.name = "Weapons & fighter LPCs for produced ships";
+					productionWeapons.custom = MonthlyReport.PRODUCTION_WEAPONS;
+					productionWeapons.tooltipCreator = report.getMonthlyReportTooltip();
+					productionWeapons.upkeep += weaponCost;
+				}
 			}
 		
 			for (CargoAPI curr : data.data.values()) {
 				local.addAll(curr);
 				local.initMothballedShips(Factions.PLAYER);
 				for (FleetMemberAPI member : curr.getMothballedShips().getMembersListCopy()) {
-					member.getRepairTracker().setMothballed(true);
+//					member.getRepairTracker().setCR(0f);
+//					member.getRepairTracker().setMothballed(true);
+					member.getRepairTracker().setMothballed(false);
+					member.getRepairTracker().setCR(0.5f);
 					local.getMothballedShips().addFleetMember(member);
 				}
 			}
 			local.sort();
 			
 			ProductionReportIntel intel = new ProductionReportIntel(gatheringPoint, data, 
-													totalCost, prod.getAccruedProduction(),
+													totalCost + weaponCost, prod.getAccruedProduction(),
 													wantedToDoProduction && unableToDoProduction);
 			Global.getSector().getIntelManager().addIntel(intel);
 		}
@@ -913,6 +945,29 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 			return;
 		}
 		
+		MonthlyReport report = SharedData.getData().getCurrentReport();
+		FDNode marketsNode = report.getNode(MonthlyReport.OUTPOSTS);
+		if (marketsNode.custom != null) {
+			for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
+				if (!market.isPlayerOwned()) continue;
+				
+				float incentive = market.getIncentiveCredits();
+				if (incentive > 0) {
+					FDNode mNode = report.getNode(marketsNode, market.getId());
+					if (mNode.custom != null) {
+						FDNode incNode = report.getNode(mNode, "incentives"); 
+						incNode.name = "Hazard pay";
+						incNode.custom = MonthlyReport.INCENTIVES;
+						incNode.mapEntity = market.getPrimaryEntity();
+						incNode.tooltipCreator = report.getMonthlyReportTooltip();
+						incNode.upkeep += incentive;
+					}
+					market.setIncentiveCredits(0);
+				}
+			}
+		}
+		
+		
 		MonthlyReport previous = SharedData.getData().getPreviousReport();
 		float debt = previous.getDebt();
 		if (debt > 0) {
@@ -926,7 +981,7 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 		
 		//MonthlyReport previous = SharedData.getData().getPreviousReport();
 		SharedData.getData().rollOverReport();
-		MonthlyReport report = SharedData.getData().getPreviousReport();
+		report = SharedData.getData().getPreviousReport();
 		report.setPreviousDebt(previous.getDebt());
 		report.setTimestamp(Global.getSector().getClock().getTimestamp());
 		
@@ -1050,6 +1105,19 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 			marineNode.custom = MonthlyReport.MARINES;
 			marineNode.tooltipCreator = report.getMonthlyReportTooltip();
 		}
+		
+		
+//		List<PersonnelAtEntity> droppedOffMarines = PlayerFleetPersonnelTracker.getInstance().getDroppedOff();
+//		for (PersonnelAtEntity curr : droppedOffMarines) {
+//			
+//		}
+//		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
+//			if (Misc.playerHasStorageAccess(market)) {
+//				
+//			}
+//		}
+		
+		
 		
 		//FDNode officersNode = report.getNode(MonthlyReport.OFFICERS);
 		FDNode officersNode = report.getNode(fleetNode, MonthlyReport.OFFICERS);

@@ -10,8 +10,9 @@ import com.fs.starfarer.api.util.Misc.Token;
 import com.fs.starfarer.api.util.Misc.VarAndMemory;
 
 /**
- * CallEvent $eventHandle <params> 
+ * Use "Call" instead; same functionality, more accurate and shorter name.
  * 
+ * CallEvent $eventHandle <params> 
  */
 public class CallEvent extends BaseCommandPlugin {
 	

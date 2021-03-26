@@ -39,10 +39,10 @@ public class DecivilizedSubpop extends BaseHazardCondition implements MarketImmi
 	protected void createTooltipAfterDescription(TooltipMakerAPI tooltip, boolean expanded) {
 		super.createTooltipAfterDescription(tooltip, expanded);
 		
-		tooltip.addPara("%s stability.", 
+		tooltip.addPara("%s stability", 
 				10f, Misc.getHighlightColor(),
 				"-" + (int)STABILITY_PENALTY);
-		tooltip.addPara("%s population growth (based on market size).", 
+		tooltip.addPara("%s population growth (based on colony size)", 
 				10f, Misc.getHighlightColor(),
 				"+" + (int) getImmigrationBonus());
 //		tooltip.addPara("%s stability, %s population growth.", 

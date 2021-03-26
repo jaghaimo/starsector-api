@@ -16,6 +16,9 @@ public class PlanetaryShield extends BaseIndustry {
 
 	public static float DEFENSE_BONUS = 2f;
 	
+	public static float ALPHA_CORE_BONUS = 0.5f;
+	public static float IMPROVE_DEFENSE_BONUS = 0.25f;
+	
 	public void apply() {
 		super.apply(false);
 		
@@ -66,7 +69,13 @@ public class PlanetaryShield extends BaseIndustry {
 		if (!Global.getSector().getPlayerFaction().knowsIndustry(getId())) {
 			return false;
 		}
-		return market.getPlanetEntity() != null;
+		return market.getPlanetEntity() != null && !market.getPlanetEntity().isGasGiant();
+	}
+	
+	@Override
+	public String getUnavailableReason() {
+		if (!super.isAvailableToBuild()) return super.getUnavailableReason();
+		return "Can not be built at a gas giant";
 	}
 	
 	public boolean showWhenUnavailable() {
@@ -87,7 +96,6 @@ public class PlanetaryShield extends BaseIndustry {
 	}
 	
 	
-	public static float ALPHA_CORE_BONUS = 0.5f;
 	@Override
 	protected void applyAlphaCoreModifiers() {
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).modifyMult(
@@ -133,5 +141,37 @@ public class PlanetaryShield extends BaseIndustry {
 				str);
 		
 	}
+
 	
+	@Override
+	public boolean canImprove() {
+		return true;
+	}
+	
+	protected void applyImproveModifiers() {
+		if (isImproved()) {
+			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).modifyMult(getModId(2),
+							1f + IMPROVE_DEFENSE_BONUS,
+							getImprovementsDescForModifiers() + " (" + getNameForModifier() + ")");
+		} else {
+			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId(3));
+		}
+	}
+	
+	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		float a = IMPROVE_DEFENSE_BONUS;
+		String str = Strings.X + (1f + a) + "";
+		
+		if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+			info.addPara("Ground defenses increased by %s.", 0f, highlight, str);
+		} else {
+			info.addPara("Increases ground defenses by %s.", 0f, highlight, str);
+		}
+
+		info.addSpacer(opad);
+		super.addImproveDesc(info, mode);
+	}
 }

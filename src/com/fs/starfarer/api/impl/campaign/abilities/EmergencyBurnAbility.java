@@ -12,22 +12,26 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberViewAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.CRRecoveryBuff;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.Misc.FleetMemberDamageLevel;
 
 public class EmergencyBurnAbility extends BaseDurationAbility {
 
-	public static final float SENSOR_RANGE_MULT = 0.5f;
+	public static float SENSOR_RANGE_MULT = 0.5f;
 	//public static final float DETECTABILITY_MULT = 1.25f;
-	public static final float DETECTABILITY_PERCENT = 50f;
-	public static final float MAX_BURN_MOD = 8f;
+	public static float DETECTABILITY_PERCENT = 50f;
+	public static float MAX_BURN_MOD = 8f;
 	//public static final float CR_COST_MULT = 1f;
-	public static final float CR_COST_MULT = 0.25f;
-	public static final float FUEL_USE_MULT = 1f;
+	public static float CR_COST_MULT = 0.25f;
+	public static float FUEL_USE_MULT = 1f;
 	
-	public static final float ACCELERATION_MULT = 4f;
+	public static float ACCELERATION_MULT = 4f;
+	
+	public static float ACTIVATION_DAMAGE_PROB = 0.33f;
 	
 //	public String getSpriteName() {
 //		return Global.getSettings().getSpriteName("abilities", Abilities.EMERGENCY_BURN);
@@ -60,6 +64,12 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 		
 		float crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.EMERGENCY_BURN_CR_MULT);
 		if (crCostFleetMult > 0) {
+			for (FleetMemberAPI member : getNonReadyShips()) {
+				if ((float) Math.random() < ACTIVATION_DAMAGE_PROB) {
+					Misc.applyDamage(member, null, FleetMemberDamageLevel.LOW, false, null, null,
+							true, null, member.getShipName() + " suffers damage from Emergency Burn activation");
+				}
+			}
 			for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 				float crLoss = member.getDeployCost() * CR_COST_MULT * crCostFleetMult;
 				member.getRepairTracker().applyCREvent(-crLoss, "Emergency burn");
@@ -101,7 +111,7 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 		fleet.getStats().getDetectedRangeMod().modifyPercent(getModId(), DETECTABILITY_PERCENT * level, "Emergency burn");
 		fleet.getStats().getFleetwideMaxBurnMod().modifyFlat(getModId(), (int)(MAX_BURN_MOD * level), "Emergency burn");
 		fleet.getStats().getAccelerationMult().modifyMult(getModId(), 1f + (ACCELERATION_MULT - 1f) * level);
-		fleet.getCommanderStats().getDynamic().getStat(Stats.NAVIGATION_PENALTY_MULT).modifyMult(getModId(), 0f);//1f - level);
+		//fleet.getCommanderStats().getDynamic().getStat(Stats.NAVIGATION_PENALTY_MULT).modifyMult(getModId(), 0f);//1f - level);
 		
 		for (FleetMemberViewAPI view : fleet.getViews()) {
 			//view.getContrailColor().shift(getModId(), view.getEngineColor().getBase(), 1f, 1f, 0.25f);
@@ -162,7 +172,7 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 		fleet.getStats().getDetectedRangeMod().unmodify(getModId());
 		fleet.getStats().getFleetwideMaxBurnMod().unmodify(getModId());
 		fleet.getStats().getAccelerationMult().unmodify(getModId());
-		fleet.getCommanderStats().getDynamic().getStat(Stats.NAVIGATION_PENALTY_MULT).unmodify(getModId());
+		//fleet.getCommanderStats().getDynamic().getStat(Stats.NAVIGATION_PENALTY_MULT).unmodify(getModId());
 	}
 	
 //	@Override
@@ -185,20 +195,12 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 //		return 1.5f;
 //	}
 
-	@Override
-	public boolean isUsable() {
-		return super.isUsable() && 
-					getFleet() != null && 
-					getNonReadyShips().isEmpty() &&
-					(getFleet().isAIMode() || computeFuelCost() <= getFleet().getCargo().getFuel());
-	}
 	
 	protected List<FleetMemberAPI> getNonReadyShips() {
 		List<FleetMemberAPI> result = new ArrayList<FleetMemberAPI>();
 		CampaignFleetAPI fleet = getFleet();
 		if (fleet == null) return result;
 		
-		float crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.EMERGENCY_BURN_CR_MULT);
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 			//if (member.isMothballed()) continue;
 			//float crLoss = member.getDeployCost() * CR_COST_MULT * crCostFleetMult;
@@ -210,10 +212,11 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 		return result;
 	}
 	
-	public static boolean isReadyForEBurn(FleetMemberAPI member, CampaignFleetAPI fleet) {
-		float crLoss = getCRCost(member, fleet);
-		return Math.round(member.getRepairTracker().getCR() * 100) < Math.round(crLoss * 100);
-	}
+	
+//	public static boolean isReadyForEBurn(FleetMemberAPI member, CampaignFleetAPI fleet) {
+//		float crLoss = getCRCost(member, fleet);
+//		return Math.round(member.getRepairTracker().getCR() * 100) < Math.round(crLoss * 100);
+//	}
 	
 	public static float getCRCost(FleetMemberAPI member, CampaignFleetAPI fleet) {
 		float crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.EMERGENCY_BURN_CR_MULT);
@@ -264,8 +267,10 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 		
 		tooltip.addPara("Increases the maximum burn level by %s." +
 				" Reduces sensor range by %s and increases the range at" +
-				" which the fleet can be detected by %s. The fleet will also be unaffected by most terrain " +
-				"movement penalties while the ability is active.", pad,
+				" which the fleet can be detected by %s.",// +
+//				" The fleet will also be unaffected by most terrain " +
+//				"movement penalties and hazards while the ability is active.",
+				pad,
 				highlight, 
 				"" + (int) MAX_BURN_MOD,
 				"" + (int)((1f - SENSOR_RANGE_MULT) * 100f) + "%",
@@ -291,11 +296,15 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 		
 		List<FleetMemberAPI> nonReady = getNonReadyShips();
 		if (!nonReady.isEmpty()) {
-			tooltip.addPara("Not all ships have enough combat readiness to initiate an emergency burn. Ships that require higher CR:", pad);
-			tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);
+			//tooltip.addPara("Not all ships have enough combat readiness to initiate an emergency burn. Ships that require higher CR:", pad);
+			tooltip.addPara("Some ships don't have enough combat readiness to safely initiate an emergency burn " +
+							"and may suffer damage if the ability is activated:", pad, 
+							Misc.getNegativeHighlightColor(), "may suffer damage");
+			//tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);
 			//tooltip.setGridLabelColor(bad);
 			int j = 0;
 			int max = 7;
+			float initPad = 5f;
 			for (FleetMemberAPI member : nonReady) {
 				if (j >= max) {
 					if (nonReady.size() > max + 1) {
@@ -303,8 +312,9 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 						break;
 					}
 				}
-				float crLoss = member.getDeployCost() * CR_COST_MULT;
-				String cost = "" + Math.round(crLoss * 100) + "%";
+				
+				//float crLoss = member.getDeployCost() * CR_COST_MULT;
+				//String cost = "" + Math.round(crLoss * 100) + "%";
 				String str = "";
 				if (!member.isFighterWing()) {
 					str += member.getShipName() + ", ";
@@ -312,9 +322,13 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 				} else {
 					str += member.getVariant().getFullDesignationWithHullName();
 				}
-				tooltip.addToGrid(0, j++, str, cost, bad);
+				
+				tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);
+				initPad = 0f;
+				
+				//tooltip.addToGrid(0, j++, str, cost, bad);
 			}
-			tooltip.addGrid(3f);
+			//tooltip.addGrid(3f);
 		}
 		
 		//tooltip.addPara("Disables \"Go Dark\" when activated.", pad);
@@ -338,6 +352,69 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 		deactivate();
 	}
 	
+	
+	
+	
+//	@Override
+//	public boolean showProgressIndicator() {
+//		if (true) return true;
+//		return !getNonReadyShips().isEmpty();
+//	}
+//	@Override
+//	public float getProgressFraction() {
+//		return 1f;
+//	}
+//	@Override
+//	public Color getProgressColor() {
+//		Color color = Misc.getNegativeHighlightColor();
+//		color = Misc.getHighlightColor();
+//		return Misc.scaleAlpha(color, Global.getSector().getCampaignUI().getSharedFader().getBrightness());
+//	}
+	
+	
+	protected boolean showAlarm() {
+		return !getNonReadyShips().isEmpty() && !isOnCooldown() && !isActiveOrInProgress() && isUsable();
+	}
+	
+	@Override
+	public boolean isUsable() {
+		return super.isUsable() && 
+					getFleet() != null && 
+					//getNonReadyShips().isEmpty() &&
+					(getFleet().isAIMode() || computeFuelCost() <= getFleet().getCargo().getFuel());
+	}
+	@Override
+	public float getCooldownFraction() {
+		if (showAlarm()) {
+			return 0f;
+		}
+		return super.getCooldownFraction();
+	}
+	@Override
+	public boolean showCooldownIndicator() {
+		return super.showCooldownIndicator();
+	}
+	@Override
+	public boolean isOnCooldown() {
+		return super.getCooldownFraction() < 1f;
+	}
+
+	@Override
+	public Color getCooldownColor() {
+		if (showAlarm()) {
+			Color color = Misc.getNegativeHighlightColor();
+			return Misc.scaleAlpha(color, Global.getSector().getCampaignUI().getSharedFader().getBrightness() * 0.5f);
+		}
+		return super.getCooldownColor();
+	}
+
+	@Override
+	public boolean isCooldownRenderingAdditive() {
+		if (showAlarm()) {
+			return true;
+		}
+		return false;
+	}
 }
 
 

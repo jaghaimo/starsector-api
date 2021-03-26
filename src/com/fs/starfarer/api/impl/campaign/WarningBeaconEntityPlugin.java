@@ -22,6 +22,8 @@ public class WarningBeaconEntityPlugin extends BaseCustomEntityPlugin {
 
 	public static String GLOW_COLOR_KEY = "$core_beaconGlowColor";
 	public static String PING_COLOR_KEY = "$core_beaconPingColor";
+	public static String PING_ID_KEY = "$core_beaconPingId";
+	public static String PING_FREQ_KEY = "$core_beaconPingFreq";
 	
 	public static float GLOW_FREQUENCY = 1f; // on/off cycles per second
 	
@@ -69,6 +71,13 @@ public class WarningBeaconEntityPlugin extends BaseCustomEntityPlugin {
 						freqMult = 1.5f;
 					}
 					
+					if (entity.getMemoryWithoutUpdate().contains(PING_ID_KEY)) {
+						pingId = entity.getMemoryWithoutUpdate().getString(PING_ID_KEY);
+					}
+					if (entity.getMemoryWithoutUpdate().contains(PING_FREQ_KEY)) {
+						freqMult = entity.getMemoryWithoutUpdate().getFloat(PING_FREQ_KEY);
+					}
+					
 					//Global.getSector().addPing(entity, pingId);
 					
 					//Color pingColor = entity.getFaction().getBrightUIColor();
@@ -89,6 +98,8 @@ public class WarningBeaconEntityPlugin extends BaseCustomEntityPlugin {
 
 	public void render(CampaignEngineLayers layer, ViewportAPI viewport) {
 		float alphaMult = viewport.getAlphaMult();
+		alphaMult *= entity.getSensorFaderBrightness();
+		alphaMult *= entity.getSensorContactFaderBrightness();
 		if (alphaMult <= 0f) return;
 		
 		CustomEntitySpecAPI spec = entity.getCustomEntitySpec();

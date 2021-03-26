@@ -14,15 +14,18 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.SpecialItemData;
+import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
 import com.fs.starfarer.api.campaign.comm.CommMessageAPI.MessageClickAction;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.InstallableIndustryItemPlugin;
+import com.fs.starfarer.api.campaign.econ.InstallableIndustryItemPlugin.InstallableItemDescriptionMode;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.econ.MarketAPI.MarketInteractionMode;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.campaign.econ.MutableCommodityQuantity;
-import com.fs.starfarer.api.campaign.econ.MarketAPI.MarketInteractionMode;
+import com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
@@ -30,10 +33,14 @@ import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.econ.impl.ConstructionQueue.ConstructionQueueItem;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.impl.campaign.ids.Items;
+import com.fs.starfarer.api.impl.campaign.ids.Sounds;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.intel.MessageIntel;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.IconRenderMode;
@@ -45,9 +52,14 @@ import com.fs.starfarer.api.util.Pair;
 
 public abstract class BaseIndustry implements Industry, Cloneable {
 	
+	public static int SIZE_FOR_SMALL_IMAGE = 3;
+	public static int SIZE_FOR_LARGE_IMAGE = 6;
+	
 	public static float UPKEEP_MULT = 0.75f;
 	public static int DEMAND_REDUCTION = 1;
 	public static int SUPPLY_BONUS = 1;
+	
+	public static int DEFAULT_IMPROVE_SUPPLY_BONUS = 1;
 	
 	@Override
 	protected BaseIndustry clone() {
@@ -86,6 +98,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 	protected float buildProgress = 0f;
 	protected float buildTime = 1f;
 	protected boolean building = false;
+	protected Boolean improved = null;
 	protected String upgradeId = null;
 	
 	protected transient IndustrySpecAPI spec = null;
@@ -96,6 +109,9 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 	
 	protected MutableStat demandReduction = new MutableStat(0);
 	protected MutableStat supplyBonus = new MutableStat(0);
+	
+	protected transient MutableStat demandReductionFromOther = new MutableStat(0);
+	protected transient MutableStat supplyBonusFromOther = new MutableStat(0);
 	
 	
 	public BaseIndustry() {
@@ -110,6 +126,19 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		return supplyBonus;
 	}
 	
+	public MutableStat getDemandReductionFromOther() {
+		if (demandReductionFromOther == null) {
+			demandReductionFromOther = new MutableStat(0); 
+		}
+		return demandReductionFromOther;
+	}
+
+	public MutableStat getSupplyBonusFromOther() {
+		if (supplyBonusFromOther == null) {
+			supplyBonusFromOther = new MutableStat(0);
+		}
+		return supplyBonusFromOther;
+	}
 
 	public void init(String id, MarketAPI market) {
 		this.id = id;
@@ -132,6 +161,20 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		
 		if (demandReduction == null) demandReduction = new MutableStat(0);
 		if (supplyBonus == null) supplyBonus = new MutableStat(0);
+
+		if (supply != null) {
+			for (String id : new ArrayList<String>(supply.keySet())) {
+				MutableCommodityQuantity stat = supply.get(id);
+				stat.getQuantity().unmodifyFlat("ind_sb");
+			}
+		}
+		if (demand != null) {
+			for (String id : new ArrayList<String>(demand.keySet())) {
+				MutableCommodityQuantity stat = demand.get(id);
+				stat.getQuantity().unmodifyFlat("ind_dr");
+			}
+		}
+		
 		return this;
 	}
 	
@@ -153,9 +196,22 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		}
 		
 		applyAICoreModifiers();
+		applyImproveModifiers();
 		
 		if (this instanceof MarketImmigrationModifier) {
 			market.addTransientImmigrationModifier((MarketImmigrationModifier) this);
+		}
+		
+		if (special != null) {
+			InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(special.getId());
+			if (effect != null) {
+				List<String> unmet = effect.getUnmetRequirements(this);
+				if (unmet == null || unmet.isEmpty()) {
+					effect.apply(this);
+				} else {
+					effect.unapply(this);
+				}
+			}
 		}
 	}
 	
@@ -164,6 +220,13 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		
 		if (this instanceof MarketImmigrationModifier) {
 			market.removeTransientImmigrationModifier((MarketImmigrationModifier) this);
+		}
+		
+		if (special != null) {
+			InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(special.getId());
+			if (effect != null) {
+				effect.unapply(this);
+			}
 		}
 	}
 	
@@ -197,26 +260,29 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		return modIds[index];
 	}
 	
-	protected void demand(String commodityId, int quantity) {
+	public void demand(String commodityId, int quantity) {
 		demand(0, commodityId, quantity, BASE_VALUE_TEXT);
 	}
 	
-	protected void demand(String commodityId, int quantity, String desc) {
+	public void demand(String commodityId, int quantity, String desc) {
 		demand(0, commodityId, quantity, desc);
 	}
-	protected void demand(int index, String commodityId, int quantity, String desc) {
+	public void demand(int index, String commodityId, int quantity, String desc) {
+		demand(getModId(index), commodityId, quantity, desc);
+	}
+	public void demand(String modId, String commodityId, int quantity, String desc) {
 //		if (commodityId != null && commodityId.equals("organics") && getId().contains("military")) {
 //			System.out.println("wefwefwe");
 //		}
 		//quantity -= demandReduction;
 		// want to apply negative numbers here so they add up with anything coming in from market conditions
 		if (quantity == 0) {
-			getDemand(commodityId).getQuantity().unmodifyFlat(getModId(index));
+			getDemand(commodityId).getQuantity().unmodifyFlat(modId);
 		} else {
-			getDemand(commodityId).getQuantity().modifyFlat(getModId(index), quantity, desc);
+			getDemand(commodityId).getQuantity().modifyFlat(modId, quantity, desc);
 		}
 		
-		if (quantity != 0) {
+		if (quantity > 0) {
 			if (!demandReduction.isUnmodified()) {
 				getDemand(commodityId).getQuantity().modifyFlat("ind_dr", -demandReduction.getModifiedInt());
 			} else {
@@ -225,11 +291,11 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		}
 	}
 	
-	protected void supply(String commodityId, int quantity) {
+	public void supply(String commodityId, int quantity) {
 		supply(0, commodityId, quantity, BASE_VALUE_TEXT);
 	}
 	
-	protected void supply(String commodityId, int quantity, String desc) {
+	public void supply(String commodityId, int quantity, String desc) {
 		supply(0, commodityId, quantity, desc);
 	}
 	
@@ -237,7 +303,8 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		supply(getModId(index), commodityId, quantity, desc);
 	}
 	public void supply(String modId, String commodityId, int quantity, String desc) {
-//		if (this instanceof Mining && market.getName().equals("Louise")) {
+//		if (this instanceof Mining && market.getName().equals("Medea") &&
+//				Commodities.VOLATILES.equals(commodityId)) {
 //			System.out.println("efwefwe");
 //		}
 		
@@ -249,7 +316,8 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			getSupply(commodityId).getQuantity().modifyFlat(modId, quantity, desc);
 		}
 		
-		if (quantity != 0) {
+		if (quantity > 0) {
+		//if (!getSupply(commodityId).getQuantity().isUnmodified()) {
 			if (!supplyBonus.isUnmodified()) {
 				getSupply(commodityId).getQuantity().modifyFlat("ind_sb", supplyBonus.getModifiedInt());
 			} else {
@@ -333,7 +401,15 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		return getSpec().getBuildTime();
 	}
 	
+	protected Float buildCostOverride = null;
+	public Float getBuildCostOverride() {
+		return buildCostOverride;
+	}
+	public void setBuildCostOverride(float buildCostOverride) {
+		this.buildCostOverride = buildCostOverride;
+	}
 	public float getBuildCost() {
+		if (buildCostOverride != null) return buildCostOverride; 
 		return getSpec().getCost();
 	}
 	
@@ -471,6 +547,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			market.addIndustry(upgradeId);
 			BaseIndustry industry = (BaseIndustry) market.getIndustry(upgradeId);
 			industry.setAICoreId(getAICoreId());
+			industry.setImproved(isImproved());
 			industry.upgradeFinished(this);
 			industry.reapply();
 		} else {
@@ -547,6 +624,9 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			market.addIndustry(next.id);
 			Industry ind = market.getIndustry(next.id);
 			ind.startBuilding();
+			if (ind instanceof BaseIndustry) {
+				((BaseIndustry)ind).setBuildCostOverride(next.cost);
+			}
 			
 			if (market.isPlayerOwned()) {
 				MessageIntel intel = new MessageIntel(ind.getCurrentName() + " at " + market.getName(), Misc.getBasePlayerColor());
@@ -560,6 +640,8 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 	
 	protected void upgradeFinished(Industry previous) {
 		sendBuildOrUpgradeMessage();
+		
+		setSpecialItem(previous.getSpecialItem());
 	}
 	
 	protected void sendBuildOrUpgradeMessage() {
@@ -577,6 +659,13 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			CargoAPI cargo = getCargoForInteractionMode(mode);
 			if (cargo != null) {
 				cargo.addCommodity(aiCoreId, 1);
+			}
+		}
+		
+		if (special != null && !forUpgrade) {
+			CargoAPI cargo = getCargoForInteractionMode(mode);
+			if (cargo != null) {
+				cargo.addSpecial(special, 1);
 			}
 		}
 	}
@@ -803,10 +892,12 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 	}
 	
 	public boolean isAvailableToBuild() {
+		if (market.hasTag(Tags.MARKET_NO_INDUSTRIES_ALLOWED)) return false; 
 		return market.hasIndustry(Industries.POPULATION) && !getId().equals(Industries.POPULATION);
 	}
 	
 	public boolean showWhenUnavailable() {
+		if (market.hasTag(Tags.MARKET_NO_INDUSTRIES_ALLOWED)) return false;
 		return true;
 	}
 	
@@ -1159,6 +1250,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			if (!needToAddIndustry) {
 				//addAICoreSection(tooltip, AICoreDescriptionMode.TOOLTIP);
 				addInstalledItemsSection(mode, tooltip, expanded);
+				addImprovedSection(mode, tooltip, expanded);
 			}
 			
 			tooltip.addPara("*Shown production and demand values are already adjusted based on current market size and local conditions.", gray, opad);
@@ -1198,8 +1290,46 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 	}
 	
 	protected boolean addNonAICoreInstalledItems(IndustryTooltipMode mode, TooltipMakerAPI tooltip, boolean expanded) {
-		return false;
+		if (special == null) return false;
+		
+		float opad = 10f;
+		SpecialItemSpecAPI spec = Global.getSettings().getSpecialItemSpec(special.getId());
+		
+		TooltipMakerAPI text = tooltip.beginImageWithText(spec.getIconName(), 48);
+		InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(special.getId());
+		effect.addItemDescription(this, text, special, InstallableItemDescriptionMode.INDUSTRY_TOOLTIP);
+		tooltip.addImageWithText(opad);
+		
+		return true;
 	}
+	
+//	public List<SpecialItemData> getVisibleInstalledItems() {
+//		return new ArrayList<SpecialItemData>();
+//	}
+	
+	public List<SpecialItemData> getVisibleInstalledItems() {
+		List<SpecialItemData> result = new ArrayList<SpecialItemData>();
+		if (special != null) {
+			result.add(special);
+		}
+		return result;
+	}
+	
+	public boolean wantsToUseSpecialItem(SpecialItemData data) {
+		if (special != null) return false;
+		SpecialItemSpecAPI spec = Global.getSettings().getSpecialItemSpec(data.getId());
+//		String industry = spec.getParams();
+//		//String industry = ItemEffectsRepo.ITEM_TO_INDUSTRY.get(data.getId());
+//		return getId().equals(industry);
+		String [] industries = spec.getParams().split(",");
+		Set<String> all = new HashSet<String>();
+		for (String ind: industries) all.add(ind.trim());
+		return all.contains(getId());
+	}
+	
+//	public boolean wantsToUseSpecialItem(SpecialItemData data) {
+//		return false;
+//	}
 	
 	
 	public void addAICoreSection(TooltipMakerAPI tooltip, AICoreDescriptionMode mode) {
@@ -1246,7 +1376,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		if (mode == AICoreDescriptionMode.MANAGE_CORE_DIALOG_LIST || mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
 			pre = "Alpha-level AI core. ";
 		}
-		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
+		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP || mode == AICoreDescriptionMode.MANAGE_CORE_TOOLTIP) {
 			CommoditySpecAPI coreSpec = Global.getSettings().getCommoditySpec(aiCoreId);
 			TooltipMakerAPI text = tooltip.beginImageWithText(coreSpec.getIconName(), 48);
 			text.addPara(pre + "Reduces upkeep cost by %s. Reduces demand by %s unit. " +
@@ -1271,7 +1401,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		if (mode == AICoreDescriptionMode.MANAGE_CORE_DIALOG_LIST || mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
 			pre = "Beta-level AI core. ";
 		}
-		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
+		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP || mode == AICoreDescriptionMode.MANAGE_CORE_TOOLTIP) {
 			CommoditySpecAPI coreSpec = Global.getSettings().getCommoditySpec(aiCoreId);
 			TooltipMakerAPI text = tooltip.beginImageWithText(coreSpec.getIconName(), 48);
 			text.addPara(pre + "Reduces upkeep cost by %s. Reduces demand by %s unit.", opad, highlight,
@@ -1291,7 +1421,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		if (mode == AICoreDescriptionMode.MANAGE_CORE_DIALOG_LIST || mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
 			pre = "Gamma-level AI core. ";
 		}
-		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
+		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP || mode == AICoreDescriptionMode.MANAGE_CORE_TOOLTIP) {
 			CommoditySpecAPI coreSpec = Global.getSettings().getCommoditySpec(aiCoreId);
 			TooltipMakerAPI text = tooltip.beginImageWithText(coreSpec.getIconName(), 48);
 //			text.addPara(pre + "Reduces upkeep cost by %s.", opad, highlight,
@@ -1401,10 +1531,27 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		
 		updateAICoreToSupplyAndDemandModifiers();
 		
+		updateImprovementSupplyAndDemandModifiers();
+		
 //		supplyBonus += market.getAdmin().getStats().getDynamic().getValue(Stats.SUPPLY_BONUS_MOD, 0);
 //		demandReduction += market.getAdmin().getStats().getDynamic().getValue(Stats.DEMAND_REDUCTION_MOD, 0);
 		supplyBonus.modifyFlat(getModId(1), market.getAdmin().getStats().getDynamic().getValue(Stats.SUPPLY_BONUS_MOD, 0), "Administrator");
 		demandReduction.modifyFlat(getModId(1), market.getAdmin().getStats().getDynamic().getValue(Stats.DEMAND_REDUCTION_MOD, 0), "Administrator");
+		
+		if (supplyBonusFromOther != null) {
+			supplyBonus.applyMods(supplyBonusFromOther);
+		}
+		if (demandReductionFromOther != null) {
+			demandReduction.applyMods(demandReductionFromOther);
+		}
+		
+//		if (supplyBonusFromOther != null) {
+//			supplyBonusFromOther.unmodify();
+//		}
+//		if (demandReductionFromOther != null) {
+//			demandReductionFromOther.unmodify();
+//		}
+		
 	}
 	
 	
@@ -1440,10 +1587,6 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		return !com.isIllegal();
 	}
 
-	public List<InstallableIndustryItemPlugin> getInstallableItems() {
-		return new ArrayList<InstallableIndustryItemPlugin>();
-	}
-
 	protected boolean isAICoreId(String str) {
 		Set<String> cores = new HashSet<String>();
 		cores.add(Commodities.ALPHA_CORE);
@@ -1459,10 +1602,21 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 				break;
 			}
 		}
-	}
-
-	public List<SpecialItemData> getVisibleInstalledItems() {
-		return new ArrayList<SpecialItemData>();
+		
+		for (String str : params) {
+//			if (Items.PRISTINE_NANOFORGE.equals(str)) {
+//				System.out.println("wefwefew");
+//			}
+			SpecialItemSpecAPI spec = Global.getSettings().getSpecialItemSpec(str);
+			if (spec == null) continue;
+			
+			String [] industries = spec.getParams().split(",");
+			Set<String> all = new HashSet<String>();
+			for (String ind : industries) all.add(ind.trim());
+			if (all.contains(getId())) {
+				setSpecialItem(new SpecialItemData(str, null));
+			}
+		}
 	}
 
 	protected boolean hasPostDemandSection(boolean hasDemand, IndustryTooltipMode mode) {
@@ -1551,11 +1705,18 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		});
 	}
 
+	public void setHidden(boolean hidden) {
+		if (hidden) hiddenOverride = true;
+		else hiddenOverride = null;
+	}
+	
+	protected Boolean hiddenOverride = null;
 	public boolean isHidden() {
+		if (hiddenOverride != null) return hiddenOverride;
 		return false;
 	}
 	
-	private transient String dKey = null;
+	protected transient String dKey = null;
 	public String getDisruptedKey() {
 		if (dKey != null) return dKey;
 		dKey = "$core_disrupted_" + getClass().getSimpleName();
@@ -1605,18 +1766,28 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 	}
 
 	public float getPatherInterest() {
-		if (aiCoreId == null) return 0f;
-		
+		float interest = 0;
 		if (Commodities.ALPHA_CORE.equals(aiCoreId)) {
-			return 4f;
+			interest += 4f;
+		} else if (Commodities.BETA_CORE.equals(aiCoreId)) {
+			interest += 2f;
+		} else if (Commodities.GAMMA_CORE.equals(aiCoreId)) {
+			interest += 1f;
 		}
-		if (Commodities.BETA_CORE.equals(aiCoreId)) {
-			return 2f;
+		
+		if (special != null) {
+			SpecialItemSpecAPI spec = Global.getSettings().getSpecialItemSpec(special.getId());
+			if (spec != null) {
+				if (spec.hasTag(Items.TAG_PATHER1)) interest += 1;
+				else if (spec.hasTag(Items.TAG_PATHER2)) interest += 2;
+				else if (spec.hasTag(Items.TAG_PATHER4)) interest += 4;
+				else if (spec.hasTag(Items.TAG_PATHER6)) interest += 6;
+				else if (spec.hasTag(Items.TAG_PATHER8)) interest += 8;
+				else if (spec.hasTag(Items.TAG_PATHER10)) interest += 10;
+			}
 		}
-		if (Commodities.GAMMA_CORE.equals(aiCoreId)) {
-			return 1f;
-		}
-		return 0;
+		
+		return interest;
 	}
 
 	public CargoAPI generateCargoForGatheringPoint(Random random) {
@@ -1627,18 +1798,23 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		return getCurrentName();
 	}
 
+	
+	protected SpecialItemData special = null;
 	public SpecialItemData getSpecialItem() {
-		return null;
+		return special;
 	}
 
 	public void setSpecialItem(SpecialItemData special) {
-		
+		//if (special == null && this.special != null) {
+		if (this.special != null) {
+			InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(this.special.getId());
+			if (effect != null) {
+				effect.unapply(this);
+			}
+		}
+		this.special = special;
 	}
 	
-	public boolean wantsToUseSpecialItem(SpecialItemData data) {
-		return false;
-	}
-
 	protected float getDeficitMult(String ... commodities) {
 		float deficit = getMaxDeficit(commodities).two;
 		float demand = 0f;
@@ -1718,7 +1894,205 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 	public void notifyColonyRenamed() {
 		
 	}
+
+	public boolean canImprove() {
+		return canImproveToIncreaseProduction();
+	}
+
+	public float getImproveBonusXP() {
+		return 0;
+	}
+
+	public String getImproveMenuText() {
+		return "Make improvements...";
+	}
+
+	public int getImproveStoryPoints() {
+		int base = Global.getSettings().getInt("industryImproveBase");
+		return base * (int) Math.round(Math.pow(2, Misc.getNumImprovedIndustries(market)));
+		
+		//return 1 + Misc.getNumImprovedIndustries(market);
+	}
+
+//	private transient String iKey = null;
+//	public String getImprovedKey() {
+//		if (iKey != null) return iKey;
+//		iKey = "$core_improved_" + getClass().getSimpleName();
+//		return iKey;
+//	}
+	
+	public boolean isImproved() {
+		return improved != null && improved;
+	}
+
+	public void setImproved(boolean improved) {
+		if (!improved) {
+			this.improved = null;
+		} else {
+			this.improved = improved;
+		}
+	}
+	
+	protected void applyImproveModifiers() {
+		
+	}
+	
+	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+		float initPad = 0f;
+		float opad = 10f;
+		boolean addedSomething = false;
+		if (canImproveToIncreaseProduction()) {
+			String unit = "unit";
+			if (getImproveProductionBonus() != 1) {
+				unit = "units";
+			}
+			if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+				info.addPara("Production increased by %s " + unit + ".", initPad, Misc.getHighlightColor(),
+						"" + getImproveProductionBonus());
+			} else {
+				info.addPara("Increases production by %s " + unit + ".", initPad, Misc.getHighlightColor(),
+						"" + getImproveProductionBonus());
+				
+			}
+			initPad = opad;
+			addedSomething = true;
+		}
+		
+		if (mode != ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+	//		info.addPara("Each improved industry at a colony raises the cost to improve " +
+	//				"another industry by one " + Misc.STORY + " point.", initPad, 
+	//				Misc.getStoryOptionColor(), Misc.STORY + " point");
+	//		info.addPara("Each improved industry at a colony doubles the number of " +
+	//				"" + Misc.STORY + " points required to improve an additional industry.", initPad, 
+	//				Misc.getStoryOptionColor(), Misc.STORY + " points");
+	//		info.addPara("Each improved industry or structure at a colony doubles the number of " +
+	//				"" + Misc.STORY + " points required to improve an additional industry or structure.", initPad, 
+	//				Misc.getStoryOptionColor(), Misc.STORY + " points");
+			info.addPara("Each improvement made at a colony doubles the number of " +
+					"" + Misc.STORY + " points required to make an additional improvement.", initPad, 
+					Misc.getStoryOptionColor(), Misc.STORY + " points");
+			addedSomething = true;
+		}
+		if (!addedSomething) {
+			info.addSpacer(-opad);
+		}
+	}
+
+	public String getImproveDialogTitle() {
+		return "Improving " + getSpec().getName();
+	}
+
+	public String getImproveSoundId() {
+		return Sounds.STORY_POINT_SPEND_INDUSTRY;
+	}
+
+	protected boolean canImproveToIncreaseProduction() {
+		return false;
+	}
+	
+	protected int getImproveProductionBonus() {
+		return DEFAULT_IMPROVE_SUPPLY_BONUS;
+	}
+	
+	protected String getImprovementsDescForModifiers() {
+		return "Improvements";
+	}
+	
+	protected void updateImprovementSupplyAndDemandModifiers() {
+		if (!canImproveToIncreaseProduction()) return;
+		if (!isImproved()) return;
+		
+		int bonus = getImproveProductionBonus();
+		if (bonus <= 0) return;
+		
+		supplyBonus.modifyFlat(getModId(3), bonus, getImprovementsDescForModifiers());
+	}
+	
+	public void addImprovedSection(IndustryTooltipMode mode, TooltipMakerAPI tooltip, boolean expanded) {
+
+		if (!isImproved()) return;
+		
+		float opad = 10f;
+		
+		
+		tooltip.addSectionHeading("Improvements made", Misc.getStoryOptionColor(), 
+								  Misc.getStoryDarkColor(), Alignment.MID, opad);
+		
+		tooltip.addSpacer(opad);
+		addImproveDesc(tooltip, ImprovementDescriptionMode.INDUSTRY_TOOLTIP);
+		
+//		String noun = "industry";
+//		if (isStructure()) noun = "structure";
+//		tooltip.addPara("You've made improvements to this " + noun + ".", 
+//						Misc.getStoryOptionColor(), opad);
+
+	}
+	
+	
+	public RaidDangerLevel adjustCommodityDangerLevel(String commodityId, RaidDangerLevel level) {
+		return level;
+	}
+	
+	public RaidDangerLevel adjustItemDangerLevel(String itemId, String data, RaidDangerLevel level) {
+		return level;
+	}
+	
+	public int adjustMarineTokensToRaidItem(String itemId, String data, int marineTokens) {
+		return marineTokens;
+	}
+	
+	
+	public boolean canInstallAICores() {
+		return true;
+	}
+	
+//	public List<InstallableIndustryItemPlugin> getInstallableItems() {
+//	return new ArrayList<InstallableIndustryItemPlugin>();
+//}
+	
+	protected transient Boolean hasInstallableItems = null;
+	public List<InstallableIndustryItemPlugin> getInstallableItems() {
+		boolean found = false;
+		if (hasInstallableItems != null) {
+			found = hasInstallableItems;
+		} else {
+			OUTER: for (SpecialItemSpecAPI spec : Global.getSettings().getAllSpecialItemSpecs()) {
+				if (spec.getParams() == null || spec.getParams().isEmpty()) continue;
+				if (spec.getNewPluginInstance(null) instanceof GenericSpecialItemPlugin) {
+					for (String id : spec.getParams().split(",")) {
+						id = id.trim();
+						if (id.equals(getId())) {
+							found = true;
+							break OUTER;
+						}
+					}
+				}
+			}
+			hasInstallableItems = found;
+		}
+		ArrayList<InstallableIndustryItemPlugin> list = new ArrayList<InstallableIndustryItemPlugin>();
+		if (found) {
+			list.add(new GenericInstallableItemPlugin(this));
+		}
+		return list;
+	}
+
+	public float getBuildProgress() {
+		return buildProgress;
+	}
+
+	public void setBuildProgress(float buildProgress) {
+		this.buildProgress = buildProgress;
+	}
+	
+	
+	
+	
 }
+
+
+
+
 
 
 

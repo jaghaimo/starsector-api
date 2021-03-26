@@ -65,7 +65,7 @@ public class DeliveryFailureConsequences implements EveryFrameScript, FleetEvent
 		if (delayDays > 0) return;
 		
 		
-		final CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
+		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		float distFromCore = playerFleet.getLocationInHyperspace().length();
 		if (distFromCore > RADIUS_FROM_CORE) {
 			daysInSystem = 0f;
@@ -157,6 +157,7 @@ public class DeliveryFailureConsequences implements EveryFrameScript, FleetEvent
 			MemoryAPI memory = fleet.getMemoryWithoutUpdate();
 			memory.set(MemFlags.MEMORY_KEY_MAKE_HOSTILE, true);
 			memory.set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, true);
+			memory.set(MemFlags.MEMORY_KEY_ALLOW_LONG_PURSUIT, true);
 			
 			String hisOrHer = "his";
 			String himOrHer = "him";

@@ -55,6 +55,8 @@ public interface BattleObjectiveEffect {
 	 */
 	List<ShipStatusItem> getStatusItemsFor(ShipAPI ship);
 	String getLongDescription();
+
+	int getBonusDeploymentPoints();
 }
 
 

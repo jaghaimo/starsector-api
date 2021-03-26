@@ -121,7 +121,7 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 				if (flagship != null) {
 					makeAggressive = flagship.getVariant().hasHullMod(HullMods.AUTOMATED);
 				}
-				makeFleetInterceptPlayer(fleet, makeAggressive, 30f);
+				makeFleetInterceptPlayer(fleet, makeAggressive, true, 30f);
 			}
 			return;
 		}
@@ -145,7 +145,7 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 					if (flagship != null) {
 						makeAggressive = flagship.getVariant().hasHullMod(HullMods.AUTOMATED);
 					}
-					makeFleetInterceptPlayer(fleet, makeAggressive, 30f);
+					makeFleetInterceptPlayer(fleet, makeAggressive, true, 30f);
 					foundSomeFleets = true;
 				}
 			}
@@ -177,7 +177,7 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 				if (flagship != null) {
 					makeAggressive = flagship.getVariant().hasHullMod(HullMods.AUTOMATED);
 				}
-				makeFleetInterceptPlayer(closest, makeAggressive, 30f);
+				makeFleetInterceptPlayer(closest, makeAggressive, true, 30f);
 				return;
 			}
 		}
@@ -191,6 +191,7 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 			} else {
 				fleet.setTransponderOn(false);
 				fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PIRATE, true);
+				Misc.makeNoRepImpact(fleet, "tTrap");
 			}
 			
 			float range = data.minRange + random.nextFloat() * (data.maxRange - data.minRange);
@@ -204,11 +205,12 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 			if (flagship != null) {
 				makeAggressive = flagship.getVariant().hasHullMod(HullMods.AUTOMATED);
 			}
-			makeFleetInterceptPlayer(fleet, makeAggressive, 30f);
+			makeFleetInterceptPlayer(fleet, makeAggressive, true, 30f);
 			
 			
-			SectorEntityToken despawnLoc = entity.getContainingLocation().createToken(20000, 0);
-			fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, despawnLoc, 10000f);
+//			SectorEntityToken despawnLoc = entity.getContainingLocation().createToken(20000, 0);
+//			fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, despawnLoc, 10000f);
+			Misc.giveStandardReturnToSourceAssignments(fleet, false);
 			return;
 		}
 	}
@@ -216,7 +218,10 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 	
 	
 	
-	public static void makeFleetInterceptPlayer(CampaignFleetAPI fleet, boolean makeAggressive, float interceptDays) {
+	public static void makeFleetInterceptPlayer(CampaignFleetAPI fleet, boolean makeAggressive, boolean makeLowRepImpact, float interceptDays) {
+		makeFleetInterceptPlayer(fleet, makeAggressive, makeLowRepImpact, true, interceptDays);
+	}
+	public static void makeFleetInterceptPlayer(CampaignFleetAPI fleet, boolean makeAggressive, boolean makeLowRepImpact, boolean makeHostile, float interceptDays) {
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		
 		if (fleet.getAI() == null) {
@@ -227,12 +232,18 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 		if (makeAggressive) {
 			float expire = fleet.getMemoryWithoutUpdate().getExpire(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE);
 			fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, true, Math.max(expire, interceptDays));
+			fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE_ONE_BATTLE_ONLY, true, Math.max(expire, interceptDays));
 		}
 		
-		fleet.getMemoryWithoutUpdate().unset(MemFlags.MEMORY_KEY_MAKE_ALLOW_DISENGAGE);
-		
-		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_HOSTILE, true, interceptDays);
-		fleet.getMemoryWithoutUpdate().set(FleetAIFlags.LAST_SEEN_TARGET_LOC, new Vector2f(playerFleet.getLocation()), interceptDays);
+		if (makeHostile) {
+			fleet.getMemoryWithoutUpdate().unset(MemFlags.MEMORY_KEY_MAKE_ALLOW_DISENGAGE);
+			fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_HOSTILE, true, interceptDays);
+		}
+		fleet.getMemoryWithoutUpdate().set(FleetAIFlags.PLACE_TO_LOOK_FOR_TARGET, new Vector2f(playerFleet.getLocation()), interceptDays);
+
+		if (makeLowRepImpact) {
+			Misc.makeLowRepImpact(playerFleet, "ttSpecial");
+		}
 		
 		if (fleet.getAI() instanceof ModularFleetAIAPI) {
 			((ModularFleetAIAPI)fleet.getAI()).getTacticalModule().setTarget(playerFleet);

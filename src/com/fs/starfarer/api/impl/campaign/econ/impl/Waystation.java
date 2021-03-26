@@ -19,6 +19,8 @@ public class Waystation extends BaseIndustry {
 	public static float UPKEEP_MULT_PER_DEFICIT = 0.1f;
 	public static final float BASE_ACCESSIBILITY = 0.1f;
 	
+	public static final float IMPROVE_ACCESSIBILITY = 0.2f;
+	
 	public static final float ALPHA_CORE_ACCESSIBILITY = 0.2f;
 	
 	
@@ -211,7 +213,38 @@ public class Waystation extends BaseIndustry {
 	public String getUnavailableReason() {
 		return "Requires a functional spaceport";
 	}
+
 	
+	@Override
+	public boolean canImprove() {
+		return true;
+	}
+	
+	protected void applyImproveModifiers() {
+		if (isImproved()) {
+			market.getAccessibilityMod().modifyFlat(getModId(3), IMPROVE_ACCESSIBILITY,
+							getImprovementsDescForModifiers() + " (" + getNameForModifier() + ")");
+		} else {
+			market.getAccessibilityMod().unmodifyFlat(getModId(3));
+		}
+	}
+	
+	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		float a = IMPROVE_ACCESSIBILITY;
+		String aStr = "" + (int)Math.round(a * 100f) + "%";
+		
+		if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+			info.addPara("Accessibility increased by %s.", 0f, highlight, aStr);
+		} else {
+			info.addPara("Increases accessibility by %s.", 0f, highlight, aStr);
+		}
+
+		info.addSpacer(opad);
+		super.addImproveDesc(info, mode);
+	}
 }
 
 

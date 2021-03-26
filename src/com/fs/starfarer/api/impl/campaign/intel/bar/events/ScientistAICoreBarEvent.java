@@ -57,6 +57,7 @@ public class ScientistAICoreBarEvent extends BaseGetCommodityBarEvent {
 			if (system.hasTag(Tags.THEME_CORE_POPULATED)) continue;
 			if (system.hasTag(Tags.THEME_REMNANT_MAIN)) continue;
 			if (system.hasTag(Tags.THEME_REMNANT_RESURGENT)) continue;
+			if (system.hasTag(Tags.THEME_HIDDEN)) continue;
 			
 //			if (system.getStar() != null && system.getStar().getSpec().isBlackHole()) continue;
 //			if (system.getSecondary() != null && system.getSecondary().getSpec().isBlackHole()) continue;
@@ -84,7 +85,7 @@ public class ScientistAICoreBarEvent extends BaseGetCommodityBarEvent {
 		}
 		
 		//AddedEntity added = BaseThemeGenerator.addNonSalvageEntity(system, loc, Entities.STABLE_LOCATION, Factions.NEUTRAL);
-		AddedEntity added = BaseThemeGenerator.addEntity(system, loc, Entities.TECHNOLOGY_CACHE, Factions.NEUTRAL);
+		AddedEntity added = BaseThemeGenerator.addEntity(random, system, loc, Entities.TECHNOLOGY_CACHE, Factions.NEUTRAL);
 		
 		if (added == null || added.entity == null) {
 			doDataFail();

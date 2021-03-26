@@ -11,16 +11,16 @@ import org.lwjgl.input.Keyboard;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
-import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
+import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteLocationCalculator;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
@@ -100,6 +100,12 @@ public class HegemonyInspectionIntel extends RaidIntel implements RaidDelegate {
 		addStage(new HIOrganizeStage(this, from, orgDur));
 		
 		SectorEntityToken gather = from.getPrimaryEntity();
+		SectorEntityToken raidJump = RouteLocationCalculator.findJumpPointToUse(getFactionForUIColors(), target.getPrimaryEntity());
+		
+		if (gather == null || raidJump == null) {
+			endImmediately();
+			return;
+		}
 		
 		float successMult = 0.5f;
 		
@@ -110,7 +116,6 @@ public class HegemonyInspectionIntel extends RaidIntel implements RaidDelegate {
 		addStage(assemble);
 		
 		
-		SectorEntityToken raidJump = RouteLocationCalculator.findJumpPointToUse(getFactionForUIColors(), target.getPrimaryEntity());
 		
 		HITravelStage travel = new HITravelStage(this, gather, raidJump, false);
 		travel.setAbortFP(inspectionFP * successMult);
@@ -121,6 +126,8 @@ public class HegemonyInspectionIntel extends RaidIntel implements RaidDelegate {
 		addStage(action);
 		
 		addStage(new HIReturnStage(this));
+		
+		setImportant(true);
 		
 		Global.getSector().getIntelManager().addIntel(this);
 	}
@@ -179,10 +186,14 @@ public class HegemonyInspectionIntel extends RaidIntel implements RaidDelegate {
 		this.outcome = outcome;
 	}
 
-
+	protected transient String targetOwner = null;
 	@Override
 	protected void advanceImpl(float amount) {
 		super.advanceImpl(amount);
+		if (target != null && targetOwner == null) targetOwner = target.getFactionId();
+		if (failStage < 0 && targetOwner != null && target != null && !targetOwner.equals(target.getFactionId())) {
+			forceFail(false);
+		}
 	}
 
 

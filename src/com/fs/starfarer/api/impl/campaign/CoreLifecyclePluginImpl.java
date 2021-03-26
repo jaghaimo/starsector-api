@@ -1,8 +1,11 @@
 package com.fs.starfarer.api.impl.campaign;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -11,39 +14,46 @@ import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.PluginPick;
+import com.fs.starfarer.api.campaign.CampaignPlugin.PickPriority;
 import com.fs.starfarer.api.campaign.CampaignTerrainAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.GenericPluginManagerAPI;
+import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.LocationAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
+import com.fs.starfarer.api.campaign.PlayerMarketTransaction.TransactionLineItem;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.CampaignPlugin.PickPriority;
-import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
-import com.fs.starfarer.api.campaign.PlayerMarketTransaction.TransactionLineItem;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.campaign.econ.MonthlyReport;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
+import com.fs.starfarer.api.campaign.econ.MonthlyReport;
 import com.fs.starfarer.api.campaign.econ.MonthlyReport.FDNode;
 import com.fs.starfarer.api.campaign.events.CampaignEventTarget;
 import com.fs.starfarer.api.campaign.listeners.CoreDiscoverEntityPlugin;
+import com.fs.starfarer.api.campaign.listeners.ListenerManagerAPI;
+import com.fs.starfarer.api.characters.AdminData;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
-import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.combat.ShipAIConfig;
 import com.fs.starfarer.api.combat.ShipAIPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.MissionCompletionRep;
 import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin.DerelictShipData;
+import com.fs.starfarer.api.impl.campaign.GateEntityPlugin.GateData;
 import com.fs.starfarer.api.impl.campaign.MilitaryResponseScript.MilitaryResponseParams;
 import com.fs.starfarer.api.impl.campaign.TowCable.TowCableBuff;
 import com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin;
 import com.fs.starfarer.api.impl.campaign.abilities.BaseDurationAbility;
 import com.fs.starfarer.api.impl.campaign.abilities.BaseToggleAbility;
 import com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility;
+import com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility.AbilityUseData;
+import com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility.DistressCallOutcome;
+import com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility.DistressResponseData;
 import com.fs.starfarer.api.impl.campaign.abilities.DistressCallResponseAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.abilities.DistressCallResponsePirateAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility;
@@ -51,17 +61,14 @@ import com.fs.starfarer.api.impl.campaign.abilities.FractureJumpAbility;
 import com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility;
 import com.fs.starfarer.api.impl.campaign.abilities.GraviticScanAbility;
 import com.fs.starfarer.api.impl.campaign.abilities.GraviticScanData;
+import com.fs.starfarer.api.impl.campaign.abilities.GraviticScanData.GSPing;
 import com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility;
+import com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.IPReactionScript;
 import com.fs.starfarer.api.impl.campaign.abilities.RemoteSurveyAbility;
 import com.fs.starfarer.api.impl.campaign.abilities.ScavengeAbility;
 import com.fs.starfarer.api.impl.campaign.abilities.SensorBurstAbility;
 import com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility;
 import com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility;
-import com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility.AbilityUseData;
-import com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility.DistressCallOutcome;
-import com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility.DistressResponseData;
-import com.fs.starfarer.api.impl.campaign.abilities.GraviticScanData.GSPing;
-import com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.IPReactionScript;
 import com.fs.starfarer.api.impl.campaign.abilities.ai.BaseAbilityAI;
 import com.fs.starfarer.api.impl.campaign.abilities.ai.EmergencyBurnAbilityAI;
 import com.fs.starfarer.api.impl.campaign.abilities.ai.GoDarkAbilityAI;
@@ -112,6 +119,7 @@ import com.fs.starfarer.api.impl.campaign.econ.WorldUninhabitable;
 import com.fs.starfarer.api.impl.campaign.econ.WorldWater;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival;
+import com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival.CryosleeperFactor;
 import com.fs.starfarer.api.impl.campaign.econ.impl.Cryosanctum;
 import com.fs.starfarer.api.impl.campaign.econ.impl.Farming;
 import com.fs.starfarer.api.impl.campaign.econ.impl.FuelProduction;
@@ -124,6 +132,7 @@ import com.fs.starfarer.api.impl.campaign.econ.impl.Mining;
 import com.fs.starfarer.api.impl.campaign.econ.impl.OrbitalStation;
 import com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield;
 import com.fs.starfarer.api.impl.campaign.econ.impl.PopulationAndInfrastructure;
+import com.fs.starfarer.api.impl.campaign.econ.impl.PopulationAndInfrastructure.CoronalTapFactor;
 import com.fs.starfarer.api.impl.campaign.econ.impl.Refining;
 import com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality;
 import com.fs.starfarer.api.impl.campaign.econ.impl.Spaceport;
@@ -132,22 +141,23 @@ import com.fs.starfarer.api.impl.campaign.econ.impl.Waystation;
 import com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin;
 import com.fs.starfarer.api.impl.campaign.events.CoreEventProbabilityManager;
 import com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent;
+import com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent.FactionHostilityPairKey;
 import com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent;
 import com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther;
 import com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2;
 import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent;
+import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent.AvailableOfficer;
 import com.fs.starfarer.api.impl.campaign.events.PriceUpdate;
 import com.fs.starfarer.api.impl.campaign.events.RecentUnrestEvent;
 import com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent;
-import com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent;
-import com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent.FactionHostilityPairKey;
-import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent.AvailableOfficer;
 import com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent.FactionTradeRepData;
+import com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent;
 import com.fs.starfarer.api.impl.campaign.events.nearby.DistressCallNormalAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.events.nearby.DistressCallPirateAmbushAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.events.nearby.DistressCallPirateAmbushTrapAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent;
 import com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent.NESpawnData;
+import com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.ManagedFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.CustomFleets;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
@@ -157,32 +167,34 @@ import com.fs.starfarer.api.impl.campaign.fleets.DisposableFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.DisposableLuddicPathFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.DisposablePirateFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI;
+import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.CargoQuantityData;
+import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.EconomyRouteData;
 import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager;
-import com.fs.starfarer.api.impl.campaign.fleets.FleetParams;
+import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.fleets.MercAssignmentAIV2;
 import com.fs.starfarer.api.impl.campaign.fleets.MercFleetManagerV2;
 import com.fs.starfarer.api.impl.campaign.fleets.PatrolAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.fleets.PatrolAssignmentAIV4;
 import com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManager;
+import com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManager.PatrolFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManagerV2;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
-import com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager;
-import com.fs.starfarer.api.impl.campaign.fleets.SourceBasedFleetManager;
-import com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.ManagedFleetData;
-import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.CargoQuantityData;
-import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.EconomyRouteData;
-import com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManager.PatrolFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.OptionalFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteFleetSpawner;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteSegment;
+import com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager.SeededFleet;
+import com.fs.starfarer.api.impl.campaign.fleets.SourceBasedFleetManager;
+import com.fs.starfarer.api.impl.campaign.graid.StandardGroundRaidObjectivesCreator;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Missions;
+import com.fs.starfarer.api.impl.campaign.ids.People;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
@@ -192,6 +204,7 @@ import com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityIntelCreator;
 import com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityMissionIntel;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel;
+import com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.MissionResult;
 import com.fs.starfarer.api.impl.campaign.intel.FactionHostilityIntel;
 import com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager;
 import com.fs.starfarer.api.impl.campaign.intel.GenericMissionManager;
@@ -203,7 +216,6 @@ import com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetIntelCreator;
 import com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetMissionIntel;
 import com.fs.starfarer.api.impl.campaign.intel.SystemBountyIntel;
 import com.fs.starfarer.api.impl.campaign.intel.SystemBountyManager;
-import com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.MissionResult;
 import com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarData;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.CorruptPLClerkSuppliesBarEvent;
@@ -218,6 +230,7 @@ import com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicCraftBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicCraftBarEventCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicFarmerBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicFarmerBarEventCreator;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicPathBaseBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.MercsOnTheRunBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.MercsOnTheRunBarEventCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.PirateBaseRumorBarEvent;
@@ -226,11 +239,20 @@ import com.fs.starfarer.api.impl.campaign.intel.bar.events.QuartermasterCargoSwa
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.QuartermasterCargoSwapBarEventCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreBarEventCreator;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.SpecBarEventCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEventCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanIncentiveScript;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEventCreator;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.DonationOfferCreator;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.FighterBlueprintOfferCreator;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBarEvent;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBarEventCreator;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.ShipBlueprintOfferCreator;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.SpecialItemOfferCreator;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.WeaponBlueprintOfferCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseManager;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCells;
@@ -238,32 +260,64 @@ import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivity;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivityIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
+import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.BaseBountyData;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PlayerRelatedPirateBaseManager;
-import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.BaseBountyData;
+import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
+import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivIntel;
 import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker;
 import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker.MarketDecivData;
 import com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionManager;
+import com.fs.starfarer.api.impl.campaign.intel.misc.BreadcrumbIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.DistressCallIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.GateIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.ProductionReportIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.TradeFleetDepartureIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager;
-import com.fs.starfarer.api.impl.campaign.missions.BaseCampaignMission;
+import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager.PunExData;
+import com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter;
+import com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty;
+import com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty.AggregateBountyData;
+import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission;
+import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.StageConnection;
+import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMissionCreator;
+import com.fs.starfarer.api.impl.campaign.missions.hub.BaseMissionHub;
+import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionBarEventWrapper;
+import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers;
+import com.fs.starfarer.api.impl.campaign.missions.hub.MissionTrigger;
+import com.fs.starfarer.api.impl.campaign.plog.PLStatCargo;
+import com.fs.starfarer.api.impl.campaign.plog.PLStatColonies;
+import com.fs.starfarer.api.impl.campaign.plog.PLStatCredits;
+import com.fs.starfarer.api.impl.campaign.plog.PLStatCrew;
+import com.fs.starfarer.api.impl.campaign.plog.PLStatFleet;
+import com.fs.starfarer.api.impl.campaign.plog.PLStatFuel;
+import com.fs.starfarer.api.impl.campaign.plog.PLStatLevel;
+import com.fs.starfarer.api.impl.campaign.plog.PLStatMarines;
+import com.fs.starfarer.api.impl.campaign.plog.PLStatSupplies;
+import com.fs.starfarer.api.impl.campaign.plog.PLTextEntry;
+import com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog;
 import com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride;
 import com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames;
+import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseAssignmentAI;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.OmegaOfficerGeneratorPlugin;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantAssignmentAI;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantSeededFleetManager;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantSeededFleetManager.RemnantFleetInteractionConfigGen;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantStationFleetManager;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantThemeGenerator.RemnantStationInteractionConfigGen;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RuinsFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.ScavengerFleetAssignmentAI;
-import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantSeededFleetManager.RemnantFleetInteractionConfigGen;
-import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantThemeGenerator.RemnantStationInteractionConfigGen;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageGenFromSeed.SalvageDefenderModificationPluginImpl;
-import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.ExtraSalvage;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BlueprintSpecial.BlueprintSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BreadcrumbSpecial.BreadcrumbSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.CargoManifestSpecial.CargoManifestSpecialData;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial.DomainSurveyDerelictSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial.SpecialType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.PerShipData;
@@ -274,57 +328,59 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SleeperPodsSpe
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial.TransmitterTrapSpecialData;
+import com.fs.starfarer.api.impl.campaign.shared.CommodityStatTracker.CommodityStats;
 import com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket;
 import com.fs.starfarer.api.impl.campaign.shared.PlayerTradeProfitabilityData;
-import com.fs.starfarer.api.impl.campaign.shared.SharedData;
-import com.fs.starfarer.api.impl.campaign.shared.CommodityStatTracker.CommodityStats;
 import com.fs.starfarer.api.impl.campaign.shared.PlayerTradeProfitabilityData.CommodityData;
 import com.fs.starfarer.api.impl.campaign.shared.ReputationChangeTracker.ReputationChangeData;
+import com.fs.starfarer.api.impl.campaign.shared.SharedData;
+import com.fs.starfarer.api.impl.campaign.skills.FieldRepairsScript;
 import com.fs.starfarer.api.impl.campaign.submarkets.BlackMarketPlugin;
 import com.fs.starfarer.api.impl.campaign.submarkets.LocalResourcesSubmarketPlugin;
 import com.fs.starfarer.api.impl.campaign.submarkets.OpenMarketPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin.AsteroidBeltParams;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidImpact;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidSource;
 import com.fs.starfarer.api.impl.campaign.terrain.AuroraRenderer;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
+import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain.RingParams;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain;
 import com.fs.starfarer.api.impl.campaign.terrain.CRLossPerSecondBuff;
 import com.fs.starfarer.api.impl.campaign.terrain.CRRecoveryBuff;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.EventHorizonPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.FlareManager;
+import com.fs.starfarer.api.impl.campaign.terrain.FlareManager.Flare;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperStormBoost;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin.CellStateTracker;
 import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin.MagneticFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.MaxBurnBuff;
 import com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.PeakPerformanceBuff;
 import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin.RadioChatterParams;
 import com.fs.starfarer.api.impl.campaign.terrain.RingSystemTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaAkaMainyuTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
-import com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin.AsteroidBeltParams;
-import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
-import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain.RingParams;
-import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
-import com.fs.starfarer.api.impl.campaign.terrain.FlareManager.Flare;
-import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin.CellStateTracker;
-import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin.MagneticFieldParams;
-import com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin.RadioChatterParams;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin.CoronaParams;
 import com.fs.starfarer.api.impl.campaign.tutorial.CampaignTutorialScript;
+import com.fs.starfarer.api.impl.campaign.tutorial.CampaignTutorialScript.CampaignTutorialStage;
 import com.fs.starfarer.api.impl.campaign.tutorial.GalatiaMarketScript;
 import com.fs.starfarer.api.impl.campaign.tutorial.GalatianAcademyStipend;
 import com.fs.starfarer.api.impl.campaign.tutorial.RogueMinerMiscFleetManager;
 import com.fs.starfarer.api.impl.campaign.tutorial.SaveNagScript;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialLeashAssignmentAI;
-import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
-import com.fs.starfarer.api.impl.campaign.tutorial.CampaignTutorialScript.CampaignTutorialStage;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent.TutorialMissionStage;
+import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
+import com.fs.starfarer.api.impl.campaign.world.TTBlackSite;
 import com.fs.starfarer.api.loading.CampaignPingSpec;
 import com.fs.starfarer.api.plugins.impl.CoreBuildObjectiveTypePicker;
 import com.fs.starfarer.api.util.DelayedActionScript;
@@ -355,6 +411,14 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		addScriptsIfNeeded();
 		
 		verifyFactionData();
+		
+//		for (CampaignFleetAPI fleet : Global.getSector().getCurrentLocation().getFleets()) {
+//			if (fleet.isPlayerFleet()) continue;
+//			VisibilityLevel level = fleet.getVisibilityLevelToPlayerFleet();
+//			if (level == VisibilityLevel.NONE) {
+//				fleet.forceSensorFaderBrightness(0f);
+//			}
+//		}
 	}
 	
 	public static void verifyFactionData() {
@@ -366,27 +430,38 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 	public static void verifyFactionData(FactionAPI faction) {
 		for (String id : faction.getKnownShips()) {
 			if (Global.getSettings().getHullSpec(id) == null) {
-				throw new RuntimeException("Hull with id [" + id + "] not found");
+				throw new RuntimeException("Hull with id [" + id + "] not found for faction [" + faction.getId() + "]");
 			}
 		}
 		for (String id : faction.getKnownHullMods()) {
 			if (Global.getSettings().getHullModSpec(id) == null) {
-				throw new RuntimeException("Hullmod with id [" + id + "] not found");
+				throw new RuntimeException("Hullmod with id [" + id + "] not found for faction [" + faction.getId() + "]");
 			}
 		}
 		for (String id : faction.getKnownIndustries()) {
 			if (Global.getSettings().getIndustrySpec(id) == null) {
-				throw new RuntimeException("Industry with id [" + id + "] not found");
+				throw new RuntimeException("Industry with id [" + id + "] not found for faction [" + faction.getId() + "]");
 			}
 		}
 		for (String id : faction.getKnownFighters()) {
 			if (Global.getSettings().getFighterWingSpec(id) == null) {
-				throw new RuntimeException("Fighter wing with id [" + id + "] not found");
+				throw new RuntimeException("Fighter wing with id [" + id + "] not found for faction [" + faction.getId() + "]");
 			}
 		}
 		for (String id : faction.getKnownWeapons()) {
 			if (Global.getSettings().getWeaponSpec(id) == null) {
-				throw new RuntimeException("Weapon with id [" + id + "] not found");
+				throw new RuntimeException("Weapon with id [" + id + "] not found for faction [" + faction.getId() + "]");
+			}
+		}
+		
+		for (String id : new ArrayList<String>(faction.getDoctrine().getCommanderSkills())) {
+			if (Global.getSettings().getSkillSpec(id) == null) {
+				// making still-useful saves work... 9/15/2020
+				if (id.equals("fighter_doctrine")) {
+					faction.getDoctrine().getCommanderSkills().remove(id);
+				} else {
+					throw new RuntimeException("Commander skill with id [" + id + "] not found for faction [" + faction.getId() + "]");
+				}
 			}
 		}
 	}
@@ -396,6 +471,19 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		//ConditionManager.getInstance();
 		
 		SectorAPI sector = Global.getSector();
+		
+		ListenerManagerAPI listeners = sector.getListenerManager();
+		if (!listeners.hasListenerOfClass(StandardGroundRaidObjectivesCreator.class)) {
+			listeners.addListener(new StandardGroundRaidObjectivesCreator(), true);
+		}
+		
+		if (!listeners.hasListenerOfClass(CryosleeperFactor.class)) {
+			listeners.addListener(new CryosleeperFactor(), true);
+		}
+		if (!listeners.hasListenerOfClass(CoronalTapFactor.class)) {
+			listeners.addListener(new CoronalTapFactor(), true);
+		}
+		
 		GenericPluginManagerAPI plugins = sector.getGenericPlugins();
 		if (!plugins.hasPlugin(SalvageDefenderModificationPluginImpl.class)) {
 			plugins.addPlugin(new SalvageDefenderModificationPluginImpl(), true);
@@ -412,8 +500,25 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		if (!plugins.hasPlugin(StabilizeMarketPluginImpl.class)) {
 			plugins.addPlugin(new StabilizeMarketPluginImpl(), true);
 		}
+		if (!plugins.hasPlugin(RemnantOfficerGeneratorPlugin.class)) {
+			plugins.addPlugin(new RemnantOfficerGeneratorPlugin(), true);
+		}
+		if (!plugins.hasPlugin(OmegaOfficerGeneratorPlugin.class)) {
+			plugins.addPlugin(new OmegaOfficerGeneratorPlugin(), true);
+		}
+//		if (!plugins.hasPlugin(PlayerFleetPersonnelTracker.class)) {
+//			plugins.addPlugin(new PlayerFleetPersonnelTracker(), false);
+//		}
+		
+		PlayerFleetPersonnelTracker.getInstance();
 		
 		
+		if (!sector.hasScript(OfficerManagerEvent.class)) {
+			sector.addScript(new OfficerManagerEvent());
+		}
+		if (!sector.hasScript(FieldRepairsScript.class)) {
+			sector.addScript(new FieldRepairsScript());
+		}
 		if (!sector.hasScript(WarSimScript.class)) {
 			sector.addScript(new WarSimScript());
 		}
@@ -457,9 +562,10 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 			sector.addScript(new GenericMissionManager());
 		}
 		GenericMissionManager manager = GenericMissionManager.getInstance();
-		if (!manager.hasMissionCreator(ProcurementMissionCreator.class)) {
-			manager.addMissionCreator(new ProcurementMissionCreator());
-		}
+// 		Replaced with bar/contact com.fs.starfarer.api.impl.campaign.missions.ProcurementMission		
+//		if (!manager.hasMissionCreator(ProcurementMissionCreator.class)) {
+//			manager.addMissionCreator(new ProcurementMissionCreator());
+//		}
 		if (!manager.hasMissionCreator(AnalyzeEntityIntelCreator.class)) {
 			manager.addMissionCreator(new AnalyzeEntityIntelCreator());
 		}
@@ -472,6 +578,8 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		if (!sector.hasScript(SmugglingScanScript.class)) {
 			sector.addScript(new SmugglingScanScript());
 		}
+		
+		PlaythroughLog.getInstance();
 		
 	}
 	
@@ -518,12 +626,17 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		if (!bar.hasEventCreator(PlanetaryShieldBarEventCreator.class)) {
 			bar.addEventCreator(new PlanetaryShieldBarEventCreator());
 		}
+		if (!bar.hasEventCreator(HistorianBarEventCreator.class)) {
+			bar.addEventCreator(new HistorianBarEventCreator());
+		}
 		
 	}
 
 	@Override
 	public void onNewGame() {
 		junkList.clear();
+		
+		new TTBlackSite().generate(Global.getSector());
 	}
 	
 	
@@ -663,7 +776,41 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		
 		updateKnownPlanets();
 		
+		markStoryCriticalMarketsEtc();
+		
+//		Global.getSector().getStarSystem("hybrasil").getLocation().set(-10000, -10000);
+//		Global.getSector().getHyperspace().updateAllOrbits();
+		
 		//addBaseBlueprints();
+	}
+	
+	public void markStoryCriticalMarketsEtc() {
+		String id = Missions.KALLICHORE;
+		Misc.makeStoryCritical("eochu_bres", id);
+		Misc.makeStoryCritical("port_tse", id);
+		Misc.makeStoryCritical("new_maxios", id);
+		Misc.makeStoryCritical("coatl", id);
+		
+		id = Missions.COUREUSE;
+		Misc.makeStoryCritical("laicaille_habitat", id);
+		Misc.makeStoryCritical("eochu_bres", id);
+		Misc.makeStoryCritical("fikenhild", id);
+		Misc.makeStoryCritical("station_kapteyn", id);
+		
+		id = Missions.ZIGGURAT;
+		Misc.makeStoryCritical("culann", id);
+		Misc.makeStoryCritical("donn", id);
+		Misc.makeStoryCritical("agreus", id);
+		Misc.makeStoryCritical("eochu_bres", id);
+		Misc.makeStoryCritical("port_tse", id);
+		
+		id = Missions.GATES;
+		Misc.makeStoryCritical("kazeron", id);
+		Misc.makeStoryCritical("chicomoztoc", id);
+		Misc.makeStoryCritical("epiphany", id);
+		Misc.makeStoryCritical("fikenhild", id);
+		Misc.makeStoryCritical("kantas_den", id);
+		Misc.makeStoryCritical("new_maxios", id);
 	}
 	
 //	protected void addBaseBlueprints() {
@@ -689,6 +836,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 
 	protected void updateKnownPlanets() {
 		//Set<String> seen = new HashSet<String>();
+		//Set<SectorEntityToken> gates = new LinkedHashSet<SectorEntityToken>();
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (market.isPlanetConditionMarketOnly()) continue; // shouldn't be in the markets list in this case, but, well.
 			if (market.getContainingLocation() instanceof StarSystemAPI) {
@@ -696,10 +844,23 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				system.setEnteredByPlayer(true);
 				//String name = system.getName();
 				//Misc.setAllPlanetsKnown(system);
-				Misc.setAllPlanetsSurveyed(system);
+				Misc.setAllPlanetsSurveyed(system, true);
 				market.setSurveyLevel(SurveyLevel.FULL); // could also be a station, not a planet
 			}
+			
+//			for (SectorEntityToken gate : market.getContainingLocation().getEntitiesWithTag(Tags.GATE)) {
+//				gates.add(gate);
+//			}
+			
 		}
+		
+		//for (SectorEntityToken gate : gates) {
+//		for (SectorEntityToken gate : Global.getSector().getEntitiesWithTag(Tags.GATE)) {
+//			if (gate.getCustomPlugin() instanceof GateEntityPlugin) {
+//				Global.getSector().getIntelManager().addIntel(new GateIntel(gate), true);
+//			}
+//		}
+		
 		
 //		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 //			if (market.getContainingLocation() instanceof StarSystemAPI) {
@@ -713,13 +874,14 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 //			if (system.getName().toLowerCase().contains("galatia")) {
 //				System.out.println("wfwefwe234234");
 //			}
-			if (system.getTags().isEmpty()) {
-				boolean galatia = system.getBaseName().toLowerCase().equals("galatia");
+			boolean galatia = system.getBaseName().toLowerCase().equals("galatia");
+			if (system.getTags().isEmpty() || galatia) {
 				if (Misc.getMarketsInLocation(system).isEmpty() && !galatia) {
 					system.addTag(Tags.THEME_CORE_UNPOPULATED);
 				} else {
 					system.addTag(Tags.THEME_CORE_POPULATED);
 				}
+				system.addTag(Tags.THEME_CORE);
 			}
 		}
 	}
@@ -752,6 +914,38 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				 360f); // max spin (degrees/day)
 	}
 	
+	public static void addRuinsJunk(SectorEntityToken planet) {
+		boolean r1 = planet.getMarket().hasCondition(Conditions.RUINS_SCATTERED);
+		boolean r2 = planet.getMarket().hasCondition(Conditions.RUINS_WIDESPREAD);
+		boolean r3 = planet.getMarket().hasCondition(Conditions.RUINS_EXTENSIVE);
+		boolean r4 = planet.getMarket().hasCondition(Conditions.RUINS_VAST);
+		
+		if (!(r1 || r2 || r3 || r4)) return;
+		
+		int numJunk = 5;
+		if (r2) numJunk += 5;
+		if (r3) numJunk += 15;
+		if (r4) numJunk += 40;
+		
+		//System.out.println("With ruins: " + planet.getName() + ", " + location.getNameWithLowercaseType());
+		
+		float radius = planet.getRadius() + 100f;
+		float minOrbitDays = radius / 20;
+		float maxOrbitDays = minOrbitDays + 10f;
+		
+		planet.getContainingLocation().addOrbitalJunk(planet,
+				 "orbital_junk", // from custom_entities.json 
+				 numJunk, // num of junk
+				 12, 20, // min/max sprite size (assumes square)
+				 radius, // orbit radius
+				 //70, // orbit width
+				 110, // orbit width
+				 minOrbitDays, // min orbit days
+				 maxOrbitDays, // max orbit days
+				 60f, // min spin (degress/day)
+				 360f); // max spin (degrees/day)
+	}
+	
 	protected void addJunk() {
 		junkList.clear();
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
@@ -764,35 +958,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 			
 			if (planet.getMarket() == null || !planet.getMarket().isPlanetConditionMarketOnly()) continue;
 			
-			boolean r1 = planet.getMarket().hasCondition(Conditions.RUINS_SCATTERED);
-			boolean r2 = planet.getMarket().hasCondition(Conditions.RUINS_WIDESPREAD);
-			boolean r3 = planet.getMarket().hasCondition(Conditions.RUINS_EXTENSIVE);
-			boolean r4 = planet.getMarket().hasCondition(Conditions.RUINS_VAST);
-			
-			if (!(r1 || r2 || r3 || r4)) continue;
-			
-			int numJunk = 5;
-			if (r2) numJunk += 5;
-			if (r3) numJunk += 15;
-			if (r4) numJunk += 40;
-			
-			//System.out.println("With ruins: " + planet.getName() + ", " + location.getNameWithLowercaseType());
-			
-			float radius = planet.getRadius() + 100f;
-			float minOrbitDays = radius / 20;
-			float maxOrbitDays = minOrbitDays + 10f;
-			
-			location.addOrbitalJunk(planet,
-					 "orbital_junk", // from custom_entities.json 
-					 numJunk, // num of junk
-					 12, 20, // min/max sprite size (assumes square)
-					 radius, // orbit radius
-					 //70, // orbit width
-					 110, // orbit width
-					 minOrbitDays, // min orbit days
-					 maxOrbitDays, // max orbit days
-					 60f, // min spin (degress/day)
-					 360f); // max spin (degrees/day)
+			addRuinsJunk(planet);
 		}
 	}
 	
@@ -825,9 +991,11 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 			}
 		}
 		
+		//int count = 0;
 		asteroidList.clear();
 		for (LocationAPI loc : Global.getSector().getAllLocations()) {
 			for (SectorEntityToken asteroid : new ArrayList<SectorEntityToken>(loc.getAsteroids())) {
+				//count++;
 				AsteroidSource source = Misc.getAsteroidSource(asteroid);
 				if (source == null || !asteroid.getMemoryWithoutUpdate().isEmpty()) {
 					if (source != null) {
@@ -841,7 +1009,8 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				}
 			}
 		}
-		
+		//System.out.println("COUNT: " + count);
+		//Global.getSector().getEntityById(new ArrayList<SectorEntityToken>(asteroidList.keySet()).get(4000).getId())
 		econPreSaveCleanup();
 	}
 	
@@ -909,14 +1078,18 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		ImportantPeopleAPI ip = Global.getSector().getImportantPeople();
 		
 		
+		//List<MarketAPI> withAutoAdmins = new ArrayList<MarketAPI>();
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_DO_NOT_INIT_COMM_LISTINGS)) continue;
 			boolean addedPerson = false;
 			
 			PersonAPI admin = null;
 			
+			LinkedHashSet<PersonAPI> randomPeople = new LinkedHashSet<PersonAPI>();
+			
+			
 			if (market.hasIndustry(Industries.MILITARYBASE) || market.hasIndustry(Industries.HIGHCOMMAND)) {
-				PersonAPI person = market.getFaction().createRandomPerson();
+				PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
 				String rankId = Ranks.GROUND_MAJOR;
 				if (market.getSize() >= 6) {
 					rankId = Ranks.GROUND_GENERAL;
@@ -925,6 +1098,13 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				}
 				person.setRankId(rankId);
 				person.setPostId(Ranks.POST_BASE_COMMANDER);
+				if (market.getSize() >= 8) {
+					person.setImportanceAndVoice(PersonImportance.VERY_HIGH, StarSystemGenerator.random);
+				} else if (market.getSize() >= 6) {
+					person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
+				} else {
+					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+				}
 				
 				market.getCommDirectory().addPerson(person);
 				market.addPerson(person);
@@ -932,6 +1112,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				ip.getData(person).getLocation().setMarket(market);
 				ip.checkOutPerson(person, "permanent_staff");
 				addedPerson = true;
+				randomPeople.add(person);
 			}
 			
 			boolean hasStation = false;
@@ -942,7 +1123,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				}
 			}
 			if (hasStation) {
-				PersonAPI person = market.getFaction().createRandomPerson();
+				PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
 				String rankId = Ranks.SPACE_COMMANDER;
 				if (market.getSize() >= 6) {
 					rankId = Ranks.SPACE_ADMIRAL;
@@ -952,12 +1133,21 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				person.setRankId(rankId);
 				person.setPostId(Ranks.POST_STATION_COMMANDER);
 				
+				if (market.getSize() >= 8) {
+					person.setImportanceAndVoice(PersonImportance.VERY_HIGH, StarSystemGenerator.random);
+				} else if (market.getSize() >= 6) {
+					person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
+				} else {
+					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+				}
+				
 				market.getCommDirectory().addPerson(person);
 				market.addPerson(person);
 				ip.addPerson(person);
 				ip.getData(person).getLocation().setMarket(market);
 				ip.checkOutPerson(person, "permanent_staff");
 				addedPerson = true;
+				randomPeople.add(person);
 				
 				if (market.getPrimaryEntity().hasTag(Tags.STATION)) {
 					admin = person;
@@ -965,22 +1155,19 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 			}
 			
 			if (market.hasSpaceport()) {
-				PersonAPI person = market.getFaction().createRandomPerson();
+				PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
 				//person.setRankId(Ranks.SPACE_CAPTAIN);
 				person.setPostId(Ranks.POST_PORTMASTER);
 				
-				market.getCommDirectory().addPerson(person);
-				market.addPerson(person);
-				ip.addPerson(person);
-				ip.getData(person).getLocation().setMarket(market);
-				ip.checkOutPerson(person, "permanent_staff");
-				addedPerson = true;
-			}
-			
-			if (addedPerson) {
-				PersonAPI person = market.getFaction().createRandomPerson();
-				person.setRankId(Ranks.SPACE_COMMANDER);
-				person.setPostId(Ranks.POST_SUPPLY_OFFICER);
+				if (market.getSize() >= 8) {
+					person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
+				} else if (market.getSize() >= 6) {
+					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+				} else if (market.getSize() >= 4) {
+					person.setImportanceAndVoice(PersonImportance.LOW, StarSystemGenerator.random);
+				} else {
+					person.setImportanceAndVoice(PersonImportance.VERY_LOW, StarSystemGenerator.random);
+				}
 				
 				market.getCommDirectory().addPerson(person);
 				market.addPerson(person);
@@ -988,12 +1175,44 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				ip.getData(person).getLocation().setMarket(market);
 				ip.checkOutPerson(person, "permanent_staff");
 				addedPerson = true;
+				randomPeople.add(person);
+			}
+			
+			if (addedPerson) {
+				PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
+				person.setRankId(Ranks.SPACE_COMMANDER);
+				person.setPostId(Ranks.POST_SUPPLY_OFFICER);
+				
+				if (market.getSize() >= 6) {
+					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+				} else if (market.getSize() >= 4) {
+					person.setImportanceAndVoice(PersonImportance.LOW, StarSystemGenerator.random);
+				} else {
+					person.setImportanceAndVoice(PersonImportance.VERY_LOW, StarSystemGenerator.random);
+				}
+				
+				
+				market.getCommDirectory().addPerson(person);
+				market.addPerson(person);
+				ip.addPerson(person);
+				ip.getData(person).getLocation().setMarket(market);
+				ip.checkOutPerson(person, "permanent_staff");
+				addedPerson = true;
+				randomPeople.add(person);
 			}
 			
 			if (!addedPerson || admin == null) {
-				PersonAPI person = market.getFaction().createRandomPerson();
+				PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
 				person.setRankId(Ranks.CITIZEN);
 				person.setPostId(Ranks.POST_ADMINISTRATOR);
+				
+				if (market.getSize() >= 8) {
+					person.setImportanceAndVoice(PersonImportance.VERY_HIGH, StarSystemGenerator.random);
+				} else if (market.getSize() >= 6) {
+					person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
+				} else {
+					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+				}
 				
 				market.getCommDirectory().addPerson(person);
 				market.addPerson(person);
@@ -1001,110 +1220,149 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				ip.getData(person).getLocation().setMarket(market);
 				ip.checkOutPerson(person, "permanent_staff");
 				admin = person;
+				randomPeople.add(person);
 			}
 			
 			if (admin != null) {
 				addSkillsAndAssignAdmin(market, admin);
 			}
+			
+			List<PersonAPI> people = new ArrayList<PersonAPI>(randomPeople);
+			Iterator<PersonAPI> iter = people.iterator();
+			while (iter.hasNext()) {
+				PersonAPI curr = iter.next();
+				if (curr == null || curr.getFaction() == null) {
+					iter.remove();
+					continue;
+				}
+				if (curr.isDefault() || curr.isAICore() || curr.isPlayer()) {
+					iter.remove();
+					continue;
+				}
+			}
+			dedupePortraits(people);
 		}
 		
 		assignCustomAdmins();
+		
+
+//		List<PersonAPI> people = new ArrayList<PersonAPI>(randomPeople);
+//		Iterator<PersonAPI> iter = people.iterator();
+//		while (iter.hasNext()) {
+//			PersonAPI curr = iter.next();
+//			if (curr == null || curr.getFaction() == null) {
+//				iter.remove();
+//				continue;
+//			}
+//			if (curr.isDefault() || curr.isAICore() || curr.isPlayer()) {
+//				iter.remove();
+//				continue;
+//			}
+//		}
+//		
+//		dedupePortraits(people);
+		
+//		List<PersonAPI> admins = new ArrayList<PersonAPI>();
+//		for (MarketAPI market : withAutoAdmins) {
+//			PersonAPI admin = market.getAdmin();
+//			if (admin == null || admin.getFaction() == null) continue;
+//			if (admin.isDefault() || admin.isAICore() || admin.isPlayer()) continue;
+//			admins.add(admin);
+//		}
+//		dedupePortraits(admins);
+		
+		// this assigns faction leaders etc; important that it happen after deduping
+		// so there's no chance the deduping messes up a custom character's portrait
+		People.create();
+	}
+	
+	
+	public static void dedupePortraits(List<PersonAPI> people) {
+		for (int i = 0; i < 10 * people.size(); i++) {
+			if (hasDuplicatePortraits(people)) {
+				for (PersonAPI person : people) {
+//					if (person.getNameString().equals("Abasi Ganymede")) {
+//						System.out.println("efwfwef");
+//					}
+					if (person.isDefault() || person.isAICore() || person.isPlayer()) continue;
+					int num = getPortraitCount(people, person);
+					if (num > 1) {
+						for (int j = 0; j < 10; j++) {
+							regenPortrait(person);
+							num = getPortraitCount(people, person);
+							if (num <= 1) break;
+						}
+						Collections.shuffle(people, StarSystemGenerator.random);
+						break;
+					}
+				}
+			}
+		}
+	}
+	
+	public static void regenPortrait(PersonAPI person) {
+		if (person == null || person.getFaction() == null) return;
+		
+		String curr = person.getPortraitSprite();
+		if (curr == null) curr = "";
+		for (int i = 0; i < 10; i++) {
+			String other = person.getFaction().createRandomPerson(person.getGender(), StarSystemGenerator.random).getPortraitSprite();
+			if (!curr.equals(other)) {
+				person.setPortraitSprite(other);
+				break;
+			}
+		}
+	}
+	
+	public static int getPortraitCount(List<PersonAPI> people, PersonAPI person) {
+		String curr = person.getPortraitSprite();
+		int count = 0;
+		for (PersonAPI other : people) {
+			String str = other.getPortraitSprite();
+			if (str == null) continue;
+			if (curr.equals(str)) count++;
+		}
+		return count;
+	}
+	
+	public static boolean hasDuplicatePortraits(List<PersonAPI> people) {
+		Set<String> used = new LinkedHashSet<String>();
+		for (PersonAPI person : people) {
+			String str = person.getPortraitSprite();
+			if (used.contains(str)) return true;
+			used.add(str);
+		}
+		return false;
 	}
 	
 	protected void assignCustomAdmins() {
+		ImportantPeopleAPI ip = Global.getSector().getImportantPeople();
+		
 		{
-		MarketAPI market = null;
-		
-		market =  Global.getSector().getEconomy().getMarket("sindria");
-		if (market != null) {
-			PersonAPI person = Global.getFactory().createPerson();
-			person.setFaction(Factions.DIKTAT);
-			person.setGender(Gender.MALE);
-			person.setRankId(Ranks.FACTION_LEADER);
-			person.setPostId(Ranks.POST_FACTION_LEADER);
-			person.getName().setFirst("Phillip");
-			person.getName().setLast("Andrada");
-			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "andrada"));
-			person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
-			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
-			
-			market.setAdmin(person);
-			market.getCommDirectory().addPerson(person, 0);
-			market.addPerson(person);
-		}
-		
-		market =  Global.getSector().getEconomy().getMarket("kantas_den");
-		if (market != null) {
-			PersonAPI person = Global.getFactory().createPerson();
-			person.setFaction(Factions.PIRATES);
-			person.setGender(Gender.FEMALE);
-			person.setPostId(Ranks.POST_ADMINISTRATOR);
-			person.setRankId(Ranks.SPACE_ADMIRAL);
-			person.getName().setFirst("Kanta");
-			person.getName().setLast("");
-			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "kanta"));
-			person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
-			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
-			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
-			
-			market.setAdmin(person);
-			market.getCommDirectory().addPerson(person, 0);
-			market.addPerson(person);
-		}
-		
-		market =  Global.getSector().getEconomy().getMarket("eochu_bres");
-		if (market != null) {
-			PersonAPI person = Global.getFactory().createPerson();
-			person.setFaction(Factions.TRITACHYON);
-			person.setGender(Gender.FEMALE);
-			person.setRankId(Ranks.FACTION_LEADER);
-			person.setPostId(Ranks.POST_FACTION_LEADER);
-			person.getName().setFirst("Artemisia");
-			person.getName().setLast("Sun");
-			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "sun"));
-			person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
-			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
-			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
-			
-			market.setAdmin(person);
-			market.getCommDirectory().addPerson(person, 0);
-			market.addPerson(person);
-		}
-		
-		market =  Global.getSector().getEconomy().getMarket("chicomoztoc");
-		if (market != null) {
-			PersonAPI person = Global.getFactory().createPerson();
-			person.setFaction(Factions.HEGEMONY);
-			person.setGender(Gender.MALE);
-			person.setRankId(Ranks.FACTION_LEADER);
-			person.setPostId(Ranks.POST_FACTION_LEADER);
-			person.getName().setFirst("Baikal");
-			person.getName().setLast("Daud");
-			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "baikal"));
-			person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
-			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
-			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
-			
-			market.setAdmin(person);
-			market.getCommDirectory().addPerson(person, 0);
-			market.addPerson(person);
-		}
-		
-		market =  Global.getSector().getEconomy().getMarket("station_kapteyn");
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("station_kapteyn");
 		if (market != null) {
 			PersonAPI person = market.getFaction().createRandomPerson();
 			person.setRankId(Ranks.CITIZEN);
 			person.setPostId(Ranks.POST_ADMINISTRATOR);
+			person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
 			
-			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
-			person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
+			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
+			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
+			
+			for (PersonAPI p : market.getPeopleCopy()) {
+				if (Ranks.POST_ADMINISTRATOR.equals(p.getPostId())) {
+					market.removePerson(p);
+					ip.removePerson(p);
+					market.getCommDirectory().removePerson(p);
+					break;
+				}
+			}
 			
 			market.setAdmin(person);
 			market.getCommDirectory().addPerson(person, 0);
 			market.addPerson(person);
 		}
 		}
-		
 		
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (Factions.TRITACHYON.equals(market.getFactionId()) &&
@@ -1115,10 +1373,20 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				person.setPostId(Ranks.POST_ADMINISTRATOR);
 				
 				// totally not a front for an Alpha Core
-				person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
-				person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
-				person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
+				person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
+				person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
+				person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
 				person.setAICoreId(Commodities.ALPHA_CORE);
+				person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+				
+				for (PersonAPI p : market.getPeopleCopy()) {
+					if (Ranks.POST_ADMINISTRATOR.equals(p.getPostId())) {
+						market.removePerson(p);
+						ip.removePerson(p);
+						market.getCommDirectory().removePerson(p);
+						break;
+					}
+				}
 				
 				market.setAdmin(person);
 				market.getCommDirectory().addPerson(person, 0);
@@ -1131,7 +1399,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 	protected void addSkillsAndAssignAdmin(MarketAPI market, PersonAPI admin) {
 		List<String> skills = Global.getSettings().getSortedSkillIds();
 		if (!skills.contains(Skills.PLANETARY_OPERATIONS) ||
-				!skills.contains(Skills.FLEET_LOGISTICS) ||
+				!skills.contains(Skills.SPACE_OPERATIONS) ||
 				!skills.contains(Skills.INDUSTRIAL_PLANNING)) {
 			return;
 		}
@@ -1157,18 +1425,18 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		
 		int num = 0;
 		if (industries >= 2 || (industries == 1 && defenses == 1)) {
-			admin.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
+			admin.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
 			num++;
 		}
 		
 		if (num == 0 || size >= 7) {
 			if (military) {
-				admin.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
+				admin.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
 			} else if (defenses > 0) {
-				admin.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
+				admin.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
 			} else {
 				// nothing else suitable, so just make sure there's at least one skill, if this wasn't already set
-				admin.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
+				admin.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
 			}
 		}
 		
@@ -1203,29 +1471,69 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.aliasAttribute(PeakPerformanceBuff.class, "dur", "d");
 		
 		
-		x.alias("FParams", FleetParams.class);
-		x.aliasAttribute(FleetParams.class, "hyperspaceLocation", "hL");
-		x.aliasAttribute(FleetParams.class, "market", "m");
-		x.aliasAttribute(FleetParams.class, "factionId", "fId");
-		x.aliasAttribute(FleetParams.class, "fleetType", "fT");
-		x.aliasAttribute(FleetParams.class, "combatPts", "cP");
-		x.aliasAttribute(FleetParams.class, "freighterPts", "fP");
-		x.aliasAttribute(FleetParams.class, "tankerPts", "taP");
-		x.aliasAttribute(FleetParams.class, "transportPts", "trP");
-		x.aliasAttribute(FleetParams.class, "linerPts", "lP");
-		x.aliasAttribute(FleetParams.class, "civilianPts", "civP");
-		x.aliasAttribute(FleetParams.class, "utilityPts", "uP");
-		x.aliasAttribute(FleetParams.class, "qualityBonus", "qB");
-		x.aliasAttribute(FleetParams.class, "qualityOverride", "qO");
-		x.aliasAttribute(FleetParams.class, "officerNumMult", "oNM");
-		x.aliasAttribute(FleetParams.class, "officerLevelBonus", "oLB");
-		x.aliasAttribute(FleetParams.class, "levelLimit", "lL");
-		x.aliasAttribute(FleetParams.class, "commander", "c");
-		x.aliasAttribute(FleetParams.class, "factionIdForShipPicking", "fIDSP");
-		x.aliasAttribute(FleetParams.class, "random", "r");
-		x.aliasAttribute(FleetParams.class, "withOfficers", "wO");
-		x.aliasAttribute(FleetParams.class, "maxShipSize", "mSS");
-
+//		x.alias("FParams", FleetParams.class);
+//		x.aliasAttribute(FleetParams.class, "hyperspaceLocation", "hL");
+//		x.aliasAttribute(FleetParams.class, "market", "m");
+//		x.aliasAttribute(FleetParams.class, "factionId", "fId");
+//		x.aliasAttribute(FleetParams.class, "fleetType", "fT");
+//		x.aliasAttribute(FleetParams.class, "combatPts", "cP");
+//		x.aliasAttribute(FleetParams.class, "freighterPts", "fP");
+//		x.aliasAttribute(FleetParams.class, "tankerPts", "taP");
+//		x.aliasAttribute(FleetParams.class, "transportPts", "trP");
+//		x.aliasAttribute(FleetParams.class, "linerPts", "lP");
+//		x.aliasAttribute(FleetParams.class, "civilianPts", "civP");
+//		x.aliasAttribute(FleetParams.class, "utilityPts", "uP");
+//		x.aliasAttribute(FleetParams.class, "qualityBonus", "qB");
+//		x.aliasAttribute(FleetParams.class, "qualityOverride", "qO");
+//		x.aliasAttribute(FleetParams.class, "officerNumMult", "oNM");
+//		x.aliasAttribute(FleetParams.class, "officerLevelBonus", "oLB");
+//		x.aliasAttribute(FleetParams.class, "levelLimit", "lL");
+//		x.aliasAttribute(FleetParams.class, "commander", "c");
+//		x.aliasAttribute(FleetParams.class, "factionIdForShipPicking", "fIDSP");
+//		x.aliasAttribute(FleetParams.class, "random", "r");
+//		x.aliasAttribute(FleetParams.class, "withOfficers", "wO");
+//		x.aliasAttribute(FleetParams.class, "maxShipSize", "mSS");
+		
+		x.alias("FParams", FleetParamsV3.class);
+		x.aliasAttribute(FleetParamsV3.class, "source", "srcL");
+		x.aliasAttribute(FleetParamsV3.class, "locInHyper", "lIH");
+		x.aliasAttribute(FleetParamsV3.class, "quality", "q");
+		x.aliasAttribute(FleetParamsV3.class, "qualityMod", "qMod");
+		x.aliasAttribute(FleetParamsV3.class, "qualityOverride", "qO");
+		x.aliasAttribute(FleetParamsV3.class, "factionId", "fId");
+		x.aliasAttribute(FleetParamsV3.class, "fleetType", "fT");
+		x.aliasAttribute(FleetParamsV3.class, "combatPts", "cP");
+		x.aliasAttribute(FleetParamsV3.class, "freighterPts", "fP");
+		x.aliasAttribute(FleetParamsV3.class, "tankerPts", "taP");
+		x.aliasAttribute(FleetParamsV3.class, "transportPts", "trP");
+		x.aliasAttribute(FleetParamsV3.class, "linerPts", "lP");
+		x.aliasAttribute(FleetParamsV3.class, "utilityPts", "uP");
+		x.aliasAttribute(FleetParamsV3.class, "withOfficers", "wO");
+		x.aliasAttribute(FleetParamsV3.class, "maxShipSize", "mSS");
+		x.aliasAttribute(FleetParamsV3.class, "minShipSize", "minSS");
+		x.aliasAttribute(FleetParamsV3.class, "averageSMods", "aSM");
+		x.aliasAttribute(FleetParamsV3.class, "commander", "c");
+		x.aliasAttribute(FleetParamsV3.class, "random", "r");
+		x.aliasAttribute(FleetParamsV3.class, "ignoreMarketFleetSizeMult", "iMFSM");
+		x.aliasAttribute(FleetParamsV3.class, "onlyApplyFleetSizeToCombatShips", "oAFSTCS");
+		x.aliasAttribute(FleetParamsV3.class, "doNotPrune", "dNP");
+		x.aliasAttribute(FleetParamsV3.class, "modeOverride", "mO");
+		x.aliasAttribute(FleetParamsV3.class, "officerLevelBonus", "oLB");
+		x.aliasAttribute(FleetParamsV3.class, "officerNumberBonus", "oNB");
+		x.aliasAttribute(FleetParamsV3.class, "officerNumberMult", "oNM");
+		x.aliasAttribute(FleetParamsV3.class, "officerLevelLimit", "oLL");
+		x.aliasAttribute(FleetParamsV3.class, "commanderLevelLimit", "cLL");
+		x.aliasAttribute(FleetParamsV3.class, "forceAllowPhaseShipsEtc", "fAPSE");
+		x.aliasAttribute(FleetParamsV3.class, "treatCombatFreighterSettingAsFraction", "tCFSAF");
+		x.aliasAttribute(FleetParamsV3.class, "doctrineOverride", "dOv");
+		x.aliasAttribute(FleetParamsV3.class, "doctrineOverride", "ts");
+		x.aliasAttribute(FleetParamsV3.class, "maxNumShips", "mNS");
+		x.aliasAttribute(FleetParamsV3.class, "onlyRetainFlagship", "oRF");
+		x.aliasAttribute(FleetParamsV3.class, "flagshipVariantId", "fVI");
+		x.aliasAttribute(FleetParamsV3.class, "flagshipVariant", "fV");
+		x.aliasAttribute(FleetParamsV3.class, "aiCores", "aiC");
+		x.aliasAttribute(FleetParamsV3.class, "doNotIntegrateAICores", "dNIAIC");
+		x.aliasAttribute(FleetParamsV3.class, "allWeapons", "aW");
 
 		
 		x.alias("MaxBurnBuff", MaxBurnBuff.class);
@@ -1306,6 +1614,9 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.aliasAttribute(IntervalUtil.class, "currInterval", "c");
 		x.aliasAttribute(IntervalUtil.class, "elapsed", "e");
 		x.aliasAttribute(IntervalUtil.class, "intervalElapsed", "ie");
+		
+		x.alias("TimeoutTracker", TimeoutTracker.class);
+		//x.aliasAttribute(TimeoutTracker.class, "items", "itms");
 		
 		x.alias("IDt", TimeoutTracker.ItemData.class);
 		x.aliasAttribute(ItemData.class, "item", "i");
@@ -1587,6 +1898,9 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.aliasAttribute(PerShipData.class, "shipName", "sN");
 		x.aliasAttribute(PerShipData.class, "addDmods", "d");
 		x.aliasAttribute(PerShipData.class, "pruneWeapons", "p");
+		x.aliasAttribute(PerShipData.class, "sModProb", "sMP");
+		
+		
 		x.alias("ShipCondition", ShipCondition.class);
 		
 		
@@ -1641,6 +1955,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.aliasAttribute(DefenderDataOverride.class, "minStr", "i");
 		x.aliasAttribute(DefenderDataOverride.class, "maxStr", "a");
 		x.aliasAttribute(DefenderDataOverride.class, "maxDefenderSize", "d");
+		x.aliasAttribute(DefenderDataOverride.class, "minDefenderSize", "m");
 		x.aliasAttribute(DefenderDataOverride.class, "probStation", "t");
 		x.aliasAttribute(DefenderDataOverride.class, "stationRole", "s");
 		x.aliasAttribute(DefenderDataOverride.class, "defFaction", "f");
@@ -1815,13 +2130,6 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.aliasAttribute(TowCableBuff.class, "frames", "f");
 		
 		x.alias("TowCable", TowCable.class);
-		
-		x.alias("BaseCampaignMission", BaseCampaignMission.class);
-		x.aliasAttribute(BaseCampaignMission.class, "id", "id");
-		x.aliasAttribute(BaseCampaignMission.class, "timestamp", "t");
-		x.aliasAttribute(BaseCampaignMission.class, "acceptLocation", "aL");
-		x.aliasAttribute(BaseCampaignMission.class, "event", "e");
-		
 		
 		x.alias("BaseEventPlugin", BaseEventPlugin.class);
 		x.aliasAttribute(BaseEventPlugin.class, "id", "id");
@@ -2049,6 +2357,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.alias("Waystation", Waystation.class);
 		x.alias("Cryosanctum", Cryosanctum.class);
 		x.alias("Cryorevival", Cryorevival.class);
+		x.alias("TradeCenter2", com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenter.class);
 		
 		x.alias("OrbitalStation", OrbitalStation.class);
 		x.aliasAttribute(OrbitalStation.class, "stationFleet", "sF");
@@ -2236,6 +2545,93 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.alias("HyperStormBoost", HyperStormBoost.class);
 		x.alias("AsteroidImpact", AsteroidImpact.class);
 		
+		x.alias("CoronalTapParticleScript", CoronalTapParticleScript.class);
+		x.alias("CargoPodsResponse", CargoPodsResponse.class);
+		
+		
+		x.alias("GateData", GateData.class);
+		x.alias("GateEntityPlugin", GateEntityPlugin.class);
+		x.aliasAttribute(GateEntityPlugin.class, "beingUsedFader", "bUF");
+		x.aliasAttribute(GateEntityPlugin.class, "glowFader", "gF");
+		x.aliasAttribute(GateEntityPlugin.class, "madeActive", "mA");
+		x.aliasAttribute(GateEntityPlugin.class, "addedIntel", "aI");
+		x.aliasAttribute(GateEntityPlugin.class, "showBeingUsedDur", "sBUD");
+		x.aliasAttribute(GateEntityPlugin.class, "accumulatedTransitDistLY", "aTDLY");
+		x.aliasAttribute(GateEntityPlugin.class, "inUseAngle", "iUA");
+
+		x.alias("BaseMissionHub", BaseMissionHub.class);
+		x.aliasAttribute(BaseMissionHub.class, "timeout", "to");
+		x.aliasAttribute(BaseMissionHub.class, "recentlyAcceptedTimeout", "rAT");
+		x.aliasAttribute(BaseMissionHub.class, "creators", "cr");
+		x.aliasAttribute(BaseMissionHub.class, "person", "p");
+		x.aliasAttribute(BaseMissionHub.class, "seed", "seed");
+		x.aliasAttribute(BaseMissionHub.class, "lastUpdated", "lU");
+		x.aliasAttribute(BaseMissionHub.class, "lastUpdatedSeeds", "lUS");
+		x.aliasAttribute(BaseMissionHub.class, "daysSinceLastUpdate", "dSLU");
+		
+		x.alias("BaseHubMissionCreator", BaseHubMissionCreator.class);
+		x.aliasAttribute(BaseHubMissionCreator.class, "numCompleted", "nC");
+		x.aliasAttribute(BaseHubMissionCreator.class, "numFailed", "nF");
+		x.aliasAttribute(BaseHubMissionCreator.class, "seed", "seed");
+		x.aliasAttribute(BaseHubMissionCreator.class, "specId", "sId");
+		x.aliasAttribute(BaseHubMissionCreator.class, "wasAutoAdded", "wA");
+		x.aliasAttribute(BaseHubMissionCreator.class, "isActive", "iA");
+		
+		x.alias("BlueprintSpecialData", BlueprintSpecialData.class);
+		x.alias("HubMissionWithTriggers", HubMissionWithTriggers.class);
+		
+		x.alias("BaseHubMission", BaseHubMission.class);
+		x.alias("GateIntel", GateIntel.class);
+		x.alias("BreadcrumbIntel", BreadcrumbIntel.class);
+		x.alias("WarningBeaconIntel", WarningBeaconIntel.class);
+		x.alias("DelayedFleetEncounter", DelayedFleetEncounter.class);
+		x.alias("MissionTrigger", MissionTrigger.class);
+		x.alias("PunitiveExpeditionManager", PunitiveExpeditionManager.class);
+		x.alias("PunExData", PunExData.class);
+		x.alias("LuddicPathBaseBarEvent", LuddicPathBaseBarEvent.class);
+		x.alias("HubMissionBarEventWrapper", HubMissionBarEventWrapper.class);
+		x.alias("HistorianBarEvent", HistorianBarEvent.class);
+		
+		x.alias("SpecBarEventCreator", SpecBarEventCreator.class);
+		x.aliasAttribute(SpecBarEventCreator.class, "specId", "sId");
+		x.aliasAttribute(SpecBarEventCreator.class, "wasAutoAdded", "wAA");
+		
+		x.alias("PlanetaryShieldBarEventCreator", PlanetaryShieldBarEventCreator.class);
+		x.alias("HistorianBarEventCreator", HistorianBarEventCreator.class);
+		
+		x.alias("PLTextEntry", PLTextEntry.class);
+		x.aliasAttribute(PLTextEntry.class, "text", "text");
+		x.aliasAttribute(PLTextEntry.class, "timestamp", "ts");
+		
+		x.alias("PLStatLevel", PLStatLevel.class);
+		x.alias("PLStatCredits", PLStatCredits.class);
+		x.alias("PLStatFleet", PLStatFleet.class);
+		x.alias("PLStatSupplies", PLStatSupplies.class);
+		x.alias("PLStatFuel", PLStatFuel.class);
+		x.alias("PLStatCargo", PLStatCargo.class);
+		x.alias("PLStatCrew", PLStatCrew.class);
+		x.alias("PLStatMarines", PLStatMarines.class);
+		x.alias("PLStatColonies", PLStatColonies.class);
+		x.alias("PlaythroughLog", PlaythroughLog.class);
+		
+		x.alias("BaseCustomBounty", BaseCustomBounty.class);
+		x.alias("AggregateBountyData", AggregateBountyData.class);
+		
+		x.alias("HistorianData", HistorianData.class);
+		x.alias("DonationOfferCreator", DonationOfferCreator.class);
+		x.alias("ShipBlueprintOfferCreator", ShipBlueprintOfferCreator.class);
+		x.alias("WeaponBlueprintOfferCreator", WeaponBlueprintOfferCreator.class);
+		x.alias("FighterBlueprintOfferCreator", FighterBlueprintOfferCreator.class);
+		x.alias("SpecialItemOfferCreator", SpecialItemOfferCreator.class);
+		
+		x.alias("StageConnection", StageConnection.class);
+		x.alias("DecivIntel", DecivIntel.class);
+		x.alias("PlayerFleetPersonnelTracker", PlayerFleetPersonnelTracker.class);
+		x.alias("ContactIntel", ContactIntel.class);
+		x.alias("ProductionReportIntel", ProductionReportIntel.class);
+		x.alias("AdminData", AdminData.class);
+		x.alias("FieldRepairsScript", FieldRepairsScript.class);
+		x.alias("CommSnifferIntel", CommSnifferIntel.class);
 		
 	}
 
@@ -2268,9 +2664,13 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		derelicts.add("sentry");
 		derelicts.add("berserker");
 		derelicts.add("bastillion");
+
+		boolean zigguratOnEnemySide = ship.getHullSpec().getHullId().equals("ziggurat") && 
+							(member == null || member.getFleetCommander() == null || !member.getFleetCommander().isPlayer());
 		
 		String hullId = ship.getHullSpec().getHullId();
-		if (!derelicts.contains(hullId) && !ship.getVariant().hasHullMod(HullMods.AUTOMATED)) return null;
+		if (!zigguratOnEnemySide && 
+				!derelicts.contains(hullId) && !ship.getVariant().hasHullMod(HullMods.AUTOMATED)) return null;
 		
 		//HullSize size = ship.getHullSize();
 		
@@ -2279,13 +2679,30 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		config.backingOffWhileNotVentingAllowed = false;
 		config.turnToFaceWithUndamagedArmor = false;
 		config.burnDriveIgnoreEnemies = true;
-		config.personalityOverride = Personalities.RECKLESS;
+		
+		boolean carrier = false;
+		if (ship != null && ship.getVariant() != null) {
+			carrier = ship.getVariant().isCarrier() && !ship.getVariant().isCombat();
+		}
+		if (carrier) {
+			config.personalityOverride = Personalities.AGGRESSIVE;
+			config.backingOffWhileNotVentingAllowed = true;
+		} else {
+			config.personalityOverride = Personalities.RECKLESS;
+		}
 		
 		return new PluginPick<ShipAIPlugin>(Global.getSettings().createDefaultShipAI(ship, config), PickPriority.CORE_SPECIFIC);
 	}
 	
-
-	
+//	public PluginPick<MissileAIPlugin> pickMissileAI(final MissileAPI missile, final ShipAPI launchingShip) {
+//		if (missile.getWeaponSpec() != null && missile.getWeaponSpec().getWeaponId().equals("motelauncher")) {
+//			return new PluginPick<MissileAIPlugin>(new MoteAIScript(missile), PickPriority.MOD_GENERAL);
+//		}
+//		if (missile.getWeaponSpec() != null && missile.getWeaponSpec().getWeaponId().equals("motelauncher_hf")) {
+//			return new PluginPick<MissileAIPlugin>(new MoteAIScript(missile), PickPriority.MOD_GENERAL);
+//		}
+//		return null;
+//	}
 	
 }
 

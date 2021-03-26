@@ -62,6 +62,8 @@ public interface SpecialItemPlugin {
 	 */
 	String resolveDropParamsToSpecificItemData(String params, Random random) throws JSONException;
 	String getDesignType();
+	
+	SpecialItemSpecAPI getSpec();
 }
 
 

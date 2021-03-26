@@ -8,6 +8,13 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 
+/**
+ * Requires corresponding entry in condition_gen_data.csv.
+ *  
+ * @author Alex Mosolov
+ *
+ * Copyright 2020 Fractal Softworks, LLC
+ */
 public class BaseHazardCondition extends BaseMarketConditionPlugin {
 	
 	public void apply(String id) {
@@ -42,7 +49,7 @@ public class BaseHazardCondition extends BaseMarketConditionPlugin {
 			if (hazard != 0) {
 				String pct = "" + (int)(hazard * 100f) + "%";
 				if (hazard > 0) pct = "+" + pct;
-				tooltip.addPara("%s hazard rating.", 10f, Misc.getHighlightColor(), pct);
+				tooltip.addPara("%s hazard rating", 10f, Misc.getHighlightColor(), pct);
 			}
 		}
 	}

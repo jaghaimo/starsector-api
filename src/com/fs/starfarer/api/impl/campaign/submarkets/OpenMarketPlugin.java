@@ -1,14 +1,15 @@
 package com.fs.starfarer.api.impl.campaign.submarkets;
 
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CoreUIAPI;
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
+import com.fs.starfarer.api.campaign.CoreUIAPI;
 import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
-import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.util.Highlights;
 import com.fs.starfarer.api.util.Misc;
@@ -30,7 +31,7 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 	
 			pruneWeapons(0f);
 			
-			int weapons = 2 + Math.max(0, market.getSize() - 3) + (Misc.isMilitary(market) ? 5 : 0);
+			int weapons = 5 + Math.max(0, market.getSize() - 1) + (Misc.isMilitary(market) ? 5 : 0);
 			int fighters = 1 + Math.max(0, (market.getSize() - 3) / 2) + (Misc.isMilitary(market) ? 2 : 0);
 			
 			addWeapons(weapons, weapons + 2, 0, market.getFactionId());
@@ -39,9 +40,14 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 			
 			getCargo().getMothballedShips().clear();
 			
+			float freighters = 20f;
+			CommodityOnMarketAPI com = market.getCommodityData(Commodities.SHIPS);
+			freighters += com.getMaxSupply() * 3f;
+			if (freighters > 40) freighters = 40;
+			
 			addShips(market.getFactionId(),
 					20f, // combat
-					20f, // freighter 
+					freighters, // freighter 
 					0f, // tanker
 					10f, // transport
 					10f, // liner
@@ -64,7 +70,7 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 					null);
 			
 			float tankers = 20f;
-			CommodityOnMarketAPI com = market.getCommodityData(Commodities.FUEL);
+			com = market.getCommodityData(Commodities.FUEL);
 			tankers += com.getMaxSupply() * 3f;
 			if (tankers > 40) tankers = 40;
 			//tankers = 40;
@@ -102,13 +108,15 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 	
 	@Override
 	public int getStockpileLimit(CommodityOnMarketAPI com) {
-		int demand = com.getMaxDemand();
-		int available = com.getAvailable();
-		
-		float limit = BaseIndustry.getSizeMult(available) - BaseIndustry.getSizeMult(Math.max(0, demand - 2));
-		limit *= com.getCommodity().getEconUnit();
+//		int demand = com.getMaxDemand();
+//		int available = com.getAvailable();
+//		
+//		float limit = BaseIndustry.getSizeMult(available) - BaseIndustry.getSizeMult(Math.max(0, demand - 2));
+//		limit *= com.getCommodity().getEconUnit();
 		
 		//limit *= com.getMarket().getStockpileMult().getModifiedValue();
+		
+		float limit = OpenMarketPlugin.getBaseStockpileLimit(com);
 		
 		Random random = new Random(market.getId().hashCode() + submarket.getSpecId().hashCode() + Global.getSector().getClock().getMonth() * 170000);
 		limit *= 0.9f + 0.2f * random.nextFloat();
@@ -121,18 +129,74 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 		return (int) limit;
 	}
 	
+	public static float ECON_UNIT_MULT_EXTRA = 1f;
+	public static float ECON_UNIT_MULT_PRODUCTION = 0.4f;
+	public static float ECON_UNIT_MULT_IMPORTS = 0.1f;
+	public static float ECON_UNIT_MULT_DEFICIT = -0.2f;
 	
-	public static int getApproximateStockpileLimit(CommodityOnMarketAPI com) {
-		int demand = com.getMaxDemand();
+	public static Set<String> SPECIAL_COMMODITIES = new HashSet<String>();
+	static {
+		SPECIAL_COMMODITIES.add(Commodities.SUPPLIES);
+		SPECIAL_COMMODITIES.add(Commodities.FUEL);
+		SPECIAL_COMMODITIES.add(Commodities.CREW);
+		SPECIAL_COMMODITIES.add(Commodities.MARINES);
+		SPECIAL_COMMODITIES.add(Commodities.HEAVY_MACHINERY);
+	}
+	
+	public static float getBaseStockpileLimit(CommodityOnMarketAPI com) {
+//		if (com.getCommodity().getId().equals(Commodities.LUXURY_GOODS)) {
+//			System.out.println("wefwefwef");
+//		}
+		int shippingGlobal = Global.getSettings().getShippingCapacity(com.getMarket(), false);
 		int available = com.getAvailable();
+		int production = com.getMaxSupply();
+		production = Math.min(production, available);
+			
+		int demand = com.getMaxDemand();
+		int export = (int) Math.min(production, shippingGlobal);
 		
-		float limit = BaseIndustry.getSizeMult(available) - BaseIndustry.getSizeMult(Math.max(0, demand - 2));
-		limit *= com.getCommodity().getEconUnit();
-		//limit *= 0.5f;
+		int extra = available - Math.max(export, demand);
+		if (extra < 0) extra = 0;
+		
+		//int inDemand = Math.min(available, demand);
+		//int normal = Math.max(0, available - inDemand - extra);
+		int deficit = Math.max(0, demand - available);
+		
+		float unit = com.getCommodity().getEconUnit();
+		
+		int imports = available - production;
+		if (imports < 0) imports = 0;
+		
+		float limit = 0f;
+		limit += imports * unit * ECON_UNIT_MULT_IMPORTS;
+		limit += production * unit * ECON_UNIT_MULT_PRODUCTION;
+		limit += extra * unit * ECON_UNIT_MULT_EXTRA;
+		limit -= deficit * unit * ECON_UNIT_MULT_DEFICIT;
+		
+		
+		//limit += inDemand * unit * ECON_UNIT_MULT_IN_DEMAND;
+		//limit += normal * unit * ECON_UNIT_MULT_NORMAL;
 		
 		if (limit < 0) limit = 0;
 		return (int) limit;
 	}
+	
+	
+	public static int getApproximateStockpileLimit(CommodityOnMarketAPI com) {
+//		int demand = com.getMaxDemand();
+//		int available = com.getAvailable();
+//		
+//		float limit = BaseIndustry.getSizeMult(available) - BaseIndustry.getSizeMult(Math.max(0, demand - 2));
+//		limit *= com.getCommodity().getEconUnit();
+//		//limit *= 0.5f;
+//		
+//		if (limit < 0) limit = 0;
+//		return (int) limit;
+		
+		float limit = OpenMarketPlugin.getBaseStockpileLimit(com);
+		return (int) limit;
+	}
+	
 	
 	
 	
@@ -171,6 +235,5 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 		return super.getTooltipAppendixHighlights(ui);
 	}
 	
-	
-	
+
 }

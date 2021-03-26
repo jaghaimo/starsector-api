@@ -117,4 +117,7 @@ public interface RepairTrackerAPI {
 
 	float getHeavyMachineryFromScuttling();
 
+	float getCRPriorToMothballing();
+	void setCRPriorToMothballing(float crPriorToMothballing);
+
 }

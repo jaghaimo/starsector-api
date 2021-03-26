@@ -24,6 +24,7 @@ public class Constellation {
 	protected NamePick namePick;
 	protected List<StarSystemAPI> systems = new ArrayList<StarSystemAPI>();
 	protected ConstellationType type = ConstellationType.NORMAL;
+	protected String nameOverride = null;
 	
 	protected transient boolean leavePickedNameUnused = false;
 	
@@ -68,11 +69,21 @@ public class Constellation {
 		this.type = type;
 	}
 
+	public String getNameOverride() {
+		return nameOverride;
+	}
+
+	public void setNameOverride(String nameOverride) {
+		this.nameOverride = nameOverride;
+	}
+
 	public String getName() {
+		if (nameOverride != null) return nameOverride;
 		return namePick.nameWithRomanSuffixIfAny;
 	}
 	
 	public String getNameWithType() {
+		if (nameOverride != null) return nameOverride;
 		String constellationText = getName() + " Constellation";
 		if (getType() == ConstellationType.NEBULA) {
 			constellationText = getName() + " Nebula";
@@ -81,6 +92,7 @@ public class Constellation {
 	}
 	
 	public String getNameWithLowercaseType() {
+		if (nameOverride != null) return nameOverride;
 		String name = getNameWithType();
 		name = name.replaceAll("Constellation", "constellation");
 		name = name.replaceAll("Nebula", "nebula");

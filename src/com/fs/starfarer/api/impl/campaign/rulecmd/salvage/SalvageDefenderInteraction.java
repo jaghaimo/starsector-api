@@ -8,11 +8,11 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
+import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DataForEncounterSide;
+import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.FleetMemberData;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogPlugin;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DataForEncounterSide;
-import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.FleetMemberData;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.BattleCreationContext;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
@@ -21,13 +21,16 @@ import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl;
 import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.BaseFIDDelegate;
 import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.FIDConfig;
 import com.fs.starfarer.api.impl.campaign.ids.Drops;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageGenFromSeed.SDMParams;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageGenFromSeed.SalvageDefenderModificationPlugin;
+import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
 
@@ -92,7 +95,7 @@ public class SalvageDefenderInteraction extends BaseCommandPlugin {
 				
 				if (plugin.getContext() instanceof FleetEncounterContext) {
 					FleetEncounterContext context = (FleetEncounterContext) plugin.getContext();
-					if (context.didPlayerWinEncounter()) {
+					if (context.didPlayerWinEncounterOutright()) {
 						
 						SDMParams p = new SDMParams();
 						p.entity = entity;
@@ -149,7 +152,7 @@ public class SalvageDefenderInteraction extends BaseCommandPlugin {
 				DataForEncounterSide loser = context.getLoserData();
 
 				if (winner == null || loser == null) return;
-			
+				
 				float playerContribMult = context.computePlayerContribFraction();
 				
 				List<DropData> dropRandom = new ArrayList<DropData>();
@@ -159,6 +162,29 @@ public class SalvageDefenderInteraction extends BaseCommandPlugin {
 				float valueModShips = context.getSalvageValueModPlayerShips();
 				
 				for (FleetMemberData data : winner.getEnemyCasualties()) {
+					// add at least one of each weapon that was present on the OMEGA ships, since these
+					// are hard to get; don't want them to be too RNG
+					if (data.getMember() != null && context.getBattle() != null) {
+						CampaignFleetAPI fleet = context.getBattle().getSourceFleet(data.getMember());
+					
+						if (fleet != null && fleet.getFaction().getId().equals(Factions.OMEGA)) {
+							for (String slotId : data.getMember().getVariant().getNonBuiltInWeaponSlots()) {
+								String weaponId = data.getMember().getVariant().getWeaponId(slotId);
+								if (weaponId == null) continue;
+								if (salvage.getNumWeapons(weaponId) <= 0) {
+									WeaponSpecAPI spec = Global.getSettings().getWeaponSpec(weaponId);
+									if (spec.hasTag(Tags.NO_DROP)) continue;
+									
+									salvage.addWeapons(weaponId, 1);
+								}
+							}
+						}
+						
+						if (fleet != null && 
+								fleet.getFaction().getCustomBoolean(Factions.CUSTOM_NO_AI_CORES_FROM_AUTOMATED_DEFENSES)) {
+							continue;
+						}
+					}
 					if (config.salvageRandom.nextFloat() < playerContribMult) {
 						DropData drop = new DropData();
 						drop.chances = 1;

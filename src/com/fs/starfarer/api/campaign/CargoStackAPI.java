@@ -91,6 +91,10 @@ public interface CargoStackAPI {
 	 * @return
 	 */
 	SpecialItemPlugin getPlugin();
+	void setCargo(CargoAPI cargo);
+	boolean isInPlayerCargo();
+	boolean isPickedUp();
+	void setPickedUp(boolean isPickedUp);
 
 
 }

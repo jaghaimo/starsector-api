@@ -281,6 +281,17 @@ public interface LocationAPI {
 	void renderingLayersUpdated(SectorEntityToken entity);
 
 	MemoryAPI getMemoryWithoutUpdate();
+
+	ParticleControllerAPI addParticle(Vector2f loc, Vector2f vel, float size, float brightness, float rampUp, float duration, Color color);
+
+	String getNameWithNoType();
+
+	boolean isCurrentLocation();
+
+	String getNameWithLowercaseTypeShort();
+
+	String getNameWithTypeShort();
+
 }
 
 

@@ -2,9 +2,6 @@ package com.fs.starfarer.api.impl.campaign.rulecmd.salvage;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -15,50 +12,54 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.BattleAPI.BattleSide;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CoreInteractionListener;
 import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.campaign.IndustryPickerListener;
+import com.fs.starfarer.api.campaign.GroundRaidTargetPickerDelegate;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogPlugin;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
-import com.fs.starfarer.api.campaign.ResourceCostPanelAPI;
 import com.fs.starfarer.api.campaign.RuleBasedDialog;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
-import com.fs.starfarer.api.campaign.BattleAPI.BattleSide;
-import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
+import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.ActionType;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MonthlyReport;
+import com.fs.starfarer.api.campaign.listeners.GroundRaidObjectivesListener.RaidResultData;
 import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.characters.OfficerDataAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.BattleCreationContext;
-import com.fs.starfarer.api.combat.StatBonus;
+import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
-import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
-import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
+import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.impl.campaign.DebugFlags;
-import com.fs.starfarer.api.impl.campaign.FleetEncounterContext;
-import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
+import com.fs.starfarer.api.impl.campaign.DebugFlags;
+import com.fs.starfarer.api.impl.campaign.FleetEncounterContext;
+import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl;
 import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.BaseFIDDelegate;
 import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.FIDConfig;
+import com.fs.starfarer.api.impl.campaign.MilitaryResponseScript;
+import com.fs.starfarer.api.impl.campaign.MilitaryResponseScript.MilitaryResponseParams;
+import com.fs.starfarer.api.impl.campaign.RuleBasedInteractionDialogPluginImpl;
 import com.fs.starfarer.api.impl.campaign.econ.RecentUnrest;
-import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.econ.impl.PopulationAndInfrastructure;
+import com.fs.starfarer.api.impl.campaign.graid.DisruptIndustryRaidObjectivePluginImpl;
+import com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
-import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Sounds;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
@@ -69,18 +70,17 @@ import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireAll;
+import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.BaseOptionStoryPointActionDelegate;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.StoryOptionParams;
 import com.fs.starfarer.api.impl.campaign.rulecmd.ShowDefaultVisual;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
-import com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
-import com.fs.starfarer.api.loading.FighterWingSpecAPI;
-import com.fs.starfarer.api.loading.WeaponSpecAPI;
-import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.StatModValueGetter;
 import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.util.WeightedRandomPicker;
 import com.fs.starfarer.api.util.Misc.Token;
 
 /**
@@ -89,7 +89,7 @@ import com.fs.starfarer.api.util.Misc.Token;
 public class MarketCMD extends BaseCommandPlugin {
 
 	public static enum RaidType {
-		RARE,
+		CUSTOM_ONLY,
 		VALUABLE,
 		DISRUPT,
 	}
@@ -99,7 +99,46 @@ public class MarketCMD extends BaseCommandPlugin {
 		SATURATION,
 	}
 	
+	public static enum RaidDangerLevel {
+		NONE("None", "None", Misc.getPositiveHighlightColor(), 0f, 60f, 1),
+		MINIMAL("Minimal", "Minimal", Misc.getPositiveHighlightColor(), 0.02f, 50f, 1),
+		LOW("Low", "Light", Misc.getPositiveHighlightColor(), 0.05f, 40f, 2),
+		MEDIUM("Medium", "Moderate", Misc.getHighlightColor(), 0.1f, 30f, 3),
+		HIGH("High", "Heavy", Misc.getNegativeHighlightColor(), 0.2f, 20f, 5),
+		EXTREME("Extreme", "Extreme", Misc.getNegativeHighlightColor(), 0.4f, 10f, 7);
+		
+		private static RaidDangerLevel [] vals = values();
+		
+		public String name;
+		public String lossesName;
+		public Color color;
+		public float marineLossesMult;
+		public int marineTokens;
+		public float disruptionDays;
+		private RaidDangerLevel(String name, String lossesName, Color color, float marineLossesMult, float disruptionDays, int marineTokens) {
+			this.name = name;
+			this.lossesName = lossesName;
+			this.color = color;
+			this.marineLossesMult = marineLossesMult;
+			this.disruptionDays = disruptionDays;
+			this.marineTokens = marineTokens;
+		}
+		
+		public RaidDangerLevel next() {
+			int index = this.ordinal() + 1;
+			if (index >= vals.length) index = vals.length - 1;
+			return vals[index];
+		}
+		public RaidDangerLevel prev() {
+			int index = this.ordinal() - 1;
+			if (index < 0) index = 0;
+			return vals[index];
+		}
+	}
+	
 	public static class TempData {
+		//public boolean canSurpriseRaid;
+		//public boolean isSurpriseRaid;
 		public boolean canRaid;
 		public boolean canBombard;
 		
@@ -111,30 +150,61 @@ public class MarketCMD extends BaseCommandPlugin {
 		//public float failProb = 0f;
 		
 		public float raidMult;
-		public float shortageMult;
 		
 		public float attackerStr;
 		public float defenderStr;
 		
+		public boolean nonMarket = false;
+		
 		public RaidType raidType = null;
 		public BombardType bombardType = null;
-		public Map<CommodityOnMarketAPI, Float> raidValuables;
 		public CargoAPI raidLoot;
-		public int raidCredits;
+		public int xpGained;
 		public Industry target = null;
 		public List<FactionAPI> willBecomeHostile = new ArrayList<FactionAPI>();
 		public List<Industry> bombardmentTargets = new ArrayList<Industry>();
+		public List<GroundRaidObjectivePlugin> objectives = new ArrayList<GroundRaidObjectivePlugin>();
+		public String contText;
+		public String raidGoBackTrigger;
+		public String raidContinueTrigger;
 	}
+	
+	public static int HOSTILE_ACTIONS_TIMEOUT_DAYS = 60;
+	public static int TACTICAL_BOMBARD_TIMEOUT_DAYS = 120;
+	public static int SATURATION_BOMBARD_TIMEOUT_DAYS = 365;
+	
+	public static int MIN_MARINE_TOKENS = 1;
+	public static float RE_PER_MARINE_TOKEN = 0.1f;
+	public static int MAX_MARINE_TOKENS = 10;
+	public static float LOSS_REDUCTION_PER_RESERVE_TOKEN = 0.05f;
+	public static float LOSS_INCREASE_PER_RAID = 0.5f;
+	public static float MAX_MARINE_LOSSES = 0.8f;
+
+	public static float MIN_RE_TO_REDUCE_MARINE_LOSSES = 0.5f;
+	public static float MAX_MARINE_LOSS_REDUCTION_MULT = 0.05f;
+	
+	// for causing deficit; higher value means less units need to be raided to cause same deficit	
+	public static float ECON_IMPACT_MULT = 1f;
+	
+	public static float QUANTITY_MULT_NORMAL = 1f; 
+	public static float QUANTITY_MULT_EXCESS = 2f; 
+	public static float QUANTITY_MULT_DEFICIT = -0.5f; 
+	public static float QUANTITY_MULT_OVERALL = 0.1f; 
+	
 	
 	public static String ENGAGE = "mktEngage";
 	
 	public static String RAID = "mktRaid";
+	public static String RAID_NON_MARKET = "mktRaidNonMarket";
+	//public static String RAID_SURPRISE = "mktRaidSurprise";
 	//public static String RAID_RARE = "mktRaidRare";
 	public static String RAID_VALUABLE = "mktRaidValuable";
 	public static String RAID_DISRUPT = "mktRaidDisrupt";
 	public static String RAID_GO_BACK = "mktRaidGoBack";
+	public static String RAID_CONFIRM_CONTINUE = "mktRaidConfirmContinue";
 	
 	public static String RAID_CONFIRM = "mktRaidConfirm";
+	public static String RAID_CONFIRM_STORY = "mktRaidConfirmStory";
 	public static String RAID_NEVER_MIND = "mktRaidNeverMind";
 	public static String RAID_RESULT = "mktRaidResult";
 	
@@ -153,7 +223,8 @@ public class MarketCMD extends BaseCommandPlugin {
 	
 	
 	
-	public static float FAIL_THRESHOLD = 0.4f;
+	public static float DISRUPTION_THRESHOLD = 0.25f;
+	public static float VALUABLES_THRESHOLD = 0.05f;
 	
 	protected CampaignFleetAPI playerFleet;
 	protected SectorEntityToken entity;
@@ -175,13 +246,17 @@ public class MarketCMD extends BaseCommandPlugin {
 	
 	protected void clearTemp() {
 		if (temp != null) {
+			//temp.isSurpriseRaid = false;
 			temp.raidType = null;
 			temp.bombardType = null;
 			temp.raidLoot = null;
-			temp.raidValuables = null;
 			temp.target = null;
 			temp.willBecomeHostile.clear();
 			temp.bombardmentTargets.clear();
+			temp.objectives.clear();
+			temp.contText = null;
+			temp.raidGoBackTrigger = null;
+			temp.raidContinueTrigger = null;
 			//temp.canFail = false;
 			//temp.failProb = 0f;
 		}
@@ -209,7 +284,12 @@ public class MarketCMD extends BaseCommandPlugin {
 		//market.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PLAYER_HOSTILE_ACTIVITY_NEAR_MARKET, true, 0.1f);
 		
 		String key = "$MarketCMD_temp";
-		MemoryAPI mem = market.getMemoryWithoutUpdate();
+		MemoryAPI mem = null;
+		if (market != null) {
+			mem = market.getMemoryWithoutUpdate();
+		} else {
+			mem = entity.getMemoryWithoutUpdate();
+		}
 		if (mem.contains(key)) {
 			temp = (TempData) mem.get(key);
 		} else {
@@ -237,6 +317,13 @@ public class MarketCMD extends BaseCommandPlugin {
 			//new ShowDefaultVisual().execute(null, dialog, Misc.tokenize(""), memoryMap);
 			showDefenses(true);
 		} else if (command.equals("goBackToDefenses")) {
+			if (temp.nonMarket) {
+				String trigger = temp.raidGoBackTrigger;
+				if (trigger == null || trigger.isEmpty()) trigger = "PopulateOptions";
+				clearTemp();
+				FireAll.fire(null, dialog, memoryMap, trigger);
+				return true;
+			}
 			clearTemp();
 			//new ShowDefaultVisual().execute(null, dialog, Misc.tokenize(""), memoryMap);
 			showDefenses(true);
@@ -244,17 +331,25 @@ public class MarketCMD extends BaseCommandPlugin {
 		} else if (command.equals("engage")) {
 			engage();
 		} else if (command.equals("raidMenu")) {
+//			boolean surprise = "mktRaidSurprise".equals(memory.get("$option"));
+//			temp.isSurpriseRaid = surprise;
 			raidMenu();
 //		} else if (command.equals("raidRare")) {
 //			raidRare();
+		} else if (command.equals("raidNonMarket")) {
+			raidNonMarket();
 		} else if (command.equals("raidValuable")) {
 			raidValuable();
 		} else if (command.equals("raidDisrupt")) {
 			raidDisrupt();
 		} else if (command.equals("raidConfirm")) {
-			raidConfirm();
+			raidConfirm(false);
+		} else if (command.equals("raidConfirmContinue")) {
+			raidConfirmContinue();
 		} else if (command.equals("raidNeverMind")) {
 			raidNeverMind();
+		} else if (command.equals("addContinueToRaidResultOption")) {
+			addContinueOption(temp.contText);
 		} else if (command.equals("raidResult")) {
 			raidResult();
 		} else if (command.equals("bombardMenu")) {
@@ -273,6 +368,12 @@ public class MarketCMD extends BaseCommandPlugin {
 			return checkDebtEffect();
 		} else if (command.equals("applyDebtEffect")) {
 			applyDebtEffect();
+		} else if (command.equals("checkMercsLeaving")) {
+			return checkMercsLeaving();
+		} else if (command.equals("convinceMercToStay")) {
+			convinceMercToStay();
+		} else if (command.equals("mercLeaves")) {
+			mercLeaves();
 		}
 		
 		return true;
@@ -283,6 +384,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		CampaignFleetAPI station = getStationFleet();
 		
 		boolean hasNonStation = false;
+		boolean hasOtherButInsignificant = true;
 		boolean hasStation = station != null;
 		boolean otherWantsToFight = false;
 		BattleAPI b = null;
@@ -295,6 +397,13 @@ public class MarketCMD extends BaseCommandPlugin {
 		boolean playerCanNotJoin = false;
 
 		String stationType = "station";
+		if (station != null) {
+			FleetMemberAPI flagship = station.getFlagship();
+			if (flagship != null && flagship.getVariant() != null) {
+				String name = flagship.getVariant().getDesignation().toLowerCase();
+				stationType = name;
+			}
+		}
 		
 		StationState state = getStationState();
 		
@@ -311,13 +420,26 @@ public class MarketCMD extends BaseCommandPlugin {
 			}
 		} else {
 			ongoingBattle = primary.getBattle() != null;
+
+			CampaignFleetAPI pluginFleet = primary;
+			if (ongoingBattle) {
+				BattleSide playerSide = primary.getBattle().pickSide(playerFleet);
+				CampaignFleetAPI other = primary.getBattle().getPrimary(primary.getBattle().getOtherSide(playerSide));
+				if (other != null) {
+					pluginFleet = other;
+				}
+			}
 			
 			FIDConfig params = new FIDConfig();
 			params.justShowFleets = true;
 			params.showPullInText = withText;
 			plugin = new FleetInteractionDialogPluginImpl(params);
-			dialog.setInteractionTarget(primary);
+			//dialog.setInteractionTarget(primary);
+			dialog.setInteractionTarget(pluginFleet);
 			plugin.init(dialog);
+//			if (ongoingBattle) {
+//				plugin.setPlayerFleet(primary.getBattle().getPlayerCombined());
+//			}
 			dialog.setInteractionTarget(entity);
 			
 			
@@ -325,6 +447,11 @@ public class MarketCMD extends BaseCommandPlugin {
 			b = context.getBattle();
 			
 			BattleSide playerSide = b.pickSide(playerFleet);
+			if (playerSide != BattleSide.NO_JOIN) {
+				if (b.getOtherSideCombined(playerSide).isEmpty()) {
+					playerSide = BattleSide.NO_JOIN;
+				}
+			}
 			playerCanNotJoin = playerSide == BattleSide.NO_JOIN;
 			if (!playerCanNotJoin) {
 				playerOnDefenderSide = b.getSide(playerSide) == b.getSideFor(primary);
@@ -333,17 +460,45 @@ public class MarketCMD extends BaseCommandPlugin {
 				playerOnDefenderSide = false;
 			}
 
+			boolean otherHasStation = false;
 			if (playerSide != BattleSide.NO_JOIN) {
 				//for (CampaignFleetAPI fleet : b.getNonPlayerSide()) {
+				if (station != null) {
+					for (CampaignFleetAPI fleet : b.getSideFor(station)) {
+						if (!fleet.isStationMode()) {
+							hasNonStation = true;
+							hasOtherButInsignificant &= Misc.isInsignificant(fleet);
+						}
+					}
+				} else {
+					if (b.getNonPlayerSide() != null) {
+						for (CampaignFleetAPI fleet : b.getNonPlayerSide()) {
+							if (!fleet.isStationMode()) {
+								hasNonStation = true;
+								hasOtherButInsignificant &= Misc.isInsignificant(fleet);
+							}
+						}
+					} else {
+						hasNonStation = true;
+					}
+				}
+				
 				for (CampaignFleetAPI fleet : b.getOtherSide(playerSide)) {
 					if (!fleet.isStationMode()) {
-						hasNonStation = true;
-						break;
+						//hasNonStation = true;
+					} else {
+						otherHasStation = true;
 					}
 				}
 			}
 			
-			otherWantsToFight = hasStation || plugin.otherFleetWantsToFight(true);
+			if (!hasNonStation) hasOtherButInsignificant = false;
+			
+			//otherWantsToFight = hasStation || plugin.otherFleetWantsToFight(true);
+			
+			// inaccurate because it doesn't include the station in the "wants to fight" calculation, but, this is tricky
+			// and I don't want to break it right now
+			otherWantsToFight = otherHasStation || plugin.otherFleetWantsToFight(true);
 			
 			if (withText) {
 				if (hasStation) {
@@ -362,8 +517,18 @@ public class MarketCMD extends BaseCommandPlugin {
 					
 					
 					if (hasNonStation) {
-						text.addPara("The defending ships present are, with the support of the station, sufficient to prevent " +
+						if (ongoingBattle) {
+							text.addPara("There are defending ships present, but they are currently involved in a battle, "
+									+ "and you could take advantage of the distraction to launch a raid.");
+						} else {
+							if (hasOtherButInsignificant) {
+								text.addPara("Defending ships are present, but not in sufficient strength " +
+										 "to want to give battle or prevent any hostile action you might take.");
+							} else {
+								text.addPara("The defending ships present are, with the support of the station, sufficient to prevent " +
 									 "raiding as well.");
+							}
+						}
 					}
 				} else if (hasNonStation && otherWantsToFight) {
 					printStationState();
@@ -378,7 +543,9 @@ public class MarketCMD extends BaseCommandPlugin {
 				plugin.printOngoingBattleInfo();
 			}
 		}
-			
+
+		if (!hasNonStation) hasOtherButInsignificant = false;
+		
 		options.clearOptions();
 		
 		String engageText = "Engage the defenders";
@@ -411,8 +578,9 @@ public class MarketCMD extends BaseCommandPlugin {
 		options.addOption(engageText, ENGAGE);
 		
 		
-		temp.canRaid = !hasNonStation || (hasNonStation && !otherWantsToFight);
-		temp.canBombard = (!hasNonStation || (hasNonStation && !otherWantsToFight)) && !hasStation;
+		temp.canRaid = ongoingBattle || hasOtherButInsignificant || (hasNonStation && !otherWantsToFight) || !hasNonStation;
+		temp.canBombard = (hasOtherButInsignificant || (hasNonStation && !otherWantsToFight) || !hasNonStation) && !hasStation;
+		//temp.canSurpriseRaid = Misc.getDaysSinceLastRaided(market) < SURPRISE_RAID_TIMEOUT;
 		
 		boolean couldRaidIfNotDebug = temp.canRaid;
 		if (DebugFlags.MARKET_HOSTILITIES_DEBUG) {
@@ -421,22 +589,41 @@ public class MarketCMD extends BaseCommandPlugin {
 			}
 			temp.canRaid = true;
 			temp.canBombard = true;
+			//temp.canSurpriseRaid = true;
 		}
 			
 //		options.addOption("Launch a raid against the colony", RAID);
 //		options.addOption("Consider an orbital bombardment", BOMBARD);
-		options.addOption("Launch a raid against " + market.getName(), RAID);
-		options.addOption("Consider an orbital bombardment of " + market.getName(), BOMBARD);
+//		options.addOption("Launch a surprise raid against " + market.getName(), RAID_SURPRISE);
+		options.addOption("Launch a raid against " + market.getName() + "", RAID);
+		//dialog.setOptionColor(RAID_SURPRISE, Misc.getStoryOptionColor());
+		options.addOption("Consider an orbital bombardment of " + market.getName() + "", BOMBARD);
 		
 		if (!temp.canRaid) {
 			options.setEnabled(RAID, false);
 			options.setTooltip(RAID, "The presence of enemy fleets that are willing to offer battle makes a raid impossible.");
-		}
+		} 
+		
+//		if (!temp.canSurpriseRaid) {
+////			float surpriseRaidDays = (int) (SURPRISE_RAID_TIMEOUT - Misc.getDaysSinceLastRaided(market));
+////			if (surpriseRaidDays > 0) {
+////				surpriseRaidDays = (int) Math.round(surpriseRaidDays);
+////				if (surpriseRaidDays < 1) surpriseRaidDays = 1;
+////				String days = "days";
+////				if (surpriseRaidDays == 1) {
+////					days = "day";
+////				}
+////				//text.addPara("Your ground forces commander estimates that");
+////			}
+//			options.setEnabled(RAID_SURPRISE, false);
+//			options.setTooltip(RAID_SURPRISE, "This colony was raided within the last cycle and its ground defenses are on high alert, making a surprise raid impossible.");
+//		}
 		
 		if (!temp.canBombard) {
 			options.setEnabled(BOMBARD, false);
 			options.setTooltip(BOMBARD, "All defenses must be defeated to make a bombardment possible.");
 		}
+		
 		
 		//DEBUG = false;
 		if (temp.canRaid && getRaidCooldown() > 0) {// && couldRaidIfNotDebug) {
@@ -469,6 +656,19 @@ public class MarketCMD extends BaseCommandPlugin {
 			}
 		} else if (context == null || playerCanNotJoin || !otherWantsToFight) {
 			options.setEnabled(ENGAGE, false);
+			if (!otherWantsToFight) {
+				if (ongoingBattle && playerOnDefenderSide && !otherWantsToFight) {
+					options.setTooltip(ENGAGE, "The attackers are in disarray and not currently attempting to engage the station.");
+				} else {
+					if (playerCanNotJoin) {
+						options.setTooltip(ENGAGE, "You're unable to join this battle.");
+					} else if (primary == null) {
+						options.setTooltip(ENGAGE, "There are no defenders to engage.");
+					} else {
+						options.setTooltip(ENGAGE, "The defenders are refusing to give battle to defend the colony.");
+					}
+				}
+			}
 		}
 		
 		options.addOption("Go back", GO_BACK);
@@ -494,6 +694,8 @@ public class MarketCMD extends BaseCommandPlugin {
 	public static float getDefenderStr(MarketAPI market) {
 		StatBonus stat = market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD);
 		float defenderStr = (int) Math.round(stat.computeEffective(0f));
+		float added = getDefenderIncreaseValue(market);
+		defenderStr += added;
 		return defenderStr;
 	}
 	
@@ -504,6 +706,165 @@ public class MarketCMD extends BaseCommandPlugin {
 		float defenderStr = getDefenderStr(market);
 		return attackerStr / Math.max(1f, (attackerStr + defenderStr));
 	}
+
+	public static int getMarinesFor(MarketAPI market, int tokens) {
+		float defenderStr = getDefenderStr(market);
+		return getMarinesFor((int)defenderStr, tokens);
+	}
+	public static int getMarinesFor(int defenderStrength, int tokens) {
+//		mult = as / (as + ds);
+//		tokens = mult / re_per
+//
+//		t * re_per = as / (as + ds)
+//		t * re_per * (as + ds) = as;
+//		t * re_per * as + t * re_per * ds = as;
+//		t * re_per * ds = as * (1 - t * re_per)
+//		as = t * re_per * ds / (1 - t * re_per)
+		
+		
+		int marines = (int) Math.round((float) tokens * RE_PER_MARINE_TOKEN * 
+							(float) defenderStrength / (1f - (float) tokens * RE_PER_MARINE_TOKEN));
+		
+		return marines;
+	}
+	public static int getDisruptDaysPerToken(MarketAPI market, Industry industry) {
+		DisruptIndustryRaidObjectivePluginImpl obj = new DisruptIndustryRaidObjectivePluginImpl(market, industry);
+		return (int) Math.round(obj.getBaseDisruptDuration(1));
+	}
+	
+	
+	protected void raidNonMarket() {
+		float width = 350;
+		float opad = 10f;
+		float small = 5f;
+		
+		Color h = Misc.getHighlightColor();
+		
+		temp.nonMarket = true;
+		
+		float difficulty = memory.getFloat("$raidDifficulty");
+		temp.raidGoBackTrigger = memory.getString("$raidGoBackTrigger");
+		temp.raidContinueTrigger = memory.getString("$raidContinueTrigger");
+		
+		dialog.getVisualPanel().showImagePortion("illustrations", "raid_prepare", 640, 400, 0, 0, 480, 300);
+		
+		float marines = playerFleet.getCargo().getMarines();
+		float support = Misc.getFleetwideTotalMod(playerFleet, Stats.FLEET_GROUND_SUPPORT, 0f);
+		if (support > marines) support = marines;
+		
+		StatBonus attackerBase = new StatBonus(); 
+		StatBonus defenderBase = new StatBonus();
+		
+		//defenderBase.modifyFlatAlways("base", baseDef, "Base value for a size " + market.getSize() + " colony");
+		
+		attackerBase.modifyFlatAlways("core_marines", marines, "Marines on board");
+		attackerBase.modifyFlatAlways("core_support", support, "Fleet capability for ground support");
+		
+		StatBonus attacker = playerFleet.getStats().getDynamic().getMod(Stats.PLANETARY_OPERATIONS_MOD);
+		StatBonus defender = new StatBonus();
+		if (market != null && difficulty <= 0) defender = market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD);
+		
+		defender.modifyFlat("difficulty", difficulty, "Expected resistance");
+		
+		String surpriseKey = "core_surprise";
+//		if (temp.isSurpriseRaid) {
+//			//defender.modifyMult(surpriseKey, 0.1f, "Surprise raid");
+//			attacker.modifyMult(surpriseKey, SURPRISE_RAID_STRENGTH_MULT, "Surprise raid");
+//		}
+		
+		String increasedDefensesKey = "core_addedDefStr";
+		float added = 0;
+		if (market != null) added = getDefenderIncreaseValue(market);
+		if (added > 0) {
+			defender.modifyFlat(increasedDefensesKey, added, "Increased defender preparedness");
+		}
+		
+		float attackerStr = (int) Math.round(attacker.computeEffective(attackerBase.computeEffective(0f)));
+		float defenderStr = (int) Math.round(defender.computeEffective(defenderBase.computeEffective(0f)));
+		
+		temp.attackerStr = attackerStr;
+		temp.defenderStr = defenderStr;
+		
+		TooltipMakerAPI info = text.beginTooltip();
+		
+		info.setParaSmallInsignia();
+		
+		String has = faction.getDisplayNameHasOrHave();
+		String is = faction.getDisplayNameIsOrAre();
+		boolean hostile = faction.isHostileTo(Factions.PLAYER);
+		boolean tOn = playerFleet.isTransponderOn();
+		float initPad = 0f;
+		if (!hostile && !faction.isNeutralFaction()) {
+			if (tOn) {
+				info.addPara(Misc.ucFirst(faction.getDisplayNameWithArticle()) + " " + is + 
+						" not currently hostile. Your fleet's transponder is on, and carrying out a raid " +
+						"will result in open hostilities.",
+						initPad, faction.getBaseUIColor(), faction.getDisplayNameWithArticleWithoutArticle());
+			} else {
+				info.addPara(Misc.ucFirst(faction.getDisplayNameWithArticle()) + " " + is + 
+						" not currently hostile. Your fleet's transponder is off, and carrying out a raid " +
+						"will only result in a minor penalty to your standing.",
+						initPad, faction.getBaseUIColor(), faction.getDisplayNameWithArticleWithoutArticle());
+			}
+			initPad = opad;
+		}
+		
+		float sep = small;
+		sep = 3f;
+		info.addPara("Raid strength: %s", initPad, h, "" + (int)attackerStr);
+		info.addStatModGrid(width, 50, opad, small, attackerBase, true, statPrinter(false));
+		if (!attacker.isUnmodified()) {
+			info.addStatModGrid(width, 50, opad, sep, attacker, true, statPrinter(true));
+		}
+		
+		
+		info.addPara("Operation difficulty: %s", opad, h, "" + (int)defenderStr);
+		//info.addStatModGrid(width, 50, opad, small, defenderBase, true, statPrinter());
+		//if (!defender.isUnmodified()) {
+		info.addStatModGrid(width, 50, opad, small, defender, true, statPrinter(true));
+		//}
+		
+		defender.unmodifyFlat(increasedDefensesKey);
+		defender.unmodifyMult(surpriseKey);
+		attacker.unmodifyMult(surpriseKey);
+		
+		text.addTooltip();
+		
+		boolean hasForces = true;
+		temp.raidMult = attackerStr / Math.max(1f, (attackerStr + defenderStr));
+		temp.raidMult = Math.round(temp.raidMult * 100f) / 100f;
+		
+		{
+			Color eColor = h;
+			if (temp.raidMult < DISRUPTION_THRESHOLD && temp.raidMult < VALUABLES_THRESHOLD) {
+				eColor = Misc.getNegativeHighlightColor();
+			}
+			text.addPara("Projected raid effectiveness: %s",
+					eColor,
+					"" + (int)(temp.raidMult * 100f) + "%");
+			//"" + (int)Math.round(temp.raidMult * 100f) + "%");
+			if (temp.raidMult < VALUABLES_THRESHOLD) {
+				text.addPara("You do not have the forces to carry out an effective raid.");
+				hasForces = false;
+			}
+		}
+		
+		options.clearOptions();
+		
+		options.addOption("Designate raid objectives", RAID_VALUABLE);
+		
+		if (!hasForces) {
+			options.setEnabled(RAID_VALUABLE, false);
+		}
+		
+		options.addOption("Go back", RAID_GO_BACK);
+		options.setShortcut(RAID_GO_BACK, Keyboard.KEY_ESCAPE, false, false, false, true);
+	}
+	
+	
+//	protected void raidRare() {
+//		
+//	}
 	
 	protected void raidMenu() {
 		float width = 350;
@@ -511,6 +872,8 @@ public class MarketCMD extends BaseCommandPlugin {
 		float small = 5f;
 		
 		Color h = Misc.getHighlightColor();
+		
+		temp.nonMarket = false;
 		
 //		dialog.getVisualPanel().showPlanetInfo(market.getPrimaryEntity());
 //		dialog.getVisualPanel().finishFadeFast();
@@ -530,6 +893,12 @@ public class MarketCMD extends BaseCommandPlugin {
 		
 		StatBonus attacker = playerFleet.getStats().getDynamic().getMod(Stats.PLANETARY_OPERATIONS_MOD);
 		StatBonus defender = market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD);
+		
+		String surpriseKey = "core_surprise";
+//		if (temp.isSurpriseRaid) {
+//			//defender.modifyMult(surpriseKey, 0.1f, "Surprise raid");
+//			attacker.modifyMult(surpriseKey, SURPRISE_RAID_STRENGTH_MULT, "Surprise raid");
+//		}
 		
 		String increasedDefensesKey = "core_addedDefStr";
 		float added = getDefenderIncreaseValue(market);
@@ -583,28 +952,32 @@ public class MarketCMD extends BaseCommandPlugin {
 		//}
 			
 		defender.unmodifyFlat(increasedDefensesKey);
+		defender.unmodifyMult(surpriseKey);
+		attacker.unmodifyMult(surpriseKey);
 		
 		text.addTooltip();
 
 		boolean hasForces = true;
 		boolean canDisrupt = true;
 		temp.raidMult = attackerStr / Math.max(1f, (attackerStr + defenderStr));
+		temp.raidMult = Math.round(temp.raidMult * 100f) / 100f;
 		//temp.raidMult = 1f;
 		
 		
 		
-		if (temp.raidMult < 0.01f) {
-			text.addPara("You do not have the forces to carry out an effective raid.");
-			hasForces = false;
-		} else {
+		
+		{
 			//temp.failProb = 0f;
 			Color eColor = h;
-			if (temp.raidMult < FAIL_THRESHOLD) {
+			if (temp.raidMult < DISRUPTION_THRESHOLD && temp.raidMult < VALUABLES_THRESHOLD) {
 				eColor = Misc.getNegativeHighlightColor();
+			}
+			if (temp.raidMult < DISRUPTION_THRESHOLD) {
+				//eColor = Misc.getNegativeHighlightColor();
 				canDisrupt = false;
 				//temp.canFail = true;
 			} else if (temp.raidMult >= 0.7f) {
-				eColor = Misc.getPositiveHighlightColor();
+				//eColor = Misc.getPositiveHighlightColor();
 			}
 //			text.addPara("Projected raid effectiveness: %s. " +
 //					"This will determine the outcome of the raid, " +
@@ -613,9 +986,14 @@ public class MarketCMD extends BaseCommandPlugin {
 //					"" + (int)Math.round(temp.raidMult * 100f) + "%");
 			text.addPara("Projected raid effectiveness: %s",
 					eColor,
-					"" + (int)Math.round(temp.raidMult * 100f) + "%");
+					"" + (int)(temp.raidMult * 100f) + "%");
+					//"" + (int)Math.round(temp.raidMult * 100f) + "%");
 			if (!canDisrupt) {
 				text.addPara("The ground defenses are too strong for your forces to be able to cause long-term disruption.");
+			}
+			if (temp.raidMult < VALUABLES_THRESHOLD) {
+				text.addPara("You do not have the forces to carry out an effective raid to acquire valuables or achieve other objectives.");
+				hasForces = false;
 			}
 //			if (canDisrupt) {
 //			} else {
@@ -634,7 +1012,8 @@ public class MarketCMD extends BaseCommandPlugin {
 		options.clearOptions();
 		
 		//options.addOption("Try to acquire rare items, such as blueprints", RAID_RARE);
-		options.addOption("Try to acquire valuables, such as commodities, blueprints, and other items", RAID_VALUABLE);
+		//options.addOption("Try to acquire valuables, such as commodities, blueprints, and other items", RAID_VALUABLE);
+		options.addOption("Try to acquire valuables, such as commodities or blueprints, or achieve other objectives", RAID_VALUABLE);
 		options.addOption("Disrupt the operations of a specific industry or facility", RAID_DISRUPT);
 		
 		if (!hasForces) {
@@ -645,7 +1024,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		if (!hasForces || !canDisrupt) {
 			options.setEnabled(RAID_DISRUPT, false);
 			if (!canDisrupt) {
-				String pct = "" + (int)Math.round(FAIL_THRESHOLD * 100f) + "%";
+				String pct = "" + (int)Math.round(DISRUPTION_THRESHOLD * 100f) + "%";
 				options.setTooltip(RAID_DISRUPT, "Requires at least " + pct + " raid effectiveness.");
 				options.setTooltipHighlights(RAID_DISRUPT, pct);
 				options.setTooltipHighlightColors(RAID_DISRUPT, h);
@@ -663,128 +1042,153 @@ public class MarketCMD extends BaseCommandPlugin {
 	protected void raidValuable() {
 		temp.raidType = RaidType.VALUABLE;
 		
-		temp.raidValuables = computeRaidValuables();
+		List<GroundRaidObjectivePlugin> obj = new ArrayList<GroundRaidObjectivePlugin>();
 		
-		boolean withBP = false;
-		boolean withCores = false;
-		boolean heavyIndustry = false;
-		for (Industry curr : market.getIndustries()) {
-			if (curr.getSpec().hasTag(Industries.TAG_USES_BLUEPRINTS)) {
-				withBP = true;
-			}
-			if (curr.getSpec().hasTag(Industries.TAG_HEAVYINDUSTRY)) {
-				heavyIndustry = true;
-			}
-			if (curr.getAICoreId() != null) {
-				withCores = true;
-			}
+		// See: StandardGroundRaidObjectivesCreator; it creates the standard objectives with priority 0 below
+		final RaidType useType = !temp.nonMarket ? temp.raidType : RaidType.CUSTOM_ONLY;
+		//if (temp.nonMarket) useType = RaidType.CUSTOM_ONLY;
+		for (int i = 0; i < 10; i++) {
+			ListenerUtil.modifyRaidObjectives(market, entity, obj, useType, getNumMarineTokens(), i);
 		}
-		boolean military = market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY);
 		
-		List<CommodityOnMarketAPI> sorted = new ArrayList<CommodityOnMarketAPI>(temp.raidValuables.keySet());
-		Collections.sort(sorted, new Comparator<CommodityOnMarketAPI>() {
-			public int compare(CommodityOnMarketAPI o1, CommodityOnMarketAPI o2) {
-				return (int) Math.signum(temp.raidValuables.get(o2) - temp.raidValuables.get(o1));
-			}
-		});
-		
-		if (sorted.isEmpty()) {
-			text.addPara("After careful consideration, there do not appear to be any targets likely to yield much of value.");
+		if (obj.isEmpty()) {
+			text.addPara("After careful consideration, there do not appear to be any targets " +
+						 "likely to yield anything of value.");
 			addNeverMindOption();
 			return;
 		}
 		
-		int count = 0;
-		List<String> names = new ArrayList<String>();
-		List<CommodityOnMarketAPI> coms = new ArrayList<CommodityOnMarketAPI>();
-		for (CommodityOnMarketAPI com : sorted) {
-			names.add(com.getCommodity().getLowerCaseName());
-			coms.add(com);
-			count++;
-			if (count >= 5) break;
-		}
 		
-		String list = Misc.getAndJoined(names);
-		
-		text.addPara("The commander of your ground forces designates several warehouses and " +
-		 			 "other locations most likely to yield valuable items.");
-		
-		String is = "is";
-		String item = "item";
-		if (names.size() > 1) {
-			is = "are";
-			item = "items";
-		}
-		
-		Color h = Misc.getHighlightColor();
-		float targetValue = getBaseRaidValue();
-		targetValue = Misc.getRounded(targetValue);
-		
-		String [] highlights = new String[names.size() + 1];
-		for (int i = 0; i < names.size(); i++) {
-			if (i == 0) {
-				highlights[i] = Misc.ucFirst(names.get(i));
-			} else {
-				highlights[i] = names.get(i);
+		dialog.showGroundRaidTargetPicker("Select raid objectives", "Select", market, obj, 
+				new GroundRaidTargetPickerDelegate() {
+			public void pickedGroundRaidTargets(List<GroundRaidObjectivePlugin> data) {
+				float value = 0;
+				for (GroundRaidObjectivePlugin curr : data) {
+					value += curr.getProjectedCreditsValue();
+				}
+				Color h = Misc.getHighlightColor();
+				List<String> names = new ArrayList<String>();
+				for (GroundRaidObjectivePlugin curr : data) {
+					names.add(curr.getNameOverride() != null ? curr.getNameOverride() : curr.getName());
+				}
+				String list = Misc.getAndJoined(names);
+				String item = "objective";
+				if (names.size() > 1) {
+					item = "objectives";
+				}
+				
+				String isOrAre = "are";
+				String marinesStr = "marines";
+				if (playerCargo.getMarines() == 1) {
+					isOrAre = "is";
+					marinesStr = "marine";
+				}
+				//float losses = getProjectedMarineLossesFloat();
+				LabelAPI label = text.addPara("Your marine commander submits a plan for your approval. Losses during this " +
+						"operation are projected to be %s. There " + isOrAre + " a total of %s " +
+						marinesStr + " in your fleet.", 
+						getMarineLossesColor(data), getProjectedMarineLosses(data).toLowerCase(), 
+						Misc.getWithDGS(playerCargo.getMarines()));
+				label.setHighlightColors(getMarineLossesColor(data), Misc.getHighlightColor());
+				text.addPara(Misc.ucFirst(item) + " targeted: " + list + ".", h,
+						names.toArray(new String[0]));
+				if (value > 0) {
+					text.addPara("The estimated value of the items obtained is projected to be around %s.",
+							h, Misc.getDGSCredits(value));
+				}
+
+//				text.addPara("The marines are ready to go, awaiting your final confirmation. There are a total of %s " +
+//						"marines in your fleet.", Misc.getHighlightColor(), Misc.getWithDGS(playerCargo.getMarines()));
+				text.addPara("The marines are ready to go, awaiting your final confirmation.");
+				temp.objectives = data;
+				addConfirmOptions();
 			}
-		}
-		highlights[highlights.length - 1] = Misc.getDGSCredits(targetValue);
+			
+			public boolean isDisruptIndustryMode() {
+				return false;
+			}
+			
+			public boolean isCustomOnlyMode() {
+				return useType == RaidType.CUSTOM_ONLY;
+			}
+			
+			public void cancelledGroundRaidTargetPicking() {
+				
+			}
+			
+			public int getCargoSpaceNeeded(List<GroundRaidObjectivePlugin> data) {
+				float total = 0;
+				for (GroundRaidObjectivePlugin curr : data) {
+					total += curr.getCargoSpaceNeeded();
+				}
+				return (int) total;
+			}
+
+			public int getFuelSpaceNeeded(List<GroundRaidObjectivePlugin> data) {
+				float total = 0;
+				for (GroundRaidObjectivePlugin curr : data) {
+					total += curr.getFuelSpaceNeeded();
+				}
+				return (int) total;
+			}
+
+			public int getProjectedCreditsValue(List<GroundRaidObjectivePlugin> data) {
+				float total = 0;
+				for (GroundRaidObjectivePlugin curr : data) {
+					total += curr.getProjectedCreditsValue();
+				}
+				return (int) total;
+			}
+			
+			public int getNumMarineTokens() {
+				return MarketCMD.this.getNumMarineTokens();
+			}
+			
+			public MutableStat getMarineLossesStat(List<GroundRaidObjectivePlugin> data) {
+				return MarketCMD.this.getMarineLossesStat(data);
+			}
+			
+			public String getProjectedMarineLosses(List<GroundRaidObjectivePlugin> data) {
+				//return "" + (int) Math.round(getProjectedMarineLossesFloat());
+				float marines = playerFleet.getCargo().getMarines();
+				float losses = getAverageMarineLosses(data);
+				
+				float f = losses / Math.max(1f, marines);
+				
+				for (RaidDangerLevel level : RaidDangerLevel.values()) {
+					float test = level.marineLossesMult + (level.next().marineLossesMult - level.marineLossesMult) * 0.5f;
+					if (level == RaidDangerLevel.NONE) test = RaidDangerLevel.NONE.marineLossesMult;
+					if (test >= f) {
+						return level.lossesName;
+					}
+				}
+				return RaidDangerLevel.EXTREME.lossesName;
+			}
+			
+			public float getAverageMarineLosses(List<GroundRaidObjectivePlugin> data) {
+				return MarketCMD.this.getAverageMarineLosses(data);
+			}
 		
-//		heavyIndustry = true;
-//		withBP = true;
-		
-//		text.addPara(Misc.ucFirst(list) + " " + is + " the most likely " + item + 
-//				" to be obtained. The estimated value is projected to be around "
-//				+ highlights[highlights.length - 1] + ".", 
-//				h, highlights);
-		
-		ResourceCostPanelAPI cost = text.addCostPanel("Expected spoils", 
-				SalvageEntity.COST_HEIGHT, playerFaction.getBaseUIColor(), playerFaction.getDarkUIColor());
-		//cost.setNumberOnlyMode(true);
-		cost.setWithBorder(false);
-		cost.setAlignment(Alignment.LMID);
-		cost.setComWidthOverride(SalvageEntity.COST_HEIGHT);
-		for (CommodityOnMarketAPI com: coms) {
-			cost.addCost(com.getId(), "");
-		}
-		cost.update();
-		
-		String extra = "";
-		if (temp.shortageMult < 0.75f) {
-			extra = " The value is lower than it otherwise might be due to the colony suffering from various shortages.";
-		}
-		text.addPara("The estimated value of the common commodities obtained is projected to be around "
-				+ highlights[highlights.length - 1] + "." + extra, 
-				h, highlights[highlights.length - 1]);
-		
-		if (heavyIndustry && withBP) {
-			text.addPara("In addition, the colony has well-developed heavy industry, increasing the possibility of " +
-						 "obtaining some ship weapons and modspecs, as well as blueprints.", h,
-						 "ship weapons", "modspecs", "blueprints");
-		} else if (withBP) {
-			text.addPara("In addition, the colony has facilities that make use of blueprints, increasing the " +
-						 "possibility of some being obtained.", h,
-						 "blueprints");
-		} else if (heavyIndustry) {
-			// shouldn't happen in vanilla since heavy industry has the "uses_blueprints" tag
-			text.addPara("In addition, the colony has well-developed heavy industry, increasing the possibility of " +
-						 "obtaining some ship weapons and modspecs.", h,
-						 "ship weapons", "modspecs");
-		} else if (military) {
-			text.addPara("In addition, the colony has a military presence, increasing the possibility of " +
-						 "obtaining some ship weapons and modspecs.", h,
-						 "ship weapons", "modspecs");
-		} else {
-		}
-		
-		if (withCores) {
-			text.addPara("There are also trace indications of AI cores being used, which might be obtained as well.", h, "AI cores");
-		}
-		
-		
-		text.addPara("Your forces are ready to go, awaiting your final confirmation.");
-		
-		addConfirmOptions();
+			public Color getMarineLossesColor(List<GroundRaidObjectivePlugin> data) {
+				float marines = playerFleet.getCargo().getMarines();
+				float losses = getAverageMarineLosses(data);
+				
+					
+				float f = losses / Math.max(1f, marines);
+				if (f <= 0 && data.isEmpty())  return Misc.getGrayColor();
+				
+				for (RaidDangerLevel level : RaidDangerLevel.values()) {
+					float test = level.marineLossesMult + (level.next().marineLossesMult - level.marineLossesMult) * 0.5f;
+					if (test >= f) {
+						return level.color;
+					}
+				}
+				return RaidDangerLevel.EXTREME.color;
+			}
+			public String getRaidEffectiveness() {
+				return "" + (int)(temp.raidMult * 100f) + "%";
+			}
+		});
 	}
 	
 	protected void addBombardConfirmOptions() {
@@ -819,32 +1223,157 @@ public class MarketCMD extends BaseCommandPlugin {
 	protected void raidDisrupt() {
 		temp.raidType = RaidType.DISRUPT;
 		
-		List<Industry> targets = new ArrayList<Industry>();
-		for (Industry curr : market.getIndustries()) {
-			if (curr.getSpec().hasTag(Industries.TAG_UNRAIDABLE)) continue;
-			float dur = computeBaseDisruptDuration(curr);
-			if (dur <= 0) continue;
-			targets.add(curr);
+		// See: StandardGroundRaidObjectivesCreator; it creates the standard objectives with priority 0 below
+		List<GroundRaidObjectivePlugin> obj = new ArrayList<GroundRaidObjectivePlugin>();
+		for (int i = 0; i < 10; i++) {
+			ListenerUtil.modifyRaidObjectives(market, entity, obj, temp.raidType, getNumMarineTokens(), i);
 		}
 		
-		if (targets.isEmpty()) {
+		if (obj.isEmpty()) {
 			text.addPara("There are no industries or facilities present that could be disrupted by a raid.");
 			addNeverMindOption();
 			return;
 		}
 		
-		dialog.showIndustryPicker("Select raid target", "Select", market, targets, new IndustryPickerListener() {
-			public void pickedIndustry(Industry industry) {
-				raidDisruptIndustryPicked(industry);
+		
+		dialog.showGroundRaidTargetPicker("Select raid objectives", "Select", market, obj, 
+				new GroundRaidTargetPickerDelegate() {
+			public void pickedGroundRaidTargets(List<GroundRaidObjectivePlugin> data) {
+				float value = 0;
+				for (GroundRaidObjectivePlugin curr : data) {
+					value += curr.getProjectedCreditsValue();
+				}
+				Color h = Misc.getHighlightColor();
+				List<String> names = new ArrayList<String>();
+				for (GroundRaidObjectivePlugin curr : data) {
+					names.add(curr.getNameOverride() != null ? curr.getNameOverride() : curr.getName());
+				}
+				String list = Misc.getAndJoined(names);
+				String item = "objective";
+				if (names.size() > 1) {
+					item = "objectives";
+				}
+				
+				//float losses = getProjectedMarineLossesFloat();
+
+				text.addPara("Your marine commander submits a plan for your approval. Losses during this " +
+						"operation are projected to be %s.", 
+						getMarineLossesColor(data), getProjectedMarineLosses(data).toLowerCase());
+				text.addPara(Misc.ucFirst(item) + " targeted: " + list + ".", h,
+						names.toArray(new String[0]));
+				
+				if (value > 0) {
+					text.addPara("The estimated value of the items obtained is projected to be around %s.",
+							h, Misc.getDGSCredits(value));
+				}
+
+				text.addPara("The marines are ready to go, awaiting your final confirmation. There are a total of %s " +
+						"marines in your fleet.", Misc.getHighlightColor(), Misc.getWithDGS(playerCargo.getMarines()));
+				temp.objectives = data;
+				addConfirmOptions();
 			}
-			public void cancelledIndustryPicking() {
+			
+			public boolean isDisruptIndustryMode() {
+				return true;
+			}
+			
+			public void cancelledGroundRaidTargetPicking() {
 				
 			}
-		});
+			
+			public int getCargoSpaceNeeded(List<GroundRaidObjectivePlugin> data) {
+				float total = 0;
+				for (GroundRaidObjectivePlugin curr : data) {
+					total += curr.getCargoSpaceNeeded();
+				}
+				return (int) total;
+			}
+
+			public int getFuelSpaceNeeded(List<GroundRaidObjectivePlugin> data) {
+				float total = 0;
+				for (GroundRaidObjectivePlugin curr : data) {
+					total += curr.getFuelSpaceNeeded();
+				}
+				return (int) total;
+			}
+
+			public int getProjectedCreditsValue(List<GroundRaidObjectivePlugin> data) {
+				float total = 0;
+				for (GroundRaidObjectivePlugin curr : data) {
+					total += curr.getProjectedCreditsValue();
+				}
+				return (int) total;
+			}
+			
+			public int getNumMarineTokens() {
+				return MarketCMD.this.getNumMarineTokens();
+			}
+			
+			public MutableStat getMarineLossesStat(List<GroundRaidObjectivePlugin> data) {
+				return MarketCMD.this.getMarineLossesStat(data);
+			}
+			
+			public String getProjectedMarineLosses(List<GroundRaidObjectivePlugin> data) {
+				//return "" + (int) Math.round(getProjectedMarineLossesFloat());
+				float marines = playerFleet.getCargo().getMarines();
+				float losses = getAverageMarineLosses(data);
+				
+				float f = losses / Math.max(1f, marines);
+				
+				for (RaidDangerLevel level : RaidDangerLevel.values()) {
+					float test = level.marineLossesMult + (level.next().marineLossesMult - level.marineLossesMult) * 0.5f;
+					if (level == RaidDangerLevel.NONE) test = RaidDangerLevel.NONE.marineLossesMult;
+					if (test >= f) {
+						return level.lossesName;
+					}
+				}
+				return RaidDangerLevel.EXTREME.lossesName;
+			}
+			
+			public float getAverageMarineLosses(List<GroundRaidObjectivePlugin> data) {
+				return MarketCMD.this.getAverageMarineLosses(data);
+			}
+		
+			public Color getMarineLossesColor(List<GroundRaidObjectivePlugin> data) {
+				float marines = playerFleet.getCargo().getMarines();
+				float losses = getAverageMarineLosses(data);
+				
+					
+				float f = losses / Math.max(1f, marines);
+				if (f <= 0)  return Misc.getGrayColor();
+				
+				for (RaidDangerLevel level : RaidDangerLevel.values()) {
+					float test = level.marineLossesMult + (level.next().marineLossesMult - level.marineLossesMult) * 0.5f;
+					if (test >= f) {
+						return level.color;
+					}
+				}
+				return RaidDangerLevel.EXTREME.color;
+			}
+			public String getRaidEffectiveness() {
+				return "" + (int)(temp.raidMult * 100f) + "%";
+			}
+
+			public boolean isCustomOnlyMode() {
+				// TODO Auto-generated method stub
+				return false;
+			}
+		});		
+		
+		
+//		dialog.showIndustryPicker("Select raid target", "Select", market, targets, new IndustryPickerListener() {
+//			public void pickedIndustry(Industry industry) {
+//				raidDisruptIndustryPicked(industry);
+//			}
+//			public void cancelledIndustryPicking() {
+//				
+//			}
+//		});
 	}
 	
 	protected float computeBaseDisruptDuration(Industry ind) {
-		float dur = temp.raidMult * (Global.getSettings().getFloat("raidDisruptDuration") - ind.getDisruptedDays());
+		//float dur = getNumMarineTokens() * Global.getSettings().getFloat("raidDisruptDurationPerMarineToken") - ind.getDisruptedDays();
+		float dur = getNumMarineTokens() * ind.getSpec().getDisruptDanger().disruptionDays - ind.getDisruptedDays();
 		return (int) dur;
 	}
 	
@@ -904,36 +1433,10 @@ public class MarketCMD extends BaseCommandPlugin {
 		options.addOption(text, RAID_RESULT);
 	}
 	
-	protected Map<CommodityOnMarketAPI, Float> computeRaidValuables() {
-		Map<CommodityOnMarketAPI, Float> result = new HashMap<CommodityOnMarketAPI, Float>();
-		float totalDemand = 0f;
-		float totalShortage = 0f;
-		for (CommodityOnMarketAPI com : market.getAllCommodities()) {
-			if (com.isPersonnel()) continue;
-			if (com.getCommodity().hasTag(Commodities.TAG_META)) continue;
-			
-			int a = com.getAvailable();
-			if (a > 0) {
-				float num = BaseIndustry.getSizeMult(a) * com.getCommodity().getEconUnit() * 0.5f;
-				result.put(com, num);
-			}
-			
-			float max = com.getMaxDemand();
-			totalDemand += max;
-			totalShortage += Math.max(0, max - a);
-		}
-		
-		temp.shortageMult = 1f;
-		if (totalShortage > 0 && totalDemand > 0) {
-			temp.shortageMult = Math.max(0, totalDemand - totalShortage) / totalDemand;
-		}
-		
-		return result;
-	}
-
 	
 	public static final String DEFENDER_INCREASE_KEY = "$core_defenderIncrease";
 	public static float getDefenderIncreaseRaw(MarketAPI market) {
+		if (market == null) return 0f;
 		float e = market.getMemoryWithoutUpdate().getExpire(DEFENDER_INCREASE_KEY);
 		if (e < 0) e = 0;
 		return e;
@@ -941,6 +1444,7 @@ public class MarketCMD extends BaseCommandPlugin {
 	
 	public static void applyDefenderIncreaseFromRaid(MarketAPI market) {
 		float e = market.getMemoryWithoutUpdate().getExpire(DEFENDER_INCREASE_KEY);
+		if(e < 0) e = 0;
 		e += getRaidDefenderIncreasePerRaid();
 		float max = getRaidDefenderIncreaseMax();
 		if (e > max) e = max;
@@ -992,13 +1496,21 @@ public class MarketCMD extends BaseCommandPlugin {
 	
 	protected Random getRandom() {
 		String key = "$raid_random";
-		MemoryAPI mem = market.getMemoryWithoutUpdate();
+		MemoryAPI mem = null;
+		SectorEntityToken entity = null;
+		if (market != null) {
+			mem = market.getMemoryWithoutUpdate();
+			entity = market.getPrimaryEntity();
+		} else {
+			entity = this.entity;
+			mem = entity.getMemoryWithoutUpdate();
+		}
 		Random random = null;
 		if (mem.contains(key)) {
 			random = (Random) mem.get(key);
 		} else {
-			if (market.getPrimaryEntity() != null) {
-				long seed = Misc.getSalvageSeed(market.getPrimaryEntity());
+			if (entity != null) {
+				long seed = Misc.getSalvageSeed(entity);
 				seed *= (Global.getSector().getClock().getMonth() + 10);
 				random = new Random(seed);
 			} else {
@@ -1010,307 +1522,372 @@ public class MarketCMD extends BaseCommandPlugin {
 		return random;
 	}
 	
-	protected float getBaseRaidValue() {
-		float targetValue = 0f;
-		for (CommodityOnMarketAPI com : temp.raidValuables.keySet()) {
-			targetValue += temp.raidValuables.get(com) * com.getCommodity().getBasePrice();
-		}
-		targetValue *= 0.1f;
-		targetValue *= temp.raidMult;
-		targetValue *= temp.shortageMult;
-		return targetValue;
+	
+	public int getNumMarineTokens() {
+		//if (true) return MAX_MARINE_TOKENS;
+		int num = (int) Math.round(temp.raidMult / RE_PER_MARINE_TOKEN); 
+		if (num < MIN_MARINE_TOKENS) num = MIN_MARINE_TOKENS;
+		if (num > MAX_MARINE_TOKENS) num = MAX_MARINE_TOKENS;
+		return num;
 	}
 	
-	protected void raidConfirm() {
+	protected MutableStat getMarineLossesStat(List<GroundRaidObjectivePlugin> data) {
+		MutableStat stat = new MutableStat(1f);
+		
+		float total = 0f;
+		float assignedTokens = 0f;
+		for (GroundRaidObjectivePlugin curr : data) {
+			RaidDangerLevel danger = curr.getDangerLevel();
+			total += danger.marineLossesMult * (float) curr.getMarinesAssigned();
+			assignedTokens += curr.getMarinesAssigned();
+		}
+		
+		float danger = total / Math.max(1f, assignedTokens);
+		
+		float hazard = 1f;
+		if (market != null) hazard = market.getHazardValue();
+		
+		float reMult = 1f;
+		if (temp.raidMult > MIN_RE_TO_REDUCE_MARINE_LOSSES) {
+			float extra = (temp.raidMult - MIN_RE_TO_REDUCE_MARINE_LOSSES) / (1f - MIN_RE_TO_REDUCE_MARINE_LOSSES);
+			extra = MAX_MARINE_LOSS_REDUCTION_MULT + (1f - MAX_MARINE_LOSS_REDUCTION_MULT) * (1f - extra);
+			reMult = extra;
+		} else if (temp.raidMult < RE_PER_MARINE_TOKEN) {
+			float extra = 1f + (RE_PER_MARINE_TOKEN - temp.raidMult) / RE_PER_MARINE_TOKEN;
+			reMult = extra;
+		}
+
+		float reservesMult = 1f;
+		float maxTokens = getNumMarineTokens();
+		if (maxTokens > assignedTokens) {
+			reservesMult = 1f - (maxTokens - assignedTokens) * LOSS_REDUCTION_PER_RESERVE_TOKEN;
+			reservesMult = Math.max(0.5f, reservesMult);
+		}
+		
+		float e = getDefenderIncreaseRaw(market);
+		float per = getRaidDefenderIncreasePerRaid();
+		float prep = e / per * LOSS_INCREASE_PER_RAID;
+		
+		stat.modifyMultAlways("danger", danger, "Danger level of objectives");
+		stat.modifyMult("hazard", hazard, "Colony hazard rating");
+		if (reMult < 1f) {
+			stat.modifyMultAlways("reMult", reMult, "High raid effectiveness");
+		} else if (reMult > 1f) {
+			stat.modifyMultAlways("reMult", reMult, "Low raid effectiveness");
+		}
+		
+		if (reservesMult < 1f && assignedTokens > 0) {
+			stat.modifyMultAlways("reservesMult", reservesMult, "Forces held in reserve");
+		}
+//		else if (reservesMult >= 1f && assignedTokens > 0) {
+//			stat.modifyMultAlways("reservesMult", 1f, "No forces held in reserve");
+//		}
+		
+		stat.modifyMult("prep", 1f + prep, "Increased defender preparedness");
+		
+		stat.applyMods(playerFleet.getStats().getDynamic().getStat(Stats.PLANETARY_OPERATIONS_CASUALTIES_MULT));
+		
+		ListenerUtil.modifyMarineLossesStatPreRaid(market, data, stat);
+		
+		return stat;
+	}
+	
+	
+
+	protected float getAverageMarineLosses(List<GroundRaidObjectivePlugin> data) {
+		MutableStat stat = getMarineLossesStat(data);
+		float mult = stat.getModifiedValue();
+		if (mult > MAX_MARINE_LOSSES) {
+			mult = MAX_MARINE_LOSSES;
+		}
+		
+		float marines = playerFleet.getCargo().getMarines();
+		return marines * mult;
+	}
+	
+	protected void addMilitaryResponse() {
+		if (market == null) return;
+		
+		if (!market.getFaction().getCustomBoolean(Factions.CUSTOM_NO_WAR_SIM)) {
+			MilitaryResponseParams params = new MilitaryResponseParams(ActionType.HOSTILE, 
+					"player_ground_raid_" + market.getId(), 
+					market.getFaction(),
+					market.getPrimaryEntity(),
+					0.75f,
+					30f);
+			market.getContainingLocation().addScript(new MilitaryResponseScript(params));
+		}
+		List<CampaignFleetAPI> fleets = market.getContainingLocation().getFleets();
+		for (CampaignFleetAPI other : fleets) {
+			if (other.getFaction() == market.getFaction()) {
+				MemoryAPI mem = other.getMemoryWithoutUpdate();
+				Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, "raidAlarm", true, 1f);
+			}
+		}
+	}
+	
+	protected void raidConfirm(boolean secret) {
 		if (temp.raidType == null) {
 			raidNeverMind();
 			return;
 		}
 		
-		if (temp.raidType == RaidType.VALUABLE) {
-			dialog.getVisualPanel().showImagePortion("illustrations", "raid_valuables_result", 640, 400, 0, 0, 480, 300);
-		} else if (temp.raidType == RaidType.DISRUPT) {
-			dialog.getVisualPanel().showImagePortion("illustrations", "raid_disrupt_result", 640, 400, 0, 0, 480, 300);
-		}
+//		if (temp.raidType == RaidType.VALUABLE) {
+//			dialog.getVisualPanel().showImagePortion("illustrations", "raid_valuables_result", 640, 400, 0, 0, 480, 300);
+//		} else if (temp.raidType == RaidType.DISRUPT) {
+//			dialog.getVisualPanel().showImagePortion("illustrations", "raid_disrupt_result", 640, 400, 0, 0, 480, 300);
+//		}
 		
 		Random random = getRandom();
 		//random = new Random();
 		
 		if (!DebugFlags.MARKET_HOSTILITIES_DEBUG) {
-			Misc.increaseMarketHostileTimeout(market, 30f);
+			Misc.increaseMarketHostileTimeout(market, HOSTILE_ACTIONS_TIMEOUT_DAYS);
 		}
 		
-		applyDefenderIncreaseFromRaid(market);
+		addMilitaryResponse();
+		
+		
+		if (market != null) {
+			applyDefenderIncreaseFromRaid(market);
+		}
 		
 		setRaidCooldown(getRaidCooldownMax());
 
-		String reason = "Recently raided";
-		if (Misc.isPlayerFactionSetUp()) {
-			reason = playerFaction.getDisplayName() + " raid";
-		}
 		//RecentUnrest.get(market).add(3, Misc.ucFirst(reason));
-		int stabilityPenalty = applyRaidStabiltyPenalty(market, reason, temp.raidMult);
-		Misc.setFlagWithReason(market.getMemoryWithoutUpdate(), MemFlags.RECENTLY_RAIDED, 
-							   Factions.PLAYER, true, 30f);
+		int stabilityPenalty = 0;
+		if (!temp.nonMarket) {
+			String reason = "Recently raided";
+			if (Misc.isPlayerFactionSetUp()) {
+				reason = playerFaction.getDisplayName() + " raid";
+			}
+			stabilityPenalty = applyRaidStabiltyPenalty(market, reason, temp.raidMult);
+			Misc.setFlagWithReason(market.getMemoryWithoutUpdate(), MemFlags.RECENTLY_RAIDED, 
+								   Factions.PLAYER, true, 30f);
+			Misc.setRaidedTimestamp(market);
+		}
 		
 		int marines = playerFleet.getCargo().getMarines();
-		float probOfLosses = 1f - temp.raidMult * 0.5f;
-		if (probOfLosses < 0.1f) {
-			probOfLosses = 0.1f;
-		}
-		
-		if (temp.defenderStr > 1000f * (1f + 0.25f * random.nextFloat())) {
-			probOfLosses = 1f; // if there are enough defenses, /some/ losses are almost certain
-		}
+		float probOfLosses = 1f;
 		
 		int losses = 0;
 		if (random.nextFloat() < probOfLosses) {
-			float lossMult = 1f - temp.raidMult;
-			if (lossMult < 0.01f) {
-				lossMult = 0.01f;
+			float averageLosses = getAverageMarineLosses(temp.objectives);
+			float variance = averageLosses / 4f;
+			
+			//float randomizedLosses = averageLosses - variance + variance * 2f * random.nextFloat();
+			float randomizedLosses = StarSystemGenerator.getNormalRandom(
+							random, averageLosses - variance, averageLosses + variance);
+			if (randomizedLosses < 1f) {
+				randomizedLosses = random.nextFloat() < randomizedLosses ? 1f : 0f;
 			}
-			float lossBase = Math.min(marines, temp.defenderStr);
-			losses = (int) (lossBase * 0.5f * lossMult * random.nextFloat());
+			randomizedLosses = Math.round(randomizedLosses);
+			losses = (int) randomizedLosses;
+			
+			if (losses < 0) losses = 0;
+			if (losses > marines) losses = marines;
 		}
 		
 		//losses = random.nextInt(marines / 2);
 		
 		if (losses <= 0) {
-			text.addPara("Your raiding forces have not suffered any losses.");
+			text.addPara("Your forces have not suffered any casualties.");
+			temp.marinesLost = 0;
 		} else {
-			//text.addPara("You've lost %s marines during the raid.", Misc.getNegativeHighlightColor(), "" + losses);
-			//text.addPara("You've lost %s marines during the raid.", Misc.getHighlightColor(), "" + losses);
 			text.addPara("You forces have suffered casualties during the raid.", Misc.getHighlightColor(), "" + losses);
 			playerFleet.getCargo().removeMarines(losses);
 			temp.marinesLost = losses;
 			AddRemoveCommodity.addCommodityLossText(Commodities.MARINES, losses, text);
 		}
 		
-		boolean tOn = playerFleet.isTransponderOn();
-		boolean hostile = faction.isHostileTo(Factions.PLAYER);
-		CustomRepImpact impact = new CustomRepImpact();
-		impact.delta = market.getSize() * -0.01f * 1f;
-		if (!hostile && tOn) {
-			impact.ensureAtBest = RepLevel.HOSTILE;
+		
+		if (!secret) {
+			boolean tOn = playerFleet.isTransponderOn();
+			boolean hostile = faction.isHostileTo(Factions.PLAYER);
+			CustomRepImpact impact = new CustomRepImpact();
+			if (market != null) {
+				impact.delta = market.getSize() * -0.01f * 1f;
+			} else {
+				impact.delta = -0.01f;
+			}
+			if (!hostile && tOn) {
+				impact.ensureAtBest = RepLevel.HOSTILE;
+			}
+			if (impact.delta != 0 && !faction.isNeutralFaction()) {
+				Global.getSector().adjustPlayerReputation(
+						new RepActionEnvelope(RepActions.CUSTOM, 
+							impact, null, text, true, true),
+							faction.getId());
+			}
 		}
-		Global.getSector().adjustPlayerReputation(
-				new RepActionEnvelope(RepActions.CUSTOM, 
-					impact, null, text, true, true),
-					faction.getId());
 		
 		if (stabilityPenalty > 0) {
 			text.addPara("Stability of " + market.getName() + " reduced by %s.",
 					Misc.getHighlightColor(), "" + stabilityPenalty);
 		}
 		
-		String contText = null;
+//		if (!temp.nonMarket) {
+//			if (temp.raidType == RaidType.VALUABLE || true) {
+//				text.addPara("The raid was successful in achieving its objectives.");
+//			}
+//		}
+		
+		CargoAPI result = performRaid(random, temp.raidMult);
+		
+		if (market != null) market.reapplyIndustries();
+		
+		result.sort();
+		result.updateSpaceUsed();
+		
+		temp.raidLoot = result;
+		
+//		int raidCredits = (int)result.getCredits().get();
+//		if (raidCredits < 0) raidCredits = 0;
+//		
+//		//result.clear();
+//		if (raidCredits > 0) {
+//			AddRemoveCommodity.addCreditsGainText(raidCredits, text);
+//			playerFleet.getCargo().getCredits().add(raidCredits);
+//		}
+		
+		if (temp.xpGained > 0) {
+			Global.getSector().getPlayerStats().addXP(temp.xpGained, dialog.getTextPanel());
+		}
 		if (temp.raidType == RaidType.VALUABLE) {
-			float targetValue = getBaseRaidValue();
-			CargoAPI result = Global.getFactory().createCargo(true);
-			
-			WeightedRandomPicker<CommodityOnMarketAPI> picker = new WeightedRandomPicker<CommodityOnMarketAPI>(random);
-			for (CommodityOnMarketAPI com : temp.raidValuables.keySet()) {
-				picker.add(com, temp.raidValuables.get(com));
+			if (result.getTotalCrew() + result.getSpaceUsed() + result.getFuel() < 10) {
+				dialog.getVisualPanel().showImagePortion("illustrations", "raid_covert_result", 640, 400, 0, 0, 480, 300);
+			} else {
+				dialog.getVisualPanel().showImagePortion("illustrations", "raid_valuables_result", 640, 400, 0, 0, 480, 300);
+			}
+		} else if (temp.raidType == RaidType.DISRUPT) {
+			dialog.getVisualPanel().showImagePortion("illustrations", "raid_disrupt_result", 640, 400, 0, 0, 480, 300);
+		}
+		
+		boolean withContinue = false;
+		
+		for (GroundRaidObjectivePlugin curr : temp.objectives) {
+			if (curr.withContinueBeforeResult()) {
+				withContinue = true;
+				break;
+			}
+		}
+		
+//		if (market.getMemoryWithoutUpdate().getBoolean("$raid_showContinueBeforeResult"))
+//		withContinue = true;
+		
+		if (withContinue) {
+			options.clearOptions();
+			options.addOption("Continue", RAID_CONFIRM_CONTINUE);
+		} else {
+			raidConfirmContinue();
+		}
+	}
+	
+	public void raidConfirmContinue() {
+		//Random random = getRandom();
+		String contText = null;
+		if (temp.raidType == RaidType.VALUABLE || true) {
+			if (!temp.nonMarket) {
+				if (temp.raidType == RaidType.VALUABLE || true) {
+					//text.addPara("The raid was successful in achieving its objectives.");
+				}
 			}
 			
-			//float chunks = 10f;
-			float chunks = temp.raidValuables.size();
-			if (chunks > 6) chunks = 6;
-			for (int i = 0; i < chunks; i++) {
-				float chunkValue = targetValue * 1f / chunks;
-				float randMult = StarSystemGenerator.getNormalRandom(random, 0.5f, 1.5f);
-				chunkValue *= randMult;
-				
-				CommodityOnMarketAPI pick = picker.pick();
-				int quantity = (int) (chunkValue / pick.getCommodity().getBasePrice());
-				if (quantity <= 0) continue;
-				
-				pick.addTradeModMinus("raid_" + Misc.genUID(), -quantity, BaseSubmarketPlugin.TRADE_IMPACT_DAYS);
-				
-				result.addCommodity(pick.getId(), quantity);
-			}
+//			CargoAPI result = performRaid(random, temp.raidMult);
+//			
+//			if (market != null) market.reapplyIndustries();
+//			
+//			result.sort();
+//			
+//			temp.raidLoot = result;
 			
-			raidSpecialItems(result, random);
-			
-			result.sort();
-			
-			temp.raidLoot = result;
-			
-			temp.raidCredits = (int)(targetValue * 0.1f * StarSystemGenerator.getNormalRandom(random, 0.5f, 1.5f));
-			if (temp.raidCredits < 2) temp.raidCredits = 2;
+			int raidCredits = (int)temp.raidLoot.getCredits().get();
+			if (raidCredits < 0) raidCredits = 0;
 			
 			//result.clear();
-			if (result.isEmpty()) {
-				text.addPara("Unfortunately, the raid was not successful in acquiring any meaningful quantity of goods.");
-			} else {
-				text.addPara("The raid was successful in obtaining a quantity of various items, as well as some credits.");
-				AddRemoveCommodity.addCreditsGainText(temp.raidCredits, text);
-				playerFleet.getCargo().getCredits().add(temp.raidCredits);
-				contText = "Pick through the spoils";
+			if (raidCredits > 0) {
+				AddRemoveCommodity.addCreditsGainText(raidCredits, text);
+				playerFleet.getCargo().getCredits().add(raidCredits);
 			}
 			
-			ListenerUtil.reportRaidForValuablesFinishedBeforeCargoShown(dialog, market, temp, temp.raidLoot);
+//			if (temp.xpGained > 0) {
+//				Global.getSector().getPlayerStats().addXP(temp.xpGained, dialog.getTextPanel());
+//			}
 			
-		} else if (temp.raidType == RaidType.DISRUPT) {
-			float dur = computeBaseDisruptDuration(temp.target);
-			dur *= StarSystemGenerator.getNormalRandom(random, 1f, 1.25f);
-			if (dur < 2) dur = 2;
-			float already = temp.target.getDisruptedDays();
-			temp.target.setDisrupted(already + dur);
+			if (!temp.raidLoot.isEmpty()) {
+				contText = "Pick through the spoils";
+			}
+			temp.contText = contText;
 			
-			text.addPara("The raid was successful in disrupting " + temp.target.getNameForModifier() + " operations." +
-					" It will take at least %s days for normal operations to resume.",
-					Misc.getHighlightColor(), "" + (int) Math.round(already + dur));
+			float assignedTokens = 0f;
+			List<Industry> disrupted = new ArrayList<Industry>();
+			for (GroundRaidObjectivePlugin curr : temp.objectives) {
+				assignedTokens += curr.getMarinesAssigned();
+				if (curr instanceof DisruptIndustryRaidObjectivePluginImpl && curr.getSource() != null) {
+					disrupted.add(curr.getSource());
+				}
+			}
 			
-			ListenerUtil.reportRaidToDisruptFinished(dialog, market, temp, temp.target);
+			RaidResultData data = new RaidResultData();
+			data.market = market;
+			data.entity = entity;
+			data.objectives = temp.objectives;
+			data.type = temp.raidType;
+			data.raidEffectiveness = temp.raidMult;
+			data.xpGained = temp.xpGained;
+			data.marinesTokensInReserve = (int) Math.round(getNumMarineTokens() - assignedTokens);
+			data.marinesTokens = getNumMarineTokens();
+			data.marinesLost = temp.marinesLost;
+			
+			ListenerUtil.reportRaidObjectivesAchieved(data, dialog, memoryMap);
+			
+			if (temp.raidType == RaidType.VALUABLE) {
+				ListenerUtil.reportRaidForValuablesFinishedBeforeCargoShown(dialog, market, temp, temp.raidLoot);
+			} else if (temp.raidType == RaidType.DISRUPT) {
+				for (Industry curr : disrupted) {
+					ListenerUtil.reportRaidToDisruptFinished(dialog, market, temp, curr);
+				}
+			}
+			
 		}
 		
 		Global.getSoundPlayer().playUISound("ui_raid_finished", 1f, 1f);
 		
-		addContinueOption(contText);
+		FireBest.fire(null, dialog, memoryMap, "PostGroundRaid");
 	}
 	
-	protected void raidSpecialItems(CargoAPI cargo, Random random) {
-		float p = temp.raidMult * 0.2f;
+	protected CargoAPI performRaid(Random random, float raidEffectiveness) {
+		CargoAPI result = Global.getFactory().createCargo(true);
 		
-		boolean withBP = false;
-		boolean heavyIndustry = false;
-		for (Industry curr : market.getIndustries()) {
-			String id = curr.getAICoreId();
-			if (id != null && random.nextFloat() < p) {
-				curr.setAICoreId(null);
-				cargo.addCommodity(id, 1);
-			}
+		float leftoverRE = (int)Math.round(raidEffectiveness * 100f) % (int)Math.round(RE_PER_MARINE_TOKEN * 100f);
+		leftoverRE /= 100f;
+		if (raidEffectiveness < RE_PER_MARINE_TOKEN) {
+			//leftoverRE = leftoverRE - RE_PER_MARINE_TOKEN;
+			leftoverRE = 0f;
+		}
+		
+		long baseSeed = random.nextLong();
+		
+		int xp = 0;
+		for (GroundRaidObjectivePlugin plugin : temp.objectives) {
+			float lootMult = 1f + leftoverRE / Math.max(RE_PER_MARINE_TOKEN, raidEffectiveness);
 			
-			SpecialItemData special = curr.getSpecialItem();
-			if (special != null && random.nextFloat() < p) {
-				curr.setSpecialItem(null);
-				cargo.addSpecial(special, 1);
-			}
-			
-			if (curr.getSpec().hasTag(Industries.TAG_USES_BLUEPRINTS)) {
-				withBP = true;
-			}
-			if (curr.getSpec().hasTag(Industries.TAG_HEAVYINDUSTRY)) {
-				heavyIndustry = true;
-			}
+			Random curr = new Random(Misc.seedUniquifier() ^ (baseSeed * plugin.getClass().getName().hashCode()));
+			xp += plugin.performRaid(result, curr, lootMult, dialog.getTextPanel());
 		}
-		market.reapplyIndustries();
+
+		temp.xpGained = xp;
 		
-		boolean military = market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY);
-		
-		String ship =    "MarketCMD_ship____";
-		String weapon =  "MarketCMD_weapon__";
-		String fighter = "MarketCMD_fighter_";
-		
-		// blueprints
-		if (withBP) {
-			WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>();
-			for (String id : market.getFaction().getKnownShips()) {
-				if (playerFaction.knowsShip(id)) continue;
-				picker.add(ship + id, 1f);
-			}
-			for (String id : market.getFaction().getKnownWeapons()) {
-				if (playerFaction.knowsWeapon(id)) continue;
-				picker.add(weapon + id, 1f);
-			}
-			for (String id : market.getFaction().getKnownFighters()) {
-				if (playerFaction.knowsFighter(id)) continue;
-				picker.add(fighter + id, 1f);
-			}
-			
-			//int num = getNumPicks(random, temp.raidMult * 0.25f, temp.raidMult * 0.5f);
-			int num = getNumPicks(random, temp.raidMult + 0.5f, temp.raidMult * 0.5f);
-			for (int i = 0; i < num && !picker.isEmpty(); i++) {
-				String id = picker.pickAndRemove();
-				if (id == null) continue;
-				
-				if (id.startsWith(ship)) {
-					String specId = id.substring(ship.length());
-					if (Global.getSettings().getHullSpec(specId).hasTag(Tags.NO_BP_DROP)) continue;
-					cargo.addSpecial(new SpecialItemData(Items.SHIP_BP, specId), 1);
-				} else if (id.startsWith(weapon)) {
-					String specId = id.substring(weapon.length());
-					if (Global.getSettings().getWeaponSpec(specId).hasTag(Tags.NO_BP_DROP)) continue;
-					cargo.addSpecial(new SpecialItemData(Items.WEAPON_BP, specId), 1);
-				} else if (id.startsWith(fighter)) {
-					String specId = id.substring(fighter.length());
-					if (Global.getSettings().getFighterWingSpec(specId).hasTag(Tags.NO_BP_DROP)) continue;
-					cargo.addSpecial(new SpecialItemData(Items.FIGHTER_BP, specId), 1);
-				}
-			}
-		}
-		
-		// modspecs
-		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>();
-		for (String id : market.getFaction().getKnownHullMods()) {
-			if (playerFaction.knowsHullMod(id) && !DebugFlags.ALLOW_KNOWN_HULLMOD_DROPS) continue;
-			picker.add(id, 1f);
-		}
-		
-		// more likely to get at least one modspec, but not likely to get many
-		int num = getNumPicks(random, temp.raidMult + 0.5f, temp.raidMult * 0.25f);
-		for (int i = 0; i < num && !picker.isEmpty(); i++) {
-			String id = picker.pickAndRemove();
-			if (id == null) continue;
-			cargo.addSpecial(new SpecialItemData(Items.MODSPEC, id), 1);
-		}
-		
-		
-		// weapons and fighters
-		picker = new WeightedRandomPicker<String>();
-		for (String id : market.getFaction().getKnownWeapons()) {
-			WeaponSpecAPI w = Global.getSettings().getWeaponSpec(id);
-			if (w.hasTag("no_drop")) continue;
-			if (w.getAIHints().contains(AIHints.SYSTEM)) continue;
-			
-			if (!military && !heavyIndustry && 
-					(w.getTier() > 1 || w.getSize() == WeaponSize.LARGE)) continue;
-			
-			picker.add(weapon + id, w.getRarity());
-		}
-		for (String id : market.getFaction().getKnownFighters()) {
-			FighterWingSpecAPI f = Global.getSettings().getFighterWingSpec(id);
-			if (f.hasTag(Tags.WING_NO_DROP)) continue;
-			
-			if (!military && !heavyIndustry && f.getTier() > 0) continue;
-			
-			picker.add(fighter + id, f.getRarity());
-		}
-		
-		
-		num = getNumPicks(random, temp.raidMult + 0.5f, temp.raidMult * 0.25f);
-		if (military || heavyIndustry) {
-			num += Math.round(market.getCommodityData(Commodities.SHIPS).getAvailable() * temp.raidMult);
-		}
-		
-		for (int i = 0; i < num && !picker.isEmpty(); i++) {
-			String id = picker.pickAndRemove();
-			if (id == null) continue;
-			
-			if (id.startsWith(weapon)) {
-				cargo.addWeapons(id.substring(weapon.length()), 1);
-			} else if (id.startsWith(fighter)) {
-				cargo.addFighters(id.substring(fighter.length()), 1);
-			}
-		}
-		
-	}
-	
-	protected int getNumPicks(Random random, float pAny, float pMore) {
-		if (random.nextFloat() >= pAny) return 0;
-		
-		int result = 1;
-		for (int i = 0; i < 10; i++) {
-			if (random.nextFloat() >= pMore) break;
-			result++;
-		}
 		return result;
 	}
 	
 	
 	protected void raidNeverMind() {
-		raidMenu();
+		if (temp.nonMarket) {
+			raidNonMarket();
+		} else {
+			raidMenu();
+		}
 	}
 	
 	
@@ -1414,9 +1991,8 @@ public class MarketCMD extends BaseCommandPlugin {
 				
 				if (plugin.getContext() instanceof FleetEncounterContext) {
 					FleetEncounterContext context = (FleetEncounterContext) plugin.getContext();
-					if (context.didPlayerWinEncounter()) {
+					if (context.didPlayerWinMostRecentBattleOfEncounter()) {
 						// may need to do something here re: station being defeated & timed out
-						
 						//FireBest.fire(null, dialog, memoryMap, "BeatDefendersContinue");
 					} else {
 						//dialog.dismiss();
@@ -1620,12 +2196,10 @@ public class MarketCMD extends BaseCommandPlugin {
 		boolean tOn = playerFleet.isTransponderOn();
 		float initPad = 0f;
 		if (!hostile) {
-			if (tOn) {
-				info.addPara(Misc.ucFirst(faction.getDisplayNameWithArticle()) + " " + is + 
-						" not currently hostile. A bombardment is a major enough hostile action that it can't be concealed, " +
-						"regardless of transponder status.",
-						initPad, faction.getBaseUIColor(), faction.getDisplayNameWithArticleWithoutArticle());
-			}
+			info.addPara(Misc.ucFirst(faction.getDisplayNameWithArticle()) + " " + is + 
+					" not currently hostile. A bombardment is a major enough hostile action that it can't be concealed, " +
+					"regardless of transponder status.",
+					initPad, faction.getBaseUIColor(), faction.getDisplayNameWithArticleWithoutArticle());
 			initPad = opad;
 		}
 
@@ -1684,19 +2258,63 @@ public class MarketCMD extends BaseCommandPlugin {
 	
 	protected void addConfirmOptions() {
 		options.clearOptions();
-		options.addOption("Launch raid", RAID_CONFIRM);
+//		if (temp.isSurpriseRaid) {
+//			options.addOption("Launch surprise raid", RAID_CONFIRM);
+//		} else {
+			//options.addOption("Launch full-scale raid", RAID_CONFIRM);
+			options.addOption("Launch raid", RAID_CONFIRM);
+//		}
+		
+		boolean tOn = playerFleet.isTransponderOn();
+			
+		//if (!temp.nonMarket) {
+		if (market != null && !market.isPlanetConditionMarketOnly()) {
+			options.addOption("Make special efforts to keep your preparations secret, then proceed", RAID_CONFIRM_STORY);
+			String req = "";
+			if (tOn) {
+				req = "\n\nRequires transponder to be turned off";
+				options.setEnabled(RAID_CONFIRM_STORY, false);
+			}
+			options.setTooltip(RAID_CONFIRM_STORY, "Suffer no penalty to your standing with " + market.getFaction().getDisplayNameWithArticle() + ". " +
+					"Will not help if forced to turn your transponder on by patrols arriving to investigate the raid." + req);
+			options.setTooltipHighlightColors(RAID_CONFIRM_STORY, market.getFaction().getBaseUIColor(), Misc.getNegativeHighlightColor());
+			options.setTooltipHighlights(RAID_CONFIRM_STORY, market.getFaction().getDisplayNameWithArticleWithoutArticle(), req.isEmpty() ? req : req.substring(2));
+			StoryOptionParams params = new StoryOptionParams(RAID_CONFIRM_STORY, 1, "noRepPenaltyRaid", Sounds.STORY_POINT_SPEND_LEADERSHIP,
+					"Secretly raided " + market.getName() + "");
+			SetStoryOption.set(dialog, params, 
+				new BaseOptionStoryPointActionDelegate(dialog, params) {
+					@Override
+					public void confirm() {
+						super.confirm();
+						raidConfirm(true);
+					}
+			});
+		}
+			
+			
 		options.addOption("Never mind", RAID_NEVER_MIND);
 		options.setShortcut(RAID_NEVER_MIND, Keyboard.KEY_ESCAPE, false, false, false, true);
 		
-		boolean tOn = playerFleet.isTransponderOn();
 		boolean hostile = faction.isHostileTo(Factions.PLAYER);
-		if (tOn && !hostile) {
+		if (tOn && !hostile && !faction.isNeutralFaction()) {
 			options.addOptionConfirmation(RAID_CONFIRM,
 					"The " + faction.getDisplayNameLong() + 
 					" " + faction.getDisplayNameIsOrAre() + 
 					" not currently hostile, and you have been positively identified. " +
 					"Are you sure you want to engage in open hostilities?", "Yes", "Never mind");
 		}
+	}
+	
+	public static List<Industry> getTacticalBombardmentTargets(MarketAPI market) {
+		int dur = getBombardDisruptDuration();
+		List<Industry> targets = new ArrayList<Industry>();
+		for (Industry ind : market.getIndustries()) {
+			if (ind.getSpec().hasTag(Industries.TAG_TACTICAL_BOMBARDMENT)) {
+				if (ind.getDisruptedDays() >= dur * 0.8f) continue;
+				targets.add(ind);
+			}
+		}
+		return targets;
 	}
 	
 	protected void bombardTactical() {
@@ -1716,13 +2334,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		
 		int dur = getBombardDisruptDuration();
 		
-		List<Industry> targets = new ArrayList<Industry>();
-		for (Industry ind : market.getIndustries()) {
-			if (ind.getSpec().hasTag(Industries.TAG_TACTICAL_BOMBARDMENT)) {
-				if (ind.getDisruptedDays() >= dur * 0.8f) continue;
-				targets.add(ind);
-			}
-		}
+		List<Industry> targets = getTacticalBombardmentTargets(market);
 		temp.bombardmentTargets.clear();
 		temp.bombardmentTargets.addAll(targets);
 		
@@ -1769,9 +2381,9 @@ public class MarketCMD extends BaseCommandPlugin {
 		temp.willBecomeHostile.add(faction);
 		
 		List<FactionAPI> nonHostile = new ArrayList<FactionAPI>();
+		nonHostile.add(faction);
 		for (FactionAPI faction : Global.getSector().getAllFactions()) {
 			if (temp.willBecomeHostile.contains(faction)) continue;
-			
 			if (faction.getCustomBoolean(Factions.CUSTOM_CARES_ABOUT_ATROCITIES)) {
 				boolean hostile = faction.isHostileTo(Factions.PLAYER);
 				temp.willBecomeHostile.add(faction);
@@ -1802,6 +2414,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		temp.bombardmentTargets.addAll(targets);
 		
 		boolean destroy = market.getSize() <= getBombardDestroyThreshold();
+		if (Misc.isStoryCritical(market)) destroy = false;
 		
 		int fuel = (int) playerFleet.getCargo().getFuel();
 		if (destroy) {
@@ -1873,12 +2486,28 @@ public class MarketCMD extends BaseCommandPlugin {
 		Random random = getRandom();
 		
 		if (!DebugFlags.MARKET_HOSTILITIES_DEBUG) {
-			if (temp.bombardType == BombardType.TACTICAL) {
-				Misc.increaseMarketHostileTimeout(market, 60f);
-			} else {
-				Misc.increaseMarketHostileTimeout(market, 120f);
+			float timeout = TACTICAL_BOMBARD_TIMEOUT_DAYS;
+			if (temp.bombardType == BombardType.SATURATION) {
+				timeout = SATURATION_BOMBARD_TIMEOUT_DAYS;
+			}
+			Misc.increaseMarketHostileTimeout(market, timeout);
+			
+			timeout *= 0.7f;
+			
+			for (MarketAPI curr : Global.getSector().getEconomy().getMarkets(market.getContainingLocation())) {
+				if (curr == market) continue;
+				boolean cares = curr.getFaction().getCustomBoolean(Factions.CUSTOM_CARES_ABOUT_ATROCITIES);
+				cares &= temp.bombardType == BombardType.SATURATION;
+				
+				if (curr.getFaction().isNeutralFaction()) continue;
+				if (curr.getFaction().isPlayerFaction()) continue;
+				if (curr.getFaction().isHostileTo(market.getFaction()) && !cares) continue;
+				
+				Misc.increaseMarketHostileTimeout(curr, timeout);
 			}
 		}
+		
+		addMilitaryResponse();
 		
 		playerFleet.getCargo().removeFuel(temp.bombardCost);
 		AddRemoveCommodity.addCommodityLossText(Commodities.FUEL, temp.bombardCost, text);
@@ -1899,11 +2528,19 @@ public class MarketCMD extends BaseCommandPlugin {
 					curr.getId());
 		}
 	
+		if (temp.bombardType == BombardType.SATURATION) {
+			int atrocities = (int) Global.getSector().getCharacterData().getMemoryWithoutUpdate().getFloat(MemFlags.PLAYER_ATROCITIES);
+			atrocities++;
+			Global.getSector().getCharacterData().getMemoryWithoutUpdate().set(MemFlags.PLAYER_ATROCITIES, atrocities);
+		}
+		
+		
 		int stabilityPenalty = getTacticalBombardmentStabilityPenalty();
 		if (temp.bombardType == BombardType.SATURATION) {
 			stabilityPenalty = getSaturationBombardmentStabilityPenalty();
 		}
 		boolean destroy = temp.bombardType == BombardType.SATURATION && market.getSize() <= getBombardDestroyThreshold();
+		if (Misc.isStoryCritical(market)) destroy = false;
 		
 		if (stabilityPenalty > 0 && !destroy) {
 			String reason = "Recently bombarded";
@@ -1948,8 +2585,8 @@ public class MarketCMD extends BaseCommandPlugin {
 							, "" + market.getSize());
 				}
 				
-				ListenerUtil.reportSaturationBombardmentFinished(dialog, market, temp);
 			}
+			ListenerUtil.reportSaturationBombardmentFinished(dialog, market, temp);
 		}
 		
 		if (dialog != null && dialog.getPlugin() instanceof RuleBasedDialog) {
@@ -2006,7 +2643,6 @@ public class MarketCMD extends BaseCommandPlugin {
 	}
 	
 	protected void finishedRaidOrBombard() {
-		clearTemp();
 		//showDefenses(true);
 	
 		new ShowDefaultVisual().execute(null, dialog, Misc.tokenize(""), memoryMap);
@@ -2023,7 +2659,15 @@ public class MarketCMD extends BaseCommandPlugin {
 			dialog.getInteractionTarget().getMemoryWithoutUpdate().set("$tradeMode", "OPEN", 0);
 		}
 		
-		FireAll.fire(null, dialog, memoryMap, "PopulateOptions");
+		if (temp.nonMarket) {
+			String trigger = temp.raidContinueTrigger;
+			if (trigger == null || trigger.isEmpty()) trigger = "OpenInteractionDialog";
+			FireAll.fire(null, dialog, memoryMap, trigger);
+		} else {
+			FireAll.fire(null, dialog, memoryMap, "PopulateOptions");
+		}
+		
+		clearTemp();
 	}
 	
 	protected void addBombardContinueOption() {
@@ -2104,7 +2748,7 @@ public class MarketCMD extends BaseCommandPlugin {
 			AddRemoveCommodity.addCommodityLossText(Commodities.CREW, crewLoss, text);
 		}
 		if (marineLoss <= marines) {
-			playerFleet.getCargo().removeCrew(marineLoss);
+			playerFleet.getCargo().removeMarines(marineLoss);
 			AddRemoveCommodity.addCommodityLossText(Commodities.MARINES, marineLoss, text);
 		}
 		
@@ -2138,6 +2782,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		
 		Misc.setFlagWithReason(market.getMemoryWithoutUpdate(), MemFlags.RECENTLY_RAIDED, 
 							   faction.getId(), true, 30f);
+		Misc.setRaidedTimestamp(market);
 	}
 	
 	public boolean doIndustryRaid(FactionAPI faction, float attackerStr, Industry industry, float durMult) {
@@ -2153,17 +2798,20 @@ public class MarketCMD extends BaseCommandPlugin {
 			defender.modifyFlat(increasedDefensesKey, added, "Increased defender preparedness");
 		}
 		float defenderStr = (int) Math.round(defender.computeEffective(defenderBase.computeEffective(0f)));
+		defender.unmodifyFlat(increasedDefensesKey);
+		
 		temp.attackerStr = attackerStr;
 		temp.defenderStr = defenderStr;
 		
 		boolean hasForces = true;
 		boolean canDisrupt = true;
 		temp.raidMult = attackerStr / Math.max(1f, (attackerStr + defenderStr));
+		temp.raidMult = Math.round(temp.raidMult * 100f) / 100f;
 		
-		if (temp.raidMult < 0.01f) {
+		if (temp.raidMult < VALUABLES_THRESHOLD) {
 			hasForces = false;
 		}
-		if (temp.raidMult < FAIL_THRESHOLD) {
+		if (temp.raidMult < DISRUPTION_THRESHOLD) {
 			canDisrupt = false;
 		}
 		if (!canDisrupt) return false;
@@ -2178,6 +2826,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		applyRaidStabiltyPenalty(market, reason, temp.raidMult);
 		Misc.setFlagWithReason(market.getMemoryWithoutUpdate(), MemFlags.RECENTLY_RAIDED, 
 							   faction.getId(), true, 30f);
+		Misc.setRaidedTimestamp(market);
 		
 		if (temp.target != null) {
 			float dur = computeBaseDisruptDuration(temp.target);
@@ -2243,6 +2892,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		if (temp.bombardType == BombardType.TACTICAL) {
 		} else if (temp.bombardType == BombardType.SATURATION) {
 			boolean destroy = market.getSize() <= getBombardDestroyThreshold();
+			if (Misc.isStoryCritical(market)) destroy = false;
 			if (destroy) {
 				DecivTracker.decivilize(market, true);
 			} else {
@@ -2257,10 +2907,6 @@ public class MarketCMD extends BaseCommandPlugin {
 		addBombardVisual(market.getPrimaryEntity());
 	}
 	
-	
-//	public static interface BombardmentVisualPlugin extends GenericPlugin {
-//		void addBombardmentVisual(SectorEntityToken target);
-//	}
 	
 	public static void addBombardVisual(SectorEntityToken target) {
 		if (target != null && target.isInCurrentLocation()) {
@@ -2343,6 +2989,67 @@ public class MarketCMD extends BaseCommandPlugin {
 		}
 	}
 	
+	
+	protected boolean checkMercsLeaving() {
+		String key = "$mercs_leaveTimeout";
+		if (Global.getSector().getMemoryWithoutUpdate().contains(key)) return false;
+		
+		if (market.isHidden()) return false;
+		if (market.getSize() <= 3) return false;
+		
+		List<OfficerDataAPI> mercs = Misc.getMercs(playerFleet);
+		if (mercs.isEmpty()) return false;
+		
+		MonthlyReport report = SharedData.getData().getPreviousReport();
+		boolean debt = report.getDebt() > 0;
+		
+		float contractDur = Global.getSettings().getFloat("officerMercContractDur");
+		
+		for (OfficerDataAPI od : mercs) {
+			float elapsed = Misc.getMercDaysSinceHired(od.getPerson());
+			
+			if (elapsed > contractDur || debt) {
+				dialog.getInteractionTarget().setActivePerson(od.getPerson());
+				//dialog.getVisualPanel().showPersonInfo(getPerson(), true);
+				((RuleBasedInteractionDialogPluginImpl)dialog.getPlugin()).notifyActivePersonChanged();
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	protected void convinceMercToStay() {
+		PersonAPI merc = dialog.getInteractionTarget().getActivePerson();
+		dialog.getInteractionTarget().setActivePerson(null);
+		
+		if (merc != null) {
+			Misc.setMercHiredNow(merc);
+			
+			String key = "$mercs_leaveTimeout";
+			Global.getSector().getMemoryWithoutUpdate().set(key, true, 5f + (float) Math.random() * 5f);
+		}
+		
+	}
+	
+	protected void mercLeaves() {
+		PersonAPI merc = dialog.getInteractionTarget().getActivePerson();
+		dialog.getInteractionTarget().setActivePerson(null);
+		
+		if (merc != null) {
+			FleetMemberAPI member = playerFleet.getFleetData().getMemberWithCaptain(merc);
+			if (member != null) {
+				member.setCaptain(null);
+			}
+			playerFleet.getFleetData().removeOfficer(merc);
+			
+			AddRemoveCommodity.addOfficerLossText(merc, text);
+			
+			String key = "$mercs_leaveTimeout";
+			Global.getSector().getMemoryWithoutUpdate().set(key, true, 5f + (float) Math.random() * 5f);
+		}
+	}
+
 }
 
 

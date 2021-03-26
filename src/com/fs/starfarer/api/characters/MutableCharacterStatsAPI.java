@@ -42,6 +42,7 @@ public interface MutableCharacterStatsAPI {
 	 */
 	float getSkillLevel(String id);
 	
+	void addXP(long xp, TextPanelAPI textPanel, boolean withMessage, boolean allowBonusXP, boolean withLevelUp);
 	void addXP(long xp, TextPanelAPI textPanel, boolean withMessage);
 	void addXP(long xp, TextPanelAPI textPanel);
 	void addXP(long xp);
@@ -91,5 +92,35 @@ public interface MutableCharacterStatsAPI {
 	void refreshGovernedOutpostEffects(MarketAPI market);
 	void refreshAllOutpostsEffects(MarketAPI market);
 	void refreshAllOutpostsEffectsForPlayerOutposts();
+	long getBonusXp();
+	void setBonusXp(long bonusXp);
+	void addBonusXP(long bonusXp, boolean withMessage, TextPanelAPI textPanel, boolean topScreenMessage);
+	
+	/**
+	 * Defaults to no bonus XP being granted.
+	 * @param points
+	 * @param withMessage
+	 * @param textPanel
+	 * @param topScreenMessage
+	 */
+	void spendStoryPoints(int points, boolean withMessage, TextPanelAPI textPanel, boolean topScreenMessage, String logText);
+	void spendStoryPoints(int points, boolean withMessage, TextPanelAPI textPanel, boolean topScreenMessage, float bonusXPFraction, String logText);
+	int getStoryPoints();
+	void setStoryPoints(int storyPoints);
+	void addStoryPoints(int storyPoints);
+	void addXP(long xp, TextPanelAPI textPanel, boolean withMessage, boolean allowBonusXP);
+	
+	/**
+	 * Will be gained on reaching maximum level. Increased by using story points before maximum level is reached.
+	 * @return
+	 */
+	long getDeferredBonusXp();
+	void setDeferredBonusXp(long deferredBonusXp);
+	void setLevel(int level);
+	boolean isPlayerStats();
+	void addStoryPoints(int points, TextPanelAPI textPanel, boolean makeCharTabFlash);
+	long getBonusXPForSpendingStoryPointBeforeSpendingIt();
+	long getBonusXPUsed(long normalXP);
+	
 
 }

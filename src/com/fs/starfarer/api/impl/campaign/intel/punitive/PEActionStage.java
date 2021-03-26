@@ -185,6 +185,7 @@ public class PEActionStage extends ActionStage implements FleetActionDelegate {
 				
 				Misc.setFlagWithReason(market.getMemoryWithoutUpdate(), MemFlags.RECENTLY_RAIDED, 
 						   			   intel.getFaction().getId(), true, 30f);
+				Misc.setRaidedTimestamp(market);
 			}
 		}
 		

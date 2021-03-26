@@ -69,7 +69,7 @@ public class OrdnanceExpertise {
 			stats.getBallisticWeaponDamageMult().unmodify(id);
 			stats.getEnergyWeaponDamageMult().unmodify(id);
 			stats.getMissileWeaponDamageMult().unmodify(id);
-		}	
+		}
 		
 		public String getEffectDescription(float level) {
 			return "+" + (int)(DAMAGE_BONUS) + "% weapon damage";

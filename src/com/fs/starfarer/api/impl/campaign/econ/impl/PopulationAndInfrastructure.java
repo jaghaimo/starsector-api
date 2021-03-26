@@ -6,26 +6,39 @@ import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.lwjgl.util.vector.Vector2f;
 
+import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionDoctrineAPI;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.econ.CommodityMarketDataAPI;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
+import com.fs.starfarer.api.campaign.listeners.ColonyOtherFactorsListener;
 import com.fs.starfarer.api.characters.MarketConditionSpecAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
 import com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition;
+import com.fs.starfarer.api.impl.campaign.econ.impl.ConstructionQueue.ConstructionQueueItem;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
+import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.AddedEntity;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.EntityLocation;
+import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.StatModValueGetter;
 import com.fs.starfarer.api.util.Misc;
@@ -34,10 +47,18 @@ import com.fs.starfarer.api.util.Pair;
 
 public class PopulationAndInfrastructure extends BaseIndustry implements MarketImmigrationModifier {
 
-	//public static int BASE_STABILITY = 5;
-	//public static int SMUGGLING_PENALTY = 2;
-	//public static int OUT_OF_FACTION_PENALTY = 1;
-	//public static int UNMET_DEMAND_PENALTY = 1;
+	public static float OFFICER_BASE_PROB = Global.getSettings().getFloat("officerBaseProb");
+	public static float OFFICER_PROB_PER_SIZE = Global.getSettings().getFloat("officerProbPerColonySize");
+	public static float OFFICER_ADDITIONAL_BASE_PROB = Global.getSettings().getFloat("officerAdditionalBaseProb");
+	public static float OFFICER_BASE_MERC_PROB = Global.getSettings().getFloat("officerBaseMercProb");
+	public static float ADMIN_BASE_PROB = Global.getSettings().getFloat("adminBaseProb");
+	public static float ADMIN_PROB_PER_SIZE = Global.getSettings().getFloat("adminProbPerColonySize");
+	
+	
+	//public static float IMPROVE_GROWTH_BONUS = 1f;
+	public static float IMPROVE_STABILITY_BONUS = 1f;
+	
+	public static boolean HAZARD_INCREASES_DEFENSE = false;
 	
 	public void apply() {
 		modifyStability(this, market, getModId(3));
@@ -50,7 +71,7 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		
 		int size = market.getSize();
 		
-		demand(Commodities.FOOD, size - 1);
+		demand(Commodities.FOOD, size);
 		
 		if (!market.hasCondition(Conditions.HABITABLE)) {
 			demand(Commodities.ORGANICS, size - 1);
@@ -94,7 +115,19 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 			market.getStability().unmodifyFlat(getModId(2));
 		}
 		
-		if (!market.hasSpaceport()) {
+		
+		boolean spaceportFirstInQueue = false;
+		for (ConstructionQueueItem item : market.getConstructionQueue().getItems()) {
+			IndustrySpecAPI spec = Global.getSettings().getIndustrySpec(item.id);
+			if (spec.hasTag(Industries.TAG_SPACEPORT)) {
+				spaceportFirstInQueue = true;
+			}
+			break;
+		}
+		if (spaceportFirstInQueue && Misc.getCurrentlyBeingConstructed(market) != null) {
+			spaceportFirstInQueue = false;
+		}
+		if (!market.hasSpaceport() && !spaceportFirstInQueue) {
 			float accessibilityNoSpaceport = Global.getSettings().getFloat("accessibilityNoSpaceport");
 			market.getAccessibilityMod().modifyFlat(getModId(0), accessibilityNoSpaceport, "No spaceport");
 		}
@@ -117,7 +150,8 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		market.getStats().getDynamic().getMod(Stats.FLEET_QUALITY_MOD).modifyFlatAlways(getModId(1), doctrineQualityMod,
 											  Misc.ucFirst(market.getFaction().getEntityNamePrefix()) + " fleet doctrine");
 		
-		float stabilityDefenseMult = 0.5f + stability / 10f;
+		//float stabilityDefenseMult = 0.5f + stability / 10f;
+		float stabilityDefenseMult = 0.25f + stability / 10f * 0.75f;
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).modifyMultAlways(getModId(),
 											  stabilityDefenseMult, "Stability");
 		
@@ -125,6 +159,13 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).modifyFlatAlways(getModId(), 
 											  baseDef, "Base value for a size " + market.getSize() + " colony");
 		
+		
+		//if (market.getHazardValue() > 1f) {
+		if (HAZARD_INCREASES_DEFENSE) {
+			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).modifyMultAlways(getModId(1), 
+					Math.max(market.getHazardValue(), 1f), "Colony hazard rating");
+		}
+		//}
 		
 		market.getStats().getDynamic().getMod(Stats.MAX_INDUSTRIES).modifyFlat(getModId(), getMaxIndustries(), null);
 		
@@ -155,7 +196,49 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 												  "Stability");
 		
 		
+		// chance of spawning officers and admins; some industries further modify this
+		market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).modifyFlat(getModId(0), OFFICER_BASE_PROB);
+		market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).modifyFlat(getModId(1), 
+						OFFICER_PROB_PER_SIZE * Math.max(0, market.getSize() - 3));
+		
+		market.getStats().getDynamic().getMod(Stats.OFFICER_ADDITIONAL_PROB_MULT_MOD).modifyFlat(getModId(0), OFFICER_ADDITIONAL_BASE_PROB);
+		market.getStats().getDynamic().getMod(Stats.OFFICER_IS_MERC_PROB_MOD).modifyFlat(getModId(0), OFFICER_BASE_MERC_PROB);
+		
+		market.getStats().getDynamic().getMod(Stats.ADMIN_PROB_MOD).modifyFlat(getModId(0), ADMIN_BASE_PROB);
+		market.getStats().getDynamic().getMod(Stats.ADMIN_PROB_MOD).modifyFlat(getModId(1), 
+						ADMIN_PROB_PER_SIZE * Math.max(0, market.getSize() - 3));
+		
+		modifyStability2(this, market, getModId(3));
+		
 		market.addTransientImmigrationModifier(this);
+		
+		
+		
+//		// if there's no queued spaceport, setHasSpaceport() is called by Spaceport (if it's present at the market)
+//		boolean spaceportFirstInQueue = false;
+//		for (ConstructionQueueItem item : market.getConstructionQueue().getItems()) {
+//			IndustrySpecAPI spec = Global.getSettings().getIndustrySpec(item.id);
+//			if (spec.hasTag(Industries.TAG_SPACEPORT)) {
+//				market.setHasSpaceport(true);
+//				market.getMemoryWithoutUpdate().set("$hadQueuedSpaceport", true);
+//				spaceportFirstInQueue = true;
+//			}
+//			break;
+//		}
+//		if (!spaceportFirstInQueue && market.hasSpaceport() && market.getMemoryWithoutUpdate().is("$hadQueuedSpaceport", true)) {
+//			market.getMemoryWithoutUpdate().unset("$hadQueuedSpaceport");
+//			boolean hasSpaceport = false;
+//			for (Industry ind : market.getIndustries()) {
+//				if (ind.getSpec().hasTag(Industries.TAG_SPACEPORT)) {
+//					hasSpaceport = true;
+//					break;
+//				}
+//			}
+//			if (!hasSpaceport) {
+//				market.setHasSpaceport(false);
+//			}
+//		}
+		
 	}
 	
 	
@@ -191,6 +274,9 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyFlat(getModId());
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId());
+		if (HAZARD_INCREASES_DEFENSE) {
+			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId(1)); // hazard value modifier
+		}
 		
 		market.getStats().getDynamic().getMod(Stats.MAX_INDUSTRIES).unmodifyFlat(getModId());
 		
@@ -198,6 +284,13 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		market.getStats().getDynamic().getMod(Stats.COMBAT_FLEET_SIZE_MULT).unmodifyMult(getModId(1));
 		market.getStats().getDynamic().getMod(Stats.COMBAT_FLEET_SIZE_MULT).unmodifyMult(getModId(2));
 		market.getStats().getDynamic().getMod(Stats.COMBAT_FLEET_SIZE_MULT).unmodifyMult(getModId(3));
+		
+		market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).unmodifyFlat(getModId(0));
+		market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).unmodifyFlat(getModId(1));
+		market.getStats().getDynamic().getMod(Stats.OFFICER_ADDITIONAL_PROB_MULT_MOD).unmodifyFlat(getModId(0));
+		market.getStats().getDynamic().getMod(Stats.OFFICER_IS_MERC_PROB_MOD).unmodifyFlat(getModId(0));
+		market.getStats().getDynamic().getMod(Stats.ADMIN_PROB_MOD).unmodifyFlat(getModId(0));
+		market.getStats().getDynamic().getMod(Stats.ADMIN_PROB_MOD).unmodifyFlat(getModId(1));
 		
 		unmodifyStability(market, getModId(3));
 		
@@ -298,10 +391,10 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 	@Override
 	public String getCurrentImage() {
 		float size = market.getSize();
-		if (size <= 4) {
+		if (size <= SIZE_FOR_SMALL_IMAGE) {
 			return Global.getSettings().getSpriteName("industry", "pop_low");
 		}
-		if (size >= 7) {
+		if (size >= SIZE_FOR_LARGE_IMAGE) {
 			return Global.getSettings().getSpriteName("industry", "pop_high");
 		}
 		
@@ -313,7 +406,8 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		if (stability <= 5) {
 			return Math.max(0, stability / 5f);
 		}
-		return 1f + (stability - 5f) * .1f;
+		return 1f;
+		//return 1f + (stability - 5f) * .1f;
 	}
 	
 //	public static float getUpkeepHazardMult(float hazard) {
@@ -354,9 +448,20 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		return penaltyOrBonus;
 	}
 	
+	public static void modifyStability2(Industry industry, MarketAPI market, String modId) {
+		if (Misc.getNumIndustries(market) > Misc.getMaxIndustries(market)) {
+			Misc.getMaxIndustries(market);
+			market.getStability().modifyFlat("_" + modId + "_overmax", -Misc.OVER_MAX_INDUSTRIES_PENALTY, "Maximum number of industries exceeded");
+		} else {
+			market.getStability().unmodifyFlat("_" + modId + "_overmax");
+		}
+	}
+	
 	public static void modifyStability(Industry industry, MarketAPI market, String modId) {
 		market.getIncomeMult().modifyMultAlways(modId, getIncomeStabilityMult(market.getPrevStability()), "Stability");
 		market.getUpkeepMult().modifyMultAlways(modId, getUpkeepHazardMult(market.getHazardValue()), "Hazard rating");
+		
+		market.getStability().modifyFlat("_" + modId + "_ms", Global.getSettings().getFloat("stabilityBaseValue"), "Base value");
 		
 		float inFactionSupply = 0f;
 		float totalDemand = 0f;
@@ -368,10 +473,10 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 			
 			totalDemand += d;
 			CommodityMarketDataAPI cmd = com.getCommodityMarketData();
-			int inFaction = Math.max(com.getMaxSupply(), 
+			int inFaction = Math.max(Math.min(com.getMaxSupply(), com.getAvailable()), 
 							   Math.min(cmd.getMaxShipping(market, true), cmd.getMaxExport(market.getFactionId())));
 			if (inFaction > d) inFaction = d;
-			if (inFaction < d) inFaction = Math.max(com.getMaxSupply(), 0);
+			if (inFaction < d) inFaction = Math.max(Math.min(com.getMaxSupply(), com.getAvailable()), 0);
 			
 			//CommoditySourceType source = cmd.getMarketShareData(market).getSource();;
 			//if (source != CommoditySourceType.GLOBAL) {
@@ -409,8 +514,6 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 			market.getStability().unmodifyFlat(modId + "_mm");
 		}
 		
-		market.getStability().modifyFlat("_" + modId + "_ms", Global.getSettings().getFloat("stabilityBaseValue"), "Base value");
-
 		if (!market.hasCondition(Conditions.COMM_RELAY)) {
 			market.getStability().modifyFlat(CommRelayCondition.COMM_RELAY_MOD_ID, CommRelayCondition.NO_RELAY_PENALTY, "No active comm relay in-system");
 		}
@@ -429,6 +532,7 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 //		}
 		market.getStability().unmodifyFlat("_" + modId + "_mm");
 		market.getStability().unmodifyFlat("_" + modId + "_ms");
+		market.getStability().unmodifyFlat("_" + modId + "_overmax");
 
 		if (!market.hasCondition(Conditions.COMM_RELAY)) {
 			market.getStability().unmodifyFlat(CommRelayCondition.COMM_RELAY_MOD_ID);
@@ -481,7 +585,7 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 
 	@Override
 	public float getBuildOrUpgradeProgress() {
-		if (!super.isBuilding() && market.getSize() < 10) {
+		if (!super.isBuilding() && market.getSize() < Misc.MAX_COLONY_SIZE) {
 			return Misc.getMarketSizeProgress(market);
 		}
 		return super.getBuildOrUpgradeProgress();
@@ -489,14 +593,14 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 
 	@Override
 	public boolean isBuilding() {
-		if (!super.isBuilding() && market.getSize() < 10 && getBuildOrUpgradeProgress() > 0) return true;
+		if (!super.isBuilding() && market.getSize() < Misc.MAX_COLONY_SIZE && getBuildOrUpgradeProgress() > 0) return true;
 		
 		return super.isBuilding();
 	}
 
 	@Override
 	public boolean isUpgrading() {
-		if (!super.isBuilding() && market.getSize() < 10) return true;
+		if (!super.isBuilding() && market.getSize() < Misc.MAX_COLONY_SIZE) return true;
 		
 		return super.isUpgrading();
 	}
@@ -529,6 +633,11 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		if (patherLevel > 0) {
 			incoming.add(Factions.LUDDIC_PATH, patherLevel * 0.2f);
 		}
+		
+//		if (isImproved()) {
+//			incoming.getWeight().modifyFlat(getModId(2), (int)Math.round(market.getSize() * IMPROVE_GROWTH_BONUS),
+//										getImprovementsDescForModifiers() + " (" + getNameForModifier() + ")");
+//		}
 	}
 	
 	private float getAICoreImpact(String coreId) {
@@ -568,6 +677,202 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 //		if (size <= 7) return 3;
 //		return 4;
 	}
+	
+//	@Override
+//	public boolean canImprove() {
+//		return true;
+//	}
+//	
+//	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+//		float opad = 10f;
+//		Color highlight = Misc.getHighlightColor();
+//		
+//		
+//		String str = "" + (int)Math.round(market.getSize() * IMPROVE_GROWTH_BONUS);
+//		
+//		if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+//			info.addPara("Population growth increased by %s.", 0f, highlight,str);
+//		} else {
+//			info.addPara("Increases population growth by %s. Bonus is based on colony size.", 0f, highlight,str);
+//		}
+//
+//		info.addSpacer(opad);
+//		super.addImproveDesc(info, mode);
+//	}
+	
+	@Override
+	public boolean canImprove() {
+		return true;
+	}
+	
+	protected void applyImproveModifiers() {
+		if (isImproved()) {
+			market.getStability().modifyFlat("PAI_improve", IMPROVE_STABILITY_BONUS, 
+						getImprovementsDescForModifiers() + " (" + getNameForModifier() + ")");
+		} else {
+			market.getStability().unmodifyFlat("PAI_improve");
+		}
+	}
+	
+	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		
+		if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+			info.addPara("Stability increased by %s.", 0f, highlight, "" + (int) IMPROVE_STABILITY_BONUS);
+		} else {
+			info.addPara("Increases stability by %s.", 0f, highlight, "" + (int) IMPROVE_STABILITY_BONUS);
+		}
+
+		info.addSpacer(opad);
+		super.addImproveDesc(info, mode);
+	}
+	
+	
+
+	protected static class LampRemover implements EveryFrameScript {
+		protected SectorEntityToken lamp;
+		protected MarketAPI market;
+		protected PopulationAndInfrastructure industry;
+		public LampRemover(SectorEntityToken lamp, MarketAPI market, PopulationAndInfrastructure industry) {
+			this.lamp = lamp;
+			this.market = market;
+			this.industry = industry;
+		}
+		public void advance(float amount) {
+			Industry ind = market.getIndustry(Industries.POPULATION);
+			SpecialItemData item = ind == null ? null : ind.getSpecialItem();
+			if (item == null || !item.getId().equals(Items.ORBITAL_FUSION_LAMP)) {
+				Misc.fadeAndExpire(lamp);
+				industry.lamp = null;
+				lamp = null;
+			}
+		}
+		public boolean isDone() {
+			return lamp == null;
+		}
+		public boolean runWhilePaused() {
+			return false;
+		}
+	}
+	
+	protected String addedHeatCondition = null;
+	protected String removedHeatCondition = null;
+	protected SectorEntityToken lamp;
+	@Override
+	public void setSpecialItem(SpecialItemData special) {
+		super.setSpecialItem(special);
+
+		if (addedHeatCondition != null && (special == null || !special.getId().equals(Items.ORBITAL_FUSION_LAMP))) {
+			market.removeCondition(addedHeatCondition);
+			addedHeatCondition = null;
+			if (removedHeatCondition != null) {
+				market.addCondition(removedHeatCondition);
+				removedHeatCondition = null;
+			}
+		}
+		
+		if (special != null && special.getId().equals(Items.ORBITAL_FUSION_LAMP)) {
+			if (lamp == null) {
+				SectorEntityToken focus = market.getPlanetEntity();
+				if (focus == null) focus = market.getPrimaryEntity();
+				if (focus != null) {
+					EntityLocation loc = new EntityLocation();
+					float radius = focus.getRadius() + 100f;
+					loc.orbit = Global.getFactory().createCircularOrbit(focus, (float) Math.random() * 360f,
+													radius, radius / (10f + 10f * (float) Math.random()));
+					AddedEntity added = BaseThemeGenerator.addNonSalvageEntity(
+							market.getContainingLocation(), loc, Entities.FUSION_LAMP, getMarket().getFactionId());//Factions.NEUTRAL);
+					if (added != null) {
+						lamp = added.entity;
+						market.getContainingLocation().addScript(new LampRemover(lamp, market, this));
+					}
+				}
+			}
+			if (addedHeatCondition == null && 
+					!market.hasCondition(Conditions.COLD) &&
+					!market.hasCondition(Conditions.VERY_COLD) &&
+					!market.hasCondition(Conditions.VERY_HOT)) {
+				if (market.hasCondition(Conditions.HOT)) {
+					addedHeatCondition = Conditions.VERY_HOT;
+					removedHeatCondition = Conditions.HOT;
+				} else {
+					addedHeatCondition = Conditions.HOT;
+				}
+				if (removedHeatCondition != null) market.removeCondition(removedHeatCondition);
+				if (addedHeatCondition != null) market.addCondition(addedHeatCondition);
+			}
+		}
+	}
+
+	
+	@Override
+	public boolean wantsToUseSpecialItem(SpecialItemData data) {
+		if (special != null) return false;
+		
+		if (Items.ORBITAL_FUSION_LAMP.equals(data.getId())) {
+			for (String mc : ItemEffectsRepo.FUSION_LAMP_CONDITIONS) {
+				if (market.hasCondition(mc)) return true;
+			}
+			return false;
+		}
+		return super.wantsToUseSpecialItem(data);
+	}
+
+	
+	public static Pair<SectorEntityToken, Float> getNearestCoronalTap(Vector2f locInHyper, boolean usable) {
+		SectorEntityToken nearest = null;
+		float minDist = Float.MAX_VALUE;
+		
+		for (SectorEntityToken entity : Global.getSector().getCustomEntitiesWithTag(Tags.CORONAL_TAP)) {
+			if (!usable || entity.getMemoryWithoutUpdate().contains("$usable")) {
+				float dist = Misc.getDistanceLY(locInHyper, entity.getLocationInHyperspace());
+				if (dist < minDist) {
+					minDist = dist;
+					nearest = entity;
+				}
+			}
+		}
+		
+		if (nearest == null) return null;
+		
+		return new Pair<SectorEntityToken, Float>(nearest, minDist);
+	}
+	
+	public static class CoronalTapFactor implements ColonyOtherFactorsListener {
+		public boolean isActiveFactorFor(SectorEntityToken entity) {
+			return getNearestCoronalTap(entity.getLocationInHyperspace(), true) != null;
+		}
+
+		public void printOtherFactors(TooltipMakerAPI text, SectorEntityToken entity) {
+			Pair<SectorEntityToken, Float> p = getNearestCoronalTap(entity.getLocationInHyperspace(), true);
+			if (p != null) {
+				Color h = Misc.getHighlightColor();
+				float opad = 10f;
+				
+				String dStr = "" + Misc.getRoundedValueMaxOneAfterDecimal(p.two);
+				String lights = "light-years";
+				if (dStr.equals("1")) lights = "light-year";
+				
+				if (p.two > ItemEffectsRepo.CORONAL_TAP_LIGHT_YEARS) {
+					text.addPara("The nearest coronal tap is located in the " + 
+							p.one.getContainingLocation().getNameWithLowercaseType() + ", %s " + lights + " away. The maximum " +
+							"range at a portal can connect to a tap is %s light-years.",
+							opad, h,
+							"" + Misc.getRoundedValueMaxOneAfterDecimal(p.two), 
+							"" + (int)ItemEffectsRepo.CORONAL_TAP_LIGHT_YEARS);
+				} else {
+					text.addPara("The nearest coronal tap is located in the " + 
+							p.one.getContainingLocation().getNameWithLowercaseType() + ", %s " + lights + " away, allowing " +
+									"a coronal portal located here to connect to it.",
+							opad, h,
+							"" + Misc.getRoundedValueMaxOneAfterDecimal(p.two));
+				}
+			}
+		}
+	}
+
 }
 
 

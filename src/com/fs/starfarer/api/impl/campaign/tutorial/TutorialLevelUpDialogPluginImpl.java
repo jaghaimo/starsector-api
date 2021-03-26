@@ -61,7 +61,8 @@ public class TutorialLevelUpDialogPluginImpl implements InteractionDialogPlugin 
 		OptionId option = (OptionId) optionData;
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(option);
 		}
 		
 		
@@ -70,18 +71,28 @@ public class TutorialLevelUpDialogPluginImpl implements InteractionDialogPlugin 
 		switch (option) {
 		case INIT:
 			textPanel.addParagraph("You've gained a level!");
-			textPanel.addPara("Normally you gain %s character point with each level-up, but you " +
-					"get an additional %s points at the start of your campaign.",
-					Misc.getHighlightColor(), "1", "3");
+			textPanel.addPara("You gain %s skill point with each level-up, " +
+					"and an additional point at the start of the campaign.",
+					Misc.getHighlightColor(), "1");
+			
+			textPanel.addPara("You also gain " + Misc.STORY + " points as you gain experience; these can be used to " +
+					"take exceptional actions - to \"make your own story\", in a way. The tutorial will introduce " +
+					"using these a bit later.",
+					Misc.getStoryOptionColor(), Misc.STORY + " points");
 			options.clearOptions();
 			options.addOption("Continue", OptionId.CONT1, null);
 			break;
 		case CONT1:
-			textPanel.addParagraph("You can spend character points to increase aptitudes and skills. Each aptitude governs a set of skills, and " +
-					"the maximum level of a skill is limited by the level of the governing aptitude.");
+			textPanel.addParagraph("Skill points are used to learn skills. Skills are arranged in 4 aptitudes - " +
+					"Combat, Leadership, Technology, and Industry. Each aptitude has 5 tiers, and you can pick one of the " +
+					"two skills at each tier.");
+			
+			textPanel.addPara("Skills that affect your piloted ship - all Combat skills, and a few skills in other " +
+					"aptitudes - can be made \"elite\" at the cost of a " + Misc.STORY + " point.",
+					Misc.getStoryOptionColor(), Misc.STORY + " point");
 			
 			String max = "" + (int) Global.getSettings().getLevelupPlugin().getMaxLevel();
-			textPanel.addPara("The maximum level you can reach is %s. Once character points are spent, they can not be refunded.",
+			textPanel.addPara("The maximum level you can reach is %s.",
 					Misc.getHighlightColor(), max);
 			options.clearOptions();
 			options.addOption("Continue", OptionId.CONT3, null);

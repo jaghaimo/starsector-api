@@ -513,7 +513,7 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 				vh *= 1.5f;
 			}
 	
-			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE);
+			//GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE);
 			//flickerTexture.bindTexture();
 			if (flicker) {
 				float alpha = currAlpha;
@@ -723,11 +723,13 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 					
 					float dist = Misc.getDistance(test, tileLoc);
 					if (dist > STORM_STRIKE_SOUND_RANGE) continue;
-					
+
+					// will be attenuated without this, but there's "too much" lightning sound without
+					// this additional attenuation
 					float volumeMult = 1f - (dist / STORM_STRIKE_SOUND_RANGE);
 					volumeMult = (float) Math.sqrt(volumeMult);
 					if (volumeMult <= 0) continue;
-					//volumeMult = 1f;
+					//float volumeMult = 1f;
 					//volumeMult *= 0.67f;
 					Global.getSoundPlayer().playSound(stormSoundId, 1f, 1f * volumeMult, tileLoc, Misc.ZERO);
 				}
@@ -1138,7 +1140,7 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 				if (cell != null && cell.isSignaling() && cell.signal < 0.2f) {
 					cell.signal = 0; // go to storm as soon as a fleet enters, if it's close to storming already
 				}
-				if (cell != null && cell.isStorming()) {
+				if (cell != null && cell.isStorming() && !Misc.isSlowMoving(fleet)) {
 					// storm
 					if (STORM_SENSOR_RANGE_MULT != 1) {
 						fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_storm_sensor",
@@ -1262,19 +1264,6 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 			
 			Global.getSector().getCampaignUI().showHelpPopupIfPossible("chmHyperStorm");
 		}
-
-		
-//		Vector2f v = fleet.getVelocity();
-//		float angle = Misc.getAngleInDegrees(v);
-//		if (v.length() < 10) angle = fleet.getFacing();
-//		
-//		float arc = 30f;
-//		angle += (float) Math.random() * arc - arc / 2f;
-//		
-//		Vector2f boost = Misc.getUnitVectorAtDegreeAngle(angle);
-//		boost.scale(STORM_SPEED_BURST * 3);
-//		fleet.setVelocity(v.x + boost.x, v.y + boost.y);
-		
 	}
 
 	public String getStormSoundId() {
@@ -1283,6 +1272,10 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 
 	public boolean hasTooltip() {
 		return true;
+	}
+	
+	public String getNameForTooltip() {
+		return getTerrainName();
 	}
 	
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded) {
@@ -1361,6 +1354,8 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 						    "with great violence, often causing a loss of control. " +
 						    "Some commanders are known to use these to gain additional " +
 						    "speed, and to save fuel - a practice known as \"storm riding\".", Misc.getTextColor(), pad);
+			
+			tooltip.addPara("\"Slow-moving\" fleets do not attract storm strikes.", Misc.getTextColor(), pad);
 		}
 		
 		if (expanded) {
@@ -1425,6 +1420,20 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 
 	public boolean hasAIFlag(Object flag) {
 		return flag == TerrainAIFlags.REDUCES_SENSOR_RANGE;
+	}
+	
+	public boolean hasAIFlag(Object flag, CampaignFleetAPI fleet) {
+		if (flag == TerrainAIFlags.DANGEROUS_UNLESS_GO_SLOW) {
+			int [] tile = getTilePreferStorm(fleet.getLocation(), fleet.getRadius() + 100f);
+			CellStateTracker cell = null; 
+			if (tile != null) {
+				cell = activeCells[tile[0]][tile[1]];
+			}
+			if (cell != null) {
+				return cell.isStorming() || cell.isSignaling();
+			}
+		}
+		return hasAIFlag(flag);
 	}
 	
 	@Override

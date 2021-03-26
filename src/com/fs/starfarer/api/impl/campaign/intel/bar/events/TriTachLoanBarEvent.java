@@ -4,12 +4,21 @@ import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.OptionPanelAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Sounds;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.BaseOptionStoryPointActionDelegate;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.StoryOptionParams;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class TriTachLoanBarEvent extends BaseGetCommodityBarEvent {
@@ -39,6 +48,7 @@ public class TriTachLoanBarEvent extends BaseGetCommodityBarEvent {
 	protected int loanAmount;
 	protected int repaymentAmount;
 	protected int repaymentDays;
+	//protected boolean negotiated = false;
 	
 	@Override
 	protected void regen(MarketAPI market) {
@@ -63,6 +73,66 @@ public class TriTachLoanBarEvent extends BaseGetCommodityBarEvent {
 		createIntel();
 	}
 	
+	protected int getNegotiatedAmount() {
+		return repaymentAmount - (int) ((repaymentAmount - loanAmount) * 0.5f);
+	}
+	
+	protected void addStoryOption() {
+		String id = "negotiate_id";
+		options.addOption("Negotiate a lower rate on the loan", id);
+		
+		StoryOptionParams params = new StoryOptionParams(id, 1, "negotiateLoanRate", Sounds.STORY_POINT_SPEND_TECHNOLOGY,
+				"Negotiated lower rate on " + Misc.getDGSCredits(loanAmount) + " loan from Tri-Tachyon investor");
+		
+		SetStoryOption.set(dialog, params, 
+			new BaseOptionStoryPointActionDelegate(dialog, params) {
+
+				@Override
+				public void confirm() {
+					super.confirm();
+					repaymentAmount = getNegotiatedAmount();
+					//negotiated = true;
+					dialog.getTextPanel().addPara(getNegotiatedText());
+					OptionPanelAPI options = dialog.getOptionPanel();
+					options.clearOptions();
+					options.addOption("Continue", OPTION_CONFIRM);
+					//optionSelected(null, OPTION_CONFIRM);
+				}
+				
+				@Override
+				public String getTitle() {
+					//return "Negotiating loan repayment";
+					return null;
+				}
+
+				@Override
+				public void createDescription(TooltipMakerAPI info) {
+					float opad = 10f;
+					info.setParaInsigniaLarge();
+					
+					info.addSpacer(-opad * 1f);
+					
+					info.addPara("The loan amount is %s.",
+							0f, Misc.getHighlightColor(),
+							Misc.getDGSCredits(loanAmount));
+					
+					info.addPara("You're able to negotiate the repayment amount from %s down to " +
+							"%s.", opad, Misc.getHighlightColor(),
+							Misc.getDGSCredits(repaymentAmount),
+							Misc.getDGSCredits(getNegotiatedAmount()));
+					
+					info.addSpacer(opad * 2f);
+					addActionCostSection(info);
+				}
+			
+		});
+	}
+	
+	@Override
+	public void optionSelected(String optionText, Object optionData) {
+		super.optionSelected(optionText, optionData);
+	}
+
 	protected void createIntel() {
 		TriTachLoanIntel intel = new TriTachLoanIntel(this, market);
 		Global.getSector().getIntelManager().addIntel(intel, false, dialog.getTextPanel());
@@ -77,10 +147,23 @@ public class TriTachLoanBarEvent extends BaseGetCommodityBarEvent {
 	protected String getPersonRank() {
 		return Ranks.CITIZEN;
 	}
+
+// do this after load is repaid
+//	@Override
+//	protected void doExtraConfirmActions() {
+//		ContactIntel.addPotentialContact(person, market, text);
+//	}
+
+	@Override
+	protected void adjustPerson(PersonAPI person) {
+		super.adjustPerson(person);
+		person.setImportanceAndVoice(PersonImportance.MEDIUM, random);
+		person.addTag(Tags.CONTACT_TRADE);
+	}
 	
 	@Override
 	protected String getPersonPost() {
-		return Ranks.CITIZEN;
+		return Ranks.POST_EXECUTIVE;
 	}
 	
 	@Override
@@ -104,7 +187,7 @@ public class TriTachLoanBarEvent extends BaseGetCommodityBarEvent {
 				"as sophisticated as it is expensive. After introductions " + getHeOrShe() + 
 				" quickly cuts to the point, and says \"I'm simply in the business of statistics, and " +
 				"I like your growth potential. I think that you can take my %s now and pay " +
-				"%s back to me in, oh, %s days. If not,\" " + getHeOrShe() + 
+				"%s back to me in, oh, %s days. If not, \"" + getHeOrShe() + 
 				" mimics a stricken look, \"I'll ruin your reputation across Tri-Tachyon space. What do you say?\"";
 	}
 	
@@ -128,6 +211,15 @@ public class TriTachLoanBarEvent extends BaseGetCommodityBarEvent {
 		return "Decline the deal, explaining that you're \"just here to network\"";
 	}
 
+	protected String getNegotiatedText() {
+		return "The Tri-Tachyon " + getManOrWoman() + "'s smile freezes in place as you launch into a sophisticated " + 
+		" pitch to modify the proposed terms. You notice " + getHisOrHer() + 
+		" eyes tracking rapidly, navigating some ocular data interface as you speak; " + getHeOrShe() + 
+		" seems thrown off-balance by your savvy, and never quite recovers that signature megacorp implacability." +
+		" By the time it is agreed that a substantially lower repayment figure will benefit all parties, the dazed " + 
+		"investor finds " + getHisOrHer() + " drink has gone flat. " + getHeOrShe() + " brusquely orders a replacement.";
+	}
+	
 	@Override
 	protected String getAcceptText() {
 		return "You leave the lounge rich in credits, having exchanged secure comm keys with the " +

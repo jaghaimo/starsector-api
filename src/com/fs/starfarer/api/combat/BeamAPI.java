@@ -37,6 +37,13 @@ public interface BeamAPI {
 	void setFringeColor(Color fringeColor);
 	
 	DamageAPI getDamage();
+	float getHitGlowRadius();
+	
+	void setFringeTexture(String spriteName);
+	void setCoreTexture(String spriteName);
+	float getLength();
+	Vector2f getRayEndPrevFrame();
+	float getLengthPrevFrame();
 }
 
 

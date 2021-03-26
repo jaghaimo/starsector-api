@@ -48,13 +48,16 @@ public class ShipwideAIFlags {
 		DELAY_STRIKE_FIRE,
 		
 		PHASE_ATTACK_RUN,
-		//PHASE_ATTACK_RUN_END,
 		PHASE_ATTACK_RUN_FROM_BEHIND_DIST_CRITICAL,
 		PHASE_ATTACK_RUN_IN_GOOD_SPOT,
 		PHASE_ATTACK_RUN_TIMEOUT,
 		
 		DO_NOT_PURSUE,
 		
+		
+		/**
+		 * Only set for phase ships using the default phase cloak AI. 
+		 */
 		IN_CRITICAL_DPS_DANGER,
 		//MANEUVER_TARGET,
 		
@@ -66,6 +69,9 @@ public class ShipwideAIFlags {
 		POST_ATTACK_RUN,
 		WANTED_TO_SLOW_DOWN,
 		FINISHED_SPREADING,
+		WING_NEAR_ENEMY,
+		WING_WAS_NEAR_ENEMY,
+		WING_SHOULD_GET_SOME_DISTANCE,
 
 		
 		REACHED_WAYPOINT,
@@ -78,6 +84,10 @@ public class ShipwideAIFlags {
 		NEEDS_HELP,
 		
 		SYSTEM_TARGET_COORDS,
+		
+		BIGGEST_THREAT,
+		
+		MOVEMENT_DEST,
 	}
 	
 	public static final float FLAG_DURATION = 0.5f;
@@ -104,7 +114,7 @@ public class ShipwideAIFlags {
 	}
 	
 	public void setFlag(AIFlags flag) {
-//		if (flag == AIFlags.BACK_OFF) {
+//		if (flag == AIFlags.DO_NOT_BACK_OFF) {
 //			System.out.println("fwfwefew");
 //		}
 		FlagData data = flags.get(flag);
@@ -120,6 +130,9 @@ public class ShipwideAIFlags {
 	}
 	
 	public void setFlag(AIFlags flag, float duration, Object custom) {
+//		if (flag == AIFlags.DO_NOT_BACK_OFF) {
+//			System.out.println("fwfwefew");
+//		}
 		//if (flag == AIFlags.BACK_OFF) {
 //		if (flag == AIFlags.CARRIER_FIGHTER_TARGET) {
 //			System.out.println("fwfwefew");

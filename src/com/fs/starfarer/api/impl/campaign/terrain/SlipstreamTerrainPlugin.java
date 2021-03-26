@@ -349,6 +349,10 @@ public class SlipstreamTerrainPlugin extends BaseTerrain {
 		return "Slipstream";
 	}
 	
+	public String getNameForTooltip() {
+		return "Slipstream";
+	}
+	
 	public String getEffectCategory() {
 		return "slipstream";
 	}

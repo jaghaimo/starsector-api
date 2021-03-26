@@ -3,7 +3,11 @@ package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.util.Misc;
 
 public class TriTachMajorLoanBarEvent extends TriTachLoanBarEvent {
@@ -25,6 +29,25 @@ public class TriTachMajorLoanBarEvent extends TriTachLoanBarEvent {
 		repaymentAmount = (int) (loanAmount * 1.5f);
 		repaymentDays = REPAYMENT_DAYS_MAJOR;
 	}
+	
+// do this after load is repaid
+//	@Override
+//	protected void doExtraConfirmActions() {
+//		ContactIntel.addPotentialContact(person, market, text);
+//	}
+
+	@Override
+	protected void adjustPerson(PersonAPI person) {
+		person.setImportanceAndVoice(PersonImportance.VERY_HIGH, random);
+		person.addTag(Tags.CONTACT_TRADE);
+		person.addTag(Tags.CONTACT_MILITARY);
+	}
+	
+	@Override
+	protected String getPersonPost() {
+		return Ranks.POST_SENIOR_EXECUTIVE;
+	}
+	
 	
 	@Override
 	protected void createIntel() {
@@ -89,6 +112,13 @@ public class TriTachMajorLoanBarEvent extends TriTachLoanBarEvent {
 		return "Decline the deal, explaining that you're \"just here to network\"";
 	}
 
+	@Override
+	protected String getNegotiatedText() {
+		return "As the negotiations conclude, the Tri-Tachyon " + getManOrWoman() + " leans back, rolling the stem of " +
+				getHisOrHer() + " glass between " + getHisOrHer() + " fingertips. " +
+			   "\"You didn't accept my initial offer\", " + getHeOrShe() + " says. \"I find that reassuring.\"";
+	}
+	
 	@Override
 	protected String getAcceptText() {
 		return "You leave the lounge rich in credits, having exchanged secure comm keys with the " +

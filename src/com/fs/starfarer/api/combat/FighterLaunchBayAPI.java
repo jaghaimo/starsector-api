@@ -2,6 +2,8 @@ package com.fs.starfarer.api.combat;
 
 import org.lwjgl.util.vector.Vector2f;
 
+import com.fs.starfarer.api.loading.WeaponSlotAPI;
+
 public interface FighterLaunchBayAPI {
 	
 	/**
@@ -44,6 +46,14 @@ public interface FighterLaunchBayAPI {
 
 	int getNumLost();
 	void setNumLost(int numLost);
+
+
+	WeaponSlotAPI getWeaponSlot();
+
+
+
+	void setCurrRate(float currRate);
+	float getCurrRate();
 }
 
 

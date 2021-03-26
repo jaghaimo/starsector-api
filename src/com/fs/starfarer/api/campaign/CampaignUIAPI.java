@@ -4,8 +4,8 @@ import java.awt.Color;
 import java.util.List;
 
 import com.fs.starfarer.api.Script;
-import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.comm.CommMessageAPI.MessageClickAction;
+import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.combat.BattleCreationContext;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.ui.HintPanelAPI;
@@ -108,7 +108,14 @@ public interface CampaignUIAPI {
 	boolean showPlayerFactionConfigDialog();
 
 	void showHelpPopupIfPossible(String id);
-	
+
+	SectorEntityToken getCurrentCourseTarget();
+	SectorEntityToken getNextStepForCourse(SectorEntityToken courseTarget);
+	void layInCourseForNextStep(SectorEntityToken courseTarget);
+	String getNameForCourseTarget(SectorEntityToken entity, boolean isEndpoint);
+	float getLastLegDistance(SectorEntityToken courseTarget);
+
+	boolean isFastForward();
 }
 
 

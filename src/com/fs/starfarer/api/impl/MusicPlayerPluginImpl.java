@@ -13,10 +13,13 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 
 public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 
+	public static String KEEP_PLAYING_LOCATION_MUSIC_DURING_ENCOUNTER_MEM_KEY = "$playLocationMusicDuringEnc";
 	public static String MUSIC_SET_MEM_KEY = "$musicSetId";
 	
 	public static Object CAMPAIGN_SYSTEM = new Object();
@@ -102,7 +105,7 @@ public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 	 * @return
 	 */
 	protected String getPlanetSurveyMusicSetId(Object param) {
-		return null;
+		return "music_survey_and_scavenge";
 	}
 	
 	protected String getHyperspaceMusicSetId() {
@@ -126,6 +129,18 @@ public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 			
 			String musicSetId = token.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
 			if (musicSetId != null) return musicSetId;
+			
+			//if (token.getFaction() != null && token.getFaction().isNeutralFaction()) {
+				if (Entities.DEBRIS_FIELD_SHARED.equals(token.getCustomEntityType())) {
+					return "music_survey_and_scavenge";
+				}
+				if (token.hasTag(Tags.SALVAGEABLE)) {
+					return "music_survey_and_scavenge";
+				}
+				if (token.hasTag(Tags.SALVAGE_MUSIC)) {
+					return "music_survey_and_scavenge";
+				}
+			//}
 			
 			if (token.getFaction() != null) {
 				FactionAPI faction = (FactionAPI) token.getFaction();

@@ -100,6 +100,15 @@ public interface PlanetSpecAPI {
 	void setShieldTexture(String shieldTexture);
 	Color getShieldColor();
 	void setShieldColor(Color shieldColor);
+	
+	String getShieldTexture2();
+	void setShieldTexture2(String shieldTexture2);
+	float getShieldThickness2();
+	void setShieldThickness2(float shieldThickness2);
+	Color getShieldColor2();
+	void setShieldColor2(Color shieldColor2);
+	boolean isDoNotShowInCombat();
+	void setDoNotShowInCombat(boolean doNotShowInCombat);
 
 }
 	

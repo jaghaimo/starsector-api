@@ -32,6 +32,10 @@ public class HostileFleetNearbyAndAware extends BaseCommandPlugin {
 			if (!fleet.isHostileTo(playerFleet)) continue;
 			if (fleet.getBattle() != null) continue;
 			
+			if (Misc.isInsignificant(fleet)) {
+				continue;
+			}
+			
 			
 			VisibilityLevel level = playerFleet.getVisibilityLevelTo(fleet);
 //			MemoryAPI mem = fleet.getMemoryWithoutUpdate();
@@ -44,7 +48,7 @@ public class HostileFleetNearbyAndAware extends BaseCommandPlugin {
 			if (fleet.getFleetData().getMembersListCopy().isEmpty()) continue;
 			
 			float dist = Misc.getDistance(playerFleet.getLocation(), fleet.getLocation());
-			if (dist > 750f) continue;
+			if (dist > 1500f) continue;
 			
 			//fleet.getAI().pickEncounterOption(null, playerFleet, true);
 			if (fleet.getAI() instanceof ModularFleetAIAPI) {

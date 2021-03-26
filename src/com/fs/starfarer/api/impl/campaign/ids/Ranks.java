@@ -20,16 +20,31 @@ public class Ranks {
 	public static String GROUND_GENERAL = "groundGeneral";
 	
 	public static String CITIZEN = "citizen";
+	public static String UNKNOWN = "unknown";
+	public static String TERRORIST = "terrorist";
+	public static String CLONE = "clone";
+	public static String BROTHER = "brother";
+	public static String SISTER = "sister";
+	
+	public static String KNIGHT_CAPTAIN = "knightCaptain";
 	
 	public static String AGENT = "agent";
+	public static String SPECIAL_AGENT = "specialAgent";
 	public static String PILOT = "pilot";
 	
 	
 	public static String FACTION_LEADER = "factionLeader";
 	public static String POST_FACTION_LEADER = "factionLeader";
+	public static String POST_PROVOST = "provost";
+	public static String POST_ACADEMICIAN = "academician";
+	public static String POST_SCIENTIST = "scientist";
 	
 	
 	public static String POST_AGENT = "agent";
+	public static String POST_ARISTOCRAT = "aristocrat";
+	public static String POST_SPECIAL_AGENT = "specialAgent";
+	public static String POST_GUILDMASTER = "guildMaster";
+	public static String POST_COMMUNE_LEADER = "communeLeader";
 	
 	public static String POST_PATROL_COMMANDER = "patrolCommander";
 	public static String POST_FLEET_COMMANDER = "fleetCommander";
@@ -44,22 +59,41 @@ public class Ranks {
 	
 	public static String POST_CITIZEN = "citizen";
 	
+	public static String POST_OFFICER = "officer";
+	public static String POST_OFFICER_FOR_HIRE = "officer_for_hire";
 	public static String POST_MERCENARY = "mercenary";
-	public static String POST_INVESTIGATOR = "investigator";
 	
+	public static String POST_INVESTIGATOR = "investigator";
 	
 	public static String POST_ADMINISTRATOR = "administrator";
 	public static String POST_FREELANCE_ADMIN = "freeAdmin";
 	
+	public static String POST_GENERIC_MILITARY = "genericMilitary";
+	
 	public static String POST_TRADER = "trader";
 	public static String POST_MERCHANT = "merchant";
 	public static String POST_INVESTOR = "investor";
+	public static String POST_EXECUTIVE = "executive";
+	public static String POST_SENIOR_EXECUTIVE = "seniorExecutive";
 	public static String POST_COMMODITIES_AGENT = "commodities_agent";
+	public static String POST_ENTREPRENEUR = "entrepreneur";
 	
 	public static String POST_SHADY = "shady";
 	public static String POST_GANGSTER = "gangster";
 	public static String POST_SMUGGLER = "smuggler";
 	public static String POST_FENCE = "fence";
+	public static String POST_CRIMINAL = "criminal";
+	public static String POST_MINORCRIMINAL = "minorCriminal";
+	public static String POST_ARMS_DEALER = "armsDealer";
+	public static String POST_SPACER = "spacer";
+	
+	public static String POST_DOCTOR = "doctor";
+	public static String POST_HACKER = "hacker";
+	public static String POST_PENSIONER = "pensioner";
+	public static String POST_ACTIVIST = "activist";
+	public static String POST_TERRORIST = "terrorist";
+	public static String POST_WARLORD = "warlord";
+	public static String POST_UNKNOWN = "unknown";
 	
 	
 	//public static String POST_ = "";

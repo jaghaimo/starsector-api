@@ -1,17 +1,24 @@
 package com.fs.starfarer.api.characters;
 
-import java.util.Collection;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.HasMemory;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
+import com.fs.starfarer.api.loading.ContactTagSpec;
 
 /**
  * @author Alex Mosolov
  *
  * Copyright 2012 Fractal Softworks, LLC
  */
-public interface PersonAPI {
+public interface PersonAPI extends HasMemory {
 	
 	void setPersonality(String personality);
 	
@@ -58,7 +65,7 @@ public interface PersonAPI {
 	boolean hasTag(String tag);
 	void addTag(String tag);
 	void removeTag(String tag);
-	Collection<String> getTags();
+	Set<String> getTags();
 	void clearTags();
 
 	boolean isPlayer();
@@ -74,6 +81,49 @@ public interface PersonAPI {
 	String getNameString();
 
 	void setGender(Gender gender);
+
+	/**
+	 * For officers, the fleet they're in.
+	 * @return
+	 */
+	CampaignFleetAPI getFleet();
+	/**
+	 * For officers, the fleet they're in.
+	 */
+	void setFleet(CampaignFleetAPI fleet);
+
+	MutableCharacterStatsAPI getFleetCommanderStats();
+
+	void setId(String id);
+
+	MarketAPI getMarket();
+	void setMarket(MarketAPI market);
+
+	PersonImportance getImportance();
+	void setImportance(PersonImportance importance);
+	
+	/**
+	 * The passed in random is used to set the "voice". These are paired since voice is based on importance.
+	 * @param importance
+	 * @param random
+	 */
+	void setImportanceAndVoice(PersonImportance importance, Random random);
+
+	String getHisOrHer();
+
+	String getHeOrShe();
+
+	List<ContactTagSpec> getSortedContactTags();
+
+	List<String> getSortedContactTagStrings();
+
+	String getHimOrHer();
+
+	String getManOrWoman();
+
+	String getVoice();
+	void setVoice(String voice);
+
 
 }
 

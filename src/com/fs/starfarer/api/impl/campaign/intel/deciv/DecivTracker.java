@@ -13,6 +13,7 @@ import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
@@ -130,13 +131,18 @@ public class DecivTracker implements EveryFrameScript {
 	protected boolean checkDeciv(MarketAPI market) {
 		MarketDecivData data = getDataFor(market);
 		
+//		if (market.getId().contains("chicomoztoc")) {
+//			decivilize(market, false);
+//			return true;
+//		}
+		
 		int max = getMaxMonths();
 		int min = getMinStreak();
 		float per = getProbPerMonth();
 		float fraction = getMinFraction();
 		
 		if (data.stabilityHistory.size() < max) return false;
-		if (data.stabilityHistory.get(0) > 0) return false;
+		if (data.stabilityHistory.get(0) > 0 || market.getStabilityValue() > 0) return false;
 		
 		float streak = 0;
 		float zeroCount = 0;
@@ -153,6 +159,8 @@ public class DecivTracker implements EveryFrameScript {
 		
 		if (streak < min) return false;
 		if (zeroCount / max < fraction) return false;
+		
+		if (Misc.isStoryCritical(market)) return false;
 		
 		float prob = (streak - min) * per;
 		
@@ -179,7 +187,7 @@ public class DecivTracker implements EveryFrameScript {
 	}
 	
 	public static void decivilize(MarketAPI market, boolean fullDestroy, boolean withIntel) {
-		if (market.getMemoryWithoutUpdate().getBoolean(NO_DECIV_KEY)) return;
+		if (market.getMemoryWithoutUpdate().getBoolean(NO_DECIV_KEY) && !fullDestroy) return;
 //		System.out.println("Location: " + market.getLocationInHyperspace());
 //		if (true) return;
 		
@@ -187,6 +195,8 @@ public class DecivTracker implements EveryFrameScript {
 		//if (!(market.getPrimaryEntity() instanceof PlanetAPI)) return;
 		
 		if (market.getPrimaryEntity().isDiscoverable()) return;
+		
+		ListenerUtil.reportColonyAboutToBeDecivilized(market, fullDestroy);
 		
 		if (withIntel) {
 			DecivIntel intel = new DecivIntel(market, market.getPrimaryEntity(), fullDestroy, false);
@@ -269,6 +279,8 @@ public class DecivTracker implements EveryFrameScript {
 		Misc.removeRadioChatter(market);
 		market.advance(0f);
 		
+		ListenerUtil.reportColonyDecivilized(market, fullDestroy);
+		
 //		if (!(market.getPrimaryEntity() instanceof PlanetAPI)) {
 //			Misc.setAbandonedStationMarket(market.getId() + "_deciv", primary);
 //		}
@@ -335,6 +347,8 @@ public class DecivTracker implements EveryFrameScript {
 			}
 		}
 		
+		market.setIncentiveCredits(0);
+		
 		SectorEntityToken primary = market.getPrimaryEntity();
 		market.getConnectedEntities().clear();
 		market.setPrimaryEntity(primary);
@@ -346,6 +360,8 @@ public class DecivTracker implements EveryFrameScript {
 	}
 	
 	public static void sendWarning(MarketAPI market) {
+		if (market.getMemoryWithoutUpdate().getBoolean(DecivTracker.NO_DECIV_KEY)) return;
+		
 		DecivIntel intel = new DecivIntel(market, market.getPrimaryEntity(), false, true);
 		Global.getSector().getIntelManager().addIntel(intel);
 	}

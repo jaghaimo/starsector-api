@@ -1,15 +1,18 @@
 package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 
 import java.awt.Color;
+import java.util.Map;
 import java.util.Random;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
@@ -17,6 +20,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public abstract class BaseGetCommodityBarEvent extends BaseBarEvent {
 	public static final String OPTION_CONFIRM = "confirm";
@@ -63,9 +67,12 @@ public abstract class BaseGetCommodityBarEvent extends BaseBarEvent {
 	protected PersonAPI createPerson() {
 		PersonAPI person = Global.getSector().getFaction(getPersonFaction()).createRandomPerson(random);
 		person.setRankId(getPersonRank());
-		person.setPostId(getPersonRank());
+		person.setPostId(getPersonPost());
+		adjustPerson(person);
 		return person;
 	}
+	
+	
 	
 	protected float getPriceMult() {
 		return 0.75f;
@@ -80,6 +87,9 @@ public abstract class BaseGetCommodityBarEvent extends BaseBarEvent {
 		//quantity *= BaseIndustry.getSizeMult(size);
 		quantity *= Math.max(1, size - 2);
 		return quantity;
+	}
+	protected void adjustPerson(PersonAPI person) {
+		
 	}
 	protected String getPersonFaction() {
 		return market.getFactionId();
@@ -130,8 +140,8 @@ public abstract class BaseGetCommodityBarEvent extends BaseBarEvent {
 	}
 
 	@Override
-	public void addPromptAndOption(InteractionDialogAPI dialog) {
-		super.addPromptAndOption(dialog);
+	public void addPromptAndOption(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
+		super.addPromptAndOption(dialog, memoryMap);
 		
 		regen(dialog.getInteractionTarget().getMarket());
 		
@@ -164,8 +174,8 @@ public abstract class BaseGetCommodityBarEvent extends BaseBarEvent {
 	protected Color [] getDeclineTextColors() { return null; };
 
 	@Override
-	public void init(InteractionDialogAPI dialog) {
-		super.init(dialog);
+	public void init(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
+		super.init(dialog, memoryMap);
 		
 		done = false;
 		
@@ -253,8 +263,15 @@ public abstract class BaseGetCommodityBarEvent extends BaseBarEvent {
 				options.setTooltip(OPTION_CONFIRM, tooltip);
 			}
 		}
+		if (canAccept) {
+			addStoryOption();
+		}
 		options.addOption(getCancelText(), OPTION_CANCEL);
 		//options.setShortcut(OPTION_CANCEL, Keyboard.KEY_ESCAPE, false, false, false, true);
+	}
+	
+	protected void addStoryOption() {
+		
 	}
 	
 	protected boolean canAccept() {
@@ -339,6 +356,9 @@ public abstract class BaseGetCommodityBarEvent extends BaseBarEvent {
 			}
 			done = true;
 		}
+//		else if (optionText == getStoryOptionId() && getStoryOptionId() != null) {
+//			
+//		}
 	}
 
 	@Override
@@ -353,8 +373,50 @@ public abstract class BaseGetCommodityBarEvent extends BaseBarEvent {
 	public MarketAPI getMarket() {
 		return market;
 	}
+	
+	
+	public PersonImportance pickImportance() {
+		WeightedRandomPicker<PersonImportance> picker = new WeightedRandomPicker<PersonImportance>(random);
+		picker.add(PersonImportance.VERY_LOW, 1f);
+		picker.add(PersonImportance.LOW, 5f);
+		picker.add(PersonImportance.MEDIUM, 10f);
+		picker.add(PersonImportance.HIGH, 5f);
+		picker.add(PersonImportance.VERY_HIGH, 1f);
+		return picker.pick();
+	}
+	public PersonImportance pickMediumImportance() {
+		WeightedRandomPicker<PersonImportance> picker = new WeightedRandomPicker<PersonImportance>(random);
+		picker.add(PersonImportance.LOW, 5f);
+		picker.add(PersonImportance.MEDIUM, 10f);
+		picker.add(PersonImportance.HIGH, 5f);
+		return picker.pick();
+	}
+	public PersonImportance pickHighImportance() {
+		WeightedRandomPicker<PersonImportance> picker = new WeightedRandomPicker<PersonImportance>(random);
+		picker.add(PersonImportance.MEDIUM, 10f);
+		picker.add(PersonImportance.HIGH, 5f);
+		picker.add(PersonImportance.VERY_HIGH, 1f);
+		return picker.pick();
+	}
+	public PersonImportance pickLowImportance() {
+		WeightedRandomPicker<PersonImportance> picker = new WeightedRandomPicker<PersonImportance>(random);
+		picker.add(PersonImportance.VERY_LOW, 10f);
+		picker.add(PersonImportance.LOW, 5f);
+		picker.add(PersonImportance.MEDIUM, 1f);
+		return picker.pick();
+	}
+	
 
+	public String pickOne(String ... options) {
+		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
+		for (String option : options) {
+			picker.add(option);
+		}
+		return picker.pick();
+	}
+	
 }
+
 
 
 

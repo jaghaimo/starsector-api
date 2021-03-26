@@ -81,5 +81,6 @@ public interface ShipEngineControllerAPI {
 	ValueShifterAPI getExtendLengthFraction();
 	ValueShifterAPI getExtendWidthFraction();
 	ValueShifterAPI getExtendGlowFraction();
+	void forceShowAccelerating();
 	
 }

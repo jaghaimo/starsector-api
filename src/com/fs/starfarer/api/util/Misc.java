@@ -9,6 +9,8 @@ import java.nio.Buffer;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -21,6 +23,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.imageio.ImageIO;
@@ -28,80 +31,92 @@ import javax.imageio.ImageIO;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.lwjgl.opengl.ATIMeminfo;
 import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.NVXGpuMemoryInfo;
 import org.lwjgl.util.vector.Vector2f;
 import org.lwjgl.util.vector.Vector3f;
-
-import sun.misc.Cleaner;
-import sun.nio.ch.DirectBuffer;
 
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.MusicPlayerPlugin;
 import com.fs.starfarer.api.campaign.AICoreAdminPlugin;
+import com.fs.starfarer.api.campaign.AICoreOfficerPlugin;
 import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignClockAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignTerrainAPI;
+import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CommDirectoryEntryAPI;
+import com.fs.starfarer.api.campaign.CommDirectoryEntryAPI.EntryType;
 import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.FleetInflater;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
+import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.LocationAPI;
+import com.fs.starfarer.api.campaign.ParticleControllerAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.ResourceCostPanelAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.SubmarketPlugin;
-import com.fs.starfarer.api.campaign.TextPanelAPI;
-import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
-import com.fs.starfarer.api.campaign.CommDirectoryEntryAPI.EntryType;
-import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
-import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
-import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
 import com.fs.starfarer.api.campaign.SubmarketPlugin.OnClickAction;
+import com.fs.starfarer.api.campaign.TextPanelAPI;
+import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.EncounterOption;
+import com.fs.starfarer.api.campaign.ai.FleetAIFlags;
 import com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI;
 import com.fs.starfarer.api.campaign.comm.CommMessageAPI.MessageClickAction;
 import com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin;
+import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.ImmigrationPlugin;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
 import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.campaign.econ.StabilizeMarketPlugin;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
-import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
 import com.fs.starfarer.api.campaign.events.CampaignEventManagerAPI;
 import com.fs.starfarer.api.campaign.events.CampaignEventPlugin;
 import com.fs.starfarer.api.campaign.events.CampaignEventTarget;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AbilityPlugin;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
+import com.fs.starfarer.api.characters.OfficerDataAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
+import com.fs.starfarer.api.combat.DamageType;
+import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.ShipHullSpecAPI;
-import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.impl.campaign.DModManager;
-import com.fs.starfarer.api.impl.campaign.RuleBasedInteractionDialogPluginImpl;
-import com.fs.starfarer.api.impl.campaign.WarningBeaconEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
-import com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality;
+import com.fs.starfarer.api.impl.campaign.DModManager;
+import com.fs.starfarer.api.impl.campaign.RuleBasedInteractionDialogPluginImpl;
+import com.fs.starfarer.api.impl.campaign.WarningBeaconEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.econ.impl.ConstructionQueue.ConstructionQueueItem;
+import com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality;
 import com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality.QualityData;
 import com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.MarketFilter;
+import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Difficulties;
 import com.fs.starfarer.api.impl.campaign.ids.Drops;
@@ -109,8 +124,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
-import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
@@ -118,43 +133,71 @@ import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel;
 import com.fs.starfarer.api.impl.campaign.intel.MessageIntel;
+import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl;
 import com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride;
 import com.fs.starfarer.api.impl.campaign.procgen.PlanetConditionGenerator;
+import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
 import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
-import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.OrbitGap;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.impl.campaign.rulecmd.unsetAll;
+import com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin;
 import com.fs.starfarer.api.impl.campaign.submarkets.StoragePlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidSource;
+import com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain.TileParams;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
-import com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain.TileParams;
-import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.plugins.FactionPersonalityPickerPlugin;
 import com.fs.starfarer.api.plugins.SurveyPlugin;
 import com.fs.starfarer.api.ui.Alignment;
+import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
+
+import sun.misc.Cleaner;
+import sun.nio.ch.DirectBuffer;
 
 
 public class Misc {
 	
+	// for combat entities
+	public static final int OWNER_NEUTRAL = 100;
+	public static final int OWNER_PLAYER = 0;
+	
+	public static Color FLOATY_EMP_DAMAGE_COLOR = new Color(255,255,255,255);
+	public static Color FLOATY_ARMOR_DAMAGE_COLOR = new Color(255,255,0,220);
+	public static Color FLOATY_SHIELD_DAMAGE_COLOR = new Color(200,200,255,220);
+	public static Color FLOATY_HULL_DAMAGE_COLOR = new Color(255,50,0,220);
+	
 //	public static final String SUPPLY_ACCESSIBILITY = "Supply Accessibility";
 	
-	public static final float FP_TO_BOMBARD_COST_APPROX_MULT = 12f;
-	public static final float FP_TO_GROUND_RAID_STR_APPROX_MULT = 6f;
+	public static float GATE_FUEL_COST_MULT = Global.getSettings().getFloat("gateTransitFuelCostMult");
 	
-	public static final String UNKNOWN = " ";
-	public static final String UNSURVEYED = "??";
-	public static final String PRELIMINARY = "?";
-	public static final String FULL = "X";
+	public static int MAX_COLONY_SIZE = Global.getSettings().getInt("maxColonySize");
+	public static int OVER_MAX_INDUSTRIES_PENALTY = Global.getSettings().getInt("overMaxIndustriesPenalty");
+	
+	
+	public static float FP_TO_BOMBARD_COST_APPROX_MULT = 12f;
+	public static float FP_TO_GROUND_RAID_STR_APPROX_MULT = 6f;
+	
+	public static String UNKNOWN = " ";
+	public static String UNSURVEYED = "??";
+	public static String PRELIMINARY = "?";
+	public static String FULL = "X";
+	
+	/**
+	 * Name of "story points".
+	 */
+	public static String STORY = "story";
+	
+	public static float MAX_OFFICER_LEVEL = Global.getSettings().getFloat("officerMaxLevel");
 	
 	public static Random random = new Random();
 
@@ -233,6 +276,27 @@ public class Misc {
 			return Boolean.parseBoolean(str);
 		}
 		
+		public boolean isBoolean(Map<String, MemoryAPI> memoryMap) {
+			String str = getString(memoryMap);
+			return str.toLowerCase().equals("true") || str.toLowerCase().equals("false");
+		}
+		
+		public boolean isFloat(Map<String, MemoryAPI> memoryMap) {
+			String str = null;
+			if (isVariable()) {
+				VarAndMemory var = getVarNameAndMemory(memoryMap);
+				str = var.memory.getString(var.name);
+			} else {
+				str = string;
+			}
+			try {
+				Float.parseFloat(str);
+				return true;
+			} catch (NumberFormatException e) {
+				return false;
+			}
+		}
+		
 		public float getFloat(Map<String, MemoryAPI> memoryMap) {
 			float result = 0f;
 			if (isVariable()) {
@@ -244,7 +308,20 @@ public class Misc {
 			return result;
 		}
 		
+		public int getInt(Map<String, MemoryAPI> memoryMap) {
+			return (int) Math.round(getFloat(memoryMap));
+		}
+		
 		public Color getColor(Map<String, MemoryAPI> memoryMap) {
+			Object object = null;
+			if (isVariable()) {
+				VarAndMemory var = getVarNameAndMemory(memoryMap);
+				object = var.memory.get(var.name);
+			}
+			if (object instanceof Color) {
+				return (Color) object;
+			}
+					
 			String string = getString(memoryMap);
 			try {
 				String [] parts = string.split(Pattern.quote(","));
@@ -259,6 +336,14 @@ public class Misc {
 					string = "textFriendColor";
 				} else if ("highlight".equals(string)) {
 					string = "buttonShortcut";
+				} else if ("h".equals(string)) {
+					string = "buttonShortcut";
+				} else if ("story".equals(string)) {
+					return Misc.getStoryOptionColor();
+				} else if ("gray".equals(string)) {
+					return Misc.getGrayColor();
+				} else if ("grey".equals(string)) {
+					return Misc.getGrayColor();
 				}
 				return Global.getSettings().getColor(string);
 			}
@@ -431,7 +516,12 @@ public class Misc {
 	
 	
 	public static String replaceTokensFromMemory(String text, Map<String, MemoryAPI> memoryMap) {
-		for (String key : memoryMap.keySet()) {
+		List<String> keySet = new ArrayList<String>(memoryMap.keySet());
+		if (keySet.contains(MemKeys.LOCAL)) {
+			keySet.remove(MemKeys.LOCAL);
+			keySet.add(0, MemKeys.LOCAL);
+		}
+		for (String key : keySet) {
 			MemoryAPI memory = memoryMap.get(key);
 			List<String> keys = new ArrayList<String>(memory.getKeys());
 			Collections.sort(keys, new Comparator<String>() {
@@ -456,7 +546,7 @@ public class Misc {
 		return getDistance(from.getLocation(), to.getLocation());
 	}
 	public static float getDistanceLY(SectorEntityToken from, SectorEntityToken to) {
-		return getDistanceLY(from.getLocation(), to.getLocation());
+		return getDistanceLY(from.getLocationInHyperspace(), to.getLocationInHyperspace());
 	}
 	
 	
@@ -557,10 +647,18 @@ public class Misc {
 	}
 	
 	public static Vector2f getPointWithinRadius(Vector2f from, float r) {
-		return getPointWithinRadius(from, r, new Random());
+		return getPointWithinRadius(from, r, random);
 	}
 	public static Vector2f getPointWithinRadius(Vector2f from, float r, Random random) {
 		r = r * random.nextFloat();
+		float angle = (float) (random.nextFloat() * Math.PI * 2f);
+		float x = (float) (Math.cos(angle) * r) + from.x;
+		float y = (float) (Math.sin(angle) * r) + from.y;
+		return new Vector2f(x, y);
+	}
+	
+	public static Vector2f getPointWithinRadiusUniform(Vector2f from, float r, Random random) {
+		r = (float) (r * Math.sqrt(random.nextFloat()));
 		float angle = (float) (random.nextFloat() * Math.PI * 2f);
 		float x = (float) (Math.cos(angle) * r) + from.x;
 		float y = (float) (Math.sin(angle) * r) + from.y;
@@ -599,13 +697,25 @@ public class Misc {
 		return event;
 	}
 	
+	public static Color getStoryDarkColor() {
+		return setAlpha(scaleColorOnly(getStoryOptionColor(), 0.4f), 175);
+	}
 	public static Color getStoryOptionColor() {
 		//return Misc.interpolateColor(Misc.getButtonTextColor(), Misc.getPositiveHighlightColor(), 0.5f);
 		return Global.getSettings().getColor("storyOptionColor");
+		//return Global.getSettings().getColor("tooltipTitleAndLightHighlightColor");
+	}
+	
+	public static Color getHighlightedOptionColor() {
+		return Global.getSettings().getColor("buttonShortcut");
 	}
 	
 	public static Color getHighlightColor() {
 		return Global.getSettings().getColor("buttonShortcut");
+	}
+	public static Color getDarkHighlightColor() {
+		Color hc = Misc.getHighlightColor();
+		return Misc.setAlpha(hc, 155);
 	}
 	public static Color getTooltipTitleAndLightHighlightColor() {
 		return Global.getSettings().getColor("tooltipTitleAndLightHighlightColor");
@@ -684,6 +794,13 @@ public class Misc {
 	}
 	
 	public static String getAndJoined(String ... strings) {
+		return getJoined("and", strings);
+	}
+	
+	public static String getJoined(String joiner, List<String> strings) {
+		return getJoined(joiner, strings.toArray(new String [0]));
+	}
+	public static String getJoined(String joiner, String ... strings) {
 		if (strings.length == 1) return strings[0];
 		
 		String result = "";
@@ -694,9 +811,11 @@ public class Misc {
 			result = result.substring(0, result.length() - 2);
 		}
 		if (strings.length > 2) {
-			result += ", and " + strings[strings.length - 1];
+			//result += ", and " + strings[strings.length - 1];
+			result += ", " + joiner + " " + strings[strings.length - 1];
 		} else if (strings.length == 2) {
-			result += " and " + strings[strings.length - 1];
+			//result += " and " + strings[strings.length - 1];
+			result += " " + joiner + " " + strings[strings.length - 1];
 		}
 		return result;
 	}
@@ -754,6 +873,7 @@ public class Misc {
 	
 	
 	public static List<MarketAPI> getMarketsInLocation(LocationAPI location) {
+		if (location == null) return new ArrayList<MarketAPI>();
 		return Global.getSector().getEconomy().getMarkets(location);
 //		List<MarketAPI> result = new ArrayList<MarketAPI>();
 //		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
@@ -771,6 +891,22 @@ public class Misc {
 			}
 		}
 		return result;
+	}
+	public static List<MarketAPI> getPlayerMarkets(boolean includeNonPlayerFaction) {
+		FactionAPI player = Global.getSector().getFaction(Factions.PLAYER);
+		List<MarketAPI> result = new ArrayList<MarketAPI>();
+		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
+			if (market.getFaction() == player) {
+				result.add(market);
+			} else if (includeNonPlayerFaction && market.isPlayerOwned()) {
+				result.add(market);
+			}
+		}
+		return result;
+	}
+	
+	public static List<MarketAPI> getFactionMarkets(String factionId) {
+		return getFactionMarkets(Global.getSector().getFaction(factionId));
 	}
 	public static List<MarketAPI> getFactionMarkets(FactionAPI faction) {
 		//Global.getSector().getEconomy().get
@@ -955,6 +1091,15 @@ public class Misc {
 		result.y = (float)Math.sin(radians);
 		
 		return result;
+	}
+	
+	public static Vector2f rotateAroundOrigin(Vector2f v, float angle) {
+		float cos = (float) Math.cos(angle * RAD_PER_DEG);
+		float sin = (float) Math.sin(angle * RAD_PER_DEG);
+		Vector2f r = new Vector2f();
+		r.x = v.x * cos - v.y * sin;
+		r.y = v.x * sin + v.y * cos;
+		return r;
 	}
 	
 	/**
@@ -1231,6 +1376,41 @@ public class Misc {
 		}
 	}
 	
+	public static String getDetailedAgoString(long timestamp) {
+		CampaignClockAPI clock = Global.getSector().getClock();
+		int days = (int) clock.getElapsedDaysSince(timestamp);
+		
+		if (days == 0) {
+			return "0 days ago";
+		} else if (days == 1) {
+			return "1 day ago";
+		} else if (days <= 6) {
+			return (int)Math.ceil(days) + " days ago";
+		} else if (days <= 7) {
+			return "1 week ago";
+		} else if (days <= 14) {
+			return "2 weeks ago";
+		} else if (days <= 21) {
+			return "3 weeks ago";
+		} else {
+			int months = days / 30;
+			if (months <= 12) {
+				if (months <= 1) {
+					return "1 month ago";
+				} else {
+					return "" + months + " months ago";
+				}
+			} else {
+				int years = months / 12;
+				if (years <= 1) {
+					return "1 cycle ago";
+				} else {
+					return "" + years + " cycles ago";
+				}
+			}
+		}
+	}
+	
 	public static String getAtLeastStringForDays(int days) {
 		if (days <= 1f) {
 			return "at least a day";
@@ -1301,8 +1481,9 @@ public class Misc {
 		speed -= Global.getSettings().getBaseTravelSpeed();
 		if (speed < 0 || speed <= Global.getSettings().getFloat("minTravelSpeed") + 1f) speed = 0;
 		float currBurn = speed / Global.getSettings().getSpeedPerBurnLevel();
-		//System.out.println("ADFSDF: " +Math.round(currBurn));
-		return Math.round(currBurn + 0.01f);
+		// 1/1/20: changed to not add +0.01f; not sure why it was there but could cause issues w/ isSlowMoving(), maybe?
+		//return Math.round(currBurn + 0.01f);
+		return Math.round(currBurn);
 	}
 	
 	public static float getFractionalBurnLevelForSpeed(float speed) {
@@ -1550,6 +1731,93 @@ public class Misc {
 		return i;
 	}
 	
+	public static boolean isPointInBounds(Vector2f p1, List<Vector2f> bounds) {
+		Vector2f p2 = new Vector2f(p1);
+		p2.x += 10000;
+		int count = 0;
+		for (int i = 0; i < 2; i++) {
+			for (int j = 0; j < bounds.size() - 1; j++) {
+				Vector2f s1 = bounds.get(j);
+				Vector2f s2 = bounds.get(j + 1);
+				Vector2f p = intersectSegments(p1, p2, s1, s2);
+				if (p != null) {
+					if (Math.abs(p.x - s1.x) < 0.001f && 
+						Math.abs(p.y - s1.y) < 0.001f) {
+						continue; // JUST the first point, (p1, p2]
+					}
+					if (areSegmentsCoincident(p1, p2, s1, s2)) {
+						continue;
+					}
+					count++;
+				}
+			}
+			if (i == 0 && count % 2 == 1) {
+				count = 0;
+				p2.y += 100;
+			} else {
+				break;
+			}
+		}
+		return count % 2 == 1;
+	}
+	
+	public static Vector2f intersectSegments(Vector2f a1, Vector2f a2, Vector2f b1, Vector2f b2) {
+		float denom = (b2.y - b1.y) * (a2.x - a1.x) - (b2.x - b1.x) * (a2.y - a1.y);
+		float numUa = (b2.x - b1.x) * (a1.y - b1.y) - (b2.y - b1.y) * (a1.x - b1.x);
+		float numUb = (a2.x - a1.x) * (a1.y - b1.y) - (a2.y - a1.y) * (a1.x - b1.x);
+
+		if (denom == 0 && !(numUa == 0 && numUb == 0)) { // parallel, not coincident
+			return null;
+		}
+
+		if (denom == 0 && numUa == 0 && numUb == 0) { // coincident
+			float minX, minY, maxX, maxY;
+			if (a1.x < a2.x) {
+				minX = a1.x;
+				maxX = a2.x;
+			} else {
+				minX = a2.x;
+				maxX = a1.x;
+			}
+			if (a1.y < a2.y) {
+				minY = a1.y;
+				maxY = a2.y;
+			} else {
+				minY = a2.y;
+				maxY = a1.y;
+			}
+			// if either one of the endpoints in segment b is between the points in segment a,
+			// return that endpoint as the intersection.  Otherwise, no intersection.
+			if (b1.x >= minX && b1.x <= maxX && b1.y >= minY && b1.y <= maxY) {
+				return new Vector2f(b1);
+			} else if (b2.x >= minX && b2.x <= maxX && b2.y >= minY && b2.y <= maxY) {
+				return new Vector2f(b2);
+			} else {
+				return null;
+			}
+		}
+
+		float Ua = numUa / denom;
+		float Ub = numUb / denom;
+		if (Ua >=0 && Ua <= 1 && Ub >= 0 && Ub <= 1) { // segments intersect
+			Vector2f result = new Vector2f();
+//			if (Ua <= 0.001f) {
+//				result.x = a1.x;
+//				result.y = a1.y;
+//			} else if (Ua >= 0.999f) {
+//				result.x = a2.x;
+//				result.y = a2.y;
+//			} else {
+				result.x = a1.x + Ua * (a2.x - a1.x);
+				result.y = a1.y + Ua * (a2.y - a1.y);
+//			}
+			return result;
+		} else { // lines intersect, but segments do not
+			return null;
+		}
+
+	}
+	
 	public static boolean areSegmentsCoincident(Vector2f a1, Vector2f a2, Vector2f b1, Vector2f b2) {
 		float denom = (b2.y - b1.y) * (a2.x - a1.x) - (b2.x - b1.x) * (a2.y - a1.y);
 		float numUa = (b2.x - b1.x) * (a1.y - b1.y) - (b2.y - b1.y) * (a1.x - b1.x);
@@ -1658,6 +1926,9 @@ public class Misc {
 	public static void wiggle(Vector2f v, float max) {
 		v.x += (max * 2f * ((float) Math.random() - 0.5f));
 		v.y += (max * 2f * ((float) Math.random() - 0.5f));
+		if (v.length() == 0 || v.lengthSquared() == 0) {
+			v.x += max * 0.25f;
+		}
 	}
 	
 	
@@ -1714,7 +1985,7 @@ public class Misc {
 	}
 	
 	
-	public static void main(String[] args) {
+//	public static void main(String[] args) {
 //		System.out.println("TEST");
 //		String s = "te\\\"st==$global.one $player.a $>=$sdfdsf\"++++dfdsf0---\"\"quoted \\\"=+!<>param\" one two 1234 1  2342 24  \t\t234234";
 //		//String s = "menuState sdfsdf sdfsdf \"\"= \"main \\\" 1234\"";
@@ -1727,7 +1998,7 @@ public class Misc {
 //		String s = "ffff0000";
 //		System.out.println(Long.parseLong(s, 16));
 		//System.out.println(Long.parseLong("aa0F245C", 16));
-	}
+//	}
 
 	public static CampaignTerrainAPI getHyperspaceTerrain() {
 		for (CampaignTerrainAPI curr : Global.getSector().getHyperspace().getTerrainCopy()) {
@@ -1739,6 +2010,8 @@ public class Misc {
 	}
 	
 	public static StarCoronaTerrainPlugin getCoronaFor(PlanetAPI star) {
+		if (star == null) return null;
+		
 		for (CampaignTerrainAPI curr : star.getContainingLocation().getTerrainCopy()) {
 			if (curr.getPlugin() instanceof StarCoronaTerrainPlugin) {
 				StarCoronaTerrainPlugin corona = (StarCoronaTerrainPlugin) curr.getPlugin();
@@ -1870,9 +2143,12 @@ public class Misc {
 	
 	
 	public static <T extends Enum<T>> T mapToEnum(JSONObject json, String key, Class<T> enumType, T defaultOption) throws JSONException {
+		return mapToEnum(json, key, enumType, defaultOption, true);
+	}
+	public static <T extends Enum<T>> T mapToEnum(JSONObject json, String key, Class<T> enumType, T defaultOption, boolean required) throws JSONException {
 		String val = json.optString(key);
 		if (val == null || val.equals("")) {
-			if (defaultOption == null) {
+			if (defaultOption == null && required) {
 				throw new RuntimeException("Key [" + key + "] is required");
 			}
 			return defaultOption;
@@ -1933,7 +2209,7 @@ public class Misc {
 	}
 
 	public static float [][] initNoise(Random random, int w, int h, float spikes) {
-		if (random == null) random = new Random();
+		if (random == null) random = Misc.random;
 		float [][] noise = new float [w][h];
 		for (int i = 0; i < noise.length; i++) {
 			for (int j = 0; j < noise[0].length; j++) {
@@ -2158,7 +2434,7 @@ public class Misc {
 		}
 	}
 	
-	public static void setAllPlanetsSurveyed(StarSystemAPI system) {
+	public static void setAllPlanetsSurveyed(StarSystemAPI system, boolean setRuinsExplored) {
 		for (PlanetAPI planet : system.getPlanets()) {
 			if (planet.isStar()) continue;
 			
@@ -2168,6 +2444,10 @@ public class Misc {
 			market.setSurveyLevel(SurveyLevel.FULL);
 			for (MarketConditionAPI mc : market.getConditions()) {
 				mc.setSurveyed(true);
+			}
+			
+			if (setRuinsExplored && Misc.hasRuins(market)) {
+				market.getMemoryWithoutUpdate().set("$ruinsExplored", true);
 			}
 		}
 	}
@@ -2236,7 +2516,7 @@ public class Misc {
 	
 	
 	public static Random getRandom(long seed, int level) {
-		if (seed == 0) return new Random();
+		if (seed == 0) return random;
 		
 		Random r = new Random(seed);
 		for (int i = 0; i < level; i++) {
@@ -2394,6 +2674,7 @@ public class Misc {
 	}
 	public static void fadeAndExpire(final SectorEntityToken entity, final float seconds) {
 		entity.addTag(Tags.NON_CLICKABLE);
+		entity.addTag(Tags.FADING_OUT_AND_EXPIRING);
 		//entity.getContainingLocation().addScript(new EveryFrameScript() {
 		entity.addScript(new EveryFrameScript() {
 			float elapsed = 0f;
@@ -2466,7 +2747,7 @@ public class Misc {
 	
 	
 	public static SectorEntityToken addDebrisField(LocationAPI loc, DebrisFieldParams params, Random random) {
-		if (random == null) random = new Random();
+		if (random == null) random = Misc.random;
 		SectorEntityToken debris = loc.addTerrain(Terrain.DEBRIS_FIELD, params);
 		debris.setSensorProfile(1f);
 		debris.setDiscoverable(true);
@@ -2494,6 +2775,26 @@ public class Misc {
 		}
 		
 		return debris;
+	}
+
+	public static boolean isUnboardable(FleetMemberAPI member) {
+		return isUnboardable(member.getHullSpec());
+	}
+	
+	public static boolean isUnboardable(ShipHullSpecAPI hullSpec) {
+		if (hullSpec.getHints().contains(ShipTypeHints.UNBOARDABLE)) {
+			for (String tag : getAllowedRecoveryTags()) {
+				if (hullSpec.hasTag(tag)) return false;
+			}
+			if (hullSpec.isDefaultDHull()) {
+				ShipHullSpecAPI parent = hullSpec.getDParentHull();
+				for (String tag : getAllowedRecoveryTags()) {
+					if (parent.hasTag(tag)) return false;
+				}
+			}
+			return true;
+		}
+		return false;
 	}
 	
 
@@ -2533,6 +2834,39 @@ public class Misc {
 		List<JumpPointAPI> points = entity.getContainingLocation().getEntities(JumpPointAPI.class);
 		
 		for (JumpPointAPI curr : points) {
+			float dist = Misc.getDistance(entity.getLocation(), curr.getLocation());
+			if (dist < min) {
+				min = dist;
+				result = curr;
+			}
+		}
+		return result;
+	}
+	
+	public static JumpPointAPI findNearestJumpPointThatCouldBeExitedFrom(SectorEntityToken entity) {
+		float min = Float.MAX_VALUE;
+		JumpPointAPI result = null;
+		List<JumpPointAPI> points = entity.getContainingLocation().getEntities(JumpPointAPI.class);
+		
+		for (JumpPointAPI curr : points) {
+			if (curr.isGasGiantAnchor() || curr.isStarAnchor()) continue;
+			float dist = Misc.getDistance(entity.getLocation(), curr.getLocation());
+			if (dist < min) {
+				min = dist;
+				result = curr;
+			}
+		}
+		return result;
+	}
+	
+	public static SectorEntityToken findNearestPlanetTo(SectorEntityToken entity, boolean requireGasGiant, boolean allowStars) {
+		float min = Float.MAX_VALUE;
+		SectorEntityToken result = null;
+		List<PlanetAPI> planets = entity.getContainingLocation().getPlanets();
+		
+		for (PlanetAPI curr : planets) {
+			if (requireGasGiant && !curr.isGasGiant()) continue;
+			if (!allowStars && curr.isStar()) continue;
 			float dist = Misc.getDistance(entity.getLocation(), curr.getLocation());
 			if (dist < min) {
 				min = dist;
@@ -2656,6 +2990,22 @@ public class Misc {
 		return null;
 	}
 	
+	@SuppressWarnings("unchecked")
+	public static JumpPointAPI findNearestJumpPoint(SectorEntityToken from) {
+		float min = Float.MAX_VALUE;
+		JumpPointAPI result = null;
+		LocationAPI location = from.getContainingLocation();
+		List<JumpPointAPI> points = location.getEntities(JumpPointAPI.class);
+		for (JumpPointAPI curr : points) {
+			float dist = Misc.getDistance(from.getLocation(), curr.getLocation());
+			if (dist < min) {
+				min = dist;
+				result = curr;
+			}
+		}
+		return result;
+	}
+	
 	
 	public static final String D_HULL_SUFFIX = "_default_D";
 	public static String getDHullId(ShipHullSpecAPI spec) {
@@ -2734,8 +3084,15 @@ public class Misc {
 //		}
 	}
 	
+	public static void setPrevSalvageSpecial(SectorEntityToken entity, Object data) {
+		entity.getMemoryWithoutUpdate().set(MemFlags.PREV_SALVAGE_SPECIAL_DATA, data);
+	}
+	
 	public static Object getSalvageSpecial(SectorEntityToken entity) {
 		return entity.getMemoryWithoutUpdate().get(MemFlags.SALVAGE_SPECIAL_DATA);
+	}
+	public static Object getPrevSalvageSpecial(SectorEntityToken entity) {
+		return entity.getMemoryWithoutUpdate().get(MemFlags.PREV_SALVAGE_SPECIAL_DATA);
 	}
 	
 	
@@ -2757,6 +3114,25 @@ public class Misc {
 		return systems;
 	}
 
+//	public static boolean systemHasPulsar(StarSystemAPI system) {
+//		return hasPulsar(system);
+////		boolean result = (system.getStar() != null && system.getStar().getSpec().isPulsar()) ||
+////		   (system.getSecondary() != null && system.getSecondary().getSpec().isPulsar()) ||
+////		   (system.getTertiary() != null && system.getTertiary().getSpec().isPulsar());
+////		return result;
+//	}
+	public static PlanetAPI getPulsarInSystem(StarSystemAPI system) {
+		if (system.getStar() != null && system.getStar().getSpec().isPulsar()) {
+			return system.getStar();
+		}
+		if (system.getSecondary() != null && system.getSecondary().getSpec().isPulsar()) {
+			return system.getSecondary();
+		}
+		if (system.getTertiary() != null && system.getTertiary().getSpec().isPulsar()) {
+			return system.getTertiary();
+		}
+		return null;
+	}
 	public static boolean systemHasPlanets(StarSystemAPI system) {
 		for (PlanetAPI p : system.getPlanets()) {
 			if (!p.isStar()) return true;
@@ -3044,10 +3420,12 @@ public class Misc {
 	}
 	
 	
-	public static boolean doesMarketHaveMissionImportantPeople(SectorEntityToken entity) {
+	public static boolean doesMarketHaveMissionImportantPeopleOrIsMarketMissionImportant(SectorEntityToken entity) {
 		MarketAPI market = entity.getMarket();
 		if (market == null) return false;
 		if (market.getPrimaryEntity() != entity) return false;
+		
+		if (market.getMemoryWithoutUpdate().getBoolean(MemFlags.ENTITY_MISSION_IMPORTANT)) return true;
 		
 		if (market != null && market.getCommDirectory() != null) {
 			for (CommDirectoryEntryAPI entry : market.getCommDirectory().getEntriesCopy()) {
@@ -3061,6 +3439,7 @@ public class Misc {
 		}
 		return false;
 	}
+	
 	
 	
 	public static void makeImportant(SectorEntityToken entity, String reason) {
@@ -3082,6 +3461,11 @@ public class Misc {
 	public static void makeImportant(MemoryAPI memory, String reason, float dur) {
 		Misc.setFlagWithReason(memory, MemFlags.ENTITY_MISSION_IMPORTANT,
 				reason, true, dur);
+	}
+	
+	public static boolean isImportantForReason(MemoryAPI memory, String reason) {
+		String flagKey = MemFlags.ENTITY_MISSION_IMPORTANT;
+		return flagHasReason(memory, flagKey, reason);
 	}
 	
 	public static void makeUnimportant(SectorEntityToken entity, String reason) {
@@ -3147,9 +3531,24 @@ public class Misc {
 			for (int i = 0; i < 5; i++) {
 				r.nextLong();
 			}
-			return r.nextLong();
+			long result = r.nextLong();
+			entity.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SEED, result);
+			return result;
 		}
 		return seed;
+	}
+	
+	public static long getNameBasedSeed(SectorEntityToken entity) {
+		String id = entity.getName();
+		if (id == null) id = genUID();
+		
+		long seed = (entity.getId().hashCode() * 17000);
+		Random r = new Random(seed);
+		for (int i = 0; i < 53; i++) {
+			r.nextLong();
+		}
+		long result = r.nextLong();
+		return result;
 	}
 	
 	public static void forgetAboutTransponder(CampaignFleetAPI fleet) {
@@ -3178,6 +3577,13 @@ public class Misc {
 	public static float getDesiredMoveDir(CampaignFleetAPI fleet) {
 		if (fleet.getMoveDestination() == null) return 0f;
 		
+		if (fleet.wasSlowMoving()) {
+			Vector2f vel = fleet.getVelocity();
+			Vector2f neg = new Vector2f(vel);
+			neg.negate();
+			return getAngleInDegrees(neg);
+		}
+		
 		return getAngleInDegrees(fleet.getLocation(), fleet.getMoveDestination());
 	}
 	
@@ -3201,6 +3607,11 @@ public class Misc {
 	
 	public static AICoreAdminPlugin getAICoreAdminPlugin(String commodityId) {
 		AICoreAdminPlugin plugin = Global.getSector().getPluginPicker().pickAICoreAdminPlugin(commodityId);
+		return plugin;
+	}
+	
+	public static AICoreOfficerPlugin getAICoreOfficerPlugin(String commodityId) {
+		AICoreOfficerPlugin plugin = Global.getSector().getPluginPicker().pickAICoreOfficerPlugin(commodityId);
 		return plugin;
 	}
 	
@@ -3265,9 +3676,10 @@ public class Misc {
 	}
 	
 	public static SubmarketPlugin getStorage(MarketAPI market) {
+		if (market == null) return null;
 		SubmarketAPI submarket = market.getSubmarket(Submarkets.SUBMARKET_STORAGE);
 		if (submarket == null) return null;
-		return submarket.getPlugin();
+		return (StoragePlugin) submarket.getPlugin();
 	}
 	
 	public static SubmarketPlugin getLocalResources(MarketAPI market) {
@@ -3276,6 +3688,7 @@ public class Misc {
 		return submarket.getPlugin();
 	}
 	public static CargoAPI getStorageCargo(MarketAPI market) {
+		if (market == null) return null;
 		SubmarketAPI submarket = market.getSubmarket(Submarkets.SUBMARKET_STORAGE);
 		if (submarket == null) return null;
 		return submarket.getCargo();
@@ -3387,7 +3800,12 @@ public class Misc {
 		int officerBase = Global.getSettings().getInt("officerSalaryBase");
 		int officerPerLevel = Global.getSettings().getInt("officerSalaryPerLevel");
 		
-		float salary = officerBase + officer.getStats().getLevel() * officerPerLevel;
+		float payMult = 1f;
+		if (Misc.isMercenary(officer)) {
+			payMult = Global.getSettings().getFloat("officerMercPayMult");
+		}
+		
+		float salary = (officerBase + officer.getStats().getLevel() * officerPerLevel) * payMult;
 		return salary;
 	}
 	
@@ -3398,7 +3816,7 @@ public class Misc {
 //	}
 	
 	public static Map<String, Integer> variantToFPCache = new HashMap<String, Integer>();
-	public static Map<String, Boolean> variantToIsBaseCache = new HashMap<String, Boolean>();
+	//public static Map<String, Boolean> variantToIsBaseCache = new HashMap<String, Boolean>();
 	public static Map<String, String> variantToHullCache = new HashMap<String, String>();
 	//public static Map<String, String> hullIdToHasTag = new HashMap<String, String>();
 	public static String getHullIdForVariantId(String variantId) {
@@ -3412,19 +3830,19 @@ public class Misc {
 		return hull;
 	}
 	
-	public static boolean getIsBaseForVariantId(String variantId) {
-		Boolean isBase = variantToIsBaseCache.get(variantId);
-		if (isBase != null) return isBase;
-//		System.out.println(variantId);
-//		if (variantId.equals("buffalo2_FS")) {
-//			System.out.println("wefwef");
-//		}
-		ShipVariantAPI variant = Global.getSettings().getVariant(variantId);
-		isBase = variant.getHullSpec().hasTag(Items.TAG_BASE_BP);
-		variantToIsBaseCache.put(variantId, isBase);
-		
-		return isBase;
-	}
+//	public static boolean getIsBaseForVariantId(String variantId) {
+//		Boolean isBase = variantToIsBaseCache.get(variantId);
+//		if (isBase != null) return isBase;
+////		System.out.println(variantId);
+////		if (variantId.equals("buffalo2_FS")) {
+////			System.out.println("wefwef");
+////		}
+//		ShipVariantAPI variant = Global.getSettings().getVariant(variantId);
+//		isBase = variant.getHullSpec().hasTag(Items.TAG_BASE_BP);
+//		variantToIsBaseCache.put(variantId, isBase);
+//		
+//		return isBase;
+//	}
 	
 	public static int getFPForVariantId(String variantId) {
 		Integer fp = variantToFPCache.get(variantId);
@@ -3626,7 +4044,7 @@ public class Misc {
 	}
 	
 	public static boolean isHyperspaceAnchor(SectorEntityToken entity) {
-		return entity.hasTag(Tags.SYSTEM_ANCHOR);
+		return entity != null && entity.hasTag(Tags.SYSTEM_ANCHOR);
 	}
 	
 	public static StarSystemAPI getStarSystemForAnchor(SectorEntityToken anchor) {
@@ -3637,6 +4055,9 @@ public class Misc {
 		showCost(text, "Resources: consumed (available)", true, color, dark, res, quantities);
 	}
 	public static void showCost(TextPanelAPI text, String title, boolean withAvailable, Color color, Color dark, String [] res, int [] quantities) {
+		showCost(text, title, withAvailable, -1f, color, dark, res, quantities, null);
+	}
+	public static void showCost(TextPanelAPI text, String title, boolean withAvailable, float widthOverride, Color color, Color dark, String [] res, int [] quantities, boolean [] consumed) {
 		if (color == null) color = getBasePlayerColor();
 		if (dark == null) dark = getDarkPlayerColor();
 		
@@ -3661,6 +4082,11 @@ public class Misc {
 		cost.setWithBorder(false);
 		cost.setAlignment(Alignment.LMID);
 		
+		if (widthOverride > 0) {
+			cost.setComWidthOverride(widthOverride);
+		}
+		
+		boolean dgs = true;
 		for (int i = 0; i < res.length; i++) {
 			String commodityId = res[i];
 			int required = quantities[i];
@@ -3669,10 +4095,24 @@ public class Misc {
 			if (withAvailable && required > cargo.getQuantity(CargoItemType.RESOURCES, commodityId)) {
 				curr = Misc.getNegativeHighlightColor();
 			}
-			if (withAvailable) {
-				cost.addCost(commodityId, "" + required + " (" + available + ")", curr);
+			if (dgs) {
+				if (withAvailable) {
+					cost.addCost(commodityId, Misc.getWithDGS(required) + " (" + Misc.getWithDGS(available) + ")", curr);
+				} else {
+					cost.addCost(commodityId, Misc.getWithDGS(required), curr);
+				}
+				if (consumed != null && consumed[i]) {
+					cost.setLastCostConsumed(true);
+				}
 			} else {
-				cost.addCost(commodityId, "" + required, curr);
+				if (withAvailable) {
+					cost.addCost(commodityId, "" + required + " (" + available + ")", curr);
+				} else {
+					cost.addCost(commodityId, "" + required, curr);
+				}
+				if (consumed != null && consumed[i]) {
+					cost.setLastCostConsumed(true);
+				}
 			}
 		}
 		cost.update();
@@ -3806,9 +4246,9 @@ public class Misc {
 		if (member.getCaptain() != null) {
 			float captainLevel = (member.getCaptain().getStats().getLevel() - 1f);
 			if (member.isStation()) {
-				captainMult += captainLevel / 20f;
+				captainMult += captainLevel / (MAX_OFFICER_LEVEL * 2f);
 			} else {
-				captainMult += captainLevel / 10f;
+				captainMult += captainLevel / MAX_OFFICER_LEVEL;
 			}
 		}
 		
@@ -3862,10 +4302,11 @@ public class Misc {
 	}
 
 	
-	public static void addDesignTypePara(TooltipMakerAPI tooltip, String design, float pad) {
+	public static LabelAPI addDesignTypePara(TooltipMakerAPI tooltip, String design, float pad) {
 		if (design != null && !design.isEmpty()) {
-			tooltip.addPara("Design type: %s", pad, Misc.getGrayColor(), Global.getSettings().getDesignTypeColor(design), design);
+			return tooltip.addPara("Design type: %s", pad, Misc.getGrayColor(), Global.getSettings().getDesignTypeColor(design), design);
 		}
+		return null;
 	}
 	
 	public static float getFleetRadiusTerrainEffectMult(CampaignFleetAPI fleet) {
@@ -3903,12 +4344,31 @@ public class Misc {
 	
 	public static void addHitGlow(LocationAPI location, Vector2f loc, Vector2f vel, float size, Color color) {
 		float dur = 1f + (float) Math.random();
+		addHitGlow(location, loc, vel, size, dur, color);
+	}
+	public static void addHitGlow(LocationAPI location, Vector2f loc, Vector2f vel, float size, float dur, Color color) {
 		location.addHitParticle(loc, vel,
 				size, 0.4f, dur, color);
 		location.addHitParticle(loc, vel,
 				size * 0.25f, 0.4f, dur, color);
 		location.addHitParticle(loc, vel,
 				size * 0.15f, 1f, dur, Color.white);
+	}
+	
+	public static ParticleControllerAPI [] addGlowyParticle(LocationAPI location, Vector2f loc, Vector2f vel, float size, float rampUp, float dur, Color color) {
+		//rampUp = 0f;
+		//dur = 3f;
+		
+		ParticleControllerAPI [] result = new ParticleControllerAPI[3];
+		
+		result[0] = location.addParticle(loc, vel,
+				size, 0.4f, rampUp, dur, color);
+		result[1] = location.addParticle(loc, vel,
+				size * 0.25f, 0.4f, rampUp, dur, color);
+		result[2] = location.addParticle(loc, vel,
+				size * 0.15f, 1f, rampUp, dur, Color.white);
+		
+		return result;
 	}
 	
 	
@@ -3942,17 +4402,40 @@ public class Misc {
 	}
 	
 	public static boolean isMilitary(MarketAPI market) {
-		return market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY);
+		return market != null && market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY);
+	}
+	
+	public static boolean hasHeavyIndustry(MarketAPI market) {
+		boolean heavyIndustry = false;
+		for (Industry curr : market.getIndustries()) {
+			if (curr.getSpec().hasTag(Industries.TAG_HEAVYINDUSTRY)) {
+				heavyIndustry = true;
+			}
+		}
+		return heavyIndustry;
+	}
+	
+	public static boolean hasOrbitalStation(MarketAPI market) {
+		for (Industry curr : market.getIndustries()) {
+			if (curr.getSpec().hasTag(Industries.TAG_STATION)) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public static FactionAPI getClaimingFaction(SectorEntityToken planet) {
 		int max = 0;
 		MarketAPI result = null;
-		for (MarketAPI curr : Global.getSector().getEconomy().getMarkets(planet.getContainingLocation())) {
+		List<MarketAPI> markets = Global.getSector().getEconomy().getMarkets(planet.getContainingLocation());
+		for (MarketAPI curr : markets) {
 			if (curr.isHidden()) continue;
 			if (curr.getFaction().isPlayerFaction()) continue;
 			
 			int score = curr.getSize();
+			for (MarketAPI other : markets) {
+				if (other != curr && other.getFaction() == curr.getFaction()) score++;
+			}
 			if (isMilitary(curr)) score += 10;
 			if (score > max) {
 				JSONObject json = curr.getFaction().getCustom().optJSONObject(Factions.CUSTOM_PUNITIVE_EXPEDITION_DATA);
@@ -3975,6 +4458,12 @@ public class Misc {
 		for (Industry industry : market.getIndustries()) {
 			total += computeShutdownRefund(market, industry);
 		}
+	
+		// since incentives no longer work this way...
+//		float refundFraction = Global.getSettings().getFloat("industryRefundFraction");
+//		float incentives = market.getIncentiveCredits() * refundFraction;
+//		total += incentives;
+		
 		return total;
 	}
 	
@@ -4078,6 +4567,30 @@ public class Misc {
 		
 		return new Color(red, green, blue, alpha);
 	}
+
+	public static int getMaxOfficers(CampaignFleetAPI fleet) {
+		int max = (int) fleet.getCommander().getStats().getOfficerNumber().getModifiedValue();
+		return max;
+	}
+	public static int getNumNonMercOfficers(CampaignFleetAPI fleet) {
+		int count = 0;
+		for (OfficerDataAPI od : fleet.getFleetData().getOfficersCopy()) {
+			if (!isMercenary(od.getPerson())) {
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	public static List<OfficerDataAPI> getMercs(CampaignFleetAPI fleet) {
+		List<OfficerDataAPI> mercs = new ArrayList<OfficerDataAPI>();
+		for (OfficerDataAPI od : fleet.getFleetData().getOfficersCopy()) {
+			if (isMercenary(od.getPerson())) {
+				mercs.add(od);
+			}
+		}
+		return mercs;
+	}
 	
 	
 	public static int getMaxIndustries(MarketAPI market) {
@@ -4101,6 +4614,23 @@ public class Misc {
 			IndustrySpecAPI spec = Global.getSettings().getIndustrySpec(item.id);
 			if (spec.hasTag(Industries.TAG_INDUSTRY)) count++;
 		}
+		return count;
+	}
+	
+	public static int getNumImprovedIndustries(MarketAPI market) {
+		int count = 0;
+		for (Industry curr : market.getIndustries()) {
+			if (curr.isImproved()) {
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	public static int getNumStableLocations(StarSystemAPI system) {
+		int count = system.getEntitiesWithTag(Tags.STABLE_LOCATION).size();
+		count += system.getEntitiesWithTag(Tags.OBJECTIVE).size();
+		
 		return count;
 	}
 
@@ -4163,6 +4693,909 @@ public class Misc {
 		if (playerStr > fleetStr * 0.75f) return 3;
 		if (playerStr > fleetStr * 0.33f) return 4;
 		return 5;
+	}
+	
+	
+	public static float getHitGlowSize(float baseSize, float baseDamage, ApplyDamageResultAPI result) {
+		if (result == null || baseDamage <= 0) return baseSize;
+		
+		float sd = result.getDamageToShields() + result.getOverMaxDamageToShields();
+		float ad = result.getTotalDamageToArmor();
+		float hd = result.getDamageToHull();
+		float ed = result.getEmpDamage();
+		DamageType type = result.getType();
+		return getHitGlowSize(baseSize, baseDamage, type, sd, ad, hd, ed);
+	}
+	
+	
+	public static float getHitGlowSize(float baseSize, float baseDamage, DamageType type, float sd, float ad, float hd, float ed) {
+		
+		float minBonus = 0f;
+		if (type == DamageType.KINETIC) {
+			sd *= 0.5f;
+			//if (sd > 0) minBonus = 0.1f;
+		} else if (type == DamageType.HIGH_EXPLOSIVE) {
+			ad *= 0.5f;
+			if (ad > 0) minBonus = 0.1f;
+		} else if (type == DamageType.FRAGMENTATION) {
+			if (hd > 0) {
+				minBonus = 0.2f * (hd / (hd + ad));
+			}
+			sd *= 2f;
+			ad *= 2f;
+			hd *= 2f;
+		}
+		
+		float totalDamage = sd + ad + hd;
+		if (totalDamage <= 0) return baseSize;
+		
+		// emp damage makes the hitglow normal-sized, but not bigger
+		if (totalDamage < baseDamage) {
+			totalDamage += ed;
+			if (totalDamage > baseDamage) {
+				totalDamage = baseDamage;
+			}
+		}
+		
+		float minSize = 15f;
+		float minMult = minSize / baseSize;
+		minMult = Math.max(minMult, 0.67f + minBonus);
+		if (minMult > 1) minMult = 1;
+		
+		float mult = totalDamage / baseDamage;
+		if (mult < minMult) mult = minMult;
+		
+		float maxMult = 1.5f;
+		if (mult > maxMult) mult = maxMult;
+		//mult = maxMult;
+		//mult = 1f;
+		//System.out.println("Mult: " + mult);
+		return baseSize * mult;
+	}
+	
+	public static int getNumEliteSkills(PersonAPI person) {
+		int count = 0;
+		for (SkillLevelAPI sl : person.getStats().getSkillsCopy()) {
+			if (sl.getLevel() >= 2) count++;
+		}
+		return count;
+	}
+	
+	
+//	public static void spawnExtraHitGlow(Object param, Vector2f loc, Vector2f vel, float intensity) {
+//		if (param instanceof DamagingProjectileAPI) {
+//			DamagingProjectileAPI proj = (DamagingProjectileAPI) param;
+//			ProjectileSpecAPI spec = proj.getProjectileSpec();
+//			if (spec != null) {
+//				CombatEngineAPI engine = Global.getCombatEngine();
+//				float base = spec.getHitGlowRadius();
+//				if (base == 0) base = spec.getLength() * 1.0f;
+//				float size = base * (1f + 1f * intensity) * 0.5f;
+//				if (size < 20) return;
+//				
+//				Color color = Misc.interpolateColor(spec.getFringeColor(), spec.getCoreColor(), 0.25f);
+//				engine.addHitParticle(loc, vel, size, 0.75f * intensity, color);
+//			}
+//		} else if (param instanceof BeamAPI) {
+//			BeamAPI beam = (BeamAPI) param;
+//			CombatEngineAPI engine = Global.getCombatEngine();
+//			float size = beam.getHitGlowRadius() * (1f + intensity) * 0.5f;
+//			if (size < 20) return;
+//			
+//			Color color = Misc.interpolateColor(beam.getFringeColor(), beam.getCoreColor(), 0.25f);
+//			engine.addHitParticle(loc, vel, size, 0.75f * intensity, color);
+//		}
+//	}
+	
+	public static String MENTORED = "$mentored";
+	public static boolean isMentored(PersonAPI person) {
+		return person.getMemoryWithoutUpdate().is(MENTORED, true);
+	}
+	
+	public static void setMentored(PersonAPI person, boolean mentored) {
+		person.getMemoryWithoutUpdate().set(MENTORED, mentored);
+	}
+	
+	public static final String IS_MERCENARY = "$isMercenary";
+	public static boolean isMercenary(PersonAPI person) {
+		return person != null && person.getMemoryWithoutUpdate().is(IS_MERCENARY, true);
+	}
+	
+	public static final String MERCENARY_HIRE_TIMESTAMP = "$mercHireTS";
+	public static void setMercHiredNow(PersonAPI person) {
+		person.getMemoryWithoutUpdate().set(MERCENARY_HIRE_TIMESTAMP, Global.getSector().getClock().getTimestamp());
+	}
+	
+	public static float getMercDaysSinceHired(PersonAPI person) {
+		long ts = person.getMemoryWithoutUpdate().getLong(MERCENARY_HIRE_TIMESTAMP);
+		return Global.getSector().getClock().getElapsedDaysSince(ts);
+	}
+	
+	public static void setMercenary(PersonAPI person, boolean mercenary) {
+		person.getMemoryWithoutUpdate().set(IS_MERCENARY, mercenary);
+	}
+	
+	public static final String CAPTAIN_UNREMOVABLE = "$captain_unremovable";
+	public static boolean isUnremovable(PersonAPI person) {
+		//if (true) return true;
+		return person != null && person.getMemoryWithoutUpdate().is(CAPTAIN_UNREMOVABLE, true);
+	}
+	
+	public static void setUnremovable(PersonAPI person, boolean unremovable) {
+		person.getMemoryWithoutUpdate().set(CAPTAIN_UNREMOVABLE, unremovable);
+	}
+	
+	public static boolean isAutomated(MutableShipStatsAPI stats) {
+		if (stats == null) return false;
+		return isAutomated(stats.getFleetMember());
+		
+	}
+	public static boolean isAutomated(FleetMemberAPI member) {
+		return member != null && member.getVariant() != null && isAutomated(member.getVariant());
+	}
+	public static boolean isAutomated(ShipVariantAPI variant) {
+		return variant != null && variant.hasHullMod(HullMods.AUTOMATED);
+	}
+	public static boolean isAutomated(ShipAPI ship) {
+		if (ship == null) return false;
+		return isAutomated(ship.getVariant()); 
+	}
+	
+	
+	public static String RECOVERY_TAGS_KEY = "$core_recoveryTags";
+	@SuppressWarnings("unchecked")
+	public static Set<String> getAllowedRecoveryTags() {
+		Set<String> tags = (Set<String>) Global.getSector().getMemoryWithoutUpdate().get(RECOVERY_TAGS_KEY);
+		if (tags == null) {
+			tags = new HashSet<String>();
+			Global.getSector().getMemoryWithoutUpdate().set(RECOVERY_TAGS_KEY, tags);
+		}
+		return tags;
+	}
+	
+	public static int MAX_PERMA_MODS = Global.getSettings().getInt("maxPermanentHullmods");
+	
+	public static int getMaxPermanentMods(ShipAPI ship) {
+		if (ship == null) return 0;
+		return (int) Math.round(ship.getMutableStats().getDynamic().getMod(Stats.MAX_PERMANENT_HULLMODS_MOD).computeEffective(MAX_PERMA_MODS));
+	}
+
+	
+	public static float getBuildInBonusXP(HullModSpecAPI mod, HullSize size) {
+		float threshold = Global.getSettings().getBonusXP("permModNoBonusXPOPThreshold");
+		
+		float cost = 0f;
+		switch (size) {
+		case CAPITAL_SHIP:
+			//fraction = Global.getSettings().getBonusXP("permModCaptial");
+			cost = mod.getCapitalCost();
+			break;
+		case CRUISER:
+			//fraction = Global.getSettings().getBonusXP("permModCruiser");
+			cost = mod.getCruiserCost();
+			break;
+		case DESTROYER:
+			//fraction = Global.getSettings().getBonusXP("permModDestroyer");
+			cost = mod.getDestroyerCost();
+			break;
+		case FRIGATE:
+			//fraction = Global.getSettings().getBonusXP("permModFrigate");
+			cost = mod.getFrigateCost();
+			break;
+		}
+		
+		float max = Global.getSettings().getBonusXP("permModMaxBonusXP");
+		
+		float fraction = 0f;
+		if (threshold > 0) {
+			fraction = max * (1f - cost / threshold);
+			if (fraction < 0f) fraction = 0f;
+			if (fraction > 1f) fraction = 1f;
+		}
+		
+		MutableCharacterStatsAPI stats = Global.getSector().getPlayerStats();
+		fraction += stats.getDynamic().getMod(Stats.BUILD_IN_BONUS_XP_MOD).computeEffective(0);
+		if (fraction < 0f) fraction = 0f;
+		if (fraction > 1f) fraction = 1f;
+		return fraction;
+	}
+	
+	public static int getOPCost(HullModSpecAPI mod, HullSize size) {
+		switch (size) {
+		case CAPITAL_SHIP:
+			return mod.getCapitalCost();
+		case CRUISER:
+			return mod.getCruiserCost();
+		case DESTROYER:
+			return mod.getDestroyerCost();
+		case FRIGATE:
+			return mod.getFrigateCost();
+		}
+		return mod.getFrigateCost();
+	}
+	
+	public static boolean isSpecialMod(ShipVariantAPI variant, HullModSpecAPI spec) {
+		if (spec.isHidden()) return false;
+		if (spec.isHiddenEverywhere()) return false;
+		if (spec.hasTag(Tags.HULLMOD_DMOD)) return false;
+		if (!variant.getPermaMods().contains(spec.getId())) return false;
+		if (variant.getHullSpec().getBuiltInMods().contains(spec.getId())) return false;
+		if (!variant.getSMods().contains(spec.getId())) return false;
+		
+		return true;
+	}
+	
+	public static int getCurrSpecialMods(ShipVariantAPI variant) {
+		if (variant == null) return 0;
+		int num = 0;
+		for (String id : variant.getHullMods()) {
+			HullModSpecAPI spec = Global.getSettings().getHullModSpec(id);
+			if (!isSpecialMod(variant, spec)) continue;
+//			if (spec.isHidden()) continue;
+//			if (spec.isHiddenEverywhere()) continue;
+//			if (spec.hasTag(Tags.HULLMOD_DMOD)) continue;
+//			if (!variant.getPermaMods().contains(spec.getId())) continue;
+			num++;
+		}
+		return num;
+	}
+	
+	public static List<HullModSpecAPI> getCurrSpecialModsList(ShipVariantAPI variant) {
+		List<HullModSpecAPI> result = new ArrayList<HullModSpecAPI>();
+		if (variant == null) return result;
+		int num = 0;
+		for (String id : variant.getHullMods()) {
+			HullModSpecAPI spec = Global.getSettings().getHullModSpec(id);
+			if (!isSpecialMod(variant, spec)) continue;
+			result.add(spec);
+		}
+		return result;
+	}
+	
+	public static boolean isSlowMoving(CampaignFleetAPI fleet) {
+		return fleet.getCurrBurnLevel() <= getGoSlowBurnLevel(fleet);
+	}
+	
+	
+	
+	//public static float MAX_SNEAK_BURN_LEVEL = Global.getSettings().getFloat("maxSneakBurnLevel");
+	public static float SNEAK_BURN_MULT = Global.getSettings().getFloat("sneakBurnMult");
+	
+	public static int getGoSlowBurnLevel(CampaignFleetAPI fleet) {
+//		if (fleet.isPlayerFleet()) {
+//			System.out.println("fewfewfe");
+//		}
+		float bonus = fleet.getStats().getDynamic().getMod(Stats.MOVE_SLOW_SPEED_BONUS_MOD).computeEffective(0);
+		//int burn = (int)Math.round(MAX_SNEAK_BURN_LEVEL + bonus);
+		//int burn = (int)Math.round(fleet.getFleetData().getMinBurnLevelUnmodified() * SNEAK_BURN_MULT);
+		int burn = (int)Math.round(fleet.getFleetData().getMinBurnLevel() * SNEAK_BURN_MULT);
+		burn += bonus;
+		//burn = (int) Math.min(burn, fleet.getFleetData().getBurnLevel() - 1);
+		return burn;
+	}
+	
+	
+	public static enum FleetMemberDamageLevel {
+		LOW,
+		MEDIUM,
+		HIGH,
+	}
+	
+	public static void applyDamage(FleetMemberAPI member, Random random, FleetMemberDamageLevel level, 
+								   boolean withCRDamage, String crDamageId, String crDamageReason,
+								   boolean withMessage, TextPanelAPI textPanel, 
+								   String messageText) {
+		float damageMult = 1f;
+		switch (level) {
+		case LOW:
+			damageMult = 3f;
+			break;
+		case MEDIUM:
+			damageMult = 10f;
+			break;
+		case HIGH:
+			damageMult = 20f;
+			break;
+		}
+		applyDamage(member, random, damageMult, withCRDamage, crDamageId, crDamageReason, 
+					withMessage, textPanel, messageText);
+	}
+	
+	public static void applyDamage(FleetMemberAPI member, Random random, float damageMult, 
+				boolean withCRDamage, String crDamageId, String crDamageReason,
+				boolean withMessage, TextPanelAPI textPanel, 
+				String messageText) {
+		if (random == null) random = Misc.random;
+		damageMult *= 0.75f + random.nextFloat() * 0.5f;
+		
+//		float hitStrength = 0f; 
+//		hitStrength += member.getHullSpec().getArmorRating() * 0.1f;
+//		hitStrength *= damageMult;
+		
+		// hull damage going to be overridden by hullDamageFraction, anyway
+		// so just want enough hitStrength to visibly damage the armor
+		float hitStrength = member.getHullSpec().getArmorRating() * 2f;
+		
+		float hullDamageFraction = 0.025f * damageMult;
+		float max = 0.5f + random.nextFloat() * 0.1f;
+		float min = 0.01f + random.nextFloat() * 0.04f;
+		if (hullDamageFraction > max) hullDamageFraction = max;
+		if (hullDamageFraction < min) hullDamageFraction = min;
+		
+		if (hitStrength > 0) {
+			float numHits = 3f;
+			for (int i = 0; i < numHits; i++) {
+				member.getStatus().applyDamage(hitStrength / numHits, hullDamageFraction / numHits);
+			}	
+			if (member.getStatus().getHullFraction() < 0.01f) {
+				member.getStatus().setHullFraction(0.01f);
+			}
+			
+			boolean isPF = member != null && member.getFleetData() != null &&
+					member.getFleetData().getFleet() != null && member.getFleetData().getFleet().isPlayerFleet();
+			
+			if (withCRDamage) {
+				float crPerDep = member.getDeployCost();
+				float currCR = member.getRepairTracker().getBaseCR();
+				float crDamage = Math.min(currCR, crPerDep * 0.1f * damageMult);
+				if (crDamage > 0) {
+					if (isPF) {
+						member.getRepairTracker().applyCREvent(-crDamage, crDamageId, crDamageReason);
+					} else {
+						member.getRepairTracker().applyCREvent(-crDamage, null, null);
+					}
+				}
+			}
+			
+			if (withMessage && isPF) {
+				MessageIntel intel = new MessageIntel(messageText,
+										Misc.getNegativeHighlightColor());
+				intel.setIcon(Global.getSettings().getSpriteName("intel", "damage_report"));
+				
+				if (textPanel != null) {
+					Global.getSector().getIntelManager().addIntelToTextPanel(intel, textPanel);
+				} else {
+					Global.getSector().getCampaignUI().addMessage(intel, MessageClickAction.REFIT_TAB, member);
+				}
+			}
+		}
+	}
+	
+	public static float getBonusXPForRecovering(FleetMemberAPI member) {
+		float ownedShip = Global.getSettings().getBonusXP("recoverOwnedShip");
+		float threshold = Global.getSettings().getBonusXP("recoverNoBonusXPDeploymentPoints");
+		
+		if (member.getOwner() == 0) {
+			return ownedShip;
+		}
+		
+		float f = 1f - member.getDeploymentPointsCost() / threshold;
+		if (f < 0) f = 0;
+		if (f > 1) f = 1;
+		
+		return f;
+	}
+	
+	public static float getSpawnFPMult(CampaignFleetAPI fleet) {
+		float mult = fleet.getMemoryWithoutUpdate().getFloat(FleetFactoryV3.KEY_SPAWN_FP_MULT);
+		if (mult == 0) mult = 1f;
+		return mult;
+	}
+	
+	public static void setSpawnFPMult(CampaignFleetAPI fleet, float mult) {
+		fleet.getMemoryWithoutUpdate().set(FleetFactoryV3.KEY_SPAWN_FP_MULT, mult);
+	}
+	
+	public static boolean isDecentralized(FactionAPI faction) {
+		return faction != null && faction.getCustomBoolean(Factions.CUSTOM_DECENTRALIZED);
+	}
+	
+	public static String getPersonalityName(PersonAPI person) {
+		String personalityName = person.getPersonalityAPI().getDisplayName();
+		if (person.isAICore()) {
+			if (Personalities.RECKLESS.equals(person.getPersonalityAPI().getId())) {
+				personalityName = "Fearless";
+			}
+		}
+		return personalityName;
+	}
+	
+	public static String LAST_RAIDED_AT = "$lastRaidedAt";
+	public static void setRaidedTimestamp(MarketAPI market) {
+		market.getMemoryWithoutUpdate().set(LAST_RAIDED_AT, Global.getSector().getClock().getTimestamp());
+	}
+	
+	public static float getDaysSinceLastRaided(MarketAPI market) {
+		Long ts = market.getMemoryWithoutUpdate().getLong(LAST_RAIDED_AT);
+		if (ts == null) return Float.MAX_VALUE;
+		return Global.getSector().getClock().getElapsedDaysSince(ts);
+	}
+	
+	public static int computeEconUnitChangeFromTradeModChange(CommodityOnMarketAPI com, int quantity) {
+		float currQty = com.getCombinedTradeModQuantity();
+		int currMod = (int) com.getModValueForQuantity(currQty);
+		
+		float quantityWithTX = com.getTradeMod().getModifiedValue() + quantity + 
+								Math.max(com.getTradeModPlus().getModifiedValue(), 0) +
+								Math.min(com.getTradeModMinus().getModifiedValue(), 0);
+		
+		int newMod = (int) com.getModValueForQuantity(quantityWithTX);
+		
+		int diff = newMod - currMod;
+		
+		return diff;
+	}
+	
+	public static void affectAvailabilityWithinReason(CommodityOnMarketAPI com, int quantity) {
+		int units = computeEconUnitChangeFromTradeModChange(com, quantity);
+		int maxUnits = Math.min(3, Math.max(com.getMaxDemand(), com.getMaxSupply()));
+		if (Math.abs(units) > maxUnits) {
+			int sign = (int) Math.signum(quantity);
+			quantity = (int) Math.round(com.getQuantityForModValue(maxUnits));
+			quantity *= sign;
+		}
+		com.addTradeMod("mod_" + Misc.genUID(), quantity, BaseSubmarketPlugin.TRADE_IMPACT_DAYS);
+	}
+	
+	
+	public static boolean isOpenlyPopulated(StarSystemAPI system) {
+		for (MarketAPI market : Misc.getMarketsInLocation(system)) {
+			if (!market.isHidden()) return true;
+		}
+		return false;
+	}
+	
+	
+	public static boolean hasAtLeastOneOfTags(Collection<String> tags, String ... other) {
+		for (String tag : other) {
+			if (tags.contains(tag)) return true;
+		}
+		return false;
+	}
+	
+	
+	
+//	public static boolean isUnpopulatedPlanet(PlanetAPI planet) {
+//		if (planet.isStar() || 
+//				planet.getMarket() == null || 
+//				!planet.getMarket().isPlanetConditionMarketOnly()) {
+//			return false;
+//		}
+//		return true;
+//	}
+	
+	public static boolean hasUnexploredRuins(MarketAPI market) {
+		return market != null && market.isPlanetConditionMarketOnly() &&
+			hasRuins(market) && !market.getMemoryWithoutUpdate().getBoolean("$ruinsExplored");
+	}
+	public static boolean hasRuins(MarketAPI market) {
+		return market != null && 
+			   (market.hasCondition(Conditions.RUINS_SCATTERED) || 
+			   market.hasCondition(Conditions.RUINS_WIDESPREAD) ||
+			   market.hasCondition(Conditions.RUINS_EXTENSIVE) ||
+			   market.hasCondition(Conditions.RUINS_VAST));
+	}
+	
+	public static boolean hasFarmland(MarketAPI market) {
+		return market != null && 
+				(market.hasCondition(Conditions.FARMLAND_POOR) || 
+				market.hasCondition(Conditions.FARMLAND_ADEQUATE) ||
+				market.hasCondition(Conditions.FARMLAND_RICH) ||
+				market.hasCondition(Conditions.FARMLAND_BOUNTIFUL));
+	}
+	
+	
+	public static String DEFEAT_TRIGGERS = "$defeatTriggers";
+	public static void addDefeatTrigger(CampaignFleetAPI fleet, String trigger) {
+		List<String> triggers = getDefeatTriggers(fleet, true);
+		triggers.add(trigger);
+	}
+	
+	public static void removeDefeatTrigger(CampaignFleetAPI fleet, String trigger) {
+		List<String> triggers = getDefeatTriggers(fleet, false);
+		if (triggers != null) {
+			triggers.remove(trigger);
+			clearDefeatTriggersIfNeeded(fleet);
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public static List<String> getDefeatTriggers(CampaignFleetAPI fleet, boolean createIfNecessary) {
+		MemoryAPI mem = fleet.getMemoryWithoutUpdate();
+		List<String> triggers = null;
+		if (!mem.contains(DEFEAT_TRIGGERS)) {
+			if (!createIfNecessary) return null;
+			triggers = new ArrayList<String>();
+			mem.set(DEFEAT_TRIGGERS, triggers);
+		} else {
+			triggers = (List<String>) mem.get(DEFEAT_TRIGGERS);
+		}
+		return triggers;
+	}
+	
+	public static void clearDefeatTriggersIfNeeded(CampaignFleetAPI fleet) {
+		List<String> triggers = getDefeatTriggers(fleet, false);
+		if (triggers != null && triggers.isEmpty()) {
+			MemoryAPI mem = fleet.getMemoryWithoutUpdate();
+			mem.unset(DEFEAT_TRIGGERS);
+		}
+	}
+	
+	public static boolean shouldShowDamageFloaty(ShipAPI source, ShipAPI target) {
+		CombatEngineAPI engine = Global.getCombatEngine();
+		ShipAPI playerShip = engine.getPlayerShip();
+		
+		boolean sourceIsPlayerShipWing = false;
+		sourceIsPlayerShipWing = source != null && source.getWing() != null && 
+								 source.getWing().getSourceShip() == playerShip;
+		
+		CombatEntityAPI followedEntity = engine.getCombatUI().getEntityToFollowV2();
+		boolean showFloaty = target == playerShip || // this is the player's ship
+		target == followedEntity || // getting video feed from this ship
+							 source == playerShip || // the damage came from the player's ship
+							 sourceIsPlayerShipWing ||
+							 target == playerShip.getShipTarget() || // the ship is the player ship's target
+							 engine.hasAttachedFloaty(target); // the ship already has a floaty on it, meaning the player is likely looking at it
+		showFloaty = showFloaty && !target.isFighter(); // no floaties on fighters
+		showFloaty = showFloaty && Global.getSettings().isShowDamageFloaties();
+		return showFloaty;
+	}
+
+//	
+//	 public static Vector2f cubeBezier(Vector2f p0, Vector2f p1, Vector2f p2, Vector2f p3, float t)
+//	 {
+//	     float r = 1f - t;
+//	     float f0 = r * r * r;
+//	     float f1 = r * r * t * 3;
+//	     float f2 = r * t * t * 3;
+//	     float f3 = t * t * t;
+//	     return f0*p0 + f1*p1 + f2*p2 + f3*p3;
+//	 }
+	
+	
+//	long memorySize = ((com.sun.management.OperatingSystemMXBean) ManagementFactory
+//	        .getOperatingSystemMXBean()).getTotalPhysicalMemorySize();
+	protected static Boolean canCheckVramNVIDIA = null;
+	public static boolean canCheckVram() {
+		if (canCheckVramNVIDIA == null) {
+			String str = GL11.glGetString(GL11.GL_EXTENSIONS);
+			if (str != null) {
+				List<String> extensions = Arrays.asList(str.split(" "));
+				canCheckVramNVIDIA = extensions.contains("GL_NVX_gpu_memory_info");
+				//canCheckVramATI = extensions.contains("GL_ATI_meminfo");
+			} else {
+				canCheckVramNVIDIA = false;
+			}
+		}
+		return true;
+	}
+	/**
+	 * Reminder: call this on startup to see what the max is.
+	 * @return
+	 */
+	public static int getVramFreeKB() {
+		if (canCheckVramNVIDIA) {
+			return GL11.glGetInteger(NVXGpuMemoryInfo.GL_GPU_MEMORY_INFO_CURRENT_AVAILABLE_VIDMEM_NVX);
+		} else {
+			return GL11.glGetInteger(ATIMeminfo.GL_TEXTURE_FREE_MEMORY_ATI);
+		}
+	}
+	
+	public static int getVramMaximumKB() {
+		return GL11.glGetInteger(NVXGpuMemoryInfo.GL_GPU_MEMORY_INFO_TOTAL_AVAILABLE_MEMORY_NVX);
+	}
+	public static int getVramDedicatedKB() {
+		return GL11.glGetInteger(NVXGpuMemoryInfo.GL_GPU_MEMORY_INFO_DEDICATED_VIDMEM_NVX);
+	}
+	public static int getVramUsedKB() {
+		return getVramMaximumKB() - getVramFreeKB();
+	}
+
+//	public static void printExtensions() {
+//		String str = GL11.glGetString(GL11.GL_EXTENSIONS);
+//		System.out.println(str);
+//	}
+	
+	
+	public static float IMPACT_VOLUME_MULT = Global.getSettings().getFloat("impactSoundVolumeMult");
+	
+	public static void playSound(ApplyDamageResultAPI result, Vector2f loc, Vector2f vel,
+								String lightShields, String solidShields, String heavyShields,
+								String lightHull, String solidHull, String heavyHull
+								) {
+		float shieldDam = result.getDamageToShields();
+		float armorDam = result.getTotalDamageToArmor();
+		float hullDam = result.getDamageToHull();
+		float fluxDam = result.getEmpDamage();
+		
+		
+		float totalDam = shieldDam + armorDam + hullDam;
+		// if no damage, don't play sounds
+		if (totalDam + fluxDam <= 0) return;
+		
+		float vol = 1f;
+		
+		float volMult = IMPACT_VOLUME_MULT;
+		
+		// if shields were damaged, then ONLY shields were damaged
+		if (shieldDam > 0) {
+			String soundId = null;
+			if (shieldDam < 70) {
+				vol = shieldDam / 20f;
+				if (vol > 1) vol = 1;
+				soundId = lightShields;
+			} else if (shieldDam < 200) {
+				soundId = solidShields;
+			} else {
+				soundId = heavyShields;
+			}
+			if (soundId != null) {
+				Global.getSoundPlayer().playSound(soundId, 1f, vol * volMult, loc, vel);
+			}
+			return;
+		}
+		
+		String soundId = null;
+		
+		float physicalDam = armorDam + hullDam + fluxDam;
+		//System.out.println(physicalDam);
+		if (physicalDam < 5) {
+			vol = physicalDam / 5f;
+			if (vol > 1) vol = 1;
+			soundId = lightHull;
+		} else if (physicalDam < 40) {
+			soundId = lightHull;
+		} else if (physicalDam < 150) {
+			soundId = solidHull;
+		} else {
+			soundId = heavyHull;
+		}
+
+		if (soundId != null) {
+			Global.getSoundPlayer().playSound(soundId, 1f, vol * volMult, loc, vel);
+		}
+		return;
+	}
+	
+	
+	public static float getShipWeight(ShipAPI ship) {
+		return getShipWeight(ship, true);
+	}
+	
+	public static float getShipWeight(ShipAPI ship, boolean adjustForNonCombat) {
+		if (ship.isDrone()) return 0.1f;
+		boolean nonCombat = ship.isNonCombat(false);
+		float weight = 0;
+		switch (ship.getHullSize()) {
+		case CAPITAL_SHIP: weight += 8; break;
+		case CRUISER: weight += 4; break;
+		case DESTROYER: weight += 2; break;
+		case FRIGATE: weight += 1; break;
+		case FIGHTER: weight += 1; break;
+		}
+		if (nonCombat && adjustForNonCombat) weight *= 0.25f;
+		if (ship.isDrone()) weight *= 0.1f;
+		return weight;
+	}
+	
+	public static float getIncapacitatedTime(ShipAPI ship) {
+		float incapTime = 0f;
+		if (ship.getFluxTracker().isVenting()){
+			incapTime = ship.getFluxTracker().getTimeToVent();
+		} else if (ship.getFluxTracker().isOverloaded()) {
+			incapTime = ship.getFluxTracker().getOverloadTimeRemaining();
+		}
+		return incapTime;
+	}
+	
+	public static boolean isAvoidingPlayerHalfheartedly(CampaignFleetAPI fleet) {
+		if (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_NEVER_AVOID_PLAYER_SLOWLY)) {
+			return false;
+		}
+		CampaignFleetAPI player = Global.getSector().getPlayerFleet();
+		boolean avoidingPlayer = fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_AVOID_PLAYER_SLOWLY);
+		if (avoidingPlayer && !fleet.isHostileTo(player)) return true;
+		
+		CampaignFleetAPI fleeingFrom = fleet.getMemoryWithoutUpdate().getFleet(FleetAIFlags.NEAREST_FLEEING_FROM);
+		if (fleeingFrom != null && fleeingFrom.isPlayerFleet()) {
+			if (Misc.shouldNotWantRunFromPlayerEvenIfWeaker(fleet) && fleet.isHostileTo(player)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * In vanilla, pirates and Luddic Path.
+	 * @param faction
+	 * @return
+	 */
+	public static boolean isPirateFaction(FactionAPI faction) {
+		return faction != null &&
+			   faction.getCustomBoolean(Factions.CUSTOM_PIRATE_BEHAVIOR);// &&
+					//faction.getCustomBoolean(Factions.CUSTOM_MAKES_PIRATE_BASES);
+	}
+	
+	/**
+	 * Probably wrong sometimes...
+	 * @return "a" or "an" for word.
+	 */
+	public static String getAOrAnFor(String word) {
+		word = word.toLowerCase();
+	    for (String other : new String[] {"euler", "heir", "honest", "hono"}) {
+	        if (word.startsWith(other)) {
+	            return "an";
+	        }
+	    }
+
+	    if (word.startsWith("hour") && !word.startsWith("houri")) {
+	        return "an";
+	    }
+
+	    Pattern p;
+	    Matcher m;
+
+	    for (String regex : new String[] { "^e[uw]", "^onc?e\b", "^uni([^nmd]|mo)", "^u[bcfhjkqrst][aeiou]"}) {
+	    	p = Pattern.compile("(?is)" + regex + ".*");
+		    m = p.matcher(word);
+		    if (m.matches()) {
+	            return "a";
+		    }
+	    }
+
+	    p = Pattern.compile("(?is)" + "^U[NK][AIEO]");
+	    m = p.matcher(word);
+	    if (m.matches()) {
+	        return "a";
+	    }
+
+	    for (String letter : new String[] { "a", "e", "i", "o", "u" }) {
+	    	if (word.startsWith(letter)) {
+	    		return "an";
+	    	}
+	    }
+	    
+	    p = Pattern.compile("(?is)" + "^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)" + ".*");
+	    m = p.matcher(word);
+	    if (m.matches()) {
+	        return "an";
+	    }
+
+	    return "a";
+	}
+	
+	
+	public static void moveToMarket(PersonAPI person, MarketAPI destination, boolean alwaysAddToCommDirectory) {
+		ContactIntel intel = ContactIntel.getContactIntel(person);
+		if (intel != null) {
+			intel.relocateToMarket(destination, false);
+		} else {
+			boolean addToComms = alwaysAddToCommDirectory;
+			boolean hidden = false;
+			if (person.getMarket() != null) {
+				MarketAPI market = person.getMarket();
+				CommDirectoryEntryAPI entry = market.getCommDirectory().getEntryForPerson(person);
+				if (entry != null) {
+					addToComms = true;
+					hidden = entry.isHidden();
+				}
+				market.removePerson(person);
+				market.getCommDirectory().removePerson(person);
+			}
+			
+			if (!destination.getPeopleCopy().contains(person)) {
+				destination.addPerson(person);
+			}
+			person.setMarket(destination);
+			
+			if (addToComms) {
+				if (destination.getCommDirectory() != null && 
+						destination.getCommDirectory().getEntryForPerson(person) == null) {
+					destination.getCommDirectory().addPerson(person);
+					if (hidden) {
+						CommDirectoryEntryAPI entry = destination.getCommDirectory().getEntryForPerson(person);
+						if (entry != null) {
+							entry.setHidden(true);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	public static void makeStoryCritical(String marketId, String reason) {
+		makeStoryCritical(Global.getSector().getEconomy().getMarket(marketId), reason);
+	}
+	public static void makeStoryCritical(MarketAPI market, String reason) {
+		makeStoryCritical(market.getMemoryWithoutUpdate(), reason);
+	}
+	public static void makeStoryCritical(MemoryAPI memory, String reason) {
+		setFlagWithReason(memory, MemFlags.STORY_CRITICAL, reason, true, -1f);
+	}
+	public static void makeNonStoryCritical(MarketAPI market, String reason) {
+		makeNonStoryCritical(market.getMemoryWithoutUpdate(), reason);
+	}
+	public static void makeNonStoryCritical(MemoryAPI memory, String reason) {
+		setFlagWithReason(memory, MemFlags.STORY_CRITICAL, reason, false, -1f);
+	}
+	public static boolean isStoryCritical(MarketAPI market) {
+		return isStoryCritical(market.getMemoryWithoutUpdate());
+	}
+	public static boolean isStoryCritical(MemoryAPI memory) {
+		return memory.getBoolean(MemFlags.STORY_CRITICAL);
+	}
+	
+	
+	/**
+	 * Whether it prevents salvage, surveying, etc. But NOT things that require only being
+	 * seen to ruin them, such as SpySat deployments.
+	 * @param fleet
+	 * @return
+	 */
+	public static boolean isInsignificant(CampaignFleetAPI fleet) {
+		boolean recentlyBeaten = fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_RECENTLY_DEFEATED_BY_PLAYER);
+		if (recentlyBeaten) return true;
+		
+		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
+		if (pf == null) return true; // ??
+		if (fleet.getAI() != null) {
+			EncounterOption opt = fleet.getAI().pickEncounterOption(null, pf);
+			if (opt == EncounterOption.DISENGAGE || opt == EncounterOption.HOLD_VS_STRONGER) {
+				return true;
+			}
+			if (opt == EncounterOption.ENGAGE) {
+				return false;
+			}
+		}
+		int pfCount = pf.getFleetSizeCount();
+		int otherCount = fleet.getFleetSizeCount();
+		
+		return otherCount <= pfCount / 4;
+	}
+	
+	/**
+	 * Mainly for avoiding stuff like "pirate fleet with 4 rustbuckets will run away from the player's
+	 * 4 regular-quality frigates". Fleets that this evaluates to true for will avoid the player slowly.
+	 * @param fleet
+	 * @return
+	 */
+	public static boolean shouldNotWantRunFromPlayerEvenIfWeaker(CampaignFleetAPI fleet) {
+		boolean recentlyBeaten = fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_RECENTLY_DEFEATED_BY_PLAYER);
+		if (recentlyBeaten) return true;
+		if (fleet.getFleetData() == null) return false;
+		
+		float count = 0;
+		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+			if (!member.isCivilian() && member.getHullSpec() != null) {
+				switch (member.getHullSpec().getHullSize()) {
+				case CAPITAL_SHIP: count += 4; break;
+				case CRUISER: count += 3; break;
+				case DESTROYER: count += 2; break;
+				case FRIGATE: count += 1; break;
+				}
+			}
+		}
+		
+		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
+		float pfCount = 0;
+		for (FleetMemberAPI member : pf.getFleetData().getMembersListCopy()) {
+			if (!member.isCivilian() && member.getHullSpec() != null) {
+				switch (member.getHullSpec().getHullSize()) {
+				case CAPITAL_SHIP: pfCount += 4; break;
+				case CRUISER: pfCount += 3; break;
+				case DESTROYER: pfCount += 2; break;
+				case FRIGATE: pfCount += 1; break;
+				}
+			}
+		}
+		
+		if (count > pfCount * 0.67f) {
+			return true;
+		}
+		
+		if (isInsignificant(fleet) && count <= 6) return true;
+		
+		return false;
 	}
 }
 

@@ -15,10 +15,10 @@ public class StarTypes {
 	public static final String NEUTRON_STAR = "star_neutron";
 	public static final String BLACK_HOLE = "black_hole";
 	
-	public static final String PLANET_LAVA = "lava";
-	public static final String PLANET_LAVA_MINOR = "lava_minor";
-	
-	public static final String PLANET_WATER = "water";
-	public static final String PLANET_TERRAN = "terran";
-	public static final String PLANET_TERRAN_ECCENTRIC = "terran-eccentric";
+//	public static final String PLANET_LAVA = "lava";
+//	public static final String PLANET_LAVA_MINOR = "lava_minor";
+//	
+//	public static final String PLANET_WATER = "water";
+//	public static final String PLANET_TERRAN = "terran";
+//	public static final String PLANET_TERRAN_ECCENTRIC = "terran-eccentric";
 }

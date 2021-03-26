@@ -12,13 +12,13 @@ import org.apache.log4j.Logger;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MonthlyReport;
 import com.fs.starfarer.api.campaign.econ.MonthlyReport.FDNode;
@@ -115,7 +115,8 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 		
 		undoAllRepChanges(dialog);
 		
-		endAfterDelay();
+		//endAfterDelay();
+		endImmediately();
 	}
 	
 	public void makeRepChanges(InteractionDialogAPI dialog) {	
@@ -231,6 +232,8 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 		}
 	
 		if (payment > 0) {
+			Global.getSector().getPlayerFleet().getCargo().getCredits().add(payment);
+			
 			float repFP = (int)(fpDestroyed * battle.getPlayerInvolvementFraction());
 			ReputationAdjustmentResult rep = Global.getSector().adjustPlayerReputation(
 							new RepActionEnvelope(RepActions.COMMISSION_BOUNTY_REWARD, new Float(repFP), null, null, true, false), 
@@ -301,19 +304,20 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 	}
 	
 	public String getName() {
+		String prefix = Misc.ucFirst(faction.getPersonNamePrefix());
 		if (isEnding()) {
 			if (missionResult != null && missionResult.payment < 0) {
 				if (isSendingUpdate()) {
-					return faction.getPersonNamePrefix() + " Commission Annulled";
+					return prefix + " Commission Annulled";
 				}
-				return faction.getPersonNamePrefix() + " Commission (Annulled)";
+				return prefix + " Commission (Annulled)";
 			}
-			return faction.getPersonNamePrefix() + " Commission (Resigned)";
+			return prefix + " Commission (Resigned)";
 		}
 		if (isSendingUpdate() && getListInfoParam() == UPDATE_PARAM_ACCEPTED) {
-			return faction.getPersonNamePrefix() + " Commission Accepted";
+			return prefix + " Commission Accepted";
 		}
-		return faction.getPersonNamePrefix() + " Commission";
+		return prefix + " Commission";
 	}
 	
 	@Override

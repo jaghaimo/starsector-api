@@ -34,6 +34,8 @@ public class Conditions {
 	public static final String AI_CORE_ADMIN = "ai_core_admin";
 	public static final String CLOSED_IMMIGRATION = "closed_immigration";
 	
+	public static final String SOLAR_ARRAY = "solar_array";
+	
 	
 	//public static final String HYDROPONICS_COMPLEX = "hydroponics_complex";
 	

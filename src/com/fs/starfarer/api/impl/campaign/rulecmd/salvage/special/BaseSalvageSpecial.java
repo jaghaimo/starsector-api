@@ -20,6 +20,7 @@ import com.fs.starfarer.api.util.Misc;
 public class BaseSalvageSpecial implements SalvageSpecialPlugin {
 
 	public static final String EXTRA_SALVAGE = "$extraSpecialSalvage";
+	public static final String TEMP_EXTRA_SALVAGE = "$tempExtraSpecialSalvage";
 	public static class ExtraSalvage {
 		public CargoAPI cargo;
 		public ExtraSalvage(CargoAPI cargo) {
@@ -40,17 +41,49 @@ public class BaseSalvageSpecial implements SalvageSpecialPlugin {
 	
 	protected CampaignFleetAPI playerFleet;
 	
-	protected void setExtraSalvage(CargoAPI cargo) {
-		ExtraSalvage extra = new ExtraSalvage(cargo);
+	protected void addTempExtraSalvage(CargoAPI cargo) {
+		ExtraSalvage extra = getTempExtraSalvage(memoryMap);
+		if (extra == null) {
+			extra = new ExtraSalvage(cargo);
+		} else {
+			extra.cargo.addAll(cargo);
+		}
 		MemoryAPI memory = BaseCommandPlugin.getEntityMemory(dialog.getPlugin().getMemoryMap());
-		memory.set(EXTRA_SALVAGE, extra, 0f);
+		memory.set(TEMP_EXTRA_SALVAGE, extra, 0f);
 	}
 	
-	public static void setExtraSalvage(CargoAPI cargo, MemoryAPI memory, float expire) {
-		ExtraSalvage extra = new ExtraSalvage(cargo);
+	public static void addExtraSalvage(SectorEntityToken entity, CargoAPI cargo) {
+		addExtraSalvage(cargo, entity.getMemoryWithoutUpdate(), -1);
+	}
+	public static void addExtraSalvage(CargoAPI cargo, MemoryAPI memory, float expire) {
+		ExtraSalvage extra = getExtraSalvage(memory);
+		if (extra == null) {
+			extra = new ExtraSalvage(cargo);
+		} else {
+			extra.cargo.addAll(cargo);
+		}
 		memory.set(EXTRA_SALVAGE, extra, expire);
 	}
-	
+
+	public static CargoAPI getCombinedExtraSalvage(Map<String, MemoryAPI> memoryMap) {
+		ExtraSalvage extra = getExtraSalvage(memoryMap);
+		ExtraSalvage temp = getTempExtraSalvage(memoryMap);
+		CargoAPI cargo = Global.getFactory().createCargo(true);
+		if (extra != null && extra.cargo != null) cargo.addAll(extra.cargo);
+		if (temp != null && temp.cargo != null) cargo.addAll(temp.cargo);
+		return cargo;
+	}
+	public static CargoAPI getCombinedExtraSalvage(SectorEntityToken entity) {
+		ExtraSalvage extra = getExtraSalvage(entity);
+		ExtraSalvage temp = getTempExtraSalvage(entity);
+		CargoAPI cargo = Global.getFactory().createCargo(true);
+		if (extra != null && extra.cargo != null) cargo.addAll(extra.cargo);
+		if (temp != null && temp.cargo != null) cargo.addAll(temp.cargo);
+		return cargo;
+	}
+	public static ExtraSalvage getTempExtraSalvage(SectorEntityToken entity) {
+		return getTempExtraSalvage(entity.getMemoryWithoutUpdate());
+	}
 	public static ExtraSalvage getExtraSalvage(SectorEntityToken entity) {
 		return getExtraSalvage(entity.getMemoryWithoutUpdate());
 	}
@@ -59,6 +92,16 @@ public class BaseSalvageSpecial implements SalvageSpecialPlugin {
 			return (ExtraSalvage) memory.get(EXTRA_SALVAGE);
 		}
 		return null;
+	}
+	public static ExtraSalvage getTempExtraSalvage(MemoryAPI memory) {
+		if (memory.contains(TEMP_EXTRA_SALVAGE)) {
+			return (ExtraSalvage) memory.get(TEMP_EXTRA_SALVAGE);
+		}
+		return null;
+	}
+	public static ExtraSalvage getTempExtraSalvage(Map<String, MemoryAPI> memoryMap) {
+		MemoryAPI memory = BaseCommandPlugin.getEntityMemory(memoryMap);
+		return getTempExtraSalvage(memory);
 	}
 	public static ExtraSalvage getExtraSalvage(Map<String, MemoryAPI> memoryMap) {
 		MemoryAPI memory = BaseCommandPlugin.getEntityMemory(memoryMap);
@@ -70,6 +113,7 @@ public class BaseSalvageSpecial implements SalvageSpecialPlugin {
 	}
 	public static void clearExtraSalvage(MemoryAPI memory) {
 		memory.unset(EXTRA_SALVAGE);
+		memory.unset(TEMP_EXTRA_SALVAGE);
 	}
 	public static void clearExtraSalvage(SectorEntityToken entity) {
 		clearExtraSalvage(entity.getMemoryWithoutUpdate());

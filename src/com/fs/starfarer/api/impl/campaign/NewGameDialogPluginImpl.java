@@ -97,7 +97,8 @@ public class NewGameDialogPluginImpl implements InteractionDialogPlugin {
 		if (optionData == null) return;
 		
 		if (text != null && state == State.CHOICES) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(optionData);
 		}
 		
 		if (optionData instanceof String) {

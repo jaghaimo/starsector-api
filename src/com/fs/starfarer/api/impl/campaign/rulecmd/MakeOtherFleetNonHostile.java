@@ -15,7 +15,7 @@ import com.fs.starfarer.api.util.Misc.Token;
 /**
  * @author Alex Mosolov
  *
- *	MakeOtherFleetHostile <reason> <true or false> <expire>
+ *	MakeOtherFleetNonHostile <reason> <true or false> <expire>
  *
  * Copyright 2015 Fractal Softworks, LLC
  */
@@ -28,14 +28,18 @@ public class MakeOtherFleetNonHostile extends BaseCommandPlugin {
 		
 		String reason = "generic";
 		boolean value;
-		float expire = 0f;
+		boolean generic = false;
+		float expire = -1f;
 		if (params.size() >= 2) {
 			reason = params.get(0).getString(memoryMap);
 			value = params.get(1).getBoolean(memoryMap);
 			if (params.size() >= 3) {
 				expire = params.get(2).getFloat(memoryMap);
 			}
+		} else if (params.size() < 1) {
+			value = true;
 		} else {
+			generic = true;
 			value = params.get(0).getBoolean(memoryMap);
 		}
 		
@@ -47,6 +51,18 @@ public class MakeOtherFleetNonHostile extends BaseCommandPlugin {
 		
 		
 		MemoryAPI memory = dialog.getInteractionTarget().getMemoryWithoutUpdate();
+		
+		if (value) {
+			if (generic) {
+				Misc.clearFlag(memory, MemFlags.MEMORY_KEY_MAKE_HOSTILE);
+				Misc.clearFlag(memory, MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF);
+				memory.unset(MemFlags.MEMORY_KEY_MAKE_HOSTILE);
+				memory.unset(MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF);
+			} else {
+				Misc.setFlagWithReason(memory, MemFlags.MEMORY_KEY_MAKE_HOSTILE, reason, false, expire);
+				Misc.setFlagWithReason(memory, MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, reason, false, expire);
+			}
+		}
 		
 		boolean stillSet = Misc.setFlagWithReason(memory, MemFlags.MEMORY_KEY_MAKE_NON_HOSTILE, reason, value, expire);
 		

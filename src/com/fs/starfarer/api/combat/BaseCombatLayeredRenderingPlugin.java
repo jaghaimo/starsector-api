@@ -5,6 +5,7 @@ import java.util.EnumSet;
 public class BaseCombatLayeredRenderingPlugin implements CombatLayeredRenderingPlugin {
 	
 	protected CombatEngineLayers layer = CombatEngineLayers.BELOW_INDICATORS_LAYER;
+	protected CombatEntityAPI entity;
 	
 	public BaseCombatLayeredRenderingPlugin() {
 		super();
@@ -29,8 +30,8 @@ public class BaseCombatLayeredRenderingPlugin implements CombatLayeredRenderingP
 		return 100;
 	}
 
-	public void init() {
-		
+	public void init(CombatEntityAPI entity) {
+		this.entity = entity;
 	}
 
 	public boolean isExpired() {

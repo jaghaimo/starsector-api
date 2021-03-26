@@ -14,7 +14,6 @@ import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
@@ -41,7 +40,7 @@ public class MilitarySubmarketPlugin extends BaseSubmarketPlugin {
 			
 			pruneWeapons(0f);
 			
-			int weapons = 4 + Math.max(0, market.getSize() - 3) * 2;
+			int weapons = 7 + Math.max(0, market.getSize() - 1) * 2;
 			int fighters = 2 + Math.max(0, market.getSize() - 3);
 			
 			addWeapons(weapons, weapons + 2, 3, submarket.getFaction().getId());
@@ -104,11 +103,13 @@ public class MilitarySubmarketPlugin extends BaseSubmarketPlugin {
 	
 	@Override
 	public int getStockpileLimit(CommodityOnMarketAPI com) {
-		int demand = com.getMaxDemand();
-		int available = com.getAvailable();
+//		int demand = com.getMaxDemand();
+//		int available = com.getAvailable();
+//		
+//		float limit = BaseIndustry.getSizeMult(available) - BaseIndustry.getSizeMult(Math.max(0, demand - 2));
+//		limit *= com.getCommodity().getEconUnit();
 		
-		float limit = BaseIndustry.getSizeMult(available) - BaseIndustry.getSizeMult(Math.max(0, demand - 2));
-		limit *= com.getCommodity().getEconUnit();
+		float limit = OpenMarketPlugin.getBaseStockpileLimit(com);
 		
 		//limit *= com.getMarket().getStockpileMult().getModifiedValue();
 		
@@ -237,6 +238,10 @@ public class MilitarySubmarketPlugin extends BaseSubmarketPlugin {
 	}
 	
 	public boolean isIllegalOnSubmarket(FleetMemberAPI member, TransferAction action) {
+		if (action == TransferAction.PLAYER_SELL && Misc.isAutomated(member)) {
+			return true;
+		}
+		
 		RepLevel req = getRequiredLevelAssumingLegal(member, action);
 		if (req == null) return false;
 		
@@ -280,6 +285,8 @@ public class MilitarySubmarketPlugin extends BaseSubmarketPlugin {
 	}
 
 	public Highlights getIllegalTransferTextHighlights(FleetMemberAPI member, TransferAction action) {
+		if (isIllegalOnSubmarket(member, action)) return null;
+		
 		RepLevel req = getRequiredLevelAssumingLegal(member, action);
 		if (req != null) {
 			Color c = Misc.getNegativeHighlightColor();
@@ -349,7 +356,9 @@ public class MilitarySubmarketPlugin extends BaseSubmarketPlugin {
 		return PlayerEconomyImpactMode.PLAYER_SELL_ONLY;
 	}
 	
-	
+	public boolean isMilitaryMarket() {
+		return true;
+	}
 }
 
 

@@ -9,10 +9,11 @@ import java.util.Set;
 
 import org.json.JSONObject;
 
+import com.fs.starfarer.api.campaign.rules.HasMemory;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.RelationshipAPI;
-import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.fleet.ShipFilter;
 import com.fs.starfarer.api.fleet.ShipRolePick;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -22,7 +23,7 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
  *
  * Copyright 2012 Fractal Softworks, LLC
  */
-public interface FactionAPI {
+public interface FactionAPI extends HasMemory {
 	
 	public static enum ShipPickMode {
 		IMPORTED,
@@ -306,13 +307,17 @@ public interface FactionAPI {
 	String pickRandomShipName(Random random);
 	
 	/**
-	 * Assuming the fleet is about half-full of the faction's capital ships. Used to figure out
-	 * how many fleet points raids/expeditions etc divide out for each "large" fleet.
+	 * Used to figure out how many fleet points raids/expeditions etc divide out for each "large" fleet.
+	 * When going above 30 ships, fleets replace some smaller ships with larger ones. This FP limit is
+	 * where that still produces fleets that aren't *too* top-heavy.
 	 * @return
 	 */
 	float getApproximateMaxFPPerFleet(ShipPickMode mode);
 	Map<String, String> getMusicMap();
 	String getBarSound();
+	int getRepInt(String id);
+	String pickVoice(PersonImportance importance, Random random);
+	String getShipNamePrefix();
 	
 	
 }

@@ -27,6 +27,7 @@ public class BreadcrumbIntel extends FleetLogIntel {
 			this.foundAt = makeDoubleWithSameOrbit(foundAt);
 		}
 		this.target = makeDoubleWithSameOrbit(target);
+		target.getContainingLocation().addEntity(target);
 		setRemoveTrigger(target);
 		
 //		String targetName = BreadcrumbSpecial.getNameWithAOrAn(target, null, true);
@@ -41,6 +42,14 @@ public class BreadcrumbIntel extends FleetLogIntel {
 //							   foundAt, null);
 	}
 	
+	@Override
+	public void reportRemovedIntel() {
+		super.reportRemovedIntel();
+		target.getContainingLocation().removeEntity(target);
+	}
+
+
+
 	public static SectorEntityToken makeDoubleWithSameOrbit(SectorEntityToken entity) {
 		SectorEntityToken copy = entity.getContainingLocation().createToken(entity.getLocation().x, entity.getLocation().y);
 		if (entity.getOrbit() != null) {
@@ -82,10 +91,14 @@ public class BreadcrumbIntel extends FleetLogIntel {
 
 		info.addPara(text, opad);
 		
+		//target.getOrbit().updateLocation();
+		
 		float days = getDaysSincePlayerVisible();
 		if (days >= 1) {
 			addDays(info, "ago.", days, tc, opad);
 		}
+		
+		addDeleteButton(info, width);
 	}
 
 	@Override

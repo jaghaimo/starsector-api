@@ -112,10 +112,12 @@ public class CommRelayScript extends BaseEveryFrameCombatPlugin {
 //					title += " (" + numRelays + ")";
 //				}
 //			}
-				
-			engine.maintainStatusForPlayerShip(KEY_STATUS, icon,
-						title, 
-						data, debuff);
+			
+			if (withMult != 1) {
+				engine.maintainStatusForPlayerShip(KEY_STATUS, icon,
+							title, 
+							data, debuff);
+			}
 		}
 		
 	}

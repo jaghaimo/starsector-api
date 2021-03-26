@@ -24,7 +24,7 @@ public class OutpostStats {
 			
 			if (market.getAdmin().isPlayer() || market.getAdmin().isDefault()) {
 				result.outposts++;
-			} else {
+			} else if (!market.getAdmin().isAICore()) {
 				result.adminOutposts++;
 			}
 			if (market.getAdmin().isAICore()) {

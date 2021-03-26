@@ -45,6 +45,8 @@ public class MonthlyReportNodeTooltipCreator implements TooltipCreator {
 			tooltip.addPara("Fleet-related expenses.", 0);
 		} else if (MonthlyReport.OUTPOSTS.equals(node.custom)) {
 			tooltip.addPara("Colony-related income and expenses.", 0);
+		} else if (MonthlyReport.PRODUCTION_WEAPONS.equals(node.custom)) {
+			tooltip.addPara("Weapons and fighter LPCs installed on produced ships.", 0);
 		} else if (MonthlyReport.PRODUCTION.equals(node.custom)) {
 			float currPad = 0f;
 			if (node.custom2 instanceof CargoAPI) {
@@ -120,6 +122,8 @@ public class MonthlyReportNodeTooltipCreator implements TooltipCreator {
 			tooltip.addPara("Unpaid debt carried over from last month.", 0);
 		} else if (MonthlyReport.INDUSTRIES.equals(node.custom)) {
 			tooltip.addPara("Upkeep and income from industries and structures located at the outpost or colony.", 0);
+		} else if (MonthlyReport.INCENTIVES.equals(node.custom)) {
+			tooltip.addPara("Total spent on hazard pay and related growth incentives at the colony during the previous month.", 0);
 		} else if (MonthlyReport.EXPORTS.equals(node.custom)) {
 			tooltip.addPara("Income from out-of-faction exports by this outpost or colony. " +
 					"Smuggling and in-faction exports do not produce income.", 0);

@@ -5,7 +5,7 @@ import java.util.Random;
 
 public interface FleetMemberStatusAPI {
 	/**
-	 * Total hul damage (as a fraction) since resetDamageTaken() was last called.
+	 * Total hull damage (as a fraction) since resetDamageTaken() was last called.
 	 * @return
 	 */
 	float getHullDamageTaken();
@@ -42,7 +42,7 @@ public interface FleetMemberStatusAPI {
 	
 	
 	/**
-	 * Applied to a random location on get hull, deals guaranteed amount of hull damage, expressed as a fraction of the maximum hull value.
+	 * Applied to a random location on the hull, deals guaranteed amount of hull damage, expressed as a fraction of the maximum hull value.
 	 * 
 	 * 
 	 *  
@@ -87,5 +87,7 @@ public interface FleetMemberStatusAPI {
 	boolean isPermaDetached(int index);
 
 	void resetAmmoState();
+
+	void applyDamage(float hitStrength, float forceHullFractionDamage);
 
 }

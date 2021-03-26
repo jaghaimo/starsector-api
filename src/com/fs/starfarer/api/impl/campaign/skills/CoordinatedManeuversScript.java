@@ -20,7 +20,7 @@ import com.fs.starfarer.api.input.InputEventAPI;
 public class CoordinatedManeuversScript extends BaseEveryFrameCombatPlugin {
 	public static final Object KEY_STATUS = new Object();
 	
-	public static final float BASE_MAXIMUM = 10;
+	public static final float BASE_MAXIMUM = 20;
 	public static final float PER_BUOY = 5;
 	
 	public static final String BONUS_ID = "coord_maneuvers_bonus";
@@ -106,6 +106,7 @@ public class CoordinatedManeuversScript extends BaseEveryFrameCombatPlugin {
 		//if (total > max) total = max;
 		
 		boolean includeSelf = false;
+		includeSelf = true;
 		for (DeployedFleetMemberAPI member : deployed) {
 			if (member.isFighterWing()) continue;
 			if (member.getShip() == null) continue;
@@ -129,7 +130,8 @@ public class CoordinatedManeuversScript extends BaseEveryFrameCombatPlugin {
 			float bonus = Math.min(max, Math.max(0f, total - curr));
 			
 			String title = "Coordinated Maneuvers:" + " " + (int) Math.min(max, total) + "%";
-			String data = "+" + (int)bonus + "% top speed (ship: " + (int) curr + "%)";
+			//String data = "+" + (int)bonus + "% top speed (ship: " + (int) curr + "%)";
+			String data = "+" + (int)bonus + "% top speed";
 			if (buoysOnly) {
 				title = "Nav Buoy";
 				if (numBuoys > 1) {

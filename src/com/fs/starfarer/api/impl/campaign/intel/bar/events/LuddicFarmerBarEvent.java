@@ -4,10 +4,13 @@ import java.awt.Color;
 
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.util.Misc;
 
 public class LuddicFarmerBarEvent extends BaseGetCommodityBarEvent {
@@ -40,6 +43,23 @@ public class LuddicFarmerBarEvent extends BaseGetCommodityBarEvent {
 	}
 	
 	@Override
+	protected void doExtraConfirmActions() {
+		ContactIntel.addPotentialContact(person, market, text);
+	}
+
+	@Override
+	protected void adjustPerson(PersonAPI person) {
+		super.adjustPerson(person);
+		person.setImportanceAndVoice(pickLowImportance(), random);
+		person.addTag(Tags.CONTACT_TRADE);
+	}
+	
+	@Override
+	protected String getPersonPost() {
+		return Ranks.POST_COMMUNE_LEADER;
+	}
+	
+	@Override
 	protected String getPersonFaction() {
 		return Factions.LUDDIC_CHURCH;
 	}
@@ -54,7 +74,8 @@ public class LuddicFarmerBarEvent extends BaseGetCommodityBarEvent {
 		int quantity = 50 + 10 * random.nextInt(6);
 		
 		CommodityOnMarketAPI com = market.getCommodityData(commodity);
-		int size = com.getMaxSupply();
+		int size = Math.min(com.getAvailable(), com.getMaxSupply());
+		if (size < 1) size = 1;
 		//quantity *= BaseIndustry.getSizeMult(size);
 		quantity *= Math.max(1, BaseIndustry.getSizeMult(size) - 2);
 		return quantity;

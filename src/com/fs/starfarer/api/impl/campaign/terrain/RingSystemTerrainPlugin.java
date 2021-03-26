@@ -15,10 +15,15 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class RingSystemTerrainPlugin extends BaseRingTerrain {
-	public static final float VISIBLITY_MULT = 0.25f;
+	private static float VISIBLITY_MULT = 0.25f;
+	private static float VISIBLITY_MULT_NPC = 0.5f;
 	
-	public static float MAX_SNEAK_BURN_LEVEL = Global.getSettings().getFloat("maxSneakBurnLevel");
-	
+	public static float getVisibilityMult(CampaignFleetAPI fleet) {
+		if (fleet != null && fleet.isPlayerFleet()) {
+			return VISIBLITY_MULT;
+		}
+		return VISIBLITY_MULT_NPC;
+	}
 	
 	public void init(String terrainId, SectorEntityToken entity, Object param) {
 		super.init(terrainId, entity, param);
@@ -63,9 +68,10 @@ public class RingSystemTerrainPlugin extends BaseRingTerrain {
 	public void applyEffect(SectorEntityToken entity, float days) {
 		if (entity instanceof CampaignFleetAPI) {
 			CampaignFleetAPI fleet = (CampaignFleetAPI) entity;
-			if (fleet.getCurrBurnLevel() <= MAX_SNEAK_BURN_LEVEL) {
+			//if (fleet.getCurrBurnLevel() <= MAX_SNEAK_BURN_LEVEL) {
+			if (Misc.isSlowMoving(fleet)) {
 				fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_1",
-									"Hiding inside ring system", VISIBLITY_MULT, 
+									"Hiding inside ring system", getVisibilityMult(fleet), 
 									fleet.getStats().getDetectedRangeMod());
 			}
 		}

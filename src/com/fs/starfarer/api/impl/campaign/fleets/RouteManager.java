@@ -491,6 +491,11 @@ public class RouteManager implements FleetEventListener {
 		return addRoute(source, market, seed, extra, spawner, null);
 	}
 	
+	public void removeRote(RouteData route) {
+		routes.remove(route);
+		removeFromMap(route);
+	}
+	
 	public RouteData addRoute(String source, MarketAPI market, Long seed, OptionalFleetData extra, RouteFleetSpawner spawner, Object custom) {
 		routesByLocation = null;
 		

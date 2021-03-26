@@ -15,11 +15,11 @@ import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogPlugin;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
+import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
-import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AbilityPlugin;
@@ -28,6 +28,7 @@ import com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility;
 import com.fs.starfarer.api.impl.campaign.ids.Abilities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.loading.Description;
 import com.fs.starfarer.api.loading.Description.Type;
 import com.fs.starfarer.api.util.Misc;
@@ -135,15 +136,46 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 		OptionId option = (OptionId) optionData;
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(option);
 		}
 		
 		boolean unstable = jumpPoint.getMemoryWithoutUpdate().getBoolean(UNSTABLE_KEY);
 		boolean stabilizing = jumpPoint.getMemoryWithoutUpdate().getExpire(UNSTABLE_KEY) > 0;
 		boolean canStabilize = jumpPoint.getMemoryWithoutUpdate().getBoolean(CAN_STABILIZE);
+		boolean canTransverseJump = Global.getSector().getPlayerFleet().hasAbility(Abilities.TRANSVERSE_JUMP);
+		boolean tutorialInProgress = TutorialMissionIntel.isTutorialInProgress();
 		
 		switch (option) {
 		case INIT:
+//			dialog.showCustomDialog(600, 400, new CustomDialogDelegate() {
+//				public boolean hasCancelButton() {
+//					return false;
+//				}
+//				public CustomUIPanelPlugin getCustomPanelPlugin() {
+//					return new ExampleCustomUIPanel();
+//				}
+//				public String getConfirmText() {
+//					return null;
+//				}
+//				public String getCancelText() {
+//					return null;
+//				}
+//				public void customDialogConfirm() {
+//					System.out.println("CUSTOM Confirmed");
+//				}
+//				public void customDialogCancel() {
+//					System.out.println("CUSTOM Cancelled");
+//				}
+//				public void createCustomDialog(CustomPanelAPI panel) {
+//					TooltipMakerAPI text = panel.createUIElement(600f, 200f, true);
+//					for (int i = 0; i < 10; i++) {
+//						text.addPara("The large amount of kinetic energy delivered to shield systems of enemy craft at close-range typically causes emitter overload, a tactical option often overlooked by inexperienced captains.", 10f);
+//					}
+//					panel.addUIElement(text).inTL(0, 0);
+//				}
+//			});
+			
 			addText(getString("approach"));
 			
 			Description desc = Global.getSettings().getDescription(jumpPoint.getCustomDescriptionId(), Type.CUSTOM);
@@ -152,11 +184,15 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 			}
 			
 			if (unstable) {
-				if (stabilizing) {
+				if (stabilizing && !canTransverseJump) {
 					addText("This jump-point is stabilizing and should be usable within a day at the most.");
 				} else {
 					addText("This jump-point is unstable and can not be used.");
 				}
+				
+				if (canTransverseJump && !tutorialInProgress ) {
+					addText("Until it restabilizes, hyperspace is only accessible via Transverse Jump.");
+				}	
 			} else {
 				if (!jumpPoint.isInHyperspace()) {
 					if (canAfford) {

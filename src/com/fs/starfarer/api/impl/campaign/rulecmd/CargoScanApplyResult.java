@@ -11,6 +11,7 @@ import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.impl.campaign.rulecmd.CargoScan.CargoScanResult;
 import com.fs.starfarer.api.util.Misc;
@@ -43,6 +44,16 @@ public class CargoScanApplyResult extends BaseCommandPlugin {
 				text.highlightLastInLastPara("" + (int) stack.getSize() + Strings.X, Misc.getHighlightColor());
 			}
 			text.setFontInsignia();
+		}
+		
+		for (FleetMemberAPI member : result.shipsToDamage) {
+			float crLost = Math.min(member.getRepairTracker().getBaseCR(), member.getDeployCost() * 0.5f);
+			crLost += 0.01f * (float)Misc.random.nextInt(10);
+			if (crLost > 0) {
+				member.getRepairTracker().applyCREvent(-crLost, "Vindictive cargo inspection");
+				AddRemoveCommodity.addCRLossText(member, text, crLost);
+			}
+			
 		}
 		
 		return true;

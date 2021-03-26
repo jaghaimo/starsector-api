@@ -11,6 +11,10 @@ import org.lwjgl.util.vector.Vector2f;
  * 
  * Used to fulfill "all objects in area" queries without having to iterate through every object.
  * 
+ * Occasionally just getting a list of the entities - i.e. via CombatEngineAPI.getShips() may be a bit faster than using the grid.
+ * In particular, this will more often be the case when using the grid for a large area. For something very performance
+ * intensive, it makes sense to try each way to see which is faster in a given situation.
+ * 
  * @author Alex Mosolov
  *
  * Copyright 2018 Fractal Softworks, LLC

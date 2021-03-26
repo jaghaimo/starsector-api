@@ -2,7 +2,6 @@ package com.fs.starfarer.api.impl.campaign;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -11,15 +10,18 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.FleetMemberData;
 import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.Status;
-import com.fs.starfarer.api.combat.ShipHullSpecAPI;
-import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.loading.VariantSource;
+import com.fs.starfarer.api.plugins.DModAdderPlugin;
+import com.fs.starfarer.api.plugins.DModAdderPlugin.DModAdderParams;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
@@ -32,6 +34,8 @@ public class DModManager {
 //	public static final String HULLMOD_FIGHTER_BAY_DAMAGE = "fighterBayDamage";
 //	public static final String HULLMOD_CARRIER_ALWAYS = "carrierAlways";
 	
+	
+	public static int MAX_DMODS_FROM_COMBAT = Global.getSettings().getInt("maxDModsAddedByCombat");
 
 	public static boolean setDHull(ShipVariantAPI variant) {
 		//if (!variant.getHullSpec().isDHull()) {
@@ -45,14 +49,33 @@ public class DModManager {
 		return false;
 	}
 	
+	public static int reduceNextDmodsBy = 0;
+	
 	public static void addDMods(FleetMemberData data, boolean own, CampaignFleetAPI recoverer, Random random) {
 		addDMods(data.getMember(), data.getStatus() == Status.DESTROYED, own, recoverer, random);
 	}
 	
 	public static void addDMods(FleetMemberAPI member, boolean destroyed, boolean own, CampaignFleetAPI recoverer, Random random) {
 		ShipVariantAPI variant = member.getVariant();
+		addDMods(variant, destroyed, own, recoverer, random);
+	}
+	public static void addDMods(ShipVariantAPI variant, boolean destroyed, boolean own, CampaignFleetAPI recoverer, Random random) {
 		//int original = getNumDMods(variant);
 		if (random == null) random = new Random();
+		
+		
+		DModAdderParams params = new DModAdderParams();
+		params.variant = variant;
+		params.destroyed = destroyed;
+		params.own = own;
+		params.recoverer = recoverer;
+		params.random = random;
+		DModAdderPlugin plugin = Global.getSector().getGenericPlugins().pickPlugin(DModAdderPlugin.class, params);
+		if (plugin != null) {
+			plugin.addDMods(params);
+			return;
+		}
+		
 		
 		if (destroyed) {
 			addAllPermaModsWithTags(variant, Tags.HULLMOD_DESTROYED_ALWAYS);
@@ -95,6 +118,8 @@ public class DModManager {
 		int num = 2 + random.nextInt(3);
 		
 		int reduction = 0;
+		reduction += reduceNextDmodsBy;
+		reduceNextDmodsBy = 0;
 		if (recoverer != null) {
 			reduction = (int) recoverer.getStats().getDynamic().getValue(Stats.SHIP_DMOD_REDUCTION, 0);
 			reduction = random.nextInt(reduction + 1);
@@ -109,6 +134,11 @@ public class DModManager {
 		if (own) {
 			add = (1 - reduction);
 		}
+		
+		if (add + already > MAX_DMODS_FROM_COMBAT) {
+			add = MAX_DMODS_FROM_COMBAT - already;
+		}
+		if (add <= 0) return;
 
 		
 		WeightedRandomPicker<HullModSpecAPI> picker = new WeightedRandomPicker<HullModSpecAPI>(random);
@@ -120,17 +150,31 @@ public class DModManager {
 					i--;
 					continue;
 				}
-				variant.addPermaMod(pick.getId());
+				variant.removeSuppressedMod(pick.getId());
+				variant.addPermaMod(pick.getId(), false);
 			}
 		}
 	}
 	
 	
 	public static void addDMods(FleetMemberAPI member, boolean canAddDestroyedMods, int num, Random random) {
+		ShipVariantAPI variant = member.getVariant();
+		addDMods(variant, canAddDestroyedMods, num, random);
+	}
+	public static void addDMods(ShipVariantAPI variant, boolean canAddDestroyedMods, int num, Random random) {
 		if (random == null) random = new Random();
 		
+		DModAdderParams params = new DModAdderParams();
+		params.variant = variant;
+		params.canAddDestroyedMods = canAddDestroyedMods;
+		params.num = num;
+		params.random = random;
+		DModAdderPlugin plugin = Global.getSector().getGenericPlugins().pickPlugin(DModAdderPlugin.class, params);
+		if (plugin != null) {
+			plugin.addDMods(params);
+			return;
+		}
 		
-		ShipVariantAPI variant = member.getVariant();
 		
 //		if (member.getHullSpec().getHints().contains(ShipTypeHints.CIVILIAN)) {
 //			int added = addAllPermaModsWithTags(variant, Tags.HULLMOD_CIV_ALWAYS);
@@ -162,7 +206,7 @@ public class DModManager {
 			potentialMods.addAll(getModsWithTags(Tags.HULLMOD_CARRIER_ALWAYS));
 		}
 		
-		potentialMods = new ArrayList<HullModSpecAPI>(new HashSet<HullModSpecAPI>(potentialMods));
+		potentialMods = new ArrayList<HullModSpecAPI>(potentialMods);
 		
 		removeModsAlreadyInVariant(variant, potentialMods);
 		
@@ -178,7 +222,8 @@ public class DModManager {
 					i--;
 					continue;
 				}
-				variant.addPermaMod(pick.getId());
+				variant.removeSuppressedMod(pick.getId());
+				variant.addPermaMod(pick.getId(), false);
 				//System.out.println("Mod: " + pick.getId());
 				added++;
 			}
@@ -191,9 +236,13 @@ public class DModManager {
 
 
 	public static void removeUnsuitedMods(ShipVariantAPI variant, List<HullModSpecAPI> mods) {
+		boolean auto = variant.hasHullMod(HullMods.AUTOMATED);
 		boolean civ = variant.getHullSpec().getHints().contains(ShipTypeHints.CIVILIAN);
 		boolean phase = variant.getHullSpec().getDefenseType() == ShieldType.PHASE;
 		boolean peakTime = variant.getHullSpec().getNoCRLossTime() < 10000;
+		boolean shields = variant.getHullSpec().getDefenseType() == ShieldType.FRONT || 
+						  variant.getHullSpec().getDefenseType() == ShieldType.OMNI; 
+				
 		Iterator<HullModSpecAPI> iter = mods.iterator();
 		while (iter.hasNext()) {
 			HullModSpecAPI curr = iter.next();
@@ -202,6 +251,10 @@ public class DModManager {
 				continue;
 			}
 			if (phase && curr.hasTag(Tags.HULLMOD_NOT_PHASE)) {
+				iter.remove();
+				continue;
+			}
+			if (auto && curr.hasTag(Tags.HULLMOD_NOT_AUTO)) {
 				iter.remove();
 				continue;
 			}
@@ -214,6 +267,10 @@ public class DModManager {
 				continue;
 			}
 			if (!civ && curr.hasTag(Tags.HULLMOD_CIV_ONLY)) {
+				iter.remove();
+				continue;
+			}
+			if (!shields  && curr.hasTag(Tags.HULLMOD_REQ_SHIELDS)) {
 				iter.remove();
 				continue;
 			}
@@ -231,7 +288,8 @@ public class DModManager {
 		int added = 0;
 		for (HullModSpecAPI mod : getModsWithTags(tags)) {
 			if (!variant.hasHullMod(mod.getId())) added++;
-			variant.addPermaMod(mod.getId());
+			variant.removeSuppressedMod(mod.getId());
+			variant.addPermaMod(mod.getId(), false);
 		}
 		return added;
 	}
@@ -290,6 +348,25 @@ public class DModManager {
 		return Global.getSettings().getHullModSpec(id);
 	}
 
+	public static void removeDMod(ShipVariantAPI v, String id) {
+		ShipHullSpecAPI base = v.getHullSpec().getDParentHull();
+		
+		// so that a skin with dmods can be "restored" - i.e. just dmods suppressed w/o changing to
+		// actual base skin
+		if (!v.getHullSpec().isDefaultDHull() && !v.getHullSpec().isRestoreToBase()) {
+			base = v.getHullSpec();
+		}
+		if (base == null && v.getHullSpec().isRestoreToBase()) {
+			base = v.getHullSpec().getBaseHull();
+		}
+		if (base.isBuiltInMod(id)) {
+			v.removePermaMod(id);
+			v.addSuppressedMod(id);
+		} else {
+			v.removePermaMod(id);
+			v.removeMod(id);
+		}
+	}
 }
 
 

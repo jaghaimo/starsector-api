@@ -246,6 +246,10 @@ public class BaseTerrain implements CampaignTerrainPlugin {
 		return name;
 	}
 	
+	public String getNameAOrAn() {
+		return "a";
+	}
+	
 	public void setTerrainName(String name) {
 		this.name = name;
 	}
@@ -256,6 +260,10 @@ public class BaseTerrain implements CampaignTerrainPlugin {
 
 	public boolean hasAIFlag(Object flag) {
 		return false;
+	}
+	
+	public boolean hasAIFlag(Object flag, CampaignFleetAPI fleet) {
+		return hasAIFlag(flag);
 	}
 	
 	public float getMaxEffectRadius(Vector2f locFrom) {
@@ -286,6 +294,10 @@ public class BaseTerrain implements CampaignTerrainPlugin {
 
 	public void renderOnRadar(Vector2f radarCenter, float factor, float alphaMult) {
 		
+	}
+
+	public String getNameForTooltip() {
+		return getTerrainName();
 	}
 	
 //	protected boolean doNotLowerCaseName = false;

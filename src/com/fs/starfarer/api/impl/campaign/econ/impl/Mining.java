@@ -3,11 +3,14 @@ package com.fs.starfarer.api.impl.campaign.econ.impl;
 import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.PlanetAPI;
+import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -96,7 +99,7 @@ public class Mining extends BaseIndustry implements MarketImmigrationModifier{
 	@Override
 	public String getCurrentImage() {
 		float size = market.getSize();
-		if (size <= 4) {
+		if (size <= SIZE_FOR_SMALL_IMAGE) {
 			return Global.getSettings().getSpriteName("industry", "mining_low");
 		}
 		return super.getCurrentImage();
@@ -105,6 +108,50 @@ public class Mining extends BaseIndustry implements MarketImmigrationModifier{
 	public float getPatherInterest() {
 		return 1f + super.getPatherInterest();
 	}
+	
+	@Override
+	protected boolean canImproveToIncreaseProduction() {
+		return true;
+	}
+	
+	
+	
+	public void applyVisuals(PlanetAPI planet) {
+		if (planet == null) return;
+		planet.getSpec().setShieldTexture2(Global.getSettings().getSpriteName("industry", "plasma_net_texture"));
+		planet.getSpec().setShieldThickness2(0.15f);
+		//planet.getSpec().setShieldColor2(new Color(255,255,255,175));
+		planet.getSpec().setShieldColor2(new Color(255,255,255,255));
+		planet.applySpecChanges();
+		shownPlasmaNetVisuals = true;
+	}
+	
+	public void unapplyVisuals(PlanetAPI planet) {
+		if (planet == null) return;
+		planet.getSpec().setShieldTexture2(null);
+		planet.getSpec().setShieldThickness2(0f);
+		planet.getSpec().setShieldColor2(null);
+		planet.applySpecChanges();
+		shownPlasmaNetVisuals = false;
+	}
+
+	protected boolean shownPlasmaNetVisuals = false;
+	
+	@Override
+	public void setSpecialItem(SpecialItemData special) {
+		super.setSpecialItem(special);
+
+		if (shownPlasmaNetVisuals && (special == null || !special.getId().equals(Items.PLASMA_DYNAMO))) {
+			unapplyVisuals(market.getPlanetEntity());
+		}
+		
+		if (special != null && special.getId().equals(Items.PLASMA_DYNAMO)) {
+			applyVisuals(market.getPlanetEntity());
+		}
+	}
+	
+	
+	
 }
 
 

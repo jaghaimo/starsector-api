@@ -20,8 +20,8 @@ import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.loading.Description;
-import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.loading.Description.Type;
+import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -197,6 +197,9 @@ public class WeaponBlueprintItemPlugin extends BaseSpecialItemPlugin implements 
 	public String resolveDropParamsToSpecificItemData(String params, Random random) throws JSONException {
 		if (params == null || params.isEmpty()) return null;
 		
+		if (!params.startsWith("{")) {
+			return params;
+		}
 		
 		JSONObject json = new JSONObject(params);
 		

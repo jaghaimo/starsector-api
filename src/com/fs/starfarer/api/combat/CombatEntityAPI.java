@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.combat;
 
+import java.util.Map;
+
 import org.lwjgl.util.vector.Vector2f;
 
 public interface CombatEntityAPI {
@@ -10,7 +12,19 @@ public interface CombatEntityAPI {
 	float getAngularVelocity();
 	void setAngularVelocity(float angVel);
 	
+	/**
+	 * 0 = player
+	 * 1 = enemy
+	 * 100 = neutral (used for ship hulks)
+	 * @return
+	 */
 	int getOwner();
+	/**
+	 * 0 = player
+	 * 1 = enemy
+	 * 100 = neutral (used for ship hulks)
+	 * @return
+	 */
 	void setOwner(int owner);
 	
 	float getCollisionRadius();
@@ -58,5 +72,9 @@ public interface CombatEntityAPI {
 	
 	
 	Object getAI();
+	boolean isExpired();
+	void setCustomData(String key, Object data);
+	void removeCustomData(String key);
+	Map<String, Object> getCustomData();
 	
 }

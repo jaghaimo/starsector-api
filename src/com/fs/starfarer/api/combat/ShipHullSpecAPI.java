@@ -47,11 +47,14 @@ public interface ShipHullSpecAPI {
 		ALWAYS_PANIC,
 		WEAPONS_FRONT_TO_BACK,
 		WEAPONS_BACK_TO_FRONT,
+		DO_NOT_SHOW_MODULES_IN_FLEET_LIST,
+		RENDER_ENGINES_BELOW_HULL,
 		
 		/** for phase ships w/ a different type of phase system to show up under 
 		 * the "Phase" tag in doctrine/production
 		 *  */
-		PHASE, 
+		PHASE,
+		PLAY_FIGHTER_OVERLOAD_SOUNDS, /** by default, fighters don't play overload sounds */
 	}
 	
 	
@@ -157,5 +160,8 @@ public interface ShipHullSpecAPI {
 	boolean isPhase();
 
 	String getShipFilePath();
+
+	String getTravelDriveId();
+	void setTravelDriveId(String travelDriveId);
 
 }

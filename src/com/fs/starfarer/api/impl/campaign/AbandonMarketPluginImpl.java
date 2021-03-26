@@ -9,6 +9,7 @@ import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.RuleBasedDialog;
 import com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireAll;
 import com.fs.starfarer.api.impl.campaign.rulecmd.ShowDefaultVisual;
@@ -118,6 +119,8 @@ public class AbandonMarketPluginImpl extends BaseGenericPlugin implements Abando
 		}
 		
 		DecivTracker.removeColony(market, false);
+		
+		ListenerUtil.reportPlayerAbandonedColony(market);
 		
 		InteractionDialogAPI dialog = Global.getSector().getCampaignUI().getCurrentInteractionDialog();
 		if (dialog != null && dialog.getPlugin() instanceof RuleBasedDialog) {

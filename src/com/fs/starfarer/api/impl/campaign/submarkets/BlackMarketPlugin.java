@@ -17,7 +17,6 @@ import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.campaign.impl.items.BlueprintProviderItem;
 import com.fs.starfarer.api.impl.campaign.CoreCampaignPluginImpl;
 import com.fs.starfarer.api.impl.campaign.DelayedBlueprintLearnScript;
-import com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.util.Highlights;
 import com.fs.starfarer.api.util.Misc;
@@ -48,7 +47,7 @@ public class BlackMarketPlugin extends BaseSubmarketPlugin {
 			factionPicker.add(Factions.INDEPENDENT, 4f);
 			factionPicker.add(submarket.getFaction().getId(), 6f);
 			
-			int weapons = 4 + Math.max(0, market.getSize() - 3) + (Misc.isMilitary(market) ? 5 : 0);
+			int weapons = 6 + Math.max(0, market.getSize() - 1) + (Misc.isMilitary(market) ? 5 : 0);
 			int fighters = 2 + Math.max(0, (market.getSize() - 3) / 2) + (Misc.isMilitary(market) ? 2 : 0);
 			
 			addWeapons(weapons, weapons + 2, 3, factionPicker);
@@ -92,7 +91,9 @@ public class BlackMarketPlugin extends BaseSubmarketPlugin {
 					Math.min(1f, Misc.getShipQuality(market, market.getFactionId()) + 0.5f),
 					0f, // qualityMod
 					null,
-					doctrineOverride);
+					doctrineOverride,
+					3 // no capital ships, max size cruiser
+					);
 			addShips(Factions.INDEPENDENT,
 					15f + 15f * sMult, // combat
 					itemGenRandom.nextFloat() > pOther ? 0f : 10f, // freighter 
@@ -104,7 +105,9 @@ public class BlackMarketPlugin extends BaseSubmarketPlugin {
 					Math.min(1f, Misc.getShipQuality(market, market.getFactionId()) + 0.5f),
 					0f, // qualityMod
 					null,
-					null);
+					null,
+					3 // no capital ships, max size cruiser
+					); 
 			
 			addHullMods(4, 1 + itemGenRandom.nextInt(3));
 		}
@@ -122,14 +125,16 @@ public class BlackMarketPlugin extends BaseSubmarketPlugin {
 	
 	@Override
 	public int getStockpileLimit(CommodityOnMarketAPI com) {
-		int demand = com.getMaxDemand();
-		int available = com.getAvailable();
-		
-		//float limit = BaseIndustry.getSizeMult(available) - BaseIndustry.getSizeMult(Math.max(0, demand - 2));
-		float limit = BaseIndustry.getSizeMult(available);
-		limit *= com.getCommodity().getEconUnit();
+//		int demand = com.getMaxDemand();
+//		int available = com.getAvailable();
+//		
+//		//float limit = BaseIndustry.getSizeMult(available) - BaseIndustry.getSizeMult(Math.max(0, demand - 2));
+//		float limit = BaseIndustry.getSizeMult(available);
+//		limit *= com.getCommodity().getEconUnit();
 		
 		//limit *= com.getMarket().getStockpileMult().getModifiedValue();
+		
+		float limit = OpenMarketPlugin.getBaseStockpileLimit(com);
 		
 		Random random = new Random(market.getId().hashCode() + submarket.getSpecId().hashCode() + Global.getSector().getClock().getMonth() * 170000);
 		limit *= 0.9f + 0.2f * random.nextFloat();

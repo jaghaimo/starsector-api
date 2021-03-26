@@ -56,7 +56,10 @@ public class GoDarkAbilityAI extends BaseAbilityAI {
 					ability.activate();
 				}
 			} else { // already seen by them, or faster than them with "go dark" off
-				if (dist < detRange || ourSpeed / GoDarkAbility.MAX_BURN_MULT  > theirSpeed) {
+				//if (dist < detRange || ourSpeed / GoDarkAbility.MAX_BURN_MULT  > theirSpeed) {
+				// since going dark means "slow moving", ourSpeed doesn't actually include that, so it's still
+				// as if go dark was turned off
+				if (dist < detRange || ourSpeed > theirSpeed) {
 					ability.deactivate();
 				}
 			}

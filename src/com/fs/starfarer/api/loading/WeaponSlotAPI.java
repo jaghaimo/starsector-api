@@ -1,8 +1,11 @@
 package com.fs.starfarer.api.loading;
 
+import java.util.List;
+
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.combat.CombatEntityAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
 
 public interface WeaponSlotAPI {
@@ -39,5 +42,7 @@ public interface WeaponSlotAPI {
 	
 	float getRenderOrderMod();
 	void setRenderOrderMod(float renderOrderMod);
+	float computeMidArcAngle(ShipAPI ship);
+	List<Vector2f> getLaunchPointOffsets();
 	
 }

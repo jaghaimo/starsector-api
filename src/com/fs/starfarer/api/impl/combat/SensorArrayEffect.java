@@ -3,6 +3,7 @@ package com.fs.starfarer.api.impl.combat;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BattleObjectiveAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -58,14 +59,21 @@ public class SensorArrayEffect extends BaseBattleObjectiveEffect {
 
 
 	public String getLongDescription() {
+		float min = Global.getSettings().getFloat("minFractionOfBattleSizeForSmallerSide");
+		int total = Global.getSettings().getBattleSize();
+		int maxPoints = (int)Math.round(total * (1f - min));
 		return String.format(
-				"+%d%% ECM rating\n\n" +
-				"reduces weapon range\n" +
-				"for side with lower ECM rating\n\n" +
-				"%d%% base maximum reduction\n" + 
-				"can be improved by skills",
+				"+%d%% ECM rating\n" +
+				"reduces weapon range for\n" +
+				"side with lower ECM rating\n" +
+				//"%d%% base maximum reduction\n" + 
+				"%d%% maximum reduction\n\n" + 
+				//"can be improved by skills\n\n" +
+				"+%d bonus deployment points\n" + 
+				"up to a maximum of " + maxPoints + " points",
 				(int)ElectronicWarfareScript.PER_JAMMER,
-				(int)ElectronicWarfareScript.BASE_MAXIMUM);
+				(int)ElectronicWarfareScript.BASE_MAXIMUM,
+				getBonusDeploymentPoints());
 //		   return String.format(
 //				   "command points: +%s\n" +
 //				   "reveal area: %d\n" +

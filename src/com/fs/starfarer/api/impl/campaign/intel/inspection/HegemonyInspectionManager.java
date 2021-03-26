@@ -19,6 +19,7 @@ public class HegemonyInspectionManager implements EveryFrameScript {
 	public static final String KEY = "$core_hegemonyInspectionManager";
 	
 	public static final float MAX_THRESHOLD = 1000f;
+	public static final float FREQ_MULT = Global.getSettings().getFloat("aiInspectionFrequencyMult");
 	
 	public static HegemonyInspectionManager getInstance() {
 		Object test = Global.getSector().getMemoryWithoutUpdate().get(KEY);
@@ -40,7 +41,7 @@ public class HegemonyInspectionManager implements EveryFrameScript {
 	protected IntervalUtil inspectionChecker = new IntervalUtil(20f, 40f);
 	
 	protected float suspicion = 0f;
-	protected float threshold = 100f;
+	protected float threshold = 250f;
 	protected float inspectionDelay = 0f;;
 	protected int numAttempts = 0;
 	
@@ -63,7 +64,7 @@ public class HegemonyInspectionManager implements EveryFrameScript {
 			suspicion = 1000f;
 		}
 		
-		inspectionChecker.advance(days);
+		inspectionChecker.advance(days * FREQ_MULT);
 		if (inspectionChecker.intervalElapsed() && intel == null && inspectionDelay <= 0) {
 			checkInspection();
 		}
@@ -73,6 +74,7 @@ public class HegemonyInspectionManager implements EveryFrameScript {
 		float total = 0f;
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (market.isPlayerOwned()) {
+				if (market.isInHyperspace()) continue;
 				total += getAICoreUseValue(market);
 			}
 		}
@@ -98,6 +100,7 @@ public class HegemonyInspectionManager implements EveryFrameScript {
 		float max = 0f;
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (market.isPlayerOwned()) {
+				if (market.isInHyperspace()) continue;
 				float curr = getAICoreUseValue(market);
 				if (curr > max) {
 					target = market;

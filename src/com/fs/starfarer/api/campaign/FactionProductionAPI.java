@@ -62,4 +62,11 @@ public interface FactionProductionAPI {
 
 	float getProductionCapacityForMarket(MarketAPI market);
 
+	float getCostMult();
+	void setCostMult(float costMult);
+
+	ItemInProductionAPI createSampleItem(ProductionItemType type, String specId, int quantity);
+
+	FactionProductionAPI clone();
+
 }

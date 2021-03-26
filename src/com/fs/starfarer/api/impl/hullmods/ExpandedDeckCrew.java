@@ -8,8 +8,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class ExpandedDeckCrew extends BaseHullMod {
 
-	public static final float RATE_DECREASE_MODIFIER = 25f;
-	public static final float RATE_INCREASE_MODIFIER = 50f;
+	public static final float RATE_DECREASE_MODIFIER = 10f;
+	public static final float RATE_INCREASE_MODIFIER = 20f;
 	
 	public static final float CREW_PER_DECK = 20f;
 	
@@ -30,6 +30,9 @@ public class ExpandedDeckCrew extends BaseHullMod {
 	}
 	
 	public boolean isApplicableToShip(ShipAPI ship) {
+		int baysModified = (int) ship.getMutableStats().getNumFighterBays().getModifiedValue();
+		if (baysModified <= 0) return false; // only count removed bays, not added bays for this
+		
 		int bays = (int) ship.getMutableStats().getNumFighterBays().getBaseValue();
 //		if (ship != null && ship.getVariant().getHullSpec().getBuiltInWings().size() >= bays) {
 //			return false;

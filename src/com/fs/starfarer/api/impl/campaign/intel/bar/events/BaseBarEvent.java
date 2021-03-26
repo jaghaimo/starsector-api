@@ -1,16 +1,36 @@
 package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 
+import java.util.Map;
+
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.OptionPanelAPI;
+import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarEvent;
 
 public class BaseBarEvent implements PortsideBarEvent {
 
 	transient protected InteractionDialogAPI dialog;
+	transient protected TextPanelAPI text;
+	transient protected OptionPanelAPI options;
+	transient protected Map<String, MemoryAPI> memoryMap;
 
+	public boolean isAlwaysShow() {
+		return false;
+	}
 
-	public void init(InteractionDialogAPI dialog) {
+	public void init(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
 		this.dialog = dialog;
+		this.memoryMap = memoryMap;
+		if (dialog != null) {
+			text = dialog.getTextPanel();
+			options = dialog.getOptionPanel();
+		}
+	}
+	
+	public String getBarEventId() {
+		return getClass().getSimpleName();
 	}
 	
 	transient protected boolean noContinue = false;
@@ -40,7 +60,7 @@ public class BaseBarEvent implements PortsideBarEvent {
 		return true;
 	}
 
-	public void addPromptAndOption(InteractionDialogAPI dialog) {
+	public void addPromptAndOption(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
 		
 	}
 

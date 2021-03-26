@@ -26,6 +26,8 @@ public class MakeOtherFleetAllowDisengage extends BaseCommandPlugin {
 			if (params.size() >= 3) {
 				expire = params.get(2).getFloat(memoryMap);
 			}
+		} else if (params.size() < 1) {
+			value = true;			
 		} else {
 			value = params.get(0).getBoolean(memoryMap);
 		}

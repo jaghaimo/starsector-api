@@ -20,11 +20,13 @@ public class MonthlyReport {
 	public static String FLEET = "node_id_fleet";
 	public static String OUTPOSTS = "node_id_outposts";
 	public static String PRODUCTION = "node_id_prod";
+	public static String PRODUCTION_WEAPONS = "node_id_prod_weapons";
 	//public static String SURPLUS = "node_id_surplus";
 	public static String OVERHEAD = "node_id_overhead";
 	public static String STOCKPILING = "node_id_stockpiling";
 	public static String RESTOCKING = "node_id_restocking";
 	
+	public static String INCENTIVES = "node_id_incentives";
 	public static String INDUSTRIES = "node_id_industries";
 	public static String EXPORTS = "node_id_exports";
 	public static String STORAGE = "node_id_storage";

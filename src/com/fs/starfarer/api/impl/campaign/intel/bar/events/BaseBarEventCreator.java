@@ -4,7 +4,7 @@ import com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.GenericBarEventCreator;
 
 public class BaseBarEventCreator implements GenericBarEventCreator {
-	
+
 	public PortsideBarEvent createBarEvent() {
 		return null;
 	}
@@ -26,6 +26,14 @@ public class BaseBarEventCreator implements GenericBarEventCreator {
 	}
 
 	public boolean isPriority() {
+		return false;
+	}
+
+	public String getBarEventId() {
+		return getClass().getSimpleName();
+	}
+
+	public boolean wasAutoAdded() {
 		return false;
 	}
 

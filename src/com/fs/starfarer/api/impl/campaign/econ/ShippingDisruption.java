@@ -18,10 +18,10 @@ import com.fs.starfarer.api.util.Misc;
 
 public class ShippingDisruption extends BaseMarketConditionPlugin {
 	
-	public static final String COMMODITY_LOSS_PREFIX = "sh_loss";
-	public static final float ACCESS_LOSS_DURATION = 90f;
+	public static String COMMODITY_LOSS_PREFIX = "sh_loss";
+	public static float ACCESS_LOSS_DURATION = 90f;
 	
-	public static final float ACCESS_PER_UNITS_LOST = 0.1f; // accessibility penalty per marketSize units lost
+	public static float ACCESS_PER_UNITS_LOST = 0.1f; // accessibility penalty per marketSize units lost
 	
 	
 	public static float getPenaltyForShippingLost(float marketSize, float unitsLost) {

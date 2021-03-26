@@ -6,6 +6,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.AICoreOfficerPlugin;
 import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI;
@@ -21,7 +22,6 @@ import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent;
-import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent.SkillPickPreference;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
@@ -34,9 +34,10 @@ import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
-import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
@@ -47,7 +48,9 @@ public class OrbitalStation extends BaseIndustry implements FleetEventListener {
 
 	public static float DEFENSE_BONUS_BASE = 0.5f;
 	public static float DEFENSE_BONUS_BATTLESTATION = 1f; 
-	public static float DEFENSE_BONUS_FORTRESS = 2f; 
+	public static float DEFENSE_BONUS_FORTRESS = 2f;
+	
+	public static float IMPROVE_STABILITY_BONUS = 1f; 
 	
 	public void apply() {
 		super.apply(false);
@@ -103,8 +106,10 @@ public class OrbitalStation extends BaseIndustry implements FleetEventListener {
 				member.getRepairTracker().setCR(cr);
 			}
 			FleetInflater inflater = stationFleet.getInflater();
-			if (inflater != null && stationFleet.isInflated()) {
-				stationFleet.deflate();
+			if (inflater != null) {
+				if (stationFleet.isInflated()) {
+					stationFleet.deflate();
+				}
 				inflater.setQuality(Misc.getShipQuality(market));
 				if (inflater instanceof DefaultFleetInflater) {
 					DefaultFleetInflater dfi = (DefaultFleetInflater) inflater;
@@ -525,10 +530,15 @@ public class OrbitalStation extends BaseIndustry implements FleetEventListener {
 		
 		PersonAPI commander = null;
 		if (Commodities.ALPHA_CORE.equals(aiCore)) {
-			int level = 20;
-			commander = OfficerManagerEvent.createOfficer(
-					Global.getSector().getFaction(Factions.REMNANTS), level, true, SkillPickPreference.NON_CARRIER);
-			commander.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 3);
+//			commander = OfficerManagerEvent.createOfficer(
+//					Global.getSector().getFaction(Factions.REMNANTS), level, SkillPickPreference.NON_CARRIER);
+//			commander.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 3);
+			
+			AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(Commodities.ALPHA_CORE);
+			commander = plugin.createPerson(Commodities.ALPHA_CORE, Factions.REMNANTS, null);
+			if (stationFleet.getFlagship() != null) {
+				RemnantOfficerGeneratorPlugin.integrateAndAdaptCoreForAIFleet(stationFleet.getFlagship());
+			}
 		} else {
 			//if (stationFleet.getCommander() == null || !stationFleet.getCommander().isDefault()) {
 //			if (stationFleet.getFlagship() == null || stationFleet.getFlagship().getCaptain() == null ||
@@ -684,6 +694,55 @@ public class OrbitalStation extends BaseIndustry implements FleetEventListener {
 				"" + (int)((1f - UPKEEP_MULT) * 100f) + "%", "" + DEMAND_REDUCTION);
 		
 	}
+	
+	@Override
+	public boolean canImprove() {
+		return true;
+	}
+	
+	protected void applyImproveModifiers() {
+		if (isImproved()) {
+			market.getStability().modifyFlat("orbital_station_improve", IMPROVE_STABILITY_BONUS, 
+						getImprovementsDescForModifiers() + " (" + getNameForModifier() + ")");
+		} else {
+			market.getStability().unmodifyFlat("orbital_station_improve");
+		}
+	}
+	
+	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		
+		if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+			info.addPara("Stability increased by %s.", 0f, highlight, "" + (int) IMPROVE_STABILITY_BONUS);
+		} else {
+			info.addPara("Increases stability by %s.", 0f, highlight, "" + (int) IMPROVE_STABILITY_BONUS);
+		}
+
+		info.addSpacer(opad);
+		super.addImproveDesc(info, mode);
+	}
+	
+	
+	protected boolean isMiltiarized() {
+		boolean battlestation = getSpec().hasTag(Industries.TAG_BATTLESTATION);
+		boolean starfortress = getSpec().hasTag(Industries.TAG_STARFORTRESS);
+		return battlestation || starfortress;
+	}
+	
+	@Override
+	public RaidDangerLevel adjustCommodityDangerLevel(String commodityId, RaidDangerLevel level) {
+		if (!isMiltiarized()) return level;
+		return level.next();
+	}
+
+	@Override
+	public RaidDangerLevel adjustItemDangerLevel(String itemId, String data, RaidDangerLevel level) {
+		if (!isMiltiarized()) return level;
+		return level.next();
+	}
+
 }
 
 

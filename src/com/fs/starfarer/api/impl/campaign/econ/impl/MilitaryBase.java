@@ -7,9 +7,9 @@ import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
@@ -17,11 +17,11 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
+import com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.PatrolType;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.fleets.PatrolAssignmentAIV4;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
-import com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.PatrolType;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.OptionalFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteFleetSpawner;
@@ -33,6 +33,7 @@ import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
@@ -43,9 +44,16 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class MilitaryBase extends BaseIndustry implements RouteFleetSpawner, FleetEventListener {
 
+	public static float OFFICER_PROB_MOD_PATROL_HQ = 0.1f;
+	public static float OFFICER_PROB_MOD_MILITARY_BASE = 0.2f;
+	public static float OFFICER_PROB_MOD_HIGH_COMMAND = 0.3f;
+	
+	
 	public static float DEFENSE_BONUS_PATROL = 0.1f;
 	public static float DEFENSE_BONUS_MILITARY = 0.2f;
 	public static float DEFENSE_BONUS_COMMAND = 0.3f;
+	
+	public static int IMPROVE_NUM_PATROLS_BONUS = 1;
 	
 	public void apply() {
 		
@@ -69,9 +77,9 @@ public class MilitaryBase extends BaseIndustry implements RouteFleetSpawner, Fle
 		if (patrol) {
 			extraDemand = 0;
 		} else if (militaryBase) {
-			extraDemand = 1;
+			extraDemand = 2;
 		} else if (command) {
-			extraDemand = 1;
+			extraDemand = 3;
 		}
 		
 		if (patrol) {
@@ -177,6 +185,12 @@ public class MilitaryBase extends BaseIndustry implements RouteFleetSpawner, Fle
 			Misc.setFlagWithReason(memory, MemFlags.MARKET_MILITARY, getModId(), true, -1);
 		}
 		
+		float officerProb = OFFICER_PROB_MOD_PATROL_HQ;
+		if (militaryBase) officerProb = OFFICER_PROB_MOD_MILITARY_BASE;
+		else if (command) officerProb = OFFICER_PROB_MOD_HIGH_COMMAND;
+		market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).modifyFlat(getModId(0), officerProb);
+		
+		
 		if (!isFunctional()) {
 			supply.clear();
 			unapply();
@@ -202,6 +216,8 @@ public class MilitaryBase extends BaseIndustry implements RouteFleetSpawner, Fle
 		market.getStats().getDynamic().getMod(Stats.PATROL_NUM_HEAVY_MOD).unmodifyFlat(getModId());
 		
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId());
+		
+		market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).unmodifyFlat(getModId(0));
 	}
 	
 	protected boolean hasPostDemandSection(boolean hasDemand, IndustryTooltipMode mode) {
@@ -512,9 +528,11 @@ public class MilitaryBase extends BaseIndustry implements RouteFleetSpawner, Fle
 		market.getContainingLocation().addEntity(fleet);
 		fleet.setFacing((float) Math.random() * 360f);
 		// this will get overridden by the patrol assignment AI, depending on route-time elapsed etc
-		fleet.setLocation(market.getPrimaryEntity().getLocation().x, market.getPrimaryEntity().getLocation().x);
+		fleet.setLocation(market.getPrimaryEntity().getLocation().x, market.getPrimaryEntity().getLocation().y);
 		
 		fleet.addScript(new PatrolAssignmentAIV4(fleet, route));
+		
+		fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, true, 0.3f);
 		
 		//market.getContainingLocation().addEntity(fleet);
 		//fleet.setLocation(market.getPrimaryEntity().getLocation().x, market.getPrimaryEntity().getLocation().y);
@@ -651,6 +669,63 @@ public class MilitaryBase extends BaseIndustry implements RouteFleetSpawner, Fle
 				str);
 		
 	}
+	
+	
+	@Override
+	public boolean canImprove() {
+		return true;
+	}
+	
+	protected void applyImproveModifiers() {
+		
+		String key = "mil_base_improve";
+		if (isImproved()) {
+			boolean patrol = getSpec().hasTag(Industries.TAG_PATROL);
+//			boolean militaryBase = getSpec().hasTag(Industries.TAG_MILITARY);
+//			boolean command = getSpec().hasTag(Industries.TAG_COMMAND);
+			
+			if (patrol) {
+				market.getStats().getDynamic().getMod(Stats.PATROL_NUM_MEDIUM_MOD).modifyFlat(key, IMPROVE_NUM_PATROLS_BONUS);
+			} else {
+				market.getStats().getDynamic().getMod(Stats.PATROL_NUM_HEAVY_MOD).modifyFlat(key, IMPROVE_NUM_PATROLS_BONUS);
+			}
+		} else {
+			market.getStats().getDynamic().getMod(Stats.PATROL_NUM_MEDIUM_MOD).unmodifyFlat(key);
+			market.getStats().getDynamic().getMod(Stats.PATROL_NUM_HEAVY_MOD).unmodifyFlat(key);
+		}
+	}
+	
+	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		String str = "" + (int) IMPROVE_NUM_PATROLS_BONUS;
+		
+		boolean patrol = getSpec().hasTag(Industries.TAG_PATROL);
+		String type = "medium patrols";
+		if (!patrol) type = "heavy patrols";
+		
+		if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+			info.addPara("Number of " + type + " launched increased by %s.", 0f, highlight, str);
+		} else {
+			info.addPara("Increases the number of " + type + " launched by %s.", 0f, highlight, str);
+		}
+
+		info.addSpacer(opad);
+		super.addImproveDesc(info, mode);
+	}
+
+	
+	@Override
+	public RaidDangerLevel adjustCommodityDangerLevel(String commodityId, RaidDangerLevel level) {
+		return level.next();
+	}
+
+	@Override
+	public RaidDangerLevel adjustItemDangerLevel(String itemId, String data, RaidDangerLevel level) {
+		return level.next();
+	}
+
 	
 }
 

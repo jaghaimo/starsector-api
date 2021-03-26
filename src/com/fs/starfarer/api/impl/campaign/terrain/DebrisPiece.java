@@ -209,6 +209,10 @@ public class DebrisPiece {
 		
 		//Color color = Global.getSector().getPlayerFaction().getBaseUIColor();
 		Color color = Global.getSector().getFaction(Factions.NEUTRAL).getBaseUIColor();
+		if (field.isScavenged()) {
+			//color = Misc.getNegativeHighlightColor();
+			//color = Global.getSector().getFaction(Factions.PIRATES).getDarkUIColor();
+		}
 		
 		float size = width + 5f;
 		float half = size * 0.5f;

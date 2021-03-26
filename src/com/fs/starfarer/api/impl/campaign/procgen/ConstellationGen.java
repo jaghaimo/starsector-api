@@ -235,7 +235,7 @@ public class ConstellationGen {
 		}
 		
 		List<SpringNode> copy = new ArrayList<SpringNode>(springs.nodes);
-		SpringNode curr = copy.get((int) (copy.size() * random.nextFloat()));
+		SpringNode curr = copy.get((int) (copy.size() * random.nextDouble()));
 		copy.remove(curr);
 		
 		float pullK = 1000f;
@@ -248,7 +248,7 @@ public class ConstellationGen {
 			for (int i = 0; i < numBranches; i++) {
 				if (copy.isEmpty()) break;
 				
-				SpringNode other = copy.get((int) (copy.size() * random.nextFloat()));
+				SpringNode other = copy.get((int) (copy.size() * random.nextDouble()));
 				copy.remove(other);
 				
 				//float d = (curr.radius + other.radius) + 250f + random.nextFloat() * 1000f;

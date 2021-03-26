@@ -1,6 +1,5 @@
 package com.fs.starfarer.api.campaign.econ;
 
-import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 
 
 public interface ImmigrationPlugin {
@@ -14,15 +13,15 @@ public interface ImmigrationPlugin {
 
 
 	float getWeightForMarketSize(float size);
-	PopulationComposition computeIncoming();
+	//PopulationComposition computeIncoming();
 
 	//float getIncentiveCostDistMult();
 
-	int getCreditsForOnePercentPopulationIncrease();
+	//int getCreditsForOnePercentPopulationIncrease();
 	float getFractionForPopulationPoints(float points);
 	float getPopulationPointsForFraction(float fraction);
 
 
-	float getIncentivePercentPerMonth();
+	//float getIncentivePercentPerMonth();
 
 }

@@ -62,7 +62,7 @@ public class BaseInstallableIndustryItemPlugin implements InstallableIndustryIte
 	}
 	
 	public float getMenuItemTooltipWidth() {
-		return 400;
+		return 450;
 	}
 
 	public String getNoItemsAvailableTextRemote() {
@@ -72,6 +72,13 @@ public class BaseInstallableIndustryItemPlugin implements InstallableIndustryIte
 	public String getUninstallButtonText() {
 		return null;
 	}
+	
+	public boolean isMenuItemEnabled() {
+		return true;
+	}
 
+	public boolean canBeInstalled(SpecialItemData data) {
+		return true;
+	}
 
 }

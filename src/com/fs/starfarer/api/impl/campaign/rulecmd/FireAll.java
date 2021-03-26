@@ -80,6 +80,9 @@ public class FireAll extends BaseCommandPlugin {
 				if (option.id.startsWith("(dev)") && !Global.getSettings().isDevMode()) continue;
 				options.add(new OptionAdder(option));
 			}
+			
+			// this actually doesn't work I think? since rule gets applied regardless
+			// and so the expression gets executed twice
 			for (ExpressionAPI e : rule.getScriptCopy()) {
 				if (e.doesCommandAddOptions()) {
 					options.add(new OptionAdder(e));

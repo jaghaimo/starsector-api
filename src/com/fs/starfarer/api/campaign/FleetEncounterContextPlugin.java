@@ -297,7 +297,6 @@ public interface FleetEncounterContextPlugin {
 	float computePlayerContribFraction();
 	//boolean isLowRepImpact();
 	
-	
 	//void applyPostEngagementOption(EngagementResultAPI result); 
 	
 }

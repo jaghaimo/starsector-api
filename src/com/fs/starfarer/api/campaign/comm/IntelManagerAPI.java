@@ -57,6 +57,7 @@ public interface IntelManagerAPI {
 	
 	boolean isPlayerInRangeOfCommRelay();
 	IntelInfoPlugin getFirstIntel(Class c);
+	boolean hasIntelOfClass(Class<?> c);
 
 
 

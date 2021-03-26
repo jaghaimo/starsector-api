@@ -57,17 +57,26 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 		public RepActionEnvelope(RepActions action) {
 			this.action = action;
 		}
-		public RepActionEnvelope(RepActions action, Object param, CommMessageAPI message, boolean addMessageOnNoChange) {
-			this.action = action;
-			this.param = param;
-			this.message = message;
-			this.addMessageOnNoChange = addMessageOnNoChange;
-		}
+//		public RepActionEnvelope(RepActions action, Object param, CommMessageAPI message, boolean addMessageOnNoChange) {
+//			this.action = action;
+//			this.param = param;
+//			this.message = message;
+//			this.addMessageOnNoChange = addMessageOnNoChange;
+//		}
 		public RepActionEnvelope(RepActions action, Object param, CommMessageAPI message, TextPanelAPI textPanel, boolean addMessageOnNoChange) {
 			this(action, param, message, textPanel, addMessageOnNoChange, true);
 		}
+		public RepActionEnvelope(RepActions action, Object param, TextPanelAPI textPanel, boolean addMessageOnNoChange) {
+			this(action, param, null, textPanel, addMessageOnNoChange, true);
+		}
 		public RepActionEnvelope(RepActions action, Object param, CommMessageAPI message, TextPanelAPI textPanel, boolean addMessageOnNoChange, boolean withMessage) {
 			this(action, param, message, textPanel, addMessageOnNoChange, withMessage, null);
+		}
+		public RepActionEnvelope(RepActions action, Object param, TextPanelAPI textPanel, boolean addMessageOnNoChange, boolean withMessage) {
+			this(action, param, null, textPanel, addMessageOnNoChange, withMessage, null);
+		}
+		public RepActionEnvelope(RepActions action, Object param, TextPanelAPI textPanel, boolean addMessageOnNoChange, boolean withMessage, String reason) {
+			this(action, param, null, textPanel, addMessageOnNoChange, withMessage, reason);
 		}
 		public RepActionEnvelope(RepActions action, Object param, CommMessageAPI message, TextPanelAPI textPanel, boolean addMessageOnNoChange, boolean withMessage, String reason) {
 			this.action = action;
@@ -203,6 +212,10 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 																	PersonAPI person,
 																	RelationshipAPI delegate) {
 		if (!(actionObject instanceof RepActionEnvelope) && !(actionObject instanceof RepActions)) {
+			return new ReputationAdjustmentResult(0);
+		}
+		
+		if (Factions.NEUTRAL.equals(factionId)) {
 			return new ReputationAdjustmentResult(0);
 		}
 		
@@ -592,7 +605,7 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 //		String standing = player.getRelationshipLevel(faction).getDisplayName();
 //		standing = standing.toLowerCase();
 		RepLevel level = player.getRelationshipLevel(faction.getId());
-		int repInt = (int) Math.ceil((Math.round(player.getRelationship(faction.getId()) * 100f)));
+		int repInt = RepLevel.getRepInt(player.getRelationship(faction.getId()));
 		
 		Color textColor = Global.getSettings().getColor("standardTextColor");
 		Color factionColor = faction.getBaseUIColor();
@@ -607,7 +620,7 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 		if (person != null) {
 			targetName = person.getName().getFullName();
 			relColor = person.getRelToPlayer().getRelColor();
-			repInt = (int) Math.ceil((Math.round(person.getRelToPlayer().getRel() * 100f)));
+			repInt = RepLevel.getRepInt(person.getRelToPlayer().getRel());
 			level = person.getRelToPlayer().getLevel();
 		}
 		
@@ -697,7 +710,7 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 			TooltipMakerAPI info, Color tc, float pad) {
 		FactionAPI player = Global.getSector().getFaction(Factions.PLAYER);
 		RepLevel level = player.getRelationshipLevel(faction.getId());
-		int repInt = (int) Math.ceil((Math.round(player.getRelationship(faction.getId()) * 100f)));
+		int repInt = RepLevel.getRepInt(player.getRelationship(faction.getId()));
 
 		Color factionColor = faction.getBaseUIColor();
 		Color relColor = faction.getRelColor(player.getId());
@@ -711,7 +724,7 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 		if (person != null) {
 			targetName = person.getName().getFullName();
 			relColor = person.getRelToPlayer().getRelColor();
-			repInt = (int) Math.ceil((Math.round(person.getRelToPlayer().getRel() * 100f)));
+			repInt = RepLevel.getRepInt(person.getRelToPlayer().getRel());
 			level = person.getRelToPlayer().getLevel();
 		}
 
@@ -750,12 +763,12 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 		FactionAPI player = Global.getSector().getFaction(Factions.PLAYER);
 		RepLevel level = req;
 
-		float rel = level.getMin();
+		float rel = level.getMin() + 0.01f;
 		
 		PersonAPI fake = Global.getFactory().createPerson();
 		fake.getRelToPlayer().setRel(rel);
 
-		int repInt = (int) Math.ceil((Math.round(rel * 100f)));
+		int repInt = RepLevel.getRepInt(rel);
 		Color relColor = fake.getRelToPlayer().getRelColor(level);
 		
 		
@@ -808,9 +821,20 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 	
 	
 	public static void addAdjustmentMessage(float delta, FactionAPI faction, PersonAPI person, 
+			TextPanelAPI panel, 
+			TooltipMakerAPI info, Color tc, boolean withCurrent, float pad) {
+		addAdjustmentMessage(delta, faction, person, null, panel, info, tc, withCurrent, pad, null);
+	}
+	public static void addAdjustmentMessage(float delta, FactionAPI faction, PersonAPI person, 
 			CommMessageAPI message, TextPanelAPI panel, 
 			TooltipMakerAPI info, Color tc, boolean withCurrent, float pad) {
 		addAdjustmentMessage(delta, faction, person, message, panel, info, tc, withCurrent, pad, null);
+	}
+	public static void addAdjustmentMessage(float delta, FactionAPI faction, PersonAPI person, 
+			TextPanelAPI panel, 
+			TooltipMakerAPI info, Color tc, boolean withCurrent, float pad,
+			String reason) {
+		addAdjustmentMessage(delta, faction, person, null, panel, info, tc, withCurrent, pad, reason);
 	}
 	public static void addAdjustmentMessage(float delta, FactionAPI faction, PersonAPI person, 
 							CommMessageAPI message, TextPanelAPI panel, 
@@ -829,7 +853,7 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 		int repInt = 0;
 		if (faction != null) {
 			level = player.getRelationshipLevel(faction.getId());
-			repInt = (int) Math.ceil((Math.round(player.getRelationship(faction.getId()) * 100f)));
+			repInt = RepLevel.getRepInt(player.getRelationship(faction.getId()));
 			targetName = faction.getDisplayNameWithArticle();
 			targetNameHighlight = faction.getDisplayName();
 			if (Factions.INDEPENDENT.equals(faction.getId())) {
@@ -842,7 +866,7 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 		if (person != null) {
 			targetName = person.getName().getFullName();
 			relColor = person.getRelToPlayer().getRelColor();
-			repInt = (int) Math.ceil((Math.round(person.getRelToPlayer().getRel() * 100f)));
+			repInt = RepLevel.getRepInt(person.getRelToPlayer().getRel());
 			level = person.getRelToPlayer().getLevel();
 		}
 		
@@ -991,6 +1015,52 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 		}
 	}
 
+	
+	
+	
+//	public static int otherRepInt(float f) {
+//		int repInt = (int) Math.ceil((Math.round(f * 100f)));
+//		return repInt;
+//	}
+//	
+//	public static void main(String[] args) {
+//		float [] tests = new float [] {
+//				0.1f,
+//				0.0951f,
+//				0.105f,
+//				0.090001f,
+//				0.099999999f,
+//				-0.1f,
+//				-0.0951f,
+//				-0.105f,
+//				-0.090001f,
+//				-0.099999999f,
+//		};
+//		
+//		for (float f : tests) {
+//			System.out.println(String.format("In: %s, old: %s, new: %s", "" + f, "" + otherRepInt(f), "" + RepLevel.getRepInt(f)));
+//		}
+//		
+////		for (float f = -1; f <= 1f; f += 0.00001f) {
+////			int before = otherRepInt(f);
+////			int after = getRepInt(f);
+////			if (before != after) {
+////				System.out.println("NOT EQUAL FOR: " + f);
+////			}
+////		}
+//		
+//		for (float f = -1; f <= 1f; f += 0.00001f) {
+//			int i = RepLevel.getRepInt(f);
+//			RepLevel level = RepLevel.getLevelFor(f);
+//			RepLevel fromInt = RepLevel.getLevelFor(i / 100f);
+//			if (level != fromInt) {
+//				System.out.println("FAILED FOR: " + f + ", should be " + level + ", is " + fromInt);
+////				RepLevel.getRepInt(f);
+////				level = RepLevel.getLevelFor(f);
+////				fromInt = RepLevel.getLevelFor(i / 100f);
+//			}
+//		}
+//	}
 }
 
 

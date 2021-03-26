@@ -11,31 +11,32 @@ import org.lwjgl.input.Keyboard;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.BattleAPI.BattleSide;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CoreInteractionListener;
 import com.fs.starfarer.api.campaign.EngagementResultForFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DataForEncounterSide;
+import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DisengageHarryAvailability;
+import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.EngagementOutcome;
+import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.PursueAvailability;
+import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.Status;
 import com.fs.starfarer.api.campaign.FleetMemberPickerListener;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogPlugin;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.RuleBasedDialog;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
-import com.fs.starfarer.api.campaign.BattleAPI.BattleSide;
-import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DataForEncounterSide;
-import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DisengageHarryAvailability;
-import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.EngagementOutcome;
-import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.PursueAvailability;
-import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.Status;
-import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.EncounterOption;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.InitialBoardingResponse;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.PursuitOption;
 import com.fs.starfarer.api.campaign.events.CampaignEventPlugin;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.campaign.rules.RuleAPI;
@@ -50,13 +51,24 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.FleetEncounterContext.BoardingResult;
 import com.fs.starfarer.api.impl.campaign.FleetEncounterContext.EngageBoardableOutcome;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Sounds;
+import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.DumpMemory;
+import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.BaseOptionStoryPointActionDelegate;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.StoryOptionParams;
+import com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription;
+import com.fs.starfarer.api.impl.combat.CRPluginImpl;
 import com.fs.starfarer.api.ui.LabelAPI;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
 
 public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin, RuleBasedDialog {
 
+	public static float EMERGENCY_REPAIRS_MAX_DP = Global.getSettings().getFloat("emergencyRepairsMaxDPValue");
+	
 	public static interface FIDConfigGen {
 		FIDConfig createConfig();
 	}
@@ -69,8 +81,14 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		public boolean showFleetAttitude = true;
 		public boolean showEngageText = true;
 		public boolean alwaysAttackVsAttack = false;
+		public boolean alwaysPursue = false;
 		public boolean dismissOnLeave = true;
+		public boolean withSalvage = true;
 		public boolean lootCredits = true;
+		
+		public boolean showVictoryText = true;
+		
+		//public boolean postLootLeaveHasShortcut = true;
 		
 		public boolean impactsEnemyReputation = true;
 		public boolean impactsAllyReputation = true;
@@ -79,6 +97,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		public boolean pullInEnemies = true;
 		public boolean pullInStations = true;
 		
+		//public String postLootLeaveOptionText = null;
 		public String noSalvageLeaveOptionText = null;
 		public String firstTimeEngageOptionText = null;
 		public String afterFirstTimeEngageOptionText = null;
@@ -121,23 +140,28 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 	public static enum OptionId {
 		INIT,
 		PRINT_ONGOING_BATTLE_INFO,
+		BEGIN_FLEET_ENCOUNTER_2,
 		OPEN_COMM,
 		CUT_COMM,
 		ENGAGE,
+		FORCE_ENGAGE,
 		ATTEMPT_TO_DISENGAGE,
 		DISENGAGE,
+		CLEAN_DISENGAGE,
 		SCUTTLE,
 		PURSUE,
 		AUTORESOLVE_PURSUE,
 		HARRY_PURSUE,
 		LET_THEM_GO,
 		LEAVE,
+		LOOT_THEN_LEAVE,
 		CONTINUE_LEAVE,
 		CONTINUE,
 		GO_TO_MAIN,
 		GO_TO_PRE_BATTLE,
 		RECOVERY_SELECT,
 		RECOVERY_CONTINUE,
+		CONTINUE_FROM_VICTORY_TRIGGERS,
 		CONTINUE_LOOT,
 		CONTINUE_INTO_BATTLE,
 		
@@ -159,6 +183,8 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		INITIATE_BATTLE,
 		JOIN_ONGOING_BATTLE,
 		CONTINUE_ONGOING_BATTLE,
+		
+		EMERGENCY_REPAIRS,
 		
 		DEV_MODE_ESCAPE,
 	}
@@ -188,10 +214,20 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 	protected boolean firstEngagement = true;
 	protected boolean joinedBattle = false;
 	
+	protected boolean forceEngage = false;
+	
+	protected boolean shownTooLargeToRetreatMessage = false;
+	
 	public static boolean inConversation = false;
 	public static boolean directToComms = false;
 	
 	protected FIDConfig config;
+	
+//	public static class FleetMemberPreEncounterData {
+//		public int indexInFleet;
+//		public PersonAPI officer;
+//	}
+	protected List<FleetMemberAPI> membersInOrderPreEncounter = new ArrayList<FleetMemberAPI>();
 	
 	public FleetInteractionDialogPluginImpl() {
 		this(null);
@@ -206,6 +242,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 			for (FleetMemberAPI member : Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy()) {
 				origCaptains.put(member, member.getCaptain());
 			}
+			membersInOrderPreEncounter = new ArrayList<FleetMemberAPI>(Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy());
 		}
 	}
 	
@@ -233,14 +270,25 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		inConversation = false;
 		directToComms = false;
 		
-		conversationDelegate.fireBest("BeginFleetEncounter");
-		if (directToComms) {
-			optionSelected(null, OptionId.OPEN_COMM);
+		boolean cont = conversationDelegate.getMemoryMap().get(MemKeys.LOCAL).getBoolean("$fidpi_addContinue");
+		conversationDelegate.getMemoryMap().get(MemKeys.LOCAL).unset("$fidpi_addContinue");
+		
+		if (cont) {
+			conversationDelegate.fireBest("BeginFleetEncounter2");
 		} else {
-			//skipAttitudeOnInit = true;
-			optionSelected(null, OptionId.INIT);
+			conversationDelegate.fireBest("BeginFleetEncounter");
 		}
-
+		if (conversationDelegate.getMemoryMap().get(MemKeys.LOCAL).getBoolean("$fidpi_addContinue")) {
+			options.clearOptions();
+			options.addOption("Continue", OptionId.BEGIN_FLEET_ENCOUNTER_2);
+		} else {
+			if (directToComms) {
+				optionSelected(null, OptionId.OPEN_COMM);
+			} else {
+				//skipAttitudeOnInit = true;
+				optionSelected(null, OptionId.INIT);
+			}
+		}
 	}
 	
 	public void init(InteractionDialogAPI dialog) {
@@ -324,20 +372,31 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		if (!config.justShowFleets) {
 	//		if (ongoingBattle) {
 			conversationDelegate.getMemoryMap().get(MemKeys.LOCAL).set("$ongoingBattle", ongoingBattle, 0);
-			if (!ongoingBattle) {
-				conversationDelegate.fireBest("BeginFleetEncounter");
+			boolean cont = conversationDelegate.getMemoryMap().get(MemKeys.LOCAL).getBoolean("$fidpi_addContinue");
+			conversationDelegate.getMemoryMap().get(MemKeys.LOCAL).unset("$fidpi_addContinue");
+			if (!ongoingBattle && !config.straightToEngage) {
+				if (cont) {
+					conversationDelegate.fireBest("BeginFleetEncounter2");
+				} else {
+					conversationDelegate.fireBest("BeginFleetEncounter");
+				}
 			}
 	//		} else {
 	//			conversationDelegate.fireBest("OngoingBattleEncounter");
 	//		}
 		
-			if (directToComms) {
-				optionSelected(null, OptionId.OPEN_COMM);
+			if (conversationDelegate.getMemoryMap().get(MemKeys.LOCAL).getBoolean("$fidpi_addContinue")) {
+				options.clearOptions();
+				options.addOption("Continue", OptionId.BEGIN_FLEET_ENCOUNTER_2);
 			} else {
-				optionSelected(null, OptionId.INIT);
+				if (directToComms) {
+					optionSelected(null, OptionId.OPEN_COMM);
+				} else {
+					optionSelected(null, OptionId.INIT);
+				}
 			}
 			
-			if (config.straightToEngage){
+			if (config.straightToEngage) {
 				if (ongoingBattle) {
 					optionSelected(null, OptionId.JOIN_ONGOING_BATTLE);
 				} else {
@@ -626,15 +685,21 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 			showFleetInfo = true;
 			break;
 		case BATTLE_PLAYER_WIN:
-			addText(getString("battleVictory"));
+			if (config.showVictoryText) {
+				addText(getString("battleVictory"));
+			}
 			showFleetInfo = true;
 			break;
 		case BATTLE_PLAYER_WIN_TOTAL:
-			addText(getString("battleTotalVictory"));
+			if (config.showVictoryText) {
+				addText(getString("battleTotalVictory"));
+			}
 			showFleetInfo = true;
 			break;
 		case ESCAPE_ENEMY_LOSS_TOTAL:
-			addText(getString("pursuitTotalVictory"));
+			if (config.showVictoryText) {
+				addText(getString("pursuitTotalVictory"));
+			}
 			showFleetInfo = true;
 			break;
 		case ESCAPE_ENEMY_SUCCESS:
@@ -722,8 +787,8 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		
 		if (isFightingOver()) {
 			if (context.isEngagedInHostilities()) {
-				context.getDataFor(playerFleet).setDisengaged(!context.didPlayerWinEncounter());
-				context.getDataFor(otherFleet).setDisengaged(context.didPlayerWinEncounter());
+				context.getDataFor(playerFleet).setDisengaged(!context.didPlayerWinMostRecentBattleOfEncounter());
+				context.getDataFor(otherFleet).setDisengaged(context.didPlayerWinMostRecentBattleOfEncounter());
 			}
 		}
 	}
@@ -733,10 +798,13 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		
 		if (!ongoingBattle) {
 			if (!context.wasLastEngagementEscape()) {
-				if (context.didPlayerWinLastEngagement()) {
-					addText(getString("cleanDisengageOpportunity"), getString("highlightCleanDisengage"), Misc.getPositiveHighlightColor());
-				} else if (didEnoughToDisengage(playerFleet)) {
-					addText(getString("playerDisruptedEnemy"), getString("highlghtDisruptedEnemy"), Misc.getPositiveHighlightColor());
+				boolean otherWantsToRun = otherFleetWantsToDisengage() && otherCanDisengage();
+				if (!otherWantsToRun) {
+					if (context.didPlayerWinLastEngagement()) {
+						addText(getString("cleanDisengageOpportunity"), getString("highlightCleanDisengage"), Misc.getPositiveHighlightColor());
+					} else if (didEnoughToDisengage(playerFleet)) {
+						addText(getString("playerDisruptedEnemy"), getString("highlghtDisruptedEnemy"), Misc.getPositiveHighlightColor());
+					}
 				}
 			}
 		}
@@ -808,7 +876,8 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 //		}
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(option);
 		}
 		
 		switch (option) {
@@ -897,7 +966,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 						}
 					}
 				}
-				if (!shownKnownStatus && config.showTransponderStatus) {
+				if (!shownKnownStatus && config.showTransponderStatus && !otherFleet.getFaction().isNeutralFaction()) {
 					shownKnownStatus = true;
 					String side = "";
 					if (context.getBattle() != null && context.getBattle().getNonPlayerSide().size() > 1) {
@@ -914,7 +983,11 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 							if (actualPlayer.isTransponderOn()) {
 								addText(getString("initialKnows" + side));
 							} else {
-								addText(getString("initialKnowsTOff" + side));
+								if (actualPlayer.hasShipsWithUniqueSig()) {
+									addText(getString("initialKnowsUnique" + side));
+								} else {
+									addText(getString("initialKnowsTOff" + side));
+								}
 							}
 						}
 					}
@@ -1015,9 +1088,14 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		case CONTINUE_ONGOING_BATTLE:
 			updatePreCombat();
 			break;
+		case FORCE_ENGAGE:
+			if (config.showEngageText) {
+				addText(getString("engageForce"));
+			}
 		case ENGAGE:
 			//visual.showImagePortion("illustrations", "hound_hangar", 350, 75, 800, 800, 0, 0, 400, 400);
-			if (otherFleetWantsToDisengage() && otherCanDisengage()) {
+			boolean forceEngage = option == OptionId.FORCE_ENGAGE;
+			if (otherFleetWantsToDisengage() && otherCanDisengage() && !forceEngage) {
 				playerGoal = FleetGoal.ATTACK;
 				otherGoal = FleetGoal.ESCAPE;
 				if (config.showEngageText) {
@@ -1121,6 +1199,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 			visual.fadeVisualOut();
 			dialog.startBattle(bcc);
 			break;
+		case CLEAN_DISENGAGE:
 		case DISENGAGE:
 //			CampaignFleetAIAPI ai = otherFleet.getAI();
 //			PursuitOption po = otherFleet.getAI().pickPursuitOption(context, playerFleet);
@@ -1204,6 +1283,9 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 //			dialog.showTextPanel();
 			//dialog.hideTextPanel();
 			//dialog.setXOffset(-200);
+			break;
+		case BEGIN_FLEET_ENCOUNTER_2:
+			reinitPostContinue();
 			break;
 		case OPEN_COMM:
 			CampaignFleetAPI actualOther = (CampaignFleetAPI) (dialog.getInteractionTarget());
@@ -1394,6 +1476,10 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 			if (b.isPlayerInvolved()) {
 				cleanUpBattle();
 			}
+		case LOOT_THEN_LEAVE:
+			//goToEncounterEndPath();
+			winningPath();
+			break;
 		case LEAVE:
 		case CONTINUE_LEAVE:
 			if (option != OptionId.CONTINUE_LEAVE) {
@@ -1476,14 +1562,23 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 			goToEncounterEndPath();
 			break;
 		case RECOVERY_SELECT:
-			if (!recoverableShips.isEmpty()) {
-				dialog.showFleetMemberRecoveryDialog("Select ships to recover", recoverableShips,
+			if (!recoverableShips.isEmpty() || !storyRecoverableShips.isEmpty()) {
+				dialog.showFleetMemberRecoveryDialog("Select ships to recover", 
+						recoverableShips, storyRecoverableShips,
 				new FleetMemberPickerListener() {
 					public void pickedFleetMembers(List<FleetMemberAPI> members) {
 						if (members != null && !members.isEmpty()) {
 							recoveredShips.clear();
 							recoveredShips.addAll(members);
 							FleetEncounterContext.recoverShips(members, context, playerFleet, otherFleet);
+							
+							ListenerUtil.reportShipsRecovered(members, dialog);
+							
+							CampaignFleetAPI player = Global.getSector().getPlayerFleet();
+							restoreOrigCaptains();
+							player.getFleetData().sortToMatchOrder(membersInOrderPreEncounter);
+							
+							
 							showFleetInfo();
 							winningPath();
 						}
@@ -1493,9 +1588,13 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 				});
 			}
 			break;
+		case CONTINUE_FROM_VICTORY_TRIGGERS:
+			winningPath();
+			break;
 		case CONTINUE_LOOT:
 			visual.setVisualFade(0, 0);
 			dialog.hideTextPanel();
+			dialog.hideVisualPanel();
 			
 			Global.getSector().reportEncounterLootGenerated(context, context.getLoot());
 			
@@ -1515,8 +1614,10 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 					if (config.dismissOnLeave) {
 						dialog.dismiss();
 						dialog.hideTextPanel();
+						dialog.hideVisualPanel();
 					} else {
 						dialog.showTextPanel();
+						dialog.showVisualPanel();
 						//options.clearOptions();
 						dialog.setOptionOnEscape("", null);
 						dialog.setOptionOnConfirm("", null);
@@ -1543,8 +1644,9 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		case SELECT_FLAGSHIP:
 			members = new ArrayList<FleetMemberAPI>();
 			for (FleetMemberAPI member : playerFleet.getFleetData().getMembersListCopy()) {
-				if (member.isFighterWing()) continue;
-				if (member.isAlly()) continue;
+//				if (member.isFighterWing()) continue;
+//				if (member.isAlly()) continue;
+				if (!isValidTransferCommandTarget(member)) continue;
 				members.add(member);
 			}
 			if (!members.isEmpty()) {
@@ -1562,15 +1664,17 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 //									}
 //								}
 //							}
-							restoreOrigCaptains();
-							
-							selectedFlagship = members.get(0);
-							PersonAPI captain = selectedFlagship.getCaptain();
-							Global.getSector().getPlayerFleet().getFleetData().setFlagship(selectedFlagship);
-							if (origFlagship != null && captain != null && !captain.isPlayer()) {
-								origFlagship.setCaptain(captain);
+							if (!members.get(0).isFlagship()) {
+								restoreOrigCaptains();
+								
+								selectedFlagship = members.get(0);
+								PersonAPI captain = selectedFlagship.getCaptain();
+								Global.getSector().getPlayerFleet().getFleetData().setFlagship(selectedFlagship);
+								if (origFlagship != null && captain != null && !captain.isPlayer()) {
+									origFlagship.setCaptain(captain);
+								}
+								addText(getString("selectedFlagship"));
 							}
-							addText(getString("selectedFlagship"));
 						}
 					}
 					public void cancelledFleetMemberPicking() {
@@ -1667,7 +1771,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		BattleSide playerSide = b.getPlayerSide() == b.getSideOne() ? BattleSide.ONE : BattleSide.TWO;
 		BattleSide otherSide = b.getPlayerSide() == b.getSideOne() ? BattleSide.TWO : BattleSide.ONE;
 		
-		BattleSide winner = context.didPlayerWinEncounter() ? playerSide : otherSide;
+		BattleSide winner = context.didPlayerWinMostRecentBattleOfEncounter() ? playerSide : otherSide;
 		if (!context.isEngagedInHostilities() && !context.isOtherFleetHarriedPlayer()) winner = BattleSide.NO_JOIN;
 		
 		if (!ongoingBattle) {
@@ -1717,7 +1821,14 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 	protected boolean shownKnownStatus = false;
 	
 	protected void goToEncounterEndPath() {
-		if (context.didPlayerWinEncounter() ||
+//		boolean otherWantsToRun = otherFleetWantsToDisengage() && otherCanDisengage();
+//		if (context.didPlayerWinEncounter() ||
+//				(config.straightToEngage && 
+//						context.getLastEngagementOutcome() == EngagementOutcome.BATTLE_PLAYER_WIN) ||
+//				(otherWantsToRun && 
+//						context.getLastEngagementOutcome() == EngagementOutcome.BATTLE_PLAYER_WIN)) {
+//			winningPath();
+		if (context.didPlayerWinMostRecentBattleOfEncounter() ||
 				(config.straightToEngage && 
 						context.getLastEngagementOutcome() == EngagementOutcome.BATTLE_PLAYER_WIN)) {
 			winningPath();
@@ -1846,11 +1957,72 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 	
 	protected boolean recoveredCrew = false;
 	protected boolean lootedCredits = false;
+	protected boolean firedVictoryTriggers = false;
 	protected String creditsLooted = null;
 	protected void winningPath() {
 		options.clearOptions();
 		DataForEncounterSide playerData = context.getDataFor(playerFleet);
 		context.getDataFor(otherFleet).setDisengaged(true);
+		
+		if (!firedVictoryTriggers) {
+			
+			SectorEntityToken prev = dialog.getInteractionTarget();
+			RuleBasedInteractionDialogPluginImpl plugin = new RuleBasedInteractionDialogPluginImpl();
+			plugin.setEmbeddedMode(true);
+			//plugin.init(dialog);
+			dialog.setPlugin(plugin);
+			BattleAPI battle = context.getBattle();
+			boolean firedAnyTriggers = false;
+			
+			for (CampaignFleetAPI other : battle.getNonPlayerSide()) {
+				dialog.setInteractionTarget(other);
+				plugin.init(dialog);
+				
+				MemoryAPI mem = other.getMemoryWithoutUpdate();
+				List<FleetMemberAPI> losses = Misc.getSnapshotMembersLost(other);
+				List<FleetMemberAPI> remaining = other.getFleetData().getMembersListCopy();
+				
+				int fpTotal = 0;
+				int fpLost = 0;
+				int fpRemaining = 0;
+				for (FleetMemberAPI curr : losses) {
+					fpLost += curr.getFleetPointCost();
+					fpTotal += curr.getFleetPointCost();
+				}
+				for (FleetMemberAPI curr : remaining) {
+					fpRemaining += curr.getFleetPointCost();
+					fpTotal += curr.getFleetPointCost();
+				}
+				
+				mem.set("$someShipsDestroyed", !losses.isEmpty(), 0);
+				mem.set("$fpLost", fpLost, 0);
+				mem.set("$fpRemaining", fpRemaining, 0);
+				mem.set("$fpLostFraction", (float) fpLost / Math.max(1, fpTotal), 0);
+				mem.set("$battle", battle, 0);
+				
+				List<String> triggers = Misc.getDefeatTriggers(other, false);
+				if (triggers != null) {
+					//DebugFlags.PRINT_RULES_DEBUG_INFO = true;
+					for (String trigger : new ArrayList<String>(triggers)) {
+						boolean fired = FireBest.fire(null, dialog, plugin.getMemoryMap(), trigger);
+						if (fired) {
+							triggers.remove(trigger);
+							firedAnyTriggers = true;
+						}
+					}
+				}
+				Misc.clearDefeatTriggersIfNeeded(other);
+			}
+			
+			dialog.setInteractionTarget(prev);
+			dialog.setPlugin(this);
+			firedVictoryTriggers = true;
+			
+			if (firedAnyTriggers) {
+				options.addOption("Continue", OptionId.CONTINUE_FROM_VICTORY_TRIGGERS, null);
+				return;
+			}
+		}
 		
 		if (!recoveredCrew) {
 			recoveredCrew = true;
@@ -1888,14 +2060,16 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		if (!didRecoveryCheck) {
 			didRecoveryCheck = true;
 			recoverableShips = context.getRecoverableShips(context.getBattle(), playerFleet, otherFleet);
+			storyRecoverableShips = context.getStoryRecoverableShips();
 			
-			if (recoverableShips != null && !recoverableShips.isEmpty()) {
+			if (recoverableShips == null) recoverableShips = new ArrayList<FleetMemberAPI>();
+			if (storyRecoverableShips == null) storyRecoverableShips = new ArrayList<FleetMemberAPI>();
+			
+			if (!recoverableShips.isEmpty() || !storyRecoverableShips.isEmpty()) {
 				int crew = actualPlayer.getCargo().getCrew();
 				int needed = (int)actualPlayer.getFleetData().getMinCrew();
 				
-				int extra = crew - needed;
-				
-				int num = recoverableShips.size();
+				int num = recoverableShips.size() + storyRecoverableShips.size();
 				String numString = "several ships disabled or destroyed";
 				if (num == 1) numString = "a ship disabled";
 				String pre = "The salvage chief reports that " + numString + " during the battle " +
@@ -1911,7 +2085,31 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 //							"You have no extra crew available for any recovered vessels, beyond what's " +
 //							"already required to operate your current ships.");
 //				}
-				options.addOption("Consider ship recovery", OptionId.RECOVERY_SELECT, null);
+				
+				boolean playerShipsRecoverable = false;
+				for (FleetMemberAPI member : recoverableShips) {
+					if (member.getOwner() == 0 && !member.isAlly()) {
+						playerShipsRecoverable = true;
+						break;
+					}
+				}
+				for (FleetMemberAPI member : storyRecoverableShips) {
+					if (member.getOwner() == 0 && !member.isAlly()) {
+						playerShipsRecoverable = true;
+						break;
+					}
+				}
+				
+				if (playerShipsRecoverable) {
+					textPanel.setFontSmallInsignia();
+					textPanel.addParagraph(	"Disabled ships from your fleet are available for recovery", Misc.getHighlightColor());
+					textPanel.setFontInsignia();
+					options.addOption("Consider ship recovery", OptionId.RECOVERY_SELECT, Misc.getHighlightColor(),
+							"Disabled ships from your fleet are available for recovery.");
+				} else {
+					options.addOption("Consider ship recovery", OptionId.RECOVERY_SELECT, null);
+				}
+				
 				options.addOption("Continue", OptionId.RECOVERY_CONTINUE, null);
 				
 				return;
@@ -1922,6 +2120,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		
 		context.adjustPlayerReputation(dialog, getString("friendlyFireRepLoss"),
 									   config.impactsAllyReputation, config.impactsEnemyReputation);
+		
 		
 //		"noSalvageReport":"There's no salvage to be had.",
 //		"noSalvageReportPlayerDidNothing":"Your $fleetOrShip does not participate in salvage operations due to its limited contributions throughout the encounter.",
@@ -1935,7 +2134,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 			startedWithAllies = context.getBattle().getPlayerSideSnapshot().size() > 1;
 		}
 		
-		if (!lootedCredits) {
+		if (!lootedCredits && config.withSalvage) {
 			if (config.salvageRandom != null) {
 				context.setSalvageRandom(config.salvageRandom);
 			}
@@ -1969,6 +2168,9 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 				addText(getString("creditsLootedReport"));
 				textPanel.highlightLastInLastPara(creditsLooted, HIGHLIGHT_COLOR);
 				Global.getSector().getPlayerFleet().getCargo().getCredits().add(credits);
+				
+//				PromoteOfficerIntel intel = new PromoteOfficerIntel(textPanel);
+//				Global.getSector().getIntelManager().addIntel(intel, false, textPanel);
 			}
 		}
 		
@@ -2073,15 +2275,37 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		options.addOption("Cut the comm link", OptionId.CUT_COMM, null);
 	}
 	
+	protected boolean isValidTransferCommandTarget(FleetMemberAPI member) {
+		if (member.isFighterWing() || member.isAlly()) return false;
+		if (Misc.isAutomated(member)) return false;
+		if (Misc.isUnremovable(member.getCaptain())) return false;
+		return true;
+	}
+	
 	protected void updatePreCombat() {
+
+		if (!context.isComputedDifficulty()) {
+			context.computeBattleDifficulty();
+		}
+		float diff = context.getDifficulty();
+		if (diff >= 1f) {
+			String percent = "+" + (int) Math.round((diff - 1f) * 100f) + "%";
+			textPanel.setFontSmallInsignia();
+			textPanel.addPara("Additional XP due to overall battle difficulty: %s",
+					Misc.getGrayColor(), Misc.getHighlightColor(), percent);
+			textPanel.setFontInsignia();
+		}
+		
+		
 		options.clearOptions();
 		
 		//playerFleet.updateCounts();
 		//int nonFighters = playerFleet.getFleetData().getMembersListCopy().size() - playerFleet.getNumFighters();
 		boolean canTransfer = false;
 		for (FleetMemberAPI member : playerFleet.getFleetData().getMembersListCopy()) {
-			if (member.isFighterWing() || member.isAlly()) continue;
+//			if (member.isFighterWing() || member.isAlly()) continue;
 			if (member.isFlagship()) continue;
+			if (!isValidTransferCommandTarget(member)) continue;
 			canTransfer = true;
 			break;
 		}
@@ -2223,8 +2447,11 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		} else {
 			if (config.showCommLinkOption) {
 				if (otherFleet.getMemoryWithoutUpdate().is("$hailing", true)) {
-					options.addOption("Accept the comm request", OptionId.OPEN_COMM, Misc.getStoryOptionColor(), null);
+					options.addOption("Accept the comm request", OptionId.OPEN_COMM, Misc.getHighlightedOptionColor(), null);
 					otherFleet.getMemoryWithoutUpdate().unset("$hailing");
+				} else if (otherFleet.getMemoryWithoutUpdate().is("$highlightComms", true)) {
+					options.addOption("Open a comm link", OptionId.OPEN_COMM, Misc.getHighlightedOptionColor(), null);
+					otherFleet.getMemoryWithoutUpdate().unset("$highlightComms");
 				} else {
 					options.addOption("Open a comm link", OptionId.OPEN_COMM, null);
 				}
@@ -2245,6 +2472,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 	protected boolean allyEngagementChoiceNoBattle = false;
 	protected boolean harryEndedBattle = false;
 	private List<FleetMemberAPI> recoverableShips;
+	private List<FleetMemberAPI> storyRecoverableShips;
 	private List<FleetMemberAPI> recoveredShips = new ArrayList<FleetMemberAPI>();
 	protected void updateEngagementChoice(boolean withText) {
 		allyEngagementChoiceNoBattle = false;
@@ -2273,7 +2501,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		boolean alliedHolding = alliedFleetHoldingVsStrongerEnemy();
 		boolean otherWantsToFight = otherFleetWantsToFight();
 		boolean otherWantsToRun = otherFleetWantsToDisengage() && otherCanDisengage();
-		otherWantsToRun = otherFleetWantsToDisengage() && otherCanDisengage();
+		//otherWantsToRun = otherFleetWantsToDisengage() && otherCanDisengage();
 		boolean otherHolding = otherFleetHoldingVsStrongerEnemy();
 		
 		//boolean otherWantsToRun = otherFleetWantsToDisengage() && otherCanDisengage();
@@ -2375,6 +2603,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 						po = PursuitOption.HARRY;
 					}
 					//po = PursuitOption.LET_THEM_GO;
+					//po = PursuitOption.HARRY;
 					switch (po) {
 					case PURSUE:
 						if (withText) addText(getString("ongoingBattlePursue"));
@@ -2416,8 +2645,13 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 				if (context.isEngagedInHostilities() && context.isBattleOver()) {
 					goToEncounterEndPath();
 				} else {
-					options.addOption("Leave", OptionId.LEAVE, null);
-					options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
+					if (context.isEngagedInHostilities()) {
+						options.addOption("Perform a salvage operation, then leave", OptionId.LOOT_THEN_LEAVE, null);
+						options.setShortcut(OptionId.LOOT_THEN_LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
+					} else {
+						options.addOption("Leave", OptionId.LEAVE, null);
+						options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
+					}
 				}
 			} else {
 				CampaignFleetAIAPI ai = otherFleet.getAI();
@@ -2427,10 +2661,29 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 				}
 				
 				options.addOption("Pursue them", OptionId.PURSUE, getString(pursueTooltip));
+				
+				if (playerHasReadyShips) {
+					options.addOption("Maneuver to force a pitched battle", OptionId.FORCE_ENGAGE, "Outmaneuver the opposing fleet, forcing them to fight you head on.");
+					boolean knows = context.getBattle() != null && context.getBattle().getNonPlayerSide() != null &&
+									context.getBattle().knowsWhoPlayerIs(context.getBattle().getNonPlayerSide());
+					boolean lowImpact = context.isLowRepImpact() || context.isNoRepImpact();
+					FactionAPI nonHostile = getNonHostileOtherFaction();
+					//if (!playerFleet.getFaction().isHostileTo(otherFleet.getFaction()) && knows && !context.isEngagedInHostilities()) {
+					if (nonHostile != null && knows && !lowImpact && !context.isEngagedInHostilities() &&
+							config.showWarningDialogWhenNotHostile) {
+						options.addOptionConfirmation(OptionId.FORCE_ENGAGE, "The " + nonHostile.getDisplayNameLong() + " " + nonHostile.getDisplayNameIsOrAre() + " not currently hostile, and you have been positively identified. Are you sure you want to attack one of their fleets?", "Yes", "Never mind");
+					}
+				} else {
+					options.addOption("Maneuver to force a pitched battle", OptionId.ENGAGE, getString("tooltipNoReadyShips"));
+					options.setEnabled(OptionId.FORCE_ENGAGE, false);
+				}
+				SetStoryOption.set(dialog, 1, OptionId.FORCE_ENGAGE, "forceBattle", Sounds.STORY_POINT_SPEND_COMBAT,
+						"Maneuvered to force pitched battle with " + otherFleet.getNameWithFactionKeepCase());
+				
 				options.addOption("Harry their retreat", OptionId.HARRY_PURSUE, getString(harassTooltip));
 				boolean knows = context.getBattle() != null && context.getBattle().getNonPlayerSide() != null &&
 								context.getBattle().knowsWhoPlayerIs(context.getBattle().getNonPlayerSide());
-				boolean lowImpact = context.isLowRepImpact();
+				boolean lowImpact = context.isLowRepImpact() || context.isNoRepImpact();
 				FactionAPI nonHostile = getNonHostileOtherFaction();
 				//if (!playerFleet.getFaction().isHostileTo(otherFleet.getFaction()) && knows && !context.isEngagedInHostilities()) {
 				if (nonHostile != null && knows && !lowImpact && !context.isEngagedInHostilities() &&
@@ -2504,14 +2757,13 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 					options.addOption(engageText, OptionId.ENGAGE, getString("tooltipEngage"));
 					boolean knows = context.getBattle() != null && context.getBattle().getNonPlayerSide() != null &&
 									context.getBattle().knowsWhoPlayerIs(context.getBattle().getNonPlayerSide());
-					boolean lowImpact = context.isLowRepImpact();
+					boolean lowImpact = context.isLowRepImpact() || context.isNoRepImpact();
 					FactionAPI nonHostile = getNonHostileOtherFaction();
 					//if (!playerFleet.getFaction().isHostileTo(otherFleet.getFaction()) && knows && !context.isEngagedInHostilities()) {
 					if (nonHostile != null && knows && !lowImpact && !context.isEngagedInHostilities() &&
 							config.showWarningDialogWhenNotHostile) {
 						options.addOptionConfirmation(OptionId.ENGAGE, "The " + nonHostile.getDisplayNameLong() + " " + nonHostile.getDisplayNameIsOrAre() + " not currently hostile, and you have been positively identified. Are you sure you want to attack one of their fleets?", "Yes", "Never mind");
 					}
-					
 				} else {
 					options.addOption(engageText, OptionId.ENGAGE, getString("tooltipNoReadyShips"));
 					options.setEnabled(OptionId.ENGAGE, false);
@@ -2534,10 +2786,13 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 //							options.addOption("Go back", OptionId.GO_TO_MAIN, null);
 //							options.setShortcut(OptionId.GO_TO_MAIN, Keyboard.KEY_ESCAPE, false, false, false, true);
 						} else {
+							boolean addSPDisengage = true;
 							if (canDisengage() || !playerHasReadyShips) {
 								options.addOption("Attempt to disengage", OptionId.ATTEMPT_TO_DISENGAGE, getString("tootipAttemptToDisengage"));
+								
+								addSPDisengage = true;
+								
 							} else {
-
 								boolean hasStation = false;
 								boolean allStation = true;
 								for (CampaignFleetAPI curr : context.getBattle().getSideFor(otherFleet)) {
@@ -2551,13 +2806,26 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 									} else {
 										options.addOption("Disengage", OptionId.DISENGAGE, getString("tooltipHarrassableDisengage"));
 									}
+									addSPDisengage = false;
 								} else {
-									if (withText) {
-										//addText(getString("playerTooLargeToDisengage"));
-										addText(getString("playerTooLargeToDisengage"), getString("highlightTooLarge"), Misc.getNegativeHighlightColor());
-										addText(getString("playerTooLargeCanFightToDisengage"), getString("highlightCanFight"), Misc.getHighlightColor());
+									if (withText && !shownTooLargeToRetreatMessage) {
+										shownTooLargeToRetreatMessage = true;
+										//addText(getString("playerTooLargeToDisengage"), getString("highlightTooLarge"), Misc.getNegativeHighlightColor());
+										//addText(getString("playerTooLargeCanFightToDisengage"), getString("highlightCanFight"), Misc.getHighlightColor());
+										LabelAPI label = textPanel.addParagraph(getString("playerTooLargeToDisengage"));
+										label.setHighlight(getString("highlightTooLarge"), getString("highlightDisengage"));
+										label.setHighlightColors(Misc.getNegativeHighlightColor(), Misc.getHighlightColor());
 									}
 								}
+							}
+							if (addSPDisengage) {
+								//options.addOption("Execute a series of special maneuvers, allowing you to disengage cleanly", OptionId.DISENGAGE);
+								options.addOption("Disengage by executing a series of special maneuvers", OptionId.CLEAN_DISENGAGE,
+												  "Allows your fleet to disengage without being pursued.");
+								SetStoryOption.set(dialog, 1, OptionId.CLEAN_DISENGAGE, "cleanDisengage", Sounds.STORY_POINT_SPEND_COMBAT,
+										"Manuevered to disengage from " + otherFleet.getNameWithFactionKeepCase());
+								
+								addEmergencyRepairsOption();
 							}
 						}
 					}
@@ -2594,8 +2862,158 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 //		}
 	}
 	
+	//addSPDisengage
+	protected void addEmergencyRepairsOption() {
+		if (didRepairs) return;
+		
+		final CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
+		final List<FleetMemberAPI> members = new ArrayList<FleetMemberAPI>();
+		
+		final float crThreshold = CRPluginImpl.MALFUNCTION_START;
+		final float hullThreshold = 0.4f;
+		final float bonusRepairAmount = 0.1f; // threshold + this = repair level
+		
+		FleetMemberAPI flagship = fleet.getFlagship();
+		if (flagship != null && !flagship.isMothballed()) {
+			if (flagship.getStatus().getHullFraction() < hullThreshold ||
+					flagship.getRepairTracker().getBaseCR() < crThreshold) {
+				members.add(flagship);
+			}
+		}
+		
+		for (FleetMemberAPI curr : fleet.getFleetData().getMembersListCopy()) {
+			if (curr == flagship) continue;
+			if (curr.isMothballed()) continue;
+			if (!curr.getCaptain().isDefault()) {
+				if (curr.getStatus().getHullFraction() < hullThreshold ||
+						curr.getRepairTracker().getBaseCR() < crThreshold) {
+					members.add(curr);
+				}
+			}
+			if (members.size() > 12) break; // just in case, since these are listed in the dialog w/o a limit check
+		}
+		
+//		for (FleetMemberAPI curr : fleet.getFleetData().getMembersListCopy()) {
+//			if (curr == flagship) continue;
+//			if (curr.isMothballed()) continue;
+//			if (!members.contains(curr)) {
+//				if (curr.getStatus().getHullFraction() < hullThreshold ||
+//						curr.getRepairTracker().getBaseCR() < crThreshold) {
+//					members.add(curr);
+//				}
+//			}
+//			if (members.size() > 12) break; // just in case, since these are listed in the dialog w/o a limit check
+//		}
+//		
+		if (members.isEmpty()) return;
+		
+		options.addOption("Perform limited emergency repairs", OptionId.EMERGENCY_REPAIRS,
+				  "Brings your flagship and a few officer-controlled ships back up to reasonable " +
+				  "combat readiness and repairs some hull damage.");
+		StoryOptionParams params = new StoryOptionParams(OptionId.EMERGENCY_REPAIRS,
+					1, "emergencyRepairs", Sounds.STORY_POINT_SPEND_COMBAT, 
+					"Performed emergency repairs when facing " + otherFleet.getNameWithFactionKeepCase());
+		
+		SetStoryOption.set(dialog, params, 
+				new BaseOptionStoryPointActionDelegate(dialog, params) {
+					@Override
+					public void confirm() {
+						float dpUsed = 0f;
+						for (FleetMemberAPI member : members) {
+							float dpRemaining = EMERGENCY_REPAIRS_MAX_DP - dpUsed;
+							float shipDP = member.getDeploymentPointsCost();
+							dpUsed += shipDP;
+						
+							float fraction = dpRemaining / shipDP;
+							if (fraction >= 0.99f) fraction = 1f;
+							
+							float baseRepairCRLevel = crThreshold + bonusRepairAmount * (float) Math.random();
+							float baseRepairHullLevel = hullThreshold + bonusRepairAmount * (float) Math.random();
+							
+							float cr = member.getRepairTracker().getBaseCR();
+							float repairedCR = cr + (baseRepairCRLevel - cr) * fraction;
+							if (cr < repairedCR) {
+								//member.getRepairTracker().setCR(cr + (repairedCR - cr) * fraction);
+								member.getRepairTracker().applyCREvent(repairedCR - cr, "Emergency repairs");
+							}
+							float hull = member.getStatus().getHullFraction();
+							float repairedHull = hull + (baseRepairHullLevel - hull) * fraction;
+							if (hull < repairedHull) {
+								member.getStatus().setHullFraction(repairedHull);
+							}
+							
+							String str = BaseSkillEffectDescription.getValueLabelForMember(member);
+							textPanel.setFontSmallInsignia();
+							textPanel.addPara(str + " performed emergency repairs", Misc.getPositiveHighlightColor());
+							textPanel.highlightFirstInLastPara(str, Misc.getHighlightColor());
+							textPanel.setFontInsignia();
+							
+							if (fraction < 1f) {
+								break;
+							}
+						}
+						didRepairs = true;
+						playerFleet.getFleetData().setSyncNeeded();
+						playerFleet.getFleetData().syncIfNeeded();
+						dialog.getOptionPanel().setEnabled(OptionId.EMERGENCY_REPAIRS, false);
+					}
+
+					@Override
+					public void createDescription(TooltipMakerAPI info) {
+						super.createDescription(info);
+						info.setParaFontDefault();
+						float opad = 10f;
+						float pad = 3f;
+						info.addPara("Will bring up to %s deployment points worth of ships up " +
+								"to approximately %s combat readiness and %s hull integrity. Starts with the " +
+								"flagship and then goes on to officer-controlled ships, in the " +
+								"order they are placed in the fleet. " +
+								"Does not affect other ships.",
+								0f, Misc.getHighlightColor(),
+								"" + (int) EMERGENCY_REPAIRS_MAX_DP,
+								"" + (int) Math.round((crThreshold + bonusRepairAmount) * 100f) + "%",
+								"" + (int) Math.round((hullThreshold + bonusRepairAmount) * 100f) + "%"
+								);
+						
+						info.addPara("The repairs will affect:", opad);
+						info.setBulletedListMode(BaseIntelPlugin.INDENT);
+						float initPad = 10f;
+						
+						float dpUsed = 0f;
+						for (FleetMemberAPI member : members) {
+							float dpRemaining = EMERGENCY_REPAIRS_MAX_DP - dpUsed;
+							float shipDP = member.getDeploymentPointsCost();
+							dpUsed += shipDP;
+							
+							dpUsed += shipDP;
+							
+							float fraction = dpRemaining / shipDP;
+							if (fraction >= 0.99f) fraction = 1f;
+							
+							String str = BaseSkillEffectDescription.getValueLabelForMember(member);
+							
+							String post = " (full effect)";
+							if (fraction < 1) post = " (partial effect)";
+							
+							info.addPara(str + post, initPad);
+							initPad = 0f;
+							
+							if (dpUsed >= EMERGENCY_REPAIRS_MAX_DP) break;
+						}
+						info.setBulletedListMode(null);
+						info.addSpacer(20f);
+					}
+				});
+//		SetStoryOption.set(dialog, 1, OptionId.EMERGENCY_REPAIRS, "emergencyRepairs", Sounds.STORY_POINT_SPEND_COMBAT,
+//				"Performed emergency repairs when facing " + otherFleet.getNameWithFactionKeepCase());
+	}
+	
 	protected PursuitOption pickPursuitOption(CampaignFleetAPI fleet, CampaignFleetAPI other, FleetEncounterContext context) {
 		if (fleet.getAI() == null) return PursuitOption.LET_THEM_GO;
+		
+		if (config.alwaysPursue) {
+			return PursuitOption.PURSUE;
+		}
 		
 		if (context.getBattle() != null) {
 			boolean allStation = true;
@@ -2695,6 +3113,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		DataForEncounterSide data = context.getDataFor(fleet);
 		if (data.isWonLastEngagement()) return true;
 		
+		if (data.isDidEnoughToDisengage()) return true;
 		
 		if (fleet == playerFleet) {
 			for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
@@ -2739,6 +3158,11 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		if (faction == null || faction.isEmpty()) {
 			faction = otherFleet.getFaction().getDisplayName();
 		}
+		
+		if (otherFleet.getFaction().isNeutralFaction()) {
+			faction = "opposing";
+		}
+		
 		String fleetName = otherFleet.getName();
 		String firstName = otherFleet.getCommander().getName().getFirst();
 		String lastName = otherFleet.getCommander().getName().getLast();
@@ -2991,6 +3415,9 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		return fleetHoldingVsStrongerEnemy(playerFleet, otherFleet);
 	}
 	protected boolean otherFleetHoldingVsStrongerEnemy() {
+//		if (otherFleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_MAKE_HOLD_VS_STRONGER_COMBAT_ONLY)) {
+//			return true;
+//		}
 		return fleetHoldingVsStrongerEnemy(otherFleet, playerFleet);
 	}
 	protected boolean fleetHoldingVsStrongerEnemy(CampaignFleetAPI fleet, CampaignFleetAPI other) {
@@ -3060,6 +3487,11 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 			}
 		}
 	}
+	public void setPlayerFleet(CampaignFleetAPI playerFleet) {
+		this.playerFleet = playerFleet;
+	}
+
+	
 }
 
 

@@ -13,33 +13,35 @@ import org.json.JSONObject;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
+import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
-import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
+import com.fs.starfarer.api.campaign.econ.EconomyAPI.EconomyUpdateListener;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.campaign.econ.EconomyAPI.EconomyUpdateListener;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
-import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
-import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
+import com.fs.starfarer.api.impl.campaign.DebugFlags;
+import com.fs.starfarer.api.impl.campaign.Tuning;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteLocationCalculator;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
@@ -52,10 +54,10 @@ import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker;
 import com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidActionStage;
 import com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidAssembleStage;
 import com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel;
-import com.fs.starfarer.api.impl.campaign.intel.raid.ReturnStage;
-import com.fs.starfarer.api.impl.campaign.intel.raid.TravelStage;
 import com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.RaidDelegate;
 import com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.RaidStageStatus;
+import com.fs.starfarer.api.impl.campaign.intel.raid.ReturnStage;
+import com.fs.starfarer.api.impl.campaign.intel.raid.TravelStage;
 import com.fs.starfarer.api.impl.campaign.procgen.MarkovNames;
 import com.fs.starfarer.api.impl.campaign.procgen.MarkovNames.MarkovNameResult;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator;
@@ -71,6 +73,8 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript, FleetEventListener,
 																EconomyUpdateListener, RaidDelegate {
+	
+	public static String MEM_FLAG = "$core_pirateBase";
 	
 	public static enum PirateBaseTier {
 		TIER_1_1MODULE,
@@ -111,10 +115,16 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	public PirateBaseIntel(StarSystemAPI system, String factionId, PirateBaseTier tier) {
 		this.system = system;
 		this.tier = tier;
+		
+		raidTimeoutMonths = Tuning.PIRATE_RAID_MIN_TIMEOUT_MONTHS + 
+			Misc.random.nextInt(Tuning.PIRATE_RAID_MAX_TIMEOUT_MONTHS - Tuning.PIRATE_RAID_MIN_TIMEOUT_MONTHS + 1);
 	
 		market = Global.getFactory().createMarket(Misc.genUID(), "Pirate Base", 3);
 		market.setSize(3);
 		market.setHidden(true);
+		market.getMemoryWithoutUpdate().set(MEM_FLAG, true);
+		market.getMemoryWithoutUpdate().set(MemFlags.HIDDEN_BASE_MEM_FLAG, true);
+		//market.getMemoryWithoutUpdate().set(ContactIntel.NO_CONTACTS_ON_MARKET, true);
 		
 		market.setFactionId(Factions.PIRATES);
 		
@@ -237,11 +247,13 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	
 	public void notifyRaidEnded(RaidIntel raid, RaidStageStatus status) {
 		if (status == RaidStageStatus.SUCCESS) {
-			raidTimeoutMonths = 0;
+			//raidTimeoutMonths = 0;
+			raidTimeoutMonths = Math.max(raidTimeoutMonths, Tuning.PIRATE_RAID_MIN_TIMEOUT_MONTHS + 
+				Misc.random.nextInt(Tuning.PIRATE_RAID_MAX_TIMEOUT_MONTHS - Tuning.PIRATE_RAID_MIN_TIMEOUT_MONTHS + 1));
 		} else {
 			float base = getBaseRaidFP();
 			float raidFP = raid.getAssembleStage().getOrigSpawnFP();
-			raidTimeoutMonths += Math.round(raidFP / base) * 2;
+			raidTimeoutMonths += Math.min(Math.round(raidFP / base) * 2, Tuning.PIRATE_RAID_DEFEATED_TIMEOUT_MONTHS);
 		}
 	}
 	
@@ -272,15 +284,14 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 			}
 		}
 		
+		SectorEntityToken raidJump = RouteLocationCalculator.findJumpPointToUse(getFactionForUIColors(), target.getCenter());
+		if (gather == null || raidJump == null) return;
 		
 		PirateRaidAssembleStage assemble = new PirateRaidAssembleStage(raid, gather, this);
 		assemble.addSource(market);
 		assemble.setSpawnFP(raidFP);
 		assemble.setAbortFP(raidFP * successMult);
 		raid.addStage(assemble);
-		
-		
-		SectorEntityToken raidJump = RouteLocationCalculator.findJumpPointToUse(getFactionForUIColors(), target.getCenter());
 		
 		TravelStage travel = new TravelStage(raid, gather, raidJump, false);
 		travel.setAbortFP(raidFP * successMult);
@@ -405,8 +416,10 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		
 		int remove = Math.round(picker.getItems().size() * removeMult);
 		if (remove < 1 && removeMult > 0) remove = 1;
-		if (remove >= picker.getItems().size()) {
-			remove = picker.getItems().size() - 1;
+		
+		// one-module bases are a bit too boring to fight
+		if (remove >= picker.getItems().size() - 1) {
+			remove = picker.getItems().size() - 2;
 		}
 		
 		for (int i = 0; i < remove; i++) {
@@ -487,13 +500,19 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 				setBounty();
 			}
 			//if (target != null && (float) Math.random() < 0.2f && raidTimeoutMonths <= 0) {
-			boolean allowRandomRaids = PirateBaseManager.getInstance().getDaysSinceStart() > Global.getSettings().getFloat("noPirateRaidDays");
-			
+			boolean allowRandomRaids = PirateBaseManager.getInstance().getDaysSinceStart() > Tuning.NO_PIRATE_RAID_DAYS_FROM_GAME_START;
+//			if (target != null && !Misc.getMarketsInLocation(target).isEmpty() && 
+//					Misc.getMarketsInLocation(target).get(0).isPlayerOwned()) {
+//				System.out.println("wefwefew");
+//			}
 			if (target != null && 
 					(((float) Math.random() < 0.2f && allowRandomRaids) || 
-							targetPlayerColonies) && raidTimeoutMonths <= 0) {
+							targetPlayerColoniesOnly) && raidTimeoutMonths <= 0) {
 				startRaid(target, getRaidFP());
-				raidTimeoutMonths = 2 + (int)Math.round((float) Math.random() * 3f);
+				raidTimeoutMonths = Tuning.PIRATE_RAID_MIN_TIMEOUT_MONTHS + 
+						Misc.random.nextInt(Tuning.PIRATE_RAID_MAX_TIMEOUT_MONTHS - Tuning.PIRATE_RAID_MIN_TIMEOUT_MONTHS + 1);
+//				raidTimeoutMonths = Tuning.PIRATE_RAID_MIN_TIMEOUT_MONTHS + 
+//						(int)Math.round((float) Math.random() * (Tuning.PIRATE_RAID_MIN_TIMEOUT_MONTHS=_TIMEOUT_MONTHSf);
 			}
 			
 			checkForTierChange();
@@ -790,7 +809,7 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		if (!entity.isDiscoverable()) {
 			switch (tier) {
 			case TIER_1_1MODULE:
-				info.addPara("It has very limited defensive capabilities " +
+				info.addPara("It has limited defensive capabilities " +
 							"and is protected by a few fleets.", opad);
 				break;
 			case TIER_2_1MODULE:
@@ -1160,11 +1179,11 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	}
 	
 	
-	public void setTargetPlayerColonies(boolean targetPlayerColonies) {
-		this.targetPlayerColonies = targetPlayerColonies;
+	public void setTargetPlayerColoniesOnly(boolean targetPlayerColonies) {
+		this.targetPlayerColoniesOnly = targetPlayerColonies;
 	}
-	public boolean isTargetPlayerColonies() {
-		return targetPlayerColonies;
+	public boolean isTargetPlayerColoniesOnly() {
+		return targetPlayerColoniesOnly;
 	}
 	public StarSystemAPI getForceTarget() {
 		return forceTarget;
@@ -1172,7 +1191,7 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	public void setForceTarget(StarSystemAPI forceTarget) {
 		this.forceTarget = forceTarget;
 	}
-	protected boolean targetPlayerColonies = false;
+	protected boolean targetPlayerColoniesOnly = false;
 	protected StarSystemAPI forceTarget = null;
 	
 	protected StarSystemAPI pickTarget() {
@@ -1183,7 +1202,7 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 			float score = 0f;
 			for (MarketAPI curr : Global.getSector().getEconomy().getMarkets(system)) {
 				if (!affectsMarket(curr)) continue;
-				if (targetPlayerColonies && !curr.getFaction().isPlayerFaction()) continue;
+				if (targetPlayerColoniesOnly && !curr.getFaction().isPlayerFaction()) continue;
 				
 				if (system == forceTarget) {
 					forceTargetIsValid = true;
@@ -1196,13 +1215,15 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 				
 				float w = curr.getSize();
 				
-				float dist = Misc.getDistance(curr.getPrimaryEntity(), market.getPrimaryEntity());
-				float mult = 1f - Math.max(0f, dist - 20000f) / 20000f;
+				//float dist = Misc.getDistance(curr.getPrimaryEntity(), market.getPrimaryEntity());
+				float dist = Misc.getDistanceLY(curr.getLocationInHyperspace(), market.getLocationInHyperspace());
+				
+				float mult = 1f - Math.max(0f, dist - 10f) / 10f;
 				if (mult < 0.1f) mult = 0.1f;
 				if (mult > 1) mult = 1;
 				
-				if (!targetPlayerColonies && curr.getFaction().isPlayerFaction()) {
-					if (dist > 20000) continue;
+				if (!targetPlayerColoniesOnly && curr.getFaction().isPlayerFaction()) {
+					if (dist > 15f) continue;
 				}
 				
 				score += w * mult;

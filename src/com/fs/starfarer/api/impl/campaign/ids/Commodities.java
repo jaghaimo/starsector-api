@@ -28,6 +28,7 @@ public class Commodities {
 	public static final String ALPHA_CORE = "alpha_core";
 	public static final String BETA_CORE = "beta_core";
 	public static final String GAMMA_CORE = "gamma_core";
+	public static final String OMEGA_CORE = "omega_core";
 	
 	public static final String SURVEY_DATA = "survey_data";
 	public static final String SURVEY_DATA_1 = "survey_data_1";
@@ -35,6 +36,10 @@ public class Commodities {
 	public static final String SURVEY_DATA_3 = "survey_data_3";
 	public static final String SURVEY_DATA_4 = "survey_data_4";
 	public static final String SURVEY_DATA_5 = "survey_data_5";
+	
+	public static final String CREDITS = "credits";
+	public static final String BLUEPRINTS = "blueprints";
+	public static final String SHIP_WEAPONS = "ship_weapons";
 	
 	
 //	public static final String TAG_HEAVY_INDUSTRY_OUT = "heavy_industry_out";
@@ -49,6 +54,7 @@ public class Commodities {
 //	public static final String TAG_REFINING_IN = "refining_in";
 //	public static final String TAG_REFINING_OUT = "refining_out";
 	public static final String TAG_EXOTIC = "exotic";
+	public static final String TAG_EXPENSIVE = "expensive";
 	public static final String TAG_MILITARY = "military";
 	public static final String TAG_META = "meta";
 	

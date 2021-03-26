@@ -1,12 +1,14 @@
 package com.fs.starfarer.api.impl.campaign.intel.misc;
 
-import java.util.LinkedHashSet;
 import java.util.Set;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignTerrainAPI;
+import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 
 /**
@@ -41,7 +43,20 @@ public class FleetLogIntel extends BaseIntelPlugin {
 
 	@Override
 	public boolean shouldRemoveIntel() {
-		if (removeTrigger != null && !removeTrigger.isAlive()) return true;
+		if (isEnded()) return true;
+		
+		if (removeTrigger != null) {
+			if (!removeTrigger.isAlive()) return true;
+			if (removeTrigger instanceof CampaignTerrainAPI) {
+				CampaignTerrainAPI terrain = (CampaignTerrainAPI) removeTrigger;
+				if (terrain.getPlugin() instanceof DebrisFieldTerrainPlugin) {
+					DebrisFieldTerrainPlugin debris = (DebrisFieldTerrainPlugin) terrain.getPlugin();
+					if (debris.isScavenged()) return true;
+				}
+			} else if (removeTrigger instanceof PlanetAPI) {
+				
+			}
+		}
 		
 		if (isImportant() || duration == null) return false;
 
@@ -67,7 +82,8 @@ public class FleetLogIntel extends BaseIntelPlugin {
 
 	@Override
 	public Set<String> getIntelTags(SectorMapAPI map) {
-		Set<String> tags = new LinkedHashSet<String>();
+		//Set<String> tags = new LinkedHashSet<String>(); ??? why probably bug
+		Set<String> tags = super.getIntelTags(map);
 		tags.add(Tags.INTEL_FLEET_LOG);
 		return tags;
 	}

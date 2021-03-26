@@ -1,22 +1,14 @@
 package com.fs.starfarer.api.impl.campaign.procgen.themes;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
-import com.fs.starfarer.api.campaign.CargoAPI;
-import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DataForEncounterSide;
-import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.FleetMemberData;
 import com.fs.starfarer.api.combat.BattleCreationContext;
-import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.impl.campaign.FleetEncounterContext;
 import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.BaseFIDDelegate;
 import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.FIDConfig;
 import com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.FIDConfigGen;
@@ -24,83 +16,149 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager;
 import com.fs.starfarer.api.impl.campaign.ids.Abilities;
-import com.fs.starfarer.api.impl.campaign.ids.Drops;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
-import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
-import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageEntity;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class RemnantSeededFleetManager extends SeededFleetManager {
 
+//	public static class DerelictFleetInteractionConfigGen implements FIDConfigGen {
+//		public FIDConfig createConfig() {
+//			FIDConfig config = new FIDConfig();
+//			config.showTransponderStatus = false;
+//			config.delegate = new BaseFIDDelegate() {
+//				public void postPlayerSalvageGeneration(InteractionDialogAPI dialog, FleetEncounterContext context, CargoAPI salvage) {
+//					if (!(dialog.getInteractionTarget() instanceof CampaignFleetAPI)) return;
+//					
+//					CampaignFleetAPI fleet = (CampaignFleetAPI) dialog.getInteractionTarget();
+//					
+//					DataForEncounterSide data = context.getDataFor(fleet);
+//					List<FleetMemberAPI> losses = new ArrayList<FleetMemberAPI>();
+//					for (FleetMemberData fmd : data.getOwnCasualties()) {
+//						losses.add(fmd.getMember());
+//					}
+//					
+//					List<DropData> dropRandom = new ArrayList<DropData>();
+//					
+//					int [] counts = new int[5];
+//					String [] groups = new String [] {Drops.REM_FRIGATE, Drops.REM_DESTROYER, 
+//													  Drops.REM_CRUISER, Drops.REM_CAPITAL,
+//													  Drops.GUARANTEED_ALPHA};
+//					
+//					//for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+//					for (FleetMemberAPI member : losses) {
+//						if (member.isStation()) {
+//							counts[4] += 1;
+//							counts[3] += 1;
+//						} else if (member.isCapital()) {
+//							counts[3] += 1;
+//						} else if (member.isCruiser()) {
+//							counts[2] += 1;
+//						} else if (member.isDestroyer()) {
+//							counts[1] += 1;
+//						} else if (member.isFrigate()) {
+//							counts[0] += 1;
+//						}
+//					}
+//					
+////					if (fleet.isStationMode()) {
+////						counts[2] += 10;
+////					}
+//
+//					for (int i = 0; i < counts.length; i++) {
+//						int count = counts[i];
+//						if (count <= 0) continue;
+//						
+//						DropData d = new DropData();
+//						d.group = groups[i];
+//						d.chances = (int) Math.ceil(count * 1f);
+//						dropRandom.add(d);
+//					}
+//					
+//					Random salvageRandom = new Random(Misc.getSalvageSeed(fleet));
+//					//salvageRandom = new Random();
+//					CargoAPI extra = SalvageEntity.generateSalvage(salvageRandom, 1f, 1f, 1f, 1f, null, dropRandom);
+//					for (CargoStackAPI stack : extra.getStacksCopy()) {
+//						salvage.addFromStack(stack);
+//					}
+//				}
+//				public void battleContextCreated(InteractionDialogAPI dialog, BattleCreationContext bcc) {
+//					bcc.aiRetreatAllowed = false;
+//					bcc.objectivesAllowed = false;
+//				}
+//			};
+//			return config;
+//		}
+//	}
+	
 	
 	public static class RemnantFleetInteractionConfigGen implements FIDConfigGen {
 		public FIDConfig createConfig() {
 			FIDConfig config = new FIDConfig();
 			config.showTransponderStatus = false;
 			config.delegate = new BaseFIDDelegate() {
-				public void postPlayerSalvageGeneration(InteractionDialogAPI dialog, FleetEncounterContext context, CargoAPI salvage) {
-					if (!(dialog.getInteractionTarget() instanceof CampaignFleetAPI)) return;
-					
-					CampaignFleetAPI fleet = (CampaignFleetAPI) dialog.getInteractionTarget();
-					
-					DataForEncounterSide data = context.getDataFor(fleet);
-					List<FleetMemberAPI> losses = new ArrayList<FleetMemberAPI>();
-					for (FleetMemberData fmd : data.getOwnCasualties()) {
-						losses.add(fmd.getMember());
-					}
-					
-					List<DropData> dropRandom = new ArrayList<DropData>();
-					
-					int [] counts = new int[5];
-					String [] groups = new String [] {Drops.REM_FRIGATE, Drops.REM_DESTROYER, 
-													  Drops.REM_CRUISER, Drops.REM_CAPITAL,
-													  Drops.GUARANTEED_ALPHA};
-					
-					//for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
-					for (FleetMemberAPI member : losses) {
-						if (member.isStation()) {
-							counts[4] += 1;
-							counts[3] += 1;
-						} else if (member.isCapital()) {
-							counts[3] += 1;
-						} else if (member.isCruiser()) {
-							counts[2] += 1;
-						} else if (member.isDestroyer()) {
-							counts[1] += 1;
-						} else if (member.isFrigate()) {
-							counts[0] += 1;
-						}
-					}
-					
-//					if (fleet.isStationMode()) {
-//						counts[2] += 10;
+//				public void postPlayerSalvageGeneration(InteractionDialogAPI dialog, FleetEncounterContext context, CargoAPI salvage) {
+//					if (!(dialog.getInteractionTarget() instanceof CampaignFleetAPI)) return;
+//					
+//					CampaignFleetAPI fleet = (CampaignFleetAPI) dialog.getInteractionTarget();
+//					
+//					DataForEncounterSide data = context.getDataFor(fleet);
+//					List<FleetMemberAPI> losses = new ArrayList<FleetMemberAPI>();
+//					for (FleetMemberData fmd : data.getOwnCasualties()) {
+//						losses.add(fmd.getMember());
 //					}
-
-					for (int i = 0; i < counts.length; i++) {
-						int count = counts[i];
-						if (count <= 0) continue;
-						
-						DropData d = new DropData();
-						d.group = groups[i];
-						d.chances = (int) Math.ceil(count * 1f);
-						dropRandom.add(d);
-					}
-					
-					Random salvageRandom = new Random(Misc.getSalvageSeed(fleet));
-					//salvageRandom = new Random();
-					CargoAPI extra = SalvageEntity.generateSalvage(salvageRandom, 1f, 1f, 1f, 1f, null, dropRandom);
-					for (CargoStackAPI stack : extra.getStacksCopy()) {
-						salvage.addFromStack(stack);
-					}
-				}
+//					
+//					List<DropData> dropRandom = new ArrayList<DropData>();
+//					
+//					int [] counts = new int[5];
+//					String [] groups = new String [] {Drops.REM_FRIGATE, Drops.REM_DESTROYER, 
+//													  Drops.REM_CRUISER, Drops.REM_CAPITAL,
+//													  Drops.GUARANTEED_ALPHA};
+//					
+//					//for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+//					for (FleetMemberAPI member : losses) {
+//						if (member.isStation()) {
+//							counts[4] += 1;
+//							counts[3] += 1;
+//						} else if (member.isCapital()) {
+//							counts[3] += 1;
+//						} else if (member.isCruiser()) {
+//							counts[2] += 1;
+//						} else if (member.isDestroyer()) {
+//							counts[1] += 1;
+//						} else if (member.isFrigate()) {
+//							counts[0] += 1;
+//						}
+//					}
+//					
+////					if (fleet.isStationMode()) {
+////						counts[2] += 10;
+////					}
+//
+//					for (int i = 0; i < counts.length; i++) {
+//						int count = counts[i];
+//						if (count <= 0) continue;
+//						
+//						DropData d = new DropData();
+//						d.group = groups[i];
+//						d.chances = (int) Math.ceil(count * 1f);
+//						dropRandom.add(d);
+//					}
+//					
+//					Random salvageRandom = new Random(Misc.getSalvageSeed(fleet));
+//					//salvageRandom = new Random();
+//					CargoAPI extra = SalvageEntity.generateSalvage(salvageRandom, 1f, 1f, 1f, 1f, null, dropRandom);
+//					for (CargoStackAPI stack : extra.getStacksCopy()) {
+//						salvage.addFromStack(stack);
+//					}
+//				}
 				public void battleContextCreated(InteractionDialogAPI dialog, BattleCreationContext bcc) {
 					bcc.aiRetreatAllowed = false;
-					bcc.objectivesAllowed = false;
+					//bcc.objectivesAllowed = false;
 				}
 			};
 			return config;
@@ -223,6 +281,7 @@ public class RemnantSeededFleetManager extends SeededFleetManager {
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_ON, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PATROL_FLEET, true);
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_ALLOW_LONG_PURSUIT, true);
+		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_MAKE_HOLD_VS_STRONGER, true);
 		
 		// to make dormant fleets not try to retreat and get harried repeatedly for CR loss 
 		if (dormant) {

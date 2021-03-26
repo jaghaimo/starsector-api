@@ -27,6 +27,15 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 	public static final String KEY = "$core_PR_pirateBaseManager";
 	
 	
+	public static int MIN_MONTHS_BEFORE_RAID = Global.getSettings().getInt("minMonthsBeforeFirstPirateRaidOnPlayerColony");
+	
+	public static int MIN_TIMEOUT = Global.getSettings().getIntFromArray("playerRelatedPirateBaseCreationTimeoutMonths", 0); 
+	public static int MAX_TIMEOUT = Global.getSettings().getIntFromArray("playerRelatedPirateBaseCreationTimeoutMonths", 1);
+	
+	public static int MIN_TIMEOUT_DESTROYED = Global.getSettings().getIntFromArray("playerRelatedPirateBaseCreationTimeoutExtraAfterBaseDestroyed", 0); 
+	public static int MAX_TIMEOUT_DESTROYED  = Global.getSettings().getIntFromArray("playerRelatedPirateBaseCreationTimeoutExtraAfterBaseDestroyed", 1); 
+	
+	
 	public static PlayerRelatedPirateBaseManager getInstance() {
 		Object test = Global.getSector().getMemoryWithoutUpdate().get(KEY);
 		return (PlayerRelatedPirateBaseManager) test; 
@@ -69,6 +78,11 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 			FactionAPI player = Global.getSector().getPlayerFaction();
 			List<MarketAPI> markets = Misc.getFactionMarkets(player);
 			
+			Iterator<MarketAPI> iter = markets.iterator();
+			while (iter.hasNext()) {
+				if (iter.next().isHidden()) iter.remove();
+			}
+			
 			if (markets.isEmpty()) {
 				return;
 			}
@@ -76,9 +90,9 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 			monthsPlayerColoniesExist++;
 			
 			if (!sentFirstRaid) {
-				if (monthsPlayerColoniesExist >= 4 && !markets.isEmpty()) {
+				if (monthsPlayerColoniesExist >= MIN_MONTHS_BEFORE_RAID && !markets.isEmpty()) {
 					sendFirstRaid(markets);
-					baseCreationTimeout = 3 + random.nextInt(4);
+					baseCreationTimeout = MIN_TIMEOUT + random.nextInt(MAX_TIMEOUT - MIN_TIMEOUT + 1);
 				}
 				return;
 			}
@@ -100,15 +114,16 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 			if (intel.isEnded() && !intel.getMarket().isInEconomy()) {
 				iter.remove();
 				
-				int baseTimeout = 3;
-				switch (intel.getTier()) {
-				case TIER_1_1MODULE: baseTimeout = 3; break;
-				case TIER_2_1MODULE: baseTimeout = 3; break;
-				case TIER_3_2MODULE: baseTimeout = 4; break;
-				case TIER_4_3MODULE: baseTimeout = 5; break;
-				case TIER_5_3MODULE: baseTimeout = 6; break;
-				}
-				baseCreationTimeout += baseTimeout + random.nextInt(baseTimeout + 1);
+//				int baseTimeout = 3;
+//				switch (intel.getTier()) {
+//				case TIER_1_1MODULE: baseTimeout = 3; break;
+//				case TIER_2_1MODULE: baseTimeout = 3; break;
+//				case TIER_3_2MODULE: baseTimeout = 4; break;
+//				case TIER_4_3MODULE: baseTimeout = 5; break;
+//				case TIER_5_3MODULE: baseTimeout = 6; break;
+//				}
+//				baseCreationTimeout += baseTimeout + random.nextInt(baseTimeout + 1);
+				baseCreationTimeout += MIN_TIMEOUT_DESTROYED + random.nextInt(MAX_TIMEOUT_DESTROYED - MIN_TIMEOUT_DESTROYED + 1);
 			}
 		}
 	}
@@ -171,10 +186,12 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 			return;
 		}
 		
-		intel.setTargetPlayerColonies(true);
+		intel.setTargetPlayerColoniesOnly(true);
 		intel.setForceTarget(initialTarget);
 		intel.updateTarget();
 		bases.add(intel);
+		
+		baseCreationTimeout = MIN_TIMEOUT + random.nextInt(MAX_TIMEOUT - MIN_TIMEOUT + 1);
 	}
 
 	public String pickPirateFaction() {
@@ -192,7 +209,6 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 	protected void sendFirstRaid(List<MarketAPI> markets) {
 		if (markets.isEmpty()) return;
 		
-		sentFirstRaid = true;
 		
 		WeightedRandomPicker<MarketAPI> picker = new WeightedRandomPicker<MarketAPI>(random);
 		picker.addAll(markets);
@@ -204,8 +220,8 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 			PirateBaseIntel intel = (PirateBaseIntel) p;
 			if (intel.isEnding()) continue;
 			
-			float dist = Misc.getDistance(intel.getMarket().getPrimaryEntity(), target.getPrimaryEntity());
-			if (dist < minDist) {
+			float dist = Misc.getDistanceLY(intel.getMarket().getPrimaryEntity(), target.getPrimaryEntity());
+			if (dist < minDist && dist <= 15) {
 				minDist = dist;
 				closest = intel;
 			}
@@ -216,6 +232,7 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 //			raidFP = 1000;
 //			raidFP = 500;
 			closest.startRaid(target.getStarSystem(), raidFP);
+			sentFirstRaid = true;
 		}
 	}
 
@@ -248,8 +265,10 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 		WeightedRandomPicker<StarSystemAPI> picker = new WeightedRandomPicker<StarSystemAPI>(random);
 		
 		for (StarSystemAPI system : Global.getSector().getStarSystems()) {
+			if (system.hasPulsar()) continue;
+			
 			float days = Global.getSector().getClock().getElapsedDaysSince(system.getLastPlayerVisitTimestamp());
-			if (days < 45f) continue;
+			if (days < 180f) continue;
 			
 			if (system.getCenter().getMemoryWithoutUpdate().contains(PirateBaseManager.RECENTLY_USED_FOR_BASE)) continue;
 			

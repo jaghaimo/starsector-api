@@ -24,6 +24,7 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.DismissDialog;
 import com.fs.starfarer.api.impl.campaign.rulecmd.DumpMemory;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireAll;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
+import com.fs.starfarer.api.util.Misc;
 
 /**
  * @author Alex Mosolov
@@ -186,7 +187,8 @@ public class RuleBasedInteractionDialogPluginImpl implements InteractionDialogPl
 		String optionId = (String) optionData;
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(optionData);
 		}
 		
 		if (optionId == FAILSAFE_LEAVE) {
@@ -204,8 +206,16 @@ public class RuleBasedInteractionDialogPluginImpl implements InteractionDialogPl
 		
 		memory.set("$option", optionId);
 		memory.expire("$option", 0);
-		
-		fireBest("DialogOptionSelected");
+
+		boolean foundRule = fireBest("DialogOptionSelected");
+		if (!foundRule && !dialog.isCurrentOptionHadAConfirm()) {
+			textPanel.addPara("ERROR: no rule found for option " + optionId + 
+					", adding a failsafe option to exit dialog.", Misc.getNegativeHighlightColor());
+			textPanel.addPara("Note: this may break any mission interaction in the current dialog, "
+							  + "it's recommended that you reload an earlier save if you use this option.");
+			textPanel.highlightInLastPara(Misc.getNegativeHighlightColor(), "recommended that you reload an earlier save");
+			options.addOption("Exit dialog", FAILSAFE_LEAVE);
+		}
 		
 	}
 	

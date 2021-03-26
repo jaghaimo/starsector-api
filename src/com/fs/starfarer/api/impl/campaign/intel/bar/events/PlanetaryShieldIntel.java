@@ -142,9 +142,9 @@ public class PlanetaryShieldIntel extends BaseIntelPlugin {
 		MarketAPI market = event.getPilotMarket();
 		
 		if (stage == PSIStage.TALK_TO_PILOT) {
-			info.addPara("Talk to the pilot at %s", initPad, market.getFaction().getBaseUIColor(), market.getName());
+			info.addPara("Talk to the pilot at %s", initPad, tc, market.getFaction().getBaseUIColor(), market.getName());
 		} else if (stage == PSIStage.GO_TO_PLANET) {
-			info.addPara("Explore the planet", initPad);
+			info.addPara("Explore the planet", tc, initPad);
 		}
 		
 		initPad = 0f;
@@ -195,6 +195,8 @@ public class PlanetaryShieldIntel extends BaseIntelPlugin {
 		Set<String> tags = super.getIntelTags(map);
 		tags.add(Tags.INTEL_STORY);
 		tags.add(Tags.INTEL_EXPLORATION);
+		tags.add(Tags.INTEL_ACCEPTED);
+		tags.add(Tags.INTEL_MISSIONS);
 		return tags;
 	}
 	

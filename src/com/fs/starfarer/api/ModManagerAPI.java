@@ -8,4 +8,5 @@ public interface ModManagerAPI {
 	boolean isModEnabled(String id);
 	List<ModPlugin> getEnabledModPlugins();
 	ModSpecAPI getModSpec(String id);
+	int getRequiredMemory();
 }

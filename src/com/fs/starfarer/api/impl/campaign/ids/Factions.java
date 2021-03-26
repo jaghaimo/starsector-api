@@ -5,6 +5,7 @@ public class Factions {
 	public static final String PLAYER = "player";
 	public static final String NEUTRAL = "neutral";
 	
+	public static final String MERCENARY = "mercenary";
 	public static final String INDEPENDENT = "independent";
 	public static final String SCAVENGERS = "scavengers";
 	
@@ -12,6 +13,7 @@ public class Factions {
 	public static final String PERSEAN = "persean"; 
 	public static final String TRITACHYON = "tritachyon"; 
 	public static final String HEGEMONY = "hegemony";
+	public static final String OMEGA = "omega";
 	
 	public static final String LIONS_GUARD = "lions_guard";
 	public static final String DIKTAT = "sindrian_diktat";
@@ -28,6 +30,13 @@ public class Factions {
 	
 	
 	
+	
+	/**
+	 * E.G. pirates or independents; may affect some description pharsing and possibly mechanics on a case-by-case basis.
+	 */
+	public static final String CUSTOM_DECENTRALIZED = "decentralized";
+	
+	public static final String CUSTOM_NO_CONTACTS = "no_contacts";
 	
 	public static final String CUSTOM_EXEMPT_FOOD_SHORTAGES = "exemptFromFoodShortages";
 	//public static final String CUSTOM_WILL_TRADE_WHEN_HOSTILE = "willTradeWhenHostile";
@@ -61,6 +70,11 @@ public class Factions {
 	//public static final String CUSTOM_COMMISSION_IGNORE_NOT_BEING_HOSTILE = "commissionIgnoreNotBeingHostile";
 	//public static final String CUSTOM_COMMISSION_IGNORE_BEING_HOSTILE = "commissionIgnoreBeingHostile";
 	public static final String CUSTOM_PUNITIVE_EXPEDITION_DATA = "punitiveExpeditionData";
+	
+	public static final String CUSTOM_SPAWNS_AS_INDEPENDENT = "spawnsAsIndependent";
+	
+	public static final String CUSTOM_NO_AI_CORES_FROM_AUTOMATED_DEFENSES = "noAICoresFromAutomatedDefenses";
+	public static final String CUSTOM_OFFICERS_ON_AUTOMATED_DEFENSES = "officersOnAutomatedDefenses";
 	
 	
 	

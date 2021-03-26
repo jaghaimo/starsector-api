@@ -6,6 +6,7 @@ import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -14,16 +15,18 @@ import com.fs.starfarer.api.util.Misc;
 
 public class FreeMarket extends BaseMarketConditionPlugin implements MarketImmigrationModifier {
 
-	public static final float MIN_STABILITY_PENALTY = 1f;
-	public static final float MAX_STABILITY_PENALTY = 3f;
-	//public static final float STABILITY_PENALTY = 3f;
+	public static float OFFICER_MERC_PROB_MOD = 0.25f;
 	
-	public static final float MIN_ACCESS_BONUS = 0.05f;
-	public static final float MAX_ACCESS_BONUS = 0.25f;
+	public static float MIN_STABILITY_PENALTY = 1f;
+	public static float MAX_STABILITY_PENALTY = 3f;
+	//public static float STABILITY_PENALTY = 3f;
 	
-	public static final float MIN_GROWTH = 5f;
-	public static final float MAX_GROWTH = 25f;
-	public static final float MAX_DAYS = 365f;
+	public static float MIN_ACCESS_BONUS = 0.05f;
+	public static float MAX_ACCESS_BONUS = 0.25f;
+	
+	public static float MIN_GROWTH = 3f;
+	public static float MAX_GROWTH = 10f;
+	public static float MAX_DAYS = 365f;
 
 	public static FreeMarket get(MarketAPI market) {
 		MarketConditionAPI mc = market.getCondition(Conditions.FREE_PORT);
@@ -66,6 +69,8 @@ public class FreeMarket extends BaseMarketConditionPlugin implements MarketImmig
 		
 		market.getAccessibilityMod().modifyFlat(id, getAccessBonus(), "Free port");
 		market.getStability().modifyFlat(id, -getStabilityPenalty(), "Free port");
+		
+		market.getStats().getDynamic().getMod(Stats.OFFICER_IS_MERC_PROB_MOD).modifyFlat(id, OFFICER_MERC_PROB_MOD);
 	}
 	
 	@Override
@@ -78,6 +83,8 @@ public class FreeMarket extends BaseMarketConditionPlugin implements MarketImmig
 		
 		market.getStability().unmodifyFlat(id);
 		market.getAccessibilityMod().unmodifyFlat(id);
+		
+		market.getStats().getDynamic().getMod(Stats.OFFICER_IS_MERC_PROB_MOD).unmodifyFlat(id);
 	}
 
 	public void modifyIncoming(MarketAPI market, PopulationComposition incoming) {

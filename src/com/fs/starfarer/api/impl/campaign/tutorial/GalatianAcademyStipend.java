@@ -19,6 +19,7 @@ public class GalatianAcademyStipend implements EconomyTickListener, TooltipCreat
 	public GalatianAcademyStipend() {
 		Global.getSector().getListenerManager().addListener(this);
 		startTime = Global.getSector().getClock().getTimestamp();
+		Global.getSector().getMemoryWithoutUpdate().set("$playerReceivingGAStipend", true);
 	}
 	
 	public void reportEconomyTick(int iterIndex) {
@@ -31,6 +32,7 @@ public class GalatianAcademyStipend implements EconomyTickListener, TooltipCreat
 		MarketAPI ancyra = Global.getSector().getEconomy().getMarket("ancyra_market");
 		if (daysActive > DURATION || ancyra == null) {
 			Global.getSector().getListenerManager().removeListener(this);
+			Global.getSector().getMemoryWithoutUpdate().unset("$playerReceivingGAStipend");
 			return;
 		}
 		
@@ -44,7 +46,7 @@ public class GalatianAcademyStipend implements EconomyTickListener, TooltipCreat
 		
 		FDNode stipendNode = report.getNode(fleetNode, "GA_stipend");
 		stipendNode.income = stipend;
-		stipendNode.name = "Stipend from the Galatian Academy";
+		stipendNode.name = "Stipend from Galatia Academy";
 		stipendNode.icon = Global.getSettings().getSpriteName("income_report", "generic_income");
 		stipendNode.tooltipCreator = this;
 	}

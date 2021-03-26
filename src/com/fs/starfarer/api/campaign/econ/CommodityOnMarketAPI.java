@@ -37,7 +37,7 @@ public interface CommodityOnMarketAPI {
 	boolean isPersonnel();
 	boolean isFuel();
 
-	StatBonus getPlayerPriceMod();
+	//StatBonus getPlayerPriceMod();
 
 	boolean isNonEcon();
 
@@ -145,6 +145,11 @@ public interface CommodityOnMarketAPI {
 	 * @return
 	 */
 	int getPlayerTradeNetQuantity();
+
+	//StatBonus getPlayerPriceMod();
+	
+	StatBonus getPlayerSupplyPriceMod();
+	StatBonus getPlayerDemandPriceMod();
 
 }
 

@@ -34,6 +34,39 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 
+	public static enum LocationDanger {
+		NONE(0.01f),
+		MINIMAL(0.1f),
+		LOW(0.2f),
+		MEDIUM(0.3f),
+		HIGH(0.5f),
+		EXTREME(0.8f),
+		;
+		
+		private static LocationDanger [] vals = values();
+		
+		public float enemyStrengthFraction;
+		private LocationDanger(float enemyStrengthFraction) {
+			this.enemyStrengthFraction = enemyStrengthFraction;
+		}
+		
+		public LocationDanger next() {
+			int index = this.ordinal() + 1;
+			if (index >= vals.length) index = vals.length - 1;
+			return vals[index];
+		}
+		public LocationDanger prev() {
+			int index = this.ordinal() - 1;
+			if (index < 0) index = 0;
+			return vals[index];
+		}
+
+	}
+	
+	
+	
+	
+	
 	public static final String KEY = "$core_warSimScript";
 	
 	public static final float CHECK_DAYS = 10f;
@@ -375,6 +408,25 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 		return result;
 	}
 	
+	
+	
+	public static float getRelativeEnemyStrength(String factionId, StarSystemAPI system) {
+		float enemyStrength = getEnemyStrength(factionId, system);
+		float factionStrength = getFactionStrength(factionId, system);
+		float f = enemyStrength / Math.max(1f, factionStrength + enemyStrength);
+		return f;
+	}
+	
+	public static float getRelativeFactionStrength(String factionId, StarSystemAPI system) {
+		float enemyStrength = getEnemyStrength(factionId, system);
+		float factionStrength = getFactionStrength(factionId, system);
+		float f = factionStrength / Math.max(1f, factionStrength + enemyStrength);
+		return f;
+	}
+	
+	public static float getEnemyStrength(String factionId, StarSystemAPI system) {
+		return getEnemyStrength(Global.getSector().getFaction(factionId), system);
+	}
 	public static float getEnemyStrength(FactionAPI faction, StarSystemAPI system) {
 		float enemyStr = 0;
 		Set<String> seen = new HashSet<String>();
@@ -388,6 +440,9 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 		return enemyStr;
 	}
 	
+	public static float getFactionStrength(String factionId, StarSystemAPI system) {
+		return getFactionStrength(Global.getSector().getFaction(factionId), system);
+	}
 	public static float getFactionStrength(FactionAPI faction, StarSystemAPI system) {
 		float strength = 0f;
 		
@@ -419,7 +474,7 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 			
 			if (data.strength != null) {
 				float mult = 1f;
-				if (data.damage != null) mult *= data.damage;
+				if (data.damage != null) mult *= (1f - data.damage);
 				strength += (int) Math.round(data.strength * mult);
 			}
 		}
@@ -451,7 +506,7 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 	}
 	
 	
-	public void removeFightOrdersFor(SectorEntityToken objective, FactionAPI faction) {
+	public static void removeFightOrdersFor(SectorEntityToken objective, FactionAPI faction) {
 		for (EveryFrameScript s : objective.getContainingLocation().getScripts()) {
 			if (s instanceof MilitaryResponseScript) {
 				MilitaryResponseScript script = (MilitaryResponseScript) s;
@@ -462,7 +517,7 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 			}
 		}
 	}
-	public boolean isAlreadyFightingFor(SectorEntityToken objective, FactionAPI faction) {
+	public static boolean isAlreadyFightingFor(SectorEntityToken objective, FactionAPI faction) {
 		for (EveryFrameScript s : objective.getContainingLocation().getScripts()) {
 			if (s instanceof MilitaryResponseScript) {
 				MilitaryResponseScript script = (MilitaryResponseScript) s;
@@ -476,6 +531,25 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 		
 	}
 	
+	public static LocationDanger getDangerFor(FactionAPI faction, StarSystemAPI system) {
+		if (system == null) return LocationDanger.NONE;
+		return getDangerFor(getFactionStrength(faction, system), getEnemyStrength(faction, system));
+	}
+	public static LocationDanger getDangerFor(String factionId, StarSystemAPI system) {
+		if (system == null) return LocationDanger.NONE;
+		return getDangerFor(getFactionStrength(factionId, system), getEnemyStrength(factionId, system));
+	}
+	public static LocationDanger getDangerFor(float factionStrength, float enemyStrength) {
+		float f = enemyStrength / Math.max(1f, factionStrength + enemyStrength);
+		for (LocationDanger level : LocationDanger.vals) {
+			float test = level.enemyStrengthFraction + (level.next().enemyStrengthFraction - level.enemyStrengthFraction) * 0.5f;
+			if (level == LocationDanger.NONE) test = LocationDanger.NONE.enemyStrengthFraction;
+			if (test >= f) {
+				return level;
+			}
+		}
+		return LocationDanger.EXTREME;
+	}
 }
 
 

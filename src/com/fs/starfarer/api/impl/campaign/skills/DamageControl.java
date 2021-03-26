@@ -8,15 +8,12 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 public class DamageControl {
 	
 	public static final float INSTA_REPAIR = 0.25f;
-	
 	public static final float CREW_LOSS_REDUCTION = 50;
-	
 	public static final float MODULE_REPAIR_BONUS = 50;
-	
 	public static final float HULL_DAMAGE_REDUCTION = 25;
-	public static final float OVERLOAD_REDUCTION = 25;
+//	public static final float OVERLOAD_REDUCTION = 25;
 
-	public static class Level1 implements ShipSkillEffect {
+	public static class Level2 implements ShipSkillEffect {
 
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
 			stats.getCrewLossMult().modifyMult(id, 1f - CREW_LOSS_REDUCTION / 100f);
@@ -39,7 +36,7 @@ public class DamageControl {
 		}
 	}
 	
-	public static class Level1B implements ShipSkillEffect {
+	public static class Level1 implements ShipSkillEffect {
 		
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
 			stats.getDynamic().getMod(Stats.INDIVIDUAL_SHIP_RECOVERY_MOD).modifyFlat(id, 1000f);
@@ -62,7 +59,7 @@ public class DamageControl {
 		}
 	}
 
-	public static class Level2 implements ShipSkillEffect {
+	public static class Level3 implements ShipSkillEffect {
 
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
 			float timeMult = 1f / ((100f + MODULE_REPAIR_BONUS) / 100f);
@@ -88,7 +85,7 @@ public class DamageControl {
 		}
 	}
 	
-	public static class Level2B implements ShipSkillEffect {
+	public static class Level5 implements ShipSkillEffect {
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
 			stats.getDynamic().getMod(Stats.INSTA_REPAIR_FRACTION).modifyFlat(id, INSTA_REPAIR);
 		}
@@ -110,7 +107,7 @@ public class DamageControl {
 		}
 	}
 	
-	public static class Level3A implements ShipSkillEffect {
+	public static class Level4 implements ShipSkillEffect {
 
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
 			stats.getHullDamageTakenMult().modifyMult(id, 1f - HULL_DAMAGE_REDUCTION / 100f);
@@ -133,6 +130,7 @@ public class DamageControl {
 		}
 	}
 	
+	/*
 	public static class Level3B implements ShipSkillEffect {
 		
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
@@ -155,4 +153,5 @@ public class DamageControl {
 			return ScopeDescription.PILOTED_SHIP;
 		}
 	}
+	*/
 }

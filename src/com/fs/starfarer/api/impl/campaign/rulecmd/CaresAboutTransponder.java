@@ -22,6 +22,8 @@ public class CaresAboutTransponder extends BaseCommandPlugin {
 		
 		MemoryAPI mem = fleet.getMemoryWithoutUpdate();
 		
+		if (mem.getBoolean(MemFlags.MEMORY_KEY_PATROL_ALLOW_TOFF)) return false;
+		
 		//boolean caresAboutTransponder = Misc.caresAboutPlayerTransponder(fleet);
 		return Misc.flagHasReason(mem, MemFlags.MEMORY_KEY_MAKE_AGGRESSIVE, "tOff");
 	}

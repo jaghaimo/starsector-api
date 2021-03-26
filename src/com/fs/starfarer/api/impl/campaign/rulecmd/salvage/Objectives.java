@@ -104,7 +104,9 @@ public class Objectives extends BaseCommandPlugin {
 		} else if (command.equals("hasRepImpact")) {
 			return hasRepImpact();
 		} else if (command.equals("showRepairCost")) {
-			printRepairCost();
+			printRepairCost(true);
+		} else if (command.equals("showRepairCostNoPrompt")) {
+			printRepairCost(false);
 		} else if (command.equals("printHackDesc")) {
 			printHackDesc();
 		} else if (command.equals("canBuild")) {
@@ -454,9 +456,11 @@ public class Objectives extends BaseCommandPlugin {
 //		}
 	}
 	
-	public void printRepairCost() {
+	public void printRepairCost(boolean withPrompt) {
 		Misc.showCost(text, null, null, getRepairResources(), getRepairQuantities());
-		text.addPara("Proceed with reactivation?");
+		if (withPrompt) {
+			text.addPara("Proceed with reactivation?");
+		}
 	}
 	
 	public void printSalvage() {

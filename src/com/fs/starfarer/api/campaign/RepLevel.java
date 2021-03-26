@@ -84,25 +84,35 @@ public enum RepLevel {
 		return isAtBest(RepLevel.SUSPICIOUS);
 	}
 	
-	private static final float T1 = 0.1f;
-	private static final float T2 = 0.25f;
-	private static final float T3 = 0.5f;
-	private static final float T4 = 0.75f;
-	public static RepLevel getLevelFor(float rel) {
-		if (rel >= 0) {
-			if (rel <= T1) return NEUTRAL;
-			if (rel <= T2) return FAVORABLE;
-			if (rel <= T3) return WELCOMING;
-			if (rel <= T4) return FRIENDLY;
+	private static final float T1 = 0.09f;
+	private static final float T2 = 0.24f;
+	private static final float T3 = 0.49f;
+	private static final float T4 = 0.74f;
+//	private static final float T1 = 0.1f;
+//	private static final float T2 = 0.25f;
+//	private static final float T3 = 0.5f;
+//	private static final float T4 = 0.75f;
+	public static RepLevel getLevelFor(float r) {
+		if (r >= 0) {
+			int rel = getRepInt(r);
+			if (rel <= getRepInt(T1)) return NEUTRAL;
+			if (rel <= getRepInt(T2)) return FAVORABLE;
+			if (rel <= getRepInt(T3)) return WELCOMING;
+			if (rel <= getRepInt(T4)) return FRIENDLY;
 			return COOPERATIVE;
 		} else {
-			rel = -rel;
-			if (rel <= T1) return NEUTRAL;
-			if (rel <= T2) return SUSPICIOUS;
-			if (rel <= T3) return INHOSPITABLE;
-			if (rel <= T4) return HOSTILE;
+			r = -r;
+			int rel = getRepInt(r);
+			if (rel <= getRepInt(T1)) return NEUTRAL;
+			if (rel <= getRepInt(T2)) return SUSPICIOUS;
+			if (rel <= getRepInt(T3)) return INHOSPITABLE;
+			if (rel <= getRepInt(T4)) return HOSTILE;
 			return VENGEFUL;
 		}
+	}
+	
+	public static int getRepInt(float f) {
+		return (int) Math.round(f * 100f);
 	}
 	
 	public static float getT1() {

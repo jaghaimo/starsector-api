@@ -38,7 +38,7 @@ public class AsteroidFieldGenPlugin implements TerrainGenPlugin {
 		if (radius < 400) radius = 400;
 		
 		float area = radius * radius * 3.14f;
-		int count = (int) (area / 40000f);
+		int count = (int) (area / 80000f);
 		if (count < 10) count = 10;
 		if (count > 100) count = 100;
 		

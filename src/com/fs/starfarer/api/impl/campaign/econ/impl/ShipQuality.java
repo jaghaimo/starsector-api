@@ -84,7 +84,7 @@ public class ShipQuality implements EconomyUpdateListener {
 //			}
 			int inFactionShipping = com.getCommodityMarketData().getMaxShipping(market, true);
 			prod = Math.min(prod, inFactionShipping);
-			prod = Math.max(com.getMaxSupply(), prod);
+			prod = Math.max(Math.min(com.getAvailable(), com.getMaxSupply()), prod);
 			if (prod >= d.prod && prod > 0) {
 				float q = market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).computeEffective(0f);
 				if (q >= d.qMod) {

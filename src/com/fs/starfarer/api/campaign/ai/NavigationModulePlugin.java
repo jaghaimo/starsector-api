@@ -10,6 +10,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 
 public interface NavigationModulePlugin {
 	void clearAvoidList();
+	void unavoidEntity(SectorEntityToken entity);
 	void avoidEntity(SectorEntityToken entity, float minRange, float maxRange, float duration);
 	void avoidLocation(LocationAPI containingLocation, Vector2f loc, float minRange, float maxRange, float duration);
 	
@@ -22,6 +23,6 @@ public interface NavigationModulePlugin {
 	
 	
 	void advance(float days);
-	
+	void doNotAvoid(SectorEntityToken entity, float days);
 	
 }

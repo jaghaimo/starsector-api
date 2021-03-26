@@ -10,7 +10,9 @@ import com.fs.starfarer.api.util.Misc.Token;
 
 
 /**
+ * Super unused.
  * ClearActiveMission
+ *
  */
 public class ClearActiveMission extends BaseCommandPlugin {
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {

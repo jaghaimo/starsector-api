@@ -1,5 +1,9 @@
 package com.fs.starfarer.api.combat;
 
+import java.util.List;
+
+import com.fs.starfarer.api.combat.listeners.CombatListenerManagerAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.util.DynamicStatsAPI;
 
 
@@ -15,6 +19,13 @@ public interface MutableShipStatsAPI {
 	 * @return entity (ShipAPI, MissileAPI, something else) if these mutable stats have one associated with them, null otherwise.
 	 */
 	public CombatEntityAPI getEntity();
+	
+	/**
+	 * Could be null, or a faked-up one for the stats of fighter wings deployed in combat.
+	 * @return
+	 */
+	public FleetMemberAPI getFleetMember();
+	
 	
 	public MutableStat getMaxSpeed();
 	public MutableStat getAcceleration();
@@ -315,6 +326,11 @@ public interface MutableShipStatsAPI {
 	StatBonus getMissileHealthBonus();
 
 	StatBonus getPhaseCloakCooldownBonus();
+	StatBonus getSystemCooldownBonus();
+	StatBonus getSystemRegenBonus();
+	StatBonus getSystemUsesBonus();
+	StatBonus getSystemRangeBonus();
+	
 	MutableStat getKineticArmorDamageTakenMult();
 	MutableStat getDamageToFighters();
 	MutableStat getDamageToMissiles();
@@ -333,6 +349,20 @@ public interface MutableShipStatsAPI {
 	ShipVariantAPI getVariant();
 
 	MutableStat getRecoilPerShotMultSmallWeaponsOnly();
+
+	MutableStat getEnergyWeaponFluxBasedBonusDamageMagnitude();
+	MutableStat getEnergyWeaponFluxBasedBonusDamageMinLevel();
+
+	MutableStat getAllowZeroFluxAtAnyLevel();
+
+	CombatListenerManagerAPI getListenerManager();
+	void addListener(Object listener);
+	void removeListener(Object listener);
+	void removeListenerOfClass(Class<?> c);
+	boolean hasListener(Object listener);
+	boolean hasListenerOfClass(Class<?> c);
+	<T> List<T> getListeners(Class<T> c);
+
 }
 
 

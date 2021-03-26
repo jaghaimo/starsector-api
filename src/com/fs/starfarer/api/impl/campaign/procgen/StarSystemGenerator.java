@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.EnumSet;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -21,6 +22,7 @@ import com.fs.starfarer.api.campaign.PlanetSpecAPI;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
@@ -32,11 +34,11 @@ import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.AddedEntity;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.EntityLocation;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.LocationType;
+import com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain.TileParams;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
-import com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain.TileParams;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin.CoronaParams;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -120,6 +122,12 @@ public class StarSystemGenerator {
 	public static final String TAG_REQUIRES_NEBULA = "requires_nebula";
 	
 	public static final String TAG_NOT_NEBULA_UNLESS_MOON = "not_NEBULA_unless_moon";
+	
+	public static final String CAT_HAB5 = "cat_hab5";
+	public static final String CAT_HAB4 = "cat_hab4";
+	public static final String CAT_HAB3 = "cat_hab3";
+	public static final String CAT_HAB2 = "cat_hab2";
+	public static final String CAT_HAB1 = "cat_hab1";
 	
 	public static final String CAT_NOTHING = "cat_nothing";
 	public static final String CAT_GIANT = "cat_giant";
@@ -250,6 +258,8 @@ public class StarSystemGenerator {
 	public static class GenContext {
 		public StarSystemGenerator gen;
 		public List<GeneratedPlanet> generatedPlanets = new ArrayList<GeneratedPlanet>();
+		
+		public Set<String> excludeCategories = new LinkedHashSet<String>();
 		
 		//public NamePick parentNamePick = null;
 		public StarSystemAPI system;
@@ -985,7 +995,9 @@ public class StarSystemGenerator {
 			num = 0;
 		}
 		
-		
+		addStableLocations(system, num);
+	}
+	public static void addStableLocations(StarSystemAPI system, int num) {
 		for (int i = 0; i < num; i++) {
 			LinkedHashMap<LocationType, Float> weights = new LinkedHashMap<LocationType, Float>();
 			weights.put(LocationType.STAR_ORBIT, 10f);
@@ -1147,8 +1159,15 @@ public class StarSystemGenerator {
 	}
 	
 	public static float addOrbitingEntities(StarSystemAPI system, SectorEntityToken parentStar, StarAge age,
+			int min, int max, float startingRadius,
+			int nameOffset, boolean withSpecialNames) {
+		return addOrbitingEntities(system, parentStar, age, min, max, startingRadius, nameOffset, withSpecialNames, true);
+	}
+	
+	public static float addOrbitingEntities(StarSystemAPI system, SectorEntityToken parentStar, StarAge age,
 										   int min, int max, float startingRadius,
-										   int nameOffset, boolean withSpecialNames) {
+										   int nameOffset, boolean withSpecialNames,
+										   boolean allowHabitable) {
 		CustomConstellationParams p = new CustomConstellationParams(age);
 		p.forceNebula = true; // not sure why this is here; should avoid small nebula at lagrange points though (but is that desired?)
 		
@@ -1159,7 +1178,10 @@ public class StarSystemGenerator {
 		gen.constellationAge = age;
 		gen.starAgeData = (AgeGenDataSpec) Global.getSettings().getSpec(AgeGenDataSpec.class, age.name(), true);
 		gen.star = system.getStar();
+		
 		gen.pickNebulaAndBackground();
+		if (system.getType() != null) gen.systemType = system.getType();
+		
 		
 		gen.systemCenter = system.getCenter();
 		
@@ -1212,6 +1234,12 @@ public class StarSystemGenerator {
 							parentPlanet, startingOrbitIndex, age.name(), startingRadius, MAX_ORBIT_RADIUS,
 							planetData != null ? planetData.getCategory() : null, parentOrbitIndex);
 		
+		if (!allowHabitable) {
+			context.excludeCategories.add(CAT_HAB5);
+			context.excludeCategories.add(CAT_HAB4);
+			context.excludeCategories.add(CAT_HAB3);
+			context.excludeCategories.add(CAT_HAB2);
+		}
 		
 		GenResult result = gen.addOrbitingEntities(context, num, false, addingAroundStar, false, false);
 		
@@ -1252,7 +1280,7 @@ public class StarSystemGenerator {
 		gen.constellationAge = age;
 		gen.starAgeData = (AgeGenDataSpec) Global.getSettings().getSpec(AgeGenDataSpec.class, age.name(), true);
 		gen.pickNebulaAndBackground();
-		
+		if (system.getType() != null) gen.systemType = system.getType();
 		
 		gen.addSystemwideNebula();
 		
@@ -1849,6 +1877,9 @@ public class StarSystemGenerator {
 		Collection<Object> categoryDataSpecs = Global.getSettings().getAllSpecs(CategoryGenDataSpec.class);
 		for (Object obj : categoryDataSpecs) {
 			CategoryGenDataSpec categoryData = (CategoryGenDataSpec) obj;
+			
+			if (context.excludeCategories.contains(categoryData.getCategory())) continue;
+			
 			boolean catNothing = categoryData.getCategory().equals(CAT_NOTHING);
 			if (!nothingOk && catNothing) continue;
 //			if (categoryData.getCategory().equals("cat_terrain_rings")) {
@@ -2216,9 +2247,9 @@ public class StarSystemGenerator {
 
 	
 	public static Color getColor(Color min, Color max) {
-		Color color = new Color((int) (min.getRed() + (max.getRed() - min.getRed()) * random.nextFloat()),
-				(int) (min.getGreen() + (max.getGreen() - min.getGreen()) * random.nextFloat()),
-				(int) (min.getBlue() + (max.getBlue() - min.getBlue()) * random.nextFloat()),
+		Color color = new Color((int) (min.getRed() + (max.getRed() - min.getRed()) * random.nextDouble()),
+				(int) (min.getGreen() + (max.getGreen() - min.getGreen()) * random.nextDouble()),
+				(int) (min.getBlue() + (max.getBlue() - min.getBlue()) * random.nextDouble()),
 				255);
 		
 		return color;
@@ -2260,6 +2291,12 @@ public class StarSystemGenerator {
 		return allNameableEntitiesAdded;
 	}
 
+	public static Gender pickGender() {
+		if (random.nextBoolean()) {
+			return Gender.MALE;
+		}
+		return Gender.FEMALE;
+	}
 }
 
 

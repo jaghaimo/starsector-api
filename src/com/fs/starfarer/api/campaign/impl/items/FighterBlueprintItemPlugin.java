@@ -21,8 +21,8 @@ import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.loading.Description;
-import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.Description.Type;
+import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -191,7 +191,9 @@ public class FighterBlueprintItemPlugin extends BaseSpecialItemPlugin implements
 	public String resolveDropParamsToSpecificItemData(String params, Random random) throws JSONException {
 		if (params == null || params.isEmpty()) return null;
 		
-		
+		if (!params.startsWith("{")) {
+			return params;
+		}
 		JSONObject json = new JSONObject(params);
 		
 		int tier = json.optInt("tier", -1);

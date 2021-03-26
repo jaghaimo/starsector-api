@@ -14,8 +14,8 @@ import com.fs.starfarer.api.campaign.FleetMemberPickerListener;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
-import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.DModManager;
@@ -27,11 +27,15 @@ import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
+import com.fs.starfarer.api.impl.campaign.rulecmd.FireAll;
+import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
 import com.fs.starfarer.api.impl.campaign.rulecmd.ShowDefaultVisual;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialDialogPlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialPlugin;
+import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class ShipRecoverySpecial extends BaseSalvageSpecial {
 
@@ -54,12 +58,18 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 		public String variantId = null;
 		public ShipVariantAPI variant = null;
 		public String shipName = null;
+		public String fleetMemberId = null;
 		public boolean addDmods = true;
 		public boolean pruneWeapons = true;
+		public Boolean nameAlwaysKnown = null;
+		public float sModProb = 0f;
 		public PerShipData(String variantId, ShipCondition condition) {
-			this(variantId, condition, Factions.INDEPENDENT);
+			this(variantId, condition, 0f);
 		}
-		public PerShipData(ShipVariantAPI variant, ShipCondition condition, String shipName, String factionIdForShipName) {
+		public PerShipData(String variantId, ShipCondition condition, float sModProb) {
+			this(variantId, condition, Factions.INDEPENDENT, sModProb);
+		}
+		public PerShipData(ShipVariantAPI variant, ShipCondition condition, String shipName, String factionIdForShipName, float sModProb) {
 			this.variant = variant;
 			this.condition = condition;
 			
@@ -69,14 +79,26 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 				FactionAPI faction = Global.getSector().getFaction(factionIdForShipName);
 				this.shipName = faction.pickRandomShipName();
 			}
+			
+			this.sModProb = sModProb;
 		}
 		
-		public PerShipData(String variantId, ShipCondition condition, String factionIdForShipName) {
+		public PerShipData(String variantId, ShipCondition condition, String factionIdForShipName, float sModProb) {
 			this.variantId = variantId;
 			this.condition = condition;
 			
 			FactionAPI faction = Global.getSector().getFaction(factionIdForShipName);
 			this.shipName = faction.pickRandomShipName();
+			
+			this.sModProb = sModProb;
+		}
+		
+		public ShipVariantAPI getVariant() {
+			ShipVariantAPI result = variant;
+			if (result == null && variantId != null) {
+				result = Global.getSettings().getVariant(variantId);
+			}
+			return result;
 		}
 		
 		@Override
@@ -89,6 +111,9 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 	public static class ShipRecoverySpecialData implements SalvageSpecialData {
 		public List<PerShipData> ships = new ArrayList<PerShipData>();
 		public String desc = null;
+		public Boolean storyPointRecovery = null;
+		public Boolean notNowOptionExits = null;
+		public Boolean noDescriptionText = null;
 		
 		public ShipRecoverySpecialData(String desc) {
 			this.desc = desc;
@@ -97,11 +122,11 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 		public void addShip(PerShipData ship) {
 			ships.add(ship);
 		}
-		public void addShip(String variantId, ShipCondition condition) {
-			ships.add(new PerShipData(variantId, condition));
+		public void addShip(String variantId, ShipCondition condition, float sModProb) {
+			ships.add(new PerShipData(variantId, condition, sModProb));
 		}
-		public void addShip(String variantId, ShipCondition condition, String factionIdForShipName) {
-			ships.add(new PerShipData(variantId, condition, factionIdForShipName));
+		public void addShip(String variantId, ShipCondition condition, String factionIdForShipName, float sModProb) {
+			ships.add(new PerShipData(variantId, condition, factionIdForShipName, sModProb));
 		}
 		
 		public SalvageSpecialPlugin createSpecialPlugin() {
@@ -109,8 +134,7 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 		}
 	}
 	
-	private ShipRecoverySpecialData data;
-	
+	protected ShipRecoverySpecialData data;
 	
 	public static ShipRecoverySpecialData getSpecialData(SectorEntityToken entity, String desc, boolean create, boolean replace) {
 		Object o = Misc.getSalvageSpecial(entity);
@@ -140,10 +164,10 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 		
 		data = (ShipRecoverySpecialData) specialData;
 		
-		int max = Global.getSettings().getMaxShipsInFleet() - Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy().size();
-		while (data.ships.size() > max && !data.ships.isEmpty()) {
-			data.ships.remove(0);
-		}
+//		int max = Global.getSettings().getMaxShipsInFleet() - Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy().size();
+//		while (data.ships.size() > max && !data.ships.isEmpty()) {
+//			data.ships.remove(0);
+//		}
 		
 		if (data.ships.isEmpty()) {
 			initNothing();
@@ -153,6 +177,7 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 	}
 
 	protected List<FleetMemberAPI> members = new ArrayList<FleetMemberAPI>();
+	protected List<FleetMemberAPI> recovered = new ArrayList<FleetMemberAPI>();
 	protected void init() {
 		members.clear();
 		
@@ -178,21 +203,66 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 		
 		addInitialText();
 		
+		if (isStoryPointRecovery()) {
+			addStoryOptions();
+		} else {
+			options.clearOptions();
+			options.addOption("Consider ship recovery", RECOVER);
+			
+			if (data.notNowOptionExits != null && data.notNowOptionExits) {
+				options.addOption("Leave", NOT_NOW);
+				options.setShortcut(NOT_NOW, Keyboard.KEY_ESCAPE, false, false, false, true);
+			} else {
+				options.addOption("Not now", NOT_NOW);
+			}
+		}
+	}
+	
+	
+	protected void addStoryOptions() {
 		options.clearOptions();
-		options.addOption("Consider ship recovery", RECOVER);
-		options.addOption("Not now", NOT_NOW);
+		options.addOption("Take a look the chief engineer's report and make a decision", RECOVER);
+		options.addOption("\"I'll need to consider my options.\"", NOT_NOW);
+		dialog.setOptionColor(RECOVER, Misc.getStoryOptionColor());
+	}
+	
+	protected boolean isStoryPointRecovery() {
+		return data != null && data.storyPointRecovery != null && data.storyPointRecovery;
 	}
 	
 	
 	protected void addInitialText() {
+		
+		if (data.noDescriptionText != null && data.noDescriptionText) {
+			return;
+		}
+		
 		boolean debris = Entities.DEBRIS_FIELD_SHARED.equals(entity.getCustomEntityType());
 		boolean wreck = Entities.WRECK.equals(entity.getCustomEntityType());
 		wreck |= entity.hasTag(Tags.WRECK);
 		//boolean dock = Entities.WRECK.equals(entity.getCustomEntityType());
 		
 		boolean withDesc = !debris && !wreck;
+
+		if (isStoryPointRecovery()) {
+			addText("Some time later, you hear back from your chief engineer, " +
+					"who mumbles about being a miracle worker to someone offscreen before " +
+			"noticing you've picked up the call.");
+			if (members.size() == 1) {
+				addText("\"Commander, looks like we might be able to pull this off, though I'll say you're not going to " +
+						"find what I'm going to do in any manual. And it wouldn't pass any inspection, but then again " +
+						"we're not in the Hegemony fleet. It'll fly, though.");
+			} else {
+				addText("\"Commander, looks like we might be able to pull this off, though I'll say you're not going to " +
+						"find what I'm going to do in any manual. And it wouldn't pass any inspection, but then again " +
+						"we're not in the Hegemony fleet. These ships can be made to fly again, though.");
+			}
+			return;
+		}
 		
-		
+//		
+//
+//		
 		
 		String ships = "several ships";
 		String they = "they";
@@ -202,12 +272,19 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 		}
 		
 		if (wreck) {
-			addText("Salvage crews boarding the wreck discover that many essential systems " +
-					"are undamaged and the ship could be restored to basic functionality.");
-			
-			ExtraSalvage es = BaseSalvageSpecial.getExtraSalvage(entity);
-			if (es != null && !es.cargo.isEmpty()) {
-				addText("There are also indications that it has some sort of cargo on board.");
+			if (data.storyPointRecovery != null && data.storyPointRecovery) {
+				addText("A crack engineering team sent to the wreck reports successfully preparing it " +
+						"for recovery.");
+			} else {
+				if (!FireBest.fire(null, dialog, memoryMap, "ShipRecoveryCustomText")) {
+					addText("Salvage crews boarding the wreck discover that many essential systems " +
+							"are undamaged and the ship could be restored to basic functionality.");
+					
+					ExtraSalvage es = BaseSalvageSpecial.getExtraSalvage(entity);
+					if (es != null && !es.cargo.isEmpty()) {
+						addText("There are also indications that it has some sort of cargo on board.");
+					}
+				}
 			}
 		} else if (debris) {
 			addText("Close-range scans of the debris field reveal " + ships + 
@@ -227,6 +304,11 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 		}
 		
 		if (members.size() == 1) {
+			if (members.size() > 0 && Misc.getCurrSpecialMods(members.get(0).getVariant()) > 0) {
+				text.addPara("The crew chief also reports that the hull has undergone %s, which appear to have " +
+						"survived its present state.", 
+						Misc.getStoryOptionColor(), "special modifications");
+			}
 //			if (wreck) {
 //				addText("");
 //			} else {
@@ -252,7 +334,8 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 			member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, shipData.variant);
 		}
 		
-		if (member.getHullSpec().getHints().contains(ShipTypeHints.UNBOARDABLE)) {
+		//if (member.getHullSpec().getHints().contains(ShipTypeHints.UNBOARDABLE)) {
+		if (Misc.isUnboardable(member)) {
 			return;
 		}
 		
@@ -261,8 +344,11 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 		if (first == null) first = member;
 		
 		member.setOwner(1);
+		if (shipData.fleetMemberId != null) {
+			member.setId(shipData.fleetMemberId);
+		}
 		
-		if (isNameKnown(shipData.condition)) {
+		if (isNameKnown(shipData.condition) || (shipData.nameAlwaysKnown != null && shipData.nameAlwaysKnown)) {
 			member.setShipName(shipData.shipName);
 		} else {
 			member.setShipName("<name unknown>");
@@ -311,9 +397,35 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 			DModManager.addDMods(member, true, dmods, random);
 		}
 		
+		if (shipData.sModProb > 0 && random.nextFloat() < shipData.sModProb) {
+			int num = 1;
+			float r = random.nextFloat();
+			if (r > 0.85f) {
+				num = 3;
+			} else if (num > 0.5f) {
+				num = 2;
+			}
+			
+			WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
+			for (String id : variant.getHullMods()) {
+				HullModSpecAPI spec = Global.getSettings().getHullModSpec(id);
+				if (spec.isHidden()) continue;
+				if (spec.isHiddenEverywhere()) continue;
+				if (spec.hasTag(Tags.HULLMOD_DMOD)) continue;
+				if (variant.getPermaMods().contains(spec.getId())) continue;
+				picker.add(id, spec.getCapitalCost());
+			}
+			for (int i = 0; i < num && !picker.isEmpty(); i++) {
+				String id = picker.pickAndRemove();
+				variant.addPermaMod(id, true);
+				//variant.getPermaMods().add(id);
+			}
+		}
+		
+		
 		if (shipData.pruneWeapons) {
 			float retain = getFighterWeaponRetainProb(shipData.condition);
-			FleetEncounterContext.prepareShipForRecovery(member, false, false, retain, retain, random);
+			FleetEncounterContext.prepareShipForRecovery(member, false, false, false, retain, retain, random);
 			member.getVariant().autoGenerateWeaponGroups();
 		}
 	}
@@ -392,14 +504,61 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 	}
 	
 	
+//	public void doRecovery() {
+//		for (FleetMemberAPI member : new ArrayList<FleetMemberAPI>(members)) {
+//			int index = members.indexOf(member);
+//			if (index >= 0) {
+//				PerShipData shipData = data.ships.get(index);
+//				data.ships.remove(index);
+//				members.remove(index);
+//				
+//				
+//				member.setShipName(shipData.shipName);
+//				
+//				float minHull = playerFleet.getStats().getDynamic().getValue(Stats.RECOVERED_HULL_MIN, 0f);
+//				float maxHull = playerFleet.getStats().getDynamic().getValue(Stats.RECOVERED_HULL_MAX, 0f);
+//				float minCR = playerFleet.getStats().getDynamic().getValue(Stats.RECOVERED_CR_MIN, 0f);
+//				float maxCR = playerFleet.getStats().getDynamic().getValue(Stats.RECOVERED_CR_MAX, 0f);
+//				
+//				float hull = (float) Math.random() * (maxHull - minHull) + minHull;
+//				hull = Math.max(hull, member.getStatus().getHullFraction());
+//				member.getStatus().setHullFraction(hull);
+//				
+//				float cr = (float) Math.random() * (maxCR - minCR) + minCR;
+//				member.getRepairTracker().setCR(cr);
+//				
+//				playerFleet.getFleetData().addFleetMember(member);
+//			}
+//		}
+//		optionSelected(null, RECOVERY_FINISHED);
+//	}
+	
 	@Override
 	public void optionSelected(String optionText, Object optionData) {
 		if (RECOVER.equals(optionData)) {
-			options.clearOptions();
-			options.addOption("Consider ship recovery", RECOVER);
-			options.addOption("Not now", NOT_NOW);
 			
-			dialog.showFleetMemberRecoveryDialog("Select ships to recover", members, new FleetMemberPickerListener() {
+			if (isStoryPointRecovery()) {
+				addStoryOptions();
+			} else {
+				options.clearOptions();
+				options.addOption("Consider ship recovery", RECOVER);
+				if (data.notNowOptionExits != null && data.notNowOptionExits) {
+					options.addOption("Leave", NOT_NOW);
+					options.setShortcut(NOT_NOW, Keyboard.KEY_ESCAPE, false, false, false, true);
+				} else {
+					options.addOption("Not now", NOT_NOW);
+				}
+			}
+			
+			List<FleetMemberAPI> pool = members;
+			List<FleetMemberAPI> storyPool = new ArrayList<FleetMemberAPI>();
+			if (isStoryPointRecovery()) {
+				pool = storyPool;
+				storyPool = members;
+			}
+			
+			dialog.showFleetMemberRecoveryDialog("Select ships to recover", pool, storyPool,
+					new FleetMemberPickerListener() {
 				public void pickedFleetMembers(List<FleetMemberAPI> selected) {
 					if (selected.isEmpty()) return;
 					
@@ -414,6 +573,9 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 							
 							
 							member.setShipName(shipData.shipName);
+							if (shipData.fleetMemberId != null) {
+								member.setId(shipData.fleetMemberId);
+							}
 							
 							float minHull = playerFleet.getStats().getDynamic().getValue(Stats.RECOVERED_HULL_MIN, 0f);
 							float maxHull = playerFleet.getStats().getDynamic().getValue(Stats.RECOVERED_HULL_MAX, 0f);
@@ -428,6 +590,7 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 							member.getRepairTracker().setCR(cr);
 							
 							playerFleet.getFleetData().addFleetMember(member);
+							recovered.add(member);
 						}
 					}
 					
@@ -449,12 +612,29 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 			});
 			
 		} else if (NOT_NOW.equals(optionData)) {
-			new ShowDefaultVisual().execute(null, dialog, Misc.tokenize(""), memoryMap);
-			
-			addExtraSalvageFromUnrecoveredShips();
-			setDone(true);
-			setEndWithContinue(false);
-			setShowAgain(true);
+			if (data.notNowOptionExits != null && data.notNowOptionExits) {
+//				setDone(true);
+//				setShowAgain(true);
+//				setEndWithContinue(false);
+				dialog.dismiss();
+			} else {
+				if (isStoryPointRecovery()) {
+					//Misc.setSalvageSpecial(entity, null);
+					Misc.setSalvageSpecial(entity, Misc.getPrevSalvageSpecial(entity));
+				}
+				
+				new ShowDefaultVisual().execute(null, dialog, Misc.tokenize(""), memoryMap);
+				
+				// only get extra salvage when it's not story-point recovery
+				// since unless the story point is spent and the ship is recovered
+				// it's not in a "recoverable" state an should grant no bonus stuff when salvaged
+				if (!isStoryPointRecovery()) {
+					addExtraSalvageFromUnrecoveredShips();
+				}
+				setDone(true);
+				setEndWithContinue(false);
+				setShowAgain(true);
+			}
 		} else if (RECOVERY_FINISHED.equals(optionData)) {
 			new ShowDefaultVisual().execute(null, dialog, Misc.tokenize(""), memoryMap);
 			
@@ -462,15 +642,18 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 			wreck |= entity.hasTag(Tags.WRECK);
 			
 			if (wreck) {
-				ExtraSalvage es = BaseSalvageSpecial.getExtraSalvage(entity);
-				if (es != null && !es.cargo.isEmpty()) {
+				//ExtraSalvage es = BaseSalvageSpecial.getExtraSalvage(entity);
+				//if (es != null && !es.cargo.isEmpty()) {
+				CargoAPI extra = BaseSalvageSpecial.getCombinedExtraSalvage(entity);
+				if (extra != null && !extra.isEmpty()) {
 					addText("Your crews find some securely stowed cargo during the recovery operation.");
 					
-					es.cargo.sort();
-					playerFleet.getCargo().addAll(es.cargo);
-					for (CargoStackAPI stack : es.cargo.getStacksCopy()) {
+					extra.sort();
+					playerFleet.getCargo().addAll(extra);
+					for (CargoStackAPI stack : extra.getStacksCopy()) {
 						AddRemoveCommodity.addStackGainText(stack, text);
 					}
+					clearExtraSalvage(entity);
 					//addText("The recovery operation is finished without any further surprises.");
 				}
 				
@@ -480,6 +663,16 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 				options.clearOptions();
 				options.addOption("Leave", ABORT_CONTINUE);
 				options.setShortcut(ABORT_CONTINUE, Keyboard.KEY_ESCAPE, false, false, false, true);
+				
+				ListenerUtil.reportShipsRecovered(recovered, dialog);
+				
+				for (FleetMemberAPI member : recovered) {
+					dialog.getInteractionTarget().getMemoryWithoutUpdate().set("$srs_memberId", member.getId(), 0);
+					dialog.getInteractionTarget().getMemoryWithoutUpdate().set("$srs_hullId", member.getHullId(), 0);
+					dialog.getInteractionTarget().getMemoryWithoutUpdate().set("$srs_baseHullId", member.getHullSpec().getBaseHullId(), 0);
+					FireAll.fire(null, dialog, memoryMap, "PostShipRecoverySpecial");
+				}
+				
 			} else {
 				addExtraSalvageFromUnrecoveredShips();
 				setEndWithContinue(false);
@@ -500,14 +693,11 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 	protected void addExtraSalvageFromUnrecoveredShips() {
 		if (members.isEmpty()) return;
 		
-		ExtraSalvage es = BaseSalvageSpecial.getExtraSalvage(entity);
 		CargoAPI extra = Global.getFactory().createCargo(true);
-		if (es != null) extra = es.cargo;
-		
 		for (FleetMemberAPI member : members) {
 			addStuffFromMember(extra, member);
 		}
-		setExtraSalvage(extra);
+		addTempExtraSalvage(extra);
 	}
 	
 	protected void addStuffFromMember(CargoAPI cargo, FleetMemberAPI member) {

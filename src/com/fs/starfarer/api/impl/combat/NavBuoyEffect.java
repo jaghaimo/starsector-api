@@ -3,6 +3,7 @@ package com.fs.starfarer.api.impl.combat;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BattleObjectiveAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -82,12 +83,18 @@ public class NavBuoyEffect extends BaseBattleObjectiveEffect {
 
 
 	public String getLongDescription() {
+		float min = Global.getSettings().getFloat("minFractionOfBattleSizeForSmallerSide");
+		int total = Global.getSettings().getBattleSize();
+		int maxPoints = (int)Math.round(total * (1f - min));
 		return String.format(
 				"+%d%% top speed\n" +
 				"%d%% base total maximum\n" + 
-				"can be improved by skills",
+				//"can be improved by skills\n\n" +
+				"+%d bonus deployment points\n" + 
+				"up to a maximum of " + maxPoints + " points",
 				(int)CoordinatedManeuversScript.PER_BUOY,
-				(int)CoordinatedManeuversScript.BASE_MAXIMUM);
+				(int)CoordinatedManeuversScript.BASE_MAXIMUM,
+				getBonusDeploymentPoints());
 //		   return String.format(
 //				   "command points: +%d\n" +
 //				   "\n" +

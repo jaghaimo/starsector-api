@@ -1,5 +1,8 @@
 package com.fs.starfarer.api.combat;
 
+import java.util.List;
+
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 
 public interface CombatUIAPI {
 	/**
@@ -21,4 +24,9 @@ public interface CombatUIAPI {
 	boolean isShowingCommandUI();
 
 	float getCommandUIOpacity();
+
+	CombatEntityAPI getEntityToFollowV2();
+
+	boolean isShowingDeploymentDialog();
+	List<FleetMemberAPI> getCurrentlySelectedInFleetDeploymentDialog();
 }

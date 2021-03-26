@@ -8,6 +8,7 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CoreUIAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Highlights;
@@ -35,6 +36,13 @@ public class StoragePlugin extends BaseSubmarketPlugin {
 	public boolean isIllegalOnSubmarket(String commodityId, TransferAction action) {
 		if (market.isPlayerOwned()) return false;
 		return super.isIllegalOnSubmarket(commodityId, action);
+	}
+	
+	@Override
+	public boolean isIllegalOnSubmarket(FleetMemberAPI member, TransferAction action) {
+		if (market.isPlayerOwned() || 
+				(market.getFaction() != null && market.getFaction().isNeutralFaction())) return false;
+		return super.isIllegalOnSubmarket(member, action);
 	}
 	
 	public boolean isParticipatesInEconomy() {
@@ -190,6 +198,8 @@ public class StoragePlugin extends BaseSubmarketPlugin {
 			tooltip.addToGrid(0, j++, "Ships in storage", Misc.getDGSCredits(shipCost));
 			tooltip.addToGrid(0, j++, "Cargo in storage", Misc.getDGSCredits(cargoCost));
 			tooltip.addGrid(pad);
+		} else {
+			tooltip.addPara("Monthly fees and expenses are equal to %s of base value of the stored items.", opad, h, "" + percent + "%");
 		}
 	}
 	

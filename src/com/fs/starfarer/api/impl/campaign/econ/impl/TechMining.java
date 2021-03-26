@@ -1,5 +1,6 @@
 package com.fs.starfarer.api.impl.campaign.econ.impl;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -8,6 +9,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.campaign.impl.items.BlueprintProviderItem;
@@ -15,15 +17,20 @@ import com.fs.starfarer.api.campaign.impl.items.ModSpecItemPlugin;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageEntity;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 
 public class TechMining extends BaseIndustry implements MarketImmigrationModifier {
 
 	public static final String TECH_MINING_MULT = "$core_techMiningMult";
+	
+	public static float ALPHA_CORE_FINDS_BONUS = 0.25f;
+	public static float IMPROVE_FINDS_BONUS = 0.25f;
 	
 	public void apply() {
 		super.apply(false);
@@ -144,8 +151,14 @@ public class TechMining extends BaseIndustry implements MarketImmigrationModifie
 		// add something re: size of ruins and chance to find stuff
 		
 	}
+
+	protected float getEffectivenessMult() {
+		float mult = market.getStats().getDynamic().getStat(Stats.TECH_MINING_MULT).getModifiedValue();
+		return mult;
+	}
 	
 	public float getTechMiningMult() {
+		
 		MemoryAPI mem = market.getMemoryWithoutUpdate();
 		if (mem.contains(TECH_MINING_MULT)) {
 			return mem.getFloat(TECH_MINING_MULT);
@@ -185,6 +198,8 @@ public class TechMining extends BaseIndustry implements MarketImmigrationModifie
 		float base = getTechMiningRuinSizeModifier();
 		
 		setTechMiningMult(mult * decay);
+		
+		base *= getEffectivenessMult();
 		
 		
 		List<DropData> dropRandom = new ArrayList<DropData>();
@@ -226,7 +241,7 @@ public class TechMining extends BaseIndustry implements MarketImmigrationModifie
 		
 		if (mult >= 1) {
 			float num = base * (5f + random.nextFloat() * 2f);
-			if (base < 1) base = 1;
+			if (num < 1) num = 1;
 			
 			d = new DropData();
 			d.chances = (int) Math.round(num);
@@ -275,9 +290,86 @@ public class TechMining extends BaseIndustry implements MarketImmigrationModifie
 			}
 		}
 		
+		//result.addMothballedShip(FleetMemberType.SHIP, "hermes_d_Hull", null);
+		
 		return result;
 	}
 	
+	
+	
+	@Override
+	protected void applyAlphaCoreModifiers() {
+		market.getStats().getDynamic().getStat(Stats.TECH_MINING_MULT).modifyMult(getModId(0), 1f + ALPHA_CORE_FINDS_BONUS);
+	}
+	
+	@Override
+	protected void applyNoAICoreModifiers() {
+		market.getStats().getDynamic().getStat(Stats.TECH_MINING_MULT).unmodifyMult(getModId(0));
+	}
+	
+	@Override
+	protected void applyAlphaCoreSupplyAndDemandModifiers() {
+		demandReduction.modifyFlat(getModId(0), DEMAND_REDUCTION, "Alpha core");
+	}
+	
+	protected void addAlphaCoreDescription(TooltipMakerAPI tooltip, AICoreDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		String pre = "Alpha-level AI core currently assigned. ";
+		if (mode == AICoreDescriptionMode.MANAGE_CORE_DIALOG_LIST || mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
+			pre = "Alpha-level AI core. ";
+		}
+		float a = ALPHA_CORE_FINDS_BONUS;
+		String aStr = "" + (int)Math.round(a * 100f) + "%";
+		
+		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
+			CommoditySpecAPI coreSpec = Global.getSettings().getCommoditySpec(aiCoreId);
+			TooltipMakerAPI text = tooltip.beginImageWithText(coreSpec.getIconName(), 48);
+			text.addPara(pre + "Reduces upkeep cost by %s. Reduces demand by %s unit. " +
+					"Increases finds by %s.", 0f, highlight,
+					"" + (int)((1f - UPKEEP_MULT) * 100f) + "%", "" + DEMAND_REDUCTION,
+					aStr);
+			tooltip.addImageWithText(opad);
+			return;
+		}
+		
+		tooltip.addPara(pre + "Reduces upkeep cost by %s. Reduces demand by %s unit. " +
+				"Increases finds by %s.", opad, highlight,
+				"" + (int)((1f - UPKEEP_MULT) * 100f) + "%", "" + DEMAND_REDUCTION,
+				aStr);
+		
+	}
+	
+	@Override
+	public boolean canImprove() {
+		return true;
+	}
+	
+	protected void applyImproveModifiers() {
+		if (isImproved()) {
+			market.getStats().getDynamic().getStat(Stats.TECH_MINING_MULT).modifyMult(getModId(1), 1f + IMPROVE_FINDS_BONUS);
+		} else {
+			market.getStats().getDynamic().getStat(Stats.TECH_MINING_MULT).unmodifyMult(getModId(1));
+		}
+	}
+	
+	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		float a = IMPROVE_FINDS_BONUS;
+		String aStr = "" + (int)Math.round(a * 100f) + "%";
+		
+		if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+			info.addPara("Finds increased by %s.", 0f, highlight, aStr);
+		} else {
+			info.addPara("Increases finds by %s.", 0f, highlight, aStr);
+		}
+
+		info.addSpacer(opad);
+		super.addImproveDesc(info, mode);
+	}
 }
 
 

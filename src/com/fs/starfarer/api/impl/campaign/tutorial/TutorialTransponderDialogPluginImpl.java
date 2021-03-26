@@ -74,7 +74,8 @@ public class TutorialTransponderDialogPluginImpl implements InteractionDialogPlu
 		OptionId option = (OptionId) optionData;
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(option);
 		}
 		
 		
@@ -94,7 +95,7 @@ public class TutorialTransponderDialogPluginImpl implements InteractionDialogPlu
 		case CONT1:
 			textPanel.addParagraph("Turning on the transponder makes your fleet highly visible, " +
 					"and everyone seeing it will know who you are - unlike that pirate fleet you fought earlier, " +
-					"which you had to be very close to to positively identify.");
+					"which had to be very close to positively identify.");
 			options.clearOptions();
 			options.addOption("Continue", OptionId.CONT2, null);
 			break;

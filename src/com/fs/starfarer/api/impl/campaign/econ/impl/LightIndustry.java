@@ -55,20 +55,20 @@ public class LightIndustry extends BaseIndustry {
 		float size = market.getSize();
 		PlanetAPI planet = market.getPlanetEntity();
 		if (planet == null || planet.isGasGiant()) {
-			if (size <= 4) {
+			if (size <= SIZE_FOR_SMALL_IMAGE) {
 				return Global.getSettings().getSpriteName("industry", "light_industry_orbital_low");
 			}
-			if (size >= 7) {
+			if (size >= SIZE_FOR_LARGE_IMAGE) {
 				return Global.getSettings().getSpriteName("industry", "light_industry_orbital_high");
 			}
 			return Global.getSettings().getSpriteName("industry", "light_industry_orbital");
 		}
 		else
 		{
-			if (size <= 4) {
+			if (size <= SIZE_FOR_SMALL_IMAGE) {
 				return Global.getSettings().getSpriteName("industry", "light_industry_low");
 			}
-			if (size >= 7) {
+			if (size >= SIZE_FOR_LARGE_IMAGE) {
 				return Global.getSettings().getSpriteName("industry", "light_industry_high");
 			}
 		}
@@ -76,4 +76,8 @@ public class LightIndustry extends BaseIndustry {
 		return super.getCurrentImage();
 	}
 
+	@Override
+	protected boolean canImproveToIncreaseProduction() {
+		return true;
+	}
 }

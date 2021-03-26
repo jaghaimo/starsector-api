@@ -122,6 +122,16 @@ public class PlayerActivityTracker {
 			submarketTradeData.remove(sub);
 		}
 		
+		List<MarketAPI> remove2 = new ArrayList<MarketAPI>();
+		for (MarketAPI curr : lastVisit.keySet()) {
+			if (curr.getPrimaryEntity() == null || !curr.getPrimaryEntity().isAlive()) {
+				remove2.add(curr);
+			}
+		}
+		for (MarketAPI curr : remove2) {
+			lastVisit.remove(curr);
+		}
+		
 		profitabilityData.advance(days);
 		
 		repChangeTracker.advance(days);

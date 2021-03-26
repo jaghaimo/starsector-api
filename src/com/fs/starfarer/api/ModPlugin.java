@@ -84,7 +84,12 @@ public interface ModPlugin {
 	
 	
 	
-	
+	/**
+	 * Called after F8 is pressed in combat while in devMode.
+	 * Note: the game becomes potentially unstable after an F8-dev mode reload. That is,
+	 * crashes may occur that would not have occured otherwise and are not indicative of bugs.
+	 */
+	void onDevModeF8Reload();
 	
 	/**
 	 * Called to pick an AI implementation for a specific ship. Here instead of in CampaignPlugin to support custom

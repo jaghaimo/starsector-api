@@ -27,8 +27,14 @@ public class BaseLogisticsHullMod extends BaseHullMod {
 			else if (max == 2) text = "two";
 			else if (max == 3) text = "three";
 			else if (max == 4) text = "four";
-			text = "" + MAX_MODS;
-			return "Maximum of " + text + " non-built-in \"Logistics\" hullmods per hull";
+			
+//			text = "" + MAX_MODS;
+			text = "" + max;
+			if (max == MAX_MODS) {
+				return "Maximum of " + text + " non-built-in \"Logistics\" hullmods per hull";
+			} else {
+				return "Maximum of " + text + " non-built-in \"Logistics\" hullmods for this hull";
+			}
 		}
 		return super.getUnapplicableReason(ship);
 	}
@@ -50,6 +56,7 @@ public class BaseLogisticsHullMod extends BaseHullMod {
 		int num = 0;
 		for (String id : ship.getVariant().getHullMods()) {
 			if (ship.getHullSpec().isBuiltInMod(id)) continue;
+			if (ship.getVariant().getPermaMods().contains(id)) continue;
 			
 			HullModSpecAPI mod = Global.getSettings().getHullModSpec(id);
 			if (mod.hasUITag(HullMods.TAG_UI_LOGISTICS)) {

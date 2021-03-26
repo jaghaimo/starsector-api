@@ -19,11 +19,12 @@ import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
+import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
-import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
+import com.fs.starfarer.api.impl.campaign.intel.misc.CargoPodsIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireAll;
@@ -116,11 +117,11 @@ public class CargoPods extends BaseCommandPlugin {
 
 	protected void computeStabilizeData() {
 		float total = podsCargo.getTotalPersonnel() + podsCargo.getSpaceUsed() + podsCargo.getFuel();
-		float stabilizeSupplies = Math.max((int) total / 20, 2);
+		float stabilizeSupplies = Math.max((int) total / 50, 2);
 		
 		memory.set("$stabilizeSupplies", (int) stabilizeSupplies, 0f);
 		
-		float stabilizeDays = 150;
+		float stabilizeDays = 400;
 		memory.set("$stabilizeDays", (int) stabilizeDays, 0f);
 	}
 	
@@ -155,7 +156,7 @@ public class CargoPods extends BaseCommandPlugin {
 		SectorEntityToken focus = findOrbitFocus(entity);
 		if (focus != null) {
 			float radius = Misc.getDistance(focus.getLocation(), entity.getLocation());
-			float orbitDays = radius / (5f + StarSystemGenerator.random.nextFloat() * 20f);
+			float orbitDays = radius / (5f + Misc.random.nextFloat() * 20f);
 			float angle = Misc.getAngleInDegreesStrict(focus.getLocation(), entity.getLocation());
 			entity.setCircularOrbit(focus, angle, radius, orbitDays);
 		} else {
@@ -185,14 +186,33 @@ public class CargoPods extends BaseCommandPlugin {
 		AddRemoveCommodity.updatePlayerMemoryQuantity(Commodities.SUPPLIES);
 		AddRemoveCommodity.addCommodityLossText(Commodities.SUPPLIES, (int) stabilizeSupplies, text);
 		
-		text.addParagraph("Your crew busy themselves attaching micro-thrusters and performing " +
-						  "the requisite calculations to make sure the pods remain in a stable orbit.");
+		text.addParagraph("Your crew busy themselves attaching micro-thrusters and carefully " +
+						  "sealing, balancing, and interconnecting the pods to make sure they remain in a stable orbit.");
+//		text.addParagraph("Your crew busy themselves attaching micro-thrusters and performing " +
+//						  "the requisite calculations to make sure the pods remain in a stable orbit.");
 		float daysLeft = plugin.getDaysLeft();
-		String atLeastTime = Misc.getAtLeastStringForDays((int) daysLeft);
-		text.addParagraph("When the work is done, your systems estimate they'll be able to predict the location of the pods for " + atLeastTime + ".");
+//		String atLeastTime = Misc.getAtLeastStringForDays((int) daysLeft);
+//		text.addParagraph("When the work is done, your systems estimate they'll be able to predict the location of the pods for " + atLeastTime + ".");
 		
 		memory.set("$stabilized", true);
 		memory.set("$daysLeft", (int) daysLeft, 0f);
+		
+		
+		CargoPodsIntel intel = null;
+		for (IntelInfoPlugin iip : Global.getSector().getIntelManager().getIntel(CargoPodsIntel.class)) {
+			CargoPodsIntel curr = (CargoPodsIntel) iip;
+			if (curr.getPods() == entity) {
+				intel = curr;
+				break;
+			}
+		}
+		if (intel == null) {
+			intel = new CargoPodsIntel(entity);
+			Global.getSector().getIntelManager().addIntel(intel, true);
+		}
+		
+		Global.getSector().getIntelManager().addIntelToTextPanel(intel, text);
+		
 	}
 	
 	protected void destabilize() {

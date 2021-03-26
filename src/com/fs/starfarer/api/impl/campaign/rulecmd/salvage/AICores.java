@@ -102,6 +102,7 @@ public class AICores extends BaseCommandPlugin {
 	protected void selectCores() {
 		CargoAPI copy = Global.getFactory().createCargo(false);
 		//copy.addAll(cargo);
+		//copy.setOrigSource(playerCargo);
 		for (CargoStackAPI stack : playerCargo.getStacksCopy()) {
 			CommoditySpecAPI spec = stack.getResourceIfResource();
 			if (spec != null && spec.getDemandClass().equals(Commodities.AI_CORES)) {
@@ -220,6 +221,9 @@ public class AICores extends BaseCommandPlugin {
 	}
 	
 	public static float getBaseRepValue(String coreType) {
+		if (Commodities.OMEGA_CORE.equals(coreType)) {
+			return 15f;
+		}
 		if (Commodities.ALPHA_CORE.equals(coreType)) {
 			return 5f;
 		}

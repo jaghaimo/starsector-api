@@ -15,6 +15,12 @@ import com.fs.starfarer.api.util.Misc;
 
 
 public class TradeCenter extends BaseIndustry implements MarketImmigrationModifier {
+
+	public static float BASE_BONUS = 50f;
+	public static float ALPHA_CORE_BONUS = 25f;
+	public static float IMPROVE_BONUS = 25f;
+	
+	public static float STABILITY_PELANTY = 3f;
 	
 	//protected transient CargoAPI savedCargo = null;
 	protected transient SubmarketAPI saved = null;
@@ -51,7 +57,10 @@ public class TradeCenter extends BaseIndustry implements MarketImmigrationModifi
 			market.removeSubmarket(Submarkets.SUBMARKET_OPEN);
 		}
 		
-		modifyStabilityWithBaseMod();
+		//modifyStabilityWithBaseMod();
+		market.getStability().modifyFlat(getModId(), -STABILITY_PELANTY, getNameForModifier());
+		
+		market.getIncomeMult().modifyPercent(getModId(0), BASE_BONUS, getNameForModifier());
 		
 		if (!isFunctional()) {
 			unapply();
@@ -76,14 +85,22 @@ public class TradeCenter extends BaseIndustry implements MarketImmigrationModifi
 		}
 		
 		market.getStability().unmodifyFlat(getModId());
+		
+		market.getIncomeMult().unmodifyPercent(getModId(0));
 	}
 	
-	@Override
-	protected int getBaseStabilityMod() {
-		return 1;
+	protected void addStabilityPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode) {
+		Color h = Misc.getHighlightColor();
+		float opad = 10f;
+		
+		float a = BASE_BONUS;
+		String aStr = "+" + (int)Math.round(a * 1f) + "%";
+		tooltip.addPara("Colony income: %s", opad, h, aStr);
+		
+		h = Misc.getNegativeHighlightColor();
+		tooltip.addPara("Stability penalty: %s", opad, h, "" + -(int)STABILITY_PELANTY);
 	}
-
-
+	
 	@Override
 	protected void addRightAfterDescriptionSection(TooltipMakerAPI tooltip, IndustryTooltipMode mode) {
 		if (market.isPlayerOwned() || currTooltipMode == IndustryTooltipMode.ADD_INDUSTRY) {
@@ -111,15 +128,29 @@ public class TradeCenter extends BaseIndustry implements MarketImmigrationModifi
 		return "Requires a functional spaceport";
 	}
 	
-	public static float ALPHA_CORE_BONUS = 1f;
+	@Override
+	public String getCurrentImage() {
+		float size = market.getSize();
+		if (size <= SIZE_FOR_SMALL_IMAGE) {
+			return Global.getSettings().getSpriteName("industry", "commerce_low");
+		}
+		if (size >= SIZE_FOR_LARGE_IMAGE) {
+			return Global.getSettings().getSpriteName("industry", "commerce_high");
+		}
+		
+		return super.getCurrentImage();
+	}
+	
+	
+	//market.getIncomeMult().modifyMult(id, INCOME_MULT, "Industrial planning");
 	@Override
 	protected void applyAlphaCoreModifiers() {
-		market.getStability().modifyFlat(getModId(1), ALPHA_CORE_BONUS, "Alpha core (" + getNameForModifier() + ")");
+		market.getIncomeMult().modifyPercent(getModId(1), ALPHA_CORE_BONUS, "Alpha core (" + getNameForModifier() + ")");
 	}
 	
 	@Override
 	protected void applyNoAICoreModifiers() {
-		market.getStability().unmodifyFlat(getModId(1));
+		market.getIncomeMult().unmodifyPercent(getModId(1));
 	}
 	
 	@Override
@@ -136,13 +167,13 @@ public class TradeCenter extends BaseIndustry implements MarketImmigrationModifi
 			pre = "Alpha-level AI core. ";
 		}
 		float a = ALPHA_CORE_BONUS;
-		String str = "" + (int) Math.round(a);
+		String str = "" + (int) Math.round(a) + "%";
 		
 		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
 			CommoditySpecAPI coreSpec = Global.getSettings().getCommoditySpec(aiCoreId);
 			TooltipMakerAPI text = tooltip.beginImageWithText(coreSpec.getIconName(), 48);
 			text.addPara(pre + "Reduces upkeep cost by %s. Reduces demand by %s unit. " +
-					"Increases stability by %s.", 0f, highlight,
+					"Increases colony income by %s.", 0f, highlight,
 					"" + (int)((1f - UPKEEP_MULT) * 100f) + "%", "" + DEMAND_REDUCTION,
 					str);
 			tooltip.addImageWithText(opad);
@@ -150,23 +181,42 @@ public class TradeCenter extends BaseIndustry implements MarketImmigrationModifi
 		}
 		
 		tooltip.addPara(pre + "Reduces upkeep cost by %s. Reduces demand by %s unit. " +
-				"Increases stability by %s.", opad, highlight,
+				"Increases colony income by %s.", opad, highlight,
 				"" + (int)((1f - UPKEEP_MULT) * 100f) + "%", "" + DEMAND_REDUCTION,
 				str);
 		
 	}
 	
+	
 	@Override
-	public String getCurrentImage() {
-		float size = market.getSize();
-		if (size <= 4) {
-			return Global.getSettings().getSpriteName("industry", "commerce_low");
+	public boolean canImprove() {
+		return true;
+	}
+	
+	protected void applyImproveModifiers() {
+		if (isImproved()) {
+			market.getIncomeMult().modifyPercent(getModId(2), IMPROVE_BONUS,
+							getImprovementsDescForModifiers() + " (" + getNameForModifier() + ")");
+		} else {
+			market.getIncomeMult().unmodifyPercent(getModId(2));
 		}
-		if (size >= 7) {
-			return Global.getSettings().getSpriteName("industry", "commerce_high");
-		}
+	}
+	
+	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
 		
-		return super.getCurrentImage();
+		float a = IMPROVE_BONUS;
+		String aStr = "" + (int)Math.round(a * 1f) + "%";
+		
+		if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+			info.addPara("Colony income increased by %s.", 0f, highlight, aStr);
+		} else {
+			info.addPara("Increases colony income by %s.", 0f, highlight, aStr);
+		}
+
+		info.addSpacer(opad);
+		super.addImproveDesc(info, mode);
 	}
 }
 

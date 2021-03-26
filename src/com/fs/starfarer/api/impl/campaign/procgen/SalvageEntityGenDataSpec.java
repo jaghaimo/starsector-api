@@ -22,6 +22,7 @@ public class SalvageEntityGenDataSpec {
 	public static class DropData implements Cloneable {
 		transient public String group;
 		transient public int chances = -1;
+		transient public int maxChances = -1;
 		transient public int value = -1;
 		transient public float valueMult = 1f;
 		private WeightedRandomPicker<DropGroupRow> custom = null;
@@ -39,6 +40,11 @@ public class SalvageEntityGenDataSpec {
 						chances = json.getInt("c");
 					} else {
 						chances = -1;
+					}
+					if (json.has("mC")) {
+						maxChances = json.getInt("mC");
+					} else {
+						maxChances = -1;
 					}
 					if (json.has("v")) {
 						value = json.getInt("v");
@@ -62,6 +68,7 @@ public class SalvageEntityGenDataSpec {
 				JSONObject json = new JSONObject();
 				if (group != null) json.put("g", group);
 				if (chances > 0) json.put("c", chances);
+				if (maxChances > 0) json.put("mC", maxChances);
 				if (value > 0) json.put("v", value);
 				if (valueMult != 1) json.put("vM", valueMult);
 				j = json.toString();
@@ -189,7 +196,7 @@ public class SalvageEntityGenDataSpec {
 	private String nameOverride;
 	private float salvageRating, detectionRange, xpDiscover, xpSalvage, radiusOverride = -1f;
 	private DiscoverabilityType type;
-	private float probDefenders, defQuality, minStr, maxStr, maxDefenderSize, probStation;
+	private float probDefenders, defQuality, minStr, maxStr, maxDefenderSize, minDefenderSize, probStation;
 	private String stationRole;
 	private String defFaction;
 	
@@ -228,6 +235,7 @@ public class SalvageEntityGenDataSpec {
 		minStr = (float) row.optDouble("minStr", 0);
 		maxStr = (float) row.optDouble("maxStr", 0);
 		maxDefenderSize = (float) row.optDouble("maxSize", 4);
+		minDefenderSize = (float) row.optDouble("minSize", 0);
 		
 		defFaction = row.optString("defFaction", null);
 		if (defFaction != null && defFaction.isEmpty()) defFaction = null;
@@ -268,13 +276,24 @@ public class SalvageEntityGenDataSpec {
 				
 				if (value.contains("x")) {
 					String [] chancesXValue = value.split("x");
-					data.chances = Integer.valueOf(chancesXValue[0].trim()); 
+					if (chancesXValue[0].trim().contains("-")) {
+						data.chances = Integer.valueOf(chancesXValue[0].trim().split("-")[0]);
+						data.maxChances = Integer.valueOf(chancesXValue[0].trim().split("-")[1]);
+					} else {
+						data.chances = Integer.valueOf(chancesXValue[0].trim());
+					}
 					data.value = Integer.valueOf(chancesXValue[1].trim()); 
 				} else {
 					data.value = -1;
-					float c = Float.valueOf(value); 
-					data.chances = (int) Math.max(c, 1);
-					if (c < 1) data.valueMult = c;
+					
+					if (value.contains("-")) {
+						data.chances = Integer.valueOf(value.trim().split("-")[0]);
+						data.maxChances = Integer.valueOf(value.trim().split("-")[1]);
+					} else {
+						float c = Float.valueOf(value); 
+						data.chances = (int) Math.max(c, 1);
+						if (c < 1) data.valueMult = c;
+					}
 					//data.chances = Integer.valueOf(value);
 				}
 				
@@ -399,6 +418,14 @@ public class SalvageEntityGenDataSpec {
 		this.maxDefenderSize = maxSize;
 	}
 	
+	public float getMinDefenderSize() {
+		return minDefenderSize;
+	}
+
+	public void setMinDefenderSize(float minDefenderSize) {
+		this.minDefenderSize = minDefenderSize;
+	}
+
 	public float getDefQuality() {
 		return defQuality;
 	}

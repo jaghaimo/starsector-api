@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BattleObjectiveAPI;
 import com.fs.starfarer.api.combat.BattleObjectiveEffect;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -29,6 +30,12 @@ public abstract class BaseBattleObjectiveEffect implements BattleObjectiveEffect
 		itemsNAFighters.add(item);
 		item = new ShipStatusItem(objective.getDisplayName(), "n / a to frigates", false);
 		itemsNAFrigates.add(item);
+	}
+	
+	public int getBonusDeploymentPoints() {
+		int bs = Global.getSettings().getBattleSize();
+		int bonus = (int)Math.round((float) bs * objective.getBattleSizeFractionBonus());
+		return bonus;
 	}
 	
 	public void giveCommandPointsForCapturing(int points) {

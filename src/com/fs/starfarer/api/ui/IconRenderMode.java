@@ -9,5 +9,6 @@ public enum IconRenderMode {
 	DIM_RED,
 	BLACK,
 	OUTLINE_RED,
-	OUTLINE_GREE
+	OUTLINE_GREEN,
+	OUTLINE_CUSTOM,
 }

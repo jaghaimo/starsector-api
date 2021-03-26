@@ -2,14 +2,29 @@ package com.fs.starfarer.api.impl.campaign.ids;
 
 public class Stats {
 	
+	// character stats
+	public static final String AUXILIARY_EFFECT_ADD_PERCENT = "auxiliary_effect_add_percent";
+	public static final String OFFICER_MAX_LEVEL_MOD = "officer_max_level_mod";
+	public static final String OFFICER_MAX_ELITE_SKILLS_MOD = "officer_max_elite_skills_mod";
+	public static final String BUILD_IN_BONUS_XP_MOD = "build_in_bonus_xp_mod";
+	public static final String CUSTOM_PRODUCTION_MOD = "custom_production_mod";
+	
+	public static final String NUM_MAX_CONTACTS_MOD = "num_max_contacts_mod";
+	
 	// outposts - these are admin stats, so, applied in "CharacterStatsSkillEffect"
+	public static final String FUEL_SUPPLY_BONUS_MOD = "fuel_supply_bonus";
 	public static final String SUPPLY_BONUS_MOD = "supply_bonus";
 	public static final String DEMAND_REDUCTION_MOD = "demand_reduction";
 	
 	// markets 
 	//- old, will probably replace these two?
-	public static final String OFFICER_NUM_MULT = "officer_num_mult";
-	public static final String OFFICER_LEVEL_MULT = "officer_level_mult";
+//	public static final String OFFICER_NUM_MULT = "officer_num_mult";
+//	public static final String OFFICER_LEVEL_MULT = "officer_level_mult";
+	
+	public static final String ADMIN_PROB_MOD = "admin_prob";
+	public static final String OFFICER_PROB_MOD = "officer_prob";
+	public static final String OFFICER_ADDITIONAL_PROB_MULT_MOD = "additional_officer_prob_mult";
+	public static final String OFFICER_IS_MERC_PROB_MOD = "officer_is_merc_prob";
 	
 	public static final String PRODUCTION_QUALITY_MOD = "production_quality_mod";
 	public static final String FLEET_QUALITY_MOD = "fleet_quality_mod";
@@ -22,6 +37,8 @@ public class Stats {
 	
 	public static final String GROUND_DEFENSES_MOD = "ground_defenses_mod";
 	
+	public static final String TECH_MINING_MULT = "tech_mining_mult";
+	
 	/**
 	 * Does not include structures.
 	 */
@@ -29,12 +46,16 @@ public class Stats {
 	
 	// fleets
 	public static final String PLANETARY_OPERATIONS_MOD = "ground_attack_mod";
+	public static final String PLANETARY_OPERATIONS_CASUALTIES_MULT = "ground_attack_casualties_mult";
 	
 	public static final String CAN_SEE_NASCENT_POINTS = "can_see_nascent_points"; // not actually used, can always see
 	
 	public static final String SURVEY_MAX_HAZARD = "survey_max_hazard";
-	public static final String SURVEY_COST_MULT = "survey_cost_mult"; // unused/unimplemented
+	public static final String SURVEY_COST_MULT = "survey_cost_mult";
+	public static final String PLANET_MINING_VALUE_MULT = "planet_mining_value_mult";
 	//public static final String SALVAGE_MAX_RATING = "salvage_max_rating";
+	
+	public static final String MOVE_SLOW_SPEED_BONUS_MOD = "move_slow_speed_bonus_mod";
 	
 	public static final String NAVIGATION_PENALTY_MULT = "nav_penalty_mult";
 	public static final String COORDINATED_MANEUVERS_MAX = "coord_maneuvers_max";
@@ -42,6 +63,7 @@ public class Stats {
 	
 	public static final String FUEL_SALVAGE_VALUE_MULT_FLEET = "fuel_salvage_value_mult_fleet";
 	public static final String SALVAGE_VALUE_MULT_FLEET_INCLUDES_RARE = "salvage_value_bonus_fleet";
+	public static final String SALVAGE_VALUE_MULT_FLEET_NOT_RARE = "salvage_value_bonus_fleet_not_rare";
 	public static final String BATTLE_SALVAGE_MULT_FLEET = "battle_salvage_value_bonus_fleet";
 	
 	public static final String COMMAND_POINT_RATE_COMMANDER = "command_point_rate";
@@ -66,8 +88,8 @@ public class Stats {
 	
 	// fleet ability modifiers
 	public static final String GO_DARK_DETECTED_AT_MULT = "go_dark_effectiveness";
-	public static final String GO_DARK_BURN_PENALTY_MULT = "go_dark_burn_penalty_mult";
-	public static final String SENSOR_BURST_BURN_PENALTY_MULT = "sensor_burst_penalty_mult";
+	//public static final String GO_DARK_BURN_PENALTY_MULT = "go_dark_burn_penalty_mult";
+	//public static final String SENSOR_BURST_BURN_PENALTY_MULT = "sensor_burst_penalty_mult";
 	public static final String SUSTAINED_BURN_BONUS = "sustained_burn_bonus";
 	public static final String EMERGENCY_BURN_CR_MULT = "emergency_burn_mult";
 	public static final String DIRECT_JUMP_CR_MULT = "direct_jump_cr_mult";
@@ -81,9 +103,12 @@ public class Stats {
 	public static final String BOARDING_CHANCE_MULT = "boarding_chance_mult";
 	
 	/**
-	 * 25% of this modifier applies to post-combat salvage.
+	 * 20% of this modifier applies to post-combat salvage.
 	 */
 	public static final String SALVAGE_VALUE_MULT_MOD = "salvage_value_bonus_ship";
+	
+	public static final String PHASE_FIELD_SENSOR_PROFILE_MOD  = "phase_field_sensor_profile_mod";
+	public static final String HRS_SENSOR_RANGE_MOD  = "hrs_sensor_range_mod";
 	
 	//public static final String BATTLE_SALVAGE_VALUE_MULT_MOD = "battle_salvage_value_bonus_ship";
 	public static final String HULL_DAMAGE_CR_LOSS = "hull_damage_cr_loss";
@@ -94,7 +119,12 @@ public class Stats {
 	}
 	
 	// ships
+	public static final String ACT_AS_COMBAT_SHIP = "act_as_combat_ship";
+	
+	
+	public static final String MAX_PERMANENT_HULLMODS_MOD = "max_permanent_hullmods_mod";
 	public static final String MAX_LOGISTICS_HULLMODS_MOD = "max_logistics_hullmods_mod";
+	public static final String PHASE_CLOAK_SPEED_MOD = "phase_cloak_speed";
 	
 	public static final String PD_IGNORES_FLARES = "pd_ignores_flares";
 	public static final String PD_BEST_TARGET_LEADING = "pd_best_target_leading";

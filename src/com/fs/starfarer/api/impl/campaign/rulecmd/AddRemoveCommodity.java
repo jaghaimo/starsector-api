@@ -16,9 +16,10 @@ import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.loading.AbilitySpecAPI;
+import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.util.MutableValue;
 import com.fs.starfarer.api.util.Misc.Token;
+import com.fs.starfarer.api.util.MutableValue;
 
 /**
  *	AddRemoveCommodity <commodity id> <quantity> <withText>
@@ -37,7 +38,10 @@ public class AddRemoveCommodity extends BaseCommandPlugin {
 		} else {
 			quantity = params.get(1).getFloat(memoryMap);
 		}
-		boolean withText = dialog != null && params.size() >= next + 1 && params.get(next).getBoolean(memoryMap) && Math.abs(quantity) >= 1;
+		boolean withText = Math.abs(quantity) >= 1;
+		if (dialog != null && params.size() >= next + 1) {
+			withText = params.get(next).getBoolean(memoryMap) && withText;
+		}
 		
 		if (commodityId.equals("credits")) {
 			MutableValue credits = Global.getSector().getPlayerFleet().getCargo().getCredits();
@@ -76,7 +80,7 @@ public class AddRemoveCommodity extends BaseCommandPlugin {
 	
 	public static void updatePlayerMemoryQuantity(String commodityId) {
 		MemoryAPI memory = Global.getSector().getCharacterData().getMemory();
-		String key ="$" + commodityId;
+		String key = "$" + commodityId;
 		if (memory.contains(key)) {
 			if (memory.get(key) instanceof Integer || memory.get(key) instanceof Float) {
 				memory.set(key, (int)Global.getSector().getPlayerFleet().getCargo().getCommodityQuantity(commodityId), 0);
@@ -96,8 +100,8 @@ public class AddRemoveCommodity extends BaseCommandPlugin {
 			name = name.toLowerCase();
 		}
 		int quantity = (int) stack.getSize();
-		text.addParagraph("Gained " + quantity + Strings.X + " " + name + "", Misc.getPositiveHighlightColor());
-		text.highlightInLastPara(Misc.getHighlightColor(), "" + (int) quantity + Strings.X);
+		text.addParagraph("Gained " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getPositiveHighlightColor());
+		text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
 		text.setFontInsignia();
 	}
 	
@@ -109,8 +113,8 @@ public class AddRemoveCommodity extends BaseCommandPlugin {
 		String name = spec.getLowerCaseName();
 		//boolean special = Commodities.SURVEY_DATA.equals(spec.getDemandClass());
 		//if (!special) name = name.toLowerCase();
-		text.addParagraph("Gained " + (int) quantity + Strings.X + " " + name + "", Misc.getPositiveHighlightColor());
-		text.highlightInLastPara(Misc.getHighlightColor(), "" + (int) quantity + Strings.X);
+		text.addParagraph("Gained " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getPositiveHighlightColor());
+		text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
 		text.setFontInsignia();
 	}
 	
@@ -122,8 +126,8 @@ public class AddRemoveCommodity extends BaseCommandPlugin {
 		String name = spec.getLowerCaseName();
 		//boolean special = Commodities.SURVEY_DATA.equals(spec.getDemandClass());
 		//if (!special) name = name.toLowerCase();
-		text.addParagraph("Lost " + (int) quantity + Strings.X + " " + name + "", Misc.getNegativeHighlightColor());
-		text.highlightInLastPara(Misc.getHighlightColor(), "" + (int) quantity + Strings.X);
+		text.addParagraph("Lost " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getNegativeHighlightColor());
+		text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
 		text.setFontInsignia();
 	}
 	
@@ -178,7 +182,22 @@ public class AddRemoveCommodity extends BaseCommandPlugin {
 		}
 		String str = officer.getName().getFullName();
 		if (rank != null) str = rank + " " + str;
-		text.addParagraph(str + " has joined your fleet", Misc.getPositiveHighlightColor());
+		LabelAPI label = text.addParagraph(str + " (level " + officer.getStats().getLevel() + ") has joined your fleet", Misc.getPositiveHighlightColor());
+		label.setHighlightColors(Misc.getHighlightColor(), Misc.getHighlightColor());
+		label.setHighlight(str, "(level " + officer.getStats().getLevel() + ")");
+		//text.highlightInLastPara(Misc.getHighlightColor(), str);
+		text.setFontInsignia();
+	}
+	
+	public static void addOfficerLossText(PersonAPI officer, TextPanelAPI text) {
+		text.setFontSmallInsignia();
+		String rank = officer.getRank();
+		if (rank != null) {
+			rank = Misc.ucFirst(rank);
+		}
+		String str = officer.getName().getFullName();
+		if (rank != null) str = rank + " " + str;
+		text.addParagraph(str + " has left your fleet", Misc.getNegativeHighlightColor());
 		text.highlightInLastPara(Misc.getHighlightColor(), str);
 		text.setFontInsignia();
 	}
@@ -206,10 +225,28 @@ public class AddRemoveCommodity extends BaseCommandPlugin {
 		text.setFontInsignia();
 	}
 	
+	public static void addFleetMemberLossText(FleetMemberAPI member, TextPanelAPI text) {
+		text.setFontSmallInsignia();
+		String str = member.getShipName() + ", " + member.getVariant().getHullSpec().getHullNameWithDashClass() + " " + member.getVariant().getHullSpec().getDesignation(); 
+		text.addParagraph("Lost " + str + "", Misc.getNegativeHighlightColor());
+		text.highlightInLastPara(Misc.getHighlightColor(), str);
+		text.setFontInsignia();
+	}
+	
 	public static void addFleetMemberGainText(ShipVariantAPI variant, TextPanelAPI text) {
 		text.setFontSmallInsignia();
 		String str = variant.getHullSpec().getHullNameWithDashClass() + " " + variant.getHullSpec().getDesignation(); 
 		text.addParagraph("Acquired " + str + "", Misc.getPositiveHighlightColor());
+		text.highlightInLastPara(Misc.getHighlightColor(), str);
+		text.setFontInsignia();
+	}
+	
+	public static void addCRLossText(FleetMemberAPI member, TextPanelAPI text, float crLoss) {
+		text.setFontSmallInsignia();
+		String str = member.getShipName() + ", " + member.getVariant().getHullSpec().getHullNameWithDashClass() + " " + member.getVariant().getHullSpec().getDesignation();
+		String cr = Math.round(crLoss * 100f) + "%";
+		text.addPara("%s has lost %s combat readiness", Misc.getNegativeHighlightColor(), Misc.getHighlightColor(), 
+					str, cr);
 		text.highlightInLastPara(Misc.getHighlightColor(), str);
 		text.setFontInsignia();
 	}

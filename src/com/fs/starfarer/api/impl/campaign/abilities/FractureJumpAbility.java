@@ -10,18 +10,20 @@ import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.NascentGravityWellAPI;
-import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Pings;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
+import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.Misc.FleetMemberDamageLevel;
 
 public class FractureJumpAbility extends BaseDurationAbility {
 
@@ -52,10 +54,9 @@ public class FractureJumpAbility extends BaseDurationAbility {
 		
 		if (fleet.isInHyperspaceTransition()) return;
 		
-		
 		if (fleet.isInHyperspace() && canUseToJumpToSystem()) { 
 			NascentGravityWellAPI well = getNearestWell(NASCENT_JUMP_DIST);
-			if (well == null || well.getPlanet() == null) return;
+			if (well == null || well.getTarget() == null) return;
 			
 			this.well = well;
 			ping = Global.getSector().addPing(fleet, Pings.TRANSVERSE_JUMP);
@@ -97,7 +98,7 @@ public class FractureJumpAbility extends BaseDurationAbility {
 		
 		if (level == 1 && primed != null) {
 			if (well != null && fleet.isInHyperspace() && canUseToJumpToSystem()) { 
-				PlanetAPI planet = well.getPlanet();
+				SectorEntityToken planet = well.getTarget();
 				Vector2f loc = Misc.getPointAtRadius(planet.getLocation(), planet.getRadius() + 200f + fleet.getRadius());
 				SectorEntityToken token = planet.getContainingLocation().createToken(loc.x, loc.y);
 				
@@ -107,9 +108,15 @@ public class FractureJumpAbility extends BaseDurationAbility {
 					fleet.getContainingLocation() instanceof StarSystemAPI) {
 				float crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.DIRECT_JUMP_CR_MULT);
 				if (crCostFleetMult > 0) {
+					for (FleetMemberAPI member : getNonReadyShips()) {
+						if ((float) Math.random() < EmergencyBurnAbility.ACTIVATION_DAMAGE_PROB) {
+							Misc.applyDamage(member, null, FleetMemberDamageLevel.LOW, false, null, null,
+									true, null, member.getShipName() + " suffers damage from Transverse Jump activation");
+						}
+					}
 					for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 						float crLoss = member.getDeployCost() * CR_COST_MULT * crCostFleetMult;
-						member.getRepairTracker().applyCREvent(-crLoss, "Direct jump");
+						member.getRepairTracker().applyCREvent(-crLoss, "Transverse jump");
 					}
 				}
 				
@@ -169,13 +176,15 @@ public class FractureJumpAbility extends BaseDurationAbility {
 		
 		if (fleet.isInHyperspaceTransition()) return false;
 		
+		if (TutorialMissionIntel.isTutorialInProgress()) return false;
+		
 		if (canUseToJumpToSystem() && fleet.isInHyperspace() && getNearestWell(NASCENT_JUMP_DIST) != null) {
 			return true;
 		}
 		
 		if (canUseToJumpToHyper() && !fleet.isInHyperspace()) {
-			if (getNonReadyShips().isEmpty() &&
-					(getFleet().isAIMode() || computeFuelCost() <= getFleet().getCargo().getFuel())) {
+			//if (getNonReadyShips().isEmpty() &&
+			if ((getFleet().isAIMode() || computeFuelCost() <= getFleet().getCargo().getFuel())) {
 				return true;
 			}
 		}
@@ -240,6 +249,11 @@ public class FractureJumpAbility extends BaseDurationAbility {
 					Misc.getRoundedValueMaxOneAfterDecimal(fuelCost));
 		}
 		
+		
+		if (TutorialMissionIntel.isTutorialInProgress()) { 
+			tooltip.addPara("Can not be used right now.", bad, pad);
+		}
+		
 		if (!fleet.isInHyperspace()) {
 			if (fuelCost > fleet.getCargo().getFuel()) {
 				tooltip.addPara("Not enough fuel.", bad, pad);
@@ -247,11 +261,13 @@ public class FractureJumpAbility extends BaseDurationAbility {
 		
 			List<FleetMemberAPI> nonReady = getNonReadyShips();
 			if (!nonReady.isEmpty()) {
-				tooltip.addPara("Not all ships have enough combat readiness to initiate a transverse jump. Ships that require higher CR:", pad);
-				tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);
-				//tooltip.setGridLabelColor(bad);
+				//tooltip.addPara("Not all ships have enough combat readiness to initiate an emergency burn. Ships that require higher CR:", pad);
+				tooltip.addPara("Some ships don't have enough combat readiness to safely initiate a transverse jump " +
+								"and may suffer damage if the ability is activated:", pad, 
+								Misc.getNegativeHighlightColor(), "may suffer damage");
 				int j = 0;
 				int max = 7;
+				float initPad = 5f;
 				for (FleetMemberAPI member : nonReady) {
 					if (j >= max) {
 						if (nonReady.size() > max + 1) {
@@ -259,8 +275,6 @@ public class FractureJumpAbility extends BaseDurationAbility {
 							break;
 						}
 					}
-					float crLoss = member.getDeployCost() * CR_COST_MULT;
-					String cost = "" + Math.round(crLoss * 100) + "%";
 					String str = "";
 					if (!member.isFighterWing()) {
 						str += member.getShipName() + ", ";
@@ -268,10 +282,39 @@ public class FractureJumpAbility extends BaseDurationAbility {
 					} else {
 						str += member.getVariant().getFullDesignationWithHullName();
 					}
-					tooltip.addToGrid(0, j++, str, cost, bad);
+					
+					tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);
+					initPad = 0f;
 				}
-				tooltip.addGrid(3f);
 			}
+			
+//			List<FleetMemberAPI> nonReady = getNonReadyShips();
+//			if (!nonReady.isEmpty()) {
+//				tooltip.addPara("Not all ships have enough combat readiness to initiate a transverse jump. Ships that require higher CR:", pad);
+//				tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);
+//				//tooltip.setGridLabelColor(bad);
+//				int j = 0;
+//				int max = 7;
+//				for (FleetMemberAPI member : nonReady) {
+//					if (j >= max) {
+//						if (nonReady.size() > max + 1) {
+//							tooltip.addToGrid(0, j++, "... and several other ships", "", bad);
+//							break;
+//						}
+//					}
+//					float crLoss = member.getDeployCost() * CR_COST_MULT;
+//					String cost = "" + Math.round(crLoss * 100) + "%";
+//					String str = "";
+//					if (!member.isFighterWing()) {
+//						str += member.getShipName() + ", ";
+//						str += member.getHullSpec().getHullNameWithDashClass();
+//					} else {
+//						str += member.getVariant().getFullDesignationWithHullName();
+//					}
+//					tooltip.addToGrid(0, j++, str, cost, bad);
+//				}
+//				tooltip.addGrid(3f);
+//			}
 		}
 
 		if (fleet.isInHyperspace()) {
@@ -337,6 +380,54 @@ public class FractureJumpAbility extends BaseDurationAbility {
 			cost += member.getDeploymentPointsCost() * CR_COST_MULT * crCostFleetMult;
 		}
 		return cost;
+	}
+	
+	
+	
+	protected boolean showAlarm() {
+		if (getFleet() != null && getFleet().isInHyperspace()) return false;
+		return !getNonReadyShips().isEmpty() && !isOnCooldown() && !isActiveOrInProgress() && isUsable();
+	}
+	
+//	@Override
+//	public boolean isUsable() {
+//		return super.isUsable() && 
+//					getFleet() != null && 
+//					//getNonReadyShips().isEmpty() &&
+//					(getFleet().isAIMode() || computeFuelCost() <= getFleet().getCargo().getFuel());
+//	}
+	
+	@Override
+	public float getCooldownFraction() {
+		if (showAlarm()) {
+			return 0f;
+		}
+		return super.getCooldownFraction();
+	}
+	@Override
+	public boolean showCooldownIndicator() {
+		return super.showCooldownIndicator();
+	}
+	@Override
+	public boolean isOnCooldown() {
+		return super.getCooldownFraction() < 1f;
+	}
+
+	@Override
+	public Color getCooldownColor() {
+		if (showAlarm()) {
+			Color color = Misc.getNegativeHighlightColor();
+			return Misc.scaleAlpha(color, Global.getSector().getCampaignUI().getSharedFader().getBrightness() * 0.5f);
+		}
+		return super.getCooldownColor();
+	}
+
+	@Override
+	public boolean isCooldownRenderingAdditive() {
+		if (showAlarm()) {
+			return true;
+		}
+		return false;
 	}
 }
 

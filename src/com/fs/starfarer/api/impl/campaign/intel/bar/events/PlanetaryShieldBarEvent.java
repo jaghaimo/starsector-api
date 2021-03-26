@@ -1,6 +1,6 @@
 package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 
-import java.awt.Color;
+import java.util.Map;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
@@ -9,6 +9,7 @@ import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
@@ -51,7 +52,7 @@ public class PlanetaryShieldBarEvent extends BaseBarEventWithPerson {
 		
 		if (getTargetPlanet() == null) return false;
 		
-		if (Global.getSector().getPlayerStats().getLevel() < 20 && !DebugFlags.BAR_DEBUG) return false;
+		if (Global.getSector().getPlayerStats().getLevel() < 10 && !DebugFlags.BAR_DEBUG) return false;
 		
 		return true;
 	}
@@ -91,8 +92,8 @@ public class PlanetaryShieldBarEvent extends BaseBarEventWithPerson {
 	}
 	
 	@Override
-	public void addPromptAndOption(InteractionDialogAPI dialog) {
-		super.addPromptAndOption(dialog);
+	public void addPromptAndOption(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
+		super.addPromptAndOption(dialog, memoryMap);
 		
 		regen(dialog.getInteractionTarget().getMarket());
 		
@@ -100,17 +101,17 @@ public class PlanetaryShieldBarEvent extends BaseBarEventWithPerson {
 		text.addPara("A rough-looking veteran spacer with cybernetic eyes seems to be staring intently at you; " +
 					 "it's a little unnerving.");
 
-		Color c = Misc.getHighlightColor();
-		c = Misc.getStoryOptionColor();
+//		Color c = Misc.getHighlightColor();
+//		c = Misc.getHighlightedOptionColor();
 		
 		dialog.getOptionPanel().addOption("Ask the veteran spacer what " + getHeOrShe() + "'s looking at", this, 
-				c, null);
+				null);
 	}
 	
 	
 	@Override
-	public void init(InteractionDialogAPI dialog) {
-		super.init(dialog);
+	public void init(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
+		super.init(dialog, memoryMap);
 		
 		done = false;
 		

@@ -10,6 +10,7 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
+import com.fs.starfarer.api.combat.listeners.CombatListenerManagerAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
@@ -328,10 +329,10 @@ public interface ShipAPI extends CombatEntityAPI {
 	Color getVentFringeColor();
 
 
-	void setVentCoreTexture(String textureId);
-	void setVentFringeTexture(String textureId);
-	String getVentFringeTexture();
-	String getVentCoreTexture();
+//	void setVentCoreTexture(String textureId);
+//	void setVentFringeTexture(String textureId);
+//	String getVentFringeTexture();
+//	String getVentCoreTexture();
 	String getHullStyleId();
 	WeaponGroupAPI getWeaponGroupFor(WeaponAPI weapon);
 
@@ -573,6 +574,78 @@ public interface ShipAPI extends CombatEntityAPI {
 
 
 	FleetMemberAPI getFleetMember();
+
+
+	Vector2f getShieldTarget();
+	void setShieldTargetOverride(float x, float y);
+
+
+	
+	/**
+	 * Will be null if no listeners added.
+	 * @return
+	 */
+	CombatListenerManagerAPI getListenerManager();
+	
+	void addListener(Object listener);
+	void removeListener(Object listener);
+	void removeListenerOfClass(Class<?> c);
+	boolean hasListener(Object listener);
+	boolean hasListenerOfClass(Class<?> c);
+	<T> List<T> getListeners(Class<T> c);
+
+
+	Object getParamAboutToApplyDamage();
+	void setParamAboutToApplyDamage(Object param);
+
+
+	float getFluxBasedEnergyWeaponDamageMultiplier();
+
+
+	void setName(String name);
+
+
+	void setHulk(boolean isHulk);
+
+
+	void setCaptain(PersonAPI captain);
+	float getShipExplosionRadius();
+
+
+	void setCircularJitter(boolean circular);
+
+
+	float getExtraAlphaMult();
+
+
+	void setAlphaMult(float alphaMult);
+	float getAlphaMult();
+
+
+	void setAnimatedLaunch();
+
+
+	void setLaunchingShip(ShipAPI launchingShip);
+
+
+	boolean isNonCombat(boolean considerOrders);
+
+
+	float findBestArmorInArc(float facing, float arc);
+	float getAverageArmorInSlice(float direction, float arc);
+
+
+	void setHoldFire(boolean holdFire);
+
+
+	void cloneVariant();
+
+
+	void setTimeDeployed(float timeDeployed);
+
+
+	void setFluxVentTextureSheet(String textureId);
+	String getFluxVentTextureSheet();
 
 }
 

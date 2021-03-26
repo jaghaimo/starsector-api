@@ -35,10 +35,13 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 		return (PunitiveExpeditionManager) test; 
 	}
 	
-	public static int MAX_CONCURRENT = 2;
-	public static float PROB_TIMEOUT_PER_SENT = 0.5f;
-	public static float MIN_TIMEOUT = 180f;
-	public static float MAX_TIMEOUT = 360f;
+	public static int MAX_CONCURRENT = Global.getSettings().getInt("punExMaxConcurrent");
+	public static float PROB_TIMEOUT_PER_SENT = Global.getSettings().getFloat("punExProbTimeoutPerExpedition");
+	public static float MIN_TIMEOUT = Global.getSettings().getFloatFromArray("punExTimeoutDays", 0);
+	public static float MAX_TIMEOUT = Global.getSettings().getFloatFromArray("punExTimeoutDays", 1);
+	
+	public static int MIN_COLONY_SIZE_FOR_NON_TERRITORIAL = Global.getSettings().getInt("punExMinColonySizeForNonTerritorial");
+	
 	
 	// if more factions send non-territorial expeditions, longer timeout
 	public static float TARGET_NUMBER_FOR_FREQUENCY = 5f;
@@ -49,7 +52,7 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 	//public static float PLAYER_FRACTION_TO_NOTICE = 0.33f;
 	public static float PLAYER_FRACTION_TO_NOTICE = 0.5f;
 	//public static final float MAX_THRESHOLD = 1000f;
-	public static final float MAX_THRESHOLD = 600f;
+	public static float MAX_THRESHOLD = 600f;
 	
 	public static enum PunExType {
 		ANTI_COMPETITION,
@@ -138,8 +141,8 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 			if (timeout <= 0) {
 				timeout = 0;
 				numSentSinceTimeout = 0;
-				return;
 			}
+			return;
 		}
 		
 		boolean first = true;
@@ -198,7 +201,8 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 			}
 		}
 		
-		return Math.min(10f, Math.max(0, total - TARGET_NUMBER_FOR_FREQUENCY)) * (20f + 20f * d.random.nextFloat());
+		return Math.min(10f, Math.max(0, total - TARGET_NUMBER_FOR_FREQUENCY)) * 
+					(MIN_TIMEOUT * 0.9f + MIN_TIMEOUT * 0.9f * d.random.nextFloat());
 	}
 	
 	
@@ -302,6 +306,7 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 			for (MarketAPI market : Global.getSector().getEconomy().getMarketsInGroup(null)) {
 				if (!market.isPlayerOwned()) continue;
 				if (!market.isFreePort()) continue;
+				if (market.isInHyperspace()) continue;
 				
 				for (CommodityOnMarketAPI com : test.getAllCommodities()) {
 					if (com.isNonEcon()) continue;
@@ -333,6 +338,7 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 			int maxSize = MarketCMD.getBombardDestroyThreshold();
 			for (MarketAPI market : Global.getSector().getEconomy().getMarketsInGroup(null)) {
 				if (!market.isPlayerOwned()) continue;
+				if (market.isInHyperspace()) continue;
 				
 				boolean destroy = market.getSize() <= maxSize;
 				if (!destroy) continue;
@@ -380,9 +386,12 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 		//WeightedRandomPicker<MarketAPI> picker = new WeightedRandomPicker<MarketAPI>(curr.random);
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (!market.isPlayerOwned()) continue;
+			if (market.isInHyperspace()) continue;
 			
 			float weight = 0f;
 			if (reason.type == PunExType.ANTI_COMPETITION && reason.commodityId != null) {
+				if (market.getSize() < MIN_COLONY_SIZE_FOR_NON_TERRITORIAL) continue;
+				
 				CommodityOnMarketAPI com = market.getCommodityData(reason.commodityId);
 				int share = com.getCommodityMarketData().getExportMarketSharePercent(market);
 //				if (share <= 0 && com.getAvailable() > 0) {
@@ -390,6 +399,8 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 //				}
 				weight += share * share;
 			} else if (reason.type == PunExType.ANTI_FREE_PORT && market.getId().equals(reason.marketId)) {
+				if (market.getSize() < MIN_COLONY_SIZE_FOR_NON_TERRITORIAL) continue;
+				
 				weight = 1f;
 			} else if (reason.type == PunExType.TERRITORIAL && market.getId().equals(reason.marketId)) {
 				weight = 1f;
@@ -499,6 +510,7 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 												 goal, industry, reason);
 		if (curr.intel.isDone()) {
 			curr.intel = null;
+			timeout = orgDur + MIN_TIMEOUT + curr.random.nextFloat() * (MAX_TIMEOUT - MIN_TIMEOUT);
 			return;
 		}
 		

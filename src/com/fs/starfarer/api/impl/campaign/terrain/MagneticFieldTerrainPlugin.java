@@ -106,6 +106,10 @@ public class MagneticFieldTerrainPlugin extends BaseRingTerrain implements Auror
 		}
 	}
 	
+	public String getNameForTooltip() {
+		return "Magnetic Field";
+	}
+	
 	@Override
 	protected Object readResolve() {
 		super.readResolve();

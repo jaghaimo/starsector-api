@@ -164,7 +164,7 @@ public class PirateActivityIntel extends BaseIntelPlugin {
 				condition = curr.getCondition(Conditions.PIRATE_ACTIVITY);
 			}
 			
-			addMarketToList(info, curr, initPad);
+			addMarketToList(info, curr, initPad, tc);
 			initPad = 0f;
 		}
 		

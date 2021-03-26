@@ -69,6 +69,13 @@ public abstract class BaseMissionIntel extends BaseIntelPlugin {
 		randomCancelProb = prob;
 	}
 	
+	protected void cancel() {
+		setMissionState(MissionState.CANCELLED);
+		missionResult = createCancelledResult();
+		endMission();
+		sendUpdateIfPlayerHasIntel(missionResult, true);
+	}
+	
 	@Override
 	public void advanceImpl(float amount) {
 		float days = Global.getSector().getClock().convertToDays(amount);
@@ -78,10 +85,7 @@ public abstract class BaseMissionIntel extends BaseIntelPlugin {
 				randomCancel.advance(days);
 				if (randomCancel.intervalElapsed()) {
 					if ((float) Math.random() < randomCancelProb) {
-						setMissionState(MissionState.CANCELLED);
-						missionResult = createCancelledResult();
-						endMission();
-						sendUpdateIfPlayerHasIntel(missionResult, true);
+						cancel();
 					}
 				}
 			}
@@ -203,15 +207,17 @@ public abstract class BaseMissionIntel extends BaseIntelPlugin {
 						"a reputation penalty with " + faction.getDisplayNameWithArticle() + ".", 0f,
 						Misc.getTextColor(), faction.getBaseUIColor(), faction.getDisplayNameWithArticleWithoutArticle());
 			}
+		} else {
+			super.createConfirmationPrompt(buttonId, prompt);
 		}
 	}
 	
 	@Override
 	public boolean doesButtonHaveConfirmDialog(Object buttonId) {
-		if (buttonId == BUTTON_ACCEPT) {
+		if (buttonId == BUTTON_ACCEPT || buttonId == BUTTON_ABANDON) {
 			return true;
 		}
-		return true;
+		return super.doesButtonHaveConfirmDialog(buttonId);
 	}
 	
 	public Set<String> getIntelTags(SectorMapAPI map) {

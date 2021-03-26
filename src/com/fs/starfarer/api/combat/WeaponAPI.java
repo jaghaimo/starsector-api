@@ -28,6 +28,10 @@ public interface WeaponAPI {
 		float getRoF();
 		float getFluxPerSecond();
 		float getSustainedFluxPerSecond();
+		/**
+		 * Multiplied by number of barrels for LINKED, by 2 for DUAL_LINKED, and by the number of missiles for MIRVs.
+		 * @return
+		 */
 		float getDamagePerShot();
 		float getEmpPerShot();
 	}
@@ -90,11 +94,19 @@ public interface WeaponAPI {
 		CONSERVE_3,
 		CONSERVE_4,
 		CONSERVE_5,
+		CONSERVE_ALL,
+		CONSERVE_FOR_ANTI_ARMOR,
 		FIRE_WHEN_INEFFICIENT,
 		EXTRA_RANGE_ON_FIGHTER,
 		
+		IGNORES_FLARES,
+		
 		GROUP_LINKED,
 		GROUP_ALTERNATING,
+		
+		MISSILE_SPREAD,
+		DIRECT_AIM,
+		NO_TURN_RATE_BOOST_WHEN_IDLE,
 	}
 	
 	
@@ -231,6 +243,11 @@ public interface WeaponAPI {
 	void setPDAlso(boolean pdAlso);
 	void setCurrHealth(float currHealth);
 	MuzzleFlashSpec getMuzzleFlashSpec();
+	List<BeamAPI> getBeams();
+	Vector2f getFirePoint(int barrel);
+	void setTurnRateOverride(Float turnRateOverride);
+	SpriteAPI getGlowSpriteAPI();
+	AmmoTrackerAPI getAmmoTracker();
 }
 
 

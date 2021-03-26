@@ -20,5 +20,6 @@ public interface OrbitAPI {
 	OrbitAPI makeCopy();
 	Vector2f computeCurrentLocation();
 	float getOrbitalPeriod();
+	void updateLocation();
 
 }

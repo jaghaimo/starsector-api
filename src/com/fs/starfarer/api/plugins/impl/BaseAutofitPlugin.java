@@ -9,7 +9,7 @@ import com.fs.starfarer.api.plugins.AutofitPlugin;
 
 public class BaseAutofitPlugin implements AutofitPlugin {
 
-	public void doFit(ShipVariantAPI current, ShipVariantAPI target, AutofitPluginDelegate delegate) {
+	public void doFit(ShipVariantAPI current, ShipVariantAPI target, int maxSMods, AutofitPluginDelegate delegate) {
 		
 	}
 

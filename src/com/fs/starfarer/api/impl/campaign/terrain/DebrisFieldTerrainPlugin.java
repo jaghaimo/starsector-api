@@ -15,6 +15,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.TerrainAIFlags;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.loading.Description.Type;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -26,7 +27,7 @@ public class DebrisFieldTerrainPlugin extends BaseRingTerrain {
 	
 	// when this many days are left, density will gradually go to 0
 	public static final float DISSIPATE_DAYS = 3f;
-	public static final float VISIBLITY_MULT = 0.25f;
+	//public static final float VISIBLITY_MULT = 0.25f;
 	
 	public static float computeDetectionRange(float radius) {
 		float range = 100f + radius * 5f;
@@ -64,8 +65,14 @@ public class DebrisFieldTerrainPlugin extends BaseRingTerrain {
 		public DebrisFieldParams(float bandWidthInEngine, float density,
 								 float lastsDays, float glowsDays) {
 			super(bandWidthInEngine, bandWidthInEngine / 2f, null);
-			this.density = density;
-			this.baseDensity = density;
+//			this.density = density;
+//			this.baseDensity = density;
+			if (density < 0) {
+				this.density = 0.1f + StarSystemGenerator.random.nextFloat() * 0.9f;
+			} else {
+				this.density = density;
+			}
+			this.baseDensity = 1f;
 			this.glowsDays = glowsDays;
 			this.lastsDays = lastsDays;
 		}
@@ -80,6 +87,8 @@ public class DebrisFieldTerrainPlugin extends BaseRingTerrain {
 	protected FaderUtil expander; // days;
 	//protected float glowDaysLeft, daysLeft;
 	protected float elapsed;
+	
+	protected Boolean scavenged = null; 
 	
 	public void init(String terrainId, SectorEntityToken entity, Object param) {
 		super.init(terrainId, entity, param);
@@ -102,6 +111,15 @@ public class DebrisFieldTerrainPlugin extends BaseRingTerrain {
 		entity.addTag(Tags.DEBRIS_FIELD);
 	}
 	
+	public boolean isScavenged() {
+		return scavenged != null && scavenged;
+	}
+
+	public void setScavenged(Boolean scavenged) {
+		this.scavenged = scavenged;
+	}
+
+
 	public DebrisFieldParams getParams() {
 		return params;
 	}
@@ -237,9 +255,11 @@ public class DebrisFieldTerrainPlugin extends BaseRingTerrain {
 			piece.render(alphaMult);
 		}
 		
-		for (DebrisPiece piece : pieces) {
-			piece.renderIndicator(alphaMult);
-		}
+		//if (scavenged == null || !scavenged) {
+			for (DebrisPiece piece : pieces) {
+				piece.renderIndicator(alphaMult);
+			}
+		//}
 		
 		GL11.glPopMatrix();
 		
@@ -287,9 +307,10 @@ public class DebrisFieldTerrainPlugin extends BaseRingTerrain {
 	public void applyEffect(SectorEntityToken entity, float days) {
 		if (entity instanceof CampaignFleetAPI) {
 			CampaignFleetAPI fleet = (CampaignFleetAPI) entity;
-			if (fleet.getCurrBurnLevel() <= RingSystemTerrainPlugin.MAX_SNEAK_BURN_LEVEL) {
+			//if (fleet.getCurrBurnLevel() <= RingSystemTerrainPlugin.MAX_SNEAK_BURN_LEVEL) {
+			if (Misc.isSlowMoving(fleet)) {
 				fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_1",
-									"Hiding inside debris field", VISIBLITY_MULT, 
+									"Hiding inside debris field", RingSystemTerrainPlugin.getVisibilityMult(fleet), 
 									fleet.getStats().getDetectedRangeMod());
 			}
 		}
@@ -342,7 +363,7 @@ public class DebrisFieldTerrainPlugin extends BaseRingTerrain {
 		String stop = Global.getSettings().getControlStringForEnumName("GO_SLOW");
 		tooltip.addPara("Reduces the range at which stationary or slow-moving* fleets inside it can be detected by %s.", nextPad,
 				highlight, 
-				"" + (int) ((1f - RingSystemTerrainPlugin.VISIBLITY_MULT) * 100) + "%"
+				"" + (int) ((1f - RingSystemTerrainPlugin.getVisibilityMult(Global.getSector().getPlayerFleet())) * 100) + "%"
 		);
 		tooltip.addPara("*Press and hold %s to stop; combine with holding the left mouse button down to move slowly.", nextPad,
 				Misc.getGrayColor(), highlight, 

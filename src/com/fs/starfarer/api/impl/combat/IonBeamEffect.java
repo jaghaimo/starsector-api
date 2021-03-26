@@ -36,10 +36,7 @@ public class IonBeamEffect implements BeamEffectPlugin {
 				//piercedShield = true;
 				
 				if (!hitShield || piercedShield) {
-					Vector2f dir = Vector2f.sub(beam.getTo(), beam.getFrom(), new Vector2f());
-					if (dir.lengthSquared() > 0) dir.normalise();
-					dir.scale(50f);
-					Vector2f point = Vector2f.sub(beam.getTo(), dir, new Vector2f());
+					Vector2f point = beam.getRayEndPrevFrame();
 					float emp = beam.getDamage().getFluxComponent() * 1f;
 					float dam = beam.getDamage().getDamage() * 1f;
 					engine.spawnEmpArcPierceShields(

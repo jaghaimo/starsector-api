@@ -10,6 +10,7 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.InteractionDialogImageVisual;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.HasMemory;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AbilityPlugin;
 import com.fs.starfarer.api.characters.PersonAPI;
@@ -23,7 +24,7 @@ import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropD
  *
  * Copyright 2012 Fractal Softworks, LLC
  */
-public interface SectorEntityToken {
+public interface SectorEntityToken extends HasMemory {
 	
 	public static enum VisibilityLevel {
 		NONE,
@@ -289,6 +290,8 @@ public interface SectorEntityToken {
 	void clearFloatingText();
 
 	void setLocation(float x, float y);
+
+	void autoUpdateHyperLocationBasedOnInSystemEntityAtRadius(SectorEntityToken entity, float radius);
 
 }
 	

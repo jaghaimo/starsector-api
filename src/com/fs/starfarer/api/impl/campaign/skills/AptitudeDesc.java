@@ -4,17 +4,27 @@ import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.characters.DescriptionSkillEffect;
+import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
+import com.fs.starfarer.api.util.Misc;
 
 public class AptitudeDesc {
 	public static class Level0 implements DescriptionSkillEffect {
 		public String getString() {
-			return "The maximum level of all skills governed by this aptitude is limited to the level of the aptitude.";
+			//return "The maximum level of all skills governed by this aptitude is limited to the level of the aptitude.";
+			return BaseIntelPlugin.BULLET + "Choose one of the skills in a tier to unlock the next tier\n"
+				  +BaseIntelPlugin.BULLET + "Can wrap around after learning a skill in the top tier\n"
+				  +BaseIntelPlugin.BULLET + "Some skills can be made \"elite\" at the cost of a " + Misc.STORY + " point\n"
+			
+			;
+			// pick one to unlock next tier
+			// can wrap around
+			// spend " + Misc.STORY + " points to make elite
 		}
 		public Color[] getHighlightColors() {
-			return null;
+			return new Color[] {Misc.getStoryOptionColor()};
 		}
 		public String[] getHighlights() {
-			return null;
+			return new String[] {"" + Misc.STORY + " point"};
 		}
 		public Color getTextColor() {
 			return null;

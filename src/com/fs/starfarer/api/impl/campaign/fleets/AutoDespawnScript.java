@@ -1,6 +1,7 @@
 package com.fs.starfarer.api.impl.campaign.fleets;
 
 import com.fs.starfarer.api.EveryFrameScript;
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 
@@ -14,7 +15,7 @@ public class AutoDespawnScript implements EveryFrameScript {
 
 	public void advance(float amount) {
 		if (!fleet.isInCurrentLocation()) {
-			elapsed += amount;
+			elapsed += Global.getSector().getClock().convertToDays(amount);
 			if (elapsed > 30 && fleet.getBattle() == null) {
 				fleet.despawn(FleetDespawnReason.PLAYER_FAR_AWAY, null);
 				elapsed = -1;

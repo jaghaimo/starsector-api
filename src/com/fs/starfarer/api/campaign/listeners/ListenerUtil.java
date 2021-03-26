@@ -3,20 +3,33 @@ package com.fs.starfarer.api.campaign.listeners;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
+import com.fs.starfarer.api.campaign.PlayerMarketTransaction;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
+import com.fs.starfarer.api.campaign.listeners.GroundRaidObjectivesListener.RaidResultData;
+import com.fs.starfarer.api.campaign.listeners.SubmarketInteractionListener.SubmarketInteractionType;
+import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.combat.MutableStat;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.TempData;
 import com.fs.starfarer.api.input.InputEventAPI;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
 public class ListenerUtil {
 	
@@ -48,6 +61,18 @@ public class ListenerUtil {
 	public static void reportPlayerSurveyedPlanet(PlanetAPI planet) {
 		for (SurveyPlanetListener x : Global.getSector().getListenerManager().getListeners(SurveyPlanetListener.class)) {
 			x.reportPlayerSurveyedPlanet(planet);
+		}
+	}
+	
+	public static void reportPlayerColonizedPlanet(PlanetAPI planet) {
+		for (PlayerColonizationListener x : Global.getSector().getListenerManager().getListeners(PlayerColonizationListener.class)) {
+			x.reportPlayerColonizedPlanet(planet);
+		}
+	}
+	
+	public static void reportPlayerAbandonedColony(MarketAPI colony) {
+		for (PlayerColonizationListener x : Global.getSector().getListenerManager().getListeners(PlayerColonizationListener.class)) {
+			x.reportPlayerAbandonedColony(colony);
 		}
 	}
 	
@@ -122,6 +147,141 @@ public class ListenerUtil {
 		}
 	}
 	
+	public static void reportExtraSalvageShown(SectorEntityToken entity) {
+		for (ExtraSalvageShownListener x : Global.getSector().getListenerManager().getListeners(ExtraSalvageShownListener.class)) {
+			x.reportExtraSalvageShown(entity);
+		}
+	}
+	
+	public static void reportPlayerOpenedSubmarket(SubmarketAPI submarket, SubmarketInteractionType type) {
+		for (SubmarketInteractionListener x : Global.getSector().getListenerManager().getListeners(SubmarketInteractionListener.class)) {
+			x.reportPlayerOpenedSubmarket(submarket, type);
+		}
+	}
+	
+	public static void reportPlayerOpenedMarket(MarketAPI market) {
+		for (ColonyInteractionListener x : Global.getSector().getListenerManager().getListeners(ColonyInteractionListener.class)) {
+			x.reportPlayerOpenedMarket(market);
+		}
+	}
+	
+	public static void reportPlayerClosedMarket(MarketAPI market) {
+		for (ColonyInteractionListener x : Global.getSector().getListenerManager().getListeners(ColonyInteractionListener.class)) {
+			x.reportPlayerClosedMarket(market);
+		}
+	}
+	
+	public static void reportPlayerOpenedMarketAndCargoUpdated(MarketAPI market) {
+		for (ColonyInteractionListener x : Global.getSector().getListenerManager().getListeners(ColonyInteractionListener.class)) {
+			x.reportPlayerOpenedMarketAndCargoUpdated(market);
+		}
+	}
+	
+	public static void reportPlayerMarketTransaction(PlayerMarketTransaction transaction) {
+		for (ColonyInteractionListener x : Global.getSector().getListenerManager().getListeners(ColonyInteractionListener.class)) {
+			x.reportPlayerMarketTransaction(transaction);
+		}
+	}
+	
+	public static void modifyRaidObjectives(MarketAPI market, SectorEntityToken entity, List<GroundRaidObjectivePlugin> objectives, RaidType type, int marineTokens, int priority) {
+		for (GroundRaidObjectivesListener x : Global.getSector().getListenerManager().getListeners(GroundRaidObjectivesListener.class)) {
+			x.modifyRaidObjectives(market, entity, objectives, type, marineTokens, priority);
+		}
+	}
+	
+	public static void reportRaidObjectivesAchieved(RaidResultData data, InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
+		for (GroundRaidObjectivesListener x : Global.getSector().getListenerManager().getListeners(GroundRaidObjectivesListener.class)) {
+			x.reportRaidObjectivesAchieved(data, dialog, memoryMap);
+		}	
+	}
+	
+	public static void addCommodityTooltipSectionAfterPrice(TooltipMakerAPI info, float width, boolean expanded, CargoStackAPI stack) {
+		for (CommodityTooltipModifier x : Global.getSector().getListenerManager().getListeners(CommodityTooltipModifier.class)) {
+			x.addSectionAfterPrice(info, width, expanded, stack);
+		}	
+	}
+
+	public static void reportCargoScreenOpened() {
+		for (CargoScreenListener x : Global.getSector().getListenerManager().getListeners(CargoScreenListener.class)) {
+			x.reportCargoScreenOpened();
+		}
+	}
+	
+	public static void reportPlayerLeftCargoPods(SectorEntityToken entity) {
+		for (CargoScreenListener x : Global.getSector().getListenerManager().getListeners(CargoScreenListener.class)) {
+			x.reportPlayerLeftCargoPods(entity);
+		}
+	}
+	
+	public static void reportPlayerNonMarketTransaction(PlayerMarketTransaction transaction, InteractionDialogAPI dialog) {
+		for (CargoScreenListener x : Global.getSector().getListenerManager().getListeners(CargoScreenListener.class)) {
+			x.reportPlayerNonMarketTransaction(transaction, dialog);
+		}
+	}
+	
+	public static void reportSubmarketOpened(SubmarketAPI submarket) {
+		for (CargoScreenListener x : Global.getSector().getListenerManager().getListeners(CargoScreenListener.class)) {
+			x.reportSubmarketOpened(submarket);
+		}
+	}
+	
+	public static void printOtherFactors(TooltipMakerAPI text, SectorEntityToken entity) {
+		for (ColonyOtherFactorsListener x : Global.getSector().getListenerManager().getListeners(ColonyOtherFactorsListener.class)) {
+			x.printOtherFactors(text, entity);
+		}
+	}
+	
+	public static void modifyMarineLossesStatPreRaid(MarketAPI market, List<GroundRaidObjectivePlugin> objectives, MutableStat stat) {
+		for (MarineLossesStatModifier x : Global.getSector().getListenerManager().getListeners(MarineLossesStatModifier.class)) {
+			x.modifyMarineLossesStatPreRaid(market, objectives, stat);
+		}
+	}
+	
+	public static void reportFleetTransitingGate(CampaignFleetAPI fleet, SectorEntityToken gateFrom, SectorEntityToken gateTo) {
+		for (GateTransitListener x : Global.getSector().getListenerManager().getListeners(GateTransitListener.class)) {
+			x.reportFleetTransitingGate(fleet, gateFrom, gateTo);
+		}
+	}
+	
+	public static void reportShipsRecovered(List<FleetMemberAPI> ships, InteractionDialogAPI dialog) {
+		for (ShipRecoveryListener x : Global.getSector().getListenerManager().getListeners(ShipRecoveryListener.class)) {
+			x.reportShipsRecovered(ships, dialog);
+		}
+	}
+	
+	public static void reportCurrentLocationChanged(LocationAPI prev, LocationAPI curr) {
+		for (CurrentLocationChangedListener x : Global.getSector().getListenerManager().getListeners(CurrentLocationChangedListener.class)) {
+			x.reportCurrentLocationChanged(prev, curr);
+		}
+	}
+	
+	public static void reportColonyAboutToBeDecivilized(MarketAPI market, boolean fullyDestroyed) {
+	for (ColonyDecivListener x : Global.getSector().getListenerManager().getListeners(ColonyDecivListener.class)) {
+		x.reportColonyAboutToBeDecivilized(market, fullyDestroyed);
+	}
+}
+	public static void reportColonyDecivilized(MarketAPI market, boolean fullyDestroyed) {
+		for (ColonyDecivListener x : Global.getSector().getListenerManager().getListeners(ColonyDecivListener.class)) {
+			x.reportColonyDecivilized(market, fullyDestroyed);
+		}
+	}
+	
+	public static int countOtherFactors(SectorEntityToken entity) {
+		int count = 0;
+		for (ColonyOtherFactorsListener x : Global.getSector().getListenerManager().getListeners(ColonyOtherFactorsListener.class)) {
+			if (x.isActiveFactorFor(entity)) count++;
+		}
+		return count;
+	}
+	public static boolean hasOtherFactors(SectorEntityToken entity) {
+		return countOtherFactors(entity) > 0;
+	}
+	
+//	public static void reportFleetSpawnedToListener(CampaignFleetAPI fleet) {
+//		for (FleetSpawnListener x : Global.getSector().getListenerManager().getListeners(FleetSpawnListener.class)) {
+//			x.reportFleetSpawnedToListener(fleet);
+//		}
+//	}
 }
 
 

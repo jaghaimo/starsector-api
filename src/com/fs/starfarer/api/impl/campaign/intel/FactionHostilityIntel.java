@@ -184,6 +184,19 @@ public class FactionHostilityIntel extends BaseIntelPlugin {
 			label.setHighlight(one.getDisplayNameWithArticleWithoutArticle(), two.getDisplayNameWithArticleWithoutArticle());
 			label.setHighlightColors(one.getBaseUIColor(), two.getBaseUIColor());
 		}
+		
+		
+//		info.addPara("wkefhuiwehfuweffewfewfeddewefewewefwefwewefwefweehfuwefwewefwefwehfuwefwewefwefwehfuwefwewefwefwkwejfwffhwejkfhkwejfh423wfwhel" +
+//				"fewfwefwefwefweh[%s]fh2fwfwefwefwefwefwfkwghfieuwhfekhwejkuhfiohwef1wef2wef3wef4wefewfwefwe", 10f,
+//				tc, h, "5%/6%/7%/8%");
+//		info.addPara("wkefhuiwehfuweffewfewfe[%s]wefwefweee123eee" + "\u3002" + 
+//				"ddewefewewefwefwe[%s]wefwefweehfuwdfeefwewefwefwehfuwefwe[%s]wefwefwehfuwefwewefwefwkwejfwffhwejkfhkwejfh423wfwhel" +
+//				"fewfwefwef[%s]fh2fwfwefwefwefwefwfkwghfieuwhfekhwejkuhfiohwef1w[%s]ef2wef3wef4wefewfwefwe", 10f,
+//				tc, h, "20", "4X", "103", "5%/6%/7%/8%", "54%");
+		
+//		info.addPara("wkefhuiwehfuweffewfewfe[%s]wefwefweeeeddewefewewefwefwe[%s]wefwefweehfuwdfeefwewefwefwehfuwefwe[%s]wefwefwehfuwefwewefwefwkwejfwffhwejkfhkwejfh423wfwhel" +
+//				"fewfwefwefwefweh[%s]fh2fwfwefwefwefwefwfkwghfieuwhfekhwejkuhfiohwef1w[%s]ef2wef3wef4wefewfwefwe", 10f,
+//				tc, h, "20", "4X", "103", "5%/6%/7%/8%", "54%");
 
 	}
 	

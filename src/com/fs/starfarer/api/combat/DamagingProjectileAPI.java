@@ -1,6 +1,9 @@
 package com.fs.starfarer.api.combat;
 
+import org.lwjgl.util.vector.Vector2f;
+
 import com.fs.starfarer.api.loading.ProjectileSpawnType;
+import com.fs.starfarer.api.loading.ProjectileSpecAPI;
 
 public interface DamagingProjectileAPI extends CombatEntityAPI {
 	
@@ -71,7 +74,8 @@ public interface DamagingProjectileAPI extends CombatEntityAPI {
 	boolean isFromMissile();
 	
 	/**
-	 * Whether it was spawned by a missile (or by other non-directly-by-weapon means).
+	 * Should be set to true for BALLISTIC, BALLISTIC_AS_BEAM, and PLASMA_SHOT projectiles 
+	 * spawned from a missile.
 	 * Needed for incoming damage evaluation AI to function properly in these cases.
 	 * @param fromMissile
 	 */
@@ -90,5 +94,14 @@ public interface DamagingProjectileAPI extends CombatEntityAPI {
 	 */
 	void addDamagedAlready(CombatEntityAPI c);
 	float getMoveSpeed();
+	Vector2f getSpawnLocation();
+	ProjectileSpecAPI getProjectileSpec();
+	float getBrightness();
+	
+	/**
+	 * Only non-null for "moving ray" and "ballistic projectile" type projectiles, not missiles/plasma shots/etc.
+	 * @return
+	 */
+	Vector2f getTailEnd();
 	
 }

@@ -16,21 +16,28 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI.SystemState;
 import com.fs.starfarer.api.combat.ShipwideAIFlags.AIFlags;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class MineStrikeStats extends BaseShipSystemScript implements MineStrikeStatsAIInfoProvider {
 	
-	public static float MINE_RANGE = 1500f;
+	protected static float MINE_RANGE = 1500f;
 	
 	public static final float MIN_SPAWN_DIST = 75f;
+	public static final float MIN_SPAWN_DIST_FRIGATE = 110f;
 	
 	public static final float LIVE_TIME = 5f;
 	
 	public static final Color JITTER_COLOR = new Color(255,155,255,75);
 	public static final Color JITTER_UNDER_COLOR = new Color(255,155,255,155);
 
+	
+	public static float getRange(ShipAPI ship) {
+		if (ship == null) return MINE_RANGE;
+		return ship.getMutableStats().getSystemRangeBonus().computeEffective(MINE_RANGE);
+	}
 	
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 		ShipAPI ship = null;
@@ -121,8 +128,10 @@ public class MineStrikeStats extends BaseShipSystemScript implements MineStrikeS
 															  currLoc, 
 															  (float) Math.random() * 360f, null);
 		if (source != null) {
-			float extraDamageMult = source.getMutableStats().getMissileWeaponDamageMult().getModifiedValue();
-			mine.getDamage().setMultiplier(mine.getDamage().getMultiplier() * extraDamageMult);
+			Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(
+											source, WeaponType.MISSILE, false, mine.getDamage());
+//			float extraDamageMult = source.getMutableStats().getMissileWeaponDamageMult().getModifiedValue();
+//			mine.getDamage().setMultiplier(mine.getDamage().getMultiplier() * extraDamageMult);
 		}
 		
 		
@@ -174,7 +183,7 @@ public class MineStrikeStats extends BaseShipSystemScript implements MineStrikeS
 	
 	
 	protected float getMaxRange(ShipAPI ship) {
-		return getMineRange();
+		return getMineRange(ship);
 	}
 
 	
@@ -244,7 +253,9 @@ public class MineStrikeStats extends BaseShipSystemScript implements MineStrikeS
 			float dist = Misc.getDistance(loc, otherLoc);
 			float r = otherR;
 			//r = Math.min(r, Misc.getTargetingRadius(loc, other, false) + r * 0.25f);
-			if (dist < r + MIN_SPAWN_DIST) {
+			float checkDist = MIN_SPAWN_DIST;
+			if (other.isFrigate()) checkDist = MIN_SPAWN_DIST_FRIGATE;
+			if (dist < r + checkDist) {
 				return false;
 			}
 		}
@@ -264,8 +275,9 @@ public class MineStrikeStats extends BaseShipSystemScript implements MineStrikeS
 	}
 
 
-	public float getMineRange() {
-		return MINE_RANGE;
+	public float getMineRange(ShipAPI ship) {
+		return getRange(ship);
+		//return MINE_RANGE;
 	}
 
 	

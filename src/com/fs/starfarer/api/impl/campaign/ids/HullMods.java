@@ -32,6 +32,7 @@ public class HullMods {
 	public static final String COMP_ARMOR = "comp_armor";
 	public static final String COMP_HULL = "comp_hull";
 	public static final String DEGRADED_ENGINES = "degraded_engines";
+	public static final String DEGRADED_DRIVE_FIELD = "degraded_drive_fields";
 	public static final String FAULTY_GRID = "faulty_grid";
 	public static final String UNSTABLE_COILS = "unstable_coils";
 	public static final String COMP_STRUCTURE = "comp_structure";
@@ -90,17 +91,20 @@ public class HullMods {
 	public static final String AUXILIARY_FUEL_TANKS = "auxiliary_fuel_tanks";
 	public static final String EXPANDED_CARGO_HOLDS = "expanded_cargo_holds";
 	public static final String MILITARIZED_SUBSYSTEMS = "militarized_subsystems";
+	public static final String ESCORT_PACKAGE = "escort_package";
+	public static final String ASSAULT_PACKAGE = "assault_package";
 	public static final String EFFICIENCY_OVERHAUL = "efficiency_overhaul";
+	
+	public static final String HIGH_FREQUENCY_ATTRACTOR = "high_frequency_attractor";
 	
 	
 	
 	
 	
 	public static final String TAG_UI_LOGISTICS = "Logistics";
-	
 	public static final String TAG_REQ_SPACEPORT = "req_spaceport";
-	
 	public static final String TAG_NON_PHASE = "non_phase";
+	public static final String TAG_CIV_PACKAGE = "civ_package";
 	
 }
 

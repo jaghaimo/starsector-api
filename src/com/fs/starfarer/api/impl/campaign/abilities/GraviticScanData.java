@@ -218,6 +218,10 @@ public class GraviticScanData {
 //			}
 			for (CampaignFleetAPI curr : location.getFleets()) {
 				if (fleet == curr) continue;
+				
+				boolean neutrinoHigh = curr.hasTag(Tags.NEUTRINO_HIGH);
+				if (neutrinoHigh) continue;
+				
 				if ((float) Math.random() < neutrinoLowSkipProb) continue;
 				special.add(curr);
 			}
@@ -314,6 +318,14 @@ public class GraviticScanData {
 				}
 			}
 		}
+		for (CampaignFleetAPI curr : location.getFleets()) {
+			if (fleet == curr) continue;
+			boolean neutrinoHigh = curr.hasTag(Tags.NEUTRINO_HIGH);
+			if (neutrinoHigh) {
+				all.add(curr);
+			}
+		}
+		
 		for (Object object : location.getEntities(OrbitalStationAPI.class)) {
 			if (object instanceof SectorEntityToken) {
 				SectorEntityToken entity = (SectorEntityToken) object;

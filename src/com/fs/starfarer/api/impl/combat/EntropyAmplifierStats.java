@@ -16,16 +16,16 @@ import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class EntropyAmplifierStats extends BaseShipSystemScript {
-	public static final Object KEY_SHIP = new Object();
-	public static final Object KEY_TARGET = new Object();
+	public static Object KEY_SHIP = new Object();
+	public static Object KEY_TARGET = new Object();
 	
-	public static final float DAM_MULT = 1.5f;
-	public static final float RANGE = 1500f;
+	public static float DAM_MULT = 1.5f;
+	protected static float RANGE = 1500f;
 	
-	public static final Color TEXT_COLOR = new Color(255,55,55,255);
+	public static Color TEXT_COLOR = new Color(255,55,55,255);
 	
-	public static final Color JITTER_COLOR = new Color(255,50,50,75);
-	public static final Color JITTER_UNDER_COLOR = new Color(255,100,100,155);
+	public static Color JITTER_COLOR = new Color(255,50,50,75);
+	public static Color JITTER_UNDER_COLOR = new Color(255,100,100,155);
 
 	
 	public static class TargetData {
@@ -166,8 +166,9 @@ public class EntropyAmplifierStats extends BaseShipSystemScript {
 	}
 	
 	
-	protected float getMaxRange(ShipAPI ship) {
-		return RANGE;
+	public static float getMaxRange(ShipAPI ship) {
+		return ship.getMutableStats().getSystemRangeBonus().computeEffective(RANGE);
+		//return RANGE;
 	}
 
 	

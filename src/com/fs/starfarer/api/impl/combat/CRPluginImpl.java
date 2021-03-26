@@ -43,6 +43,7 @@ public class CRPluginImpl implements CombatReadinessPlugin {
 	
 	
 	public void applyMaxCRCrewModifiers(FleetMemberAPI member) {
+		if (member == null || member.getStats() == null) return;
 		//float maxCRBasedOnLevel = (40f + member.getCrewFraction() * 10f) / 100f;
 		float maxCRBasedOnLevel = 0.7f;
 		member.getStats().getMaxCombatReadiness().modifyFlat("crew skill bonus", maxCRBasedOnLevel, "Basic maintenance");

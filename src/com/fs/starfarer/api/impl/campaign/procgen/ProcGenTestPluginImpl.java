@@ -22,7 +22,7 @@ import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
-import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
+import com.fs.starfarer.api.impl.campaign.ids.Planets;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.CustomConstellationParams;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.StarSystemType;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantThemeGenerator;
@@ -84,7 +84,8 @@ public class ProcGenTestPluginImpl implements InteractionDialogPlugin {
 		OptionId option = (OptionId) optionData;
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(option);
 		}
 		
 		// make >1 for faster stats-gathering
@@ -242,7 +243,7 @@ public class ProcGenTestPluginImpl implements InteractionDialogPlugin {
 				totalPlanets++;
 			}
 			
-			if (seen.contains(StarTypes.PLANET_TERRAN)) {
+			if (seen.contains(Planets.PLANET_TERRAN)) {
 				if (planets > maxPlanetsInSystemsWithTerran) {
 					maxPlanetsInSystemsWithTerran = planets;
 				}

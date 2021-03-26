@@ -12,8 +12,8 @@ public class PortsideBarData implements EveryFrameScript {
 	
 	public static final String KEY = "$core_PortsideBarData";
 	
-	public static final float CHECK_DAYS = 10f;
-	public static final float CHECK_PROB = 0.5f;
+//	public static final float CHECK_DAYS = 10f;
+//	public static final float CHECK_PROB = 0.5f;
 	
 	
 	public static PortsideBarData getInstance() {
@@ -39,6 +39,16 @@ public class PortsideBarData implements EveryFrameScript {
 	}
 	
 	public List<PortsideBarEvent> getEvents() {
+//		boolean exists = false;
+//		for (PortsideBarEvent curr : active) {
+//			if (curr instanceof HubMissionBarEventWrapper) {
+//				exists = true;
+//				break;
+//			}
+//		}
+//		if (!exists) {
+//			active.add(new HubMissionBarEventWrapper("cheapCom"));
+//		}
 		return active;
 	}
 

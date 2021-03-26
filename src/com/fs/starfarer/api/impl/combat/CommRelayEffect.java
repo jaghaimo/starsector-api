@@ -2,6 +2,7 @@ package com.fs.starfarer.api.impl.combat;
 
 import java.util.List;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BattleObjectiveAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -44,8 +45,14 @@ public class CommRelayEffect extends BaseBattleObjectiveEffect {
 
 
 	public String getLongDescription() {
-		   return String.format(
-				   "" + (int) CommRelayScript.RATE_BONUS_PER_COMM_RELAY + "%% faster command point recovery"
+		float min = Global.getSettings().getFloat("minFractionOfBattleSizeForSmallerSide");
+		int total = Global.getSettings().getBattleSize();
+		int maxPoints = (int)Math.round(total * (1f - min));
+		return String.format(
+				   "" + (int) CommRelayScript.RATE_BONUS_PER_COMM_RELAY + "%% faster command point recovery\n\n" +
+					"+%d bonus deployment points\n" + 
+					"up to a maximum of " + maxPoints + " points",
+					getBonusDeploymentPoints()
 				   );
 	}
 	

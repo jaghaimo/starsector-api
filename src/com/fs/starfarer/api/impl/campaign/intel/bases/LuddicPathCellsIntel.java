@@ -11,10 +11,10 @@ import java.util.Set;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -22,10 +22,10 @@ import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.econ.RecentUnrest;
 import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI;
+import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.EconomyRouteData;
 import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteLocationCalculator;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
-import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.EconomyRouteData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.OptionalFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteFleetSpawner;
@@ -33,6 +33,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteSegment;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.ui.Alignment;
@@ -46,10 +47,15 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 
 	public static String USED_PLANETBUSTER_KEY = "$core_lpUsedPlanetbuster";
 	
-	public static float INCIDENT_PROB = 0.2f;
+	public static float INCIDENT_PROB = Global.getSettings().getFloat("luddicPathCellsIncidentProbabilityPerMonth");
+	public static float MIN_WARNING_DAYS = Global.getSettings().getFloat("luddicPathCellsIncidentWarningMinDays");
 	
-	public static float DISRUPTION_MIN = 90;
-	public static float DISRUPTION_RANGE  = 60;
+//	public static float DISRUPTION_MIN = 90;
+//	public static float DISRUPTION_RANGE  = 60;
+	
+	public static float MIN_SABOTAGE = Global.getSettings().getFloatFromArray("luddicPathSabotageDays", 0); 
+	public static float MAX_SABOTAGE = Global.getSettings().getFloatFromArray("luddicPathSabotageDays", 1);	
+	
 	
 	public static Object UPDATE_DISSOLVED = new Object();
 	public static Object UPDATE_DISRUPTED = new Object();
@@ -212,7 +218,7 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 				mult = 1f / 20f;
 			}
 			sincePrevIncident += days * mult;
-			if (sincePrevIncident >= 30f) {
+			if (sincePrevIncident >= 180f) {
 				sincePrevIncident = 0f;
 				prevIncident = null;
 				prevIncidentData = null;
@@ -239,7 +245,8 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 //				if(market.isPlayerOwned()) {
 //					System.out.println("efwwefew");
 //				}
-			//smuggler.getActiveFleet().getLocation()
+//			smuggler.getActiveFleet().getLocation()
+//			smuggler.getActiveFleet().getContainingLocation()
 			if (smuggler != null) {
 				RouteSegment segment = smuggler.getCurrent();
 				if (segment != null && segment.getId() == EconomyFleetRouteManager.ROUTE_TRAVEL_SRC) {
@@ -269,7 +276,7 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		boolean isUpdate = getListInfoParam() != null;
 		
 		if (mode != ListInfoMode.IN_DESC) {
-			addMarketToList(info, market, initPad);
+			addMarketToList(info, market, initPad, tc);
 			initPad = 0f;
 		}
 		//info.addPara(market., initPad)
@@ -284,13 +291,13 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 						Industry ind = (Industry) prevIncidentData;
 						String days = getDays(ind.getDisruptedDays());
 						String daysStr = getDaysString(ind.getDisruptedDays());
-						info.addPara(ind.getCurrentName() + " operations disrupted for %s " + daysStr, initPad, h, days);
+						info.addPara(ind.getCurrentName() + " operations disrupted for %s " + daysStr, initPad, tc, h, days);
 						break;
 					case REDUCED_STABILITY:
-						info.addPara("Stability reduced by %s", initPad, h, "" + (Integer) prevIncidentData);
+						info.addPara("Stability reduced by %s", initPad, tc, h, "" + (Integer) prevIncidentData);
 						break;
 					case PLANETBUSTER:
-						info.addPara("Colony destroyed by planetbuster", initPad);
+						info.addPara("Colony destroyed by planetbuster", initPad, tc);
 						break;
 					}
 				}
@@ -433,7 +440,7 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 				}
 			}
 			
-			addInterestInfo(info, width, height);
+			//addInterestInfo(info, width, height);
 		}
 		
 		if (prevIncident != null || incidentType == IncidentType.PLANETBUSTER) {
@@ -497,6 +504,10 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 			}
 			
 			addBulletPoints(info, ListInfoMode.IN_DESC);
+		}
+		
+		if (!isEnding()) {
+			addInterestInfo(info, width, height);
 		}
 	}
 	
@@ -641,11 +652,11 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		
 		incidentType = types.pick();
 		//incidentType = IncidentType.REDUCED_STABILITY;
-		incidentDelay = 30f + random.nextFloat() * 30f;
+		incidentDelay = MIN_WARNING_DAYS + random.nextFloat() * MIN_WARNING_DAYS;
 		
 		
 		if (incidentType == IncidentType.PLANETBUSTER) {
-			incidentDelay = 120f + random.nextFloat() * 30f;
+			incidentDelay = MIN_WARNING_DAYS * 4f + random.nextFloat() * 30f;
 			Global.getSector().getMemoryWithoutUpdate().set(USED_PLANETBUSTER_KEY, true, 1500f);
 		}
 		
@@ -674,7 +685,7 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 	}
 	
 	protected boolean checkSuccess() {
-		float pSuccess = 1f - market.getStabilityValue() * 0.5f;
+		float pSuccess = 1f - market.getStabilityValue() * 0.075f;
 		return random.nextFloat() < pSuccess;
 	}
 	
@@ -705,7 +716,7 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 			
 			prevIncidentData = target;
 			if (success) {
-				float disruptionDur = DISRUPTION_MIN + random.nextFloat() * DISRUPTION_RANGE;
+				float disruptionDur = MIN_SABOTAGE + random.nextFloat() * (MAX_SABOTAGE - MIN_SABOTAGE);
 				target.setDisrupted(disruptionDur, true);
 			}
 		} else if (incidentType == IncidentType.PLANETBUSTER) {
@@ -717,7 +728,8 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		prevIncidentSucceeded = success;
 		
 		
-		if (DebugFlags.SEND_UPDATES_WHEN_NO_COMM || Global.getSector().getIntelManager().isPlayerInRangeOfCommRelay()) {
+		if (DebugFlags.SEND_UPDATES_WHEN_NO_COMM || Global.getSector().getIntelManager().isPlayerInRangeOfCommRelay() 
+				|| market.isPlayerOwned()) {
 			if (market.isPlayerOwned() || 
 					incidentType == IncidentType.INDUSTRY_SABOTAGE ||
 					incidentType == IncidentType.PLANETBUSTER) {
@@ -785,6 +797,8 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		CampaignFleetAPI fleet = EconomyFleetRouteManager.createTradeRouteFleet(route, random);
 		if (fleet == null) return null;;
 		
+		fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_DO_NOT_IGNORE_PLAYER, true);
+		fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORES_OTHER_FLEETS, true);
 		fleet.addEventListener(this);
 		fleet.addScript(new EconomyFleetAssignmentAI(fleet, route));
 		return fleet;

@@ -8,7 +8,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class CompromisedStorage extends BaseHullMod {
 
-public static final float CAPACITY_PENALTY_PERCENT = 30f;
+public static final float CAPACITY_PENALTY_PERCENT = 25f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		float effect = stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);

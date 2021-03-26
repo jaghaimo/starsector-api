@@ -3,10 +3,16 @@ package com.fs.starfarer.api.campaign;
 import java.awt.Color;
 import java.util.List;
 
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.ValueDisplayMode;
 
 
 public interface OptionPanelAPI {
+	
+	public static interface OptionTooltipCreator {
+		void createTooltip(TooltipMakerAPI tooltip, boolean hadOtherText);
+	}
+	
 	
 	void setTooltipHighlights(Object data, String ... highlights);
 	void setTooltipHighlightColors(Object data, Color ... colors);
@@ -67,4 +73,10 @@ public interface OptionPanelAPI {
 	
 	void addOptionConfirmation(Object optionId, String text, String yes, String no);
 	boolean hasOption(Object data);
+	void addOptionConfirmation(Object data, StoryPointActionDelegate confirmDelegate);
+	void addOptionTooltipAppender(Object data, OptionTooltipCreator optionTooltipCreator);
+	void setOptionText(String text, Object data);
+	boolean hasOptionTooltipAppender(Object data);
+	boolean optionHasConfirmDelegate(Object data);
+	Object getOptionDataBeingConfirmed();
 }

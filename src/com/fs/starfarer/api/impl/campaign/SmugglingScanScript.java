@@ -64,7 +64,9 @@ public class SmugglingScanScript implements EveryFrameScript {
 		List<CampaignFleetAPI> patrols = Misc.findNearbyFleets(player, MAX_RANGE_FROM_PLAYER, new FleetFilter() {
 			public boolean accept(CampaignFleetAPI curr) {
 				if (curr.getFaction() != market.getFaction()) return false;
+				if (curr.getFaction().isPlayerFaction()) return false;
 				if (curr.isHostileTo(player)) return false;
+				if (curr.isStationMode()) return false;
 				if (Misc.getSourceMarket(curr) != market) return false;
 				if (!curr.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_PATROL_FLEET)) return false;
 				if (curr.getAI() instanceof ModularFleetAIAPI) {
@@ -82,10 +84,13 @@ public class SmugglingScanScript implements EveryFrameScript {
 		
 		float minDist = Float.MAX_VALUE;
 		CampaignFleetAPI closestPatrol = null;
+		float closestSuspicion = 0f;
 		for (CampaignFleetAPI curr : patrols) {
 			float dist = Misc.getDistance(player.getLocation(), curr.getLocation());
-			if (dist < minDist) {
+			float extra = curr.getMemoryWithoutUpdate().getFloat(MemFlags.PATROL_EXTRA_SUSPICION);
+			if (dist < minDist || extra > closestSuspicion) {
 				minDist = dist;
+				closestSuspicion = extra;
 				closestPatrol = curr;
 			}
 		}
@@ -96,7 +101,9 @@ public class SmugglingScanScript implements EveryFrameScript {
 
 		float threshold = 0.05f;
 		MemoryAPI marketMemory = market.getMemory();
-		float suspicionLevel = marketMemory.getFloat(MemFlags.MEMORY_MARKET_SMUGGLING_SUSPICION_LEVEL); 
+		float suspicionLevel = marketMemory.getFloat(MemFlags.MEMORY_MARKET_SMUGGLING_SUSPICION_LEVEL);
+		suspicionLevel += closestSuspicion;
+		//suspicionLevel = 1f;
 		boolean doScan = (float) Math.random() < suspicionLevel * 5f && suspicionLevel >= threshold;
 		//doScan = true;
 		

@@ -213,7 +213,7 @@ public class InvestigationEventGoodRepWithOther extends BaseEventPlugin {
 					public void beforeDelivery(CommMessageAPI message) {
 						if (punishment != null) {
 							Global.getSector().adjustPlayerReputation(
-									new RepActionEnvelope(punishment, null, message, true), 
+									new RepActionEnvelope(punishment, null, null, true), 
 														  market.getFactionId());
 						}
 					}

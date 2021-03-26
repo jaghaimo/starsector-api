@@ -16,8 +16,8 @@ import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
+import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
@@ -85,14 +85,17 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 		
 		
 		WeightedRandomPicker<StarSystemAPI> cryoSystems = new WeightedRandomPicker<StarSystemAPI>(StarSystemGenerator.random);
+		WeightedRandomPicker<StarSystemAPI> backup = new WeightedRandomPicker<StarSystemAPI>(StarSystemGenerator.random);
 		OUTER: for (StarSystemAPI system : Global.getSector().getStarSystems()) {
 			float w = 0f;
 			if (system.hasTag(Tags.THEME_DERELICT_PROBES)) {
 				w = 10f;
 			} else if (system.hasTag(Tags.THEME_DERELICT_SURVEY_SHIP)) {
-				w = 15f;
+				w = 10f;
 			} else if (system.hasTag(Tags.THEME_DERELICT_MOTHERSHIP)) {
-				w = 20f;
+				w = 10f;
+			} else if (system.hasTag(Tags.THEME_DERELICT)) {
+				w = 10f;
 			} else {
 				continue;
 			}
@@ -105,20 +108,31 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 				hasHab |= planet.getMarket() != null && planet.getMarket().hasCondition(Conditions.HABITABLE);
 				numPlanets++;
 			}
-			
-			if (!hasHab && numPlanets < 3) continue;
+
+			WeightedRandomPicker<StarSystemAPI> use = cryoSystems;
+			if (!hasHab || numPlanets < 3) {
+				use = backup;
+			}
 			
 			if (hasHab) w += 5;
 			w += numPlanets;
 			
-			cryoSystems.add(system, w);
+			use.add(system, w);
+		}
+		
+		if (cryoSystems.isEmpty()) {
+			cryoSystems.addAll(backup);
 		}
 		
 		int numCryo = 2;
 		int added = 0;
+		WeightedRandomPicker<String> cryosleeperNames = new WeightedRandomPicker<String>(random);
+		cryosleeperNames.add("Calypso");
+		cryosleeperNames.add("Tantalus");
 		while (added < numCryo && !cryoSystems.isEmpty()) {
 			StarSystemAPI pick = cryoSystems.pickAndRemove();
-			AddedEntity cryo = addCryosleeper(pick);
+			String name = cryosleeperNames.pickAndRemove();
+			AddedEntity cryo = addCryosleeper(pick, name);
 			if (cryo != null) {
 				added++;
 			}
@@ -622,8 +636,9 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 //			}
 //		}
 		
-		AddedEntity entity = addEntity(system, locs, Entities.DERELICT_MOTHERSHIP, Factions.DERELICT);
+		AddedEntity entity = addEntity(random, system, locs, Entities.DERELICT_MOTHERSHIP, Factions.DERELICT);
 		if (entity != null) {
+			system.addTag(Tags.THEME_INTERESTING);
 			system.addTag(Tags.THEME_DERELICT);
 			system.addTag(Tags.THEME_DERELICT_MOTHERSHIP);
 		}
@@ -639,7 +654,7 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 	}
 	
 	
-	protected AddedEntity addCryosleeper(StarSystemAPI system) {
+	protected AddedEntity addCryosleeper(StarSystemAPI system, String name) {
 		LinkedHashMap<LocationType, Float> weights = new LinkedHashMap<LocationType, Float>();
 		weights.put(LocationType.PLANET_ORBIT, 10f);
 		weights.put(LocationType.JUMP_ORBIT, 1f);
@@ -654,10 +669,16 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 		WeightedRandomPicker<EntityLocation> locs = getLocations(random, system, 100f, weights);
 		
 		
-		AddedEntity entity = addEntity(system, locs, Entities.DERELICT_CRYOSLEEPER, Factions.DERELICT);
+		AddedEntity entity = addEntity(random, system, locs, Entities.DERELICT_CRYOSLEEPER, Factions.DERELICT);
 		if (entity != null) {
+			system.addTag(Tags.THEME_INTERESTING);
 			system.addTag(Tags.THEME_DERELICT);
 			system.addTag(Tags.THEME_DERELICT_CRYOSLEEPER);
+			
+			if (name != null) {
+				entity.entity.setName(entity.entity.getName() + " \"" + name + "\"");
+				//entity.entity.setName("Cryosleeper" + "\"" + name + "\"");
+			}
 		}
 		
 		if (DEBUG) {
@@ -684,9 +705,10 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 		weights.put(LocationType.L_POINT, 1f);
 		WeightedRandomPicker<EntityLocation> locs = getLocations(random, system, 100f, weights);
 		
-		AddedEntity entity = addEntity(system, locs, Entities.DERELICT_SURVEY_SHIP, Factions.DERELICT);
+		AddedEntity entity = addEntity(random, system, locs, Entities.DERELICT_SURVEY_SHIP, Factions.DERELICT);
 		
 		if (entity != null) {
+			system.addTag(Tags.THEME_INTERESTING);
 			system.addTag(Tags.THEME_DERELICT);
 			system.addTag(Tags.THEME_DERELICT_SURVEY_SHIP);
 		}
@@ -717,10 +739,11 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 		
 		List<AddedEntity> result = new ArrayList<AddedEntity>();
 		for (int i = 0; i < num; i++) {
-			AddedEntity probe = addEntity(system, locs, Entities.DERELICT_SURVEY_PROBE, Factions.DERELICT);
+			AddedEntity probe = addEntity(random, system, locs, Entities.DERELICT_SURVEY_PROBE, Factions.DERELICT);
 			if (probe != null) {
 				result.add(probe);
 				
+				system.addTag(Tags.THEME_INTERESTING_MINOR);
 				system.addTag(Tags.THEME_DERELICT);
 				system.addTag(Tags.THEME_DERELICT_PROBES);
 			}

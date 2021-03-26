@@ -67,7 +67,7 @@ public class CargoManifestSpecial extends BaseSalvageSpecial {
 		float quantity = data.min + (data.max - data.min) * random.nextFloat();
 		quantity = Math.round(quantity);
 		extra.addCommodity(data.commodityId, quantity);
-		setExtraSalvage(extra);
+		addTempExtraSalvage(extra);
 		
 		setDone(true);
 		setShowAgain(true);

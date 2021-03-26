@@ -141,6 +141,10 @@ public class BaseCampaignPlugin implements CampaignPlugin {
 		return null;
 	}
 
+	public PluginPick<AICoreOfficerPlugin> pickAICoreOfficerPlugin(String commodityId) {
+		return null;
+	}
+
 }
 
 

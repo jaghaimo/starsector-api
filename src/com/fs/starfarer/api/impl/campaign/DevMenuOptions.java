@@ -9,7 +9,11 @@ import org.lwjgl.input.Keyboard;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
+import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
+import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.rulecmd.DumpMemory;
 import com.fs.starfarer.api.util.Misc;
@@ -59,7 +63,7 @@ public class DevMenuOptions {
 	}
 	
 	
-	private static List savedOptions = null;
+	public static List savedOptions = null;
 	
 	public static void execute(InteractionDialogAPI dialog, String option) {
 		SectorEntityToken entity = dialog.getInteractionTarget();
@@ -90,16 +94,43 @@ public class DevMenuOptions {
 		
 		if (entity != null && entity.getFaction() != null) {
 			if (option == PRINT_REP) {
-				dialog.getTextPanel().addParagraph("Reputation with " + entity.getFaction().getDisplayName() + ": " + 
+				if (entity.getActivePerson() != null) {
+					dialog.getTextPanel().addParagraph("Reputation with " + entity.getActivePerson().getNameString() + ": " + 
+							entity.getActivePerson().getRelToPlayer().getRel());
+				} else {
+					dialog.getTextPanel().addParagraph("Reputation with " + entity.getFaction().getDisplayName() + ": " + 
 								entity.getFaction().getRelationship(Factions.PLAYER));
+				}
 			} else if (option == INCREASE_REP) {
-				entity.getFaction().adjustRelationship(Factions.PLAYER, 0.1f);
-				dialog.getTextPanel().addParagraph("Reputation with " + entity.getFaction().getDisplayName() + ": " + 
-						entity.getFaction().getRelationship(Factions.PLAYER));
+				if (entity.getActivePerson() != null) {
+					CustomRepImpact impact = new CustomRepImpact();
+					impact.limit = RepLevel.COOPERATIVE;
+					impact.delta = 0.1f;
+					Global.getSector().adjustPlayerReputation(
+							new RepActionEnvelope(RepActions.CUSTOM, impact,
+												  null, null, false), entity.getActivePerson());
+					dialog.getTextPanel().addParagraph("Reputation with " + entity.getActivePerson().getNameString() + ": " + 
+							entity.getActivePerson().getRelToPlayer().getRel());
+				} else {
+					entity.getFaction().adjustRelationship(Factions.PLAYER, 0.1f);
+					dialog.getTextPanel().addParagraph("Reputation with " + entity.getFaction().getDisplayName() + ": " + 
+							entity.getFaction().getRelationship(Factions.PLAYER));
+				}
 			} else if (option == REDUCE_REP) {
-				entity.getFaction().adjustRelationship(Factions.PLAYER, -0.1f);
-				dialog.getTextPanel().addParagraph("Reputation with " + entity.getFaction().getDisplayName() + ": " + 
-						entity.getFaction().getRelationship(Factions.PLAYER));
+				if (entity.getActivePerson() != null) {
+					CustomRepImpact impact = new CustomRepImpact();
+					impact.limit = RepLevel.VENGEFUL;
+					impact.delta = -0.1f;
+					Global.getSector().adjustPlayerReputation(
+							new RepActionEnvelope(RepActions.CUSTOM, impact,
+												  null, null, false), entity.getActivePerson());
+					dialog.getTextPanel().addParagraph("Reputation with " + entity.getActivePerson().getNameString() + ": " + 
+							entity.getActivePerson().getRelToPlayer().getRel());
+				} else {
+					entity.getFaction().adjustRelationship(Factions.PLAYER, -0.1f);
+					dialog.getTextPanel().addParagraph("Reputation with " + entity.getFaction().getDisplayName() + ": " + 
+							entity.getFaction().getRelationship(Factions.PLAYER));
+				}
 			}
 		}
 		

@@ -13,6 +13,7 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CoreInteractionListener;
 import com.fs.starfarer.api.campaign.FactionAPI;
@@ -22,11 +23,13 @@ import com.fs.starfarer.api.campaign.ResourceCostPanelAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.RepairGantry;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
@@ -36,13 +39,13 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec;
-import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
+import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageEntityGeneratorOld;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial;
-import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.ExtraSalvage;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.ShipRecoverySpecialData;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldSource;
@@ -50,8 +53,8 @@ import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.StatModValueGetter;
 import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.util.WeightedRandomPicker;
 import com.fs.starfarer.api.util.Misc.Token;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 /**
  * NotifyEvent $eventHandle <params> 
@@ -59,13 +62,17 @@ import com.fs.starfarer.api.util.Misc.Token;
  */
 public class SalvageEntity extends BaseCommandPlugin {
 	
+	public static float SALVAGE_DETECTION_MOD_FLAT = 1000;
+	
 	public static int FIELD_RADIUS_FOR_BASE_REQ = 200;
 	public static int FIELD_RADIUS_FOR_MAX_REQ = 1000;
 	public static int FIELD_RADIUS_MAX_REQ_MULT = 10;
 	public static float FIELD_MIN_SALVAGE_MULT = 0.01f;
 	
 	
-	public static float FIELD_SALVAGE_FRACTION_PER_ATTEMPT = 0.5f;
+	
+	//public static float FIELD_SALVAGE_FRACTION_PER_ATTEMPT = 0.5f;
+	public static float FIELD_SALVAGE_FRACTION_PER_ATTEMPT = 1f;
 	
 	public static float FIELD_CONTENT_MULTIPLIER_AFTER_SALVAGE = 0.25f;
 	//public static float FIELD_CONTENT_MULTIPLIER_AFTER_DEMOLITION = 0.65f;
@@ -139,6 +146,10 @@ public class SalvageEntity extends BaseCommandPlugin {
 			checkAccidents();
 		} else if (command.equals("demolish")) {
 			demolish();
+		} else if (command.equals("canBeMadeRecoverable")) {
+			return canBeMadeRecoverable();
+		} else if (command.equals("showRecoverable")) {
+			showRecoverable();
 		}
 		
 		return true;
@@ -205,6 +216,7 @@ public class SalvageEntity extends BaseCommandPlugin {
 		float fMachinery = machinery / reqMachinery;
 		if (fMachinery < 0) fMachinery = 0;
 		if (fMachinery > 1) fMachinery = 1;
+		
 		
 //		CommoditySpecAPI crewSpec = Global.getSector().getEconomy().getCommoditySpec(Commodities.CREW);
 //		CommoditySpecAPI machinerySpec = Global.getSector().getEconomy().getCommoditySpec(Commodities.HEAVY_MACHINERY);
@@ -382,7 +394,12 @@ public class SalvageEntity extends BaseCommandPlugin {
 		MutableStat valueRecovery = new MutableStat(1f);
 		int i = 0;
 		
+		float machineryContrib = 0.75f;
 		valueRecovery.modifyPercent("base", -100f);
+		if (machineryContrib < 1f) {
+			valueRecovery.modifyPercent("base_positive", (int) Math.round(100f - 100f * machineryContrib), "Base effectiveness");
+		}
+		//valueRecovery.modifyPercent("base", -75f);
 		
 		float per = 0.5f;
 		per = 1f;
@@ -396,6 +413,8 @@ public class SalvageEntity extends BaseCommandPlugin {
 			int percent = (int) Math.round(val * 100f);
 			//valueRecovery.modifyPercent("" + i++, percent, Misc.ucFirst(spec.getLowerCaseName()) + " requirements met");
 			if (Commodities.HEAVY_MACHINERY.equals(commodityId)) {
+				val = Math.min(available / required, machineryContrib) * per;
+				percent = (int) Math.round(val * 100f);
 				valueRecovery.modifyPercentAlways("" + i++, percent, Misc.ucFirst(spec.getLowerCaseName()) + " available");
 			} else {
 				valueRecovery.modifyMultAlways("" + i++, val, Misc.ucFirst(spec.getLowerCaseName()) + " available");
@@ -405,15 +424,22 @@ public class SalvageEntity extends BaseCommandPlugin {
 //			valueRecovery.modifyPercent("" + i++, percent, "Insufficient " + spec.getLowerCaseName());
 		}
 		
+		boolean modified = false;
 		if (withSkillMultForRares) {
-			boolean modified = false;
 			for (StatMod mod : playerFleet.getStats().getDynamic().getStat(Stats.SALVAGE_VALUE_MULT_FLEET_INCLUDES_RARE).getFlatMods().values()) {
 				modified = true;
 				valueRecovery.modifyPercentAlways("" + i++, (int) Math.round(mod.value * 100f), mod.desc);
 			}
-			if (!modified) {
-				valueRecovery.modifyPercentAlways("" + i++, (int) Math.round(0f), "Salvaging skill");
+		}
+		
+		{
+			for (StatMod mod : playerFleet.getStats().getDynamic().getStat(Stats.SALVAGE_VALUE_MULT_FLEET_NOT_RARE).getFlatMods().values()) {
+				modified = true;
+				valueRecovery.modifyPercentAlways("" + i++, (int) Math.round(mod.value * 100f), mod.desc);
 			}
+		}
+		if (!modified) {
+			valueRecovery.modifyPercentAlways("" + i++, (int) Math.round(0f), "Salvaging skill");
 		}
 		
 		float fleetSalvageShips = getPlayerShipsSalvageModUncapped();
@@ -630,7 +656,7 @@ public class SalvageEntity extends BaseCommandPlugin {
 		Misc.stopPlayerFleet();
 		
 //		if (Global.getSettings().isDevMode()) {
-//			random = new Random();
+//			random = Misc.random;
 //		}
 		
 //		float salvageRating = spec.getSalvageRating();
@@ -662,10 +688,12 @@ public class SalvageEntity extends BaseCommandPlugin {
 		float fuelMult = playerFleet.getStats().getDynamic().getValue(Stats.FUEL_SALVAGE_VALUE_MULT_FLEET);
 		CargoAPI salvage = generateSalvage(random, valueMultFleet, rareItemSkillMult, overallMult, fuelMult, dropValue, dropRandom);
 		
-		ExtraSalvage extra = BaseSalvageSpecial.getExtraSalvage(memoryMap);
-		if (extra != null) {
-			salvage.addAll(extra.cargo);
-			BaseSalvageSpecial.clearExtraSalvage(memoryMap);
+		//ExtraSalvage extra = BaseSalvageSpecial.getExtraSalvage(memoryMap);
+		CargoAPI extra = BaseSalvageSpecial.getCombinedExtraSalvage(memoryMap);
+		salvage.addAll(extra);
+		BaseSalvageSpecial.clearExtraSalvage(memoryMap);
+		if (!extra.isEmpty()) {
+			ListenerUtil.reportExtraSalvageShown(entity);
 		}
 		
 		//salvage.addCommodity(Commodities.ALPHA_CORE, 1);
@@ -676,6 +704,7 @@ public class SalvageEntity extends BaseCommandPlugin {
 			
 			debris.getEntity().getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SEED, random.nextLong());
 			//System.out.println("Post-salvage density: " + debris.getParams().density);
+			debris.setScavenged(true);
 		}
 		
 		//if (loot)
@@ -733,6 +762,13 @@ public class SalvageEntity extends BaseCommandPlugin {
 				}
 			}
 		}
+		
+		if (playerFleet != null) {
+			playerFleet.getStats().addTemporaryModFlat(0.25f, "salvage_ops", 
+					"Recent salvage operation", SALVAGE_DETECTION_MOD_FLAT,
+					playerFleet.getStats().getDetectedRangeMod());
+			Global.getSector().addPing(playerFleet, "noticed_player");
+		}
 	}
 	
 	
@@ -778,8 +814,9 @@ public class SalvageEntity extends BaseCommandPlugin {
 		
 		SectorEntityToken debris = Misc.addDebrisField(entity.getContainingLocation(), params, null);
 		
-		ExtraSalvage extra = BaseSalvageSpecial.getExtraSalvage(memoryMap);
-		if (extra != null) {
+		//ExtraSalvage extra = BaseSalvageSpecial.getExtraSalvage(memoryMap);
+		CargoAPI extra = BaseSalvageSpecial.getCombinedExtraSalvage(memoryMap);
+		if (extra != null && !extra.isEmpty()) {
 			// don't prune extra cargo - it could have come from not recovering ships,
 			// and so could've been gotten by recovering and then stripping/scuttling them
 			// so shouldn't punish shortcutting that process
@@ -797,7 +834,8 @@ public class SalvageEntity extends BaseCommandPlugin {
 //				extraCopy.addItems(stack.getType(), stack.getData(), qty);
 //			}
 //			BaseSalvageSpecial.setExtraSalvage(extraCopy, debris.getMemoryWithoutUpdate(), -1f);
-			BaseSalvageSpecial.setExtraSalvage(extra.cargo, debris.getMemoryWithoutUpdate(), -1f);
+			//BaseSalvageSpecial.addExtraSalvage(extra.cargo, debris.getMemoryWithoutUpdate(), -1f);
+			BaseSalvageSpecial.addExtraSalvage(extra, debris.getMemoryWithoutUpdate(), -1f);
 		}
 		
 //		int count = 0;
@@ -912,6 +950,9 @@ public class SalvageEntity extends BaseCommandPlugin {
 				//if (random.nextFloat() < data.valueMult) continue;
 				
 				int chances = data.chances;
+				if (data.maxChances > chances) {
+					chances = chances + random.nextInt(data.maxChances - chances + 1);
+				}
 //				if (data.group.endsWith("misc_test")) {
 //					System.out.println("fewfwefwe");
 //				}
@@ -938,7 +979,7 @@ public class SalvageEntity extends BaseCommandPlugin {
 				picker.setRandom(innerRandom);
 				for (int i = 0; i < chances; i++) {
 //					if (random.nextFloat() > overallMult) continue;
-//					if (random.nextFloat() > data.valueMult) co/ntinue;
+//					if (random.nextFloat() > data.valueMult) continue;
 					
 					DropGroupRow row = picker.pick();
 					if (row.isMultiValued()) {
@@ -990,7 +1031,13 @@ public class SalvageEntity extends BaseCommandPlugin {
 				
 				float maxValue = data.value;
 				
-				maxValue *= valueMult;
+				// if value is 1, it's a "guaranteed pick one out of this usually-dropRandom group"
+				// so still allow it even if valueMult is 0 due to a lack of heavy machinery
+				// since dropRandom works w/ no machinery, too
+				if (data.value > 1) {
+					maxValue *= valueMult;
+				}
+				
 				maxValue *= overallMult;
 				maxValue *= data.valueMult;
 				
@@ -1064,6 +1111,48 @@ public class SalvageEntity extends BaseCommandPlugin {
 		
 		return result;
 	}
+	
+	
+	public boolean canBeMadeRecoverable() {
+		if (entity.getCustomPlugin() instanceof DerelictShipEntityPlugin) {
+			
+			//if (Misc.getSalvageSpecial(entity) != null) return false;
+			
+			if (Misc.getSalvageSpecial(entity) instanceof ShipRecoverySpecialData) {
+				return false;
+			}
+			
+//			int room = Global.getSettings().getMaxShipsInFleet() - 
+//			   		   Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy().size();
+//			if (room < 1) return false;
+			
+			DerelictShipEntityPlugin plugin = (DerelictShipEntityPlugin) entity.getCustomPlugin();
+			ShipVariantAPI variant = plugin.getData().ship.getVariant();
+			if (variant != null && !Misc.isUnboardable(variant.getHullSpec())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	
+	public void showRecoverable() {
+		
+		Object prev = Misc.getSalvageSpecial(entity);
+		if (prev != null) {
+			Misc.setPrevSalvageSpecial(entity, prev);
+		}
+		
+		ShipRecoverySpecialData data = new ShipRecoverySpecialData(null);
+		DerelictShipEntityPlugin plugin = (DerelictShipEntityPlugin) entity.getCustomPlugin();
+		data.addShip(plugin.getData().ship.clone());
+		data.storyPointRecovery = true;
+		Misc.setSalvageSpecial(entity, data);
+		
+		long seed = Misc.getSalvageSeed(entity);
+		entity.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SEED, seed);
+	}
+	
 }
 
 

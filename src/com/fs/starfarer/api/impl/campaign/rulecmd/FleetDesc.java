@@ -10,10 +10,11 @@ import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
 import com.fs.starfarer.api.impl.campaign.econ.ShippingDisruption;
+import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.EconomyRouteData;
 import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
-import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.EconomyRouteData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.ui.LabelAPI;
@@ -32,8 +33,20 @@ public class FleetDesc extends BaseCommandPlugin {
 		FactionAPI faction = fleet.getFaction();
 		TextPanelAPI text = dialog.getTextPanel();
 		
+		if (Global.getSettings().isDevMode()) {
+			text.addParagraph("Admiral skills:");
+			for (SkillLevelAPI skill : fleet.getCommanderStats().getSkillsCopy()) {
+				if (skill.getSkill().isAdmiralSkill()) {
+					text.addParagraph("    " + skill.getSkill().getId());
+				}
+			}
+		}
+		
 		
 		MemoryAPI mem = fleet.getMemoryWithoutUpdate();
+		if (!mem.contains("$shownFleetDescAlready")) {
+			mem.set("$shownFleetDescAlready", true, 0);
+		}
 		
 		boolean smuggler = mem.getBoolean(MemFlags.MEMORY_KEY_SMUGGLER);
 		boolean trader = mem.getBoolean(MemFlags.MEMORY_KEY_TRADE_FLEET);
@@ -111,20 +124,36 @@ public class FleetDesc extends BaseCommandPlugin {
 			}
 		}
 		
-		if (!fleet.getFaction().isPlayerFaction()) {
+		if (!fleet.getFaction().isPlayerFaction() && !fleet.getFaction().isNeutralFaction()) {
 			if (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_NO_REP_IMPACT)) {
-				text.addPara("This fleet is operating without official sanction from the faction it nominally belongs to. " +
-						"Engaging it in battle will not cause any changes to your reputation.",
-						Misc.getHighlightColor(), "will not cause any changes to your reputation");
+				if (Misc.isDecentralized(fleet.getFaction())) {
+//					text.addPara("This fleet's behavior falls outside the accepted norms of the faction it nominally belongs to. " +
+//								 "Engaging it in battle will not cause any changes to your reputation.",
+//								 Misc.getHighlightColor(), "will not cause any changes to your reputation");
+					text.addPara("Engaging this fleet in battle will not cause any changes to your reputation with the faction it nominally belongs to.",
+							Misc.getHighlightColor(), "will not cause any changes to your reputation");
+				} else {
+					text.addPara("This fleet is operating without official sanction from the faction it nominally belongs to. " +
+							"Engaging it in battle will not cause any changes to your reputation.",
+							Misc.getHighlightColor(), "will not cause any changes to your reputation");
+				}
 			} else if (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT) && fleet.knowsWhoPlayerIs()) {
-				text.addPara("This fleet is either operating in a legal gray area or its behavior " +
-						"falls outside accepted norms. Engaging it in battle will not cause immediate hostilities " +
-						"with the faction it nominally belongs to, though it will slightly strain the relationship.",
-						Misc.getHighlightColor(), "will not cause immediate hostilities");
+				if (Misc.isDecentralized(fleet.getFaction())) {
+//					text.addPara("This fleet's behavior falls outside the accepted norms of the faction it nominally belongs to. " +
+//							"Engaging it in battle will not cause immediate hostilities " +
+//							"with the faction it belongs to, though it will slightly strain the relationship.",
+//							Misc.getHighlightColor(), "will not cause immediate hostilities");
+					text.addPara("Engaging this fleet in battle will not cause immediate hostilities " +
+							"with the faction it nominally belongs to, though it will slightly strain the relationship.",
+							Misc.getHighlightColor(), "will not cause immediate hostilities");
+				} else {
+					text.addPara("This fleet is either operating in a legal gray area or its behavior " +
+							"falls outside accepted norms. Engaging it in battle will not cause immediate hostilities " +
+							"with the faction it nominally belongs to, though it will slightly strain the relationship.",
+							Misc.getHighlightColor(), "will not cause immediate hostilities");
+				}
 			}
 		}
-		
-		//text.addParagraph("wfwef ew ew");
 		
 		return true;
 	}

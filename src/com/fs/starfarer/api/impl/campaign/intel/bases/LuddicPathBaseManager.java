@@ -14,6 +14,7 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
+import com.fs.starfarer.api.impl.campaign.Tuning;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseEventManager;
@@ -90,6 +91,7 @@ public class LuddicPathBaseManager extends BaseEventManager {
 			if (timesSinceLastChange > 50) {
 				activeMod = Misc.random.nextInt(3);
 				sleeperMod = Misc.random.nextInt(3);
+				timesSinceLastChange = 0;
 			}
 			
 			updateCellStatus();
@@ -192,11 +194,11 @@ public class LuddicPathBaseManager extends BaseEventManager {
 		
 		for (MarketAPI market : active) {
 			LuddicPathCellsIntel intel = cells.get(market);
+			LuddicPathBaseIntel base = LuddicPathCellsIntel.getClosestBase(market);
 			if (intel == null) {
-				intel = new LuddicPathCellsIntel(market, false);
+				intel = new LuddicPathCellsIntel(market, base == null);
 				cells.put(market, intel);
 			}
-			LuddicPathBaseIntel base = LuddicPathCellsIntel.getClosestBase(intel.getMarket());
 			if (base != null) {
 				intel.makeActiveIfPossible();
 			} else {
@@ -243,6 +245,11 @@ public class LuddicPathBaseManager extends BaseEventManager {
 	protected Random random = new Random();
 	@Override
 	protected EveryFrameScript createEvent() {
+		if (numSpawnChecksToSkip > 0) {
+			numSpawnChecksToSkip--;
+			return null;
+		}
+		
 		if (random.nextFloat() < CHECK_PROB) return null;
 		
 		StarSystemAPI system = pickSystemForLPBase();
@@ -310,7 +317,17 @@ public class LuddicPathBaseManager extends BaseEventManager {
 		
 		return picker.pick();
 	}
+
 	
+	protected int numDestroyed = 0;
+	protected int numSpawnChecksToSkip = 0;
+	
+	public void incrDestroyed() {
+		numDestroyed++;
+		numSpawnChecksToSkip = Math.max(numSpawnChecksToSkip, (Tuning.PATHER_BASE_MIN_TIMEOUT_MONTHS + 
+					Misc.random.nextInt(Tuning.PATHER_BASE_MAX_TIMEOUT_MONTHS - Tuning.PATHER_BASE_MIN_TIMEOUT_MONTHS + 1))
+					* 3); // checks happen every 10 days on average, *3 to get months
+	}
 }
 
 

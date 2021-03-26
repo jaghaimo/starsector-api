@@ -3,7 +3,7 @@ package com.fs.starfarer.api.combat;
 import java.util.EnumSet;
 
 public interface CombatLayeredRenderingPlugin {
-	public void init();
+	public void init(CombatEntityAPI entity);
 	public void cleanup();
 	public boolean isExpired();
 	

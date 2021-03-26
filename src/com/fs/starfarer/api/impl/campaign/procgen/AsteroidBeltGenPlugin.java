@@ -24,17 +24,17 @@ public class AsteroidBeltGenPlugin implements TerrainGenPlugin {
 		float maxPlanets = 1;
 		if (context.currentRadius > 2000f && StarSystemGenerator.random.nextFloat() > 0.5f) {
 			width += 100f;
-			countMult += 0.5f;
+			countMult += 0.1f;
 			maxPlanets++;
 		}
 		if (context.currentRadius > 4000f && StarSystemGenerator.random.nextFloat() > 0.5f) {
 			width += 100f;
-			countMult += 0.5f;
+			countMult += 0.1f;
 			maxPlanets++;
 		}
 		if (context.currentRadius > 6000f && StarSystemGenerator.random.nextFloat() > 0.5f) {
 			width += 100f;
-			countMult += 0.5f;
+			countMult += 0.1f;
 			maxPlanets++;
 		}
 		
@@ -46,7 +46,10 @@ public class AsteroidBeltGenPlugin implements TerrainGenPlugin {
 		float orbitDays = orbitRadius / (15f + 5f * StarSystemGenerator.random.nextFloat());
 
 		int count = (int) (orbitDays * (0.25f + 0.5f * StarSystemGenerator.random.nextFloat()) * countMult);
-		if (count > 400) count = 400;
+		if (count > 100) {
+			count = (int) (100f + (count - 100f) * 0.25f); 
+		}
+		if (count > 250) count = 250;
 		
 		SectorEntityToken belt = system.addAsteroidBelt(parent, count, orbitRadius, width, orbitDays * .75f, orbitDays * 1.5f, Terrain.ASTEROID_BELT,  null);
 		

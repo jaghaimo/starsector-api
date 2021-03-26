@@ -322,7 +322,7 @@ public abstract class BaseTiledTerrain extends BaseTerrain {
 		
 	}
 	
-	protected float[] getTileCenter(int i, int j) {
+	public float[] getTileCenter(int i, int j) {
 		float x = entity.getLocation().x;
 		float y = entity.getLocation().y;
 		float size = getTileSize();
@@ -332,7 +332,7 @@ public abstract class BaseTiledTerrain extends BaseTerrain {
 			
 		float [] result = new float[2];
 		result[0] = x - w / 2f + (float)i * size + size / 2f;
-		result[1] = x - h / 2f + (float)j * size + size / 2f;
+		result[1] = y - h / 2f + (float)j * size + size / 2f;
 		return result;
 	}
 	

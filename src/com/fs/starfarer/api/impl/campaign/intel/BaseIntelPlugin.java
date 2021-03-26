@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.EveryFrameScript;
@@ -14,9 +15,10 @@ import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.StoryPointActionDelegate;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
-import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.comm.CommMessageAPI.MessageClickAction;
+import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.CommRelayEntityPlugin.CommSnifferReadableIntel;
@@ -42,6 +44,8 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	public static final String BULLET = "    - ";
 	public static final String INDENT = "      ";
 	
+	public static String BUTTON_DELETE = "button_delete";
+	
 	protected Boolean important;
 	protected Long timestamp;
 	protected Boolean neverClicked = true;
@@ -58,7 +62,6 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	public BaseIntelPlugin() {
 	}
 	
-	
 	public void advance(float amount) {
 		if (isEnded()) return;
 		
@@ -73,6 +76,10 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 		}
 		
 		advanceImpl(amount);
+	}
+	
+	public void notifyPlayerAboutToOpenIntelScreen() {
+		
 	}
 	
 	protected void advanceImpl(float amount) {}
@@ -177,9 +184,43 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 		return true;
 	}
 
-	public void createIntelInfo(TooltipMakerAPI info, ListInfoMode mode) {
-		info.addPara("Override .createIntelListInfo()", Misc.getNegativeHighlightColor(), 0f);
+//	public void createIntelInfo(TooltipMakerAPI info, ListInfoMode mode) {
+//		info.addPara("Override .createIntelInfo()", Misc.getNegativeHighlightColor(), 0f);
+//	}
+	
+	protected void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode) {
+		float pad = 3f;
+		float opad = 10f;
+		
+		float initPad = pad;
+		if (mode == ListInfoMode.IN_DESC) initPad = opad;
+		
+		Color tc = getBulletColorForMode(mode);
+	
+		boolean isUpdate = getListInfoParam() != null;
+		
+		bullet(info);
+		addBulletPoints(info, mode, isUpdate, tc, initPad);
+		unindent(info);
 	}
+	
+	protected void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode, boolean isUpdate, 
+								   Color tc, float initPad) {
+		
+	}
+
+	public void createIntelInfo(TooltipMakerAPI info, ListInfoMode mode) {
+		if (getName() != null) {
+			Color c = getTitleColor(mode);
+			info.addPara(getName(), c, 0f);
+		}
+		addBulletPoints(info, mode);
+	}
+	
+	protected String getName() {
+		return null;
+	}
+	
 	
 	public boolean hasSmallDescription() {
 		return true;
@@ -216,7 +257,7 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 //		if (this instanceof CommSnifferIntel) {
 //			System.out.println("wefwefe");
 //		}
-		if (isImportant()) return false;
+//		if (isImportant()) return false;
 		
 		if (timestamp == null && isEnding()) {
 			return true; // already ending, and not yet player-visible; remove
@@ -272,6 +313,9 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	}
 	
 	public boolean doesButtonHaveConfirmDialog(Object buttonId) {
+		if (buttonId == BUTTON_DELETE) {
+			return true;
+		}
 		return false;
 	}
 	public float getConfirmationPromptWidth(Object buttonId) {
@@ -279,7 +323,9 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	}
 	
 	public void createConfirmationPrompt(Object buttonId, TooltipMakerAPI prompt) {
-
+		if (buttonId == BUTTON_DELETE) {
+			prompt.addPara("Are you sure you want to permanently delete this fleet log entry?", Misc.getTextColor(), 0f);
+		}
 	}
 	
 	public String getConfirmText(Object buttonId) {
@@ -290,9 +336,29 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 		return "Cancel";
 	}
 	
+	protected void addDeleteButton(TooltipMakerAPI info, float width) {
+		addDeleteButton(info, width, "Delete log entry");
+	}
+	protected void addDeleteButton(TooltipMakerAPI info, float width, String delete) {
+		float opad = 10f;
+		ButtonAPI button = info.addButton(delete, BUTTON_DELETE, 
+				  	getFactionForUIColors().getBaseUIColor(), getFactionForUIColors().getDarkUIColor(),
+				  (int)(width), 20f, opad * 2f);
+		button.setShortcut(Keyboard.KEY_G, true);
+	}
+	
 	public void buttonPressConfirmed(Object buttonId, IntelUIAPI ui) {
+		if (buttonId == BUTTON_DELETE) {
+			endImmediately();
+			ui.recreateIntelUI();
+			return;
+		}
 		ui.updateUIForItem(this);
 	}
+	
+//	public void buttonPressConfirmed(Object buttonId, IntelUIAPI ui) {
+//		ui.updateUIForItem(this);
+//	}
 	
 	public void buttonPressCancelled(Object buttonId, IntelUIAPI ui) {
 	}
@@ -344,7 +410,8 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	}
 	
 	public String getSortString() {
-		return null;
+		return getName();
+		//return null;
 	}
 
 	public boolean autoAddCampaignMessage() {
@@ -522,7 +589,7 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	public static String getDaysString(float days) {
 		int d = (int) Math.round(days);
 		String daysStr = "days";
-		if (d <= 1) {
+		if (d == 1) {
 			d = 1;
 			daysStr = "day";
 		}
@@ -530,7 +597,7 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	}
 	
 	public String getSmallDescriptionTitle() {
-		return null;
+		return getName();
 	}
 	
 	public Color getTitleColor(ListInfoMode mode) {
@@ -607,9 +674,12 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	
 	
 	protected ButtonAPI addGenericButton(TooltipMakerAPI info, float width, String text, Object data) {
+		return addGenericButton(info, width, 
+				getFactionForUIColors().getBaseUIColor(), getFactionForUIColors().getDarkUIColor(), text, data);
+	}
+	protected ButtonAPI addGenericButton(TooltipMakerAPI info, float width, Color tc, Color bg, String text, Object data) {
 		float opad = 10f;
-		ButtonAPI button = info.addButton(text, data, 
-				  	getFactionForUIColors().getBaseUIColor(), getFactionForUIColors().getDarkUIColor(),
+		ButtonAPI button = info.addButton(text, data, tc, bg,
 				  (int)(width), 20f, opad * 2f);
 		return button;
 	}
@@ -629,16 +699,29 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	}
 	
 	public static void addMarketToList(TooltipMakerAPI info, MarketAPI market, float pad) {
+		addMarketToList(info, market, pad, null);
+	}
+	
+	public static void addMarketToList(TooltipMakerAPI info, MarketAPI market, float pad, Color tc) {
+		if (tc == null) tc = Misc.getTextColor();
 		String indent = BaseIntelPlugin.INDENT;
 		if (info.getBulletedListPrefix() != null) indent = "";
 		LabelAPI label = info.addPara(indent + market.getName() + " (size %s, %s)",
 				//faction.getPersonNamePrefixAOrAn() + " %s colony.", 
-				pad, market.getFaction().getBaseUIColor(),
+				pad, tc, market.getFaction().getBaseUIColor(),
 				"" + (int) market.getSize(),
 				market.getFaction().getDisplayName());
 		
 		label.setHighlight("" + (int) market.getSize(), market.getFaction().getDisplayName());
 		label.setHighlightColors(Misc.getHighlightColor(), market.getFaction().getBaseUIColor());
+	}
+
+	public StoryPointActionDelegate getButtonStoryPointActionDelegate(Object buttonId) {
+		return null;
+	}
+	
+	public void storyActionConfirmed(Object buttonId, IntelUIAPI ui) {
+		
 	}
 	
 }

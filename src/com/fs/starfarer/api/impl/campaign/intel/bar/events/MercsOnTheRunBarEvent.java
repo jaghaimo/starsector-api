@@ -3,6 +3,7 @@ package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 import java.awt.Color;
 
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
@@ -15,6 +16,8 @@ public class MercsOnTheRunBarEvent extends BaseGetCommodityBarEvent {
 	}
 	
 	public boolean shouldShowAtMarket(MarketAPI market) {
+		//if (true) return true;
+		
 		if (!super.shouldShowAtMarket(market)) return false;
 		regen(market);
 		
@@ -22,9 +25,15 @@ public class MercsOnTheRunBarEvent extends BaseGetCommodityBarEvent {
 			return false;
 		}
 		
-		if (market.getStabilityValue() > 5) return false;
+		if (market.getStabilityValue() >= 7) return false;
 		
 		return true;
+	}
+	
+
+	@Override
+	protected void doExtraConfirmActions() {
+		PlayerFleetPersonnelTracker.getInstance().getMarineData().addXP((float)quantity);
 	}
 
 	@Override
@@ -44,7 +53,8 @@ public class MercsOnTheRunBarEvent extends BaseGetCommodityBarEvent {
 	
 	@Override
 	protected int computeQuantity() {
-		int quantity = 10;
+		//int quantity = 10;
+		int quantity = 30 + random.nextInt(21);
 		return quantity;
 	}
 	
@@ -55,12 +65,12 @@ public class MercsOnTheRunBarEvent extends BaseGetCommodityBarEvent {
 	
 	@Override
 	protected String getPrompt() {
-		return "A table of tattoed roughs who bear - to your discerning eye, mil-grade cybermods - are drinking alarming amounts of liquor.";
+		return "A table of tattooed roughs who bear - to your discerning eye, mil-grade cybermods - are drinking alarming amounts of liquor.";
 	}
 	
 	@Override
 	protected String getOptionText() {
-		return "Join the table of tattoed roughs and see if their contract is up";
+		return "Join the table of tattooed roughs and see if their contract is up";
 	}
 	
 	@Override
@@ -70,7 +80,7 @@ public class MercsOnTheRunBarEvent extends BaseGetCommodityBarEvent {
 				"with the mercenary band. They're drunk for sure, but are composed enough to speak " +
 				"around the precise details of why they're being investigated by local authorities.\n\n" + 
 				"After a couple of the mercs head up to order a round of \"Orbital Bombardments\"," +
-				" their leader pulls you aside and sketches out a proposal. \"We've got ten suits, " +
+				" their leader pulls you aside and sketches out a proposal. \"We've got %s suits, " +
 				"we fight in vac or black. I'll give you our contract for %s, " +
 				"and that's giving it away. Put us to work, or sell it off elsewhere, doesn't matter to " +
 				"me if you can get us outta this fix. What'dya say?\"";
@@ -78,11 +88,11 @@ public class MercsOnTheRunBarEvent extends BaseGetCommodityBarEvent {
 	
 	@Override
 	protected String [] getMainTextTokens() {
-		return new String [] { Misc.getDGSCredits(unitPrice * quantity) };
+		return new String [] { Misc.getWithDGS(quantity), Misc.getDGSCredits(unitPrice * quantity) };
 	}
 	@Override
 	protected Color [] getMainTextColors() {
-		return new Color [] { Misc.getHighlightColor() };
+		return new Color [] { Misc.getHighlightColor(), Misc.getHighlightColor() };
 	}
 	
 	@Override

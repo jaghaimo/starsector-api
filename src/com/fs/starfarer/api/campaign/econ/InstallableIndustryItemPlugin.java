@@ -35,7 +35,9 @@ public interface InstallableIndustryItemPlugin {
 	public boolean isMenuItemTooltipExpandable();
 	public boolean hasMenuItemTooltip();
 	public float getMenuItemTooltipWidth();
+	public boolean isMenuItemEnabled();
 
-
+	
+	boolean canBeInstalled(SpecialItemData data);
 
 }

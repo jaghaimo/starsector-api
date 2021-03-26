@@ -40,6 +40,10 @@ public class NebulaTerrainPlugin extends BaseTiledTerrain implements NebulaTextu
 		if (name == null || name.equals("Unknown")) name = "Nebula";
 	}
 	
+	public String getNameForTooltip() {
+		return "Nebula";
+	}
+	
 	protected Object readResolve() {
 		super.readResolve();
 		layers = EnumSet.of(CampaignEngineLayers.TERRAIN_2, CampaignEngineLayers.TERRAIN_8);
@@ -375,7 +379,7 @@ public class NebulaTerrainPlugin extends BaseTiledTerrain implements NebulaTextu
 
 	public boolean hasAIFlag(Object flag) {
 		return flag == TerrainAIFlags.REDUCES_DETECTABILITY || 
-				flag == TerrainAIFlags.REDUCES_SPEED_SMALL ||
+				flag == TerrainAIFlags.REDUCES_SPEED_LARGE||
 				flag == TerrainAIFlags.TILE_BASED
 				;
 	}

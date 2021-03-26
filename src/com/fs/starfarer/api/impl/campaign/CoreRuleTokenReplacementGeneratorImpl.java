@@ -57,14 +57,25 @@ public class CoreRuleTokenReplacementGeneratorImpl implements RuleTokenReplaceme
 		
 		Map<String, String> map = new HashMap<String, String>();
 
+		map.put("$Playername", Global.getSector().getCharacterData().getName());
+		map.put("$playername", Global.getSector().getCharacterData().getName());
 		map.put("$playerName", Global.getSector().getCharacterData().getName());
+		map.put("$PlayerName", Global.getSector().getCharacterData().getName());
 		
 		map.put("$playerFirstName", Global.getSector().getCharacterData().getPerson().getName().getFirst());
+		map.put("$playerFirstname", Global.getSector().getCharacterData().getPerson().getName().getFirst());
 		map.put("$playerLastName", Global.getSector().getCharacterData().getPerson().getName().getLast());
+		map.put("$playerLastname", Global.getSector().getCharacterData().getPerson().getName().getLast());
 		
 		PersonAPI playerPerson = Global.getSector().getPlayerPerson();
 		if (playerPerson != null) {
 			if (playerPerson.isMale()) {
+				map.put("$playerSirOrMadam", "sir");
+				map.put("$PlayerSirOrMadam", "Sir");
+				
+				map.put("$playerBrotherOrSister", "brother");
+				map.put("$PlayerBrotherOrSister", "Brother");
+				
 				map.put("$playerHisOrHer", "his");
 				map.put("$PlayerHisOrHer", "His");
 				map.put("$playerHimOrHer", "him");
@@ -72,6 +83,12 @@ public class CoreRuleTokenReplacementGeneratorImpl implements RuleTokenReplaceme
 				map.put("$playerHeOrShe", "he");
 				map.put("$PlayerHeOrShe", "He");
 			} else {
+				map.put("$playerSirOrMadam", "ma'am");
+				map.put("$PlayerSirOrMadam", "Ma'am");
+				
+				map.put("$playerBrotherOrSister", "sister");
+				map.put("$PlayerBrotherOrSister", "Sister");
+				
 				map.put("$playerHisOrHer", "her");
 				map.put("$PlayerHisOrHer", "Her");
 				map.put("$playerHimOrHer", "her");
@@ -95,6 +112,7 @@ public class CoreRuleTokenReplacementGeneratorImpl implements RuleTokenReplaceme
 				float expire = mem.getExpire(MemFlags.MEMORY_KEY_PLAYER_HOSTILE_ACTIVITY_NEAR_MARKET);
 				String days = Misc.getAtLeastStringForDays((int) expire);
 				map.put("$playerHostileTimeoutStr", days.toLowerCase());
+				mem.set("$playerHostileTimeoutStr", days.toLowerCase(), 0);
 			}
 		}
 		
@@ -190,6 +208,9 @@ public class CoreRuleTokenReplacementGeneratorImpl implements RuleTokenReplaceme
 			}
 		}
 		map.put("$shipOrFleet", shipOrFleet);
+		map.put("$fleetOrShip", shipOrFleet);
+		map.put("$ShipOrFleet", Misc.ucFirst(shipOrFleet));
+		map.put("$FleetOrShip", Misc.ucFirst(shipOrFleet));
 		
 		if (target instanceof CampaignFleetAPI) {
 			CampaignFleetAPI fleet = (CampaignFleetAPI) target;
@@ -215,6 +236,12 @@ public class CoreRuleTokenReplacementGeneratorImpl implements RuleTokenReplaceme
 				map.put("$HeOrShe", "He");
 				map.put("$himOrHerself", "himself");
 				map.put("$HimOrHerself", "Himself");
+				map.put("$manOrWoman", "man");
+				map.put("$ManOrWoman", "Man");
+				map.put("$brotherOrSister", "brother");
+				map.put("$BrotherOrSister", "Brother");
+				map.put("$sirOrMadam", "sir");
+				map.put("$SirOrMadam", "Sir");
 			} else {
 				map.put("$hisOrHer", "her");
 				map.put("$HisOrHer", "Her");
@@ -224,6 +251,12 @@ public class CoreRuleTokenReplacementGeneratorImpl implements RuleTokenReplaceme
 				map.put("$HeOrShe", "She");
 				map.put("$himOrHerself", "herself");
 				map.put("$HimOrHerself", "Herself");
+				map.put("$manOrWoman", "woman");
+				map.put("$ManOrWoman", "Woman");
+				map.put("$brotherOrSister", "sister");
+				map.put("$BrotherOrSister", "Sister");
+				map.put("$sirOrMadam", "ma'am");
+				map.put("$SirOrMadam", "Ma'am");
 			}
 			
 			if (person.getRank() != null) {

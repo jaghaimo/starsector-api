@@ -587,7 +587,7 @@ public class LocalResourcesSubmarketPlugin extends BaseSubmarketPlugin implement
 		
 		tooltip.addPara("A portion of the resources produced by the colony will be made available here. " +
 				"These resources can be extracted from the colony's economy for a cost equal to %s of their base value. " +
-				"This cost will be deduced at the end of the month.", opad,
+				"This cost will be deducted at the end of the month.", opad,
 				Misc.getHighlightColor(), "" + (int)Math.round(STOCKPILE_COST_MULT * 100f) + "%");
 		
 		tooltip.addPara("These resources can also be used to counter temporary shortages, for a " +

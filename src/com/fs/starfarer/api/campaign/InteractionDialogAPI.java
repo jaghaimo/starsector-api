@@ -1,5 +1,6 @@
 package com.fs.starfarer.api.campaign;
 
+import java.awt.Color;
 import java.util.List;
 
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
@@ -7,6 +8,7 @@ import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.BattleCreationContext;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin;
 
 
 public interface InteractionDialogAPI {
@@ -55,6 +57,8 @@ public interface InteractionDialogAPI {
 									 int rows, int cols, float iconSize, boolean canPickNotReady, boolean canPickMultiple,
 									 List<FleetMemberAPI> pool, FleetMemberPickerListener listener);
 	
+	void showCustomDialog(float customPanelWidth, float customPanelHeight, CustomDialogDelegate delegate);
+	
 	
 	
 //	/**
@@ -76,12 +80,28 @@ public interface InteractionDialogAPI {
 	
 	void setPlugin(InteractionDialogPlugin plugin);
 	void setInteractionTarget(SectorEntityToken interactionTarget);
-	void showFleetMemberRecoveryDialog(String title, List<FleetMemberAPI> pool, FleetMemberPickerListener listener);
 	void showCargoPickerDialog(String title, String okText, String cancelText, 
 			boolean small, float textPanelWidth, CargoAPI cargo, CargoPickerListener listener);
-	void makeOptionOpenCore(String optionId, CoreUITabId tabId, CoreUITradeMode mode);
 	void showIndustryPicker(String title, String okText, MarketAPI market,
 						List<Industry> industries, IndustryPickerListener listener);
+	
+	void makeOptionOpenCore(String optionId, CoreUITabId tabId, CoreUITradeMode mode);
+	
+	void setOptionColor(Object optionId, Color color);
+	void makeStoryOption(Object optionId, int storyPoints, float bonusXPFraction, String soundId);
+	void addOptionSelectedText(Object optionId);
+	void addOptionSelectedText(Object optionId, boolean allowPrintingStoryOption);
+	
+	void showFleetMemberRecoveryDialog(String title, List<FleetMemberAPI> pool, FleetMemberPickerListener listener);
+	void showFleetMemberRecoveryDialog(String title,
+									   List<FleetMemberAPI> pool, List<FleetMemberAPI> storyPool,
+									   FleetMemberPickerListener listener);
+	void showGroundRaidTargetPicker(String title, String okText, MarketAPI market, List<GroundRaidObjectivePlugin> data, GroundRaidTargetPickerDelegate listener);
+	void showVisualPanel();
+	void showCustomProductionPicker(CustomProductionPickerDelegate delegate);
+	void showCampaignEntityPicker(String title, String selectedText, String okText, FactionAPI factionForUIColors,
+							  List<SectorEntityToken> entities, CampaignEntityPickerListener listener);
+	boolean isCurrentOptionHadAConfirm();
 }
 
 

@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.combat;
 
+import org.lwjgl.util.vector.Vector2f;
+
 public interface ShipSystemAPI {
 	
 	public static enum SystemState {
@@ -58,4 +60,6 @@ public interface ShipSystemAPI {
 
 	void setCooldownRemaining(float remaining);
 	void setCooldown(float cooldown);
+
+	Vector2f getTargetLoc();
 }

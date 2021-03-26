@@ -41,4 +41,8 @@ public class Refining extends BaseIndustry {
 		return 2f + super.getPatherInterest();
 	}
 
+	@Override
+	protected boolean canImproveToIncreaseProduction() {
+		return true;
+	}
 }

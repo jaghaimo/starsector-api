@@ -79,5 +79,6 @@ public interface RelationshipAPI {
 
 	Color getRelColor();
 	Color getRelColor(RepLevel level);
+	int getRepInt();
 	
 }

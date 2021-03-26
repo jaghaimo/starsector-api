@@ -45,7 +45,7 @@ public class InvestigationEventCommSniffer extends InvestigationEvent {
 		guilty.onDelivery = new BaseOnMessageDeliveryScript() {
 			public void beforeDelivery(CommMessageAPI message) {
 				Global.getSector().adjustPlayerReputation(
-						new RepActionEnvelope(RepActions.COMM_SNIFFER_INVESTIGATION_GUILTY, null, message, true), 
+						new RepActionEnvelope(RepActions.COMM_SNIFFER_INVESTIGATION_GUILTY, null, null, true), 
 						faction.getId());
 			}
 		};

@@ -18,6 +18,7 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberViewAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.terrain.AuroraRenderer.AuroraRendererDelegate;
 import com.fs.starfarer.api.impl.campaign.terrain.FlareManager.Flare;
 import com.fs.starfarer.api.impl.campaign.terrain.FlareManager.FlareManagerDelegate;
@@ -61,6 +62,10 @@ public class StarCoronaTerrainPlugin extends BaseRingTerrain implements AuroraRe
 		if (name == null) {
 			name = "Corona";
 		}
+	}
+	
+	public String getNameForTooltip() {
+		return "Corona";
 	}
 	
 	@Override
@@ -192,13 +197,26 @@ public class StarCoronaTerrainPlugin extends BaseRingTerrain implements AuroraRe
 
 			String buffId = getModId();
 			float buffDur = 0.1f;
+
+			boolean protectedFromCorona = false;
+			if (fleet.isInCurrentLocation() && 
+					Misc.getDistance(fleet, Global.getSector().getPlayerFleet()) < 500) {
+				for (SectorEntityToken curr : fleet.getContainingLocation().getCustomEntitiesWithTag(Tags.PROTECTS_FROM_CORONA_IN_BATTLE)) {
+					float dist = Misc.getDistance(curr, fleet);
+					if (dist < curr.getRadius() + fleet.getRadius() + 10f) {
+						protectedFromCorona = true;
+						break;
+					}
+				}
+			}
 			
-			// CR loss
+			// CR loss and peak time reduction
 			for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 				float recoveryRate = member.getStats().getBaseCRRecoveryRatePercentPerDay().getModifiedValue();
 				float lossRate = member.getStats().getBaseCRRecoveryRatePercentPerDay().getBaseValue();
 				
 				float resistance = member.getStats().getDynamic().getValue(Stats.CORONA_EFFECT_MULT);
+				if (protectedFromCorona) resistance = 0f;
 				//if (inFlare) loss *= 2f;
 				float lossMult = 1f;
 				if (inFlare) lossMult = 2f;

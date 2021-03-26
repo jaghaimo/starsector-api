@@ -16,6 +16,7 @@ import com.fs.starfarer.api.campaign.SubmarketPlugin.TransferAction;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.ui.LabelAPI;
@@ -63,7 +64,7 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 		tooltip.addTitle(getName());
 		
 		String design = getDesignType();
-		Misc.addDesignTypePara(tooltip, design, 10f);
+		Misc.addDesignTypePara(tooltip, design, opad);
 		
 		if (!spec.getDesc().isEmpty()) {
 			Color c = Misc.getTextColor();
@@ -124,7 +125,26 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 		if (transferHandler != null && stackSource == transferHandler.getManifestOne()) {
 			action = TransferAction.PLAYER_SELL;
 		}
-
+		
+		
+		if (action == TransferAction.PLAYER_SELL && stack.getSpecialItemSpecIfSpecial() != null) {
+			SpecialItemSpecAPI spec = stack.getSpecialItemSpecIfSpecial();
+			if (spec.hasTag(Tags.MISSION_ITEM)) {
+				text = "Can not remove item";
+				highlight = text;
+				highlights = new Highlights();
+				highlights.append(text, Misc.getNegativeHighlightColor());
+				
+				ItemCostLabelData data = new ItemCostLabelData();
+				data.text = text;// + ".";
+				data.highlights = highlights;
+				
+				return data;
+			}
+		}
+		
+		
+		
 		if (transferHandler != null && transferHandler.getSubmarketTradedWith() != null &&
 				transferHandler.getSubmarketTradedWith().isIllegalOnSubmarket(stack, action)) {
 			highlightColor = Misc.getNegativeHighlightColor();
@@ -137,12 +157,12 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 				if (stackSource == transferHandler.getManifestOne()) {
 					int cost = (int)transferHandler.computeCurrentSingleItemSellCost(stack);
 					//text = "Sells for: " + Misc.getWithDGS(cost) + " credits per unit";
-					text = "Sells for: " + Misc.getDGSCredits(cost) + " per unit";
+					text = "Sells for: " + Misc.getDGSCredits(cost) + " per unit.";
 					highlight = "" + Misc.getDGSCredits(cost);
 				} else {
 					int cost = (int)transferHandler.computeCurrentSingleItemBuyCost(stack);
 					//text = "Price: " + Misc.getWithDGS(cost) + " credits per unit";
-					text = "Price: " + Misc.getDGSCredits(cost) + " per unit";
+					text = "Price: " + Misc.getDGSCredits(cost) + " per unit.";
 					highlight = "" + Misc.getDGSCredits(cost);
 				}
 			} else {
@@ -150,7 +170,7 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 				//float mult = Global.getSettings().getFloat("nonEconItemSellPriceMult");
 				//cost *= mult;
 				//text = "Base value: " + Misc.getWithDGS(cost) + " credits per unit";
-				text = "Base value: " + Misc.getDGSCredits(cost) + " per unit";
+				text = "Base value: " + Misc.getDGSCredits(cost) + " per unit.";
 				highlight = "" + Misc.getDGSCredits(cost);
 			}
 		}
@@ -162,7 +182,7 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 		}
 		
 		ItemCostLabelData data = new ItemCostLabelData();
-		data.text = text + ".";
+		data.text = text;// + ".";
 		data.highlights = highlights;
 		
 		return data;
@@ -273,7 +293,10 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 		}
 	}
 	public String getDesignType() {
-		return null;
+		return spec.getManufacturer();
+	}
+	public SpecialItemSpecAPI getSpec() {
+		return spec;
 	}
 	
 }

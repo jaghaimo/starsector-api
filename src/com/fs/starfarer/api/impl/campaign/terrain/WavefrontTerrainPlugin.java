@@ -645,6 +645,10 @@ public class WavefrontTerrainPlugin extends BaseTerrain {
 		return "Wavefront";
 	}
 	
+	public String getNameForTooltip() {
+		return getTerrainName();
+	}
+	
 	public String getEffectCategory() {
 		return null;
 	}

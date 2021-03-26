@@ -12,17 +12,21 @@ public class Terrain {
 	
 	public static final String CORONA = "corona";
 	public static final String CORONA_AKA_MAINYU = "corona_aka_mainyu";
+	public static final String CORONA_JET = "corona_jet";
 	public static final String EVENT_HORIZON = "event_horizon";
 	
 	public static final String PULSAR_BEAM = "pulsar_beam";
 	
 	public static final String HYPERSPACE = "hyperspace";
 	
-	public static final String SPATIAL_ANOMALY = "spatial_anomaly";
 	
 	public static final String RADIO_CHATTER = "radio_chatter";
 	
 	
+	/**
+	 * Not used?
+	 */
+	public static final String SPATIAL_ANOMALY = "spatial_anomaly";
 	
 	/**
 	 * Not used.

@@ -35,8 +35,8 @@ import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.procgen.ObjectiveGenDataSpec;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec;
-import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
+import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.LagrangePointType;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.StarSystemType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageEntity;
@@ -45,13 +45,14 @@ import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
 import com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
+import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldSource;
 import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.RingSystemTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
-import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
-import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldSource;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
@@ -205,13 +206,13 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		for (int i = 0; i < numShips; i++) {
 			float radius = bands.pickAndRemove();
 			
-			DerelictShipData params = DerelictShipEntityPlugin.createRandom(factions.pick(), null, random);
+			DerelictShipData params = DerelictShipEntityPlugin.createRandom(factions.pick(), null, random, DerelictShipEntityPlugin.getDefaultSModProb());
 			if (params != null) {
-				CustomCampaignEntityAPI entity = (CustomCampaignEntityAPI) addSalvageEntity(
+				CustomCampaignEntityAPI entity = (CustomCampaignEntityAPI) addSalvageEntity(random,
 									focus.getContainingLocation(),
 									Entities.WRECK, Factions.NEUTRAL, params);
 				entity.setDiscoverable(true);
-				float orbitDays = radius / (5f + StarSystemGenerator.random.nextFloat() * 10f);
+				float orbitDays = radius / (5f + random.nextFloat() * 10f);
 				entity.setCircularOrbit(focus, random.nextFloat() * 360f, radius, orbitDays);
 				if (DEBUG) System.out.println("      Added ship: " + 
 						((DerelictShipEntityPlugin)entity.getCustomPlugin()).getData().ship.variantId);
@@ -380,7 +381,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 			chance += 0.2f;
 		}
 		
-		return StarSystemGenerator.random.nextFloat() < chance;
+		return random.nextFloat() < chance;
 	}
 	
 
@@ -392,7 +393,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		float mult = 2f;
 		for (SectorEntityToken loc : data.system.getEntitiesWithTag(Tags.STABLE_LOCATION)) {
 			mult *= 0.5f;
-			if (StarSystemGenerator.random.nextFloat() >= prob * mult) continue;
+			if (random.nextFloat() >= prob * mult) continue;
 			
 			WeightedRandomPicker<ObjectiveGenDataSpec> picker = new WeightedRandomPicker<ObjectiveGenDataSpec>(random);
 			for (Object o : Global.getSettings().getAllSpecs(ObjectiveGenDataSpec.class)) {
@@ -431,7 +432,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	
 	public AddedEntity addCommRelay(StarSystemData data, float prob) {
-		if (StarSystemGenerator.random.nextFloat() >= prob) return null;
+		if (random.nextFloat() >= prob) return null;
 		
 		LinkedHashMap<LocationType, Float> weights = new LinkedHashMap<LocationType, Float>();
 		weights.put(LocationType.STAR_ORBIT, 10f);
@@ -451,7 +452,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	
 	public AddedEntity addInactiveGate(StarSystemData data, float prob, float probDebris, float probShips, WeightedRandomPicker<String> factions) {
-		if (StarSystemGenerator.random.nextFloat() >= prob) return null;
+		if (random.nextFloat() >= prob) return null;
 		
 		LinkedHashMap<LocationType, Float> weights = new LinkedHashMap<LocationType, Float>();
 		weights.put(LocationType.STAR_ORBIT, 10f);
@@ -460,7 +461,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		EntityLocation loc = locs.pick();
 		
 		AddedEntity added = addNonSalvageEntity(data.system, loc, Entities.INACTIVE_GATE, Factions.NEUTRAL);
-		if (DEBUG && added != null) System.out.println("    Added inactive gate");
+		if (DEBUG && added != null) System.out.println("    Added inactive gate to " + data.system.getNameWithLowercaseTypeShort());
 		
 		if (added != null) {
 			convertOrbitNoSpin(added.entity);
@@ -480,7 +481,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	
 	
 	public String pickRuinsType(PlanetAPI planet) {
-		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(StarSystemGenerator.random);
+		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
 		
 		float hazard = planet.getMarket().getHazardValue();
 
@@ -506,7 +507,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	public AddedEntity addStation(EntityLocation loc, StarSystemData data, String customEntityId, String factionId) {
 		if (loc == null) return null;
 		
-		AddedEntity station = addEntity(data.system, loc, customEntityId, factionId);
+		AddedEntity station = addEntity(random, data.system, loc, customEntityId, factionId);
 		if (station != null) {
 			data.generated.add(station);
 		}
@@ -541,7 +542,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		for (int i = 0; i < num; i++) {
 			EntityLocation loc = pickHiddenLocation(random, data.system, 70f, null);
 			String type = cacheTypes.pick();
-			AddedEntity added = addEntity(data.system, loc, type, Factions.NEUTRAL);
+			AddedEntity added = addEntity(random, data.system, loc, type, Factions.NEUTRAL);
 			if (added != null) {
 				data.generated.add(added);
 			}
@@ -567,7 +568,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 			
 			DebrisFieldParams params = new DebrisFieldParams(
 					radius, // field radius - should not go above 1000 for performance reasons
-					1f, // density, visual - affects number of debris pieces
+					-1f, // density, visual - affects number of debris pieces
 					10000000f, // duration in days 
 					0f); // days the field will keep generating glowing pieces
 			
@@ -592,7 +593,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	public AddedEntity addDebrisField(StarSystemData data, SectorEntityToken focus, float radius) {
 		DebrisFieldParams params = new DebrisFieldParams(
 				radius, // field radius - should not go above 1000 for performance reasons
-				1f, // density, visual - affects number of debris pieces
+				-1f, // density, visual - affects number of debris pieces
 				10000000f, // duration in days 
 				0f); // days the field will keep generating glowing pieces
 		
@@ -615,6 +616,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	
 	public static WeightedRandomPicker<String> createStringPicker(Random random, Object ... params) {
+		if (random == null) random = StarSystemGenerator.random;
 		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
 		for (int i = 0; i < params.length; i += 2) {
 			String item = (String) params[i];
@@ -638,9 +640,9 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 //			factionPicker.add(faction);
 //		}
 		String faction = factions.pick();
-		DerelictShipData params = DerelictShipEntityPlugin.createRandom(faction, null, random);
+		DerelictShipData params = DerelictShipEntityPlugin.createRandom(faction, null, random, DerelictShipEntityPlugin.getDefaultSModProb());
 		if (params != null) {
-			CustomCampaignEntityAPI entity = (CustomCampaignEntityAPI) addSalvageEntity(data.system,
+			CustomCampaignEntityAPI entity = (CustomCampaignEntityAPI) addSalvageEntity(random, data.system,
 											Entities.WRECK, Factions.NEUTRAL, params);
 			entity.setDiscoverable(true);
 			setEntityLocation(entity, loc, Entities.WRECK);
@@ -656,9 +658,9 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	public AddedEntity addDerelictShip(StarSystemData data, EntityLocation loc, String variantId) {
 		if (loc == null) return null;
 	
-		DerelictShipData params = DerelictShipEntityPlugin.createVariant(variantId, random);
+		DerelictShipData params = DerelictShipEntityPlugin.createVariant(variantId, random, DerelictShipEntityPlugin.getDefaultSModProb());
 		if (params != null) {
-			CustomCampaignEntityAPI entity = (CustomCampaignEntityAPI) addSalvageEntity(data.system,
+			CustomCampaignEntityAPI entity = (CustomCampaignEntityAPI) addSalvageEntity(random, data.system,
 					Entities.WRECK, Factions.NEUTRAL, params);
 			entity.setDiscoverable(true);
 			setEntityLocation(entity, loc, Entities.WRECK);
@@ -675,6 +677,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	
 	
 	public static EntityLocation pickCommonLocation(Random random, StarSystemAPI system, float gap, boolean allowStarOrbit, Set<SectorEntityToken> exclude) {
+		if (random == null) random = StarSystemGenerator.random;
 		LinkedHashMap<LocationType, Float> weights = new LinkedHashMap<LocationType, Float>();
 		weights.put(LocationType.PLANET_ORBIT, 10f);
 		if (allowStarOrbit) {
@@ -689,6 +692,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	
 	public static EntityLocation pickUncommonLocation(Random random, StarSystemAPI system, float gap, Set<SectorEntityToken> exclude) {
+		if (random == null) random = StarSystemGenerator.random;
 		LinkedHashMap<LocationType, Float> weights = new LinkedHashMap<LocationType, Float>();
 		weights.put(LocationType.IN_ASTEROID_BELT, 5f);
 		weights.put(LocationType.IN_ASTEROID_FIELD, 5f);
@@ -707,6 +711,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	
 	public static EntityLocation pickAnyLocation(Random random, StarSystemAPI system, float gap, Set<SectorEntityToken> exclude) {
+		if (random == null) random = StarSystemGenerator.random;
 		LinkedHashMap<LocationType, Float> weights = new LinkedHashMap<LocationType, Float>();
 		weights.put(LocationType.PLANET_ORBIT, 10f);
 		weights.put(LocationType.STAR_ORBIT, 10f);
@@ -724,6 +729,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	
 	public static EntityLocation pickHiddenLocation(Random random, StarSystemAPI system, float gap, Set<SectorEntityToken> exclude) {
+		if (random == null) random = StarSystemGenerator.random;
 		LinkedHashMap<LocationType, Float> weights = new LinkedHashMap<LocationType, Float>();
 		weights.put(LocationType.IN_ASTEROID_BELT, 5f);
 		weights.put(LocationType.IN_ASTEROID_FIELD, 5f);
@@ -741,6 +747,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	
 	public static EntityLocation pickHiddenLocationNotNearStar(Random random, StarSystemAPI system, float gap, Set<SectorEntityToken> exclude) {
+		if (random == null) random = StarSystemGenerator.random;
 		LinkedHashMap<LocationType, Float> weights = new LinkedHashMap<LocationType, Float>();
 		weights.put(LocationType.IN_ASTEROID_BELT, 5f);
 		weights.put(LocationType.IN_ASTEROID_FIELD, 5f);
@@ -766,7 +773,8 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	public static WeightedRandomPicker<EntityLocation> getLocations(Random random, StarSystemAPI system, Set<SectorEntityToken> exclude,
 																	float minGap, LinkedHashMap<LocationType, Float> weights) {
-		WeightedRandomPicker<EntityLocation> result = new WeightedRandomPicker<EntityLocation>(StarSystemGenerator.random);
+		if (random == null) random = StarSystemGenerator.random;
+		WeightedRandomPicker<EntityLocation> result = new WeightedRandomPicker<EntityLocation>(random);
 		
 		system.updateAllOrbits();
 		
@@ -823,7 +831,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 //							loc.orbit = Global.getFactory().createCircularOrbit(planet.getOrbitFocus(), 
 //																		angle, orbitRadius, orbitDays);
 							loc.orbit = Global.getFactory().createCircularOrbitWithSpin(planet.getOrbitFocus(), 
-												angle, orbitRadius, orbitDays, StarSystemGenerator.random.nextFloat() * 10f + 1f);
+												angle, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
 							locs.add(loc);
 						}
 					}
@@ -902,7 +910,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 						if (w <= 10000) {
 							float r = (float) Math.sqrt(w * w + h * h);
 							if (terrain.getOrbit() == null) {
-								Vector2f point = Misc.getPointWithinRadius(terrain.getLocation(), r * 0.5f, StarSystemGenerator.random);
+								Vector2f point = Misc.getPointWithinRadius(terrain.getLocation(), r * 0.5f, random);
 								EntityLocation loc = new EntityLocation();
 								loc.type = type;
 								loc.location = point;
@@ -913,10 +921,10 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 								float max = r;
 								EntityLocation loc = new EntityLocation();
 								loc.type = type;
-								float orbitRadius = min + (max - min) * (0.75f * StarSystemGenerator.random.nextFloat());
-								float orbitDays = orbitRadius / (20f + StarSystemGenerator.random.nextFloat() * 5f);
+								float orbitRadius = min + (max - min) * (0.75f * random.nextFloat());
+								float orbitDays = orbitRadius / (20f + random.nextFloat() * 5f);
 								loc.orbit = Global.getFactory().createCircularOrbitWithSpin(terrain, 
-										StarSystemGenerator.random.nextFloat() * 360f, orbitRadius, orbitDays, StarSystemGenerator.random.nextFloat() * 10f + 1f);
+										random.nextFloat() * 360f, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
 								locs.add(loc);
 							}
 						}
@@ -952,12 +960,12 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 							float max = ring.params.bandWidthInEngine;
 							EntityLocation loc = new EntityLocation();
 							loc.type = type;
-							float orbitRadius = min + (max - min) * (0.75f * StarSystemGenerator.random.nextFloat());
-							float orbitDays = orbitRadius / (20f + StarSystemGenerator.random.nextFloat() * 5f);
+							float orbitRadius = min + (max - min) * (0.75f * random.nextFloat());
+							float orbitDays = orbitRadius / (20f + random.nextFloat() * 5f);
 //							loc.orbit = Global.getFactory().createCircularOrbit(terrain, 
-//											StarSystemGenerator.random.nextFloat() * 360f, orbitRadius, orbitDays);
+//											random.nextFloat() * 360f, orbitRadius, orbitDays);
 							loc.orbit = Global.getFactory().createCircularOrbitWithSpin(terrain, 
-									StarSystemGenerator.random.nextFloat() * 360f, orbitRadius, orbitDays, StarSystemGenerator.random.nextFloat() * 10f + 1f);
+									random.nextFloat() * 360f, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
 							locs.add(loc);
 							
 						}
@@ -965,15 +973,18 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 				}
 				break;
 			case OUTER_SYSTEM:
-				EntityLocation loc = new EntityLocation();
-				loc.type = type;
-				float orbitRadius = outer + 300f + 1000f * StarSystemGenerator.random.nextFloat();
-				float orbitDays = orbitRadius / (20f + StarSystemGenerator.random.nextFloat() * 5f);
-//				loc.orbit = Global.getFactory().createCircularOrbit(system.getCenter(), 
-//										StarSystemGenerator.random.nextFloat() * 360f, orbitRadius, orbitDays);
-				loc.orbit = Global.getFactory().createCircularOrbitWithSpin(system.getCenter(), 
-						StarSystemGenerator.random.nextFloat() * 360f, orbitRadius, orbitDays, StarSystemGenerator.random.nextFloat() * 10f + 1f);
-				locs.add(loc);
+				SectorEntityToken near = pickOuterEntityToSpawnNear(random, system);
+				if (near != null) {
+					EntityLocation loc = new EntityLocation();
+					loc.type = type;
+					float orbitRadius = 3000 + 1500f * random.nextFloat();
+					float orbitDays = orbitRadius / (20f + random.nextFloat() * 5f);
+//					loc.orbit = Global.getFactory().createCircularOrbitWithSpin(system.getCenter(), 
+//							random.nextFloat() * 360f, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
+					loc.orbit = Global.getFactory().createCircularOrbitWithSpin(near, 
+							random.nextFloat() * 360f, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
+					locs.add(loc);
+				}
 				break;
 			case STAR_ORBIT:
 //				if (system.getType() == StarSystemType.TRINARY_1CLOSE_1FAR) {
@@ -997,8 +1008,9 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 				
 				if (main != null) {
 					List<OrbitGap> gaps = findGaps(main, inner, outer + minGap, minGap);
+					EntityLocation loc;
 					for (OrbitGap gap : gaps) {
-						loc = createLocationAtGap(main, gap, type);
+						loc = createLocationAtGap(random, main, gap, type);
 						if (loc != null) locs.add(loc);
 					}
 				}
@@ -1008,8 +1020,9 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 					if (ow < 3000) ow = 3000;
 					float r = star.getRadius();
 					List<OrbitGap> gaps = findGaps(star, r, ow + r + minGap, minGap);
+					EntityLocation loc; 
 					for (OrbitGap gap : gaps) {
-						loc = createLocationAtGap(star, gap, type);
+						loc = createLocationAtGap(random, star, gap, type);
 						if (loc != null) locs.add(loc);
 					}
 				}
@@ -1040,6 +1053,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	
 	public static EntityLocation createLocationAtRandomGap(Random random, SectorEntityToken center, float minGap) {
+		if (random == null) random = StarSystemGenerator.random;
 		float ow = getOrbitalRadius(center);
 		List<OrbitGap> gaps = findGaps(center, 100f, 100f + ow + minGap, minGap);
 		EntityLocation loc = createLocationAtRandomGap(random, center, gaps, LocationType.PLANET_ORBIT);
@@ -1049,22 +1063,24 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	
 	private static EntityLocation createLocationAtRandomGap(Random random, SectorEntityToken center, List<OrbitGap> gaps, LocationType type) {
 		if (gaps.isEmpty()) return null;
+		if (random == null) random = StarSystemGenerator.random;
 		WeightedRandomPicker<OrbitGap> picker = new WeightedRandomPicker<OrbitGap>(random);
 		picker.addAll(gaps);
 		OrbitGap gap = picker.pick();
-		return createLocationAtGap(center, gap, type);
+		return createLocationAtGap(random, center, gap, type);
 	}
 	
-	private static EntityLocation createLocationAtGap(SectorEntityToken center, OrbitGap gap, LocationType type) {
+	private static EntityLocation createLocationAtGap(Random random, SectorEntityToken center, OrbitGap gap, LocationType type) {
 		if (gap != null) {
+			if (random == null) random = StarSystemGenerator.random;
 			EntityLocation loc = new EntityLocation();
 			loc.type = type;
-			float orbitRadius = gap.start + (gap.end - gap.start) * (0.25f + 0.5f * StarSystemGenerator.random.nextFloat());
-			float orbitDays = orbitRadius / (20f + StarSystemGenerator.random.nextFloat() * 5f);
+			float orbitRadius = gap.start + (gap.end - gap.start) * (0.25f + 0.5f * random.nextFloat());
+			float orbitDays = orbitRadius / (20f + random.nextFloat() * 5f);
 //			loc.orbit = Global.getFactory().createCircularOrbit(center, 
-//					StarSystemGenerator.random.nextFloat() * 360f, orbitRadius, orbitDays);
+//					random.nextFloat() * 360f, orbitRadius, orbitDays);
 			loc.orbit = Global.getFactory().createCircularOrbitWithSpin(center, 
-					StarSystemGenerator.random.nextFloat() * 360f, orbitRadius, orbitDays, StarSystemGenerator.random.nextFloat() * 10f + 1f);
+					random.nextFloat() * 360f, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
 			return loc;
 		}
 		return null;
@@ -1185,6 +1201,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		case SINGLE:
 		case BINARY_FAR:
 		case TRINARY_2FAR:
+			if (system.getStar() == null) return 0; // alpha site
 			return system.getStar().getRadius();
 		case BINARY_CLOSE:
 		case TRINARY_1CLOSE_1FAR:
@@ -1199,6 +1216,55 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		}
 		return 0;
 	}
+	
+	
+	public static SectorEntityToken pickOuterEntityToSpawnNear(Random random, StarSystemAPI system) {
+		if (random == null) random = StarSystemGenerator.random;
+		
+		WeightedRandomPicker<SectorEntityToken> picker = new WeightedRandomPicker<SectorEntityToken>(random);
+		float max = getOuterRadius(system);
+		float threshold = max * 0.75f;
+		
+		for (PlanetAPI planet : system.getPlanets()) {
+			float r = planet.getLocation().length() + getOrbitalRadius(planet);
+			if (r > threshold) {
+				picker.add(planet);
+			}
+		}
+		
+//		for (CampaignTerrainAPI terrain : system.getTerrainCopy()) {
+//			CampaignTerrainPlugin plugin = terrain.getPlugin();
+//			if (plugin instanceof BaseRingTerrain && !(plugin instanceof PulsarBeamTerrainPlugin)) {
+//				BaseRingTerrain ring = (BaseRingTerrain) plugin;
+//				float r = ring.params.middleRadius + ring.params.bandWidthInEngine * 0.5f;
+//				r += Misc.getDistance(system.getCenter().getLocation(), terrain.getLocation());
+//				if (r > threshold) {
+//					picker.add(terrain);
+//				}
+//			} else if (plugin instanceof BaseTiledTerrain) {
+//				if (plugin instanceof NebulaTerrainPlugin) continue;
+//				
+//				BaseTiledTerrain tiles = (BaseTiledTerrain) plugin;
+//				float r = tiles.getRenderRange();
+//				r += Misc.getDistance(system.getCenter().getLocation(), terrain.getLocation());
+//				if (r > threshold) {
+//					picker.add(terrain);
+//				}
+//			}
+//		}
+		
+		List<SectorEntityToken> jumpPoints = system.getEntitiesWithTag(Tags.JUMP_POINT);
+		for (SectorEntityToken point : jumpPoints) {
+			float r = Misc.getDistance(system.getCenter().getLocation(), point.getLocation());
+			r += point.getRadius();
+			if (r > threshold) {
+				picker.add(point);
+			}
+		}
+		
+		return picker.pick();
+	}
+	
 	
 	public static float getOuterRadius(StarSystemAPI system) {
 		float max = 0f;
@@ -1227,13 +1293,13 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 			}
 		}
 		
-		List<CustomCampaignEntityAPI> entities = system.getEntities(CustomCampaignEntityAPI.class);
-		for (SectorEntityToken custom : entities) {
-			//float r = custom.getCircularOrbitRadius() + custom.getRadius();
-			float r = Misc.getDistance(system.getCenter().getLocation(), custom.getLocation());
-			r += custom.getRadius();
-			if (r > max) max = r;
-		}
+//		List<CustomCampaignEntityAPI> entities = system.getEntities(CustomCampaignEntityAPI.class);
+//		for (SectorEntityToken custom : entities) {
+//			//float r = custom.getCircularOrbitRadius() + custom.getRadius();
+//			float r = Misc.getDistance(system.getCenter().getLocation(), custom.getLocation());
+//			r += custom.getRadius();
+//			if (r > max) max = r;
+//		}
 		
 		List<SectorEntityToken> jumpPoints = system.getEntitiesWithTag(Tags.JUMP_POINT);
 		for (SectorEntityToken point : jumpPoints) {
@@ -1295,6 +1361,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 			CampaignTerrainPlugin plugin = terrain.getPlugin();
 			
 			if (plugin instanceof PulsarBeamTerrainPlugin) continue;
+			if (plugin instanceof RadioChatterTerrainPlugin) continue;
 			
 			if (plugin instanceof BaseRingTerrain) {
 				BaseRingTerrain ring = (BaseRingTerrain) plugin;
@@ -1313,12 +1380,12 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		return max;
 	}
 	
-	public static AddedEntity addEntity(StarSystemAPI system, WeightedRandomPicker<EntityLocation> locs, String type, String faction) {
+	public static AddedEntity addEntity(Random random, StarSystemAPI system, WeightedRandomPicker<EntityLocation> locs, String type, String faction) {
 		EntityLocation loc = locs.pickAndRemove();
-		return addEntity(system, loc, type, faction);
+		return addEntity(random, system, loc, type, faction);
 	}
 	
-	public static AddedEntity addNonSalvageEntity(StarSystemAPI system, EntityLocation loc, String type, String faction) {
+	public static AddedEntity addNonSalvageEntity(LocationAPI system, EntityLocation loc, String type, String faction) {
 		if (loc != null) {
 			SectorEntityToken entity = system.addCustomEntity(null, null, type, faction);
 			if (loc.orbit != null) {
@@ -1334,9 +1401,18 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		return null;
 	}
 	
-	public static AddedEntity addEntity(StarSystemAPI system, EntityLocation loc, String type, String faction) {
+	public static AddedEntity addEntityAutoDetermineType(Random random, LocationAPI system, EntityLocation loc, String type, String faction) {
+		if (SalvageEntityGeneratorOld.hasSalvageSpec(type)) {
+			return addEntity(random, system, loc, type, faction);
+		} else {
+			return addNonSalvageEntity(system, loc, type, faction);
+		}
+	}
+	
+	public static AddedEntity addEntity(Random random, LocationAPI system, EntityLocation loc, String type, String faction) {
 		if (loc != null) {
-			SectorEntityToken entity = addSalvageEntity(system, type, faction);
+			if (random == null) random = StarSystemGenerator.random;
+			SectorEntityToken entity = addSalvageEntity(random, system, type, faction);
 			if (loc.orbit != null) {
 				entity.setOrbit(loc.orbit);
 				loc.orbit.setEntity(entity);
@@ -1366,9 +1442,16 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	
 	public static SectorEntityToken addSalvageEntity(LocationAPI location, String id, String faction) {
-		return addSalvageEntity(location, id, faction, null);
+		return addSalvageEntity(null, location, id, faction);
+	}
+	public static SectorEntityToken addSalvageEntity(Random random, LocationAPI location, String id, String faction) {
+		return addSalvageEntity(random, location, id, faction, null);
 	}
 	public static SectorEntityToken addSalvageEntity(LocationAPI location, String id, String faction, Object pluginParams) {
+		return addSalvageEntity(null, location, id, faction, pluginParams);
+	}
+	public static SectorEntityToken addSalvageEntity(Random random, LocationAPI location, String id, String faction, Object pluginParams) {
+		if (random == null) random = StarSystemGenerator.random;
 		SalvageEntityGenDataSpec spec = SalvageEntityGeneratorOld.getSalvageSpec(id);
 		
 		CustomCampaignEntityAPI entity = location.addCustomEntity(null, spec.getNameOverride(), id, faction, pluginParams);
@@ -1392,7 +1475,7 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 			break;
 		}
 		
-		long seed = StarSystemGenerator.random.nextLong();
+		long seed = random.nextLong();
 		entity.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SEED, seed);
 		
 		entity.getDetectedRangeMod().modifyFlat("gen", spec.getDetectionRange());

@@ -31,6 +31,10 @@ public class CargoPodsEntityPlugin extends BaseCustomEntityPlugin {
 		entity.setDetectionRangeDetailsOverrideMult(0.5f);
 		//this.entity = (CustomCampaignEntityAPI) entity;
 		readResolve();
+		
+//		entity.getMemoryWithoutUpdate().set("$locked", true);
+//		entity.getMemoryWithoutUpdate().set("$canUnlock", true);
+//		entity.getMemoryWithoutUpdate().set("$trapped", true);
 	}
 	
 	Object readResolve() {
@@ -47,24 +51,24 @@ public class CargoPodsEntityPlugin extends BaseCustomEntityPlugin {
 	}
 	
 	public void advance(float amount) {
-		if (entity.isInCurrentLocation()) {
-			float days = Global.getSector().getClock().convertToDays(amount);
-			elapsed += days;
-			
-			if (!isNeverExpire()) {
-				if (elapsed >= maxDays + extraDays && maxDays >= 0) {
-					VisibilityLevel vis = entity.getVisibilityLevelToPlayerFleet();
-					boolean playerCanSee = entity.isInCurrentLocation() && 
-											(vis == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS ||
-											 vis == VisibilityLevel.COMPOSITION_DETAILS);
-					if (!playerCanSee) {
-						maxDays = -1;
-						Misc.fadeAndExpire(entity);
-						neverExpire = true;
-					}
+		float days = Global.getSector().getClock().convertToDays(amount);
+		elapsed += days;
+		
+		if (!isNeverExpire()) {
+			if (elapsed >= maxDays + extraDays && maxDays >= 0) {
+				VisibilityLevel vis = entity.getVisibilityLevelToPlayerFleet();
+				boolean playerCanSee = entity.isInCurrentLocation() && 
+										(vis == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS ||
+										 vis == VisibilityLevel.COMPOSITION_DETAILS);
+				if (!playerCanSee) {
+					maxDays = -1;
+					Misc.fadeAndExpire(entity);
+					neverExpire = true;
 				}
 			}
+		}
 			
+		if (entity.isInCurrentLocation()) {
 			updateBaseMaxDays();
 			float radius = 10f + 10f * (float) Math.sqrt(manager.numPieces);
 			

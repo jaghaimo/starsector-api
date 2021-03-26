@@ -87,8 +87,8 @@ public class MagFieldGenPlugin implements TerrainGenPlugin {
 		
 		//System.out.println("GENERATING MAG FIELD AROUND " + parent.getId());
 		
-		int baseIndex = (int) (baseColors.length * StarSystemGenerator.random.nextFloat());
-		int auroraIndex = (int) (auroraColors.length * StarSystemGenerator.random.nextFloat());
+		int baseIndex = (int) (baseColors.length * StarSystemGenerator.random.nextDouble());
+		int auroraIndex = (int) (auroraColors.length * StarSystemGenerator.random.nextDouble());
 		
 		
 		float bandWidth = parent.getRadius() + WIDTH_PLANET;

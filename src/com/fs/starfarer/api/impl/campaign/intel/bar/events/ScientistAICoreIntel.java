@@ -20,11 +20,12 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.AutoDespawnScript;
+import com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.PatrolType;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
-import com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.PatrolType;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
@@ -35,7 +36,6 @@ import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropD
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageEntity;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial;
-import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.ExtraSalvage;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -108,10 +108,11 @@ public class ScientistAICoreIntel extends BaseIntelPlugin {
 		
 		CargoAPI salvage = SalvageEntity.generateSalvage(random,
 				1f, 1f, 1f, 1f, cache.getDropValue(), cache.getDropRandom());
-		ExtraSalvage extra = BaseSalvageSpecial.getExtraSalvage(memoryMap);
-		if (extra != null) {
-			salvage.addAll(extra.cargo);
-			BaseSalvageSpecial.clearExtraSalvage(memoryMap);
+		CargoAPI extra = BaseSalvageSpecial.getCombinedExtraSalvage(memoryMap);
+		salvage.addAll(extra);
+		BaseSalvageSpecial.clearExtraSalvage(memoryMap);
+		if (!extra.isEmpty()) {
+			ListenerUtil.reportExtraSalvageShown(cache);
 		}
 		
 		if (withCore) {
@@ -314,9 +315,10 @@ public class ScientistAICoreIntel extends BaseIntelPlugin {
 			locToken.getContainingLocation().addEntity(fleet);
 			fleet.setLocation(loc.x, loc.y);
 			
-			TransmitterTrapSpecial.makeFleetInterceptPlayer(fleet, false, 30f);
+			TransmitterTrapSpecial.makeFleetInterceptPlayer(fleet, false, true, 30f);
 			
 			fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, locToken, 1000f);
+			//fleet.addDropRandom("blueprints_guaranteed", 1);
 		}
 		
 	}

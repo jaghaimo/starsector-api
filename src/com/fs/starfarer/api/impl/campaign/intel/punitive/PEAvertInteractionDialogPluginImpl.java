@@ -22,9 +22,11 @@ import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Sounds;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionIntel.PunExOutcome;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager.PunExData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption;
 import com.fs.starfarer.api.ui.IntelUIAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -42,8 +44,8 @@ public class PEAvertInteractionDialogPluginImpl implements InteractionDialogPlug
 	}
 	
 	//public static float BRIBE_BASE = 0;
-	public static int BRIBE_MULT = 50000;
-	public static int BRIBE_MAX = 1000000;
+	public static int BRIBE_MULT = 10000;
+	public static int BRIBE_MAX = 100000;
 	
 	public static RepLevel MIN_REP = RepLevel.WELCOMING;
 	public static float REP_COST  = 0.2f;
@@ -90,8 +92,10 @@ public class PEAvertInteractionDialogPluginImpl implements InteractionDialogPlug
 	
 	protected int computeBribeAmount() {
 		PunExData data = PunitiveExpeditionManager.getInstance().getDataFor(intel.getFaction());
+		int numAttempts = 1;
+		if (data != null) numAttempts = data.numAttempts;
 		
-		int bribe = (int) (Math.pow(2, data.numAttempts) * BRIBE_MULT);
+		int bribe = (int) (Math.pow(2, numAttempts) * BRIBE_MULT);
 		if (bribe > BRIBE_MAX) bribe = BRIBE_MAX;
 		return bribe;
 //		int bribe = (int) Math.round(BRIBE_BASE + data.threshold * BRIBE_MULT);
@@ -106,7 +110,7 @@ public class PEAvertInteractionDialogPluginImpl implements InteractionDialogPlug
 		case BRIBE:
 			int bribe = computeBribeAmount();
 			textPanel.addPara("Sufficient funding allocated to proper official and unofficial actors should " +
-					"ensure that the expedition does not go beyond the planning stage.");
+					"ensure that the expedition does not go beyond the planning stages.");
 			
 			int credits = (int) playerFleet.getCargo().getCredits().get();
 			Color costColor = Misc.getHighlightColor();
@@ -126,7 +130,7 @@ public class PEAvertInteractionDialogPluginImpl implements InteractionDialogPlug
 			boolean canUseConnections = faction.isAtWorst(Factions.PLAYER, MIN_REP);
 			if (canUseConnections) {
 				textPanel.addPara("You can use your connections to pull a few strings and ensure the operation " +
-						"never gets beyond the planning stage.");
+						"never gets beyond the planning stages.");
 			} else {
 				textPanel.addPara("You do not have sufficient connections with " + faction.getPersonNamePrefix() + 
 						" officials to stall out this kind of an operation.");
@@ -151,6 +155,8 @@ public class PEAvertInteractionDialogPluginImpl implements InteractionDialogPlug
 		options.addOption("Allocate sufficient funds for bribes and other means of disrupting the planning", OptionId.BRIBE, null);
 		options.addOption("Use your connections to disrupt the planning", OptionId.USE_CONNECTIONS, null);
 		
+		dialog.setOptionColor(OptionId.BRIBE, Misc.getStoryOptionColor());
+		
 		options.addOption("Dismiss", OptionId.LEAVE, null);
 		options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
 	}
@@ -174,6 +180,10 @@ public class PEAvertInteractionDialogPluginImpl implements InteractionDialogPlug
 		options.setShortcut(OptionId.CANCEL, Keyboard.KEY_ESCAPE, false, false, false, true);
 
 		if (beingConfirmed == OptionId.BRIBE) {
+
+			SetStoryOption.set(dialog, 1, OptionId.CONFIRM, "bribePunitiveExpedition", Sounds.STORY_POINT_SPEND_INDUSTRY,
+					"Issued bribe to avert " + intel.getFaction().getDisplayName() + " punitive expedition");
+			
 			int bribe = computeBribeAmount();
 			if (bribe > playerFleet.getCargo().getCredits().get()) {
 				options.setEnabled(OptionId.CONFIRM, false);
@@ -206,7 +216,8 @@ public class PEAvertInteractionDialogPluginImpl implements InteractionDialogPlug
 		OptionId option = (OptionId) optionData;
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(option);
 		}
 		
 		switch (option) {

@@ -11,8 +11,8 @@ import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
@@ -241,6 +241,7 @@ public class BreadcrumbSpecial extends BaseSalvageSpecial {
 			if (Terrain.ASTEROID_BELT.equals(type)) return "an asteroid belt";
 			if (Terrain.ASTEROID_FIELD.equals(type)) return "an asteroid field";
 			//if (Terrain.MAGNETIC_FIELD.equals(type)) return "a magnetic field";
+			if (terrain.hasTag(Tags.ACCRETION_DISK)) return "an accretion disk";
 			if (Terrain.RING.equals(type)) return "a ring system";
 		}
 		

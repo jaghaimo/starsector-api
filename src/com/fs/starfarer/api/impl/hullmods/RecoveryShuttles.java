@@ -4,11 +4,12 @@ import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class RecoveryShuttles extends BaseHullMod {
 
-	public static final float CREW_LOSS_MULT = 0.5f;
+	public static final float CREW_LOSS_MULT = 0.25f;
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
@@ -21,6 +22,8 @@ public class RecoveryShuttles extends BaseHullMod {
 	}
 	
 	public boolean isApplicableToShip(ShipAPI ship) {
+		if (ship.getVariant().hasHullMod(HullMods.AUTOMATED)) return false;
+		
 		//int bays = (int) ship.getMutableStats().getNumFighterBays().getBaseValue();
 		int bays = (int) ship.getMutableStats().getNumFighterBays().getModifiedValue();
 //		if (ship != null && ship.getVariant().getHullSpec().getBuiltInWings().size() >= bays) {
@@ -30,6 +33,9 @@ public class RecoveryShuttles extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
+		if (ship != null && ship.getVariant().hasHullMod(HullMods.AUTOMATED)) {
+			return "Can not be installed on automated ships";
+		}
 		return "Ship does not have fighter bays";
 	}
 }

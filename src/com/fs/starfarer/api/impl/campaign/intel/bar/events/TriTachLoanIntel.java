@@ -26,6 +26,7 @@ import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.GenericBarEventCreator;
+import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -236,6 +237,8 @@ public class TriTachLoanIntel extends BaseIntelPlugin {
 		Global.getSector().getMemoryWithoutUpdate().set(NUM_REPAID_LOANS, repaid);
 		
 		loanRepaid = true;
+		
+		ContactIntel.addPotentialContact(event.getPerson(), market, dialog.getTextPanel());
 	}
 	
 	

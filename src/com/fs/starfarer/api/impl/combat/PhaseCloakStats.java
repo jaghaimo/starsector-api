@@ -77,8 +77,12 @@ public class PhaseCloakStats extends BaseShipSystemScript {
 			return;
 		}
 		
+		float speedPercentMod = stats.getDynamic().getMod(Stats.PHASE_CLOAK_SPEED_MOD).computeEffective(0f);
+		stats.getMaxSpeed().modifyPercent(id, speedPercentMod * effectLevel);
+		
 		float level = effectLevel;
 		//float f = VULNERABLE_FRACTION;
+		
 
 		
 		float jitterLevel = 0f;
@@ -182,6 +186,8 @@ public class PhaseCloakStats extends BaseShipSystemScript {
 		
 		Global.getCombatEngine().getTimeMult().unmodify(id);
 		stats.getTimeMult().unmodify(id);
+		
+		stats.getMaxSpeed().unmodifyPercent(id);
 		
 		ship.setPhased(false);
 		ship.setExtraAlphaMult(1f);

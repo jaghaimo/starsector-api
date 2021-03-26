@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -11,6 +12,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleCreationPlugin;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignTerrainAPI;
+import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
@@ -20,7 +22,8 @@ import com.fs.starfarer.api.combat.BattleCreationContext;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
+import com.fs.starfarer.api.impl.campaign.ids.Planets;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
@@ -28,6 +31,7 @@ import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.mission.FleetSide;
 import com.fs.starfarer.api.mission.MissionDefinitionAPI;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class BattleCreationPluginImpl implements BattleCreationPlugin {
 
@@ -36,19 +40,19 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		String getNebulaMapTex();
 	}
 	
-	private float width, height;
+	protected float width, height;
 	
-	private float xPad = 2000;
-	private float yPad = 2000;
+	protected float xPad = 2000;
+	protected float yPad = 2000;
 	
-	private List<String> objs = null;
+	protected List<String> objs = null;
 
-	private float prevXDir = 0;
-	private float prevYDir = 0;
-	private boolean escape;
+	protected float prevXDir = 0;
+	protected float prevYDir = 0;
+	protected boolean escape;
 	
-	private BattleCreationContext context;
-	private MissionDefinitionAPI loader;
+	protected BattleCreationContext context;
+	protected MissionDefinitionAPI loader;
 	
 	public void initBattle(final BattleCreationContext context, MissionDefinitionAPI loader) {
 
@@ -58,6 +62,15 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		CampaignFleetAPI otherFleet = context.getOtherFleet();
 		FleetGoal playerGoal = context.getPlayerGoal();
 		FleetGoal enemyGoal = context.getOtherGoal();
+
+		// doesn't work for consecutive engagements; haven't investigated why
+		//Random random = Misc.getRandom(Misc.getNameBasedSeed(otherFleet), 23);
+		
+		Random random = Misc.getRandom(Misc.getSalvageSeed(otherFleet) *
+				(long)otherFleet.getFleetData().getNumMembers(), 23);
+		//System.out.println("RNG: " + random.nextLong());
+		//random = new Random(1213123L);
+		//Random random = Misc.random;
 		
 		escape = playerGoal == FleetGoal.ESCAPE || enemyGoal == FleetGoal.ESCAPE;
 		
@@ -84,10 +97,18 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		
 		int numObjectives = 0;
 		if (withObjectives) {
+//			if (fpOne + fpTwo > maxFP + 70) {
+//				numObjectives = 3 
+//				numObjectives = 3 + (int)(Math.random() * 2.0);
+//			} else {
+//				numObjectives = 2 + (int)(Math.random() * 2.0);
+//			}
 			if (fpOne + fpTwo > maxFP + 70) {
-				numObjectives = 3 + (int)(Math.random() * 2.0);
+				numObjectives = 4;
+				//numObjectives = 3 + (int)(Math.random() * 2.0);
 			} else {
-				numObjectives = 2 + (int)(Math.random() * 2.0);
+				numObjectives = 3 + random.nextInt(2);
+				//numObjectives = 2 + (int)(Math.random() * 2.0);
 			}
 		}
 		
@@ -138,7 +159,7 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 			}
 		}
 		
-		createMap();
+		createMap(random);
 		
 		context.setInitialDeploymentBurnDuration(1.5f);
 		context.setNormalDeploymentBurnDuration(6f);
@@ -151,7 +172,7 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 //			addEscapeObjectives(loader, 4);
 //			context.setInitialEscapeRange(7000f);
 //			context.setFlankDeploymentDistance(9000f);
-			addEscapeObjectives(loader, 2);
+			addEscapeObjectives(loader, 2, random);
 //			context.setInitialEscapeRange(4000f);
 //			context.setFlankDeploymentDistance(8000f);
 
@@ -161,7 +182,7 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 			loader.addPlugin(new EscapeRevealPlugin(context));
 		} else {
 			if (withObjectives) {
-				addObjectives(loader, numObjectives);
+				addObjectives(loader, numObjectives, random);
 				context.setStandoffRange(height - 4500f);
 			} else {
 				context.setStandoffRange(6000f);
@@ -194,16 +215,24 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 	}
 	
 	
-	private float coronaIntensity = 0f;
-	private StarCoronaTerrainPlugin corona = null;
-	private PulsarBeamTerrainPlugin pulsar = null;
-	private void createMap() {
+	protected float coronaIntensity = 0f;
+	protected StarCoronaTerrainPlugin corona = null;
+	protected PulsarBeamTerrainPlugin pulsar = null;
+	protected void createMap(Random random) {
 		loader.initMap((float)-width/2f, (float)width/2f, (float)-height/2f, (float)height/2f);
 		
 		CampaignFleetAPI playerFleet = context.getPlayerFleet();
 		String nebulaTex = null;
 		String nebulaMapTex = null;
 		boolean inNebula = false;
+
+		boolean protectedFromCorona = false;
+		for (CustomCampaignEntityAPI curr : playerFleet.getContainingLocation().getCustomEntitiesWithTag(Tags.PROTECTS_FROM_CORONA_IN_BATTLE)) {
+			if (Misc.getDistance(curr.getLocation(), playerFleet.getLocation()) <= curr.getRadius() + Global.getSector().getPlayerFleet().getRadius() + 10f) {
+				protectedFromCorona = true;
+				break;
+			}
+		}
 		
 		float numRings = 0;
 		
@@ -228,7 +257,7 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 						}	
 					}
 				}
-			} else if (terrain.getPlugin() instanceof StarCoronaTerrainPlugin && pulsar == null) {
+			} else if (terrain.getPlugin() instanceof StarCoronaTerrainPlugin && pulsar == null && !protectedFromCorona) {
 				StarCoronaTerrainPlugin plugin = (StarCoronaTerrainPlugin) terrain.getPlugin();
 				if (plugin.containsEntity(playerFleet)) {
 					float angle = Misc.getAngleInDegrees(terrain.getLocation(), playerFleet.getLocation());
@@ -243,7 +272,7 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 						corona = plugin;
 					}
 				}
-			} else if (terrain.getPlugin() instanceof PulsarBeamTerrainPlugin) {
+			} else if (terrain.getPlugin() instanceof PulsarBeamTerrainPlugin && !protectedFromCorona) {
 				PulsarBeamTerrainPlugin plugin = (PulsarBeamTerrainPlugin) terrain.getPlugin();
 				if (plugin.containsEntity(playerFleet)) {
 					float angle = Misc.getAngleInDegreesStrict(terrain.getLocation(), playerFleet.getLocation());
@@ -283,11 +312,11 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		}
 		
 		for (int i = 0; i < numNebula; i++) {
-			float x = (float) Math.random() * width - width/2;
-			float y = (float) Math.random() * height - height/2;
-			float radius = 100f + (float) Math.random() * 400f;
+			float x = random.nextFloat() * width - width/2;
+			float y = random.nextFloat() * height - height/2;
+			float radius = 100f + random.nextFloat() * 400f;
 			if (inNebula) {
-				radius += 100f + 500f * (float) Math.random();
+				radius += 100f + 500f * random.nextFloat();
 			}
 			loader.addNebula(x, y, radius);
 		}
@@ -296,21 +325,23 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		
 		int numAsteroids = Math.min(400, (int)((numAsteroidsWithinRange + 1f) * 20f));
 		
-		loader.addAsteroidField(0, 0, (float) Math.random() * 360f, width,
+		loader.addAsteroidField(0, 0, random.nextFloat() * 360f, width,
 								20f, 70f, numAsteroids);
 		
 		if (numRings > 0) {
-			int numRingAsteroids = (int) (numRings * 300 + (numRings * 600f) * (float) Math.random());
+			int numRingAsteroids = (int) (numRings * 300 + (numRings * 600f) * random.nextFloat());
 			//int numRingAsteroids = (int) (numRings * 1600 + (numRings * 600f) * (float) Math.random());
 			if (numRingAsteroids > 1500) {
 				numRingAsteroids = 1500;
 			}
-			loader.addRingAsteroids(0, 0, (float) Math.random() * 360f, width,
+			loader.addRingAsteroids(0, 0, random.nextFloat() * 360f, width,
 					100f, 200f, numRingAsteroids);
 		}
 		
 		//setRandomBackground(loader);
 		loader.setBackgroundSpriteName(playerFleet.getContainingLocation().getBackgroundTextureFilename());
+//		loader.setBackgroundSpriteName("graphics/backgrounds/hyperspace_bg_cool.jpg");
+//		loader.setBackgroundSpriteName("graphics/ships/onslaught/onslaught_base.png");
 
 		if (playerFleet.getContainingLocation() == Global.getSector().getHyperspace()) {
 			loader.setHyperspaceMode(true);
@@ -322,7 +353,7 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		addClosestPlanet();
 	}
 	
-	private void addClosestPlanet() {
+	protected void addClosestPlanet() {
 		float bgWidth = 2048f;
 		float bgHeight = 2048f;
 		
@@ -380,7 +411,7 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		loader.addPlanet(0f, planetYOffset, radius, planet, 0f, true);
 	}
 	
-	private void addMultiplePlanets() {
+	protected void addMultiplePlanets() {
 		float bgWidth = 2048f;
 		float bgHeight = 2048f;
 		loader.setPlanetBgSize(bgWidth, bgHeight);
@@ -415,7 +446,7 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 	}
 	
 	
-	private void setRandomBackground(MissionDefinitionAPI loader) {
+	protected void setRandomBackground(MissionDefinitionAPI loader, Random random) {
 		// these have to be loaded using the graphics section in settings.json
 		String [] bgs = new String [] {
 				"graphics/backgrounds/background1.jpg",
@@ -423,15 +454,15 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 				"graphics/backgrounds/background3.jpg",
 				"graphics/backgrounds/background4.jpg"
 		};
-		String pick = bgs[(int)(Math.random() * bgs.length)];
+		String pick = bgs[Math.min(bgs.length - 1, (int)(random.nextDouble() * bgs.length))];
 		loader.setBackgroundSpriteName(pick);
 	}
 
-	private static String COMM = "comm_relay";
-	private static String SENSOR = "sensor_array";
-	private static String NAV = "nav_buoy";
+	protected static String COMM = "comm_relay";
+	protected static String SENSOR = "sensor_array";
+	protected static String NAV = "nav_buoy";
 	
-	private void addObjectives(MissionDefinitionAPI loader, int num) {
+	protected void addObjectives(MissionDefinitionAPI loader, int num, Random random) {
 		//if (true) return;
 		
 		objs = new ArrayList<String>(Arrays.asList(new String [] {
@@ -439,11 +470,11 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 				SENSOR,
 				NAV,
 				NAV,
-				COMM,
-				COMM,
+				//COMM,
+				//COMM,
 		}));
-		
-		if (num == 2) {
+
+		if (num == 2) { // minimum is 3 now, so this shouldn't happen
 			objs = new ArrayList<String>(Arrays.asList(new String [] {
 					SENSOR,
 					SENSOR,
@@ -451,46 +482,80 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 					NAV,
 					COMM,
 			}));
-			addObjectiveAt(0.25f, 0.5f, 0f, 0f);
-			addObjectiveAt(0.75f, 0.5f, 0f, 0f);
+			addObjectiveAt(0.25f, 0.5f, 0f, 0f, random);
+			addObjectiveAt(0.75f, 0.5f, 0f, 0f, random);
 		} else if (num == 3) {
-			float r = (float) Math.random();
+			float r = random.nextFloat();
 			if (r < 0.33f) {
-				addObjectiveAt(0.25f, 0.7f, 1f, 1f);
-				addObjectiveAt(0.25f, 0.3f, 1f, 1f);
-				addObjectiveAt(0.75f, 0.5f, 1f, 1f);
+				addObjectiveAt(0.25f, 0.7f, 1f, 1f, random);
+				addObjectiveAt(0.25f, 0.3f, 1f, 1f, random);
+				addObjectiveAt(0.75f, 0.5f, 1f, 1f, COMM, random);
 			} else if (r < 0.67f) {
-				addObjectiveAt(0.25f, 0.7f, 1f, 1f);
-				addObjectiveAt(0.25f, 0.3f, 1f, 1f);
-				addObjectiveAt(0.75f, 0.7f, 1f, 1f);
+				addObjectiveAt(0.75f, 0.7f, 1f, 1f, random);
+				addObjectiveAt(0.75f, 0.3f, 1f, 1f, random);
+				addObjectiveAt(0.25f, 0.5f, 1f, 1f, COMM, random);
 			} else {
-				addObjectiveAt(0.25f, 0.5f, 1f, 1f);
-				addObjectiveAt(0.5f, 0.5f, 1f, 1f);
-				addObjectiveAt(0.75f, 0.5f, 1f, 1f);
+				if (random.nextFloat() < 0.5f) {
+					addObjectiveAt(0.22f, 0.7f, 1f, 1f, random);
+					addObjectiveAt(0.5f, 0.5f, 1f, 1f, COMM, random);
+					addObjectiveAt(0.78f, 0.3f, 1f, 1f, random);
+				} else {
+					addObjectiveAt(0.22f, 0.3f, 1f, 1f, random);
+					addObjectiveAt(0.5f, 0.5f, 1f, 1f, COMM, random);
+					addObjectiveAt(0.78f, 0.7f, 1f, 1f, random);
+				}
 			}
 		} else if (num == 4) {
-			float r = (float) Math.random();
+			float r = random.nextFloat();
 			if (r < 0.33f) {
-				addObjectiveAt(0.25f, 0.25f, 2f, 1f);
-				addObjectiveAt(0.25f, 0.75f, 2f, 1f);
-				addObjectiveAt(0.75f, 0.25f, 2f, 1f);
-				addObjectiveAt(0.75f, 0.75f, 2f, 1f);
+				String [] maybeRelays = pickCommRelays(2, 2, false, true, true, false, random);
+				addObjectiveAt(0.25f, 0.25f, 2f, 1f, maybeRelays[0], random);
+				addObjectiveAt(0.25f, 0.75f, 2f, 1f, maybeRelays[1], random);
+				addObjectiveAt(0.75f, 0.25f, 2f, 1f, maybeRelays[2], random);
+				addObjectiveAt(0.75f, 0.75f, 2f, 1f, maybeRelays[3], random);
 			} else if (r < 0.67f) {
-				addObjectiveAt(0.25f, 0.5f, 1f, 1f);
-				addObjectiveAt(0.5f, 0.75f, 1f, 1f);
-				addObjectiveAt(0.75f, 0.5f, 1f, 1f);
-				addObjectiveAt(0.5f, 0.25f, 1f, 1f);
+				String [] maybeRelays = pickCommRelays(1, 2, true, false, true, false, random);
+				addObjectiveAt(0.25f, 0.5f, 1f, 1f, maybeRelays[0], random);
+				addObjectiveAt(0.5f, 0.75f, 1f, 1f, maybeRelays[1], random);
+				addObjectiveAt(0.75f, 0.5f, 1f, 1f, maybeRelays[2], random);
+				addObjectiveAt(0.5f, 0.25f, 1f, 1f, maybeRelays[3], random);
 			} else {
-				addObjectiveAt(0.2f, 0.5f, 1f, 2f);
-				addObjectiveAt(0.4f, 0.5f, 0f, 3f);
-				addObjectiveAt(0.6f, 0.5f, 0f, 3f);
-				addObjectiveAt(0.8f, 0.5f, 1f, 2f);
+				if (random.nextFloat() < 0.5f) {
+					String [] maybeRelays = pickCommRelays(1, 2, true, false, true, false, random);
+					addObjectiveAt(0.25f, 0.25f, 1f, 0f, maybeRelays[0], random);
+					addObjectiveAt(0.4f, 0.6f, 1f, 0f, maybeRelays[1], random);
+					addObjectiveAt(0.6f, 0.4f, 1f, 0f, maybeRelays[2], random);
+					addObjectiveAt(0.75f, 0.75f, 1f, 0f, maybeRelays[3], random);
+				} else {
+					String [] maybeRelays = pickCommRelays(1, 2, false, true, false, true, random);
+					addObjectiveAt(0.25f, 0.75f, 1f, 0f, maybeRelays[0], random);
+					addObjectiveAt(0.4f, 0.4f, 1f, 0f, maybeRelays[1], random);
+					addObjectiveAt(0.6f, 0.6f, 1f, 0f, maybeRelays[2], random);
+					addObjectiveAt(0.75f, 0.25f, 1f, 0f, maybeRelays[3], random);
+				}
 			}
 		}
 	}
 	
+	protected String [] pickCommRelays(int min, int max, boolean comm1, boolean comm2, boolean comm3, boolean comm4, Random random) {
+		String [] result = new String [4];
+		
+		WeightedRandomPicker<Integer> picker = new WeightedRandomPicker<Integer>(random);
+		if (comm1) picker.add(0);
+		if (comm2) picker.add(1);
+		if (comm3) picker.add(2);
+		if (comm4) picker.add(3);
+		
+		int num = min + random.nextInt(max - min + 1);
+		
+		for (int i = 0; i < num && !picker.isEmpty(); i++) {
+			result[picker.pickAndRemove()] = COMM;
+		}
+		return result;
+	}
 	
-	private void addEscapeObjectives(MissionDefinitionAPI loader, int num) {
+	
+	protected void addEscapeObjectives(MissionDefinitionAPI loader, int num, Random random) {
 		objs = new ArrayList<String>(Arrays.asList(new String [] {
 				SENSOR,
 				SENSOR,
@@ -500,58 +565,64 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		}));
 		
 		if (num == 2) {
-			float r = (float) Math.random();
+			float r = random.nextFloat();
 			if (r < 0.33f) {
-				addObjectiveAt(0.25f, 0.25f, 1f, 1f);
-				addObjectiveAt(0.75f, 0.75f, 1f, 1f);
+				addObjectiveAt(0.25f, 0.25f, 1f, 1f, random);
+				addObjectiveAt(0.75f, 0.75f, 1f, 1f, random);
 			} else if (r < 0.67f) {
-				addObjectiveAt(0.75f, 0.25f, 1f, 1f);
-				addObjectiveAt(0.25f, 0.75f, 1f, 1f);
+				addObjectiveAt(0.75f, 0.25f, 1f, 1f, random);
+				addObjectiveAt(0.25f, 0.75f, 1f, 1f, random);
 			} else {
-				addObjectiveAt(0.5f, 0.25f, 4f, 2f);
-				addObjectiveAt(0.5f, 0.75f, 4f, 2f);
+				addObjectiveAt(0.5f, 0.25f, 4f, 2f, random);
+				addObjectiveAt(0.5f, 0.75f, 4f, 2f, random);
 			}
 		} else if (num == 3) {
-			float r = (float) Math.random();
+			float r = random.nextFloat();
 			if (r < 0.33f) {
-				addObjectiveAt(0.25f, 0.75f, 1f, 1f);
-				addObjectiveAt(0.25f, 0.25f, 1f, 1f);
-				addObjectiveAt(0.75f, 0.5f, 1f, 6f);
+				addObjectiveAt(0.25f, 0.75f, 1f, 1f, random);
+				addObjectiveAt(0.25f, 0.25f, 1f, 1f, random);
+				addObjectiveAt(0.75f, 0.5f, 1f, 6f, random);
 			} else if (r < 0.67f) {
-				addObjectiveAt(0.25f, 0.5f, 1f, 6f);
-				addObjectiveAt(0.75f, 0.75f, 1f, 1f);
-				addObjectiveAt(0.75f, 0.25f, 1f, 1f);
+				addObjectiveAt(0.25f, 0.5f, 1f, 6f, random);
+				addObjectiveAt(0.75f, 0.75f, 1f, 1f, random);
+				addObjectiveAt(0.75f, 0.25f, 1f, 1f, random);
 			} else {
-				addObjectiveAt(0.5f, 0.25f, 4f, 1f);
-				addObjectiveAt(0.5f, 0.5f, 4f, 1f);
-				addObjectiveAt(0.5f, 0.75f, 4f, 1f);
+				addObjectiveAt(0.5f, 0.25f, 4f, 1f, random);
+				addObjectiveAt(0.5f, 0.5f, 4f, 1f, random);
+				addObjectiveAt(0.5f, 0.75f, 4f, 1f, random);
 			}
 		} else if (num == 4) {
-			float r = (float) Math.random();
+			float r = random.nextFloat();
 			if (r < 0.33f) {
-				addObjectiveAt(0.25f, 0.25f, 1f, 1f);
-				addObjectiveAt(0.25f, 0.75f, 1f, 1f);
-				addObjectiveAt(0.75f, 0.25f, 1f, 1f);
-				addObjectiveAt(0.75f, 0.75f, 1f, 1f);
+				addObjectiveAt(0.25f, 0.25f, 1f, 1f, random);
+				addObjectiveAt(0.25f, 0.75f, 1f, 1f, random);
+				addObjectiveAt(0.75f, 0.25f, 1f, 1f, random);
+				addObjectiveAt(0.75f, 0.75f, 1f, 1f, random);
 			} else if (r < 0.67f) {
-				addObjectiveAt(0.35f, 0.25f, 2f, 0f);
-				addObjectiveAt(0.65f, 0.35f, 2f, 0f);
-				addObjectiveAt(0.5f, 0.6f, 4f, 1f);
-				addObjectiveAt(0.5f, 0.8f, 4f, 1f);
+				addObjectiveAt(0.35f, 0.25f, 2f, 0f, random);
+				addObjectiveAt(0.65f, 0.35f, 2f, 0f, random);
+				addObjectiveAt(0.5f, 0.6f, 4f, 1f, random);
+				addObjectiveAt(0.5f, 0.8f, 4f, 1f, random);
 			} else {
-				addObjectiveAt(0.65f, 0.25f, 2f, 0f);
-				addObjectiveAt(0.35f, 0.35f, 2f, 0f);
-				addObjectiveAt(0.5f, 0.6f, 4f, 1f);
-				addObjectiveAt(0.5f, 0.8f, 4f, 1f);
+				addObjectiveAt(0.65f, 0.25f, 2f, 0f, random);
+				addObjectiveAt(0.35f, 0.35f, 2f, 0f, random);
+				addObjectiveAt(0.5f, 0.6f, 4f, 1f, random);
+				addObjectiveAt(0.5f, 0.8f, 4f, 1f, random);
 			}
 		}
 	}	
 
-	private void addObjectiveAt(float xMult, float yMult, float xOff, float yOff) {
-		String type = pickAny();
-		if (objs != null && objs.size() > 0) {
-			int index = (int) (Math.random() * objs.size());
-			type = objs.remove(index); 
+	protected void addObjectiveAt(float xMult, float yMult, float xOff, float yOff, Random random) {
+		addObjectiveAt(xMult, yMult, xOff, yOff, null, random);
+	}
+	protected void addObjectiveAt(float xMult, float yMult, float xOff, float yOff, String type, Random random) {
+		//String type = pickAny();
+		if (type == null) {
+			type = pickAny(random);
+			if (objs != null && objs.size() > 0) {
+				int index = (int) (random.nextDouble() * objs.size());
+				type = objs.remove(index); 
+			}
 		}
 		
 		float minX = -width/2 + xPad;
@@ -563,8 +634,11 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		x = ((int) x / 1000) * 1000f;
 		y = ((int) y / 1000) * 1000f;
 		
-		float offsetX = Math.round((Math.random() - 0.5f) * xOff * 2f) * 1000f;
-		float offsetY = Math.round((Math.random() - 0.5f) * yOff * 2f) * 1000f;
+		float offsetX = Math.round((random.nextFloat() - 0.5f) * xOff * 1f) * 1000f;
+		float offsetY = Math.round((random.nextFloat() - 0.5f) * yOff * 1f) * 1000f;
+		
+//		offsetX = 0;
+//		offsetY = 0;
 		
 		float xDir = (float) Math.signum(offsetX);
 		float yDir = (float) Math.signum(offsetY);
@@ -587,20 +661,20 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		
 		loader.addObjective(x, y, type);
 		
-		if ((float) Math.random() > 0.6f) {
-			float nebulaSize = (float) Math.random() * 1500f + 500f;
+		if (random.nextFloat() > 0.6f) {
+			float nebulaSize = random.nextFloat() * 1500f + 500f;
 			loader.addNebula(x, y, nebulaSize);
 		}
 	}
 	
-	private String pickAny() {
-		float r = (float) Math.random();
+	protected String pickAny(Random random) {
+		float r = random.nextFloat();
 		if (r < 0.33f) return "nav_buoy";
 		else if (r < 0.67f) return "sensor_array";
 		else return "comm_relay"; 
 	}
 
-	private float countNearbyAsteroids(CampaignFleetAPI playerFleet) {
+	protected float countNearbyAsteroids(CampaignFleetAPI playerFleet) {
 		float numAsteroidsWithinRange = 0;
 		LocationAPI loc = playerFleet.getContainingLocation();
 		if (loc instanceof StarSystemAPI) {
@@ -614,22 +688,22 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		return numAsteroidsWithinRange;
 	}
 	
-	private static class NearbyPlanetData {
-		private Vector2f offset;
-		private PlanetAPI planet;
+	protected static class NearbyPlanetData {
+		protected Vector2f offset;
+		protected PlanetAPI planet;
 		public NearbyPlanetData(Vector2f offset, PlanetAPI planet) {
 			this.offset = offset;
 			this.planet = planet;
 		}
 	}
 	
-	private static float PLANET_AREA_WIDTH = 2000;
-	private static float PLANET_AREA_HEIGHT = 2000;
-	private static float PLANET_MAX_DIST = (float) Math.sqrt(PLANET_AREA_WIDTH/2f * PLANET_AREA_WIDTH/2f + PLANET_AREA_HEIGHT/2f * PLANET_AREA_WIDTH/2f);
+	protected static float PLANET_AREA_WIDTH = 2000;
+	protected static float PLANET_AREA_HEIGHT = 2000;
+	protected static float PLANET_MAX_DIST = (float) Math.sqrt(PLANET_AREA_WIDTH/2f * PLANET_AREA_WIDTH/2f + PLANET_AREA_HEIGHT/2f * PLANET_AREA_WIDTH/2f);
 	
-	private static float SINGLE_PLANET_MAX_DIST = 1000f;
+	protected static float SINGLE_PLANET_MAX_DIST = 1000f;
 	
-	private List<NearbyPlanetData> getNearbyPlanets(CampaignFleetAPI playerFleet) {
+	protected List<NearbyPlanetData> getNearbyPlanets(CampaignFleetAPI playerFleet) {
 		LocationAPI loc = playerFleet.getContainingLocation();
 		List<NearbyPlanetData> result = new ArrayList<NearbyPlanetData>();
 		if (loc instanceof StarSystemAPI) {
@@ -647,7 +721,7 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		return result;
 	}
 	
-	private PlanetAPI getClosestPlanet(CampaignFleetAPI playerFleet) {
+	protected PlanetAPI getClosestPlanet(CampaignFleetAPI playerFleet) {
 		LocationAPI loc = playerFleet.getContainingLocation();
 		PlanetAPI closest = null;
 		float minDist = Float.MAX_VALUE;
@@ -656,8 +730,9 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 			List<PlanetAPI> planets = system.getPlanets();
 			for (PlanetAPI planet : planets) {
 				if (planet.isStar()) continue;
-				if (StarTypes.PLANET_LAVA.equals(planet.getTypeId())) continue;
-				if (StarTypes.PLANET_LAVA_MINOR.equals(planet.getTypeId())) continue;
+				if (Planets.PLANET_LAVA.equals(planet.getTypeId())) continue;
+				if (Planets.PLANET_LAVA_MINOR.equals(planet.getTypeId())) continue;
+				if (planet.getSpec().isDoNotShowInCombat()) continue;
 				
 				float dist = Vector2f.sub(context.getPlayerFleet().getLocation(), planet.getLocation(), new Vector2f()).length();
 				if (dist < minDist && dist < SINGLE_PLANET_MAX_DIST) {

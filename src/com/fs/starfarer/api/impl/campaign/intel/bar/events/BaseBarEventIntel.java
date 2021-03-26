@@ -1,7 +1,10 @@
 package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 
+import java.util.Map;
+
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarEvent;
 
@@ -16,7 +19,7 @@ public class BaseBarEventIntel extends BaseIntelPlugin implements PortsideBarEve
 	transient protected InteractionDialogAPI dialog;
 
 
-	public void init(InteractionDialogAPI dialog) {
+	public void init(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
 		this.dialog = dialog;
 	}
 	
@@ -44,11 +47,19 @@ public class BaseBarEventIntel extends BaseIntelPlugin implements PortsideBarEve
 		return false;
 	}
 
-	public void addPromptAndOption(InteractionDialogAPI dialog) {
+	public void addPromptAndOption(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
 		
 	}
 
 	public void wasShownAtMarket(MarketAPI market) {
 		
+	}
+
+	public String getBarEventId() {
+		return null;
+	}
+
+	public boolean isAlwaysShow() {
+		return false;
 	}
 }

@@ -3,19 +3,24 @@ package com.fs.starfarer.api.impl.campaign.fleets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 import org.apache.log4j.Logger;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
-import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
+import com.fs.starfarer.api.impl.campaign.command.WarSimScript;
+import com.fs.starfarer.api.impl.campaign.command.WarSimScript.LocationDanger;
 import com.fs.starfarer.api.impl.campaign.econ.ShippingDisruption;
 import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.CargoQuantityData;
 import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.EconomyRouteData;
@@ -47,6 +52,17 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 	
 	public static final String SOURCE_ID = "econ";
 	public static Logger log = Global.getLogger(EconomyFleetRouteManager.class);
+	
+	public static Map<LocationDanger, Float> DANGER_LOSS_PROB = new HashMap<LocationDanger, Float>();
+	static {
+		DANGER_LOSS_PROB.put(LocationDanger.NONE, 0.01f);
+		DANGER_LOSS_PROB.put(LocationDanger.MINIMAL, 0.03f);
+		DANGER_LOSS_PROB.put(LocationDanger.LOW, 0.07f);
+		DANGER_LOSS_PROB.put(LocationDanger.MEDIUM, 0.1f);
+		DANGER_LOSS_PROB.put(LocationDanger.HIGH, 0.15f);
+		DANGER_LOSS_PROB.put(LocationDanger.EXTREME, 0.2f);
+	}
+	
 	
 	protected TimeoutTracker<String> recentlySentTradeFleet = new TimeoutTracker<String>();
 	
@@ -83,6 +99,7 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 		return Math.min(maxBasedOnMarkets, Global.getSettings().getInt("maxEconFleets"));
 	}
 	
+	
 	protected void addRouteFleetIfPossible() {
 		MarketAPI from = pickSourceMarket();
 		MarketAPI to = pickDestMarket(from);
@@ -93,7 +110,7 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 			
 			log.info("Added trade fleet route from " + from.getName() + " to " + to.getName());
 			
-			Long seed = new Random().nextLong();
+			Long seed = Misc.genRandomSeed();
 			String id = getRouteSourceId();
 			
 			OptionalFleetData extra = new OptionalFleetData(from);
@@ -113,6 +130,28 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 			
 			RouteData route = RouteManager.getInstance().addRoute(id, from, seed, extra, this);
 			route.setCustom(data);
+			
+			
+			StarSystemAPI sysFrom = data.from.getStarSystem();
+			StarSystemAPI sysTo = data.to.getStarSystem();
+			LocationDanger dFrom = WarSimScript.getDangerFor(factionId, sysFrom);
+			LocationDanger dTo = WarSimScript.getDangerFor(factionId, sysTo);
+			
+			LocationDanger danger = dFrom.ordinal() > dTo.ordinal() ? dFrom : dTo;
+//			if (danger != LocationDanger.NONE) {
+//				System.out.println("efwe234523fwe " + danger.name());
+//				dFrom = WarSimScript.getDangerFor(factionId, sysFrom);
+//				dTo = WarSimScript.getDangerFor(factionId, sysTo);
+//			}
+			float pLoss = DANGER_LOSS_PROB.get(danger);
+			if (data.smuggling) pLoss *= 0.5;
+			if ((float) Math.random() < pLoss) {
+				boolean returning = (float) Math.random() < 0.5f; 
+				applyLostShipping(data, returning, true, true, true);
+				RouteManager.getInstance().removeRote(route);
+				return;
+			}
+			
 			
 			//float distLY = Misc.getDistanceLY(from.getLocationInHyperspace(), to.getLocation());
 			
@@ -326,6 +365,7 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 			
 			int imported = Math.max(0, com.getMaxDemand() - exported);
 			imported = Math.min(imported, shipping);
+			if (orig != com) imported = 0;
 			
 			CommodityOnMarketAPI other = to.getCommodityData(com.getId());
 			exported = Math.min(exported, other.getMaxDemand() - other.getMaxSupply());
@@ -581,12 +621,16 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 		params.timestamp = route.getTimestamp();
 		params.onlyApplyFleetSizeToCombatShips = true;
 		params.maxShipSize = 3;
-		params.officerLevelBonus = -5;
+		params.officerLevelBonus = -2;
 		params.officerNumberMult = 0.5f;
 		params.random = random;
 		CampaignFleetAPI fleet = FleetFactoryV3.createFleet(params);
 		
 		if (fleet == null || fleet.isEmpty()) return null;
+		
+		if (Misc.isPirateFaction(fleet.getFaction())) {
+			fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_FORCE_TRANSPONDER_OFF, true);
+		}
 		
 		if (data.smuggling) {
 			fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_SMUGGLER, true);

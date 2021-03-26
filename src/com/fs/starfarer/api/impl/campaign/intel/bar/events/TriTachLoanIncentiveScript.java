@@ -114,7 +114,7 @@ public class TriTachLoanIncentiveScript implements EveryFrameScript {
 				0f // qualityMod
 		);
 		params.officerNumberBonus = 4;
-		params.officerLevelBonus = 10;
+		params.officerLevelBonus = 3;
 		params.doctrineOverride = Global.getSector().getFaction(Factions.TRITACHYON).getDoctrine().clone();
 		params.doctrineOverride.setWarships(3);
 		params.doctrineOverride.setPhaseShips(3);

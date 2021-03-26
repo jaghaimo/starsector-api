@@ -110,7 +110,7 @@ public class AsteroidFieldTerrainPlugin extends AsteroidBeltTerrainPlugin {
 		super.advance(amount);
 	}
 		
-	protected String getNameForTooltip() {
+	public String getNameForTooltip() {
 		return "Asteroid Field";
 		//return params.name;
 	}

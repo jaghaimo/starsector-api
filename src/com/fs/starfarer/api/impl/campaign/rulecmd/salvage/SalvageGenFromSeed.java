@@ -5,31 +5,37 @@ import java.util.Map;
 import java.util.Random;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.AICoreOfficerPlugin;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
-import com.fs.starfarer.api.campaign.InteractionDialogAPI;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FactionAPI.ShipPickParams;
 import com.fs.starfarer.api.campaign.GenericPluginManagerAPI.GenericPlugin;
+import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.ShipRolePick;
 import com.fs.starfarer.api.impl.campaign.BaseGenericPlugin;
-import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent;
-import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent.SkillPickPreference;
+import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
+import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.ShipRoles;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec;
+import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageEntityGeneratorOld;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
@@ -55,6 +61,7 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 		float getProbability(SDMParams p, float probability, Random random, boolean withOverride);
 		float getQuality(SDMParams p, float quality, Random random, boolean withOverride);
 		float getMaxSize(SDMParams p, float maxSize, Random random, boolean withOverride);
+		float getMinSize(SDMParams p, float minSize, Random random, boolean withOverride);
 		
 		void modifyFleet(SDMParams p, CampaignFleetAPI fleet, Random random, boolean withOverride);
 		void reportDefeated(SDMParams p, SectorEntityToken entity, CampaignFleetAPI fleet);
@@ -67,39 +74,63 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 	public static class SalvageDefenderModificationPluginImpl extends BaseGenericPlugin implements SalvageDefenderModificationPlugin {
 		public float getStrength(SDMParams p, float strength, Random random, boolean withOverride) {
 			if (withOverride) return strength;
-			float bonus = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR) * DEFEATED_TO_ADDED_FACTOR;
-			
-			String type = p.entity.getCustomEntityType();
-			float limit = 300f;
-			if (Entities.DERELICT_SURVEY_PROBE.equals(type)) {
-				limit = 60;
-			} else if (Entities.DERELICT_SURVEY_SHIP.equals(type)) {
-				limit = 90;
-			} else if (Entities.DERELICT_MOTHERSHIP.equals(type) || Entities.DERELICT_CRYOSLEEPER.equals(type)) {
-				limit = 150;
+			if (Factions.DERELICT.equals(p.factionId)) {
+				float bonus = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR) * DEFEATED_TO_ADDED_FACTOR;
+				
+				String type = p.entity.getCustomEntityType();
+				float limit = 300f;
+				if (Entities.DERELICT_SURVEY_PROBE.equals(type)) {
+					limit = 60;
+				} else if (Entities.DERELICT_SURVEY_SHIP.equals(type)) {
+					limit = 90;
+				} else if (Entities.DERELICT_MOTHERSHIP.equals(type) || Entities.DERELICT_CRYOSLEEPER.equals(type)) {
+					limit = 150;
+				}
+				
+	//			if (Global.getSettings().isDevMode()) {
+	//				bonus = limit;
+	//			}
+				
+				if (bonus > limit) bonus = limit;
+				return strength + (int) bonus;
 			}
-			
-//			if (Global.getSettings().isDevMode()) {
-//				bonus = limit;
-//			}
-			
-			if (bonus > limit) bonus = limit;
-			return strength + (int) bonus;
+			return strength;
+		}
+		public float getMinSize(SDMParams p, float minSize, Random random, boolean withOverride) {
+			if (withOverride) return minSize;
+			return minSize;
 		}
 		public float getMaxSize(SDMParams p, float maxSize, Random random, boolean withOverride) {
 			if (withOverride) return maxSize;
-			
-			float bonus = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR) * DEFEATED_TO_ADDED_FACTOR;
-			String type = p.entity.getCustomEntityType();
-			float bonusSize = 1;
-			if (Entities.DERELICT_SURVEY_PROBE.equals(type)) {
-				if (bonus >= 5) bonusSize = 2;
+			if (Factions.DERELICT.equals(p.factionId)) {
+				float bonus = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR) * DEFEATED_TO_ADDED_FACTOR;
+				String type = p.entity.getCustomEntityType();
+				float bonusSize = 1;
+				if (Entities.DERELICT_SURVEY_PROBE.equals(type)) {
+					if (bonus >= 5) bonusSize = 2;
+				}
+				
+				return Math.max(maxSize, bonusSize);
 			}
-			
-			return Math.max(maxSize, bonusSize);
+			return maxSize; 
 		}
 		public float getProbability(SDMParams p, float probability, Random random, boolean withOverride) {
 			if (withOverride) return probability;
+			if (Factions.DERELICT.equals(p.factionId)) {
+				String type = p.entity.getCustomEntityType();
+				float limit = 0f;
+				if (Entities.DERELICT_SURVEY_PROBE.equals(type)) {
+					limit = 60;
+				} else if (Entities.DERELICT_SURVEY_SHIP.equals(type)) {
+					limit = 90;
+				}
+				if (limit <= 0 || probability >= 1f) return probability;
+				
+				float bonus = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR) * DEFEATED_TO_ADDED_FACTOR;
+				if (bonus > limit) bonus = limit;
+				
+				return probability * (1f - 0.5f * bonus / limit);
+			}
 			return probability;
 		}
 		public void reportDefeated(SDMParams p, SectorEntityToken entity, CampaignFleetAPI fleet) {
@@ -111,6 +142,42 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 			Global.getSector().getMemoryWithoutUpdate().set(DEFEATED_DERELICT_STR, total);
 		}
 		public void modifyFleet(SDMParams p, CampaignFleetAPI fleet, Random random, boolean withOverride) {
+			if (Factions.OMEGA.equals(fleet.getFaction().getId())) {
+				for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+					ShipVariantAPI copy = member.getVariant().clone();
+					member.setVariant(copy, false, false);
+					copy.addTag(Tags.SHIP_LIMITED_TOOLTIP);
+				}
+				
+				DropData d;
+				d = new DropData();
+				d.chances = 5;
+				d.maxChances = 7;
+				d.group = "omega_weapons_small";
+				fleet.addDropRandom(d);
+				
+				d = new DropData();
+				d.chances = 3;
+				d.maxChances = 4;
+				d.group = "omega_weapons_medium";
+				fleet.addDropRandom(d);
+				
+				long seed = Misc.getSalvageSeed(p.entity);
+				fleet.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SEED, Misc.getRandom(seed, 11).nextLong());
+			} else
+			if (Entities.ALPHA_SITE_WEAPONS_CACHE.equals(p.entity.getCustomEntityType())) {
+				AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(Commodities.ALPHA_CORE);
+				for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+					PersonAPI person = plugin.createPerson(Commodities.ALPHA_CORE, fleet.getFaction().getId(), random);
+					member.setCaptain(person);
+					RemnantOfficerGeneratorPlugin.integrateAndAdaptCoreForAIFleet(member);
+					member.getRepairTracker().setCR(member.getRepairTracker().getMaxCR());
+				}
+				if (fleet.getInflater() instanceof DefaultFleetInflater) {
+					DefaultFleetInflater dfi = (DefaultFleetInflater) fleet.getInflater();
+					((DefaultFleetInflaterParams)dfi.getParams()).allWeapons = true;
+				}
+			} else
 			if (p.entity != null && p.entity.getMemoryWithoutUpdate().contains(MiscellaneousThemeGenerator.PLANETARY_SHIELD_PLANET)) {
 				FleetMemberAPI flagship = null;
 				for (ShipRolePick pick : fleet.getFaction().pickShip(ShipRoles.COMBAT_CAPITAL, ShipPickParams.all(), null, random)) {
@@ -119,17 +186,24 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 					// the name is used as part of the random seed for autofit, so, want it to be consistent
 					member.setShipName(fleet.getFaction().pickRandomShipName(random));
 				}
+				
+				AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(Commodities.ALPHA_CORE);
+				
 				for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 					member.getRepairTracker().setCR(member.getRepairTracker().getMaxCR());
 					member.setFlagship(member == flagship);
-					
-					PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), 20, true, SkillPickPreference.NON_CARRIER, random);
+
+					//PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), 20, SkillPickPreference.NON_CARRIER, random);
+					PersonAPI person = plugin.createPerson(Commodities.ALPHA_CORE, fleet.getFaction().getId(), random);
 					member.setCaptain(person);
+					RemnantOfficerGeneratorPlugin.integrateAndAdaptCoreForAIFleet(member);
 				}
 				
-				PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), 20, true, SkillPickPreference.NON_CARRIER, random);
+				//PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), 20, SkillPickPreference.NON_CARRIER, random);
+				PersonAPI person = plugin.createPerson(Commodities.ALPHA_CORE, fleet.getFaction().getId(), random);
 				fleet.setCommander(person);
 				fleet.getFlagship().setCaptain(person);
+				RemnantOfficerGeneratorPlugin.integrateAndAdaptCoreForAIFleet(fleet.getFlagship());
 				
 				if (fleet.getInflater() instanceof DefaultFleetInflater) {
 					DefaultFleetInflater dfi = (DefaultFleetInflater) fleet.getInflater();
@@ -142,13 +216,47 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 				for (ShipRolePick pick : fleet.getFaction().pickShip(ShipRoles.COMBAT_CAPITAL, ShipPickParams.all(), null, random)) {
 					fleet.getFleetData().addFleetMember(pick.variantId);
 				}
+				AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(Commodities.ALPHA_CORE);
+				//PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), 20, true, SkillPickPreference.NON_CARRIER, random);
+				PersonAPI person = plugin.createPerson(Commodities.ALPHA_CORE, fleet.getFaction().getId(), random);
+				// so it's not the standard alpha core portrait but an older-looking one
+				person.setPortraitSprite(fleet.getFaction().createRandomPerson().getPortraitSprite());
+				fleet.setCommander(person);
+				fleet.getFlagship().setCaptain(person);
+				RemnantOfficerGeneratorPlugin.integrateAndAdaptCoreForAIFleet(fleet.getFlagship());
+				
 				for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 					member.getRepairTracker().setCR(member.getRepairTracker().getMaxCR());
 				}
+			} else
+			if (Entities.DERELICT_MOTHERSHIP.equals(p.entity.getCustomEntityType()) ||
+					Entities.DERELICT_SURVEY_SHIP.equals(p.entity.getCustomEntityType()) ||
+					Entities.DERELICT_SURVEY_PROBE.equals(p.entity.getCustomEntityType())
+					) {
 				
-				PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), 20, true, SkillPickPreference.NON_CARRIER, random);
-				fleet.setCommander(person);
-				fleet.getFlagship().setCaptain(person);
+				float bonus = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR) * DEFEATED_TO_ADDED_FACTOR;
+				float coreMult = Math.max(0f, (bonus / 100f) - 0.1f);
+				if (coreMult > 1f) coreMult = 1f;
+				
+				if (coreMult > 0) {
+					RemnantOfficerGeneratorPlugin gen = new RemnantOfficerGeneratorPlugin(true, coreMult);
+					if (coreMult >= 1f) {
+						gen.setForceIntegrateCores(true);
+					}
+					gen.addCommanderAndOfficers(fleet, null, random);
+				}
+				
+				for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+					if (member.isStation()) {
+						AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(Commodities.ALPHA_CORE);
+						PersonAPI person = plugin.createPerson(Commodities.ALPHA_CORE, fleet.getFaction().getId(), random);
+						// so it's not the standard alpha core portrait but an older-looking one
+						person.setPortraitSprite(fleet.getFaction().createRandomPerson().getPortraitSprite());
+						member.setCaptain(person);
+						RemnantOfficerGeneratorPlugin.integrateAndAdaptCoreForAIFleet(member);
+					}
+					member.getRepairTracker().setCR(member.getRepairTracker().getMaxCR());
+				}
 				
 			}
 		}
@@ -163,14 +271,22 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 			if (Factions.DERELICT.equals(p.factionId)) {
 				return 1;
 			}
+			if (Factions.OMEGA.equals(p.factionId)) {
+				return 1;
+			}
+			if (Factions.REMNANTS.equals(p.factionId)) {
+				return 1;
+			}
 			
 			return 0;
 		}
 		public float getQuality(SDMParams p, float quality, Random random, boolean withOverride) {
 			if (withOverride) return quality;
-			float bonus = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR) * DEFEATED_TO_QUALITY_FACTOR;
-			return quality + bonus;
-			
+			if (Factions.DERELICT.equals(p.factionId)) {
+				float bonus = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR) * DEFEATED_TO_QUALITY_FACTOR;
+				return quality + bonus;
+			}
+			return quality;
 		}
 	}
 	
@@ -204,6 +320,10 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 		}
 		
 		Random fleetRandom = Misc.getRandom(seed, 1);
+//		if (Global.getSettings().isDevMode()) {
+//			fleetRandom = Misc.random;
+//		}
+		
 		//fleetRandom = new Random();
 		float strength = spec.getMinStr() + Math.round((spec.getMaxStr() - spec.getMinStr()) * fleetRandom.nextFloat());
 		float prob = spec.getProbDefenders();
@@ -254,7 +374,7 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 				!memory.getBoolean("$defenderFleetDefeated")) {
 			memory.set("$hasDefenders", true, 0);
 			
-			if (!memory.contains("$defenderFleet")) {
+			if (!memory.contains("$defenderFleet") || DebugFlags.FORCE_REGEN_AUTOMATED_DEFENSES) {
 				float quality = spec.getDefQuality();
 				if (plugin != null) {
 					quality = plugin.getQuality(p, quality, fleetRandom, override != null);
@@ -266,15 +386,26 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 								FleetTypes.PATROL_SMALL,
 								(int) strength,
 								0, 0, 0, 0, 0, 0);
-				
 				fParams.random = fleetRandom;
-				fParams.withOfficers = false;
+				//fParams.withOfficers = false;
+				FactionAPI faction = Global.getSector().getFaction(factionId);
+				fParams.withOfficers = faction.getCustomBoolean(Factions.CUSTOM_OFFICERS_ON_AUTOMATED_DEFENSES);
+				
 				fParams.maxShipSize = (int) spec.getMaxDefenderSize();
 				if (override != null) {
 					fParams.maxShipSize = override.maxDefenderSize;
 				}
+				
 				if (plugin != null) {
 					fParams.maxShipSize = (int) (plugin.getMaxSize(p, fParams.maxShipSize, random, override != null));
+				}
+				
+				fParams.minShipSize = (int) spec.getMinDefenderSize();
+				if (override != null) {
+					fParams.minShipSize = override.minDefenderSize;
+				}
+				if (plugin != null) {
+					fParams.minShipSize = (int) (plugin.getMinSize(p, fParams.minShipSize, random, override != null));
 				}
 				
 				//fParams.allowEmptyFleet = true;

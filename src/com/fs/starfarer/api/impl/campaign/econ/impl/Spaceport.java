@@ -9,6 +9,7 @@ import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -18,12 +19,17 @@ import com.fs.starfarer.api.util.Pair;
 
 public class Spaceport extends BaseIndustry implements MarketImmigrationModifier {
 
+	public static float OFFICER_PROB_MOD = 0.1f;
+	public static float OFFICER_PROB_MOD_MEGA = 0.2f;
+	
 	public static float UPKEEP_MULT_PER_DEFICIT = 0.1f;
 	
 	public static final float BASE_ACCESSIBILITY = 0.5f;
 	public static final float MEGAPORT_ACCESSIBILITY = 0.8f;
 	
 	public static final float ALPHA_CORE_ACCESSIBILITY = 0.2f;
+	public static final float IMPROVE_ACCESSIBILITY = 0.2f;
+	
 //	public static final float BASE_ACCESSIBILITY = 0f;
 //	public static final float MEGAPORT_ACCESSIBILITY = 0.2f;
 	
@@ -65,6 +71,11 @@ public class Spaceport extends BaseIndustry implements MarketImmigrationModifier
 			market.getAccessibilityMod().modifyFlat(getModId(0), a, desc);
 		}
 		
+		float officerProb = OFFICER_PROB_MOD;
+		if (megaport) officerProb = OFFICER_PROB_MOD_MEGA;
+		market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).modifyFlat(getModId(0), officerProb);
+		//market.getStats().getDynamic().getMod(Stats.OFFICER_IS_MERC_PROB_MOD).modifyFlat(getModId(0), officerProb);
+		
 		if (!isFunctional()) {
 //			if (isDisrupted() && !isBuilding()) {
 //				market.getAccessibilityMod().modifyFlat(getModId(2), -1f, "Spaceport operations disrupted");
@@ -72,6 +83,7 @@ public class Spaceport extends BaseIndustry implements MarketImmigrationModifier
 //			} else {
 				supply.clear();
 				unapply();
+				market.setHasSpaceport(true);
 //			}
 		}
 	}
@@ -84,6 +96,9 @@ public class Spaceport extends BaseIndustry implements MarketImmigrationModifier
 		market.getAccessibilityMod().unmodifyFlat(getModId(0));
 		market.getAccessibilityMod().unmodifyFlat(getModId(1));
 		market.getAccessibilityMod().unmodifyFlat(getModId(2));
+		
+		market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).unmodifyFlat(getModId(0));
+		//market.getStats().getDynamic().getMod(Stats.OFFICER_IS_MERC_PROB_MOD).unmodifyFlat(getModId(0));
 	}
 	
 	protected float getUpkeepPenalty(Pair<String, Integer> deficit) {
@@ -220,6 +235,40 @@ public class Spaceport extends BaseIndustry implements MarketImmigrationModifier
 				aStr);
 		
 	}
+	
+	@Override
+	public boolean canImprove() {
+		return true;
+	}
+	
+	protected void applyImproveModifiers() {
+		// have to use a custom id - "spaceport_improve" - so that it's the same modifier when upgraded to megaport
+		if (isImproved()) {
+			market.getAccessibilityMod().modifyFlat("spaceport_improve", IMPROVE_ACCESSIBILITY,
+							getImprovementsDescForModifiers() + " (" + getNameForModifier() + ")");
+		} else {
+			market.getAccessibilityMod().unmodifyFlat("spaceport_improve");
+		}
+	}
+	
+	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		float a = IMPROVE_ACCESSIBILITY;
+		String aStr = "" + (int)Math.round(a * 100f) + "%";
+		
+		if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+			info.addPara("Accessibility increased by %s.", 0f, highlight, aStr);
+		} else {
+			info.addPara("Increases accessibility by %s.", 0f, highlight, aStr);
+		}
+
+		info.addSpacer(opad);
+		super.addImproveDesc(info, mode);
+	}
+
+	
 }
 
 

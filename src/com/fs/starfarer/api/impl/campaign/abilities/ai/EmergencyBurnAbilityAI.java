@@ -14,7 +14,11 @@ import com.fs.starfarer.api.util.Misc;
 
 public class EmergencyBurnAbilityAI extends BaseAbilityAI {
 
-	public static final float AI_FREQUENCY_MULT = 1f;
+	public static String AI_USE_TIMEOUT_KEY = "$ebai_timeout";
+	public static float AI_USE_TIMEOUT_DAYS_MIN = 3f;
+	public static float AI_USE_TIMEOUT_DAYS_MAX = 5f;
+	
+	public static float AI_FREQUENCY_MULT = 1f;
 	
 	protected IntervalUtil interval = new IntervalUtil(0.05f, 0.15f);
 
@@ -22,10 +26,20 @@ public class EmergencyBurnAbilityAI extends BaseAbilityAI {
 //		super(ability, ai);
 //	}
 
+	protected void activate() {
+		ability.activate();
+		MemoryAPI mem = fleet.getMemoryWithoutUpdate();
+		mem.set(AI_USE_TIMEOUT_KEY, true,
+				AI_USE_TIMEOUT_DAYS_MIN + (AI_USE_TIMEOUT_DAYS_MAX - AI_USE_TIMEOUT_DAYS_MIN) * (float) Math.random());
+	}
+	
 	public void advance(float days) {
-		interval.advance(days * EmergencyBurnAbilityAI.AI_FREQUENCY_MULT);
+		interval.advance(days * EmergencyBurnAbilityAI.AI_FREQUENCY_MULT * 0.25f);
 		if (!interval.intervalElapsed()) return;
 		
+//		if (fleet.getName().contains("[5]")) {
+//			System.out.println("ewfwefwe");
+//		}
 		if (ability.isActiveOrInProgress()) {
 			MemoryAPI mem = fleet.getMemoryWithoutUpdate();
 			mem.set(FleetAIFlags.HAS_SPEED_BONUS, true, 0.2f);
@@ -47,6 +61,12 @@ public class EmergencyBurnAbilityAI extends BaseAbilityAI {
 		}
 		
 		MemoryAPI mem = fleet.getMemoryWithoutUpdate();
+//		if (fleet.isInCurrentLocation()) {
+//			System.out.println("23r23r23r3");
+//		}
+		if (mem.getBoolean(AI_USE_TIMEOUT_KEY)) {
+			return;
+		}
 		
 		CampaignFleetAPI pursueTarget = mem.getFleet(FleetAIFlags.PURSUIT_TARGET);
 		CampaignFleetAPI fleeingFrom = mem.getFleet(FleetAIFlags.NEAREST_FLEEING_FROM);
@@ -58,10 +78,16 @@ public class EmergencyBurnAbilityAI extends BaseAbilityAI {
 		if (fleeingFrom != null) {
 			if (fleeingFrom.isStationMode()) return;
 			
+			
 			VisibilityLevel level = fleet.getVisibilityLevelTo(fleeingFrom);
 			if (level == VisibilityLevel.NONE) return; // they can't see us, don't make it easier
 			
 			if (!ability.isUsable()) return;
+			
+			if (fleeingFrom.isPlayerFleet()) {
+				boolean avoidingPlayer = Misc.isAvoidingPlayerHalfheartedly(fleet);
+				if (avoidingPlayer) return;
+			}
 			
 			UseCost cost = getUseCost();
 			boolean hopelessFight = isGreatlyOutmatchedBy(fleeingFrom);
@@ -73,13 +99,13 @@ public class EmergencyBurnAbilityAI extends BaseAbilityAI {
 													  fleet.getVelocity(), fleeingFrom.getVelocity());
 			if ((theirSpeed > ourSpeed && closingSpeed > 1) || (closingSpeed > 1 && dist < 100)) {
 				if (hopelessFight && dist < 200) { // very close and really don't want to fight
-					ability.activate();
+					activate();
 				} else if ((cost == UseCost.LOW || cost == UseCost.MEDIUM) && dist < 500) { // low cost, getting decently close
-					ability.activate();
+					activate();
 				} else if ((cost == UseCost.LOW || cost == UseCost.MEDIUM) && dist < 100) { // medium cost, very close
-					ability.activate();
+					activate();
 				} else if ((cost == UseCost.LOW || cost == UseCost.MEDIUM) && dist > detRange - 100f) { // low cost, close to being able to get out of sight
-					ability.activate();
+					activate();
 				}
 			}
 			return;
@@ -113,7 +139,7 @@ public class EmergencyBurnAbilityAI extends BaseAbilityAI {
 			
 			if (!ability.isUsable()) return;
 			
-			boolean targetInsignificant = otherInsignificant(pursueTarget);
+			boolean targetInsignificant = otherInsignificant(pursueTarget);// && !pursueTarget.isPlayerFleet();
 //			if (pursueTarget.isPlayerFleet()) {
 //				System.out.println("test player fleet EB");
 //			}
@@ -130,15 +156,22 @@ public class EmergencyBurnAbilityAI extends BaseAbilityAI {
 					  								  fleet.getVelocity(), pursueTarget.getVelocity());
 			
 			if (cost == UseCost.LOW && closingSpeed <= -1 && dist > detRange - 100f) { // about to lose sensor contact
-				ability.activate();
+				activate();
 			} else if (cost == UseCost.LOW && dist < 200 && closingSpeed < 50 && !targetInsignificant) { // close, pounce
-				ability.activate();
+				activate();
 			} else if (cost == UseCost.LOW && theirSpeed > ourSpeed && dist > 300 && !targetInsignificant) {
-				ability.activate();
+				activate();
 			}
 			return;
 		}
 		
+		
+		boolean useEB = mem.getBoolean(FleetAIFlags.USE_EB_FOR_TRAVEL);
+		if (useEB) {
+			if (!ability.isUsable()) return;
+			activate();
+			return;
+		}
 		
 	}
 	
@@ -215,7 +248,7 @@ public class EmergencyBurnAbilityAI extends BaseAbilityAI {
 		
 		if (us < 0.1f) us = 0.1f;
 		if (them < 0.1f) them = 0.1f;
-		return us > them * 3f;
+		return us > them * 5f;
 	}
 	
 	public static float getStrength(CampaignFleetAPI fleet) {

@@ -5,6 +5,10 @@ import com.fs.starfarer.api.Global;
 
 public class DebugFlags {
 
+	public static boolean FORCE_REGEN_AUTOMATED_DEFENSES = false;
+	
+	public static boolean ALWAYS_ADD_POTENTIAL_CONTACT = false;
+	
 	public static boolean ALLOW_KNOWN_HULLMOD_DROPS = false;
 	
 	public static boolean WITH_HYPER_STATION = false;
@@ -35,9 +39,13 @@ public class DebugFlags {
 	
 	public static boolean BAR_DEBUG = false; // all bar events generated w/o limit and more quickly
 	
+	public static boolean ALLOW_ALL_CONTACT_MISSIONS = false; // regardless of importance or relationship or requirement structure
+	
 	
 	// not really a debug flag...
 	public static boolean SEND_UPDATES_WHEN_NO_COMM = false;
+	public static boolean WEAPONS_HAVE_COST = true; // weapons/fighters on custom-produced ships have a cost
+	
 	
 	
 	
@@ -67,10 +75,15 @@ public class DebugFlags {
 	
 	public static void setStandardConfig() {
 		boolean dev = Global.getSettings().isDevMode();
-		PRINT_RULES_DEBUG_INFO = dev;
+//		PRINT_RULES_DEBUG_INFO = dev;
+//		PRINT_RULES_DEBUG_INFO = false; // starting to take too much time to print, noticeable delays for interactions
+		PRINT_RULES_DEBUG_INFO = Global.getSettings().getBoolean("printRulesDebugInfo");
 		OBJECTIVES_DEBUG = dev;
 		
+		ALWAYS_ADD_POTENTIAL_CONTACT = dev;
+		
 		COLONY_DEBUG = dev;
+		//COLONY_DEBUG = false;
 		ALLOW_VIEW_UNEXPLORED_SYSTEM_MAP = dev;
 		MARKET_HOSTILITIES_DEBUG = dev;
 		
@@ -85,11 +98,15 @@ public class DebugFlags {
 		FAST_PATROL_SPAWN = false;
 		
 		PERSON_BOUNTY_DEBUG_INFO = dev;
+		
+		ALLOW_ALL_CONTACT_MISSIONS = dev;
 	}
 	
 	public static void setPlaytestingConfig() {
-		PRINT_RULES_DEBUG_INFO = false;
+		//PRINT_RULES_DEBUG_INFO = false;
+		PRINT_RULES_DEBUG_INFO = Global.getSettings().getBoolean("printRulesDebugInfo");
 		OBJECTIVES_DEBUG = false;
+		ALWAYS_ADD_POTENTIAL_CONTACT = false;
 		
 		COLONY_DEBUG = false;
 		ALLOW_VIEW_UNEXPLORED_SYSTEM_MAP = false;
@@ -106,6 +123,8 @@ public class DebugFlags {
 		FAST_PATROL_SPAWN = false;
 		
 		PERSON_BOUNTY_DEBUG_INFO = false;
+		
+		ALLOW_ALL_CONTACT_MISSIONS = false;
 	}
 	
 	

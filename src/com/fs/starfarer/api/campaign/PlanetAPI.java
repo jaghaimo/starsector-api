@@ -2,12 +2,19 @@ package com.fs.starfarer.api.campaign;
 
 import java.awt.Color;
 
+import org.lwjgl.util.vector.Vector3f;
+
 
 
 public interface PlanetAPI extends SectorEntityToken {
 	String getTypeId();
 	
 	boolean isStar();
+	/**
+	 * Star, not a black hole or a pulsar or a nebula center.
+	 * @return
+	 */
+	boolean isNormalStar();
 	boolean isGasGiant();
 	boolean isMoon();
 	
@@ -35,4 +42,12 @@ public interface PlanetAPI extends SectorEntityToken {
 	String getTypeNameWithWorld();
 
 	String getTypeNameWithLowerCaseWorld();
+
+	void setTypeId(String typeId);
+
+	boolean hasCondition(String id);
+
+	void setSecondLight(Vector3f location, Color color);
+
+	String getTypeNameWithWorldLowerCase();
 }

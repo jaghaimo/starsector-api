@@ -6,10 +6,13 @@ import java.util.List;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
+import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.MutableStat;
-import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
+import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 
 
@@ -22,6 +25,13 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
  * Copyright 2018 Fractal Softworks, LLC
  */
 public interface TooltipMakerAPI extends UIPanelAPI {
+	
+	public static enum TooltipLocation {
+		LEFT,
+		RIGHT,
+		ABOVE,
+		BELOW;
+	}
 	
 	public interface TooltipCreator {
 		boolean isTooltipExpandable(Object tooltipParam);
@@ -107,6 +117,13 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 	void addIconGroupAndCenter(float pad);
 	void addStatModGrid(float width, float valueWidth, float valuePad, float pad, StatBonus stat, boolean showNonMods, StatModValueGetter getter);
 	
+	/**
+	 * Sort is based on stack size.
+	 * @param cargo
+	 * @param max
+	 * @param sort
+	 * @param pad
+	 */
 	void showCargo(CargoAPI cargo, int max, boolean sort, float pad);
 	void showShips(List<FleetMemberAPI> ships, int max, boolean sort, float pad);
 	
@@ -147,6 +164,7 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 	ButtonAPI addButton(String text, Object data, Color base, Color bg, float width, float height, float pad);
 	ButtonAPI addButton(String text, Object data, Color base, Color bg, Alignment align, CutStyle style, float width, float height, float pad);
 	void setBulletedListMode(String itemPrefix);
+	void setBulletWidth(Float bulletWidth);
 	
 	UIComponentAPI addCustom(UIComponentAPI comp, float pad);
 	String getBulletedListPrefix();
@@ -165,8 +183,38 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 			StatModValueGetter getter);
 	void addShipList(int cols, int rows, float iconSize, Color baseColor, List<FleetMemberAPI> ships, float pad);
 	void setParaFontOrbitron();
+	LabelAPI addPara(String format, float pad, Color[] hl, String ... highlights);
+	UIComponentAPI addSpacer(float height);
+	void addStoryPointUseInfo(float pad, float bonusXPFraction, boolean withNoSPNotification);
+	void addStoryPointUseInfo(float pad, int numPoints, float bonusXPFraction, boolean withNoSPNotification);
 
+	void setForceProcessInput(boolean forceProcessInput);
 	
+	void addPlaythroughDataPanel(float width, float height);
+	void setBulletColor(Color bulletColor);
+	void addRelationshipBar(PersonAPI person, float pad);
+	void addRelationshipBar(PersonAPI person, float width, float pad);
+	void addRelationshipBar(FactionAPI faction, float pad);
+	void addRelationshipBar(FactionAPI faction, float width, float pad);
+	void addRelationshipBar(float value, float pad);
+	void addRelationshipBar(float value, float width, float pad);
+	void addImportanceIndicator(PersonImportance importance, float width, float pad);
+	void addTooltipToPrevious(TooltipCreator tc, TooltipLocation loc);
+	ButtonAPI addAreaCheckbox(String text, Object data, Color base, Color bg,
+			Color bright, float width, float height, float pad);
+	void showShips(List<FleetMemberAPI> ships, int max, boolean sort, boolean showBaseHullForDHulls, float pad);
+	void setGridFontSmallInsignia();
+	void showFullSurveyReqs(PlanetAPI planet, boolean withText, float pad);
+	void showCost(String title, boolean withAvailable, float widthOverride, Color color, Color dark, float pad,
+				  String[] res, int[] quantities, boolean[] consumed);
+	void showCost(String title, boolean withAvailable, Color color, Color dark, float pad, String[] res,
+				  int[] quantities);
+	void showCost(Color color, Color dark, float pad, String[] res, int[] quantities);
+	UIComponentAPI getPrev();
+	
+	
+	
+	//LabelAPI addParaWithIndent(String text, Color color, float indent, String format, float pad, Color hl, String... highlights);
 }
 
 

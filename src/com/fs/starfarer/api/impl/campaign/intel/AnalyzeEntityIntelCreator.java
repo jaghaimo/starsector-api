@@ -8,6 +8,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.GenericMissionManager.GenericMissionCreator;
+import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class AnalyzeEntityIntelCreator implements GenericMissionCreator {
@@ -45,7 +46,11 @@ public class AnalyzeEntityIntelCreator implements GenericMissionCreator {
 				for (SectorEntityToken entity : system.getEntitiesWithTag(Tags.SALVAGEABLE)) {
 					// skip derelict ships etc that will expire
 					if (entity.hasTag(Tags.EXPIRES)) continue;
+					if (Misc.isImportantForReason(entity.getMemoryWithoutUpdate(), "aem")) continue;
+					if (entity.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
+					if (entity.getMemoryWithoutUpdate() != null && entity.getMemoryWithoutUpdate().getBoolean("$ttWeaponsCache")) continue;
 					if (entity.getCircularOrbitRadius() > 10000f) continue;
+					if (entity.getContainingLocation() != null && entity.getContainingLocation().hasTag(Tags.THEME_HIDDEN)) continue;
 					entityPicker.add(entity, w);
 				}
 				

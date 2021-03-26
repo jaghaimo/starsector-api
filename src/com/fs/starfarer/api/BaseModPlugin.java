@@ -17,6 +17,7 @@ import com.thoughtworks.xstream.XStream;
  * added here and your implementation will inherit them.
  * 
  * @author Alex Mosolov
+ * 
  *
  * Copyright 2013 Fractal Softworks, LLC
  */
@@ -81,6 +82,11 @@ public class BaseModPlugin implements ModPlugin {
 	}
 
 	public void onNewGameAfterProcGen() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onDevModeF8Reload() {
 		// TODO Auto-generated method stub
 		
 	}

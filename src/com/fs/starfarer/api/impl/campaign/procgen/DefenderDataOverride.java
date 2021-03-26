@@ -3,6 +3,7 @@ package com.fs.starfarer.api.impl.campaign.procgen;
 public class DefenderDataOverride {
 	public float probDefenders, minStr, maxStr;
 	public int maxDefenderSize = 4;
+	public int minDefenderSize = 1;
 	public float probStation = 0f;
 	public String stationRole;
 	public String defFaction;

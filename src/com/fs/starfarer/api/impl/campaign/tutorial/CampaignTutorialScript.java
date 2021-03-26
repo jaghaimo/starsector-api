@@ -42,6 +42,9 @@ public class CampaignTutorialScript implements EveryFrameScript {
 		SHOW_LAY_IN_COURSE_DIALOG,
 		SHOW_LAY_IN_COURSE_HINT,
 		WAITING_TO_LAY_IN_COURSE,
+		SHOW_GO_SLOW_DIALOG,
+		SHOW_GO_SLOW_HINT,
+		WAITING_TO_GO_SLOW,
 		SHOW_SUSTAINED_BURN_DIALOG,
 		SHOW_SUSTAINED_BURN_HINT,
 		WAIT_SUSTAINED_BURN_USE,
@@ -168,8 +171,6 @@ public class CampaignTutorialScript implements EveryFrameScript {
 			lastCheckDistToAncyra = Misc.getDistance(playerFleet.getLocation(), ancyra.getLocation());
 		}
 		
-
-		
 		elapsed += amount;
 		
 		if (stage == CampaignTutorialStage.SHOW_WELCOME_DIALOG && elapsed > 1f) {
@@ -235,7 +236,7 @@ public class CampaignTutorialScript implements EveryFrameScript {
 				
 				long xp = Global.getSector().getPlayerPerson().getStats().getXP();
 				long add = Global.getSettings().getLevelupPlugin().getXPForLevel(2) - xp;
-				Global.getSector().getPlayerPerson().getStats().addPoints(3);
+				Global.getSector().getPlayerPerson().getStats().addPoints(1);
 				Global.getSector().getPlayerPerson().getStats().addXP(add);
 			}
 			return;
@@ -311,9 +312,9 @@ public class CampaignTutorialScript implements EveryFrameScript {
 			}
 			return;
 		}
+
 		
-		
-		if (stage == CampaignTutorialStage.SHOW_SUSTAINED_BURN_DIALOG && elapsed > 10f) {
+		if (stage == CampaignTutorialStage.SHOW_SUSTAINED_BURN_DIALOG && elapsed > 5f) {
 			if (Global.getSector().getCampaignUI().showInteractionDialog(new TutorialSustainedBurnDialogPluginImpl(ancyra.getMarket()), null)) {
 				stage = CampaignTutorialStage.SHOW_SUSTAINED_BURN_HINT;
 			}
@@ -335,8 +336,41 @@ public class CampaignTutorialScript implements EveryFrameScript {
 			if ((sb != null && sb.isActive() && elapsed > 5f) || closedIn) {
 				lastCheckDistToAncyra = dist;
 				hints.clearHints();
-				stage = CampaignTutorialStage.SHOW_TRANSPONDER_DIALOG;
+				stage = CampaignTutorialStage.SHOW_GO_SLOW_DIALOG;
 				elapsed = 0f;
+			}
+			return;
+		}
+		
+		
+		if (stage == CampaignTutorialStage.SHOW_GO_SLOW_DIALOG && 
+				Global.getSector().getPlayerFleet().getLocation().length() < 9300) {
+			if (Global.getSector().getCampaignUI().showInteractionDialog(new TutorialGoSlowDialogPluginImpl(), null)) {
+				stage = CampaignTutorialStage.SHOW_GO_SLOW_HINT;
+			}
+			return;
+		}
+		
+		if (stage == CampaignTutorialStage.SHOW_GO_SLOW_HINT) {
+			String control = Global.getSettings().getControlStringForEnumName("GO_SLOW");
+			hints.clearHints();
+			hints.setHint(0, "- Press and hold %s to move slowly through the asteroid belt", true, Misc.getHighlightColor(), control);
+			stage = CampaignTutorialStage.WAITING_TO_GO_SLOW;
+			elapsed = 0;
+			return;
+		}
+		
+		
+		if (stage == CampaignTutorialStage.WAITING_TO_GO_SLOW && 
+				Global.getSector().getPlayerFleet().getLocation().length() < 7850) {
+			float dist = Misc.getDistance(playerFleet.getLocation(), ancyra.getLocation());
+			boolean closedIn = dist < lastCheckDistToAncyra * 0.75f;
+			if (closedIn || (playerFleet.getInteractionTarget() != null &&
+					playerFleet.getInteractionTarget().getMarket() == ancyra.getMarket())) {
+				lastCheckDistToAncyra = dist;
+				hints.clearHints();
+				stage = CampaignTutorialStage.SHOW_TRANSPONDER_DIALOG;
+				elapsed = 0;
 			}
 			return;
 		}
@@ -390,8 +424,8 @@ public class CampaignTutorialScript implements EveryFrameScript {
 			FleetMemberAPI member = Global.getFactory().createFleetMember(FleetMemberType.SHIP, "venture_Outdated");
 			member.setVariant(member.getVariant().clone(), false, false);
 			DModManager.setDHull(member.getVariant());
-			member.getVariant().addPermaMod(HullMods.COMP_ARMOR);
-			member.getVariant().addPermaMod(HullMods.FAULTY_GRID);
+			member.getVariant().addPermaMod(HullMods.COMP_ARMOR, false);
+			member.getVariant().addPermaMod(HullMods.FAULTY_GRID, false);
 			g2.getFleetData().addFleetMember(member);
 		}
 		
@@ -434,7 +468,7 @@ public class CampaignTutorialScript implements EveryFrameScript {
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		pirateFleet.setLocation(playerFleet.getLocation().x + 750f, playerFleet.getLocation().y + 750f);
 		
-		TransmitterTrapSpecial.makeFleetInterceptPlayer(pirateFleet, true, 100f);
+		TransmitterTrapSpecial.makeFleetInterceptPlayer(pirateFleet, true, true, 100f);
 	}
 	
 	protected void addSecurityDetachment() {
@@ -450,7 +484,7 @@ public class CampaignTutorialScript implements EveryFrameScript {
 		detachment.getFleetData().addFleetMember("lasher_CS");
 		detachment.getFleetData().addFleetMember("lasher_CS");
 		
-		
+		detachment.clearAbilities();
 		detachment.addAbility(Abilities.TRANSPONDER);
 		detachment.addAbility(Abilities.GO_DARK);
 		detachment.addAbility(Abilities.SENSOR_BURST);

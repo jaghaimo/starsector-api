@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
@@ -20,6 +21,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -106,6 +109,7 @@ public class QuartermasterCargoSwapBarEvent extends BaseGetCommodityBarEvent {
 	protected PersonAPI createPerson() {
 		for (PersonAPI person : market.getPeopleCopy()) {
 			if (Ranks.POST_SUPPLY_OFFICER.equals(person.getPostId())) {
+				adjustPerson(person);
 				return person;
 			}
 		}
@@ -113,7 +117,15 @@ public class QuartermasterCargoSwapBarEvent extends BaseGetCommodityBarEvent {
 		PersonAPI person = Global.getSector().getFaction(getPersonFaction()).createRandomPerson(random);
 		person.setRankId(getPersonRank());
 		person.setPostId(getPersonRank());
+		adjustPerson(person);
 		return person;
+	}
+	
+	@Override
+	protected void adjustPerson(PersonAPI person) {
+		super.adjustPerson(person);
+		person.setImportanceAndVoice(PersonImportance.MEDIUM, random);
+		person.addTag(Tags.CONTACT_MILITARY);
 	}
 
 	@Override
@@ -247,6 +259,8 @@ public class QuartermasterCargoSwapBarEvent extends BaseGetCommodityBarEvent {
 				new RepActionEnvelope(RepActions.CUSTOM, 
 						impact, null, text, true, true),
 						person.getFaction().getId());
+		
+		ContactIntel.addPotentialContact(person, market, text);
 	}
 	
 	

@@ -1,6 +1,7 @@
 package com.fs.starfarer.api.combat;
 
 public enum CombatEngineLayers {
+	BELOW_PLANETS,
 	PLANET_LAYER,
 	ABOVE_PLANETS,
 	CLOUD_LAYER,
@@ -20,5 +21,7 @@ public enum CombatEngineLayers {
 	FF_INDICATORS_LAYER,
 	ABOVE_SHIPS_LAYER,
 	ABOVE_SHIPS_AND_MISSILES_LAYER,
+	ABOVE_PARTICLES_LOWER,
+	ABOVE_PARTICLES,
 	JUST_BELOW_WIDGETS,
 }

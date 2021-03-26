@@ -1,6 +1,7 @@
 package com.fs.starfarer.api.combat;
 
 import java.util.List;
+import java.util.Map;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -131,7 +132,27 @@ public interface CombatFleetManagerAPI {
 	PersonAPI getFleetCommanderPreferPlayer();
 
 	List<DeployedFleetMemberAPI> getAllEverDeployedCopy();
+
+	boolean isCanForceShipsToEngageWhenBattleClearlyLost();
+	
+	/**
+	 * Defaults to true for enemy, false for player side.
+	 * @param canForceShipsToEngageWhenBattleClearlyLost
+	 */
+	void setCanForceShipsToEngageWhenBattleClearlyLost(boolean canForceShipsToEngageWhenBattleClearlyLost);
+
+	ShipAPI spawnShipOrWing(String specId, Vector2f location, float facing, float initialBurnDur, PersonAPI captain);
+
+	Map<DeployedFleetMemberAPI, DeployedFleetMemberAPI> getShardToOriginalShipMap();
+
+	DeployedFleetMemberAPI getDeployedFleetMemberFromAllEverDeployed(ShipAPI ship);
+
+	ShipAPI getShipFor(PersonAPI captain);
+
+	FleetMemberAPI getBiggestStationDeployedOrNot();
 }
+
+
 
 
 

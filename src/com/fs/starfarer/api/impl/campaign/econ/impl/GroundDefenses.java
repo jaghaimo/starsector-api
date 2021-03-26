@@ -10,6 +10,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
@@ -18,6 +19,8 @@ public class GroundDefenses extends BaseIndustry {
 
 	public static float DEFENSE_BONUS_BASE = 1f;
 	public static float DEFENSE_BONUS_BATTERIES = 2f;
+	
+	public static float IMPROVE_DEFENSE_BONUS = 0.25f;
 	
 	
 	public void apply() {
@@ -163,6 +166,50 @@ public class GroundDefenses extends BaseIndustry {
 				str);
 		
 	}
+	
+	
+	@Override
+	public boolean canImprove() {
+		return true;
+	}
+	
+	protected void applyImproveModifiers() {
+		if (isImproved()) {
+			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).modifyMult("ground_defenses_improve",
+							1f + IMPROVE_DEFENSE_BONUS,
+							getImprovementsDescForModifiers() + " (" + getNameForModifier() + ")");
+		} else {
+			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult("ground_defenses_improve");
+		}
+	}
+	
+	public void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode) {
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		float a = IMPROVE_DEFENSE_BONUS;
+		String str = Strings.X + (1f + a) + "";
+		
+		if (mode == ImprovementDescriptionMode.INDUSTRY_TOOLTIP) {
+			info.addPara("Ground defenses increased by %s.", 0f, highlight, str);
+		} else {
+			info.addPara("Increases ground defenses by %s.", 0f, highlight, str);
+		}
+
+		info.addSpacer(opad);
+		super.addImproveDesc(info, mode);
+	}
+	
+	@Override
+	public RaidDangerLevel adjustCommodityDangerLevel(String commodityId, RaidDangerLevel level) {
+		return level.next();
+	}
+
+	@Override
+	public RaidDangerLevel adjustItemDangerLevel(String itemId, String data, RaidDangerLevel level) {
+		return level.next();
+	}
+
 }
 
 

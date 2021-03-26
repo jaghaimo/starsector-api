@@ -166,7 +166,16 @@ public interface CargoAPI {
 
 	void initPartialsIfNeeded();
 
-	void removeAll(CargoAPI other);	
+	void removeAll(CargoAPI other);
+
+	void addAll(CargoAPI other, boolean includeMothballedShips);
+
+	CargoAPI getOrigSource();
+	void setOrigSource(CargoAPI origSource);
+
+	FleetDataAPI getFleetData();
+
+	void updateSpaceUsed();	
 }
 
 

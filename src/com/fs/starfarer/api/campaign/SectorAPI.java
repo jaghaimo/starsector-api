@@ -331,6 +331,20 @@ public interface SectorAPI {
 	long getPlayerBattleSeed();
 	void setPlayerBattleSeed(long nextPlayerBattleSeed);
 
+	NascentGravityWellAPI createNascentGravityWell(SectorEntityToken target, float radius);
+
+	boolean hasTransientScript(Class<?> clazz);
+
+	List<SectorEntityToken> getCustomEntitiesWithTag(String tag);
+
+	void doHyperspaceTransition(CampaignFleetAPI fleetAPI, SectorEntityToken jumpLocation, JumpDestination dest, float initialDelay);
+
+	void layInCourseFor(SectorEntityToken target);
+
+	boolean isFastForwardIteration();
+
+	void setFastForwardIteration(boolean isFastForwardIteration);
+
 }
 
 

@@ -39,7 +39,7 @@ public class TransponderAbilityAI extends BaseAbilityAI {
 		
 		boolean trader = mem.getBoolean(MemFlags.MEMORY_KEY_TRADE_FLEET);
 		
-		if (smuggler || pirate) {
+		if (smuggler || pirate || mem.getBoolean(MemFlags.MEMORY_KEY_FORCE_TRANSPONDER_OFF)) {
 			if (ability.isActive()) {
 				ability.deactivate();
 			}

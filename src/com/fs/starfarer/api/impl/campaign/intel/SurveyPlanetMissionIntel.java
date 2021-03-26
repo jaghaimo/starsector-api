@@ -15,15 +15,12 @@ import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
-import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
 import com.fs.starfarer.api.campaign.listeners.SurveyPlanetListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
-import com.fs.starfarer.api.combat.StatBonus;
-import com.fs.starfarer.api.combat.MutableStat.StatMod;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.MissionCompletionRep;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
@@ -32,13 +29,11 @@ import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
-import com.fs.starfarer.api.plugins.SurveyPlugin;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
-import com.fs.starfarer.api.ui.TooltipMakerAPI.StatModValueGetter;
 import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.util.WeightedRandomPicker;
 import com.fs.starfarer.api.util.Misc.Token;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class SurveyPlanetMissionIntel extends BaseMissionIntel implements SurveyPlanetListener {
 	public static Logger log = Global.getLogger(SurveyPlanetMissionIntel.class);
@@ -311,38 +306,40 @@ public class SurveyPlanetMissionIntel extends BaseMissionIntel implements Survey
 		if (isPosted() || isAccepted()) {
 			addBulletPoints(info, ListInfoMode.IN_DESC);
 			
-			SurveyPlugin plugin = (SurveyPlugin) Global.getSettings().getNewPluginInstance("surveyPlugin");
-			plugin.init(Global.getSector().getPlayerFleet(), planet);
-
+			info.showFullSurveyReqs(planet, true, opad);
 			
-			Map<String, Integer> required = plugin.getRequired();
-			Map<String, Integer> consumed = plugin.getConsumed();
-
-			StatBonus stat = new StatBonus();
-			int id = 0;
-			for (String key : required.keySet()) {
-				CommoditySpecAPI com = Global.getSettings().getCommoditySpec(key);
-				int qty = required.get(key);
-				
-				stat.modifyFlat("" + id++, qty, Misc.ucFirst(com.getLowerCaseName()));
-			}
-			for (String key : consumed.keySet()) {
-				CommoditySpecAPI com = Global.getSettings().getCommoditySpec(key);
-				int qty = consumed.get(key);
-				
-				stat.modifyFlat("" + id++, qty, Misc.ucFirst(com.getLowerCaseName()));
-			}
-			
-			info.addPara("The following resources are required run a full survey of " + name + ":", opad);
-			info.setLowGridRowHeight();
-			info.addStatModGrid(200, 50f, opad, opad, stat, new StatModValueGetter() {
-				public String getPercentValue(StatMod mod) { return null; }
-				public String getMultValue(StatMod mod) { return null; }
-				public Color getModColor(StatMod mod) { return null; }
-				public String getFlatValue(StatMod mod) {
-					return "" + (int)mod.value;
-				}
-			});
+//			SurveyPlugin plugin = (SurveyPlugin) Global.getSettings().getNewPluginInstance("surveyPlugin");
+//			plugin.init(Global.getSector().getPlayerFleet(), planet);
+//
+//			
+//			Map<String, Integer> required = plugin.getRequired();
+//			Map<String, Integer> consumed = plugin.getConsumed();
+//
+//			StatBonus stat = new StatBonus();
+//			int id = 0;
+//			for (String key : required.keySet()) {
+//				CommoditySpecAPI com = Global.getSettings().getCommoditySpec(key);
+//				int qty = required.get(key);
+//				
+//				stat.modifyFlat("" + id++, qty, Misc.ucFirst(com.getLowerCaseName()));
+//			}
+//			for (String key : consumed.keySet()) {
+//				CommoditySpecAPI com = Global.getSettings().getCommoditySpec(key);
+//				int qty = consumed.get(key);
+//				
+//				stat.modifyFlat("" + id++, qty, Misc.ucFirst(com.getLowerCaseName()));
+//			}
+//			
+//			info.addPara("The following resources are required for your fleet to run a full survey of " + name + ":", opad);
+//			info.setLowGridRowHeight();
+//			info.addStatModGrid(200, 50f, opad, opad, stat, new StatModValueGetter() {
+//				public String getPercentValue(StatMod mod) { return null; }
+//				public String getMultValue(StatMod mod) { return null; }
+//				public Color getModColor(StatMod mod) { return null; }
+//				public String getFlatValue(StatMod mod) {
+//					return "" + (int)mod.value;
+//				}
+//			});
 			
 			addGenericMissionState(info);
 			

@@ -18,20 +18,48 @@ public class AddAbility extends BaseCommandPlugin {
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
 		if (dialog == null) return false;
 		
-		String abilityId = params.get(0).getString(memoryMap);
-		Global.getSector().getCharacterData().addAbility(abilityId);
-
-		if (params.size() >= 2) {
-			int slotIndex = (int) params.get(1).getFloat(memoryMap);
-			AbilitySlotsAPI slots = Global.getSector().getUIData().getAbilitySlotsAPI();
-			slots.setCurrBarIndex(0);
-			AbilitySlotAPI slot = slots.getCurrSlotsCopy().get(slotIndex);
-			if (slot.getAbilityId() == null) {
-				slot.setAbilityId(abilityId);
-			}
-		}
+		// if the player already had the ability, calling this command ensures they don't lose it
+		// if they spec out of the skill that granted it, but this command will be "quiet"
 		
-		AddRemoveCommodity.addAbilityGainText(abilityId, dialog.getTextPanel());
+		String abilityId = params.get(0).getString(memoryMap);
+		boolean hadAbilityAlready = Global.getSector().getPlayerFleet().hasAbility(abilityId);
+		
+		Global.getSector().getCharacterData().addAbility(abilityId);
+		//Global.getSector().getUIData().getAbilitySlotsAPI().getCurrSlotsCopy().get(8).getAbilityId()
+		
+		if (!hadAbilityAlready) {
+			boolean assignedToSlot = false;
+			if (params.size() >= 2) {
+				int slotIndex = (int) params.get(1).getFloat(memoryMap);
+				AbilitySlotsAPI slots = Global.getSector().getUIData().getAbilitySlotsAPI();
+				slots.setCurrBarIndex(0);
+				AbilitySlotAPI slot = slots.getCurrSlotsCopy().get(slotIndex);
+				if (slot.getAbilityId() == null) {
+					slot.setAbilityId(abilityId);
+					assignedToSlot = true;
+				}
+			}
+			
+			if (!assignedToSlot) {
+				AbilitySlotsAPI slots = Global.getSector().getUIData().getAbilitySlotsAPI();
+				int currBarIndex = slots.getCurrBarIndex();
+				OUTER: for (int i = 0; i < 5; i++) {
+					slots.setCurrBarIndex(i);
+					for (int j = 0; j < 10; j++) {
+						AbilitySlotAPI slot = slots.getCurrSlotsCopy().get(j);
+						if (slot.getAbilityId() == null) {
+							slot.setAbilityId(abilityId);
+							assignedToSlot = true;
+							break OUTER;
+						}		
+					}
+				}
+				slots.setCurrBarIndex(currBarIndex);
+			}
+			
+			Global.getSector().getCharacterData().getMemoryWithoutUpdate().set("$ability:" + abilityId, true, 0);
+			AddRemoveCommodity.addAbilityGainText(abilityId, dialog.getTextPanel());
+		}
 		
 		return true;
 	}

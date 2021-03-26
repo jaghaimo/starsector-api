@@ -1,21 +1,12 @@
 package com.fs.starfarer.api.impl.campaign.econ.impl;
 
 import java.awt.Color;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CargoAPI;
-import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.SpecialItemData;
-import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
-import com.fs.starfarer.api.campaign.econ.Industry;
-import com.fs.starfarer.api.campaign.econ.InstallableIndustryItemPlugin;
-import com.fs.starfarer.api.campaign.econ.InstallableIndustryItemPlugin.InstallableItemDescriptionMode;
-import com.fs.starfarer.api.campaign.econ.MarketAPI.MarketInteractionMode;
-import com.fs.starfarer.api.impl.campaign.econ.impl.NanoforgeInstallableItemPlugin.NanoforgeEffect;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
@@ -27,6 +18,11 @@ import com.fs.starfarer.api.util.Pair;
 public class HeavyIndustry extends BaseIndustry {
 
 	public static float ORBITAL_WORKS_QUALITY_BONUS = 0.2f;
+	
+	public static String POLLUTION_ID = Conditions.POLLUTION;
+	public static float DAYS_BEFORE_POLLUTION = 0f;
+	public static float DAYS_BEFORE_POLLUTION_PERMANENT = 90f;
+	
 	
 	public void apply() {
 		super.apply(true);
@@ -66,8 +62,6 @@ public class HeavyIndustry extends BaseIndustry {
 //			System.out.println("efwefwe");
 //		}
 		
-		applyNanoforgeEffects();
-
 		if (qualityBonus > 0) {
 			market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).modifyFlat(getModId(1), qualityBonus, "Orbital works");
 		}
@@ -90,113 +84,11 @@ public class HeavyIndustry extends BaseIndustry {
 	public void unapply() {
 		super.unapply();
 		
-		if (nanoforge != null) {
-			NanoforgeEffect effect = NanoforgeInstallableItemPlugin.NANOFORGE_EFFECTS.get(nanoforge.getId());
-			if (effect != null) {
-				effect.unapply(this);
-			}
-		}
-		
 		market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).unmodifyFlat(getModId(0));
 		market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).unmodifyFlat(getModId(1));
 	}
 
 	
-	
-	@Override
-	protected void upgradeFinished(Industry previous) {
-		super.upgradeFinished(previous);
-		
-		if (previous instanceof HeavyIndustry) {
-			setNanoforge(((HeavyIndustry) previous).getNanoforge());
-		}
-	}
-
-	protected void applyNanoforgeEffects() {
-//		if (Global.getSector().getEconomy().isSimMode()) {
-//			return;
-//		}
-		
-		if (nanoforge != null) {
-			NanoforgeEffect effect = NanoforgeInstallableItemPlugin.NANOFORGE_EFFECTS.get(nanoforge.getId());
-			if (effect != null) {
-				effect.apply(this);
-			}
-		}
-	}
-
-	protected SpecialItemData nanoforge = null;
-	public void setNanoforge(SpecialItemData nanoforge) {
-		if (nanoforge == null && this.nanoforge != null) {
-			NanoforgeEffect effect = NanoforgeInstallableItemPlugin.NANOFORGE_EFFECTS.get(this.nanoforge.getId());
-			if (effect != null) {
-				effect.unapply(this);
-			}
-		}
-		this.nanoforge = nanoforge;
-	}
-
-	public SpecialItemData getNanoforge() {
-		return nanoforge;
-	}
-	
-	public SpecialItemData getSpecialItem() {
-		return nanoforge;
-	}
-	
-	public void setSpecialItem(SpecialItemData special) {
-		nanoforge = special;
-	}
-	
-	@Override
-	public boolean wantsToUseSpecialItem(SpecialItemData data) {
-		if (nanoforge != null && Items.CORRUPTED_NANOFORGE.equals(nanoforge.getId()) &&
-				data != null && Items.PRISTINE_NANOFORGE.equals(data.getId())) {
-			return true;
-		}
-		
-		return nanoforge == null && 
-				data != null &&
-				NanoforgeInstallableItemPlugin.NANOFORGE_EFFECTS.containsKey(data.getId());
-	}
-	
-	@Override
-	protected void addPostSupplySection(TooltipMakerAPI tooltip, boolean hasSupply, IndustryTooltipMode mode) {
-		super.addPostSupplySection(tooltip, hasSupply, mode);
-	}
-	
-	@Override
-	public void notifyBeingRemoved(MarketInteractionMode mode, boolean forUpgrade) {
-		super.notifyBeingRemoved(mode, forUpgrade);
-		if (nanoforge != null && !forUpgrade) {
-			CargoAPI cargo = getCargoForInteractionMode(mode);
-			if (cargo != null) {
-				cargo.addSpecial(nanoforge, 1);
-			}
-		}
-	}
-
-	@Override
-	protected boolean addNonAICoreInstalledItems(IndustryTooltipMode mode, TooltipMakerAPI tooltip, boolean expanded) {
-		if (nanoforge == null) return false;
-
-		float opad = 10f;
-
-		FactionAPI faction = market.getFaction();
-		Color color = faction.getBaseUIColor();
-		Color dark = faction.getDarkUIColor();
-		
-		
-		SpecialItemSpecAPI nanoforgeSpec = Global.getSettings().getSpecialItemSpec(nanoforge.getId());
-		
-		TooltipMakerAPI text = tooltip.beginImageWithText(nanoforgeSpec.getIconName(), 48);
-		NanoforgeEffect effect = NanoforgeInstallableItemPlugin.NANOFORGE_EFFECTS.get(nanoforge.getId());
-		effect.addItemDescription(text, nanoforge, InstallableItemDescriptionMode.INDUSTRY_TOOLTIP);
-		tooltip.addImageWithText(opad);
-		
-		return true;
-	}
-
 	@Override
 	protected void addPostDemandSection(TooltipMakerAPI tooltip, boolean hasDemand, IndustryTooltipMode mode) {
 		//if (mode == IndustryTooltipMode.NORMAL && isFunctional()) {
@@ -229,40 +121,74 @@ public class HeavyIndustry extends BaseIndustry {
 	}
 
 	@Override
-	public List<InstallableIndustryItemPlugin> getInstallableItems() {
-		ArrayList<InstallableIndustryItemPlugin> list = new ArrayList<InstallableIndustryItemPlugin>();
-		list.add(new NanoforgeInstallableItemPlugin(this));
-		return list;
-	}
-
-	@Override
-	public void initWithParams(List<String> params) {
-		super.initWithParams(params);
-		
-		for (String str : params) {
-			if (NanoforgeInstallableItemPlugin.NANOFORGE_EFFECTS.containsKey(str)) {
-				setNanoforge(new SpecialItemData(str, null));
-				break;
-			}
-		}
-	}
-
-	@Override
-	public List<SpecialItemData> getVisibleInstalledItems() {
-		List<SpecialItemData> result = super.getVisibleInstalledItems();
-		
-		if (nanoforge != null) {
-			result.add(nanoforge);
-		}
-		
-		return result;
+	protected boolean canImproveToIncreaseProduction() {
+		return true;
 	}
 	
-	public float getPatherInterest() {
-		float base = 2f;
-		if (nanoforge != null) base += 4f;
-		return base + super.getPatherInterest();
+	@Override
+	public boolean wantsToUseSpecialItem(SpecialItemData data) {
+		if (special != null && Items.CORRUPTED_NANOFORGE.equals(special.getId()) &&
+				data != null && Items.PRISTINE_NANOFORGE.equals(data.getId())) {
+			return true;
+		}
+		return super.wantsToUseSpecialItem(data);
 	}
+
+	protected boolean permaPollution = false;
+	protected boolean addedPollution = false;
+	protected float daysWithNanoforge = 0f;
+	
+	@Override
+	public void advance(float amount) {
+		super.advance(amount);
+		
+		if (special != null) {
+			float days = Global.getSector().getClock().convertToDays(amount);
+			daysWithNanoforge += days;
+	
+			updatePollutionStatus();
+		}
+	}
+	
+	protected void updatePollutionStatus() {
+		if (!market.hasCondition(Conditions.HABITABLE)) return;
+		
+		if (special != null) {
+			if (!addedPollution && daysWithNanoforge >= DAYS_BEFORE_POLLUTION) {
+				if (market.hasCondition(POLLUTION_ID)) {
+					permaPollution = true;
+				} else {
+					market.addCondition(POLLUTION_ID);
+					addedPollution = true;
+				}
+			}
+			if (addedPollution && !permaPollution) {
+				if (daysWithNanoforge > DAYS_BEFORE_POLLUTION_PERMANENT) {
+					permaPollution = true;
+				}
+			}
+		} else if (addedPollution && !permaPollution) {
+			market.removeCondition(POLLUTION_ID);
+			addedPollution = false;
+		}
+	}
+
+	@Override
+	public void setSpecialItem(SpecialItemData special) {
+		super.setSpecialItem(special);
+		
+		updatePollutionStatus();
+	}
+	
+	
+	
+//	@Override
+//	public List<InstallableIndustryItemPlugin> getInstallableItems() {
+//		ArrayList<InstallableIndustryItemPlugin> list = new ArrayList<InstallableIndustryItemPlugin>();
+//		list.add(new GenericInstallableItemPlugin(this));
+//		return list;
+//	}
+	
 	
 }
 

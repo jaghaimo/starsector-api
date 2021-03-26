@@ -419,7 +419,7 @@ public class ProcurementMissionIntel extends BaseMissionIntel {
 			
 			//if (com.getSupplyValue() >= minQty) return true;
 			for (SubmarketAPI submarket : curr.getSubmarketsCopy()) {
-				//if (!submarket.getPlugin().isParticipatesInEconomy()) continue;
+				if (!submarket.getPlugin().isParticipatesInEconomy()) continue;
 				CargoAPI cargo = submarket.getCargoNullOk();
 				if (cargo == null) continue;
 				if (cargo.getQuantity(CargoItemType.RESOURCES, commodityId) >= minQty * 0.5f) return true;
@@ -539,6 +539,8 @@ public class ProcurementMissionIntel extends BaseMissionIntel {
 		CargoStackAPI stack = Global.getFactory().createCargoStack(CargoItemType.RESOURCES, commodity.getId(), null);
 		stack.setSize(quantity);
 		tradeData.addToTrackedPlayerSold(stack, totalReward);
+		
+		Misc.affectAvailabilityWithinReason(commodity, (int)quantity);
 	}
 	
 
@@ -837,7 +839,7 @@ public class ProcurementMissionIntel extends BaseMissionIntel {
 		prompt.addPara("This procurement contract offers a price of %s per unit of " + commodity.getCommodity().getName() + ".",
 				0f, Misc.getHighlightColor(), Misc.getDGSCredits(pricePerUnit));
 		
-		Global.getSettings().addCommodityInfoToTooltip(prompt, 10f, commodity.getCommodity(), true, false, true);
+		Global.getSettings().addCommodityInfoToTooltip(prompt, 10f, commodity.getCommodity(), 10, true, false, true);
 	}
 	
 	@Override

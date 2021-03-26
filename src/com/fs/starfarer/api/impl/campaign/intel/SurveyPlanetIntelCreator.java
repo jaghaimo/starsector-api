@@ -7,8 +7,9 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
+import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.GenericMissionManager.GenericMissionCreator;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -40,10 +41,13 @@ public class SurveyPlanetIntelCreator implements GenericMissionCreator {
 			
 			for (PlanetAPI planet : system.getPlanets()) {
 				if (!isValidMissionTarget(planet)) continue;
-				
+				if (Misc.isImportantForReason(planet.getMemoryWithoutUpdate(), "spm")) continue;
+
 				float weight = 1f;
 				for (MarketConditionAPI mc : planet.getMarket().getConditions()) {
-					weight += mc.getGenSpec().getXpMult();
+					if (mc.getGenSpec() != null) {
+						weight += mc.getGenSpec().getXpMult();
+					}
 				}
 				
 				planetPicker.add(planet);
@@ -60,8 +64,12 @@ public class SurveyPlanetIntelCreator implements GenericMissionCreator {
 	}
 	
 	public static boolean isValidMissionTarget(PlanetAPI planet) {
+		if (planet.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) return false;
 		if (planet.isStar() || planet.getMarket() == null || !planet.getMarket().isPlanetConditionMarketOnly() ||
 				planet.getMarket().getSurveyLevel() == SurveyLevel.FULL) {
+			return false;
+		}
+		if (planet.getContainingLocation() != null && planet.getContainingLocation().hasTag(Tags.THEME_HIDDEN)) {
 			return false;
 		}
 		return true;

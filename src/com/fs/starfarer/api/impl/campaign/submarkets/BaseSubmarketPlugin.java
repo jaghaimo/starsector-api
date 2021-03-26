@@ -4,21 +4,22 @@ import java.util.Random;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CoreUIAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.FactionDoctrineAPI;
 import com.fs.starfarer.api.campaign.FleetDataAPI;
 import com.fs.starfarer.api.campaign.PlayerMarketTransaction;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.SubmarketPlugin;
-import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
-import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
+import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
@@ -28,6 +29,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
@@ -70,7 +72,7 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 	protected MarketAPI market;
 	protected SubmarketAPI submarket;
 	
-	private CargoAPI cargo;
+	protected CargoAPI cargo;
 	protected float minSWUpdateInterval = 30; // campaign days
 	protected float sinceSWUpdate = 30f + 1;
 	protected float sinceLastCargoUpdate = 30f + 1;
@@ -103,6 +105,9 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 		return cargo;
 	}
 	
+	public void setCargo(CargoAPI cargo) {
+		this.cargo = cargo;
+	}
 
 	public void updateCargoPrePlayerInteraction() {
 		
@@ -218,6 +223,10 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 		}
 	}
 
+	public boolean isMilitaryMarket() {
+		return false;
+	}
+	
 	public boolean isBlackMarket() {
 		//return false;
 		return market.getFaction().isHostileTo(submarket.getFaction());
@@ -249,6 +258,9 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 	}
 	
 	public boolean isIllegalOnSubmarket(FleetMemberAPI member, TransferAction action) {
+		if (action == TransferAction.PLAYER_SELL && !isBlackMarket() && Misc.isAutomated(member)) {
+			return true;
+		}
 		return false;
 	}
 	
@@ -304,6 +316,8 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 			for (String id : faction.getKnownWeapons()) {
 				WeaponSpecAPI spec = Global.getSettings().getWeaponSpec(id);
 				if (spec.getTier() > maxTier) continue;
+				if (spec.getAIHints().contains(AIHints.SYSTEM)) continue;
+				if (spec.hasTag(Tags.WEAPON_NO_SELL)) continue;
 				
 				float p = DefaultFleetInflater.getTierProbability(spec.getTier(), quality);
 				p = 1f; // 
@@ -360,13 +374,22 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 		WeaponSpecAPI spec = picker.pick();
 		if (spec == null) return;
 		
-		int count = 2;
+//		int count = 2;
+//		switch (spec.getSize()) {
+//		case LARGE: count = 2; break;
+//		case MEDIUM: count = 4; break;
+//		case SMALL: count = 8; break;
+//		}
+//		count = count + itemGenRandom.nextInt(count + 1) - count/2;
+		
+		int count = 1;
 		switch (spec.getSize()) {
-		case LARGE: count = 2; break;
-		case MEDIUM: count = 4; break;
-		case SMALL: count = 8; break;
+		case LARGE: count = 1; break;
+		case MEDIUM: count = 2; break;
+		case SMALL: count = 3; break;
 		}
-		count = count + itemGenRandom.nextInt(count + 1) - count/2;
+		count = count + itemGenRandom.nextInt(count + 2) - itemGenRandom.nextInt(count + 1);
+		if (count < 1) count = 1;
 		cargo.addWeapons(spec.getWeaponId(), count);
 	}
 	
@@ -386,6 +409,7 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 				throw new RuntimeException("Fighter wing spec with id [" + id + "] not found");
 			}
 			if (spec.getTier() > maxTier) continue;
+			if (spec.hasTag(Tags.WING_NO_SELL)) continue;
 			
 			float p = DefaultFleetInflater.getTierProbability(spec.getTier(), quality);
 			p = 1f;
@@ -426,6 +450,20 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 	}
 	
 	public void addShips(String factionId, 
+			float combat,
+			float freighter,
+			float tanker,
+			float transport, 
+			float liner, 
+			float utility,
+			Float qualityOverride,
+			float qualityMod,
+			ShipPickMode modeOverride,
+			FactionDoctrineAPI doctrineOverride) {
+		addShips(factionId, combat, freighter, tanker, transport, liner, utility, qualityOverride, qualityMod, modeOverride, doctrineOverride, 1000);
+		
+	}
+	public void addShips(String factionId, 
 						float combat,
 						float freighter,
 						float tanker,
@@ -435,7 +473,8 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 						Float qualityOverride,
 						float qualityMod,
 						ShipPickMode modeOverride,
-						FactionDoctrineAPI doctrineOverride) {
+						FactionDoctrineAPI doctrineOverride,
+						int maxShipSize) {
 		FleetParamsV3 params = new FleetParamsV3(
 				market,
 				Global.getSector().getPlayerFleet().getLocationInHyperspace(),
@@ -450,6 +489,7 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 				utility, // utilityPts
 				0f // qualityMod
 				);
+		params.maxShipSize = maxShipSize;
 		params.random = new Random(itemGenRandom.nextLong());
 		params.qualityOverride = Misc.getShipQuality(market, factionId) + qualityMod;
 		if (qualityOverride != null) {
@@ -475,6 +515,8 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 			//p = 1f;
 			for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 				if (itemGenRandom.nextFloat() > p) continue;
+				if (member.getHullSpec().hasTag(Tags.NO_SELL)) continue;
+				if (isMilitaryMarket() && member.getHullSpec().hasTag(Tags.MILITARY_MARKET_ONLY)) continue;
 				String emptyVariantId = member.getHullId() + "_Hull";
 				addShip(emptyVariantId, true, params.qualityOverride);
 			}
@@ -500,9 +542,18 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 		
 		member.getRepairTracker().setMothballed(true);
 		member.getRepairTracker().setCR(0.5f);
+//		assignShipName(member, submarket.getFaction().getId());
 		getCargo().getMothballedShips().addFleetMember(member);
 		return member;
 	}
+
+// TODO not 100% sure about performance implications, maybe look at this later
+//	public void assignShipName(FleetMemberAPI member, String factionId) {
+//		CampaignFleetAPI fleet = Global.getFactory().createEmptyFleet(factionId, null, true);
+//		fleet.getFleetData().setShipNameRandom(itemGenRandom);
+//		fleet.getFleetData().addFleetMember(member);
+//		fleet.getFleetData().removeFleetMember(member);
+//	}
 	
 	protected void pruneShips(float mult) {
 		CargoAPI cargo = getCargo();

@@ -9,7 +9,7 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.util.Misc.Token;
 
 /**
- *	NGCCanSkipTutorial
+ *	CheckSetting <boolean setting in settings.json>
  */
 public class CheckSetting extends BaseCommandPlugin {
 

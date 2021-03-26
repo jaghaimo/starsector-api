@@ -47,5 +47,6 @@ public interface FleetLogisticsAPI {
 	 * Not particularly fast, should not be called often (i.e. every frame for every fleet = bad idea.)
 	 */
 	void updateRepairUtilizationForUI();
+	float getExcessShipsSupplyCost();
 
 }

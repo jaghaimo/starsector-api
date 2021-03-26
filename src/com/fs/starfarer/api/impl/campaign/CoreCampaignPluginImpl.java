@@ -1,12 +1,15 @@
 package com.fs.starfarer.api.impl.campaign;
 
 import java.awt.Color;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.json.JSONObject;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.PluginPick;
 import com.fs.starfarer.api.campaign.AICoreAdminPlugin;
+import com.fs.starfarer.api.campaign.AICoreOfficerPlugin;
 import com.fs.starfarer.api.campaign.BaseCampaignPlugin;
 import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.BattleAutoresolverPlugin;
@@ -14,6 +17,7 @@ import com.fs.starfarer.api.campaign.BattleCreationPlugin;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignTerrainAPI;
 import com.fs.starfarer.api.campaign.CampaignTerrainPlugin;
+import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CustomEntitySpecAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FleetInflater;
@@ -28,35 +32,37 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SubmarketPlugin;
 import com.fs.starfarer.api.campaign.ai.AbilityAIPlugin;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI;
-import com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.EncounterOption;
+import com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI;
 import com.fs.starfarer.api.campaign.econ.ImmigrationPlugin;
+import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
-import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
+import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
+import com.fs.starfarer.api.campaign.econ.MonthlyReport;
+import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AbilityPlugin;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
-import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI.PersonDataAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
-import com.fs.starfarer.api.impl.campaign.fleets.FleetParams;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
-import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager;
 import com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl;
 import com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 import com.fs.starfarer.api.impl.campaign.tutorial.CampaignTutorialScript;
+import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialRespawnDialogPluginImpl;
 import com.fs.starfarer.api.impl.combat.BattleCreationPluginImpl;
 import com.fs.starfarer.api.plugins.AutofitPlugin;
@@ -192,6 +198,11 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		}
 		memory.set("$onOrAt", onOrAt, 0);
 		
+		if (entity.getStarSystem() != null && 
+				entity.getStarSystem().hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) {
+			memory.set("$systemCutOffFromHyper", true);
+		}
+		
 		
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		
@@ -311,6 +322,10 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 			for (MarketConditionAPI mc : market.getConditions()) {
 				memory.set("$mc:" + mc.getId(), true, 0);
 			}
+			for (Industry ind : market.getIndustries()) {
+				memory.set("$ind:" + ind.getId(), true, 0);
+			}
+			
 			memory.set("$id", market.getId(), 0);
 			memory.set("$size", market.getSize(), 0);
 			memory.set("$stability", (int) market.getStabilityValue(), 0);
@@ -319,17 +334,19 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 			memory.set("$surveyLevel", market.getSurveyLevel().name(), 0);
 			memory.set("$isPlanetConditionMarketOnly", market.isPlanetConditionMarketOnly(), 0);
 			
+			memory.set("$isHidden", market.isHidden(), 0);
+			
 			memory.set("$isPlayerOwned", market.isPlayerOwned(), 0);
 			
 			boolean hasRuins = false;
-			if (hasRuins(market)) {
+			if (Misc.hasRuins(market)) {
 				memory.set("$hasRuins", true, 0);
 				hasRuins = true;
 			}
 			
 			//boolean ruinsExlored = memory.getBoolean("$ruinsExplored");
 			
-			memory.set("$hasUnexploredRuins", hasUnexploredRuins(market), 0);
+			memory.set("$hasUnexploredRuins", Misc.hasUnexploredRuins(market), 0);
 			
 			
 			float suspicionLevel = computeSmugglingSuspicionLevel(market);
@@ -337,17 +354,17 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		}
 	}
 	
-	public static boolean hasUnexploredRuins(MarketAPI market) {
-		return market != null && market.isPlanetConditionMarketOnly() &&
-			hasRuins(market) && !market.getMemoryWithoutUpdate().getBoolean("$ruinsExplored");
-	}
-	public static boolean hasRuins(MarketAPI market) {
-		return market != null && 
-			   (market.hasCondition(Conditions.RUINS_SCATTERED) || 
-			   market.hasCondition(Conditions.RUINS_WIDESPREAD) ||
-			   market.hasCondition(Conditions.RUINS_EXTENSIVE) ||
-			   market.hasCondition(Conditions.RUINS_VAST));
-	}
+//	public static boolean hasUnexploredRuins(MarketAPI market) {
+//		return market != null && market.isPlanetConditionMarketOnly() &&
+//			hasRuins(market) && !market.getMemoryWithoutUpdate().getBoolean("$ruinsExplored");
+//	}
+//	public static boolean hasRuins(MarketAPI market) {
+//		return market != null && 
+//			   (market.hasCondition(Conditions.RUINS_SCATTERED) || 
+//			   market.hasCondition(Conditions.RUINS_WIDESPREAD) ||
+//			   market.hasCondition(Conditions.RUINS_EXTENSIVE) ||
+//			   market.hasCondition(Conditions.RUINS_VAST));
+//	}
 	
 	
 	public static final float computeSmugglingSuspicionLevel(MarketAPI market) {
@@ -375,7 +392,11 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 			float threshold = 10000f * market.getSize();
 			suspicionLevel *= Math.min(1f, (smugglingTotal + tradeTotal) / threshold);
 		}
-			
+		
+		float extra = market.getMemoryWithoutUpdate().getFloat(MemFlags.MARKET_EXTRA_SUSPICION);
+		suspicionLevel += extra;
+		suspicionLevel *= Math.min(1f, suspicionLevel);
+		
 		return suspicionLevel;
 	}
 	
@@ -386,8 +407,18 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 			memory.set("$tag:" + tag, true, 0);
 		}
 		
+		//int rel = (int)Math.round(person.getRelToPlayer().getRel() * 100f);
+		float rel = person.getRelToPlayer().getRel();
+		memory.set("$rel", rel, 0);
+		
+		if (Misc.isMercenary(person)) {
+			memory.set("$mercContractDur", (int)Global.getSettings().getFloat("officerMercContractDur"), 0);
+			memory.set("$mercContractDurStr", "" + (int)Global.getSettings().getFloat("officerMercContractDur"), 0);
+		}
+		
 		memory.set("$isPerson", true, 0);
 		memory.set("$name", person.getName().getFullName(), 0);
+		memory.set("$personName", person.getName().getFullName(), 0);
 		
 		memory.set("$rankId", person.getRankId(), 0);
 		memory.set("$postId", person.getPostId(), 0);
@@ -397,8 +428,20 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 			memory.set("$isAICore", true, 0);
 		}
 		
-		memory.set("$rank", person.getRank(), 0);
-		memory.set("$post", person.getPost(), 0);
+		memory.set("$rankAOrAn", person.getRankArticle(), 0);
+		memory.set("$postAOrAn", person.getPostArticle(), 0);
+
+		if (person.getRank() != null) {
+			memory.set("$rank", person.getRank().toLowerCase(), 0);
+			memory.set("$Rank", Misc.ucFirst(person.getRank()), 0);
+		}
+		if (person.getPost() != null) {
+			memory.set("$post", person.getPost().toLowerCase(), 0);
+			memory.set("$Post", Misc.ucFirst(person.getPost()), 0);
+		}
+		memory.set("$importance", person.getImportance().name(), 0);
+		
+		memory.set("$level", person.getStats().getLevel(), 0);
 		
 		memory.set("$personality", person.getPersonalityAPI().getId(), 0);
 		
@@ -466,6 +509,15 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		if (Global.getSettings().isDevMode()) {
 			memory.set("$isDevMode", true, 0);
 		}
+		if (TutorialMissionIntel.isTutorialInProgress()) {
+			memory.set("$isInTutorial", true, 0);	
+		}
+		
+		if (!memory.getBoolean(GateEntityPlugin.PLAYER_CAN_USE_GATES)) {
+			memory.set(GateEntityPlugin.PLAYER_CAN_USE_GATES, GateEntityPlugin.canUseGates(), 0);
+		}
+		
+		memory.set("$daysSinceStart", PirateBaseManager.getInstance().getUnadjustedDaysSinceStart(), 0);	
 	}
 
 	@Override
@@ -478,28 +530,77 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		memory.set("$name", person.getName().getFullName(), 0);
 		
 		
+		
+		if (fleet.getContainingLocation() != null) {
+			memory.set("$locationId", fleet.getContainingLocation().getId(), 0);
+			
+			for (String tag : fleet.getContainingLocation().getTags()) {
+				memory.set("$locTag:" + tag, true, 0);	
+			}
+		}
+		
+		
+		
+		
 		memory.set("$fleetId", fleet.getId(), 0);
 		
 		memory.set("$transponderOn", fleet.isTransponderOn(), 0);
 		
 		memory.set("$supplies", (int)fleet.getCargo().getSupplies(), 0);
 		memory.set("$fuel", (int)fleet.getCargo().getFuel(), 0);
+		memory.set("$machinery", (int)fleet.getCargo().getCommodityQuantity(Commodities.HEAVY_MACHINERY), 0);
+		
+		
+		memory.set("$marines", (int)fleet.getCargo().getMarines(), 0);
 		
 		memory.set("$crew", (int)fleet.getCargo().getCrew(), 0);
+		
 		memory.set("$crewRoom", (int)(fleet.getCargo().getMaxPersonnel() - fleet.getCargo().getTotalPersonnel()), 0);
+		memory.set("$fuelRoom", (int)fleet.getCargo().getMaxFuel() - (int)fleet.getCargo().getFuel(), 0);
+		memory.set("$cargoRoom", (int)fleet.getCargo().getMaxCapacity() - (int)fleet.getCargo().getSpaceUsed(), 0);
+		
+		memory.set("$crewRoomStr", Misc.getWithDGS((int)(fleet.getCargo().getMaxPersonnel() - fleet.getCargo().getTotalPersonnel())), 0);
+		memory.set("$fuelRoomStr", Misc.getWithDGS((int)fleet.getCargo().getMaxFuel() - (int)fleet.getCargo().getFuel()), 0);
+		memory.set("$cargoRoomStr", Misc.getWithDGS((int)fleet.getCargo().getMaxCapacity() - (int)fleet.getCargo().getSpaceUsed()), 0);
 		
 		memory.set("$credits", (int)fleet.getCargo().getCredits().get(), 0);
 		memory.set("$creditsStr", Misc.getWithDGS((int)fleet.getCargo().getCredits().get()), 0);
 		memory.set("$creditsStrC", Misc.getWithDGS((int)fleet.getCargo().getCredits().get()) + Strings.C, 0);
 		
+//		for (CommoditySpecAPI spec : Global.getSettings().getAllCommoditySpecs()) {
+//			if (spec.isMeta()) continue;
+//		}
+		Set<String> seen = new HashSet<String>();
+		for (CargoStackAPI stack : fleet.getCargo().getStacksCopy()) {
+			String id = stack.getCommodityId();
+			if (id == null) continue;
+			if (seen.contains(id)) continue;
+			seen.add(id);
+			
+			int quantity = (int) fleet.getCargo().getCommodityQuantity(id);
+			String key = "$" + id;
+			
+			if (!memory.contains(key)) {
+				memory.set(key, quantity, 0);
+			}
+		}
+		
+		
+		MonthlyReport report = SharedData.getData().getPreviousReport();
+		boolean debt = report.getDebt() > 0;
+		boolean longDebt = report.getDebt() > 0 && report.getPreviousDebt() > 0;
+		memory.set("$inDebt", debt, 0);
+		memory.set("$inLongDebt", longDebt, 0);
+		
 		int fleetSizeCount = fleet.getFleetSizeCount();
 		int maxSize = 0;
+		int maxCombatSize = 0;
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 			HullSize size = member.getHullSpec().getHullSize();
 			int val = 1;
 			switch (size) {
 			case CAPITAL_SHIP:
-				val = 5;
+				val = 4;
 				break;
 			case CRUISER:
 				val = 3;
@@ -516,13 +617,25 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 			if (val > maxSize) {
 				maxSize = val;;
 			}
+			if (val > maxCombatSize && !member.isCivilian()) {
+				maxCombatSize = val;
+			}
 		}
 		
 		memory.set("$maxHullSize", maxSize, 0);
+		memory.set("$maxCombatHullSize", maxCombatSize, 0);
 		
 		memory.set("$fleetSizeCount", fleetSizeCount, 0);
 		memory.set("$numShips", fleet.getFleetData().getMembersListCopy().size(), 0);
 		memory.set("$fleetPoints", fleet.getFleetPoints(), 0);
+		
+		if (fleet.getFlagship() != null) {
+			memory.set("$flagshipName", fleet.getFlagship().getShipName(), 0);
+		}
+		
+		for (String id : fleet.getAbilities().keySet()) {
+			memory.set("$ability:" + id, true, 0);
+		}
 	}
 
 	@Override
@@ -532,9 +645,9 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 
 	@Override
 	public PluginPick<FleetStubConverterPlugin> pickStubConverter(FleetStubAPI stub) {
-		if (stub != null && stub.getParams() instanceof FleetParams) {
-			return new PluginPick<FleetStubConverterPlugin>(new FleetStubConverterPluginImpl(), PickPriority.CORE_GENERAL);
-		}
+//		if (stub != null && stub.getParams() instanceof FleetParams) {
+//			return new PluginPick<FleetStubConverterPlugin>(new FleetStubConverterPluginImpl(), PickPriority.CORE_GENERAL);
+//		}
 		return null;
 	}
 	
@@ -567,6 +680,16 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 	public PluginPick<AICoreAdminPlugin> pickAICoreAdminPlugin(String commodityId) {
 		if (Commodities.ALPHA_CORE.equals(commodityId)) {
 			return new PluginPick<AICoreAdminPlugin>(new AICoreAdminPluginImpl(), PickPriority.CORE_GENERAL);
+		}
+		return null;
+	}
+	
+	public PluginPick<AICoreOfficerPlugin> pickAICoreOfficerPlugin(String commodityId) {
+		if (Commodities.OMEGA_CORE.equals(commodityId) ||
+				Commodities.ALPHA_CORE.equals(commodityId) ||
+				Commodities.BETA_CORE.equals(commodityId) ||
+				Commodities.GAMMA_CORE.equals(commodityId)) {
+			return new PluginPick<AICoreOfficerPlugin>(new AICoreOfficerPluginImpl(), PickPriority.CORE_GENERAL);
 		}
 		return null;
 	}

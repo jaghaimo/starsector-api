@@ -17,20 +17,22 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
 import com.fs.starfarer.api.characters.OfficerDataAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
-import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
+import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
 import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
-import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
-import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.DModManager;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
+import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
@@ -251,7 +253,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 	protected Set<Integer> baysToSkip = new HashSet<Integer>();
 	protected boolean fittingModule = false;
 	protected int missilesWithAmmoOnCurrent = 0;
-	public void doFit(ShipVariantAPI current, ShipVariantAPI target, AutofitPluginDelegate delegate) {
+	public void doFit(ShipVariantAPI current, ShipVariantAPI target, int maxSMods, AutofitPluginDelegate delegate) {
 		
 		
 //		if (stats == null) {
@@ -271,16 +273,34 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			availableMods = new LinkedHashSet<String>(delegate.getAvailableHullmods());
 		}
 		
+//		if (fittingModule && current.getHullSpec().getHullId().equals("module_hightech_hangar")) {
+//			System.out.println("wfweffewfew");
+//		}
+		
 		current.getStationModules().putAll(target.getStationModules());
 
 		int index = 0;
 		for (String slotId : current.getStationModules().keySet()) {
 			ShipVariantAPI moduleCurrent = current.getModuleVariant(slotId);
-			if (moduleCurrent == null) continue;
-			if (moduleCurrent.isStockVariant()) {
+			boolean forceClone = false;
+			if (moduleCurrent == null) {
+				// when the target variant is not stock and has custom variants for the modules, grab them
+				forceClone = true;
+				moduleCurrent = target.getModuleVariant(slotId);
+				//continue;
+			}
+			if (moduleCurrent == null) {
+				String variantId = current.getHullVariantId();
+				throw new RuntimeException("Module variant for slotId [" + slotId + "] not found for " +
+										  "variantId [" + variantId + "] of hull [" + current.getHullSpec().getHullId() + "]");
+				//continue;
+			}
+			if (moduleCurrent.isStockVariant() || forceClone) {
 				moduleCurrent = moduleCurrent.clone();
 				moduleCurrent.setSource(VariantSource.REFIT);
-				moduleCurrent.setHullVariantId(moduleCurrent.getHullVariantId() + "_" + index);
+				if (!forceClone) {
+					moduleCurrent.setHullVariantId(moduleCurrent.getHullVariantId() + "_" + index);
+				}
 			}
 			index++;
 			
@@ -290,7 +310,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			if (moduleTarget == null) continue;
 			
 			fittingModule = true;
-			doFit(moduleCurrent, moduleTarget, delegate);
+			doFit(moduleCurrent, moduleTarget, 0, delegate);
 			fittingModule = false;
 			
 			current.setModuleVariant(slotId, moduleCurrent);
@@ -401,7 +421,56 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		
 		addExtraVentsAndCaps(current, target);
 		addHullmods(current, delegate, HullMods.REINFORCEDHULL, HullMods.BLAST_DOORS, HullMods.HARDENED_SUBSYSTEMS);
-		addModsWithSpareOPIfAny(current, target, delegate);
+		addModsWithSpareOPIfAny(current, target, false, delegate);
+		
+		//maxSMods = 2;
+		if (maxSMods > 0) {
+			int added = convertToSMods(current, maxSMods);
+			addExtraVents(current);
+			addExtraCaps(current);
+			//addHullmods(current, delegate, HullMods.FLUX_DISTRIBUTOR, HullMods.FLUX_COIL);
+			if (!current.hasHullMod(HullMods.FLUX_DISTRIBUTOR)) {
+				addDistributor(current, delegate);
+			}
+			if (!current.hasHullMod(HullMods.FLUX_COIL)) {
+				addCoil(current, delegate);
+			}
+			//addModsWithSpareOPIfAny(current, target, true, delegate);
+			//addHullmods(current, delegate, HullMods.FLUX_DISTRIBUTOR, HullMods.FLUX_COIL);
+			if (current.getHullSize() == HullSize.FRIGATE || current.hasHullMod(HullMods.SAFETYOVERRIDES)) {
+				addHullmods(current, delegate, HullMods.HARDENED_SUBSYSTEMS, HullMods.REINFORCEDHULL, HullMods.BLAST_DOORS);
+			} else {
+				addHullmods(current, delegate, HullMods.REINFORCEDHULL, HullMods.BLAST_DOORS, HullMods.HARDENED_SUBSYSTEMS);
+			}
+			int remaining = maxSMods - added;
+			if (remaining > 0) {
+				List<String> mods = new ArrayList<String>();
+				mods.add(HullMods.FLUX_DISTRIBUTOR);
+				mods.add(HullMods.FLUX_COIL);
+				if (current.getHullSize() == HullSize.FRIGATE || current.hasHullMod(HullMods.SAFETYOVERRIDES)) {
+					mods.add(HullMods.HARDENED_SUBSYSTEMS);
+					mods.add(HullMods.REINFORCEDHULL);
+				} else {
+					mods.add(HullMods.REINFORCEDHULL);
+					mods.add(HullMods.HARDENED_SUBSYSTEMS);
+				}
+				mods.add(HullMods.BLAST_DOORS);
+				while (!mods.isEmpty() && current.hasHullMod(mods.get(0))) {
+					mods.remove(0);
+				}
+				for (int i = 0; i < remaining; i++) {
+					current.setNumFluxCapacitors(0);
+					current.setNumFluxVents(0);
+					String modId = mods.get(Math.min(i, mods.size() - 1));
+					addHullmods(current, delegate, modId);
+					convertToSMods(current, 1);
+//					addExtraVents(current);
+//					addExtraCaps(current);
+				}
+			}
+		}
+		addExtraVents(current);
+		addExtraCaps(current);
 		
 		current.setVariantDisplayName(target.getDisplayName());
 		
@@ -433,7 +502,33 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		}
 	}
 	
-	private void addModsWithSpareOPIfAny(ShipVariantAPI current, ShipVariantAPI target, AutofitPluginDelegate delegate) {
+	protected int convertToSMods(ShipVariantAPI current, int num) {
+		if (num <= 0) return 0;
+		
+		List<HullModSpecAPI> mods = new ArrayList<HullModSpecAPI>(); 
+		for (String id : current.getHullMods()) {
+			if (current.getPermaMods().contains(id)) continue;
+			if (current.getHullSpec().getBuiltInMods().contains(id)) continue;
+			mods.add(DModManager.getMod(id));
+		}
+		
+		final HullSize size = current.getHullSize();
+		Collections.sort(mods, new Comparator<HullModSpecAPI>() {
+			public int compare(HullModSpecAPI o1, HullModSpecAPI o2) {
+				return Misc.getOPCost(o2, size) - Misc.getOPCost(o1, size);
+			}
+		});
+		
+		int count = 0;
+		for (int i = 0; i < num && i < mods.size(); i++) {
+			String id = mods.get(i).getId();
+			current.addPermaMod(id, true);
+			count++;
+		}
+		return count;
+	}
+	
+	protected void addModsWithSpareOPIfAny(ShipVariantAPI current, ShipVariantAPI target, boolean sModMode, AutofitPluginDelegate delegate) {
 		int opCost = current.computeOPCost(stats);
 		int opMax = current.getHullSpec().getOrdnancePoints(stats);
 		int opLeft = opMax - opCost;
@@ -446,16 +541,26 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			ventsFraction = target.getNumFluxVents() / total;
 		}
 		
-		if (ventsFraction >= 0.5f) {
-			addDistributor(current, delegate);
-			addCoil(current, delegate);
+		if (sModMode) {
+			if (ventsFraction >= 0.5f) {
+				addDistributorRemoveVentsIfNeeded(current, delegate);
+				addCoilRemoveCapsIfNeeded(current, delegate);
+			} else {
+				addCoil(current, delegate);
+				addCoilRemoveCapsIfNeeded(current, delegate);
+			}
 		} else {
-			addCoil(current, delegate);
-			addDistributor(current, delegate);
+			if (ventsFraction >= 0.5f) {
+				addDistributor(current, delegate);
+				addCoil(current, delegate);
+			} else {
+				addCoil(current, delegate);
+				addDistributor(current, delegate);
+			}
 		}
 	}
 	
-	private void addCoil(ShipVariantAPI current, AutofitPluginDelegate delegate) {
+	protected void addCoil(ShipVariantAPI current, AutofitPluginDelegate delegate) {
 		int opCost = current.computeOPCost(stats);
 		int opMax = current.getHullSpec().getOrdnancePoints(stats);
 		int opLeft = opMax - opCost;
@@ -467,7 +572,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		HullModSpecAPI coil = Misc.getMod(HullMods.FLUX_COIL);
 		int cost = coil.getCostFor(current.getHullSize());
 		
-		if (cost <= opLeft + vents * 0.3f) {
+		if (cost < opLeft + vents * 0.3f) {
 			int remove = cost - opLeft;
 			if (remove > 0) {
 				opLeft -= addVents(-remove, current, 1000);
@@ -476,7 +581,28 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		}
 	}
 	
-	private void addDistributor(ShipVariantAPI current, AutofitPluginDelegate delegate) {
+	protected void addCoilRemoveCapsIfNeeded(ShipVariantAPI current, AutofitPluginDelegate delegate) {
+		int opCost = current.computeOPCost(stats);
+		int opMax = current.getHullSpec().getOrdnancePoints(stats);
+		int opLeft = opMax - opCost;
+		
+		if (opLeft <= 0) return;
+		
+		int caps = current.getNumFluxCapacitors();
+		
+		HullModSpecAPI coil = Misc.getMod(HullMods.FLUX_COIL);
+		int cost = coil.getCostFor(current.getHullSize());
+		
+		if (cost < opLeft + caps * 0.3f) {
+			int remove = cost - opLeft;
+			if (remove > 0) {
+				opLeft -= addCapacitors(-remove, current, 1000);
+			}
+			opLeft -= addModIfPossible(HullMods.FLUX_COIL, delegate, current, opLeft);
+		}
+	}
+	
+	protected void addDistributor(ShipVariantAPI current, AutofitPluginDelegate delegate) {
 		int opCost = current.computeOPCost(stats);
 		int opMax = current.getHullSpec().getOrdnancePoints(stats);
 		int opLeft = opMax - opCost;
@@ -492,6 +618,27 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			int remove = cost - opLeft;
 			if (remove > 0) {
 				opLeft -= addCapacitors(-remove, current, 1000);
+			}
+			opLeft -= addModIfPossible(HullMods.FLUX_DISTRIBUTOR, delegate, current, opLeft);
+		}
+	}
+	
+	protected void addDistributorRemoveVentsIfNeeded(ShipVariantAPI current, AutofitPluginDelegate delegate) {
+		int opCost = current.computeOPCost(stats);
+		int opMax = current.getHullSpec().getOrdnancePoints(stats);
+		int opLeft = opMax - opCost;
+		
+		if (opLeft <= 0) return;
+		
+		int vents = current.getNumFluxVents();
+		
+		HullModSpecAPI distributor = Misc.getMod(HullMods.FLUX_DISTRIBUTOR);
+		int cost = distributor.getCostFor(current.getHullSize());
+		
+		if (cost <= opLeft + vents * 0.3f) {
+			int remove = cost - opLeft;
+			if (remove > 0) {
+				opLeft -= addVents(-remove, current, 1000);
 			}
 			opLeft -= addModIfPossible(HullMods.FLUX_DISTRIBUTOR, delegate, current, opLeft);
 		}
@@ -526,11 +673,13 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		boolean useCargo = isChecked(USE_FROM_CARGO);
 		boolean useBlack = isChecked(BUY_FROM_BLACK_MARKET);
 		
+		boolean automated = Misc.isAutomated(delegate.getShip());
 		List<AvailableFighter> fighters = new ArrayList<AvailableFighter>(delegate.getAvailableFighters());
 		Iterator<AvailableFighter> iter = fighters.iterator();
 		while (iter.hasNext()) {
 			AvailableFighter f = iter.next();
 			if ((!buy && f.getPrice() > 0) ||
+				(automated && !f.getWingSpec().hasTag(Tags.AUTOMATED_FIGHTER)) ||
 				(!storage && f.getPrice() <= 0 && f.getSubmarket() != null) ||
 				(!useCargo && f.getSubmarket() == null) ||
 				(!useBlack && f.getSubmarket() != null && f.getSubmarket().getPlugin().isBlackMarket())) {
@@ -668,6 +817,17 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		}
 	}
 	
+	public void addExtraCaps(ShipVariantAPI current) {
+		int opCost = current.computeOPCost(stats);
+		int opMax = current.getHullSpec().getOrdnancePoints(stats);
+		int opLeft = opMax - opCost;
+		
+		if (opLeft > 0) {
+			int maxCaps = getMaxCaps(current.getHullSize());
+			opLeft -= addCapacitors((int) opLeft, current, maxCaps);
+		}
+	}
+	
 	public void addExtraVentsAndCaps(ShipVariantAPI current, ShipVariantAPI target) {
 		int opCost = current.computeOPCost(stats);
 		int opMax = current.getHullSpec().getOrdnancePoints(stats);
@@ -794,6 +954,10 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		for (WeaponSlotAPI slot : getWeaponSlotsInPriorityOrder(current, target, upgradeMode)) {
 			if (slotsToSkip.contains(slot.getId())) continue;
 			
+//			if (slot.getId().equals("WS 004")) {
+//				System.out.println("wefwefwef");
+//			}
+			
 			float opCost = current.computeOPCost(stats);
 			float opMax = current.getHullSpec().getOrdnancePoints(stats);
 			float opLeft = opMax - opCost;
@@ -814,8 +978,12 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 				}
 			}
 			
+			WeaponSpecAPI desired = target.getWeaponSpec(slot.getId());
+			// shouldn't happen since it should be filtered out by getWeaponSlotsInPriorityOrder()
+			if (desired == null) continue;
+			
 			List<AvailableWeapon> weapons = getWeapons(delegate);
-			List<AvailableWeapon> possible = getPossibleWeapons(slot, current, opLeft, weapons);
+			List<AvailableWeapon> possible = getPossibleWeapons(slot, desired, current, opLeft, weapons);
 			if (possible.isEmpty()) continue;
 			
 //			for (AvailableWeapon w : possible) {
@@ -824,9 +992,6 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 //				}
 //			}
 			
-			WeaponSpecAPI desired = target.getWeaponSpec(slot.getId());
-			 // shouldn't happen since it should be filtered out by getWeaponSlotsInPriorityOrder()
-			if (desired == null) continue;
 			
 			List<String> categories = desired.getAutofitCategoriesInPriorityOrder(); 
 			List<String> alternate = altWeaponCats.get(desired);
@@ -1374,7 +1539,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 	
 	
 	
-	public List<AvailableWeapon> getPossibleWeapons(WeaponSlotAPI slot, ShipVariantAPI current, float opLeft, List<AvailableWeapon> weapons) {
+	public List<AvailableWeapon> getPossibleWeapons(WeaponSlotAPI slot, WeaponSpecAPI desired, ShipVariantAPI current, float opLeft, List<AvailableWeapon> weapons) {
 		List<AvailableWeapon> result = new ArrayList<AvailableWeapon>();
 		
 		for (AvailableWeapon w : weapons) {
@@ -1386,7 +1551,8 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			if (cost > opLeft) continue;
 			if (!slot.weaponFits(spec)) continue;
 			
-			if (spec.getType() == WeaponType.MISSILE || spec.getAIHints().contains(AIHints.STRIKE)) {
+			if (spec != desired && 
+					(spec.getType() == WeaponType.MISSILE || spec.getAIHints().contains(AIHints.STRIKE))) {
 				boolean guided = spec.getAIHints().contains(AIHints.DO_NOT_AIM);
 				if (!guided) {
 					boolean guidedPoor = spec.getAIHints().contains(AIHints.GUIDED_POOR);
@@ -1476,9 +1642,18 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 //		}
 		availableMods = new LinkedHashSet<String>(delegate.getAvailableHullmods());
 		
-		addHullmods(current, delegate, HullMods.REINFORCEDHULL);
+		if (current.getHullSize().ordinal() >= HullSize.DESTROYER.ordinal()) {
+			addHullmods(current, delegate, HullMods.INTEGRATED_TARGETING_UNIT);
+		}
+		
+		//addHullmods(current, delegate, HullMods.REINFORCEDHULL);
 		addExtraVentsAndCaps(current, null);
-		addModsWithSpareOPIfAny(current, current, delegate);
+//		addExtraVents(current);
+//		addExtraCaps(current);
+		addDistributor(current, delegate);
+		addDistributorRemoveVentsIfNeeded(current, delegate);
+		addCoilRemoveCapsIfNeeded(current, delegate);
+		//addModsWithSpareOPIfAny(current, current, false, delegate);
 		addHullmods(current, delegate, HullMods.REINFORCEDHULL, HullMods.BLAST_DOORS, HullMods.HARDENED_SUBSYSTEMS);
 		
 		if (!fittingModule) {
@@ -1488,7 +1663,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 
 	@Override
 	public String getQuickActionText() {
-		return "Spend Free OP";
+		return "Spend free OP";
 	}
 	
 	public String getQuickActionTooltip() {
@@ -1544,6 +1719,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			if (!member.getCaptain().isDefault()) {
 				continue;
 			}
+			if (fleet.isPlayerFleet() && Misc.isAutomated(member)) continue;
 			members.add(member);
 		}
 		
@@ -1664,7 +1840,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			float level = skill.getLevel();
 			if (level <= 0) continue;
 			
-			if (!carrier || spec.hasTag(Tags.SKILL_CARRIER)) {
+			if (!carrier || spec.hasTag(Skills.TAG_CARRIER)) {
 				total += level;
 			}
 		}

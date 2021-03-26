@@ -422,8 +422,8 @@ public class RouteLocationCalculator {
 		float fringeMax = 0;
 		JumpPointAPI fringe = null;
 		
-		StarSystemAPI system = (StarSystemAPI) from.getContainingLocation();
-		List<JumpPointAPI> points = system.getEntities(JumpPointAPI.class);
+		LocationAPI location = from.getContainingLocation();
+		List<JumpPointAPI> points = location.getEntities(JumpPointAPI.class);
 		
 		
 		for (JumpPointAPI curr : points) {
@@ -439,9 +439,12 @@ public class RouteLocationCalculator {
 			}
 		}
 		
-		boolean useFringeOnly = !isInControlOfSystemOrEven(faction, system);
-		if (useFringeOnly && fringe != null) {
-			return fringe;
+		if (from.getContainingLocation() instanceof StarSystemAPI) {
+			StarSystemAPI system = (StarSystemAPI) from.getContainingLocation();
+			boolean useFringeOnly = !isInControlOfSystemOrEven(faction, system);
+			if (useFringeOnly && fringe != null) {
+				return fringe;
+			}
 		}
 		
 		return result;

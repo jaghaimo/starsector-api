@@ -10,16 +10,16 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
-import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
+import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteLocationCalculator;
@@ -87,6 +87,12 @@ public class PunitiveExpeditionIntel extends RaidIntel implements RaidDelegate {
 		targetFaction = target.getFaction();
 		
 		SectorEntityToken gather = from.getPrimaryEntity();
+		SectorEntityToken raidJump = RouteLocationCalculator.findJumpPointToUse(getFactionForUIColors(), target.getPrimaryEntity());
+		
+		if (gather == null || raidJump == null) {
+			endImmediately();
+			return;
+		}
 		
 		
 		float orgDur = organizeDuration;
@@ -102,7 +108,6 @@ public class PunitiveExpeditionIntel extends RaidIntel implements RaidDelegate {
 		addStage(assemble);
 		
 		
-		SectorEntityToken raidJump = RouteLocationCalculator.findJumpPointToUse(getFactionForUIColors(), target.getPrimaryEntity());
 		PETravelStage travel = new PETravelStage(this, gather, raidJump, false);
 		travel.setAbortFP(expeditionFP * successMult);
 		addStage(travel);
@@ -113,8 +118,11 @@ public class PunitiveExpeditionIntel extends RaidIntel implements RaidDelegate {
 		
 		addStage(new PEReturnStage(this));
 		
+		setImportant(true);
+		
 		//applyRepPenalty();
 		Global.getSector().getIntelManager().addIntel(this);
+		
 		//repResult = null;
 	}
 	
@@ -151,9 +159,14 @@ public class PunitiveExpeditionIntel extends RaidIntel implements RaidDelegate {
 		return raidAI;
 	}
 	
+	protected transient String targetOwner = null;
 	@Override
 	protected void advanceImpl(float amount) {
 		super.advanceImpl(amount);
+		if (target != null && targetOwner == null) targetOwner = target.getFactionId();
+		if (failStage < 0 && targetOwner != null && target != null && !targetOwner.equals(target.getFactionId())) {
+			forceFail(false);
+		}
 	}
 
 	public void sendOutcomeUpdate() {
@@ -418,9 +431,14 @@ public class PunitiveExpeditionIntel extends RaidIntel implements RaidDelegate {
 //					"expeditionary force will not result in " + faction.getDisplayNameWithArticle() + 
 //					" immediately becoming hostile, unless the relationship is already strained.", Misc.getGrayColor(), 
 //					opad);
+//			LabelAPI label = info.addPara("This operation is being carried " +
+//					"without an open declaration of war. Fighting the " +
+//					"expeditionary force will not result in reputation changes with " + faction.getDisplayNameWithArticle() + 
+//					".", Misc.getGrayColor(), 
+//					opad);
 			LabelAPI label = info.addPara("This operation is being carried " +
-					"without an open declaration of war. Fighting the " +
-					"expeditionary force will not result in reputation changes with " + faction.getDisplayNameWithArticle() + 
+					"without an open declaration of war. Defeating the " +
+					"expeditionary force will only result in a small reputation reduction with " + faction.getDisplayNameWithArticle() + 
 					".", Misc.getGrayColor(), 
 					opad);
 			label.setHighlight(faction.getDisplayNameWithArticleWithoutArticle());

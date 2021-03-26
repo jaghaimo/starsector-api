@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.combat;
 
+import java.awt.Color;
+
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
@@ -90,5 +92,36 @@ public interface HullModEffect {
 	 */
 	void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec);
 	
+
+	Color getBorderColor();
+	Color getNameColor();
 	
+	/**
+	 * Sort order within the mod's display category. Not used when category == 4, since then
+	 * the order is determined by the order in which the player added the hullmods.
+	 * @return
+	 */
+	int getDisplaySortOrder();
+	/**
+	 * Should return 0 to 4; -1 for "use default".
+	 * The default categories are:
+	 * 	0: built-in mods in the base hull
+	 * 	1: perma-mods that are not story point mods
+	 * 	2: d-mods
+	 * 	3: mods built in via story points
+	 * 	4: regular mods
+	 * 
+	 * @return
+	 */
+	int getDisplayCategoryIndex();
 }
+
+
+
+
+
+
+
+
+
+

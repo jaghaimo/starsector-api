@@ -3,9 +3,12 @@ package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 import java.awt.Color;
 
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.util.Misc;
 
 public class DiktatLobsterBarEvent extends BaseGetCommodityBarEvent {
@@ -23,6 +26,23 @@ public class DiktatLobsterBarEvent extends BaseGetCommodityBarEvent {
 		}
 		
 		return true;
+	}
+	
+	@Override
+	protected void doExtraConfirmActions() {
+		ContactIntel.addPotentialContact(person, market, text);
+	}
+
+	@Override
+	protected void adjustPerson(PersonAPI person) {
+		super.adjustPerson(person);
+		person.setImportanceAndVoice(pickMediumImportance(), random);
+		person.addTag(Tags.CONTACT_MILITARY);
+	}
+	
+	@Override
+	protected String getPersonPost() {
+		return Ranks.POST_AGENT;
 	}
 
 	@Override

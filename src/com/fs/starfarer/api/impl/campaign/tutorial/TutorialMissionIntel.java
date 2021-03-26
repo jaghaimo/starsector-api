@@ -126,12 +126,15 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 		mainContact.getMemoryWithoutUpdate().set("$tut_eventRef", this);
 		Misc.makeImportant(mainContact, REASON);
 		
+		Global.getSector().getMemoryWithoutUpdate().set("$tut_jangalaContactName", mainContact.getNameString());
+		
 		updateStage(TutorialMissionStage.INIT);
 		
 		setImportant(true);
 		
 		Global.getSector().getIntelManager().addIntel(this);
 		Global.getSector().addScript(this);
+		//Global.getSector().getListenerManager().addListener(this);
 	}
 	
 	public static PersonAPI createMainContact(PlanetAPI ancyra) {
@@ -181,6 +184,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 	protected void notifyEnded() {
 		super.notifyEnded();
 		Global.getSector().removeScript(this);
+		//Global.getSector().getListenerManager().removeListener(this);
 	}
 
 	protected int preRecoverFleetSize = 2;
@@ -274,6 +278,8 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			
 			updateStage(TutorialMissionStage.GO_GET_DATA);
 			
+			Global.getSector().getMemoryWithoutUpdate().set("$tutMadeContactAtAncyra", true);
+			
 			saveNag();
 		} else if (action.equals("endGetData")) {
 			
@@ -354,7 +360,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			
 			updateStage(TutorialMissionStage.DELIVER_REPORT);
 			
-			endGalatiaPortionOfMission(true);
+			endGalatiaPortionOfMission(true, true);
 			
 			Global.getSector().getMemoryWithoutUpdate().unset(CampaignTutorialScript.USE_TUTORIAL_RESPAWN);
 			
@@ -374,6 +380,17 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			}
 			
 			endEvent();
+		} else if (action.equals("doRepairs")) {
+			for (FleetMemberAPI member : playerFleet.getFleetData().getMembersListCopy()) {
+				member.getRepairTracker().setMothballed(false);
+				member.getStatus().repairFully();
+				float max = member.getRepairTracker().getMaxCR();
+				max = Math.max(max, .7f);
+				float curr = member.getRepairTracker().getBaseCR();
+				if (max > curr) {
+					member.getRepairTracker().applyCREvent(max - curr, "Repaired at dockyard");
+				}
+			}
 		} else if (action.equals("printRefitHint")) {
 			String refit = Global.getSettings().getControlStringForEnumName("CORE_REFIT");
 			String autofit = Global.getSettings().getControlStringForEnumName("REFIT_MANAGE_VARIANTS");
@@ -396,7 +413,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 		return true;
 	}
 	
-	public static void endGalatiaPortionOfMission(boolean withStipend) {
+	public static void endGalatiaPortionOfMission(boolean withStipend, boolean didTutorial) {
 	
 		if (withStipend) {
 			new GalatianAcademyStipend();
@@ -473,6 +490,10 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 		market.setEconGroup(null);
 		
 		derinkuyu.getMarket().setEconGroup(null);
+		
+//		if (didTutorial) {
+//			Global.getSector().getMemoryWithoutUpdate().set("$sti");
+//		}
 	}
 	
 	
@@ -510,7 +531,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 		cargo.addFighters("broadsword_wing", 1);
 		cargo.addFighters("piranha_wing", 1);
 		
-		cargo.addSupplies(50);
+		cargo.addSupplies(100);
 		cargo.sort();
 	}
 	
@@ -587,13 +608,13 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			break;
 		case GO_GET_DATA:
 			info.addPara("Sneak into " + derinkuyu.getName(), tc, pad);
-			info.addPara("Contact " + dataContact.getNameString() + " and retreive data", tc, 0f);
+			info.addPara("Contact " + dataContact.getNameString() + " and retrieve data", tc, 0f);
 			break;
 		case GOT_DATA:
 			info.addPara("Deliver data to " + getMainContactPostName() + " at Ancyra", tc, pad);
 			break;
 		case GO_GET_AI_CORE:
-			info.addPara("Retreive AI core from derelict probe beyond the orbit of Pontus", tc, pad);
+			info.addPara("Retrieve AI core from derelict probe beyond the orbit of Pontus", tc, pad);
 			break;
 		case GOT_AI_CORE:
 			info.addPara("Deliver AI core to " + getMainContactPostName() + " at Ancyra", tc, pad);

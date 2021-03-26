@@ -8,6 +8,8 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.combat.MutableStat;
+import com.fs.starfarer.api.combat.MutableStat.StatMod;
+import com.fs.starfarer.api.fleet.MutableFleetStatsAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
@@ -34,6 +36,7 @@ public class SurveyPluginImpl implements SurveyPlugin {
 	private PlanetAPI planet;
 	
 	private MutableStat costMult = new MutableStat(1f);
+	private MutableStat xpMult = new MutableStat(1f);
 
 	public void init(CampaignFleetAPI fleet, PlanetAPI planet) {
 		this.fleet = fleet;
@@ -47,6 +50,17 @@ public class SurveyPluginImpl implements SurveyPlugin {
 		if (size != 1f) {
 			costMult.modifyMult("planet_size", size, "Planet size");
 		}
+		
+		xpMult.applyMods(costMult);
+		
+		if (fleet != null) {
+			MutableFleetStatsAPI stats = fleet.getStats();
+			MutableStat stat = stats.getDynamic().getStat(Stats.SURVEY_COST_MULT);
+			for (StatMod mod : stat.getMultMods().values()) {
+				costMult.modifyMult(mod.source, mod.value, mod.desc);
+			}
+		}
+		
 	}
 	
 	protected float getHazardMultiplier() {
@@ -79,8 +93,8 @@ public class SurveyPluginImpl implements SurveyPlugin {
 		machinery = Math.round(machinery / 10f) * 10;
 		if (machinery < MIN_SUPPLIES_OR_MACHINERY) machinery = MIN_SUPPLIES_OR_MACHINERY;
 		
-		result.put(Commodities.HEAVY_MACHINERY, machinery);
 		result.put(Commodities.CREW, (int)Math.round((int)(BASE_CREW * mult) / 10f) * 10);
+		result.put(Commodities.HEAVY_MACHINERY, machinery);
 		
 		return result;
 	}
@@ -128,7 +142,7 @@ public class SurveyPluginImpl implements SurveyPlugin {
 	}
 	
 	public MutableStat getXPMult() {
-		return costMult;
+		return xpMult;
 	}
 	
 	

@@ -26,7 +26,7 @@ public class FoodShortage extends BaseMarketConditionPlugin {
 	}
 
 	public void unapply(String id) {
-		market.getCommodityData(Commodities.FOOD).getPlayerPriceMod().unmodify(id);
+		market.getCommodityData(Commodities.FOOD).getPlayerSupplyPriceMod().unmodify(id);
 		market.getStability().unmodify(id);
 		
 		String sellId = Stats.getPlayerSellRepImpactMultId(Commodities.FOOD);

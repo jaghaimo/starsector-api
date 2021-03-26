@@ -219,8 +219,10 @@ public interface CampaignPlugin {
 	PluginPick<ImmigrationPlugin> pickImmigrationPlugin(MarketAPI market);
 
 	PluginPick<AICoreAdminPlugin> pickAICoreAdminPlugin(String commodityId);
+	PluginPick<AICoreOfficerPlugin> pickAICoreOfficerPlugin(String commodityId);
 
 	PluginPick<FleetInflater> pickFleetInflater(CampaignFleetAPI fleet, Object params);
+
 }
 
 

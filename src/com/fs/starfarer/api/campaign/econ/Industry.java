@@ -7,11 +7,18 @@ import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.MarketInteractionMode;
 import com.fs.starfarer.api.combat.MutableStat;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Pair;
 
 public interface Industry {
+	
+	public static enum ImprovementDescriptionMode {
+		MENU_BUTTON,
+		STORY_POINT_USE_DIALOG,
+		INDUSTRY_TOOLTIP,
+	}
 	
 	public static enum AICoreDescriptionMode {
 		INDUSTRY_TOOLTIP,
@@ -176,7 +183,38 @@ public interface Industry {
 	String getBuildOrUpgradeDaysText();
 
 	void notifyColonyRenamed();
+	
+	boolean canImprove();
+	boolean isImproved();
+	void setImproved(boolean improved);
+	String getImproveMenuText();
+	void addImproveDesc(TooltipMakerAPI info, ImprovementDescriptionMode mode);
+	int getImproveStoryPoints();
+	float getImproveBonusXP();
+	String getImproveSoundId();
+	String getImproveDialogTitle();
+
+	
+	RaidDangerLevel adjustCommodityDangerLevel(String commodityId, RaidDangerLevel level);
+	/**
+	 * Includes nonecon "commodities" such as AI cores. Rule of thumb: if it requires a set number of
+	 * marine tokens to raid, then this method determines the danger level. Otherwise, it's getCommodityDangerLevel().
+	 * @param itemId
+	 * @return
+	 */
+	RaidDangerLevel adjustItemDangerLevel(String itemId, String data, RaidDangerLevel level);
+	int adjustMarineTokensToRaidItem(String itemId, String data, int marineTokens);
+
+	boolean canInstallAICores();
+
+	MutableStat getDemandReductionFromOther();
+	MutableStat getSupplyBonusFromOther();
+
+	void setHidden(boolean hidden);
 }
+
+
+
 
 
 

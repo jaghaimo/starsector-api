@@ -7,6 +7,9 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 
+/**
+ * UNUSED, not related to CryofluxTransducerEffect.
+ */
 public class CryofluxTransducerStats extends BaseShipSystemScript {
 	public static final Object KEY_SHIP = new Object();
 	public static final Color DEFAULT_JITTER_COLOR = new Color(100,165,255,75);

@@ -1,6 +1,7 @@
 package com.fs.starfarer.api.impl.campaign;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -23,11 +24,14 @@ import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropD
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.PerShipData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.ShipCondition;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class DerelictShipEntityPlugin extends BaseCustomEntityPlugin {
 
+	public static float DEFAULT_SMOD_PROB = 0.05f;
+	
 	public static enum DerelictType {
 		SMALL,
 		MEDIUM,
@@ -35,14 +39,30 @@ public class DerelictShipEntityPlugin extends BaseCustomEntityPlugin {
 		CIVILIAN
 	}
 	
+	public static float getDefaultSModProb() {
+		return DEFAULT_SMOD_PROB;
+	}
 	
-	public static DerelictShipData createVariant(String variantId, Random random) {
+	public static DerelictShipData createHull(String hullId, Random random, float sModProb) {
+		List<String> list = Global.getSettings().getHullIdToVariantListMap().get(hullId);
+		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
+		picker.addAll(list);
+		String variantId = picker.pick();
+		if (variantId == null) {
+			return null;
+		}
+		return createVariant(variantId, random, sModProb);
+	}
+	public static DerelictShipData createVariant(String variantId, Random random, float sModProb) {
 		ShipCondition condition = pickDerelictCondition(random);
-		PerShipData ship = new PerShipData(variantId, condition);
-		return new DerelictShipData(ship, false);
+		PerShipData ship = new PerShipData(variantId, condition, sModProb);
+		return new DerelictShipData(ship, true);
 	}
 	
 	public static DerelictShipData createRandom(String factionId, DerelictType type, Random random) {
+		return createRandom(factionId, type, random, 0f);
+	}
+	public static DerelictShipData createRandom(String factionId, DerelictType type, Random random, float sModProb) {
 		if (random == null) random = new Random();
 		if (type == null) type = pickDerelictType(random);
 		String variantId = null;
@@ -57,7 +77,7 @@ public class DerelictShipEntityPlugin extends BaseCustomEntityPlugin {
 		
 		ShipCondition condition = pickDerelictCondition(random);
 		
-		PerShipData ship = new PerShipData(variantId, condition);
+		PerShipData ship = new PerShipData(variantId, condition, sModProb);
 		
 		return new DerelictShipData(ship, true);
 	}
@@ -100,58 +120,75 @@ public class DerelictShipEntityPlugin extends BaseCustomEntityPlugin {
 	
 	public static String pickCivilianVariantId(String factionId, Random random) {
 		String variantId = pickVariant(factionId, random, 
-				ShipRoles.CIV_RANDOM
+				ShipRoles.CIV_RANDOM, 7f, // ox or crig
+				ShipRoles.FREIGHTER_SMALL, 10f,
+				ShipRoles.FREIGHTER_MEDIUM, 3f,
+				ShipRoles.FREIGHTER_LARGE, 1f,
+				ShipRoles.LINER_SMALL, 10f,
+				ShipRoles.LINER_MEDIUM, 3f,
+				ShipRoles.LINER_LARGE, 1f,
+				ShipRoles.TANKER_SMALL, 10f,
+				ShipRoles.TANKER_MEDIUM, 3f,
+				ShipRoles.TANKER_LARGE, 1f,
+				ShipRoles.PERSONNEL_SMALL, 10f,
+				ShipRoles.PERSONNEL_MEDIUM, 3f,
+				ShipRoles.PERSONNEL_LARGE, 1f
 		);
 		return variantId;
 	}
 	public static String pickSmallVariantId(String factionId, Random random) {
 		String variantId = pickVariant(factionId, random, 
-				ShipRoles.COMBAT_SMALL,
-				ShipRoles.COMBAT_FREIGHTER_SMALL,
-				ShipRoles.LINER_SMALL,
-				ShipRoles.TANKER_SMALL, 
-				ShipRoles.PERSONNEL_SMALL
+				ShipRoles.COMBAT_SMALL, 10f,
+				ShipRoles.COMBAT_FREIGHTER_SMALL, 3f,
+				ShipRoles.FREIGHTER_SMALL, 1f, 
+				ShipRoles.TANKER_SMALL, 1f, 
+				ShipRoles.LINER_SMALL, 1f,
+				ShipRoles.PERSONNEL_SMALL, 1f
 		);
 		return variantId;
 	}
 	
 	public static String pickMediumVariantId(String factionId, Random random) {
 		String variantId = pickVariant(factionId, random, 
-				ShipRoles.COMBAT_MEDIUM,
-				ShipRoles.COMBAT_FREIGHTER_MEDIUM,
-				ShipRoles.CARRIER_SMALL,
-				ShipRoles.LINER_MEDIUM, 
-				ShipRoles.TANKER_MEDIUM,
-				ShipRoles.PERSONNEL_MEDIUM
+				ShipRoles.COMBAT_MEDIUM, 10f,
+				ShipRoles.COMBAT_FREIGHTER_MEDIUM, 3f,
+				ShipRoles.CARRIER_SMALL, 1f,
+				ShipRoles.FREIGHTER_MEDIUM, 1f,
+				ShipRoles.TANKER_MEDIUM, 1f,
+				ShipRoles.LINER_MEDIUM, 1f,
+				ShipRoles.PERSONNEL_MEDIUM, 1f
 		);
 		return variantId;
 	}
 	
 	public static String pickLargeVariantId(String factionId, Random random) {
 		String variantId = pickVariant(factionId, random, 
-				ShipRoles.COMBAT_LARGE,
-				ShipRoles.COMBAT_CAPITAL,
-				ShipRoles.COMBAT_FREIGHTER_LARGE,
-				ShipRoles.CARRIER_MEDIUM,
-				ShipRoles.CARRIER_LARGE,
-				ShipRoles.LINER_LARGE,
-				ShipRoles.TANKER_MEDIUM,
-				ShipRoles.TANKER_LARGE,
-				ShipRoles.PERSONNEL_LARGE
+				ShipRoles.COMBAT_LARGE, 10f,
+				ShipRoles.COMBAT_CAPITAL, 3f,
+				ShipRoles.COMBAT_FREIGHTER_LARGE, 1f,
+				ShipRoles.CARRIER_MEDIUM, 1f,
+				ShipRoles.FREIGHTER_LARGE, 1f,
+				ShipRoles.CARRIER_LARGE, 1f,
+				ShipRoles.TANKER_LARGE, 1f,
+				ShipRoles.LINER_LARGE, 1f,
+				ShipRoles.TANKER_MEDIUM, 1f,
+				ShipRoles.PERSONNEL_LARGE, 1f
 		);
 		return variantId;
 	}
 
 	
 	
-	public static String pickVariant(String factionId, Random random, String ... shipRoles) {
+	public static String pickVariant(String factionId, Random random, Object ... shipRoles) {
 		if (random == null) random = new Random();
 		
 		FactionAPI faction = Global.getSector().getFaction(factionId);
 		
 		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
-		for (String role : shipRoles) {
-			picker.add(role);
+		for (int i = 0; i < shipRoles.length; i += 2) {
+			String role = (String) shipRoles[i];
+			Float weight = (Float) shipRoles[i + 1];
+			picker.add(role, weight);
 		}
 		
 		Set<String> variantsForRole = new HashSet<String>();
@@ -179,13 +216,13 @@ public class DerelictShipEntityPlugin extends BaseCustomEntityPlugin {
 			this.ship = ship;
 			this.canHaveExtraCargo = canHaveExtraCargo;
 		}
-		public DerelictShipData(String variantId, ShipCondition condition, float duration, boolean canHaveExtraCargo) {
-			if (condition == null) condition = pickDerelictCondition(null);
-			if (duration <= 0) duration = 1000000000f;
-			durationDays = duration;
-			ship = new PerShipData(variantId, condition);
-			this.canHaveExtraCargo = canHaveExtraCargo;
-		}
+//		public DerelictShipData(String variantId, ShipCondition condition, float duration, boolean canHaveExtraCargo) {
+//			if (condition == null) condition = pickDerelictCondition(null);
+//			if (duration <= 0) duration = 1000000000f;
+//			durationDays = duration;
+//			ship = new PerShipData(variantId, condition);
+//			this.canHaveExtraCargo = canHaveExtraCargo;
+//		}
 	}
 	
 	//private CustomCampaignEntityAPI entity;
@@ -248,11 +285,11 @@ public class DerelictShipEntityPlugin extends BaseCustomEntityPlugin {
 											 (int)Math.ceil(member.getCargoCapacity() * (0.15f + 0.15f * r.nextFloat())));
 						}
 					}
-					BaseSalvageSpecial.setExtraSalvage(extraSalvage, entity.getMemoryWithoutUpdate(), -1);
+					BaseSalvageSpecial.addExtraSalvage(extraSalvage, entity.getMemoryWithoutUpdate(), -1);
 				} else if (member.getVariant().isTanker()) {
 					CargoAPI extraSalvage = Global.getFactory().createCargo(true);
 					extraSalvage.addFuel((int)Math.ceil(member.getFuelCapacity() * (0.25f + 0.25f * r.nextFloat())));
-					BaseSalvageSpecial.setExtraSalvage(extraSalvage, entity.getMemoryWithoutUpdate(), -1);
+					BaseSalvageSpecial.addExtraSalvage(extraSalvage, entity.getMemoryWithoutUpdate(), -1);
 				}
 			}
 		}
@@ -376,6 +413,15 @@ public class DerelictShipEntityPlugin extends BaseCustomEntityPlugin {
 
 	public DerelictShipData getData() {
 		return data;
+	}
+
+	@Override
+	public void appendToCampaignTooltip(TooltipMakerAPI tooltip, VisibilityLevel level) {
+		// doesn't work, since those aren't rolled for until the ship is interacted-with
+//		if (Misc.getCurrPermanentMods(data.ship.variant) > 0) {
+//			float opad = 10f;
+//			tooltip.addPara("Sensor returns are slightly abnormal.", opad);
+//		}
 	}
 	
 	

@@ -15,7 +15,7 @@ import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
 import com.fs.starfarer.api.util.Misc.Token;
 
 /**
- * AdjustRepPerson <RepActions action>
+ * AdjustRepActivePerson <RepActions action>
  */
 public class AdjustRepActivePerson extends BaseCommandPlugin {
 	

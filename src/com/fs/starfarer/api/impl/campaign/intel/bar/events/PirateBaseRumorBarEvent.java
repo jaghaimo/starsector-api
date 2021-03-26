@@ -1,20 +1,35 @@
 package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 
+import java.util.Map;
+import java.util.Random;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarData;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
+import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
+import com.fs.starfarer.api.util.Misc;
 
 public class PirateBaseRumorBarEvent extends BaseBarEvent {
 	protected PirateBaseIntel intel;
+	protected long seed;
+	
+	public boolean isAlwaysShow() {
+		return true;
+	}
 	
 	public PirateBaseRumorBarEvent(PirateBaseIntel intel) {
 		this.intel = intel;
+		seed = Misc.random.nextLong();
 	}
 
 	public boolean shouldShowAtMarket(MarketAPI market) {
@@ -27,18 +42,24 @@ public class PirateBaseRumorBarEvent extends BaseBarEvent {
 	}
 
 
-
 	transient protected boolean done = false;
 	transient protected Gender gender;
+	transient protected PersonAPI person;
 	
 	@Override
-	public void addPromptAndOption(InteractionDialogAPI dialog) {
-		super.addPromptAndOption(dialog);
+	public void addPromptAndOption(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
+		super.addPromptAndOption(dialog, memoryMap);
+		
+		Random random = new Random(seed + dialog.getInteractionTarget().getMarket().getId().hashCode());
 		
 		gender = Gender.MALE;
-		if ((float) Math.random() > 0.5f) {
+		if (random.nextFloat() > 0.5f) {
 			gender = Gender.FEMALE;
 		}
+		person = Global.getSector().getFaction(Factions.PIRATES).createRandomPerson(gender, random);
+		person.setPostId(Ranks.POST_MINORCRIMINAL);
+		person.setImportanceAndVoice(PersonImportance.VERY_LOW, random);
+		person.addTag(Tags.CONTACT_UNDERWORLD);
 		
 		String himOrHer = "him";
 		if (gender == Gender.FEMALE) himOrHer = "her";
@@ -53,17 +74,17 @@ public class PirateBaseRumorBarEvent extends BaseBarEvent {
 	}
 
 	@Override
-	public void init(InteractionDialogAPI dialog) {
-		super.init(dialog);
+	public void init(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
+		super.init(dialog, memoryMap);
 		
 		String himOrHerSelf = "himself";
 		if (gender == Gender.FEMALE) himOrHerSelf = "herself";
 		
 		TextPanelAPI text = dialog.getTextPanel();
-		text.addPara("You keep the drinks going and mostly just listen, " +
+		text.addPara("You keep the drinks flowing and mostly just listen, " +
 					 "letting the spacer unburden " + himOrHerSelf + "."); 
 		
-		PersonAPI person = Global.getSector().getFaction(Factions.PIRATES).createRandomPerson(gender);
+		//PersonAPI person = Global.getSector().getFaction(Factions.PIRATES).createRandomPerson(gender);
 		dialog.getVisualPanel().showPersonInfo(person, true);
 		
 		done = true;
@@ -71,6 +92,8 @@ public class PirateBaseRumorBarEvent extends BaseBarEvent {
 		intel.sendUpdate(PirateBaseIntel.DISCOVERED_PARAM, text);
 		
 		PortsideBarData.getInstance().removeEvent(this);
+		
+		ContactIntel.addPotentialContact(person, dialog.getInteractionTarget().getMarket(), text);
 	}
 
 	

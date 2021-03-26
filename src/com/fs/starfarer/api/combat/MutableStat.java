@@ -58,7 +58,12 @@ public class MutableStat {
 	private LinkedHashMap<String, StatMod> percentMods;
 	private LinkedHashMap<String, StatMod> multMods;
 	
-	private boolean needsRecompute = false;
+	transient private boolean needsRecompute = false;
+	
+	transient private float flatMod;
+	transient private float percentMod;
+	transient private float mult = 1f;
+	
 	public MutableStat(float base) {
 		this.base = base;
 		modified = base;
@@ -74,6 +79,8 @@ public class MutableStat {
 		if (multMods == null) {
 			multMods = new LinkedHashMap<String, StatMod>();
 		}
+		mult = 1f;
+		needsRecompute = true;
 //		if (flatAfterMult == null) {
 //			flatAfterMult = new HashMap<String, StatMod>();
 //		}
@@ -275,10 +282,9 @@ public class MutableStat {
 	}	
 	
 	private void recompute() {
-//		float flatAMMod = 0;
-		float flatMod = 0;
-		float percentMod = 0;
-		float mult = 1f;
+		flatMod = 0;
+		percentMod = 0;
+		mult = 1f;
 		
 		if (percentMods != null) {
 			for (StatMod mod : getPercentMods().values()) {
@@ -306,6 +312,21 @@ public class MutableStat {
 		needsRecompute = false;
 	}
 	
+	public float getFlatMod() {
+		if (needsRecompute) recompute();
+		return flatMod;
+	}
+
+	public float getPercentMod() {
+		if (needsRecompute) recompute();
+		return percentMod;
+	}
+
+	public float getMult() {
+		if (needsRecompute) recompute();
+		return mult;
+	}
+
 	public float computeMultMod() {
 		if (multMods == null) return 1f;
 		float mult = 1f;

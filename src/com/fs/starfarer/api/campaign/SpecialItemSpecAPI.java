@@ -2,6 +2,8 @@ package com.fs.starfarer.api.campaign;
 
 import java.util.Set;
 
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
+
 public interface SpecialItemSpecAPI {
 	String getIconName();
 	
@@ -34,4 +36,17 @@ public interface SpecialItemSpecAPI {
 	String getSoundId();
 
 	String getSoundIdDrop();
+
+	String getDescFirstPara();
+
+	void setBaseDanger(RaidDangerLevel danger);
+	RaidDangerLevel getBaseDanger();
+
+	String getManufacturer();
+
+	void setManufacturer(String manufacturer);
+	
 }
+
+
+

@@ -82,6 +82,15 @@ public class AnalyzeEntityMissionIntel extends BaseMissionIntel {
 		Global.getSector().getIntelManager().queueIntel(this);
 		
 	}
+	
+	@Override
+	public void notifyPlayerAboutToOpenIntelScreen() {
+		if (isPosted() && (!entity.isAlive() || entity.hasTag(Tags.NON_CLICKABLE))) {
+			cancel();
+		}
+	}
+
+
 
 	public SectorEntityToken getEntity() {
 		return entity;

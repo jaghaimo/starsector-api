@@ -140,8 +140,8 @@ public class FoodShortageEvent extends BaseEventPlugin {
 		
 		preEventFoodLevel = com.getStockpile();
 		com.setStockpile(com.getStockpile() * getStockpileMult());
-		com.getPlayerPriceMod().modifyMult(PRICE_MOD_ID, FOOD_PRICE_MULT);
-		com.getPlayerPriceMod().modifyFlat(PRICE_MOD_ID, FOOD_PRICE_FLAT);
+		com.getPlayerSupplyPriceMod().modifyMult(PRICE_MOD_ID, FOOD_PRICE_MULT);
+		com.getPlayerSupplyPriceMod().modifyFlat(PRICE_MOD_ID, FOOD_PRICE_FLAT);
 		
 		
 		SubmarketAPI open = market.getSubmarket("open_market");
@@ -411,8 +411,8 @@ public class FoodShortageEvent extends BaseEventPlugin {
 		ended = true;
 		CommodityOnMarketAPI com = market.getCommodityData(Commodities.FOOD);
 		com.setStockpile(com.getStockpile() / getStockpileMult());
-		com.getPlayerPriceMod().unmodifyMult(PRICE_MOD_ID);
-		com.getPlayerPriceMod().unmodifyFlat(PRICE_MOD_ID);
+		com.getPlayerSupplyPriceMod().unmodifyMult(PRICE_MOD_ID);
+		com.getPlayerSupplyPriceMod().unmodifyFlat(PRICE_MOD_ID);
 		
 		// moved to FoodShortage condition
 //		String sellId = Stats.getPlayerSellImpactMultId(Commodities.FOOD);

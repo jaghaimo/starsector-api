@@ -11,8 +11,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.intel.SystemBountyManager;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivity;
-import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.PirateBaseTier;
+import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager;
 
 /**
  * Adds the following types of fleets:

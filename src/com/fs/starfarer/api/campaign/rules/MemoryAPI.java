@@ -73,6 +73,7 @@ public interface MemoryAPI {
 	Set<String> getRequired(String key);
 	void removeAllRequired(String key);
 	void clear();
+	int getInt(String key);
 }
 
 

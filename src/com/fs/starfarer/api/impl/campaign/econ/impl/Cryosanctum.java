@@ -1,6 +1,7 @@
 package com.fs.starfarer.api.impl.campaign.econ.impl;
 
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 import com.fs.starfarer.api.util.Pair;
 
 
@@ -46,4 +47,14 @@ public class Cryosanctum extends BaseIndustry {
 		return false;
 	}
 	
+	
+	@Override
+	public RaidDangerLevel adjustCommodityDangerLevel(String commodityId, RaidDangerLevel level) {
+		return level.next();
+	}
+
+	@Override
+	public RaidDangerLevel adjustItemDangerLevel(String itemId, String data, RaidDangerLevel level) {
+		return level.next();
+	}
 }

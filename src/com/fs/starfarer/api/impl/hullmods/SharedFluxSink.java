@@ -32,10 +32,11 @@ public class SharedFluxSink extends BaseHullMod {
 		
 		CombatEngineAPI engine = Global.getCombatEngine();
 		
-		FluxSinkData data = (FluxSinkData) engine.getCustomData().get(SINK_DATA_KEY);
+		String key = SINK_DATA_KEY + "_" + ship.getId();
+		FluxSinkData data = (FluxSinkData) engine.getCustomData().get(key);
 		if (data == null) {
 			data = new FluxSinkData();
-			engine.getCustomData().put(SINK_DATA_KEY, data);
+			engine.getCustomData().put(key, data);
 			
 			for (ShipAPI module : ship.getChildModulesCopy()) {
 				if (module.getStationSlot() == null || !module.isAlive() || !Misc.isActiveModule(module)) continue;

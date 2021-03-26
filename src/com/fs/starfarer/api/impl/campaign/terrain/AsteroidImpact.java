@@ -8,24 +8,29 @@ import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.AsteroidAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class AsteroidImpact implements EveryFrameScript {
 
-	public static float SAFE_BURN_LEVEL = 5.01f;
-	public static float IMPACT_SPEED_DELTA = Global.getSettings().getSpeedPerBurnLevel();
+	//public static float SAFE_BURN_LEVEL = 5.01f;
+//	public static float IMPACT_SPEED_DELTA = Global.getSettings().getSpeedPerBurnLevel();
 	public static float DURATION_SECONDS = 0.2f;
 	
 	protected CampaignFleetAPI fleet;
 	protected float elapsed;
-	protected float angle;
-	protected float impact = IMPACT_SPEED_DELTA;
+//	protected float angle;
+//	protected float impact = IMPACT_SPEED_DELTA;
+	protected Vector2f dV;
 	
-	public AsteroidImpact(CampaignFleetAPI fleet) {
+	public AsteroidImpact(CampaignFleetAPI fleet, boolean dealDamage) {
 		this.fleet = fleet;
 		
+		//System.out.println("ADDING IMPACT TO " + fleet.getName() + " " + fleet.getId());
+		
 		Vector2f v = fleet.getVelocity();
-		angle = Misc.getAngleInDegrees(v);
+		float angle = Misc.getAngleInDegrees(v);
 		float speed = v.length();
 		if (speed < 10) angle = fleet.getFacing();
 
@@ -37,27 +42,60 @@ public class AsteroidImpact implements EveryFrameScript {
 		angle += (float) Math.random() * arc - arc/2f;
 		angle += 180f;
 		
-		if (fleet.getCurrBurnLevel() <= SAFE_BURN_LEVEL || mult <= 0) {
+		//if (fleet.getCurrBurnLevel() <= SAFE_BURN_LEVEL || mult <= 0) {
+		if (Misc.isSlowMoving(fleet) || mult <= 0) {
 			elapsed = DURATION_SECONDS;
+			dV = new Vector2f();
 		} else if (fleet.isInCurrentLocation()) {
-			Vector2f test = Global.getSector().getPlayerFleet().getLocation();
-			float dist = Misc.getDistance(test, fleet.getLocation());
-			if (dist < HyperspaceTerrainPlugin.STORM_STRIKE_SOUND_RANGE) {
-				float volumeMult = 1f - (dist / HyperspaceTerrainPlugin.STORM_STRIKE_SOUND_RANGE);
-				volumeMult = (float) Math.sqrt(volumeMult);
-				//volumeMult *= 0.4f;
-				volumeMult *= 0.75f;
-				volumeMult *= 0.5f + 0.5f * mult;
-				if (volumeMult > 0) {
-					//Global.getSoundPlayer().playSound("collision_asteroids", 1f, 1f * volumeMult, fleet.getLocation(), Misc.ZERO);
-					Global.getSoundPlayer().playSound("hit_shield_heavy_gun", 1f, 1f * volumeMult, fleet.getLocation(), Misc.ZERO);
+			if (dealDamage) {
+				WeightedRandomPicker<FleetMemberAPI> targets = new WeightedRandomPicker<FleetMemberAPI>();
+				for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+					float w = 1f;
+					switch (member.getHullSpec().getHullSize()) {
+					case CAPITAL_SHIP: w = 20f; break;
+					case CRUISER: w = 10f; break;
+					case DESTROYER: w = 5f; break;
+					case FRIGATE: w = 1f; break;
+					}
+					targets.add(member, w);
+				}
+				
+				FleetMemberAPI member = targets.pick();
+				if (member != null) {
+					float damageMult = fleet.getCurrBurnLevel() - Misc.getGoSlowBurnLevel(fleet);
+					if (damageMult < 1) damageMult = 1;
+					Misc.applyDamage(member, null, damageMult, true, "asteroid_impact", "Asteroid impact",
+									 true, null, member.getShipName() + " suffers damage from an asteroid impact");
+				} else {
+					dealDamage = false;
 				}
 			}
 			
-			if (fleet.isPlayerFleet()) {
+			if (!dealDamage && fleet.isPlayerFleet()) {
 				Global.getSector().getCampaignUI().addMessage("Asteroid impact on drive bubble", Misc.getNegativeHighlightColor());
 			}
 			
+			Vector2f test = Global.getSector().getPlayerFleet().getLocation();
+			float dist = Misc.getDistance(test, fleet.getLocation());
+			if (dist < HyperspaceTerrainPlugin.STORM_STRIKE_SOUND_RANGE) {
+//				float volumeMult = 1f - (dist / HyperspaceTerrainPlugin.STORM_STRIKE_SOUND_RANGE);
+//				volumeMult = (float) Math.sqrt(volumeMult);
+				//volumeMult *= 0.75f;
+				float volumeMult = 0.75f;
+				volumeMult *= 0.5f + 0.5f * mult;
+				if (volumeMult > 0) {
+					if (dealDamage) {
+						Global.getSoundPlayer().playSound("hit_heavy", 1f, 1f * volumeMult, fleet.getLocation(), Misc.ZERO);
+					} else {
+						Global.getSoundPlayer().playSound("hit_shield_heavy_gun", 1f, 1f * volumeMult, fleet.getLocation(), Misc.ZERO);
+					}
+				}
+			}
+			
+//			if (fleet.isPlayerFleet()) {
+//				System.out.println("wefwefwef");
+//			}
+			//mult = 2f;
 //			if (fleet.isPlayerFleet()) {
 //				System.out.println("SPAWNED ---------");
 //			}
@@ -113,6 +151,12 @@ public class AsteroidImpact implements EveryFrameScript {
 			Misc.addHitGlow(fleet.getContainingLocation(), al, iv, glowSize, color);
 		}
 		
+		dV = Misc.getUnitVectorAtDegreeAngle(angle);
+		
+		float impact = speed * 1f * (0.5f + mult * 0.5f); 
+		dV.scale(impact);
+		dV.scale(1f / DURATION_SECONDS);
+		
 //		if (fleet.isPlayerFleet()) {
 //			fleet.addFloatingText("Impact!", Misc.getNegativeHighlightColor(), 0.5f);
 //		}
@@ -120,19 +164,33 @@ public class AsteroidImpact implements EveryFrameScript {
 
 	public void advance(float amount) {
 		
-		Vector2f dir = Misc.getUnitVectorAtDegreeAngle(angle);
+		fleet.setOrbit(null);
 		
-		//dir.scale(IMPACT_SPEED_DELTA * mult * amount * 75f * (0.5f + (float) Math.random() * 0.5f));
-		
-		float mult = Misc.getFleetRadiusTerrainEffectMult(fleet);
-		dir.scale(IMPACT_SPEED_DELTA * mult * amount * 
-				(fleet.getCurrBurnLevel() * 10f) * (0.5f + (float) Math.random() * 0.5f));
+//		if (fleet.isPlayerFleet()) {
+//			System.out.println("wefwefwef");
+//		}
 		
 		Vector2f v = fleet.getVelocity();
-		fleet.setVelocity(v.x + dir.x, v.y + dir.y);
+		fleet.setVelocity(v.x + dV.x * amount, v.y + dV.y * amount);
 		
-//		Vector2f loc = fleet.getLocation();
-//		fleet.setLocation(loc.x + dir.x, loc.y + dir.y);
+//		Vector2f dir = Misc.getUnitVectorAtDegreeAngle(angle);
+//		
+//		//dir.scale(IMPACT_SPEED_DELTA * mult * amount * 75f * (0.5f + (float) Math.random() * 0.5f));
+//		
+//		float mult = Misc.getFleetRadiusTerrainEffectMult(fleet);
+//		mult = 1f;
+////		if (mult > 1f || amount ) {
+////			System.out.println("wefwefwefe");
+////			mult = Misc.getFleetRadiusTerrainEffectMult(fleet);
+////		}
+//		dir.scale(IMPACT_SPEED_DELTA * mult * amount * 
+//				(Math.min(20f, fleet.getCurrBurnLevel()) * 50f) * (0.5f + (float) Math.random() * 0.5f));
+//		
+//		Vector2f v = fleet.getVelocity();
+//		fleet.setVelocity(v.x + dir.x, v.y + dir.y);
+//		
+////		Vector2f loc = fleet.getLocation();
+////		fleet.setLocation(loc.x + dir.x, loc.y + dir.y);
 		
 		elapsed += amount;
 		

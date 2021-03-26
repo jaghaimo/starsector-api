@@ -14,16 +14,18 @@ import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Sounds;
 import com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.AntiInspectionOrders;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption;
 import com.fs.starfarer.api.ui.IntelUIAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlugin {
 
 	//public static float BRIBE_BASE = 0;
-	public static int BRIBE_MULT = 50000;
-	public static int BRIBE_MAX = 1000000;
+	public static int BRIBE_MULT = 10000;
+	public static int BRIBE_MAX = 100000;
 	
 	private static enum OptionId {
 		INIT,
@@ -83,7 +85,7 @@ public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlu
 //		int bribe = (int) Math.round(BRIBE_BASE + threshold * BRIBE_MULT);
 //		return bribe;
 		
-		int bribe = (int) (Math.pow(2, HegemonyInspectionManager.getInstance().getNumAttempts()) * BRIBE_MULT);
+		int bribe = (int) (Math.pow(1.5f, HegemonyInspectionManager.getInstance().getNumAttempts()) * BRIBE_MULT);
 		if (bribe > BRIBE_MAX) bribe = BRIBE_MAX;
 		return bribe;
 		
@@ -101,7 +103,11 @@ public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlu
 			int bribe = computeBribeAmount();
 			textPanel.addPara("Sufficient funding allocated to proper official and unofficial actors should " +
 					"ensure that the inspection reaches a satisfactory outcome.");
+
 			if (inConfirm) {
+				textPanel.addPara("Once this order is given and the funds and agents dispatched, it can not be " +
+								  "rescinded.");
+				
 				int credits = (int) playerFleet.getCargo().getCredits().get();
 				Color costColor = Misc.getHighlightColor();
 				if (bribe > credits) costColor = Misc.getNegativeHighlightColor();
@@ -117,8 +123,10 @@ public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlu
 				textPanel.addPara("You have %s available.", Misc.getHighlightColor(),
 						Misc.getDGSCredits(credits));
 			} else {
-				textPanel.addPara("You've allocated %s to the task. Giving different orders will allow you to recover these funds.", Misc.getHighlightColor(),
-						Misc.getDGSCredits(bribe));
+				textPanel.addPara("You've allocated %s to the task and have otherwise committed to this course of action.",
+						 		  Misc.getHighlightColor(), Misc.getDGSCredits(bribe));
+//				textPanel.addPara("You've allocated %s to the task. Giving different orders will allow you to recover these funds.", Misc.getHighlightColor(),
+//						Misc.getDGSCredits(bribe));
 			}
 			break;
 		case COMPLY:
@@ -142,14 +150,18 @@ public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlu
 	protected void addChoiceOptions() {
 		options.clearOptions();
 
-		options.addOption("Order the local authorities to comply with the inspection", OptionId.COMPLY, null);
-		options.addOption("Allocate sufficient funds to bribe or otherwise handle the inspectors", OptionId.BRIBE, null);
-		options.addOption("Order your local forces to resist the inspection", OptionId.RESIST, null);
+		AntiInspectionOrders curr = intel.getOrders();
+		if (curr != AntiInspectionOrders.BRIBE) {
+			options.addOption("Order the local authorities to comply with the inspection", OptionId.COMPLY, null);
+			options.addOption("Allocate sufficient funds to bribe or otherwise handle the inspectors", OptionId.BRIBE, null);
+			options.addOption("Order your local forces to resist the inspection", OptionId.RESIST, null);
+	
+			dialog.setOptionColor(OptionId.BRIBE, Misc.getStoryOptionColor());
+		}
 		
 		options.addOption("Dismiss", OptionId.LEAVE, null);
 		options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
 		
-		AntiInspectionOrders curr = intel.getOrders();
 		if (curr == AntiInspectionOrders.COMPLY) {
 			options.setEnabled(OptionId.COMPLY, false);
 		}
@@ -179,6 +191,21 @@ public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlu
 				options.setEnabled(OptionId.CONFIRM, false);
 				options.setTooltip(OptionId.CONFIRM, "Not enough credits.");
 			}
+			
+			SetStoryOption.set(dialog, 1, OptionId.CONFIRM, "bribeAICoreInspection", Sounds.STORY_POINT_SPEND_TECHNOLOGY,
+					"Issued bribe to prevent " + intel.getFaction().getDisplayName() + " AI core inspection");
+//			StoryOptionParams params = new StoryOptionParams(OptionId.BRIBE, 1, "bribeAICoreInspection", Sounds.STORY_POINT_SPEND_TECHNOLOGY);
+//			SetStoryOption.set(dialog, params, new BaseOptionStoryPointActionDelegate(dialog, params) {
+//				@Override
+//				public void createDescription(TooltipMakerAPI info) {
+//					float opad = 10f;
+//					info.setParaInsigniaLarge();
+//					info.addPara("Virtually guarantees that the inspection will not find any AI cores.",
+//							-opad);
+//					info.addSpacer(opad * 2f);
+//					addActionCostSection(info);
+//				}
+//			});
 		}
 	}
 	
@@ -190,7 +217,8 @@ public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlu
 		OptionId option = (OptionId) optionData;
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(option);
 		}
 		
 		switch (option) {

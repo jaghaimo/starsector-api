@@ -66,6 +66,8 @@ public interface CampaignTerrainPlugin {
 	
 	
 	boolean hasAIFlag(Object flag);
+	boolean hasAIFlag(Object flag, CampaignFleetAPI fleet);
+	
 	/**
 	 * Mainly intended for AI use.
 	 * @param locFrom
@@ -92,6 +94,10 @@ public interface CampaignTerrainPlugin {
 	String getIconSpriteName();
 
 	void renderOnRadar(Vector2f radarCenter, float factor, float alphaMult);
+
+	String getNameAOrAn();
+
+	String getNameForTooltip();
 }
 
 

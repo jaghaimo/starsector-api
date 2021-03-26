@@ -6,6 +6,7 @@ import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.impl.campaign.Tuning;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseEventManager;
@@ -30,6 +31,7 @@ public class PirateBaseManager extends BaseEventManager {
 	protected float extraDays = 0;
 	
 	protected int numDestroyed = 0;
+	protected int numSpawnChecksToSkip = 0;
 	
 	public PirateBaseManager() {
 		super();
@@ -64,6 +66,11 @@ public class PirateBaseManager extends BaseEventManager {
 	protected Random random = new Random();
 	@Override
 	protected EveryFrameScript createEvent() {
+		if (numSpawnChecksToSkip > 0) {
+			numSpawnChecksToSkip--;
+			return null;
+		}
+		
 		if (random.nextFloat() < CHECK_PROB) return null;
 		
 		StarSystemAPI system = pickSystemForPirateBase();
@@ -94,12 +101,17 @@ public class PirateBaseManager extends BaseEventManager {
 		return picker.pick();
 	}
 	
+	public float getUnadjustedDaysSinceStart() {
+		float days = Global.getSector().getClock().getElapsedDaysSince(start);
+		return days;
+	}
+	
 	public float getDaysSinceStart() {
 		float days = Global.getSector().getClock().getElapsedDaysSince(start) + extraDays;
 		if (Misc.isFastStartExplorer()) {
-			days += 180f - 30f;
+			days += Tuning.FAST_START_EXTRA_DAYS - 30f;
 		} else if (Misc.isFastStart()) {
-			days += 180f + 60f;
+			days += Tuning.FAST_START_EXTRA_DAYS + 60f;
 		}
 		return days;
 	}
@@ -109,7 +121,7 @@ public class PirateBaseManager extends BaseEventManager {
 	 * @return
 	 */
 	public float getStandardTimeFactor() {
-		float timeFactor = (PirateBaseManager.getInstance().getDaysSinceStart() - 180f) / (365f * 2f);
+		float timeFactor = (PirateBaseManager.getInstance().getDaysSinceStart() - Tuning.FAST_START_EXTRA_DAYS) / (Tuning.DAYS_UNTIL_FULL_TIME_FACTOR);
 		if (timeFactor < 0) timeFactor = 0;
 		if (timeFactor > 1) timeFactor = 1;
 		return timeFactor;
@@ -174,6 +186,8 @@ public class PirateBaseManager extends BaseEventManager {
 		WeightedRandomPicker<StarSystemAPI> picker = new WeightedRandomPicker<StarSystemAPI>(random);
 		
 		for (StarSystemAPI system : Global.getSector().getStarSystems()) {
+			if (system.hasPulsar()) continue;
+			
 			float days = Global.getSector().getClock().getElapsedDaysSince(system.getLastPlayerVisitTimestamp());
 			if (days < 45f) continue;
 			if (system.getCenter().getMemoryWithoutUpdate().contains(RECENTLY_USED_FOR_BASE)) continue;
@@ -233,6 +247,9 @@ public class PirateBaseManager extends BaseEventManager {
 	
 	public void incrDestroyed() {
 		numDestroyed++;
+		numSpawnChecksToSkip = Math.max(numSpawnChecksToSkip, (Tuning.PIRATE_BASE_MIN_TIMEOUT_MONTHS + 
+					Misc.random.nextInt(Tuning.PIRATE_BASE_MAX_TIMEOUT_MONTHS - Tuning.PIRATE_BASE_MIN_TIMEOUT_MONTHS + 1))
+				* 3); // checks happen every 10 days on average, *3 to get months
 	}
 	
 }

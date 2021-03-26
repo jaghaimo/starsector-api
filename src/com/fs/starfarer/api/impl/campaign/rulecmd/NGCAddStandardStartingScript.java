@@ -8,11 +8,13 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.Script;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.FleetInflater;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.PersistentUIDataAPI.AbilitySlotAPI;
+import com.fs.starfarer.api.campaign.PersistentUIDataAPI.AbilitySlotsAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.CharacterCreationData;
@@ -31,8 +33,8 @@ import com.fs.starfarer.api.impl.campaign.tutorial.SpacerObligation;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.loading.VariantSource;
 import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.util.WeightedRandomPicker;
 import com.fs.starfarer.api.util.Misc.Token;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 /**
  *	$ngcAddOfficer
@@ -92,6 +94,7 @@ public class NGCAddStandardStartingScript extends BaseCommandPlugin {
 				
 				cargo.addCrew(crew);
 				cargo.addSupplies(10);
+				cargo.addCommodity(Commodities.HEAVY_MACHINERY, 10);
 				cargo.addFuel(cargo.getMaxFuel() * 0.5f);
 				
 				
@@ -125,9 +128,9 @@ public class NGCAddStandardStartingScript extends BaseCommandPlugin {
 							//PersonAPI officer = OfficerManagerEvent.createOfficer(Global.getSector().getPlayerFaction(), 1, true, SkillPickPreference.NON_CARRIER);
 							PersonAPI officer = Global.getSector().getPlayerFaction().createRandomPerson(new Random());
 							officer.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 1);
-							officer.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
+							//officer.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
 							officer.setRankId(Ranks.SPACE_LIEUTENANT);
-							officer.setPostId(Ranks.POST_MERCENARY);
+							officer.setPostId(Ranks.POST_OFFICER);
 							officer.setPersonality(Personalities.STEADY);
 							officer.getStats().refreshCharacterStatsEffects();
 							
@@ -150,7 +153,7 @@ public class NGCAddStandardStartingScript extends BaseCommandPlugin {
 					PersonAPI mainContact = TutorialMissionIntel.createMainContact(ancyra);
 					PersonAPI jangalaContact = TutorialMissionIntel.getJangalaContact();
 					
-					TutorialMissionIntel.endGalatiaPortionOfMission(!spacer);
+					TutorialMissionIntel.endGalatiaPortionOfMission(!spacer, false);
 					
 					if (spacer) {
 						new SpacerObligation();
@@ -227,6 +230,16 @@ public class NGCAddStandardStartingScript extends BaseCommandPlugin {
 					}
 					
 					fleet.clearAbilities();
+					AbilitySlotsAPI slots = Global.getSector().getUIData().getAbilitySlotsAPI();
+					for (int i = 0; i < 5; i++) {
+						slots.setCurrBarIndex(i);
+						for (int j = 0; j < 10; j++) {
+							AbilitySlotAPI slot = slots.getCurrSlotsCopy().get(j);
+							slot.setAbilityId(null);
+						}
+					}
+					
+					
 					fleet.clearFloatingText();
 					fleet.setTransponderOn(false);
 					

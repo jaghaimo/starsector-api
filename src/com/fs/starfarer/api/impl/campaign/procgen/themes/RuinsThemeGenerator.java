@@ -94,6 +94,7 @@ public class RuinsThemeGenerator extends BaseThemeGenerator {
 				StarSystemData data = mainCandidates.get(j);
 				populateMain(data);
 				
+				data.system.addTag(Tags.THEME_INTERESTING);
 				data.system.addTag(Tags.THEME_RUINS);
 				data.system.addTag(Tags.THEME_RUINS_MAIN);
 				ruinSystems.add(data);
@@ -112,6 +113,7 @@ public class RuinsThemeGenerator extends BaseThemeGenerator {
 				
 				populateNonMain(data);
 				
+				data.system.addTag(Tags.THEME_INTERESTING);
 				data.system.addTag(Tags.THEME_RUINS);
 				data.system.addTag(Tags.THEME_RUINS_SECONDARY);
 				ruinSystems.add(data);
@@ -198,15 +200,15 @@ public class RuinsThemeGenerator extends BaseThemeGenerator {
 		
 		switch (level) {
 		case HIGH:
-			probGate = 0.75f;
+			probGate = 0.5f;
 			probRelay = 1f;
 			break;
 		case MEDIUM:
-			probGate = 0.5f;
+			probGate = 0.3f;
 			probRelay = 0.75f;
 			break;
 		case LOW:
-			probGate = 0.25f;
+			probGate = 0.2f;
 			probRelay = 0.5f;
 			break;
 		}
@@ -226,7 +228,6 @@ public class RuinsThemeGenerator extends BaseThemeGenerator {
 		
 		WeightedRandomPicker<String> factions = SalvageSpecialAssigner.getNearbyFactions(random, system.getCenter(),
 												15f, 5f, 5f);
-		
 		addInactiveGate(data, probGate, 0.75f, 0.75f, factions);
 		
 		addShipGraveyard(data, 0.25f, 1, 1, factions);

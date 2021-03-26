@@ -7,6 +7,7 @@ public class DefaultFleetInflaterParams {
 	public Long timestamp;
 	public Boolean persistent;
 	public float quality;
+	public Integer averageSMods;
 	public Boolean allWeapons;
 	public ShipPickMode mode;
 	public String factionId;

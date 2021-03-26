@@ -9,6 +9,7 @@ public interface OfficerLevelupPlugin {
 
 	long getXPForLevel(int level);
 	int getMaxLevel(PersonAPI person);
+	int getMaxEliteSkills(PersonAPI person);
 	
 	List<String> pickLevelupSkills(PersonAPI person, Random random);
 }

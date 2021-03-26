@@ -69,6 +69,7 @@ public class ShipBlueprintItemPlugin extends BaseSpecialItemPlugin implements Bl
 		float brY = cy - 18f;
 		
 		String hullId = stack.getSpecialDataIfSpecial().getData();
+		
 		boolean known = Global.getSector().getPlayerFaction().knowsShip(hullId);
 		
 		float mult = 1f;
@@ -104,10 +105,31 @@ public class ShipBlueprintItemPlugin extends BaseSpecialItemPlugin implements Bl
 	@Override
 	public int getPrice(MarketAPI market, SubmarketAPI submarket) {
 		if (ship != null) {
-			float base = super.getPrice(market, submarket);
+			//float base = super.getPrice(market, submarket);
+			float base = 0;
+			switch (ship.getHullSize()) {
+			case CAPITAL_SHIP:
+				base = Global.getSettings().getFloat("blueprintBasePriceCapital");;
+				break;
+			case CRUISER:
+				base = Global.getSettings().getFloat("blueprintBasePriceCruiser");;
+				break;
+			case DESTROYER:
+				base = Global.getSettings().getFloat("blueprintBasePriceDestroyer");;
+				break;
+			case FRIGATE:
+			case FIGHTER:
+				base = Global.getSettings().getFloat("blueprintBasePriceFrigate");;
+				break;
+			}
 			return (int)(base + ship.getBaseValue() * getItemPriceMult());
 		}
 		return super.getPrice(market, submarket);
+	}
+	
+	@Override
+	protected float getItemPriceMult() {
+		return Global.getSettings().getFloat("blueprintPriceOriginalShipMult");
 	}
 	
 	@Override
@@ -195,6 +217,9 @@ public class ShipBlueprintItemPlugin extends BaseSpecialItemPlugin implements Bl
 	public String resolveDropParamsToSpecificItemData(String params, Random random) throws JSONException {
 		if (params == null || params.isEmpty()) return null;
 		
+		if (!params.startsWith("{")) {
+			return params;
+		}
 		
 		JSONObject json = new JSONObject(params);
 		

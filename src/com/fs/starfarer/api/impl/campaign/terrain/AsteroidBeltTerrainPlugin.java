@@ -153,9 +153,9 @@ public class AsteroidBeltTerrainPlugin extends BaseRingTerrain implements Astero
 //								"Inside " + getNameForTooltip().toLowerCase(), 1f - penalty, 
 //								fleet.getStats().getFleetwideMaxBurnMod());
 			
-			if (fleet.getCurrBurnLevel() <= RingSystemTerrainPlugin.MAX_SNEAK_BURN_LEVEL) {
+			if (Misc.isSlowMoving(fleet)) {
 				fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_2",
-									"Hiding inside " + getNameForTooltip().toLowerCase(), RingSystemTerrainPlugin.VISIBLITY_MULT, 
+									"Hiding inside " + getNameForTooltip().toLowerCase(), RingSystemTerrainPlugin.getVisibilityMult(fleet), 
 									fleet.getStats().getDetectedRangeMod());
 			}
 //			if (fleet.isPlayerFleet()) {
@@ -163,6 +163,7 @@ public class AsteroidBeltTerrainPlugin extends BaseRingTerrain implements Astero
 //			}
 			String key = "$asteroidImpactTimeout";
 			String sKey = "$skippedImpacts";
+			String recentKey = "$recentImpact";
 			float probPerSkip = 0.15f;
 			float maxProb = 1f;
 			float maxSkipsToTrack = 7;
@@ -179,8 +180,11 @@ public class AsteroidBeltTerrainPlugin extends BaseRingTerrain implements Astero
 				hitProb = expire / durPerSkip * probPerSkip;
 				if (hitProb > maxProb) hitProb = maxProb;
 				if ((float) Math.random() < hitProb) {
-					fleet.addScript(new AsteroidImpact(fleet));
+					boolean hadRecent = mem.is(recentKey, true);
+					hadRecent &= (float) Math.random() > 0.5f;
+					fleet.addScript(new AsteroidImpact(fleet, hadRecent));
 					mem.set(sKey, true, 0);
+					mem.set(recentKey, true, 0.5f + 1f * (float) Math.random());
 				} else {
 					mem.set(sKey, true, Math.min(expire + durPerSkip, maxSkipsToTrack * durPerSkip));
 				}
@@ -229,8 +233,12 @@ public class AsteroidBeltTerrainPlugin extends BaseRingTerrain implements Astero
 		return true;
 	}
 	
-	protected String getNameForTooltip() {
+	public String getNameForTooltip() {
 		return "Asteroid Belt";
+	}
+	
+	public String getNameAOrAn() {
+		return "an";
 	}
 	
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded) {
@@ -265,12 +273,19 @@ public class AsteroidBeltTerrainPlugin extends BaseRingTerrain implements Astero
 //				//Strings.X + penaltyStr
 //		);
 		
-		tooltip.addPara("Chance of asteroid impacts on the drive field bubble. The impacts do not present a " +
-				"direct danger to ships but may briefly knock the fleet off course.", nextPad);
+//		tooltip.addPara("Chance of asteroid impacts on the drive field bubble. The impacts do not present a " +
+//				"direct danger to ships but may briefly knock the fleet off course.", nextPad);
+		tooltip.addPara("Chance of asteroid impacts that briefly knock the fleet off course and " +
+				"may occasionally impact ships directly, dealing moderate damage.", nextPad);
 		
-		tooltip.addPara("Smaller fleets are usually able to avoid the heavier impacts, and fleets traveling at burn %s or below do not risk impacts at all.", pad,
+//		tooltip.addPara("Smaller fleets are usually able to avoid the heavier impacts, and fleets traveling at burn %s or below do not risk impacts at all.", pad,
+//				highlight,
+//				"" + (int)Math.round(AsteroidImpact.SAFE_BURN_LEVEL)
+//		);
+		tooltip.addPara("Smaller fleets are usually able to avoid the heavier impacts, " +
+				"and slow-moving fleets do not risk impacts at all.", pad,
 				highlight,
-				"" + (int)Math.round(AsteroidImpact.SAFE_BURN_LEVEL)
+				"slow-moving"
 		);
 		
 //		tooltip.addPara("Reduces the range at which stationary fleets inside it can be detected by %s.", pad,
@@ -281,9 +296,10 @@ public class AsteroidBeltTerrainPlugin extends BaseRingTerrain implements Astero
 		String stop = Global.getSettings().getControlStringForEnumName("GO_SLOW");
 		tooltip.addPara("Reduces the range at which stationary or slow-moving* fleets inside it can be detected by %s.", nextPad,
 				highlight, 
-				"" + (int) ((1f - RingSystemTerrainPlugin.VISIBLITY_MULT) * 100) + "%"
+				"" + (int) ((1f - RingSystemTerrainPlugin.getVisibilityMult(Global.getSector().getPlayerFleet())) * 100) + "%"
 		);
-		tooltip.addPara("*Press and hold %s to stop; combine with holding the left mouse button down to move slowly.", nextPad,
+		tooltip.addPara("*Press and hold %s to stop; combine with holding the left mouse button down to move slowly. " +
+				"A slow-moving fleet moves at a burn level of half that of its slowest ship.", nextPad,
 				Misc.getGrayColor(), highlight, 
 				stop
 		);
@@ -317,7 +333,7 @@ public class AsteroidBeltTerrainPlugin extends BaseRingTerrain implements Astero
 	}
 	
 	public boolean hasAIFlag(Object flag) {
-		return flag == TerrainAIFlags.REDUCES_SPEED_LARGE;
+		return flag == TerrainAIFlags.REDUCES_SPEED_LARGE || flag == TerrainAIFlags.DANGEROUS_UNLESS_GO_SLOW;
 	}
 
 	

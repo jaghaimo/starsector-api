@@ -64,7 +64,8 @@ public class TutorialWelcomeDialogPluginImpl implements InteractionDialogPlugin 
 		OptionId option = (OptionId) optionData;
 		
 		if (text != null) {
-			textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
+			dialog.addOptionSelectedText(option);
 		}
 		
 		switch (option) {
@@ -86,7 +87,8 @@ public class TutorialWelcomeDialogPluginImpl implements InteractionDialogPlugin 
 							  Misc.getHighlightColor(),
 							  "\"" + ability.getName() + "\"");
 
-			textPanel.addParagraph("It's possible to scavenge through the same debris field multiple times, but there are diminishing returns and increased risk with each attempt. Only scavenge once here.");
+			//textPanel.addParagraph("It's possible to scavenge through the same debris field multiple times, but there are diminishing returns and increased risk with each attempt. Only scavenge once here.");
+			textPanel.addParagraph("Scavenging requires Heavy Machinery, but there is some in your cargo holds.");
 			
 			Global.getSector().getCharacterData().addAbility(ability.getId());
 			AbilitySlotsAPI slots = Global.getSector().getUIData().getAbilitySlotsAPI();

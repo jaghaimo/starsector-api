@@ -10,45 +10,56 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
+import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignClockAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.PlayerMarketTransaction;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.campaign.events.CampaignEventTarget;
+import com.fs.starfarer.api.campaign.listeners.ColonyInteractionListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AdminData;
+import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
 import com.fs.starfarer.api.characters.OfficerDataAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
-import com.fs.starfarer.api.characters.FullName.Gender;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Skills;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
+import com.fs.starfarer.api.impl.campaign.rulecmd.CallEvent.CallableEvent;
 import com.fs.starfarer.api.plugins.OfficerLevelupPlugin;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.util.WeightedRandomPicker;
 import com.fs.starfarer.api.util.Misc.Token;
+import com.fs.starfarer.api.util.TimeoutTracker;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 /**
  * 
  * @author Alex Mosolov
+ * 
+ * extends BaseEventPlugin for in-dev savefile compatibility reasons only
  *
- * Copyright 2014 Fractal Softworks, LLC
+ * Copyright 2019 Fractal Softworks, LLC
  */
-public class OfficerManagerEvent extends BaseEventPlugin {
+public class OfficerManagerEvent extends BaseEventPlugin implements CallableEvent, ColonyInteractionListener, EveryFrameScript {
 	
 	public static class AvailableOfficer {
 		public PersonAPI person;
 		public String marketId;
 		public int hiringBonus;
 		public int salary;
+		public float timeRemaining = 0f;
 		public AvailableOfficer(PersonAPI person, String marketId, int hiringBonus, int salary) {
 			this.person = person;
 			this.marketId = marketId;
@@ -60,86 +71,130 @@ public class OfficerManagerEvent extends BaseEventPlugin {
 	
 	public static Logger log = Global.getLogger(OfficerManagerEvent.class);
 	
-	private IntervalUtil addTracker = new IntervalUtil(0.5f, 1.5f);
 	private IntervalUtil removeTracker = new IntervalUtil(1f, 3f);
 	
 	private List<AvailableOfficer> available = new ArrayList<AvailableOfficer>();
 	private List<AvailableOfficer> availableAdmins = new ArrayList<AvailableOfficer>();
 	
-	public void init(String type, CampaignEventTarget eventTarget) {
-		super.init(type, eventTarget);
+	private TimeoutTracker<String> recentlyChecked = new TimeoutTracker<String>();
+	
+	protected long seed = 0;
+	
+	public OfficerManagerEvent() {
 		readResolve();
+		Global.getSector().getListenerManager().addListener(this);
 	}
 	
 	Object readResolve() {
 		if (availableAdmins == null) {
 			availableAdmins = new ArrayList<AvailableOfficer>();
 		}
+		if (recentlyChecked == null) {
+			recentlyChecked = new TimeoutTracker<String>();
+		}
+		if (seed == 0) {
+			seed = Misc.random.nextLong();
+		}
+//		Global.getSector().getListenerManager().addListener(this);
 		return this;
 	}
 	
-	public void startEvent() {
-		super.startEvent();
+	public void reportPlayerClosedMarket(MarketAPI market) {}
+
+	public void reportPlayerOpenedMarket(MarketAPI market) {
+		if (recentlyChecked.contains(market.getId())) return;
+		
+		if (market.isPlanetConditionMarketOnly()) return;
+		if (market.getFaction().isNeutralFaction()) return;
+		if (!market.isInEconomy()) return;
+		if (market.hasTag(Tags.MARKET_NO_OFFICER_SPAWN)) return;
+		
+		
+		pruneFromRemovedMarkets();
+		
+		float officerProb = market.getStats().getDynamic().getMod(Stats.OFFICER_PROB_MOD).computeEffective(0f);
+		float additionalProb = market.getStats().getDynamic().getMod(Stats.OFFICER_ADDITIONAL_PROB_MULT_MOD).computeEffective(0f);
+		float mercProb = market.getStats().getDynamic().getMod(Stats.OFFICER_IS_MERC_PROB_MOD).computeEffective(0f);
+		float adminProb = market.getStats().getDynamic().getMod(Stats.ADMIN_PROB_MOD).computeEffective(0f);
+		//adminProb = 1f;
+		
+		log.info("Spawning officers/admins at " + market.getId());
+		log.info("    officerProb: " + officerProb);
+		log.info("    additionalProb: " + additionalProb);
+		log.info("    mercProb: " + mercProb);
+		log.info("    adminProb: " + adminProb);
+		log.info("");
+		
+		
+		CampaignClockAPI clock = Global.getSector().getClock();
+		long mult = clock.getCycle() * 12L + clock.getMonth();
+		
+		//Random random = new Random(seed + market.getId().hashCode() * mult);
+		Random random = Misc.getRandom(seed + market.getId().hashCode() * mult, 11);
+		//random = new Random();
+		
+		float dur = getOfficerDuration(random);
+		recentlyChecked.add(market.getId(), dur * 0.5f);
+		
+		if (random.nextFloat() < officerProb) {
+			boolean merc = random.nextFloat() < mercProb;
+			AvailableOfficer officer = createOfficer(merc, market, random);
+			officer.timeRemaining = dur;
+			addAvailable(officer);
+			log.info("Added officer at " + officer.marketId + "");
+			
+			if (random.nextFloat() < officerProb * additionalProb) {
+				merc = random.nextFloat() < mercProb;
+				officer = createOfficer(merc, market, random);
+				officer.timeRemaining = dur;
+				addAvailable(officer);
+				log.info("Added officer at [" + officer.marketId + "]");
+			}
+		}
+		
+		if (random.nextFloat() < adminProb) {
+			AvailableOfficer officer = createAdmin(market, random);
+			officer.timeRemaining = dur;
+			addAvailableAdmin(officer);
+			log.info("Added admin at [" + officer.marketId + "]");
+		}
+	}
+	
+	protected float getOfficerDuration(Random random) {
+		return 60f + 60f * random.nextFloat();
 	}
 	
 	public void advance(float amount) {
-		//if (true) return;
-		
-		if (!isEventStarted()) return;
-		if (isDone()) return;
-		
 		float days = Global.getSector().getClock().convertToDays(amount);
 		
-		addTracker.advance(days);
-		if (addTracker.intervalElapsed()) {
-			pruneFromRemovedMarkets();
-			
-			int maxOfficers = (int) Global.getSettings().getFloat("officerMaxHireable");
-			if (available.size() < maxOfficers) {
-				AvailableOfficer officer = createOfficer();
-//				if (Global.getSettings().isDevMode() && (float) Math.random() > 0.75f &&
-//						Global.getSector().isInNewGameAdvance() &&
-//						Global.getSector().getEconomy().getMarket("jangala") != null) {
-//					officer.marketId = "jangala";
-//				}
-				//officer.marketId = "jangala";
-				addAvailable(officer);
-				log.info("Added officer at " + officer.marketId + ", " + available.size() + " total available");
-			}
-			int maxAdmins = (int) Global.getSettings().getFloat("adminMaxHireable");
-			if (availableAdmins.size() < maxAdmins) {
-				AvailableOfficer officer = createAdmin();
-//				if (Global.getSettings().isDevMode() && ((float) Math.random() > 0.75f) &&
-//						(Global.getSector().isInNewGameAdvance()) &&
-//						Global.getSector().getEconomy().getMarket("jangala") != null) {
-//					officer.marketId = "jangala";
-//				}
-				addAvailableAdmin(officer);
-				log.info("Added admin at " + officer.marketId + ", " + availableAdmins.size() + " total available");
-			}
-		}
+		recentlyChecked.advance(days);
+		
+//		if (!Global.getSector().getListenerManager().hasListener(this)) {
+//			Global.getSector().getListenerManager().addListener(this);
+//		}
 		
 		removeTracker.advance(days);
 		if (removeTracker.intervalElapsed()) {
 			pruneFromRemovedMarkets();
 			
-			WeightedRandomPicker<AvailableOfficer> picker = new WeightedRandomPicker<AvailableOfficer>();
-			picker.addAll(available);
-			picker.addAll(availableAdmins);
-			AvailableOfficer pick = picker.pick();
-			if (pick != null) {
-				if (available.contains(pick)) {
-					log.info("Removed officer from " + pick.marketId + ", " + available.size() + " total available");
-				} else {
-					log.info("Removed freelance admin from " + pick.marketId + ", " + availableAdmins.size() + " total available");
+			float interval = removeTracker.getIntervalDuration();
+			
+			for (AvailableOfficer curr : new ArrayList<AvailableOfficer>(available)) {
+				curr.timeRemaining -= interval;
+				if (curr.timeRemaining <= 0) {
+					removeAvailable(curr);
+					log.info("Removed officer from [" + curr.marketId + "]");
 				}
-				removeAvailable(pick);
+			}
+			for (AvailableOfficer curr : new ArrayList<AvailableOfficer>(availableAdmins)) {
+				curr.timeRemaining -= interval;
+				if (curr.timeRemaining <= 0) {
+					removeAvailable(curr);
+					log.info("Removed freelance admin from [" + curr.marketId + "]");
+				}
 			}
 		}
 		
-//		for (AvailableOfficer officer : available) {
-//			System.out.println("Name: " + officer.person.getName().getFullName() + ", id: " + officer.person.getId());
-//		}
 	}
 	
 	public void pruneFromRemovedMarkets() {
@@ -198,6 +253,7 @@ public class OfficerManagerEvent extends BaseEventPlugin {
 		officer.person.getMemoryWithoutUpdate().unset("$ome_hireable");
 		officer.person.getMemoryWithoutUpdate().unset("$ome_eventRef");
 		officer.person.getMemoryWithoutUpdate().unset("$ome_hiringBonus");
+		officer.person.getMemoryWithoutUpdate().unset("$ome_salary");
 	}
 	
 	public static String pickPortrait(FactionAPI faction, Gender gender) {
@@ -224,22 +280,22 @@ public class OfficerManagerEvent extends BaseEventPlugin {
 		return picker.pick();
 	}
 	
-	private AvailableOfficer createAdmin() {
-		WeightedRandomPicker<MarketAPI> marketPicker = new WeightedRandomPicker<MarketAPI>();
-		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
-			marketPicker.add(market, market.getSize());
-		}
-		MarketAPI market = marketPicker.pick();
+	protected AvailableOfficer createAdmin(MarketAPI market, Random random) {
+//		WeightedRandomPicker<MarketAPI> marketPicker = new WeightedRandomPicker<MarketAPI>();
+//		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
+//			marketPicker.add(market, market.getSize());
+//		}
+//		MarketAPI market = marketPicker.pick();
 		if (market == null) return null;
 
 		WeightedRandomPicker<Integer> tierPicker = new WeightedRandomPicker<Integer>();
-		tierPicker.add(0, 50);
-		tierPicker.add(1, 45);
+		tierPicker.add(0, 25);
+		tierPicker.add(1, 70);
 		tierPicker.add(2, 5);
 
 		int tier = tierPicker.pick();
 		
-		PersonAPI person = createAdmin(market.getFaction(), tier, null);
+		PersonAPI person = createAdmin(market.getFaction(), tier, random);
 		person.setFaction(Factions.INDEPENDENT);
 		
 		String hireKey = "adminHireTier" + tier;
@@ -297,97 +353,162 @@ public class OfficerManagerEvent extends BaseEventPlugin {
 	}
 	
 	
-	protected AvailableOfficer createOfficer() {
-		WeightedRandomPicker<MarketAPI> marketPicker = new WeightedRandomPicker<MarketAPI>();
-		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
-			marketPicker.add(market, market.getSize());
-		}
-		MarketAPI market = marketPicker.pick();
+	protected AvailableOfficer createOfficer(boolean isMerc, MarketAPI market, Random random) {
+//		WeightedRandomPicker<MarketAPI> marketPicker = new WeightedRandomPicker<MarketAPI>();
+//		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
+//			marketPicker.add(market, market.getSize());
+//		}
+//		MarketAPI market = marketPicker.pick();
 		if (market == null) return null;
 		
 		//FactionAPI faction = Global.getSector().getFaction(Factions.INDEPENDENT);
 
-		int level = (int)(Math.random() * 5) + 1;
+		int level = 1;
+		if ((float) Math.random() > 0.75f) level = 2;
 		
-		PersonAPI person = createOfficerInternal(market.getFaction(), level, true);
+		float payMult = 1f;
+		
+		PersonAPI person = null;
+		if (isMerc) {
+			payMult = Global.getSettings().getFloat("officerMercPayMult");
+			
+			int minLevel = Global.getSettings().getInt("officerMercMinLevel");
+			int maxLevel = Global.getSettings().getInt("officerMercMaxLevel");
+			level = minLevel + Misc.random.nextInt(maxLevel + 1 - minLevel);
+			
+			int numElite = 1;
+			if (level == maxLevel) numElite = 2;
+			person = createMercInternal(market.getFaction(), level, numElite, true, random);
+			
+			person.setRankId(Ranks.SPACE_CAPTAIN);
+			person.setPostId(Ranks.POST_MERCENARY);
+			Misc.setMercenary(person, true);
+		} else {
+			person = createOfficerInternal(market.getFaction(), level, true, random);
+			person.setPostId(Ranks.POST_OFFICER_FOR_HIRE);
+		}
+		
 		person.setFaction(Factions.INDEPENDENT);
 		
 		
+		
 		int salary = (int) Misc.getOfficerSalary(person);
-		AvailableOfficer result = new AvailableOfficer(person, market.getId(), person.getStats().getLevel() * 2000, salary);
+		AvailableOfficer result = new AvailableOfficer(person, market.getId(), 
+							(int) (person.getStats().getLevel() * 2000* payMult), salary);
 		return result;
 	}
 	
-	public static PersonAPI createOfficerInternal(FactionAPI faction, int level, boolean allowNonDoctrinePersonality) {
-		return createOfficer(faction, level, false, allowNonDoctrinePersonality);
+	public static PersonAPI createOfficerInternal(FactionAPI faction, int level, boolean allowNonDoctrinePersonality, Random random) {
+		return createOfficer(faction, level, SkillPickPreference.ANY, allowNonDoctrinePersonality,
+							 null, false, false, -1, random);
+	}
+	
+	public static PersonAPI createMercInternal(FactionAPI faction, int level, int numElite, boolean allowNonDoctrinePersonality, Random random) {
+		SkillPickPreference pref = SkillPickPreference.GENERIC;
+		float f = (float) Math.random();
+		if (f < 0.05f) {
+			pref = SkillPickPreference.ANY;
+		} else if (f < 0.1f) {
+			pref = SkillPickPreference.PHASE;
+		} else if (f < 0.25f) {
+			pref = SkillPickPreference.CARRIER;
+		}
+		return createOfficer(faction, level, pref, allowNonDoctrinePersonality,
+				null, true, true, numElite, random);
 	}
 	
 	
 	public static enum SkillPickPreference {
 		CARRIER,
-		NON_CARRIER,
-		EITHER,
+		GENERIC,
+		PHASE,
+		ANY,
 	}
 	
-	public static PersonAPI createOfficer(FactionAPI faction, int level, boolean alwaysPickHigherSkill) {
-		return createOfficer(faction, level, alwaysPickHigherSkill, SkillPickPreference.EITHER, false);
+	public static PersonAPI createOfficer(FactionAPI faction, int level) {
+		return createOfficer(faction, level, false);
 	}
-	public static PersonAPI createOfficer(FactionAPI faction, int level, boolean alwaysPickHigherSkill, boolean allowNonDoctrinePersonality) {
-		return createOfficer(faction, level, alwaysPickHigherSkill, SkillPickPreference.EITHER, allowNonDoctrinePersonality);
+	public static PersonAPI createOfficer(FactionAPI faction, int level, boolean allowNonDoctrinePersonality) {
+		return createOfficer(faction, level, SkillPickPreference.ANY, allowNonDoctrinePersonality,
+							null, false, true, -1, null);
 	}
-	public static PersonAPI createOfficer(FactionAPI faction, int level, boolean alwaysPickHigherSkill, SkillPickPreference pref) {
-		return createOfficer(faction, level, alwaysPickHigherSkill, pref, false, null);
+	public static PersonAPI createOfficer(FactionAPI faction, int level, SkillPickPreference pref, Random random) {
+		return createOfficer(faction, level, pref, false, null, false, true, -1, random);
 	}
-	public static PersonAPI createOfficer(FactionAPI faction, int level, boolean alwaysPickHigherSkill, SkillPickPreference pref, boolean allowNonDoctrinePersonality) {
-		return createOfficer(faction, level, alwaysPickHigherSkill, pref, allowNonDoctrinePersonality, null);
-	}
-	public static PersonAPI createOfficer(FactionAPI faction, int level, boolean alwaysPickHigherSkill, 
-			SkillPickPreference pref, Random random) {
-		return createOfficer(faction, level, alwaysPickHigherSkill, pref, false, random);
-	}
-	public static PersonAPI createOfficer(FactionAPI faction, int level, boolean alwaysPickHigherSkill, 
-										  SkillPickPreference pref, boolean allowNonDoctrinePersonality, Random random) {
+	
+	public static boolean DEBUG = false;
+	public static PersonAPI createOfficer(FactionAPI faction, int level, 
+										  SkillPickPreference pref, boolean allowNonDoctrinePersonality, 
+										  CampaignFleetAPI fleet, boolean allowAnyLevel, 
+										  boolean withEliteSkills, int eliteSkillsNumOverride, Random random) {
 		if (random == null) random = new Random();
 		
+		//DEBUG = true;
+		
 		PersonAPI person = faction.createRandomPerson(random);
+		person.setFleet(fleet);
 		OfficerLevelupPlugin plugin = (OfficerLevelupPlugin) Global.getSettings().getPlugin("officerLevelUp");
-		if (level > plugin.getMaxLevel(person)) level = plugin.getMaxLevel(person);
+		
+		if (!allowAnyLevel) {
+			if (level > plugin.getMaxLevel(person)) level = plugin.getMaxLevel(person);
+		}
 		
 		person.getStats().setSkipRefresh(true);
 		
-		boolean debug = false;
+		if (DEBUG) System.out.println("Generating officer\n");
 		
-		for (int i = 0; i < 2; i++) {
+		int numSpec = 0;
+		for (int i = 0; i < 1; i++) {
 			List<String> skills = plugin.pickLevelupSkills(person, random);
-			String skillId = pickSkill(person, skills, alwaysPickHigherSkill, pref, random);
+			String skillId = pickSkill(person, skills, pref, numSpec, random);
 			if (skillId != null) {
-				if (debug) System.out.println("Picking initial skill: " + skillId);
+				if (DEBUG) System.out.println("Picking initial skill: " + skillId);
 				person.getStats().increaseSkill(skillId);
+				SkillSpecAPI spec = Global.getSettings().getSkillSpec(skillId);
+				if (spec.hasTag(Skills.TAG_SPEC)) numSpec++;
+				
 			}
 		}
 		
 //		level = 20;
 //		pref = SkillPickPreference.NON_CARRIER;
 
-		if (debug) System.out.println("Generating officer\n");
-		
 		long xp = plugin.getXPForLevel(level);
 		OfficerDataAPI officerData = Global.getFactory().createOfficerData(person);
-		officerData.addXP(xp);
-		while (officerData.canLevelUp()) {
-			String skillId = pickSkill(officerData.getPerson(), officerData.getSkillPicks(), alwaysPickHigherSkill, pref, random);
+		officerData.addXP(xp, null, false);
+		
+		//DEBUG = true;
+		
+		officerData.makeSkillPicks(random);
+		
+		while (officerData.canLevelUp(allowAnyLevel)) {
+			String skillId = pickSkill(officerData.getPerson(), officerData.getSkillPicks(), pref, numSpec, random);
 			if (skillId != null) {
-				if (debug) System.out.println("Leveling up " + skillId);
-				officerData.levelUp(skillId);
+				if (DEBUG) System.out.println("Leveling up " + skillId);
+				officerData.levelUp(skillId, random);
+				SkillSpecAPI spec = Global.getSettings().getSkillSpec(skillId);
+				if (spec.hasTag(Skills.TAG_SPEC)) numSpec++;
+				
+				if (allowAnyLevel && officerData.getSkillPicks().isEmpty()) {
+					officerData.makeSkillPicks(random);
+				}
 			} else {
 				break;
 			}
 		}
 		
-		if (debug) System.out.println("Done\n");
+		if (withEliteSkills && eliteSkillsNumOverride != 0) {
+			int num = eliteSkillsNumOverride;
+			if (num < 0) {
+				num = plugin.getMaxEliteSkills(person);
+			}
+			addEliteSkills(person, num, random);
+		}
+		
+		if (DEBUG) System.out.println("Done\n");
 		
 		person.setRankId(Ranks.SPACE_LIEUTENANT);
-		person.setPostId(Ranks.POST_MERCENARY);
+		person.setPostId(Ranks.POST_OFFICER);
 		
 		
 		WeightedRandomPicker<String> personalityPicker = faction.getPersonalityPicker().clone();
@@ -409,39 +530,62 @@ public class OfficerManagerEvent extends BaseEventPlugin {
 		return person;
 	}
 	
-	public static String pickSkill(PersonAPI person, List<String> skills, boolean preferHigher, SkillPickPreference pref, Random random) {
+	public static void addEliteSkills(PersonAPI person, int num, Random random) {
+		if (num <= 0) return;
+		
+		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
+		for (SkillLevelAPI sl : person.getStats().getSkillsCopy()) {
+			if (sl.getSkill().hasTag(Skills.TAG_ELITE_PLAYER_ONLY)) continue;
+			if (sl.getSkill().isAptitudeEffect()) continue;
+			if (!sl.getSkill().isCombatOfficerSkill()) continue;
+			picker.add(sl.getSkill().getId(), 1f);
+		}
+		
+		for (int i = 0; i < num && !picker.isEmpty(); i++) {
+			String id = picker.pickAndRemove();
+			if (id != null) {
+				if (DEBUG) System.out.println("Making skill elite: " + id);
+				person.getStats().increaseSkill(id);
+			}
+		}
+	}
+	
+	public static String pickSkill(PersonAPI person, List<String> skills, SkillPickPreference pref, int numSpec, Random random) {
 		if (random == null) random = new Random();
 		
 		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
+		List<String> generic = new ArrayList<String>();
 		
-		if (preferHigher) {
-			String highestId = null;
-			float highestLevel = -1;
-			boolean highestPreferred = false;
-			for (String id : skills) {
-				float curr = person.getStats().getSkillLevel(id);
-				SkillSpecAPI spec = Global.getSettings().getSkillSpec(id);
-				boolean carrierSkill = spec.hasTag(Tags.SKILL_CARRIER);
-				boolean currPreferred = (pref == SkillPickPreference.CARRIER && carrierSkill) || 
-										(pref == SkillPickPreference.NON_CARRIER && !carrierSkill);
-				if (curr > highestLevel || (currPreferred && !highestPreferred)) {
-					highestId = id;
-					highestLevel = curr;
-					highestPreferred = currPreferred;
-				}
+		for (String id : skills) {
+			SkillSpecAPI spec = Global.getSettings().getSkillSpec(id);
+			boolean carrierSkill = spec.hasTag(Skills.TAG_CARRIER);
+			boolean phaseSkill = spec.hasTag(Skills.TAG_PHASE);
+			boolean specSkill = spec.hasTag(Skills.TAG_SPEC);
+			
+			boolean preferred = false;
+			
+			preferred |= pref == SkillPickPreference.ANY;
+			preferred |= pref == SkillPickPreference.CARRIER && carrierSkill;
+			preferred |= pref == SkillPickPreference.PHASE && phaseSkill;
+			preferred |= pref == SkillPickPreference.GENERIC && !phaseSkill && !carrierSkill;
+			
+			if (specSkill && !carrierSkill && !phaseSkill && numSpec >= 1) {
+				preferred = false;
 			}
-			picker.add(highestId);
-		} else {
-			for (String id : skills) {
-				float curr = person.getStats().getSkillLevel(id);
-				SkillSpecAPI spec = Global.getSettings().getSkillSpec(id);
-				boolean carrierSkill = spec.hasTag(Tags.SKILL_CARRIER);
-				boolean currPreferred = (pref == SkillPickPreference.CARRIER && carrierSkill) || 
-										(pref == SkillPickPreference.NON_CARRIER && !carrierSkill);
-				if (currPreferred) {
-					picker.add(id);
-				}
+			if (spec.hasTag(Skills.TAG_PLAYER_ONLY)) {
+				preferred = false;
 			}
+			
+			if (preferred) {
+				picker.add(id);
+			}
+			
+			if ((!specSkill || numSpec < 1) && !carrierSkill && !phaseSkill) {
+				generic.add(id);
+			}
+		}
+		if (picker.isEmpty()) {
+			picker.addAll(generic);
 			if (picker.isEmpty()) {
 				picker.addAll(skills);
 			}
@@ -451,9 +595,6 @@ public class OfficerManagerEvent extends BaseEventPlugin {
 	}
 	
 	
-	
-	
-	@Override
 	public boolean callEvent(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
 		String action = params.get(0).getString(memoryMap);
 		
@@ -477,39 +618,45 @@ public class OfficerManagerEvent extends BaseEventPlugin {
 				MutableCharacterStatsAPI stats = officer.person.getStats();
 				TextPanelAPI text = dialog.getTextPanel();
 				
-				text.setFontSmallInsignia();
-				
 				Color hl = Misc.getHighlightColor();
 				Color red = Misc.getNegativeHighlightColor();
 				
-				text.addParagraph("-----------------------------------------------------------------------------");
+				//text.addParagraph("-----------------------------------------------------------------------------");
 				
-				if (!admin) {
-					text.addParagraph("Level: " + (int) stats.getLevel());
-					text.highlightInLastPara(hl, "" + (int) stats.getLevel());
-				}
+//				if (!admin) {
+//					text.addParagraph("Level: " + (int) stats.getLevel());
+//					text.highlightInLastPara(hl, "" + (int) stats.getLevel());
+//				}
+//				for (String skillId : Global.getSettings().getSortedSkillIds()) {
+//					int level = (int) stats.getSkillLevel(skillId);
+//					if (level > 0) {
+//						SkillSpecAPI spec = Global.getSettings().getSkillSpec(skillId);
+//						String skillName = spec.getName();
+//						if (spec.isAptitudeEffect()) {
+//							skillName += " Aptitude";
+//						}
+//						
+//						if (level <= 1) {
+//							text.addParagraph(skillName);
+//						} else {
+//							text.addParagraph(skillName + " (Elite)");
+//						}
+//						//text.highlightInLastPara(hl, "" + level);
+//					}
+//				}
 				
-				for (String skillId : Global.getSettings().getSortedSkillIds()) {
-					int level = (int) stats.getSkillLevel(skillId);
-					if (level > 0) {
-						SkillSpecAPI spec = Global.getSettings().getSkillSpec(skillId);
-						String skillName = spec.getName();
-						if (spec.isAptitudeEffect()) {
-							skillName += " Aptitude";
-						}
-						text.addParagraph(skillName + ", level " + level);
-						text.highlightInLastPara(hl, "" + level);
-					}
-				}
+				text.addSkillPanel(officer.person, admin);
+				
+				text.setFontSmallInsignia();
 				
 				if (!admin) {
 					String personality = Misc.lcFirst(officer.person.getPersonalityAPI().getDisplayName());
-					text.addParagraph("Personality: " + personality);
-					text.highlightInLastPara(hl, personality);
+					text.addParagraph("Personality: " + personality + ", level: " + stats.getLevel());
+					text.highlightInLastPara(hl, personality, "" + stats.getLevel());
 					text.addParagraph(officer.person.getPersonalityAPI().getDescription());
 				}
 				
-				text.addParagraph("-----------------------------------------------------------------------------");
+				//text.addParagraph("-----------------------------------------------------------------------------");
 				
 				text.setFontInsignia();
 			}
@@ -530,6 +677,11 @@ public class OfficerManagerEvent extends BaseEventPlugin {
 					Global.getSector().getCharacterData().addAdmin(officer.person);
 				} else {
 					playerFleet.getFleetData().addOfficer(officer.person);
+					if (Misc.isMercenary(officer.person)) {
+						Misc.setMercHiredNow(officer.person);
+					} else {
+						officer.person.setPostId(Ranks.POST_OFFICER);
+					}
 				}
 				AddRemoveCommodity.addCreditsLossText(officer.hiringBonus, dialog.getTextPanel());
 				if (admin) {
@@ -560,7 +712,9 @@ public class OfficerManagerEvent extends BaseEventPlugin {
 			// can hire more than max number of admins, just can't assign to govern w/o penalty
 			//if (admin) return false;
 			
-			return playerFleet.getFleetData().getOfficersCopy().size() >= max;
+			return Misc.getNumNonMercOfficers(playerFleet) >= max;
+			
+			//return playerFleet.getFleetData().getOfficersCopy().size() >= max;
 		} else if (action.equals("canAfford")) {
 			String personId = params.get(1).getString(memoryMap);
 			AvailableOfficer officer = getOfficer(personId);
@@ -595,40 +749,19 @@ public class OfficerManagerEvent extends BaseEventPlugin {
 		return null;
 	}
 
-	public Map<String, String> getTokenReplacements() {
-		Map<String, String> map = super.getTokenReplacements();
-		return map;
+	public void reportPlayerMarketTransaction(PlayerMarketTransaction transaction) {
+		
+	}
+	
+	public void reportPlayerOpenedMarketAndCargoUpdated(MarketAPI market) {
+		
 	}
 
-	@Override
-	public String[] getHighlights(String stageId) {
-		return null;
-	}
-	
-	@Override
-	public Color[] getHighlightColors(String stageId) {
-		return super.getHighlightColors(stageId);
-	}
-	
-	
-	private CampaignEventTarget tempTarget = null;
-	
-	@Override
-	public CampaignEventTarget getEventTarget() {
-		if (tempTarget != null) return tempTarget;
-		return super.getEventTarget();
-	}
-
-	public boolean isDone() {
+	public boolean runWhilePaused() {
 		return false;
 	}
 	
-	@Override
-	public CampaignEventCategory getEventCategory() {
-		return CampaignEventCategory.DO_NOT_SHOW_IN_MESSAGE_FILTER;
-	}
-	
-	public boolean showAllMessagesIfOngoing() {
+	public boolean isDone() {
 		return false;
 	}
 }

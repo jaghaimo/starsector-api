@@ -37,6 +37,7 @@ public class DropGroupRow implements Cloneable {
 	
 	private String commodity, group;
 	private float freq;
+	private boolean percent = false;
 	
 	private boolean multiValued = false;
 	private int tier = -1;
@@ -73,7 +74,15 @@ public class DropGroupRow implements Cloneable {
 	public DropGroupRow(JSONObject row) throws JSONException {
 		commodity = row.getString("commodity");
 		group = row.getString("group");
-		freq = (float) row.getDouble("freq");
+		
+		String fStr = row.getString("freq");
+		if (fStr.endsWith("%")) {
+			percent = true;
+			fStr = fStr.substring(0, fStr.length() - 1);
+			freq = Float.parseFloat(fStr);
+		} else {
+			freq = (float) row.getDouble("freq");
+		}
 		parseData();
 	}
 	
@@ -294,6 +303,21 @@ public class DropGroupRow implements Cloneable {
 			
 			if (spec.getGroup().equals(group)) {
 				picker.add(spec, spec.getFreq());
+			}
+		}
+		
+		for (DropGroupRow curr : picker.getItems()) {
+			if (curr.isNothing() && curr.percent) {
+				float totalOther = picker.getTotal() - curr.freq;
+				
+				float fNothing = curr.freq / 100f;
+				if (fNothing < 0) fNothing = 0;
+				if (fNothing > 1) fNothing = 1;
+				
+				float weightNothing = totalOther * fNothing / (1f - fNothing);
+				
+				picker.setWeight(picker.getItems().indexOf(curr), weightNothing);
+				break;
 			}
 		}
 		

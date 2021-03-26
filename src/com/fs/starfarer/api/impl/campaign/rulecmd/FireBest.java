@@ -22,10 +22,11 @@ import com.fs.starfarer.api.util.Misc.VarAndMemory;
 public class FireBest extends BaseCommandPlugin {
 
 
-	private InteractionDialogAPI dialog;
-	private Map<String, MemoryAPI> memoryMap;
-	private List<Token> params;
-	private String ruleId;
+	protected InteractionDialogAPI dialog;
+	protected Map<String, MemoryAPI> memoryMap;
+	protected List<Token> params;
+	protected String ruleId;
+	protected boolean keepOptions = false;
 
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
 		
@@ -37,6 +38,9 @@ public class FireBest extends BaseCommandPlugin {
 		if (params.get(0).isVariable()) {
 			VarAndMemory var = params.get(0).getVarNameAndMemory(memoryMap);
 			trigger = var.memory.getString(var.name);
+		}
+		if (params.size() > 1) {
+			keepOptions = params.get(1).getBoolean(memoryMap);
 		}
 		
 		RulesAPI rules = Global.getSector().getRules();
@@ -85,12 +89,16 @@ public class FireBest extends BaseCommandPlugin {
 				}
 			});
 			
-			dialog.getOptionPanel().clearOptions();
+			if (!keepOptions) {
+				dialog.getOptionPanel().clearOptions();
+			}
 			for (OptionAdder option : options) {
 				option.add(ruleId, dialog, params, memoryMap);
 			}
-			if (Global.getSettings().isDevMode()) {
-				DevMenuOptions.addOptions(dialog);
+			if (!keepOptions) {
+				if (Global.getSettings().isDevMode()) {
+					DevMenuOptions.addOptions(dialog);
+				}
 			}
 		}		
 		

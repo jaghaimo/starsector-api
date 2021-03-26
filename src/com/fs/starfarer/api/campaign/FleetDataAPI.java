@@ -2,6 +2,7 @@ package com.fs.starfarer.api.campaign;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 import com.fs.starfarer.api.characters.OfficerDataAPI;
@@ -119,6 +120,21 @@ public interface FleetDataAPI {
 	String pickShipName(FleetMemberAPI member, Random random);
 
 	float getEffectiveStrength();
+
+	/**
+	 * Useful for skills that need to do some computations to figure out effect magnitude,
+	 * but where the values might change if the fleet composition changed.
+	 * @return
+	 */
+	Map<String, Object> getCacheClearedOnSync();
+
+	float getMinBurnLevelUnmodified();
+
+	Random getShipNameRandom();
+
+	void setShipNameRandom(Random shipNameRandom);
+
+	void sortToMatchOrder(List<FleetMemberAPI> originalOrder);
 
 }
 

@@ -1,8 +1,12 @@
 package com.fs.starfarer.api.combat;
 
+import java.awt.Color;
+
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
@@ -81,7 +85,7 @@ public class BaseHullMod implements HullModEffect {
 		boolean has = ship.getVariant().hasHullMod(spec.getId());
 		
 		String verb = "installed";
-		if (has) verb = "removed";
+		if (has) verb = "removed or modified";
 		
 		return "Can only be " + verb + " at a colony with a spaceport or an orbital station";
 	}
@@ -98,8 +102,76 @@ public class BaseHullMod implements HullModEffect {
 	public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
 		
 	}
+	
+	
+	public boolean shipHasOtherModInCategory(ShipAPI ship, String currMod, String category) {
+		for (String id : ship.getVariant().getHullMods()) {
+			HullModSpecAPI mod = Global.getSettings().getHullModSpec(id);
+			if (!mod.hasTag(category)) continue;
+			if (id.equals(currMod)) continue;
+			return true;
+		}
+		return false;
+	}
+	
 
+	public boolean isInPlayerFleet(MutableShipStatsAPI stats) {
+		if (stats == null) return false;
+		FleetMemberAPI member = stats.getFleetMember();
+		if (member == null) return false;
+		PersonAPI fc = member.getFleetCommanderForStats();
+		if (fc == null) fc = member.getFleetCommander();
+		if (fc == null) return false;
+		return fc.isPlayer();
+	}
+	
+	public boolean isInPlayerFleet(ShipAPI ship) {
+		if (ship == null) return false;
+		FleetMemberAPI member = ship.getFleetMember();
+		if (member == null) return false;
+		PersonAPI fc = member.getFleetCommanderForStats();
+		if (fc == null) fc = member.getFleetCommander();
+		if (fc == null) return false;
+		return fc.isPlayer();
+	}
+
+	public Color getBorderColor() {
+		return null;
+		//return Color.red;
+	}
+
+	public Color getNameColor() {
+		return null;
+		//return Color.red;
+	}
+
+	public int getDisplaySortOrder() {
+//		if (spec.getId().equals("hiressensors")) {
+//			return 200;
+//		}
+		return 100;
+	}
+
+	public int getDisplayCategoryIndex() {
+//		if (spec.getId().equals("hiressensors")) {
+//			return 4;
+//		}
+		return -1;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

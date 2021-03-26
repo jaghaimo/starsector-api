@@ -167,4 +167,11 @@ public interface StarSystemAPI extends LocationAPI {
 
 	Boolean getDoNotShowIntelFromThisLocationOnMap();
 	void setDoNotShowIntelFromThisLocationOnMap(Boolean doNotShowIntelFromThisLocationOnMap);
+
+	boolean hasBlackHole();
+	
+	Float getMapGridWidthOverride();
+	void setMapGridWidthOverride(Float mapGridWidthOverride);
+	Float getMapGridHeightOverride();
+	void setMapGridHeightOverride(Float mapGridHeightOverride);
 }

@@ -10,22 +10,17 @@ import com.fs.starfarer.api.util.Misc;
 
 public class OfficerManagement {
 	
-	public static final float LEVEL_1_BONUS = 2f;
-	public static final float LEVEL_2_BONUS = 2f;
-	public static final float LEVEL_3_BONUS = 2f;
+	public static float NUM_OFFICERS_BONUS = 2;
+	public static float CP_BONUS = 2f;
 	
 	public static class Level0 implements DescriptionSkillEffect {
 		public String getString() {
 			int baseOfficers = (int)Global.getSector().getPlayerStats().getOfficerNumber().getBaseValue();
 			
-			String officers = "officers";
-			if (baseOfficers == 1) officers = "officer";
-			
-			return "At a base level, able to command up to " + 
-					baseOfficers + " " + officers + ".";
+			return "The base maximum number of officers you're able to command is " + baseOfficers + ".";
 		}
 		public Color[] getHighlightColors() {
-			Color h = Misc.getHighlightColor();
+			Color h = Misc.getDarkHighlightColor();
 			return new Color[] {h};
 		}
 		public String[] getHighlights() {
@@ -39,7 +34,7 @@ public class OfficerManagement {
 	public static class Level1  implements CharacterStatsSkillEffect {
 
 		public void apply(MutableCharacterStatsAPI stats, String id, float level) {
-			stats.getOfficerNumber().modifyFlat(id, LEVEL_1_BONUS);
+			stats.getOfficerNumber().modifyFlat(id, NUM_OFFICERS_BONUS);
 		}
 
 		public void unapply(MutableCharacterStatsAPI stats, String id) {
@@ -47,9 +42,8 @@ public class OfficerManagement {
 		}
 		
 		public String getEffectDescription(float level) {
-			int max = (int) Global.getSector().getCharacterData().getPerson().getStats().getOfficerNumber().getBaseValue();
-			max += LEVEL_1_BONUS;
-			return "Able to command up to " + (int) (max) + " officers";
+			//return "Able to command up to " + (int) (max) + " officers";
+			return "+" + (int)NUM_OFFICERS_BONUS + " to maximum number of officers you're able to command";
 		}
 		
 		public String getEffectPerLevelDescription() {
@@ -61,57 +55,26 @@ public class OfficerManagement {
 		}
 	}
 	
-	public static class Level2  implements CharacterStatsSkillEffect {
-		
+	public static class Level1B implements CharacterStatsSkillEffect {
+
 		public void apply(MutableCharacterStatsAPI stats, String id, float level) {
-			stats.getOfficerNumber().modifyFlat(id, LEVEL_2_BONUS);
+			stats.getCommandPoints().modifyFlat(id, CP_BONUS);
 		}
-		
+
 		public void unapply(MutableCharacterStatsAPI stats, String id) {
-			stats.getOfficerNumber().unmodify(id);
+			stats.getCommandPoints().unmodify(id);
 		}
 		
 		public String getEffectDescription(float level) {
-			int max = (int) Global.getSector().getCharacterData().getPerson().getStats().getOfficerNumber().getBaseValue();
-			max += LEVEL_1_BONUS;
-			max += LEVEL_2_BONUS;
-			return "Able to command up to " + (int) (max) + " officers";
+			return "+" + (int) CP_BONUS + " command points";
 		}
 		
 		public String getEffectPerLevelDescription() {
 			return null;
 		}
-		
+
 		public ScopeDescription getScopeDescription() {
-			return ScopeDescription.NONE;
+			return ScopeDescription.FLEET;
 		}
 	}
-	
-	public static class Level3  implements CharacterStatsSkillEffect {
-		
-		public void apply(MutableCharacterStatsAPI stats, String id, float level) {
-			stats.getOfficerNumber().modifyFlat(id, LEVEL_3_BONUS);
-		}
-		
-		public void unapply(MutableCharacterStatsAPI stats, String id) {
-			stats.getOfficerNumber().unmodify(id);
-		}
-		
-		public String getEffectDescription(float level) {
-			int max = (int) Global.getSector().getCharacterData().getPerson().getStats().getOfficerNumber().getBaseValue();
-			max += LEVEL_1_BONUS;
-			max += LEVEL_2_BONUS;
-			max += LEVEL_3_BONUS;
-			return "Able to command up to " + (int) (max) + " officers";
-		}
-		
-		public String getEffectPerLevelDescription() {
-			return null;
-		}
-		
-		public ScopeDescription getScopeDescription() {
-			return ScopeDescription.NONE;
-		}
-	}
-	
 }

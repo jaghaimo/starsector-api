@@ -140,7 +140,7 @@ public class FactionHostilityEvent extends BaseEventPlugin {
 					MessagePriority.ENSURE_DELIVERY, new BaseOnMessageDeliveryScript() {
 				public void beforeDelivery(CommMessageAPI message) {
 					Global.getSector().adjustPlayerReputation(
-							new RepActionEnvelope(RepActions.MAKE_HOSTILE_AT_BEST, null, message, true), 
+							new RepActionEnvelope(RepActions.MAKE_HOSTILE_AT_BEST, null, null, true), 
 							(commFac == one ? two : one).getId());					
 				}
 			});
@@ -193,7 +193,7 @@ public class FactionHostilityEvent extends BaseEventPlugin {
 				impact.delta = (prevRel - currRel - HOSTILITY_PENALTY);
 				if (impact.delta < 0) impact.delta = 0;
 				Global.getSector().adjustPlayerReputation(
-						new RepActionEnvelope(RepActions.CUSTOM, impact, message, true), 
+						new RepActionEnvelope(RepActions.CUSTOM, impact, null, true), 
 											  other.getId());
 			}
 		});

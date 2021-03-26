@@ -12,7 +12,7 @@ import com.fs.starfarer.api.util.Misc;
 public class SpacerObligation implements EconomyTickListener, TooltipCreator {
 
 	public static int DEBT_BASE = 1000;
-	public static int DEBT_PER_LEVEL = 1000;
+	public static int DEBT_PER_LEVEL = 3000;
 	
 	protected long startTime = 0;
 	public SpacerObligation() {

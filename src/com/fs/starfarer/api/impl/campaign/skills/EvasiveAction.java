@@ -63,7 +63,6 @@ public class EvasiveAction {
 		public ScopeDescription getScopeDescription() {
 			return ScopeDescription.PILOTED_SHIP;
 		}
-
 	}
 	
 	public static class Level3 implements ShipSkillEffect {
