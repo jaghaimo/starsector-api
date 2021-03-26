@@ -1,6 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin =
 [
     [ "addItemDescription", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#a3752c065c206c32d7d6500ba28288c10", null ],
+    [ "canBeInstalled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#ad650700074bd99292394324dcdef9acf", null ],
     [ "createMenuItemTooltip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#ae2fa6d87ad24871f6c83dbeffeb2d2c5", null ],
     [ "getCurrentlyInstalledItemData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#adf1640d06fa7c314ea1f3e9658f919f9", null ],
     [ "getMenuItemTitle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#a12aefbe5802ea16954fcce6c8b212115", null ],
@@ -13,6 +14,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableInd
     [ "getUninstallButtonText", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#a47f7f7b389949449098e9d89fbb4ba19", null ],
     [ "hasMenuItemTooltip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#a3efce6647442d8172ee562f45806b58e", null ],
     [ "isInstallableItem", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#ac1c3561eb693726cf5ad736880623b01", null ],
+    [ "isMenuItemEnabled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#aaa61c1f9a3864567c1c0c4a95ded6fce", null ],
     [ "isMenuItemTooltipExpandable", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#a1de074f21ed6aa93d91c802686529903", null ],
     [ "setCurrentlyInstalledItemData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#af1f311a1e039f840c1f881f01709052b", null ]
 ];

@@ -1,6 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberStatusAPI =
 [
     [ "applyDamage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberStatusAPI.html#a3f2121f42e3d32a6a22ce8abc95af74c", null ],
+    [ "applyDamage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberStatusAPI.html#a41fbbecd1a8bbe9da3a968e587a8aaa3", null ],
     [ "applyHullFractionDamage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberStatusAPI.html#aab6cffdc6a34bc5068cd032b03372219", null ],
     [ "applyHullFractionDamage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberStatusAPI.html#aac5b6ac20b6bb83f1bc627b040b9d4b7", null ],
     [ "disable", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberStatusAPI.html#a4726b09d82c1f4be5cd320bd28d89359", null ],

@@ -10,9 +10,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryB
     [ "hasRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html#ac84f709bf989c4df57deef3a5c305921", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html#a3e5fb0f6e6de2f6a4d7dde682be8ae72", null ],
     [ "performRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html#a9c48cc79b6a955e254fbc6363d5e2766", null ],
-    [ "pickWeapon", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html#a892ff5ae0c341ed6da7f22ab5045bafb", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html#ab6fc07fbb213ba07ac33ee4ec202aa97", null ],
-    [ "resolveDropParamsToSpecificItemData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html#a3fbae2c2c2187eef8ed2764b553c46c6", null ],
     [ "shouldRemoveOnRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html#af0dbd393836235f611c3e29a6705ea62", null ],
     [ "industry", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html#afdc45f8476e3c434b3ab5f099d589127", null ]
 ];

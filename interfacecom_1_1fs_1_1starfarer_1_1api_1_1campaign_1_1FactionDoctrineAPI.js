@@ -18,6 +18,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI =
     [ "getShipSize", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#af7d80067628dd5b1f79580b86174c1ed", null ],
     [ "getTotalStrengthPoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a27452d3234ad29cd0d36519afd2be340", null ],
     [ "getWarships", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a703bcae0ca10fbfbf5aaf5ab4603b5d2", null ],
+    [ "isStrictComposition", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#aa53347ffdce3857cbad702e9352cdbe0", null ],
     [ "setAggression", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a9e7eced4ed3a12b1eb57b797a5350b76", null ],
     [ "setAutofitRandomizeProbability", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a4e7108d30d26d55644a6731ae288be43", null ],
     [ "setCarriers", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a1ad454323dcdb389dee692cd654400c6", null ],
@@ -31,5 +32,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI =
     [ "setPhaseShips", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a42d8a0883725e52c64fd4c39edc94d9c", null ],
     [ "setShipQuality", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a2f7bd0afa6d63fcaddb2db20e3dcd36b", null ],
     [ "setShipSize", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#abd2b2fa538831bb1ae46d7c57d9203a8", null ],
+    [ "setStrictComposition", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#ae28b1e7ccce1b41a61853fae4a3fbf41", null ],
     [ "setWarships", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a44ebc9d1b3585cd25450e48e38c71eeb", null ]
 ];

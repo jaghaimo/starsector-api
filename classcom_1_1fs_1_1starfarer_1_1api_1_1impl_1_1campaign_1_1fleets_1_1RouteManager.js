@@ -10,6 +10,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteMan
     [ "getRoutesForSource", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager.html#a6435735ecee1ca4eaba69ec8ff3dfd86", null ],
     [ "getRoutesInLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager.html#a16e795461884cd49061694edb12bca52", null ],
     [ "removeFromMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager.html#add24959debdd978ef9d0556013c357e0", null ],
+    [ "removeRote", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager.html#abe964b75013a4d4283143ea1de3ff400", null ],
     [ "reportBattleOccurred", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager.html#adf67691355a705986d6bdabedf7fee38", null ],
     [ "reportFleetDespawnedToListener", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager.html#a7e42e875b72ac7bf6ff5903cddff45da", null ],
     [ "shouldDespawn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager.html#a2351b3cb0d7dbe2b90fdf0a8fa647042", null ],

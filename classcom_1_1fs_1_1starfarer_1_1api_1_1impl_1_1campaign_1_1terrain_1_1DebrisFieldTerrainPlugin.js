@@ -20,15 +20,18 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisF
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#a5f2f79d086d29e993f32f4c5505e338f", null ],
     [ "initDebrisIfNeeded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aadd2ec8a7de62684b8124e16e99cc61a", null ],
     [ "isFadingOut", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#a9328a73d268703c6ffb27af845c8d12f", null ],
+    [ "isScavenged", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#a3d3dee376cf57bd389cbfc45a48dcae2", null ],
     [ "isTooltipExpandable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aac77e55d9a3750d584f5a874a8b2c534", null ],
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#afb4a40a3ce794df968b6fb1b298d4e72", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#a8e819690ad0cb0256c3566c617d0e99f", null ],
     [ "setNameForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#a11ac1923f4f8ed57e8d8a11dbe8517aa", null ],
+    [ "setScavenged", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aa0352db5c046d718f2bd34463233fbd9", null ],
     [ "elapsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#a5141742d018b4629f26671a164f1e187", null ],
     [ "expander", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#af27a7c328dd87e484ea6018701035487", null ],
     [ "fadingOut", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aabae670f1203a39479b101d92fce304b", null ],
     [ "initedDebris", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#a9d73cbf73b662bda755d0160d6be04fa", null ],
     [ "params", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#a845284781c46532d4e8602dd92233cb4", null ],
     [ "pieces", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#a69365dce66fa427e960045fb68106a6f", null ],
+    [ "scavenged", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aacecffc366970c146cd72dea63470e82", null ],
     [ "wasInNonCurrentLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#a4a6f607729f212da1e9ee57477ee0481", null ]
 ];

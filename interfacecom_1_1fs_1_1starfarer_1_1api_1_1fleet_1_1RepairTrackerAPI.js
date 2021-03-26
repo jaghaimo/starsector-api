@@ -5,6 +5,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI =
     [ "computeRepairednessFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#ad5ac338d6f6735dc332216bcf83cd65c", null ],
     [ "getBaseCR", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#aec5f1812706ae1c5638541f4ff0045a2", null ],
     [ "getCR", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a1238ad515072fb792ed380005630d01c", null ],
+    [ "getCRPriorToMothballing", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a1f3277b683af056fce54ebcd4020ad7e", null ],
     [ "getDecreaseRate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a537c0f0cf1067a4e982367ee9127eb9b", null ],
     [ "getFuelFromScuttling", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a4797c508319c17340a3110ceab03829c", null ],
     [ "getHeavyMachineryFromScuttling", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a947a9a00974cc9ba7635ebfb1ea0847a", null ],
@@ -21,6 +22,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI =
     [ "performRepairsFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a20ea29eec34651a8405b7f2b8c7b2746", null ],
     [ "setCR", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a16514e5ecaeda7ef627a055109182c4b", null ],
     [ "setCrashMothballed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#afcedf97a4741a678d03a0bf2f94e3bc6", null ],
+    [ "setCRPriorToMothballing", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a631d2ce7770196341ba512ce38725388", null ],
     [ "setMothballed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a0abf00e55db7bdf47429286a5b4d2aa8", null ],
     [ "setSuspendRepairs", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a7f0d52cd2ba3ab6220fd154c5a437721", null ]
 ];

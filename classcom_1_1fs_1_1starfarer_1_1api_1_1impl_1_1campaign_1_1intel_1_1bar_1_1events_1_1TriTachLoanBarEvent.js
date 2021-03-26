@@ -1,6 +1,8 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent =
 [
     [ "TriTachLoanBarEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a7cbfda0de9d84c7b22200a7646e507d7", null ],
+    [ "addStoryOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a2956cc07b112841e6223037a7ae93d9f", null ],
+    [ "adjustPerson", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#aedfbcf0c3ee0d01691eca76897c03c13", null ],
     [ "createIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ab9271faf614f083d4fa26a98204c9ff4", null ],
     [ "doStandardConfirmActions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a90db28f0057296693d720288d6d4fa11", null ],
     [ "getAcceptText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a80038feff2fd6460d7fc76a55dc355eb", null ],
@@ -10,6 +12,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getMainText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a40e1d76668a029dcb7080627450fbd87", null ],
     [ "getMainTextColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a95b72a9a8d269ce811f82cc830ccb75d", null ],
     [ "getMainTextTokens", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a65f10375012ccc4933e50a59711b349e", null ],
+    [ "getNegotiatedAmount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a9bdb6ae6dde34b73fc8ba5566cd31e26", null ],
+    [ "getNegotiatedText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#af4b32a5604f217d454b885a1360c7d5e", null ],
     [ "getOptionText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#abba488bbfabb2a88ba813d28f7ada99a", null ],
     [ "getPersonFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a3aced9aea2128dd5696fd40584737bc3", null ],
     [ "getPersonPost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a9522d36550e1abd573de8efea7f7fb5d", null ],
@@ -18,6 +22,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getPrompt", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a2bf77f49690b17e8caf29848e960d2da", null ],
     [ "getRepaymentAmount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ad97e4cd1f7eba0b1067a7d1a64a45b49", null ],
     [ "getRepaymentDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a39b7a5410c18db81f66cb29e48d1e046", null ],
+    [ "optionSelected", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a8d07389e286a1db06040ccdaf66dfdd8", null ],
     [ "regen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#affb2063c6c6c0ebd420b6542e852a93e", null ],
     [ "setLoanAmount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a104adebedaff6662326429019e4a0b77", null ],
     [ "setRepaymentAmount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a57565a62cff4956f37fd2336f466891f", null ],

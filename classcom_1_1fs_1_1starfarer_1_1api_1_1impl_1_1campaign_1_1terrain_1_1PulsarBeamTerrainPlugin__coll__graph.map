@@ -1,16 +1,17 @@
 <map id="com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin" name="com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="1087,201,1347,243"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html" title=" " alt="" coords="708,77,968,119"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="323,77,583,119"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" title=" " alt="" coords="5,95,200,136"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="5,17,200,59"/>
-<area shape="rect" id="node7" title=" " alt="" coords="323,5,583,47"/>
-<area shape="rect" id="node6" title=" " alt="" coords="323,143,582,184"/>
-<area shape="rect" id="node14" title=" " alt="" coords="708,5,968,47"/>
-<area shape="rect" id="node8" title=" " alt="" coords="708,143,968,184"/>
-<area shape="rect" id="node9" title=" " alt="" coords="812,209,864,235"/>
-<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html" title=" " alt="" coords="708,260,968,301"/>
-<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarRenderer.html" title=" " alt="" coords="708,325,968,367"/>
-<area shape="rect" id="node12" title=" " alt="" coords="410,333,495,359"/>
-<area shape="rect" id="node13" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="745,391,931,432"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1361,201,1621,243"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html" title=" " alt="" coords="983,77,1243,119"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="597,77,857,119"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" title=" " alt="" coords="280,95,475,136"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,17,475,59"/>
+<area shape="rect" id="node8" title=" " alt="" coords="597,5,857,47"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,17,231,59"/>
+<area shape="rect" id="node7" title=" " alt="" coords="598,143,857,184"/>
+<area shape="rect" id="node15" title=" " alt="" coords="983,5,1243,47"/>
+<area shape="rect" id="node9" title=" " alt="" coords="983,143,1243,184"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1087,209,1139,235"/>
+<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html" title=" " alt="" coords="983,260,1243,301"/>
+<area shape="rect" id="node12" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarRenderer.html" title=" " alt="" coords="983,325,1243,367"/>
+<area shape="rect" id="node13" title=" " alt="" coords="685,333,770,359"/>
+<area shape="rect" id="node14" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="1019,391,1206,432"/>
 </map>

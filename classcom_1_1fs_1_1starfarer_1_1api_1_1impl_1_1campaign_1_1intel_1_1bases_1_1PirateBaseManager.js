@@ -10,6 +10,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1
     [ "getMinConcurrent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a84c15b0be35130c75b1c3bf0da56b4b9", null ],
     [ "getNumDestroyed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#ac3973bd203cd0c025516810b9eab5b11", null ],
     [ "getStandardTimeFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a89bab78cec82f927b6ba4416fb690ea7", null ],
+    [ "getUnadjustedDaysSinceStart", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a078214749145f9a0a4510efec482aeb0", null ],
     [ "incrDestroyed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a9f3054b10b92ed931b6e6cb5019668a4", null ],
     [ "pickPirateFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a28efa8705312a98ef4f5c68fd0539266", null ],
     [ "pickSystemForPirateBase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a312ac87f9ff51091bb33ef0bc1111d58", null ],

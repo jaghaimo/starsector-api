@@ -9,6 +9,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1Slipstr
     [ "getActiveLayers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a0a1be1946cb3176b84cf306c692e892b", null ],
     [ "getDisrupted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a807db1bf0a7d86c7fd55968af1ef7218", null ],
     [ "getEffectCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#abaa8af140f215d112fd67d1265de6d13", null ],
+    [ "getNameForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a323a70435ece6feffebdb2c6bb0f296f", null ],
     [ "getRenderRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a0d3564f54249f05b5ee8fa9934a915d7", null ],
     [ "getStream", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a6ece93470259eaa1a26d0a83f0e60670", null ],
     [ "getTerrainName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html#a4b3e0ee2d0cfb79574f4d54a9cdb5844", null ],

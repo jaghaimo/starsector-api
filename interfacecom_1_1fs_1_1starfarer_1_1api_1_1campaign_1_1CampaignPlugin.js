@@ -4,6 +4,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin =
     [ "isTransient", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin.html#adf3c2d90d0ff143d9eaa407502a2ab2c", null ],
     [ "pickAbilityAI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin.html#a3250d8ea7e2f072506ff1c2cf7a60d06", null ],
     [ "pickAICoreAdminPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin.html#a53ded586a71af0dfaadd612497fe21c8", null ],
+    [ "pickAICoreOfficerPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin.html#a5063831c423d336ff1af65603333c974", null ],
     [ "pickAssignmentAIModule", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin.html#a746d0429267ed8cec401b1967135dbe1", null ],
     [ "pickAutofitPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin.html#a432f6084cac872484e00c40bdfe349f1", null ],
     [ "pickBattleAutoresolverPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin.html#abe1099d9c49eec8d2945a0cf30ffe435", null ],

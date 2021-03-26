@@ -1,6 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent =
 [
     [ "QuartermasterCargoSwapBarEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#ae601380095c3319b7ff31bf79c38d7e3", null ],
+    [ "adjustPerson", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#aca566b49cda18e3904d768a3c6c72b96", null ],
     [ "computeQuantity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#ae814c5dfcbd922b3e4941b3ae9cfc5cd", null ],
     [ "createPerson", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#aad692ef38f697dc4dd7db496f4b7cf09", null ],
     [ "doExtraConfirmActions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#ac888d321c6324ed9362efcd3e5282ad9", null ],

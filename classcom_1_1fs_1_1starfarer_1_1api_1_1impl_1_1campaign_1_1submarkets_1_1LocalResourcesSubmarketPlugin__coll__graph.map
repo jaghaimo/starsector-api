@@ -1,12 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.submarkets.LocalResourcesSubmarketPlugin" name="com.fs.starfarer.api.impl.campaign.submarkets.LocalResourcesSubmarketPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="841,224,1133,265"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html" title=" " alt="" coords="380,100,672,141"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html" title=" " alt="" coords="21,5,215,47"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="5,71,231,112"/>
-<area shape="rect" id="node5" title=" " alt="" coords="83,137,153,163"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html" title=" " alt="" coords="5,188,231,229"/>
-<area shape="rect" id="node7" title=" " alt="" coords="405,165,647,207"/>
-<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1EconomyTickListener.html" title=" " alt="" coords="403,231,649,272"/>
-<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html" title=" " alt="" coords="429,303,623,344"/>
-<area shape="rect" id="node10" title=" " alt="" coords="397,368,655,409"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1097,190,1389,231"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html" title=" " alt="" coords="655,125,947,166"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html" title=" " alt="" coords="295,86,490,127"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html" title=" " alt="" coords="295,21,490,62"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="280,217,505,258"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,217,231,258"/>
+<area shape="rect" id="node7" title=" " alt="" coords="357,283,428,309"/>
+<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html" title=" " alt="" coords="280,151,505,193"/>
+<area shape="rect" id="node9" title=" " alt="" coords="679,190,922,231"/>
+<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1EconomyTickListener.html" title=" " alt="" coords="677,255,924,297"/>
+<area shape="rect" id="node11" title=" " alt="" coords="671,321,930,362"/>
 </map>

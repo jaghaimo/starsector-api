@@ -42,12 +42,15 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI =
     [ "getNumFighters", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a50e56c739239af216e7156536f2c9433", null ],
     [ "getNumFrigates", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#adf83ea84b737b8b556e948b20ce18c67", null ],
     [ "getNumMembersFast", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a1a24ed44da2d12e7260cafd1da5d209f", null ],
+    [ "getNumShips", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa0acb9d21eee6bb94f573f68d6781a72", null ],
     [ "getStats", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa878b4f8e859650a3d8d63e222ff0f01", null ],
     [ "getTotalSupplyCostPerDay", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a1cddeeac301b79a558576d952b1f5c82", null ],
     [ "getTravelSpeed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a743b453763709f799e1a8bc3a7c67d2d", null ],
     [ "getVelocity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a9f05de8765f2fecb8382d0b8070b8f4f", null ],
     [ "getViewForMember", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a3724d92805a75fb45f4c2a40a2d3fe84", null ],
     [ "getViews", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a4bc3b0ccbf1e9b68e8fccd749e8e3c2d", null ],
+    [ "goSlowOneFrame", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a6dcde78c6613fea1e84fa7d9112cc26f", null ],
+    [ "hasShipsWithUniqueSig", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aa1e75f4ac1f584e285fa1c44bc884dd1", null ],
     [ "inflateIfNeeded", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#afe17e95821ec334adfe6d5979295744f", null ],
     [ "isAIMode", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a5823904c3782880c9c88f1eec64df2ec", null ],
     [ "isDespawning", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a38d4046246d506b49d47dc019a9d4349", null ],
@@ -92,5 +95,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI =
     [ "setVelocity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a57d63ab8bfe7af322ad52200c145b772", null ],
     [ "setWasMousedOverByPlayer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#af9ddfc4c4c350be4a4d5e8fe419d62fa", null ],
     [ "updateCounts", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ab6ad7738e11f9ec77e5e6bab0bb8682c", null ],
-    [ "wasMousedOverByPlayer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a53c439794d52c908f8154affa06671a9", null ]
+    [ "updateFleetView", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a43e369ac0ee2133297f63de0533e21c1", null ],
+    [ "wasMousedOverByPlayer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a53c439794d52c908f8154affa06671a9", null ],
+    [ "wasSlowMoving", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a0ed03c004a60625a9273f215e60145cd", null ]
 ];

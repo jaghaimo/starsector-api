@@ -15,6 +15,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1B
     [ "getSortString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntel.html#a0b8eadf307b6acfcbc9151ea27987101", null ],
     [ "getText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntel.html#a643d779e54163a60e445280a7667e2e0", null ],
     [ "getTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntel.html#a004296bf9aafd84080dc6f0fed60dabf", null ],
+    [ "reportRemovedIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntel.html#a0e07fc209d58a8d13dc2db0bb1a3976f", null ],
     [ "setShowSpecificEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntel.html#aa6766c4106320ccc9a38fe796ef4286b", null ],
     [ "setText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntel.html#a5deba05c9462fe6d7e723dfca8ddbb1a", null ],
     [ "setTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntel.html#a53b778fe6774577f808ac758249a7d4c", null ],

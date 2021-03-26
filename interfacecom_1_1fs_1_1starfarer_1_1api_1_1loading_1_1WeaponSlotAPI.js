@@ -1,9 +1,11 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI =
 [
+    [ "computeMidArcAngle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#ae527a3699db762cff4e7b71d5ca74876", null ],
     [ "computePosition", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a4e5587046bcdb6365803456a51d637e7", null ],
     [ "getAngle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a287e8aa5ee92eac3b748d7f88fb85bd6", null ],
     [ "getArc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a26e74970745d61067c996b9f8c3ac5cc", null ],
     [ "getId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#af055a35cdc22b128079d6abb47dfa380", null ],
+    [ "getLaunchPointOffsets", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#aab552b2594f36af38d37818b1361ed2b", null ],
     [ "getLocation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a543a3c5669a1fc690b98865957586ad3", null ],
     [ "getRenderOrderMod", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#ae3a366bf1d1d57d5f70b7fcf3fc611d1", null ],
     [ "getSlotSize", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a79f967b97177a53ce76fbfe0e3f82c15", null ],

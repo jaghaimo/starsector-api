@@ -4,6 +4,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModPlugin =
     [ "beforeGameSave", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModPlugin.html#a235669beceb82498a1502fa4c2aea048", null ],
     [ "configureXStream", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModPlugin.html#acadfdc904ad3d244bdfa6ea7dd7be1f9", null ],
     [ "onApplicationLoad", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModPlugin.html#a2836605d256c2d013fb9a83371ed61e8", null ],
+    [ "onDevModeF8Reload", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModPlugin.html#a4e7a46ca164cffceff62e7db04e4b3bc", null ],
     [ "onEnabled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModPlugin.html#ad92cbcad342eb33555843cdcd87636a3", null ],
     [ "onGameLoad", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModPlugin.html#ae2c2d1acdfaa188bdce2eb76b5dc869f", null ],
     [ "onGameSaveFailed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModPlugin.html#aec8079e4534f4f5d22624c5b78116ed3", null ],

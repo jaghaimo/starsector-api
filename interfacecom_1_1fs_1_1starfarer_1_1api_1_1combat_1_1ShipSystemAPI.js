@@ -15,6 +15,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI =
     [ "getMaxAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ab7723910936429a3aabdc83ad0150008", null ],
     [ "getSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aeb717179a1b209d7127bfc5d0b55e9e9", null ],
     [ "getState", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#adda34ff0809ef0cc2bfdd95cadd85994", null ],
+    [ "getTargetLoc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#abdbc1dfb7c1f804df3dafd829d942627", null ],
     [ "isActive", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aa2dae1e0b7cfade6bfa8dbdbf1485f64", null ],
     [ "isChargedown", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ab20e915bee18cb1f76084575ea12602b", null ],
     [ "isChargeup", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a47616b8411b2175cde4b392e103696d6", null ],

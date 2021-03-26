@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial =
 [
+    [ "addTempExtraSalvage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a765fd0aec2a00fdaad474eff7eef431a", null ],
     [ "addText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a544240523ec9644e7f318558571e8b37", null ],
     [ "endWithContinue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a686700a355f8e0f1283803c3c48d4a93", null ],
     [ "getString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ab190371a39692364104ab196859d369e", null ],
@@ -9,7 +10,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage
     [ "optionSelected", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a26913511fb9a1c78c35f00c251148d54", null ],
     [ "setDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a1a337a2a4c502467d45f95b880cd412e", null ],
     [ "setEndWithContinue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ab5ef87f6c8c03f6b1119eaf675b27b35", null ],
-    [ "setExtraSalvage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a1588daac4247958591f2d34fb0076838", null ],
     [ "setShouldAbortSalvageAndRemoveEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#af736acf75b4501028e32152f0d4ce21c", null ],
     [ "setShowAgain", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a856848f323e25feaf93a56e8744afd08", null ],
     [ "shouldAbortSalvageAndRemoveEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a49fef4d055a5a17987e9055adede5ff6", null ],

@@ -13,6 +13,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugi
     [ "forceAddNextFrame", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a2bb5e204504bbcf8d89988339e51a12d", null ],
     [ "getArrowData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a271041bda6f67ff3c7924a04b74d6673", null ],
     [ "getBackgroundGlowColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#ab303c59618b3d478469d08ab5594471f", null ],
+    [ "getButtonStoryPointActionDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#afe3d474f64d007953ed037cf65fe38bb", null ],
     [ "getCancelText", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a8ac492ec08d451a29d5f851cf8ca2cda", null ],
     [ "getCommMessageSound", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a746fc7f9647e1949f8fbe4016df11af3", null ],
     [ "getConfirmationPromptWidth", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a5313159b77bcfe6f21247b55068a5e2c", null ],
@@ -30,9 +31,12 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugi
     [ "hasImportantButton", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a7e17287f01141751a07ac4ee85e9affe", null ],
     [ "hasLargeDescription", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a62545eac5ddd81e41ce3292a37ac088e", null ],
     [ "hasSmallDescription", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a48e8a058ced02d6c1a7728675e81da28", null ],
+    [ "isEnded", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a3789848d4466f6b5ab572c01d0537807", null ],
+    [ "isEnding", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a0fd8e1459dba485245adee9ade3dd24d", null ],
     [ "isHidden", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a5419f8f44ad6fba0f9780540eda4cb6a", null ],
     [ "isImportant", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#acaae7ef40f501a4a0937ca29eb6ea7eb", null ],
     [ "isNew", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a79e8b975bbe1a543dd487f73f54affbe", null ],
+    [ "notifyPlayerAboutToOpenIntelScreen", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a5c2de6b83df6fd3061360415b0f67fad", null ],
     [ "reportMadeVisibleToPlayer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a0f3129a9c225ea08cc7196c926e98d78", null ],
     [ "reportPlayerClickedOn", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a25e19709f30c922b0362ef7def67fcda", null ],
     [ "reportRemovedIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#ae5a953a61704ea917258fc620484a4ac", null ],
@@ -41,5 +45,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugi
     [ "setImportant", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#acb1d0c2343a3c5f58f3b72a3bb4e7455", null ],
     [ "setNew", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#ae204aebab48fb82e339dd7d5d8ce7d13", null ],
     [ "setPlayerVisibleTimestamp", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a857fdf0ad9cd520348cada8613b7b1d3", null ],
-    [ "shouldRemoveIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a23a9f90b32e6b8b41e4e7473f0bb3637", null ]
+    [ "shouldRemoveIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a23a9f90b32e6b8b41e4e7473f0bb3637", null ],
+    [ "storyActionConfirmed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a2350cf73edbb5c079d35b0b2467062e2", null ]
 ];

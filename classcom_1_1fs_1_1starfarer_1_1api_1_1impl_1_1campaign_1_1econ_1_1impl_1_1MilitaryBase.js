@@ -1,13 +1,18 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase =
 [
     [ "addAlphaCoreDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#abcc197734476792966181716145dcfbf", null ],
+    [ "addImproveDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a1d7d4a46d14297f22072b4fc8c4df08c", null ],
     [ "addPostDemandSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ab40d147c24470cf2b75d08d875f700b4", null ],
+    [ "adjustCommodityDangerLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a774e103ddb7d9edcdc849ba5b73f5c36", null ],
+    [ "adjustItemDangerLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a8b131a76bf053de2e276ec790ce18930", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ac81dff12bbc67f6f4333ede30421ea51", null ],
     [ "apply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a00468712dbd0ebc5baa311062142d563", null ],
     [ "applyAlphaCoreModifiers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a126558083931898238a7aba120b9404c", null ],
     [ "applyAlphaCoreSupplyAndDemandModifiers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a3ec0343aa403765a98b56f0458fdbddd", null ],
+    [ "applyImproveModifiers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a1bfc5ed24548468540f899f56a5d8ab9", null ],
     [ "applyNoAICoreModifiers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ad5d75c8a3590e7143a18bdcb913a6bd9", null ],
     [ "buildingFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aac5704fdc90b8b1ba8f68629254f15f8", null ],
+    [ "canImprove", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aeba0afa214306569ee32ea214130e478", null ],
     [ "getBaseStabilityMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a8f5f5368e152bc88cd26b10ecf4eb93b", null ],
     [ "getCount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a3d34cc91e0a4ef0a2ae7242b6960b950", null ],
     [ "getCurrentImage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a785a660a3b48fb6ae2c23951e5458b94", null ],

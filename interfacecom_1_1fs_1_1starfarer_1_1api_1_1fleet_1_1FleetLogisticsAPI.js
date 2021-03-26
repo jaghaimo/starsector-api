@@ -5,6 +5,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetLogisticsAPI =
     [ "getExcessCargoCapacitySupplyCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetLogisticsAPI.html#ab415ce70ce61a9a2cd087ac630602cbc", null ],
     [ "getExcessFuelCapacitySupplyCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetLogisticsAPI.html#aaba79c137f7b47ae53645f1e833635e7", null ],
     [ "getExcessPersonnelCapacitySupplyCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetLogisticsAPI.html#a4af77eb5ad9afa84996da328a16f7ff8", null ],
+    [ "getExcessShipsSupplyCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetLogisticsAPI.html#a77efa62ac015be9f6131b9052ed838e9", null ],
     [ "getFleet", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetLogisticsAPI.html#ac40dda0838ace109823a1b79fe78b66b", null ],
     [ "getFuelCostPerLightYear", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetLogisticsAPI.html#a0deb7f5cda546eb354b124eddbc80453", null ],
     [ "getMarineSuppliesPerDay", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetLogisticsAPI.html#a6d6c2c2d63cf8ac738d6aa8c158df571", null ],

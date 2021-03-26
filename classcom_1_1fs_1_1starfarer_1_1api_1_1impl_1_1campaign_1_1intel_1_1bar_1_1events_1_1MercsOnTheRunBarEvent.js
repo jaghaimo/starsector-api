@@ -2,6 +2,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
 [
     [ "MercsOnTheRunBarEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEvent.html#afaeeccee47b15cc31ac7e69473ade613", null ],
     [ "computeQuantity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEvent.html#ab1c1f857725f9d26accfd9b36b03b04c", null ],
+    [ "doExtraConfirmActions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEvent.html#aad14a8aa360ac4fb53cdd7ba52c0b31c", null ],
     [ "getAcceptText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEvent.html#ac44b47798c3df871a0e2fc1efedf4cf6", null ],
     [ "getAcceptTextColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEvent.html#a6f607ad76a4590a978726fe8fa9683c9", null ],
     [ "getAcceptTextTokens", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEvent.html#a64f6573790dc13ffd03123747abee631", null ],

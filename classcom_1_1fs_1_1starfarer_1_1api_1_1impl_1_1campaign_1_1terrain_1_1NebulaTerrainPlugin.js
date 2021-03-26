@@ -5,6 +5,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaT
     [ "createTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#abced3ddb5d493a08c24bf9a73b0859e2", null ],
     [ "getActiveLayers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#ac41de5ce70dfa6c1f897d4c1921e26c9", null ],
     [ "getEffectCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a80142fce267bc0ddd9f2b09bd1d50a5f", null ],
+    [ "getNameForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a2d7ad2928cb42f70907283121519a4f9", null ],
     [ "getNebulaMapTex", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a9ffb8c9901c535a02ec54de00dc6babf", null ],
     [ "getNebulaTex", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#ae589d7a21766c192401a7733b3708ba4", null ],
     [ "getRenderColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a5f633df02dd7f6b2d7e6c13a2e5e32c8", null ],

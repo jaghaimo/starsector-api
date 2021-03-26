@@ -3,6 +3,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePl
     [ "advance", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a4ef83ed44a51219ba8be9d1360cf5e24", null ],
     [ "forceTargetReEval", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a944822b953c14f87d4c7201370c7c980", null ],
     [ "getLargestEnemy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a62d91286e9d00cdacfe826aaf827b05e", null ],
+    [ "getPriorityTarget", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a15d3800ca25ffcdbd0c68941c723cdc3", null ],
     [ "getPursuitDays", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a50f8b87a28e5fbbb12945e9779532df8", null ],
     [ "getTarget", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a3a6e57cd55f6be946ef05698dbdaa899", null ],
     [ "isBusy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a5955f7adbdb637d10fbe110af865068f", null ],

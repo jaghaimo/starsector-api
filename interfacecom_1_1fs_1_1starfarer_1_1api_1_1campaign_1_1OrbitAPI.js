@@ -5,5 +5,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI =
     [ "getFocus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#af441bb1c5f0904a51d923afbd2643846", null ],
     [ "getOrbitalPeriod", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a0b0a68cffa7248d634dc232c12b7dc4c", null ],
     [ "makeCopy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a5761bc0d550d5961f83b5030241d9cb1", null ],
-    [ "setEntity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a542a622834154436f961042706f9a239", null ]
+    [ "setEntity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a542a622834154436f961042706f9a239", null ],
+    [ "updateLocation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a50d7afeccc4ea7e4798c8b22a9b9ee07", null ]
 ];

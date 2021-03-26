@@ -21,7 +21,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage
     [ "printDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a5c932ba6efc011ed4a33120ba51ac482", null ],
     [ "printHackDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#afe889412720ff03e279124e47fbf1b2d", null ],
     [ "printOwner", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a74959193e23b96c7a041b38f0f962126", null ],
-    [ "printRepairCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#aba3a997707db953e330f0f8acc76131a", null ],
+    [ "printRepairCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a8ef7b228c4a81278ac2ac7f3508b9781", null ],
     [ "printSalvage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a46040a96c45665659f4c69b9fcaf60e9", null ],
     [ "removeBuildCosts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#aecc3147ebe4c0c333f0c57ca453b53e4", null ],
     [ "removeRepairCosts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a15dd51e203f69c2cf263fb25b5aa3fe0", null ],

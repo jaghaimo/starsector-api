@@ -38,7 +38,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1
     [ "getTimeRemainingFraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a1e5a0899bf8823eab38e46adebd800eb", null ],
     [ "isEconomyListenerExpired", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a94b9f3f99ea2e655dabba2c35a8ff1f7", null ],
     [ "isHidden", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a58f3531fa281d5733fd1f522c0f941b8", null ],
-    [ "isTargetPlayerColonies", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a550b4c2a48d405cc2d10b2e9d5a982c1", null ],
+    [ "isTargetPlayerColoniesOnly", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a4af4f018676b9ec76b038eaa6ef75a02", null ],
     [ "makeKnown", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#ac3393318ccc130f35a4662122247afde", null ],
     [ "makeKnown", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#afceb3950555aaa909efa01fb37905978", null ],
     [ "notifyEnded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a5b5745413ffb45c5fd7f37dd44ca7a61", null ],
@@ -52,7 +52,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1
     [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a3c3b65eeace99a02bc4b71ed65909e7f", null ],
     [ "setBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#ae7ffb3c10ce8bf39d6ca892b6536c700", null ],
     [ "setForceTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#ad884bb6efcb5db1d3910c87e8798798a", null ],
-    [ "setTargetPlayerColonies", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a70cb5c3f2db5e0a2e8624f173bebe6c5", null ],
+    [ "setTargetPlayerColoniesOnly", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#ae2e03f08cfaa96af74ade6628e810f3d", null ],
     [ "startRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#ae7e1d1fe0b096a555b242d6a5c60f532", null ],
     [ "updateStationIfNeeded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#ab637745e36d65d2ebdb073e9bbf82c10", null ],
     [ "updateTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a5acf37a22e433bb26229ea7e1fc95dcb", null ],
@@ -72,6 +72,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1
     [ "sentBountyUpdate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a462b050f91b462edaa0a69e95a680455", null ],
     [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a21fa7abbc870b967a2fbbe5636ba607e", null ],
     [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a53cd95528b9ab60c24040369aac71a2c", null ],
-    [ "targetPlayerColonies", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a80f9c243fdbb6aed0d2e5fc1db59961b", null ],
+    [ "targetPlayerColoniesOnly", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a1cee04d8f8cbacaa00cb0300facb14da", null ],
     [ "tier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#aa8e383b42156d287878b1d724b571f7a", null ]
 ];

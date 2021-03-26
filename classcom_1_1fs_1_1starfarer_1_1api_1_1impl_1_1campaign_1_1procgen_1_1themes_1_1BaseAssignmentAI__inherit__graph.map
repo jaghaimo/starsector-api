@@ -1,5 +1,5 @@
 <map id="com.fs.starfarer.api.impl.campaign.procgen.themes.BaseAssignmentAI" name="com.fs.starfarer.api.impl.campaign.procgen.themes.BaseAssignmentAI">
-<area shape="rect" id="node1" title=" " alt="" coords="220,201,536,243"/>
+<area shape="rect" id="node1" title=" " alt="" coords="220,235,536,276"/>
 <area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallResponseAssignmentAI.html" title=" " alt="" coords="608,5,876,47"/>
 <area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallResponsePirateAssignmentAI.html" title=" " alt="" coords="608,71,876,112"/>
 <area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1DistressCallNormalAssignmentAI.html" title=" " alt="" coords="590,136,894,177"/>
@@ -7,7 +7,8 @@
 <area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1DistressCallPirateAmbushTrapAssignmentAI.html" title=" " alt="" coords="590,267,894,308"/>
 <area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html" title=" " alt="" coords="584,332,900,373"/>
 <area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLeashAssignmentAI.html" title=" " alt="" coords="611,397,873,439"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,201,172,243"/>
+<area shape="rect" id="node15" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1ZigLeashAssignmentAI.html" title=" " alt="" coords="615,463,869,504"/>
+<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,235,172,276"/>
 <area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html" title=" " alt="" coords="979,201,1233,243"/>
 <area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html" title=" " alt="" coords="979,267,1233,308"/>
 <area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolAssignmentAIV4.html" title=" " alt="" coords="979,332,1233,373"/>

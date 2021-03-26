@@ -12,6 +12,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1T
     [ "getIntelTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#a9e4d32d11b36547b1010b90b26483b99", null ],
     [ "getMapLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#a5ecd80579072b33d8fbd5c3fb3bb6b59", null ],
     [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#ab701610e463b7d3f69885b37042ebf76", null ],
+    [ "getRoute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#aa00d7a4a13b3bc4ba38eac16cccdb3ed", null ],
     [ "getSmallDescriptionTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#a8b144d6c6f75fbc3271aa6d0fed6975e", null ],
     [ "getSortString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#a0af5729b3d458e9caadc0f290680ba65", null ],
     [ "getTimeRemainingFraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#ae2c73139a8b6a0d84e8b8a0d1001a6a9", null ],

@@ -14,6 +14,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI =
     [ "setAlignment", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html#a473650fe2b174b687fb134c1406d1966", null ],
     [ "setComWidthOverride", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html#a0ba5b47f72e49093622d7c042bff0e8c", null ],
     [ "setEnabled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html#a55b8bfeb472511cffb894d3c05ca6f18", null ],
+    [ "setLastCostConsumed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html#ad5f64a9812c4d502b964f18f6a831286", null ],
     [ "setNumberOnlyMode", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html#a0f73a3a32f6a2cc03b1f80a53709d8d1", null ],
     [ "setSecondTitle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html#ae735927b2f536d0c9c4c984a9f282875", null ],
     [ "setSecondTitleColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html#a6c8016789f8460a897df6e21037160b2", null ],

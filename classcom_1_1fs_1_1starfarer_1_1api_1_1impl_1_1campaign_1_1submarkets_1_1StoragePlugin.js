@@ -15,6 +15,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1Stor
     [ "isEnabled", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1StoragePlugin.html#a63df0a167918eb1aeb11cb29ee177fd0", null ],
     [ "isFreeTransfer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1StoragePlugin.html#acf7ad36324122e60880df1c4350f4a10", null ],
     [ "isIllegalOnSubmarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1StoragePlugin.html#a985881d63821ab5277948b220953b3f5", null ],
+    [ "isIllegalOnSubmarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1StoragePlugin.html#a34b256bc3bc43280633cdbd9407718be", null ],
     [ "isIllegalOnSubmarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1StoragePlugin.html#affd5e315f86e1fb12d3ed763dc07e8f7", null ],
     [ "isParticipatesInEconomy", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1StoragePlugin.html#aa46ffd002f8ccf809d4e583ccbe529ef", null ],
     [ "setPlayerPaidToUnlock", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1StoragePlugin.html#a858fdbd86b3882eb20863508113548ca", null ],

@@ -1,6 +1,8 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI =
 [
+    [ "addListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a77ebe528a4a44ad06cb78a72c0cad8c1", null ],
     [ "getAcceleration", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#af31f10ac217e40d241bf7068efef3cc2", null ],
+    [ "getAllowZeroFluxAtAnyLevel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ad65256291918851c901bbcc5d8e3611e", null ],
     [ "getArmorBonus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a17b71679ca5a9dcd3fdfe5f7302ab6d7", null ],
     [ "getArmorDamageTakenMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a628041bd16bc670b68f39573380948d6", null ],
     [ "getAutofireAimAccuracy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#aa394acb700d0f96d5850a2c580ced59b", null ],
@@ -45,6 +47,8 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI =
     [ "getEnergyRoFMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a20407530d9000ebe9ec54cdb6e95220e", null ],
     [ "getEnergyShieldDamageTakenMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a695c8a04ede5d01764f7bd0afd487407", null ],
     [ "getEnergyWeaponDamageMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ada2f4049cdefbea82adcf5772b2a561d", null ],
+    [ "getEnergyWeaponFluxBasedBonusDamageMagnitude", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#aed79a61544061e84be1c93e26f5407b3", null ],
+    [ "getEnergyWeaponFluxBasedBonusDamageMinLevel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a2d975322b8940dfa97d66e0c35a7436f", null ],
     [ "getEnergyWeaponFluxCostMod", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a6cc2eababaa9f190e2aaf00527cb63d2", null ],
     [ "getEnergyWeaponRangeBonus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#adb20bd20bd4f24c2b84a143760e3be53", null ],
     [ "getEngineDamageTakenMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a0287c58260a51c22f14fd062d6e826e8", null ],
@@ -53,6 +57,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI =
     [ "getEntity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#af2b4cbab415bb61feba7d0aec4230b41", null ],
     [ "getFighterRefitTimeMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a4c1ea356333f0d9323fbe2daae4d751c", null ],
     [ "getFighterWingRange", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ac806de770f5b3e4e69c2c44bcaa80bf1", null ],
+    [ "getFleetMember", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#af333f0fc11a71fc7126bea79e414f156", null ],
     [ "getFluxCapacity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a7e2068d10d01dc5b32f000de62977005", null ],
     [ "getFluxDamageTakenMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ac9ee8a1aaecd9853ca260ca04fa2ab6f", null ],
     [ "getFluxDissipation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ae8e610f571716337ca4607a90e9c4ed5", null ],
@@ -72,6 +77,8 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI =
     [ "getKineticArmorDamageTakenMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ab23911d590b6805fd2ef7292c86b3d26", null ],
     [ "getKineticDamageTakenMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a0ca1f8cc22a302d934f5d57842a73b1b", null ],
     [ "getKineticShieldDamageTakenMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a3742ce708c715c5f6f3e71b0f1a16bbe", null ],
+    [ "getListenerManager", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ac62b6234d088d3ce9d9a089aff061a2d", null ],
+    [ "getListeners", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#adedd22181fe2242db27258973eb09885", null ],
     [ "getMaxArmorDamageReduction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ac369f3b849135c3af15b81fdb1fb8296", null ],
     [ "getMaxBurnLevel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ae6b1210a7fdc567c2b3e47045533a5a8", null ],
     [ "getMaxCombatHullRepairFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a0c0757daa3607d2e3994a273a7e733c3", null ],
@@ -123,6 +130,10 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI =
     [ "getSightRadiusMod", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ac7cb753629a29c3ddc9df9b66f97bc5a", null ],
     [ "getSuppliesPerMonth", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a263ebac0a47a057d32f0d6e771fcfcaa", null ],
     [ "getSuppliesToRecover", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a64681740fdd6a431b0150c82553e85aa", null ],
+    [ "getSystemCooldownBonus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ab07ab66dcae32d9b7c04f7144df8be58", null ],
+    [ "getSystemRangeBonus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a231d9ef0ff16c1e1043e936d321d0653", null ],
+    [ "getSystemRegenBonus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#af7f811c0d91513e8b20a4710cbecd098", null ],
+    [ "getSystemUsesBonus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ac7073dbd7955728de9af20a7e7fd8f01", null ],
     [ "getTimeMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a6f5d1948bbe9056963edbb7fbf12314d", null ],
     [ "getTurnAcceleration", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ac3f7f337ab3450b628f49553e74fd2f8", null ],
     [ "getVariant", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ad9eb3782d04e17166d9733b41f87d5f0", null ],
@@ -134,5 +145,9 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI =
     [ "getWeaponRangeThreshold", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a3f52eae6ef42fa45fba7a14cad5344ae", null ],
     [ "getWeaponTurnRateBonus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ab62ad6d977264e90b482e2f3c8248847", null ],
     [ "getZeroFluxMinimumFluxLevel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a955ed025dd7175f1ee989eccf1066bda", null ],
-    [ "getZeroFluxSpeedBoost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a00e16bfe88a2871940c27044f8a2a2fb", null ]
+    [ "getZeroFluxSpeedBoost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a00e16bfe88a2871940c27044f8a2a2fb", null ],
+    [ "hasListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ae11a2f0cbb31324d560efde6641af134", null ],
+    [ "hasListenerOfClass", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#adc74c164566170cc67e040972e9b5314", null ],
+    [ "removeListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#accbe9c1048113dcb1338270ad1f740ae", null ],
+    [ "removeListenerOfClass", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a9cc7ecc513cd3b6d2a2bbadb178406d0", null ]
 ];

@@ -5,6 +5,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin =
     [ "getDesignType", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#ab0878651da355692b28b5d95ff21aab3", null ],
     [ "getName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#ad4ecd2a8c7510e4228a2439e6e363a99", null ],
     [ "getPrice", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#a0d2e7ecb9abdfdcb08545febf02dcf7c", null ],
+    [ "getSpec", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#a05a778f831ec73901e1ab498b7dfc5e4", null ],
     [ "getTooltipWidth", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#a7b94afd45c6c076f9de76caaf29aaa2d", null ],
     [ "hasRightClickAction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#aa6530ae086733d149bc34e69476a2ecd", null ],
     [ "init", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#a39b7305d1e5c645c4ab59e43ea562360", null ],

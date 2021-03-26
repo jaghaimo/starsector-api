@@ -5,6 +5,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1Asteroi
     [ "createAsteroids", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#aa8c0648d1cd080e01849c50dba2aa79c", null ],
     [ "createTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a2ff55841db6482234877da401b129c9e", null ],
     [ "getEffectCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#ad415e60ed79f323a9b99b8b5086b6384", null ],
+    [ "getNameAOrAn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a065c7c209ba98a9f06086f36610a0d42", null ],
     [ "getNameForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a303591167447f49332450c421a25d7d3", null ],
     [ "getTooltipWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#af3b333d6d8e0362d9fbe3670e0edb55d", null ],
     [ "hasAIFlag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#af803c834b8990d26bdcd758cda474042", null ],

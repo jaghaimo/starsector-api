@@ -1,11 +1,14 @@
 var enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers =
 [
+    [ "ABOVE_PARTICLES", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a21682c6acc7a4ef613b4922fa327f939", null ],
+    [ "ABOVE_PARTICLES_LOWER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a8560fd90027b175d07766f50bfc29940", null ],
     [ "ABOVE_PLANETS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a4b1fea3bbcc66b2da9da456307fd03e9", null ],
     [ "ABOVE_SHIPS_AND_MISSILES_LAYER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a8c904d73793a0c4ac00be7e9be644d1c", null ],
     [ "ABOVE_SHIPS_LAYER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a2c4f63a673197d3c2cd40d5cde5821f9", null ],
     [ "ASTEROIDS_LAYER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a5ddf7f027bd59154660fb98e763e4d42", null ],
     [ "BELOW_INDICATORS_LAYER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a7727ed28be686f6bf3482a6187d525cd", null ],
     [ "BELOW_PHASED_SHIPS_LAYER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a3ccf6c52982c83d861c9846772f839f2", null ],
+    [ "BELOW_PLANETS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#ab6a5149523d75813a6a3815fcdbefe85", null ],
     [ "BELOW_SHIPS_LAYER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a458b0ff6a71e60b5d93ea4d81184e041", null ],
     [ "CAPITAL_SHIPS_LAYER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a44b9e18363b510006487c25dc17451d5", null ],
     [ "CLOUD_LAYER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html#a92471f500c13c5b625029f45120f88c2", null ],

@@ -11,6 +11,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil =
     [ "getBrightness", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#ad4e3a03c9fe8a98f6dd532f577c36330", null ],
     [ "getDurationIn", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a1958826e78ad2bb7f69d74077aabf7ff", null ],
     [ "getDurationOut", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a98cf362719b1296875789acb339e511d", null ],
+    [ "getState", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a811aae83167aefb66099949e26bcc8e6", null ],
     [ "isBounceDown", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#ae746217030f5a8527b0afee7f5e63207", null ],
     [ "isBounceUp", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#aae521855ae1c234d08c78591b3326cd2", null ],
     [ "isFadedIn", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#aa2a0c0624bff684a9bd27be55c684424", null ],
@@ -25,5 +26,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil =
     [ "setDuration", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a998d186b53216cee5f60c6857511c79e", null ],
     [ "setDurationIn", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#adcd5a70ea1ee97ece6248c5b0a5c3032", null ],
     [ "setDurationOut", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#abe76628386afa0d5432e46ada2ad59c1", null ],
+    [ "setState", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a460cb47ced1d06aaa10ec130147d8fac", null ],
     [ "toString", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#aadb5ae782faeb7125e4d5f9b595f5050", null ]
 ];

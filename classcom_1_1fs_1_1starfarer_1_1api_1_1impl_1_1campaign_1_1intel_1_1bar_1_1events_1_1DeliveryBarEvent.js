@@ -1,6 +1,8 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent =
 [
     [ "DeliveryBarEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aa0ae74403747197564523a7c55ddaf6e", null ],
+    [ "addStoryOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a67869543a031263d2913625ff7a3286c", null ],
+    [ "adjustPerson", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aef2ae282e77ac2cd0eb4578303913273", null ],
     [ "canAccept", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a2af3458b8ec66a3e9f8054a24e658e1a", null ],
     [ "computeData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ae99bcd937422b9524ff9d2007dbd1bd6", null ],
     [ "createIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af19b21d5c0558de898d925c6fe1ddf16", null ],
@@ -16,6 +18,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getMainText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a862762395a2c01601e1684ea8a92af06", null ],
     [ "getMainTextColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aa09ae3711a631c1f2c0e3ac9d82bf94c", null ],
     [ "getMainTextTokens", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ab0f6e1532b9d600487c38be5ba699d6f", null ],
+    [ "getNegotiatedAmount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a70b9961b979178504c53e2205c3f6d56", null ],
+    [ "getNegotiatedText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8126ebdbff9058d81f268aa8e3b38c54", null ],
     [ "getOptionText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a458a01dfec38385113bcfea05f73eeb8", null ],
     [ "getPersonFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aaf73c910e000fd1e2eee0007e1f59471", null ],
     [ "getPersonPost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ab20dd5f6453001ee77743165aa15c8aa", null ],

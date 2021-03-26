@@ -1,9 +1,12 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ =
 [
     [ "addPostDemandSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html#ae6f1737933dc2c23478b60734d483b23", null ],
+    [ "adjustCommodityDangerLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html#a5e6aebdfc05fafd62392846d6d6fad4c", null ],
+    [ "adjustItemDangerLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html#a61d7ab1d4c181d9e3013b053dab8e95b", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html#a848b0736e8da4ef44907f2546d153edc", null ],
     [ "apply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html#ac1980a1ac5a94a53273b453a9e17a25d", null ],
     [ "buildingFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html#a1a8c5f2935782712c32d11cbeb772dfd", null ],
+    [ "canImprove", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html#ab5896bdbe80e0b48394ae44f3b6e954c", null ],
     [ "getBaseStabilityMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html#a1d0790d4d69fe9cf0c9c32ee6288aa79", null ],
     [ "getCount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html#a89f403bef7288ab29c343c19b4aae17b", null ],
     [ "getCurrentImage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html#a0e40ef1c4a97e914478f75e0117f11b7", null ],

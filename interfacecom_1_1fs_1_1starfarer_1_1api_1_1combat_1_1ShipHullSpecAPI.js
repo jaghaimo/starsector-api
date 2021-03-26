@@ -48,6 +48,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI =
     [ "getShipFilePath", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#aef1b78bd5ddfc656b01781128aa2955d", null ],
     [ "getSpriteName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#a49dd6fe523e486fd3eb2c7f6b873297b", null ],
     [ "getTags", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#a130c779de50c1b8deb91840dd207bb74", null ],
+    [ "getTravelDriveId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#a197d341bd321a8e6c9cedf23e91e5676", null ],
     [ "getWeaponSlotAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#a0fb1de732ecf9ab45513d8272df19af0", null ],
     [ "hasDesignation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#a6ecf2ee8ee0d776c9f6aca74fd32870c", null ],
     [ "hasHullName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#afee8872913dc48b0dbc9dc9d8de9f1aa", null ],
@@ -67,5 +68,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI =
     [ "setHullName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#aa4f70e42292b54969f301d5265cfbad0", null ],
     [ "setManufacturer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#ac47f492454d10289c5242ad6ae22ba07", null ],
     [ "setModuleAnchor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#a7b220fea73bf3b9473d7f4b692650d17", null ],
-    [ "setRestoreToBase", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#a607a02fa595b15bd17e4fe9f647da45e", null ]
+    [ "setRestoreToBase", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#a607a02fa595b15bd17e4fe9f647da45e", null ],
+    [ "setTravelDriveId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#a3f2d6db949b23f586925f9b2fcddeba3", null ]
 ];

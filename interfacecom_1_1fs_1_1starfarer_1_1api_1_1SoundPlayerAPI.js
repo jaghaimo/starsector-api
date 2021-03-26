@@ -6,6 +6,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI =
     [ "playCustomMusic", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#a4229f6135ef7c25a871a78c11dc5c073", null ],
     [ "playCustomMusic", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#a0a861b473dbe9d5cdc872c6b60629756", null ],
     [ "playLoop", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#aca6566fd23522150a3a392d1b1ee9c85", null ],
+    [ "playLoop", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#a9314cf7b76f9d907ae8a842a1b369dd4", null ],
     [ "playMusic", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#a5d94eec59cbe9b74a2ba40b1363988aa", null ],
     [ "playSound", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#ae30acb9a9d0e1fd0ac3964143269d231", null ],
     [ "playUILoop", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html#a72c09d67f142e36e12f35f6fe57a9425", null ],

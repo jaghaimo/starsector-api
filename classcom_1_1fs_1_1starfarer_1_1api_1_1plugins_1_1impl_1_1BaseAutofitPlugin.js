@@ -1,7 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1BaseAutofitPlugin =
 [
     [ "autoAssignOfficers", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1BaseAutofitPlugin.html#a89bc4fdf95285a521591afcb862cd3ce", null ],
-    [ "doFit", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1BaseAutofitPlugin.html#aad1d9d9f2c8d29aa24464982e6cf8648", null ],
+    [ "doFit", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1BaseAutofitPlugin.html#a53d97d4120082aaddf3ab374947d1a8f", null ],
     [ "doQuickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1BaseAutofitPlugin.html#a6c9b25bcc28efc242ac21a2704be67db", null ],
     [ "getCreditCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1BaseAutofitPlugin.html#abd8a86bc4554af0d0f0b0b0c38c4009d", null ],
     [ "getOptions", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1BaseAutofitPlugin.html#a5ed2ed69e10ce27063ae01a087283691", null ],

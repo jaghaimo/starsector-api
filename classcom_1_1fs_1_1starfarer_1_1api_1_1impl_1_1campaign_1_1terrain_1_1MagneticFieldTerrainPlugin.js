@@ -54,6 +54,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1Magneti
     [ "getFlareSmallShortenFlatModMax", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a0ea88fdef21f07653881089047961f10", null ],
     [ "getFlareSmallShortenFlatModMin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#af1fb7c25bd3c134181ef69e768928425", null ],
     [ "getNameColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a128e76f7ff2352284271378f9da0e0c9", null ],
+    [ "getNameForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#aa27aa35e1342e2373437479dfe7168cf", null ],
     [ "getRenderRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a2b7b202fff9dd65ef3395e27fe199422", null ],
     [ "getTerrainName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#ae6329197546bb4d7e5fa2523fc365d71", null ],
     [ "getTooltipWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a03b363fbcb24e3d2c6855edf978f3e30", null ],

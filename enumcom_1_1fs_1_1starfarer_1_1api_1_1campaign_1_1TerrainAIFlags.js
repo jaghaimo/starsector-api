@@ -2,6 +2,7 @@ var enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TerrainAIFlags =
 [
     [ "BREAK_OTHER_ORBITS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TerrainAIFlags.html#aa6a8d520ec72ae86ecaf5a74eafbd4a4", null ],
     [ "CR_DRAIN", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TerrainAIFlags.html#ade6b33191e18c9d024a2bbf3fa0b57ce", null ],
+    [ "DANGEROUS_UNLESS_GO_SLOW", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TerrainAIFlags.html#a68a0618a07542cb90ac4c7727587fdef", null ],
     [ "EFFECT_DIMINISHED_WITH_RANGE", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TerrainAIFlags.html#aa32c241221a00bfe0ee4475b43fc0cc3", null ],
     [ "HIDING_STATIONARY", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TerrainAIFlags.html#acdddd21d71471fc8a0cc2df70cbbf1ae", null ],
     [ "REDUCES_DETECTABILITY", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TerrainAIFlags.html#a9903ba38a03c44dc545d85a6e01dc988", null ],

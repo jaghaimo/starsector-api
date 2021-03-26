@@ -12,6 +12,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAP
     [ "getIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#ad78ebc86f2a33cc408329542bb7a322e", null ],
     [ "getIntelCount", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#a07ac5da04ac54440187d26582a551ca7", null ],
     [ "hasIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#afd9c1885a91bf8ffb321d8baa5153141", null ],
+    [ "hasIntelOfClass", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#a7a28b73f6eb0fa29b3c0424a421865eb", null ],
     [ "hasIntelQueued", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#ac592f49519b25d71e694fb9b1986156c", null ],
     [ "isPlayerInRangeOfCommRelay", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#ad2c18d4d7bef8c52615664126dd4a593", null ],
     [ "queueIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#abcea18a4149d0a4e6672a60e782f0215", null ],

@@ -13,6 +13,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpeci
     [ "getItemPriceMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a40381d27df67c99ab949dbb592fa2e5c", null ],
     [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a345793881030ca3d3b0cb3e62ba8f9ef", null ],
     [ "getPrice", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a25a8dc85e0c6ae5cd46d3f3cc4458a02", null ],
+    [ "getSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a25985e96bbccefd916f64ca3dad996a4", null ],
     [ "getTooltipWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#aadab4e324bd58fdcfb0f1f602df028f5", null ],
     [ "hasRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a6b7958846b3d69670f256816b138c338", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a7a062560b0f2dcf8bafce4665c29337c", null ],

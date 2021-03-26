@@ -7,6 +7,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI 
     [ "fadeToOtherColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a755b23b83a4210755413fa96cc26de3f", null ],
     [ "forceFlameout", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a3fd2ac45c0e2e7a33172da2fec9da60f", null ],
     [ "forceFlameout", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a87cfddaba460ab80227deb5db8efc9ce", null ],
+    [ "forceShowAccelerating", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#aaaa9a7686dfaa35a3598d1ae27e631f9", null ],
     [ "getExtendGlowFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#ab048ff4b08f26b9d93065dfacb956a5f", null ],
     [ "getExtendLengthFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#ab8a142d2f594232c1a5519a02fbc3771", null ],
     [ "getExtendWidthFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a590ddcfe5c2c4736b6748c20ea03b4ba", null ],

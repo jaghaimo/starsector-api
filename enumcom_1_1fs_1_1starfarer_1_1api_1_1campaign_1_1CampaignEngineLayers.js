@@ -1,7 +1,9 @@
 var enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers =
 [
     [ "ABOVE", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#a38b3e63ab4ab36879220b910c995a281", null ],
+    [ "ABOVE_STATIONS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#a7d3b0a68fdeb817db1ca979bf4f906d7", null ],
     [ "ASTEROIDS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#a594e1fe215e40844de882676f0fbd11c", null ],
+    [ "BELOW_STATIONS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#a502ae2413fe5a7aa4a2946056682d9c0", null ],
     [ "FLEETS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#a9cc407ee8815204c05e83d73469b0339", null ],
     [ "JUMP_POINTS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#a52fdd768c9dd8c225f07a33c99de59e3", null ],
     [ "PLANETS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#a6773068c0aba4df59e066e1eab377682", null ],

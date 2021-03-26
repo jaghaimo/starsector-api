@@ -58,6 +58,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCor
     [ "getMaxEffectRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#ab6be60fd210320a4f463243c0c15e3ab", null ],
     [ "getMinEffectRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6b8e4df386668bfe49f7e0881cd89091", null ],
     [ "getNameColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#af3d8996c31389f1e23830d3f45d297f5", null ],
+    [ "getNameForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a1ea194a4b7a8ce9d48f89a56d47018a5", null ],
     [ "getOptimalEffectRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#aeac5885f83cf52b9a58157cb8a6665d6", null ],
     [ "getParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#afceec91c0f20278bd4721bd0f1ad31e9", null ],
     [ "getRenderRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#ad362a89099361de19357e1e6c9e0a03a", null ],

@@ -19,6 +19,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1Spatial
     [ "getAuroraThicknessFlat", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#aa9ae83912ba6cc63b06f15f9457b3ae3", null ],
     [ "getAuroraThicknessMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#add544b6be2781ada27f4eab451308016", null ],
     [ "getEffectCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#ae3e9c77f81fc7d84341dbd89142b07dc", null ],
+    [ "getNameForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#addccf7a76c4bdc4e03d1b9a30d620e82", null ],
     [ "getTerrainName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a4c3c05c360f0ff3093cdd621c8765464", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a460a752acd568291216c24893a0a1c61", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a6936eba22e8c991725c077bf5ce7fe26", null ],

@@ -11,6 +11,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken =
     [ "addScript", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6d79f43ddec9955c87214fac08b71a12", null ],
     [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a4c0bda108809b07521d936455ce388e1", null ],
     [ "advance", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8eef9c24c2ba8452f029fe22aa7c8470", null ],
+    [ "autoUpdateHyperLocationBasedOnInSystemEntityAtRadius", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a3ab58efe39025c5c6b89b4156fa33cbc", null ],
     [ "clearAbilities", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a2d28b08fba234f8d0fb3f679c413cf43", null ],
     [ "clearFloatingText", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8d73571ae434e8e3c7e363d68fa917f8", null ],
     [ "clearTags", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6ac78eabf92f12450416d195a6b398d9", null ],

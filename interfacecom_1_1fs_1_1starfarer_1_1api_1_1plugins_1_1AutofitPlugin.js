@@ -4,7 +4,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin =
     [ "AvailableFighter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableFighter.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableFighter" ],
     [ "AvailableWeapon", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableWeapon.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableWeapon" ],
     [ "autoAssignOfficers", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin.html#a18b26547b20ccf55d222805d39e85a09", null ],
-    [ "doFit", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin.html#a83f37065369c471f0ae639c64649e4ca", null ],
+    [ "doFit", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin.html#a4da0b6f4f5c246b7f279a6d2fd7a0ba0", null ],
     [ "doQuickAction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin.html#accd63d2eaeb4f4d997c584565a5a6ca2", null ],
     [ "getCreditCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin.html#a9dd31554ed8e6244de62d505ac6ea11c", null ],
     [ "getOptions", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin.html#a25bc3e4d192187ae79ff215332e49367", null ],

@@ -7,6 +7,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioCh
     [ "getActiveLayers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#a6632c1ae8446495e2d69e0cb79cb4cf4", null ],
     [ "getEffectCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#aff6ab4cbccaa9062fbead1a3c5742a45", null ],
     [ "getExtraSoundRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#a91e4e4d73203d1d40ac8a562591cd589", null ],
+    [ "getNameForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#ab79810abe66a533a8e8fea13d8024055", null ],
     [ "getProximitySoundFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#add425185549c4cd77912b7845e39bcca", null ],
     [ "getTerrainName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#a2c7bb4d2bed625d647e0c434ba8622e7", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html#abfaa8761cbd51d1ce74653c8f647d286", null ],

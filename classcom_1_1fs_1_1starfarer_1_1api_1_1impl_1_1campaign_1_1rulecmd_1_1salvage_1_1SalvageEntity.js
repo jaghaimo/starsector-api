@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity =
 [
+    [ "canBeMadeRecoverable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#a43c64e1550dfd1a884f23d6e34adb3bb", null ],
     [ "computeOverallMultForDebrisField", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#a2ab747b270d901eedd3bc0f0e5490a76", null ],
     [ "convertToDebrisField", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#a58682b4034a01bea5a7de7fb3d34d59f", null ],
     [ "convertToDebrisField", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#a17c4c34614fb8bd46654fa112f7c75e5", null ],
@@ -10,6 +11,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage
     [ "printSalvageModifiers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#a24767057ceecba05a0fbf8367ab7005a", null ],
     [ "showCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#aec3223f71c6c883becff2c1c7d839f2c", null ],
     [ "showCostDebrisField", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#a36a696c4dc50f0df7c3a8e60a7cffa96", null ],
+    [ "showRecoverable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#aa57b28ca7443a21caa373d3d2c2bdd04", null ],
     [ "cargo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#aaa9d314ca4ad5c63a34224f45d32fe62", null ],
     [ "dialog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#abdfa9fef0d0b7c05a5080cb0a5cf82c1", null ],
     [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#a4e4ff00f673112031507bd8a01a4c13f", null ],

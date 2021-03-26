@@ -1,9 +1,10 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel =
 [
-    [ "addPromptAndOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#ab3088636602a154fa37283b8a58aba1e", null ],
+    [ "addPromptAndOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#af82d877f19fb4f2318ea1ca1cc01f062", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#ab4959fb675b458c862846e91953ab872", null ],
     [ "endWithContinue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#a80852a7ef9d5454e797bec734b42c0fe", null ],
-    [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#a453a888c6f1fad50959520460bceece3", null ],
+    [ "getBarEventId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#a8c81240c4780c3b3cf0310c2954a0b64", null ],
+    [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#a7f742093bae2dd0ce2a49ea321372658", null ],
     [ "isDialogFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#a26e7e004d94b9519cf2e39de832eabcd", null ],
     [ "optionSelected", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#a89be0d761b104b7b7bda270691ce2c2e", null ],
     [ "shouldRemoveEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#a769eddc54ceaa2de686ad9256e20daf7", null ],

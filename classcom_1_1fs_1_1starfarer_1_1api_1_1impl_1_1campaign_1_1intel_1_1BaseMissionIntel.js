@@ -11,6 +11,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissi
     [ "advanceMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a5d2643ec81022fdfbc26765c31c73ba1", null ],
     [ "buttonPressConfirmed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aca75438171f0c90d925d4ccd190371a0", null ],
     [ "canAbandonWithoutPenalty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a5b2aa939be28db96679f6248521fd4f4", null ],
+    [ "cancel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ae7b3a49c89b9b04486b58ecc62c28df2", null ],
     [ "createAbandonedResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a3a1eb4ec560547d9f0a055a45efb0be2", null ],
     [ "createCancelledResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a7a2605891cd02f2e96907f0875cb5dfc", null ],
     [ "createConfirmationPrompt", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a027ed211ef3f41d6210cacfd1352edd5", null ],

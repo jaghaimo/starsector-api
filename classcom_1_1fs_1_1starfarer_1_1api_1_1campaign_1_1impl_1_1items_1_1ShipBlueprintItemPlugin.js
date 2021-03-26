@@ -2,6 +2,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBluep
 [
     [ "createTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#af83e571415a761833cdaecb474f82802", null ],
     [ "getDesignType", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#aae9085836f1dc850b599fe3991a4b74e", null ],
+    [ "getItemPriceMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#a70879bd5f43adde9f517f907d3827ce2", null ],
     [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#a4efc4a1f3f8cd0e7d0c2f5610af926f8", null ],
     [ "getPrice", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#a41e06a1d035fd01419b552498ed5cb58", null ],
     [ "getProvidedFighters", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#a60e3813b785a5e869c884319d904cb85", null ],

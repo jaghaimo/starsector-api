@@ -1,6 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI =
 [
     [ "addAll", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a91e8ad74bfaa4756a700fcaf9d4bbfcc", null ],
+    [ "addAll", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a1c2099cf11d964c4f00e9730bf528da5", null ],
     [ "addCommodity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ae1dcc76b32d5391954b0e214fb19dfc8", null ],
     [ "addCrew", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a7fcb6b94d09c33c2e70a9e703a042caa", null ],
     [ "addFighters", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#afb5feb4e0ef5d6aea7452a1b4ed5b5c7", null ],
@@ -20,6 +21,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI =
     [ "getCredits", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ab33b0c624ea98c2aef4eaf0475417a2b", null ],
     [ "getCrew", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a4ff7dcb3c3b16501a83cdaa73ea903fd", null ],
     [ "getFighters", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a3231ef1e16a212eb25c30f991a90dacc", null ],
+    [ "getFleetData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ab072c7fe7d5ef5efee5a6c84f2c2cb21", null ],
     [ "getFreeCrewSpace", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a7267c9a1225078a6d9817193924da75f", null ],
     [ "getFreeFuelSpace", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ab6477bd83c9569a97811e2688a5e06e9", null ],
     [ "getFuel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a97474623007a342af2bedf0d00d2ccfb", null ],
@@ -30,6 +32,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI =
     [ "getMothballedShips", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ae573d9d99761dc40ad6a9df2fe618f8c", null ],
     [ "getNumFighters", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a5d115a0360f839c6ff5521672136eaae", null ],
     [ "getNumWeapons", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a6bd410e9dd402027cc79cad38ecc20f7", null ],
+    [ "getOrigSource", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a6071768e078b736bd1499c9ad9dc808b", null ],
     [ "getQuantity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a1b064a41ed08586f74d34c41a778b055", null ],
     [ "getSpaceLeft", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a2283e039b213a6a780f7fbe9c643f4fc", null ],
     [ "getSpaceUsed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ad11d0b08c583dfeab82e18d11c3e9040", null ],
@@ -53,5 +56,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI =
     [ "removeSupplies", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a7c70e7b287569a8361beeed55258d077", null ],
     [ "removeWeapons", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a6c2ce2f4b137e546755c38916ac7e017", null ],
     [ "setFreeTransfer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a3888c06b4c627ab599e17504c29074b0", null ],
-    [ "sort", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a794c304a1bd710f6fd3ee16e39aecd6b", null ]
+    [ "setOrigSource", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#aab38ba53038faecd69e8b8a2c76454af", null ],
+    [ "sort", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a794c304a1bd710f6fd3ee16e39aecd6b", null ],
+    [ "updateSpaceUsed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a0340b7b03b920c48a188d3387962820a", null ]
 ];

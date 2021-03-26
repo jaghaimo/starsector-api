@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI =
 [
+    [ "getBaseDanger", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#abb695c1703b0d4e318e1ad54e36d1d0f", null ],
     [ "getBasePrice", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a667cad9d981a043d6a4870a5313f4028", null ],
     [ "getCargoSpace", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a14fc0e29be64708a8a90c0f6f6099739", null ],
     [ "getDemandClass", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a50974ee461c6c5ba13c4511e321e2a74", null ],
@@ -15,6 +16,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecA
     [ "getOrder", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a0a578fd4b8f136f86ecefcbed8ff52cf", null ],
     [ "getOrigin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#aa8348c3d14476bc4ddde370cfee96417", null ],
     [ "getPriceVariability", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a476e504a46c2635b92f3bf7df022eaad", null ],
+    [ "getSoundId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#ad1638210e8150169b545dda005455b3a", null ],
     [ "getSoundIdDrop", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a3c811b8999ab424205127b238f2ba4e4", null ],
     [ "getStackSize", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#ae6fdd9c40c6f799b8b0b4f18dba1cacc", null ],
     [ "getTags", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a143ba50a0ab5fc77bd59e98565108dcb", null ],
@@ -23,8 +25,11 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecA
     [ "isExotic", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a1109878bb70889918b50f5dbea443fb1", null ],
     [ "isFuel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a01ada4b8cea788f3ae322b35a80e6583", null ],
     [ "isMeta", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#adb1c0f87f53e4fd30d7e9578e205499e", null ],
+    [ "isNonEcon", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#ae8a7c2c744e2b38bc03116855524af65", null ],
     [ "isPersonnel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#acf2b5274b77a91125c4aa0caa2e4efdc", null ],
     [ "isPrimary", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a7d760da532552f27d5fe3eff50b0b07f", null ],
     [ "isSupplies", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#ad5a960e2316327d0c10e4785e4868e0f", null ],
+    [ "setBaseDanger", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a9631afe052f6945b79dfd676d1d8c1bb", null ],
+    [ "setBasePrice", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a2cd9b7ac368d4fa4d2e0a02400a2603a", null ],
     [ "setExportValue", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a4931f385f42ee214a88b1e162b0ffb45", null ]
 ];

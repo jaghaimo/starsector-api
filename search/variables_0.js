@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['combat_5fsmall_5ffor_5fsmall_5ffleet_3350',['COMBAT_SMALL_FOR_SMALL_FLEET',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1ShipRoles.html#ad4bca413e08891bb099edd91fd055a57',1,'com::fs::starfarer::api::impl::campaign::ids::ShipRoles']]]
+  ['automated_5ffighter_4234',['AUTOMATED_FIGHTER',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Tags.html#aecd8f86ae31e672e8ef3af1e1dd89c08',1,'com::fs::starfarer::api::impl::campaign::ids::Tags']]],
+  ['automated_5fpoints_5fvalue_4235',['AUTOMATED_POINTS_VALUE',['../interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html#a7111d0624ec75cb2b93cdc2b84e048d5',1,'com::fs::starfarer::api::campaign::AICoreOfficerPlugin']]]
 ];

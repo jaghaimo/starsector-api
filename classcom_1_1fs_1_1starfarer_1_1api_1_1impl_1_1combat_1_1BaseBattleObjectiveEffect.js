@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect =
 [
+    [ "getBonusDeploymentPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a0f38cbb986657cd044086698bc03df67", null ],
     [ "giveCommandPointsForCapturing", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a7f44febb9e57e6f3f955b0a4ac4982af", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a676c15e270e64eef94e4c5db21f3344e", null ],
     [ "revealArea", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a9cf48b19d25e04a9c6fba42180962bc6", null ],

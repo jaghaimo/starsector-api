@@ -39,5 +39,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_
     [ "repResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#ab086381e2d9ec16ecac6c43820ee8b21", null ],
     [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#ac6e11360eeb68f450b24b2bac422e01d", null ],
     [ "targetFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a978107eb60c133afdb4f99aa0fd80e55", null ],
-    [ "targetIndustry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a9fda34a8822b2fe13a2095a56de4e2af", null ]
+    [ "targetIndustry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a9fda34a8822b2fe13a2095a56de4e2af", null ],
+    [ "targetOwner", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a6acb20e67dcc4caef1b477f15a4533bf", null ]
 ];

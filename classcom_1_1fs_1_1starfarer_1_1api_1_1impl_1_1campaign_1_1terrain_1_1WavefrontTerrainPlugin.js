@@ -13,6 +13,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1Wavefro
     [ "getMaxEffectRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a0f9bcb52768d5dd2a9d67b181032557b", null ],
     [ "getMinEffectRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a6d012137b640c45d0198bf8d5b112ad3", null ],
     [ "getNameColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a12ec192486b6c0c984c1c469d92774e8", null ],
+    [ "getNameForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a31557e439a3b6687f0aa9f585342d5b4", null ],
     [ "getOptimalEffectRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a0d7dab42c7b265b5cf56e43e78fd4d97", null ],
     [ "getParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a563daf46d0d67eb4129e798d6e052d61", null ],
     [ "getPixelsPerSegment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#aa4708c08768ae2fc72a7b26d58e6f9fc", null ],

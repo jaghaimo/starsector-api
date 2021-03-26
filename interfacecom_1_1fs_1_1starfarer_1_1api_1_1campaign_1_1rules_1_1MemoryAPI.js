@@ -12,6 +12,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI =
     [ "getExpire", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a4c986c94f6c4e6bfa0b90c3c8734f82f", null ],
     [ "getFleet", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#af6165ec5ebda0f928b820e73e29d4ae0", null ],
     [ "getFloat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a05b35540afe94a1b3ce12ec761ee38e4", null ],
+    [ "getInt", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a9beafc8dad15a86812396904ef06e65a", null ],
     [ "getKeys", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a5cc0291fb7e342c43d92091518f59499", null ],
     [ "getLong", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#ab94576a339d4134d0f8be012f4381a8d", null ],
     [ "getRequired", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html#a279f5a662e3862a263cc7b8b2b02da78", null ],
