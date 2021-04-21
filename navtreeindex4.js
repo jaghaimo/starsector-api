@@ -1,5 +1,8 @@
 var NAVTREEINDEX4 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a7823c6ffba787b83da08625b446a5366":[0,0,0,0,0,0,5,0,48,63],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a79279b94417bfa71355d699e06d578ec":[0,0,0,0,0,0,5,0,48,19],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a7f4890ce97c6474f1baf48b2f8e4a9c6":[0,0,0,0,0,0,5,0,48,43],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a80d7c30318d41e6408ae9ce99d4056b8":[0,0,0,0,0,0,5,0,48,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a83181bf5469248b69b35d049bb1b7ee8":[0,0,0,0,0,0,5,0,48,65],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a8384e988b85fd9a59a4c4a7d5a3bef7e":[0,0,0,0,0,0,5,0,48,13],
@@ -246,8 +249,5 @@ var NAVTREEINDEX4 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html":[0,0,0,0,0,0,5,0,63],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a1316dec84f20e90cd7e4c70ca131b1fd":[0,0,0,0,0,0,5,0,63,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a2fad3103f441162a9dd70e4f79c7a5e1":[0,0,0,0,0,0,5,0,63,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a3a07c8daea1277a274b5c2c07cc9d9f6":[0,0,0,0,0,0,5,0,63,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a490a2765c16c3ef2bf58e810a71bc40c":[0,0,0,0,0,0,5,0,63,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a496ed7b4e0cbe225d1b38a1c166082a3":[0,0,0,0,0,0,5,0,63,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a7bbcbc0bf15740d95677fb2fc3d0a0c5":[0,0,0,0,0,0,5,0,63,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a3a07c8daea1277a274b5c2c07cc9d9f6":[0,0,0,0,0,0,5,0,63,4]
 };

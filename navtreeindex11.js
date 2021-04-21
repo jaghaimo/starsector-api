@@ -1,5 +1,8 @@
 var NAVTREEINDEX11 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a288e69c738282878673269544b733814":[0,0,0,0,0,0,5,0,3,2,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a33eb9d90486abc3c408260271bd512f9":[0,0,0,0,0,0,5,0,3,2,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a34d5ff9e0661fed8681bcf0298d47cff":[0,0,0,0,0,0,5,0,3,2,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a4d177192e26162e2bda8460afdd257b7":[0,0,0,0,0,0,5,0,3,2,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a4d6018b50defc973428d514847728ab1":[0,0,0,0,0,0,5,0,3,2,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a5c342d38455b112a0cb4ab185f7cadc3":[0,0,0,0,0,0,5,0,3,2,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX11 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#aedfcd7aeb4ee98eaf89b71108e30b7b9":[0,0,0,0,0,0,5,0,3,0,3,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#af98adbc49c6019e8cd1893489ae6de70":[0,0,0,0,0,0,5,0,3,0,3,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#afc5a204adca7f6ca4537bf0b392dfdc5":[0,0,0,0,0,0,5,0,3,0,3,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#afcc5464184a693977dd491d415019dcb":[0,0,0,0,0,0,5,0,3,0,3,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html":[0,0,0,0,0,0,5,0,4,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a3f0e481d0e254f6cdbb9d8bc45962b8f":[0,0,0,0,0,0,5,0,4,0,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a7b1c74288118fe9373a4bceece4bd926":[0,0,0,0,0,0,5,0,4,0,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#afcc5464184a693977dd491d415019dcb":[0,0,0,0,0,0,5,0,3,0,3,10]
 };

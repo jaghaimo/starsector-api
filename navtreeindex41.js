@@ -1,5 +1,8 @@
 var NAVTREEINDEX41 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a933b55d6f85c50ba46497a339a5872c1":[0,0,0,0,0,0,5,0,16,21,39],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a94590307b6e1b57610544793637f5ac7":[0,0,0,0,0,0,5,0,16,21,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a990545ceca180b5a11b889857690095e":[0,0,0,0,0,0,5,0,16,21,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a9a2d116457d01f76f2a7ca171ba3517e":[0,0,0,0,0,0,5,0,16,21,40],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a9f805e1ea944fe6b33f84e445825224b":[0,0,0,0,0,0,5,0,16,21,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#aaf58cf19c0d5bf3388414e9671de33dd":[0,0,0,0,0,0,5,0,16,21,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX41 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a4f3ad2b940531ccb3a49cd9cb93c8ffc":[0,0,0,0,0,0,5,0,16,33,28],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a500db855a34a2cc9688cff1fa4faeca3":[0,0,0,0,0,0,5,0,16,33,32],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a50dedaa1aabb369074df90fb3dcd24b0":[0,0,0,0,0,0,5,0,16,33,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a512342f7775e652767f50c4d9ee1e7fd":[0,0,0,0,0,0,5,0,16,33,21],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a529ff80bc6f8044a71447401e71f2258":[0,0,0,0,0,0,5,0,16,33,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a563daf46d0d67eb4129e798d6e052d61":[0,0,0,0,0,0,5,0,16,33,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a5e8fe838f8dbfa8178be9b647bb28b56":[0,0,0,0,0,0,5,0,16,33,9]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a512342f7775e652767f50c4d9ee1e7fd":[0,0,0,0,0,0,5,0,16,33,21]
 };

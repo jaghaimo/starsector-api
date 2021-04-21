@@ -1,5 +1,13 @@
 var NAVTREEINDEX62 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a2dd37a1994144385420d0b272a28fccb":[0,0,0,0,0,0,1,0,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a35b7c2873b284253e86fd9ece67939d7":[0,0,0,0,0,0,1,0,15],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a39dbc328c19accd5991195fbab765f9c":[0,0,0,0,0,0,1,0,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a3aa0c6bbb1fc70a80496e07a4abf9107":[0,0,0,0,0,0,1,0,21],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a5bb671557ad848763707d11545cae2ba":[0,0,0,0,0,0,1,0,19],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a6189948caa679f0eb0fdd4074a295af4":[0,0,0,0,0,0,1,0,10],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a6489d0dac5482ead49634197925be9c7":[0,0,0,0,0,0,1,0,22],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a66478ee64b874bd5267527d779ed48b1":[0,0,0,0,0,0,1,0,35],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a7ae3369821a77a5ee778b69268a72b0a":[0,0,0,0,0,0,1,0,25],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a7e3a0ef6f8edc6148f9efd8de327eabc":[0,0,0,0,0,0,1,0,32],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html#a7e54675abad94ee3a6c002c96beda60e":[0,0,0,0,0,0,1,0,6],
@@ -241,13 +249,5 @@ var NAVTREEINDEX62 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abcfae1128177e79e8cfaa095fb3feb74":[0,0,0,0,0,0,1,19,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abe34a329782eccdc9e2486a7be08aadb":[0,0,0,0,0,0,1,19,26],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#acc4565234faf7154e568b665ce8a8724":[0,0,0,0,0,0,1,19,19],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ace61d4ffe51dae330290b64b56ec3524":[0,0,0,0,0,0,1,19,36],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#adc6c183179b8cda5b914fd7686f99d7b":[0,0,0,0,0,0,1,19,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ade36712c0ce63593049e96a434372e8c":[0,0,0,0,0,0,1,19,20],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae0276d02f3cc74ba8bbe9d20cebfc3c7":[0,0,0,0,0,0,1,19,54],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd":[0,0,0,0,0,0,1,19,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae68c6557ebdc611b1b8ace01a5bd3e14":[0,0,0,0,0,0,1,19,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aef268ef5ed4dc7b71efeb11bd3e16874":[0,0,0,0,0,0,1,19,27],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aefc1d1cb9f9a2c29b4cc698c112e2351":[0,0,0,0,0,0,1,19,15],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#af16aaf3135342239bd8123ab87519e19":[0,0,0,0,0,0,1,19,4]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ace61d4ffe51dae330290b64b56ec3524":[0,0,0,0,0,0,1,19,36]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX49 =
 {
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html#a8b118d636ca91e3a2657f073ac1538b5":[0,0,0,0,0,0,7,18,4],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html#aaf87e9c09341bcbd4baa6b7e7f8d8609":[0,0,0,0,0,0,7,18,0],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html#abda85f9400efd269328ed1eb21eb12e4":[0,0,0,0,0,0,7,18,3],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupType.html":[0,0,0,0,0,0,7,20],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupType.html#a7a403c5d91f565e5f90661d181071789":[0,0,0,0,0,0,7,20,1],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupType.html#a9613336306e8d218f332d410cd77bbc3":[0,0,0,0,0,0,7,20,0],
@@ -47,15 +50,15 @@ var NAVTREEINDEX49 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode.html#a7f715c097c84977e54b2815e7eb9bb5c":[0,0,0,0,0,0,10,17,4],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode.html#a9ba8064382880bfe24fad91ba8f920bd":[0,0,0,0,0,0,10,17,2],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode.html#adee55cfcc03cb22f66486927e8c5d316":[0,0,0,0,0,0,10,17,0],
-"functions.html":[0,3,0,0],
 "functions.html":[0,3,0],
+"functions.html":[0,3,0,0],
 "functions_b.html":[0,3,0,1],
 "functions_c.html":[0,3,0,2],
 "functions_d.html":[0,3,0,3],
 "functions_e.html":[0,3,0,4],
 "functions_f.html":[0,3,0,5],
-"functions_func.html":[0,3,1],
 "functions_func.html":[0,3,1,0],
+"functions_func.html":[0,3,1],
 "functions_func_b.html":[0,3,1,1],
 "functions_func_c.html":[0,3,1,2],
 "functions_func_d.html":[0,3,1,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX49 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a77ff82e8912609406f361e1289dff463":[0,0,0,0,0,0,28,39],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a77ffe60a9523b934d5f3d7754bffaa2e":[0,0,0,0,0,0,28,66],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a7924e3e5e9b163c9fb2a918d5bed5649":[0,0,0,0,0,0,28,98],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a797195d90d47dfbde3e39df320326e81":[0,0,0,0,0,0,28,44],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a7a8a9be48e00f0689484e8aa2e049b14":[0,0,0,0,0,0,28,60],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a7b3d14b0d6d8285928b7804f2a60919b":[0,0,0,0,0,0,28,45],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a7c6e7107def31d477f8ff4d3b57771c1":[0,0,0,0,0,0,28,95]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a797195d90d47dfbde3e39df320326e81":[0,0,0,0,0,0,28,44]
 };

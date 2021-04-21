@@ -1,5 +1,8 @@
 var NAVTREEINDEX48 =
 {
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html#acee36c93cb303e121b0a300399f00c97":[0,0,0,0,0,0,0,43,4],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html":[0,0,0,0,0,0,0,55],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html#a06a433c6af3b296499327297e7fa3a43":[0,0,0,0,0,0,0,55,7],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html#a10eb6d9aa271f2c33a366c0c72651f47":[0,0,0,0,0,0,0,55,3],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html#a1124589aeed7f498f0cf5b3c772db2f6":[0,0,0,0,0,0,0,55,18],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html#a21e92331363184fc057d87ccbc941d86":[0,0,0,0,0,0,0,55,12],
@@ -246,8 +249,5 @@ var NAVTREEINDEX48 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpawnType.html#aa75c8d3cf2512c3894ac757c64824fc8":[0,0,0,0,0,0,7,14,5],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html":[0,0,0,0,0,0,7,18],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html#a32cbb2267af68081b07adbb8b538144f":[0,0,0,0,0,0,7,18,2],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html#a5e6733e8cef57ffd24aa58eabf9c7132":[0,0,0,0,0,0,7,18,1],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html#a8b118d636ca91e3a2657f073ac1538b5":[0,0,0,0,0,0,7,18,4],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html#aaf87e9c09341bcbd4baa6b7e7f8d8609":[0,0,0,0,0,0,7,18,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html#abda85f9400efd269328ed1eb21eb12e4":[0,0,0,0,0,0,7,18,3]
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html#a5e6733e8cef57ffd24aa58eabf9c7132":[0,0,0,0,0,0,7,18,1]
 };

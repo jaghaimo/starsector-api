@@ -1,5 +1,8 @@
 var NAVTREEINDEX30 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a48bc2647d7249c86bcaec3402d6b913a":[0,0,0,0,0,0,5,0,8,2,8,207],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a48d33180be2d25ba99f66406ff228786":[0,0,0,0,0,0,5,0,8,2,8,119],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a4b5565e25d6fd914d16860e26472dfca":[0,0,0,0,0,0,5,0,8,2,8,203],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a4bfe59b167d4adbe33a9948bee5d2681":[0,0,0,0,0,0,5,0,8,2,8,123],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a4d1b8fc38b2deb8772eb51ccddc6ef0f":[0,0,0,0,0,0,5,0,8,2,8,94],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a4d89cbe40d352a807e17f334f2aa1d48":[0,0,0,0,0,0,5,0,8,2,8,176],
@@ -246,8 +249,5 @@ var NAVTREEINDEX30 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#a84a0c8e44c9c4dffad44e38d48d26836":[0,0,0,0,0,0,5,0,9,1,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#aa28701476b2b38f9700c2e771403dbde":[0,0,0,0,0,0,5,0,9,1,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#ad3ef3c578340bcbb3fa6d05a7c76c9ca":[0,0,0,0,0,0,5,0,9,1,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#afd99a6d678af33247c10db8228c0be17":[0,0,0,0,0,0,5,0,9,1,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html":[0,0,0,0,0,0,5,0,9,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#a13f6893b4f0da0f3bf66046e0ce9b49a":[0,0,0,0,0,0,5,0,9,4,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#a1e68fc933dbd99ec29ef719873cc438c":[0,0,0,0,0,0,5,0,9,4,5]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#afd99a6d678af33247c10db8228c0be17":[0,0,0,0,0,0,5,0,9,1,5]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX46 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a47e062e791ee0e449260697f5c1c9e95":[0,0,0,0,0,0,7,2,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a4db588bbf677a0258f3f55ae452e388d":[0,0,0,0,0,0,7,2,20],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a4fe81c367daa79e6dcac1bef28c6809d":[0,0,0,0,0,0,7,2,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a60cfa216b9a4a7e4e9fcf0d652fb1ee9":[0,0,0,0,0,0,7,2,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a6aae4979cb41593d13669ec280260f17":[0,0,0,0,0,0,7,2,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a726e90b447507dddf211db024b9ff1a1":[0,0,0,0,0,0,7,2,14],
@@ -246,8 +249,5 @@ var NAVTREEINDEX46 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#ae6cc9b31fbf392f421109c72f16a184d":[0,0,0,0,0,0,9,0,1,30],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#ae863af53a79fbc6fb9eccbe33aedb161":[0,0,0,0,0,0,9,0,1,63],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#aee04a13fb125c0a71d78f3b8138c1891":[0,0,0,0,0,0,9,0,1,45],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#af6bf8523b732591a72397166dea8a796":[0,0,0,0,0,0,9,0,1,66],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#af7554973581d97358554b9641e899702":[0,0,0,0,0,0,9,0,1,48],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#af9bf00fa985903419639e9e983b91819":[0,0,0,0,0,0,9,0,1,31],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreBuildObjectiveTypePicker.html":[0,0,0,0,0,0,9,0,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#af6bf8523b732591a72397166dea8a796":[0,0,0,0,0,0,9,0,1,66]
 };

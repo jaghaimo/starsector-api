@@ -1,5 +1,8 @@
 var NAVTREEINDEX35 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html#af78dbd0e7fc36662a3a6baad4d0a9c7b":[0,0,0,0,0,0,5,0,12,103,18],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html#afb6b037af408421e65fd91f2f34050e2":[0,0,0,0,0,0,5,0,12,103,21],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptionsExample.html":[0,0,0,0,0,0,5,0,12,104],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptionsExample.html#a068fac3eb6a1c3f4f4e329592fddc155":[0,0,0,0,0,0,5,0,12,104,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptionsExample.html#a9f60a165a0e01afb34f1bc2605a873c0":[0,0,0,0,0,0,5,0,12,104,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptionsExample.html#ab4f3f3b3a92e6b6073a1d1b4b3e444ec":[0,0,0,0,0,0,5,0,12,104,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX35 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent.html#a982e288167e5a201fd71ea5ea07b6f73":[0,0,0,0,0,0,5,0,12,3,1,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective.html":[0,0,0,0,0,0,5,0,12,3,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective.html#a6d50b4c9d513b1e77924c049aeabaff8":[0,0,0,0,0,0,5,0,12,3,2,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html":[0,0,0,0,0,0,5,0,12,3,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html#a01ec174606de3c8185e2897b34da9509":[0,0,0,0,0,0,5,0,12,3,4,22],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html#a022cfdbc2de93f9a42901d353d493e68":[0,0,0,0,0,0,5,0,12,3,4,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html#a08565d9aac422c032c57866f90a96325":[0,0,0,0,0,0,5,0,12,3,4,15]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html":[0,0,0,0,0,0,5,0,12,3,4]
 };

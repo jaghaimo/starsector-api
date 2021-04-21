@@ -1,5 +1,13 @@
 var NAVTREEINDEX58 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html#a662d413ba88d1a8483371a5a3265d37a":[0,0,0,0,0,0,0,0,1,8],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html#a8f40e0b7a7e982095a28f6b456fd3a79":[0,0,0,0,0,0,0,0,1,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html#aa6e07c7b72a1e89cd0f2b976005188e9":[0,0,0,0,0,0,0,0,1,10],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html#ab1514c61eadc6e4f08c02d32988e4a38":[0,0,0,0,0,0,0,0,1,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html#ab5e0a90bee46e8f4580ae83a4c20dcf7":[0,0,0,0,0,0,0,0,1,9],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html#acf88123a89e061996a69eaebdc9c8340":[0,0,0,0,0,0,0,0,1,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html#ad34690a60ceb9c57b30b28aeff1d6f67":[0,0,0,0,0,0,0,0,1,6],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html#ae5c78242fae116b7b0f288212a49ccc6":[0,0,0,0,0,0,0,0,1,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html#aed69d57a8b20960561a5b6a4e685135d":[0,0,0,0,0,0,0,0,1,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html":[0,0,0,0,0,0,0,0,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html#a02ffed0beea7c82ef16b55963f95e3a6":[0,0,0,0,0,0,0,0,2,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX58 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html":[0,0,0,0,0,0,0,1,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html#a1d2e86c9461d1bec617f8ed1bd5f8a4e":[0,0,0,0,0,0,0,1,3,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html#a372f5c464e63f0b293cf94f2918df504":[0,0,0,0,0,0,0,1,3,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html#a3d92a381c1e9f6ab323c2d01dce81204":[0,0,0,0,0,0,0,1,3,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html#a755fa8dac3bb8088e37727462aa121e7":[0,0,0,0,0,0,0,1,3,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html#a82056db54385390954bbd0c9e2c60cb3":[0,0,0,0,0,0,0,1,3,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html#a8641e248194e807ab92d2b99b2c4459a":[0,0,0,0,0,0,0,1,3,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html#a8e5989532679c1a614cbaa750cf68cc2":[0,0,0,0,0,0,0,1,3,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html#aabca3c265182599337aa81d1e3243795":[0,0,0,0,0,0,0,1,3,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageSectionAPI.html":[0,0,0,0,0,0,0,1,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageSectionAPI.html#a09be1bffbef02c183768e3f9e36f1f93":[0,0,0,0,0,0,0,1,5,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageSectionAPI.html#a0c0421047a9d3ed48e7d1c1a2236256d":[0,0,0,0,0,0,0,1,5,1]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html#a3d92a381c1e9f6ab323c2d01dce81204":[0,0,0,0,0,0,0,1,3,3]
 };

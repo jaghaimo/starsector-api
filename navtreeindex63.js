@@ -1,5 +1,13 @@
 var NAVTREEINDEX63 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#adc6c183179b8cda5b914fd7686f99d7b":[0,0,0,0,0,0,1,19,7],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ade36712c0ce63593049e96a434372e8c":[0,0,0,0,0,0,1,19,20],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae0276d02f3cc74ba8bbe9d20cebfc3c7":[0,0,0,0,0,0,1,19,54],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae570defd266826457f552329af959bfd":[0,0,0,0,0,0,1,19,8],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ae68c6557ebdc611b1b8ace01a5bd3e14":[0,0,0,0,0,0,1,19,6],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aef268ef5ed4dc7b71efeb11bd3e16874":[0,0,0,0,0,0,1,19,27],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aefc1d1cb9f9a2c29b4cc698c112e2351":[0,0,0,0,0,0,1,19,15],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#af16aaf3135342239bd8123ab87519e19":[0,0,0,0,0,0,1,19,4],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#af1ba15062a78165e30119bdfe36482d1":[0,0,0,0,0,0,1,19,24],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#afd3f83f38be2a29eabdafb7bd9dbe618":[0,0,0,0,0,0,1,19,46],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonalityAPI.html":[0,0,0,0,0,0,1,18],
@@ -241,13 +249,5 @@ var NAVTREEINDEX63 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#aaa261c0547c9afe216d2e6cba85533f9":[0,0,0,0,0,0,2,20,103],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#aaa51f0392775d502de8bb01d0452f147":[0,0,0,0,0,0,2,20,20],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#aae2a9e296c4504bf173b2802437b9759":[0,0,0,0,0,0,2,20,54],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#aaf899350e6ddad440e51fd7b47de45ab":[0,0,0,0,0,0,2,20,77],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#aafe01ee3272c823dd52122765ad60973":[0,0,0,0,0,0,2,20,25],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ab2132723d34a6fad8db3548a7c23615d":[0,0,0,0,0,0,2,20,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ab2d62b2e993b02d31c6353790609ff56":[0,0,0,0,0,0,2,20,45],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#abc1901ec09573a28d99288781c6695b0":[0,0,0,0,0,0,2,20,41],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac2d9d76c6da9658515697f7af682e5d2":[0,0,0,0,0,0,2,20,75],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac37c09d6c937ba4f3c520ac1edc63799":[0,0,0,0,0,0,2,20,65],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac44c1eaeb8c6f933209aca551237ae76":[0,0,0,0,0,0,2,20,53],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac9a77658459703cdf9e97445fc4f61cc":[0,0,0,0,0,0,2,20,22]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#aaf899350e6ddad440e51fd7b47de45ab":[0,0,0,0,0,0,2,20,77]
 };

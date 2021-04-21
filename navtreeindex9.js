@@ -1,5 +1,8 @@
 var NAVTREEINDEX9 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d":[0,0,0,0,0,0,5,0,2,0,0,96],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae83bd560b90002336c6d6de0b14747d3":[0,0,0,0,0,0,5,0,2,0,0,181],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae9864bc7101934b76dfe62837edefef9":[0,0,0,0,0,0,5,0,2,0,0,86],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aea28248ea34657af478e7322dd090c42":[0,0,0,0,0,0,5,0,2,0,0,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aec34fd86c7f79a60be154a4face2afda":[0,0,0,0,0,0,5,0,2,0,0,175],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aed79018a72a2a032cb317bb3809ed4cb":[0,0,0,0,0,0,5,0,2,0,0,166],
@@ -246,8 +249,5 @@ var NAVTREEINDEX9 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html":[0,0,0,0,0,0,5,0,2,0,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a1130674b2545a2d66879466ac9ced487":[0,0,0,0,0,0,5,0,2,0,18,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a2ed231ebcf66a4870f3a408e773785c2":[0,0,0,0,0,0,5,0,2,0,18,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a3d324bfbf4bc454416b02c4357f8168c":[0,0,0,0,0,0,5,0,2,0,18,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a45b0d635212858ef06ff3384ab345da3":[0,0,0,0,0,0,5,0,2,0,18,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a70527419f336fca77ca87fcb6bbfecf2":[0,0,0,0,0,0,5,0,2,0,18,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a71ab04e035581ce58bf43589454a81fe":[0,0,0,0,0,0,5,0,2,0,18,7]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a3d324bfbf4bc454416b02c4357f8168c":[0,0,0,0,0,0,5,0,2,0,18,8]
 };

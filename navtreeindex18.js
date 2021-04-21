@@ -1,5 +1,8 @@
 var NAVTREEINDEX18 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html#a0022514bf75097a3501ecf197acfc531":[0,0,0,0,0,0,5,0,7,0,0,22,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html#a3880f1c6dc2f2cef17a654887f81010e":[0,0,0,0,0,0,5,0,7,0,0,22,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html#a592377f19ca4383329ff0eaeb462544d":[0,0,0,0,0,0,5,0,7,0,0,22,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html#a5b45e5690d8077644cf007cbeb14d330":[0,0,0,0,0,0,5,0,7,0,0,22,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html#a708f7558047bd5b01ddf9695903c9bc7":[0,0,0,0,0,0,5,0,7,0,0,22,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html#a7d281e3dadcdcd692fc7e1a4d1778bc9":[0,0,0,0,0,0,5,0,7,0,0,22,11],
@@ -246,8 +249,5 @@ var NAVTREEINDEX18 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#af4462a65b88c178b7e8180aaffbdba43":[0,0,0,0,0,0,5,0,7,0,0,36,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html":[0,0,0,0,0,0,5,0,7,0,0,37],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html#a742db56662fcd717a458f3047b5ee310":[0,0,0,0,0,0,5,0,7,0,0,37,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html#ae7bb8a2674c919a687e9d0310052023b":[0,0,0,0,0,0,5,0,7,0,0,37,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html#affdb9a2d59f685f3b7d0663fd8d05a6d":[0,0,0,0,0,0,5,0,7,0,0,37,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOffer.html":[0,0,0,0,0,0,5,0,7,0,0,0,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOffer.html#a1379b105a8fb6a9c59aedfacea971c98":[0,0,0,0,0,0,5,0,7,0,0,0,0,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html#ae7bb8a2674c919a687e9d0310052023b":[0,0,0,0,0,0,5,0,7,0,0,37,2]
 };

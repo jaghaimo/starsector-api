@@ -1,5 +1,10 @@
 var NAVTREEINDEX52 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a2283e039b213a6a780f7fbe9c643f4fc":[0,0,0,0,0,0,0,32,34],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a31160aeb2243359154256fda3bfea2ed":[0,0,0,0,0,0,0,32,45],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a3231ef1e16a212eb25c30f991a90dacc":[0,0,0,0,0,0,0,32,20],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a374a195e17708daf73f13d2bca470847":[0,0,0,0,0,0,0,32,7],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a37be48e3c5ba6c70188e762d34669c35":[0,0,0,0,0,0,0,32,39],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a3888c06b4c627ab599e17504c29074b0":[0,0,0,0,0,0,0,32,55],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a395be57cb930b36bb11e0f30b9ea7643":[0,0,0,0,0,0,0,32,40],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a3b35d9aa67fb2d5e67d21ccf196596b1":[0,0,0,0,0,0,0,32,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX52 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0006996a57b061077170209c3de345c0":[0,0,0,0,0,0,0,51,54],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a00bcbc815e23b476ca5c9258a4fdb7af":[0,0,0,0,0,0,0,51,93],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a018adf27b1df94d50373616cf431d875":[0,0,0,0,0,0,0,51,120],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60":[0,0,0,0,0,0,0,51,22],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a038672beb3d801ede198b430cf02029e":[0,0,0,0,0,0,0,51,46],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a04181ba54270275b641a2f27e9f6b6d8":[0,0,0,0,0,0,0,51,58],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0631f4744ad934f3b80a30f8d1eb7087":[0,0,0,0,0,0,0,51,144],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a07241e596bbcdd1aa3b717af271d4482":[0,0,0,0,0,0,0,51,45],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a08565d97186e1f0a60cd0903a036154a":[0,0,0,0,0,0,0,51,152]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0213b272fbf9c2669316aa25c775ad60":[0,0,0,0,0,0,0,51,22]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX22 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a51406eac3298b396eff22505825d3334":[0,0,0,0,0,0,5,0,7,5,2,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a553dc4c87ef9c49edf51c57678321097":[0,0,0,0,0,0,5,0,7,5,2,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a6b3afcfdf48775f33e199b689de91e12":[0,0,0,0,0,0,5,0,7,5,2,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a79188443390cb1da64d54b05f0f60138":[0,0,0,0,0,0,5,0,7,5,2,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a7c4b168dad1d3e054b22d0fce3d660c6":[0,0,0,0,0,0,5,0,7,5,2,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a8a5310df86c898170c93e48bfd03f589":[0,0,0,0,0,0,5,0,7,5,2,8],
@@ -246,8 +249,5 @@ var NAVTREEINDEX22 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager.html#ac1628fad5843fd9c0ad97eecfe9542a0":[0,0,0,0,0,0,5,0,7,6,7,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager.html#acec8d0c659eb1b1fb7e95e05ad45d676":[0,0,0,0,0,0,5,0,7,6,7,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager.html#ad469cce8009dffaf820df1b015128354":[0,0,0,0,0,0,5,0,7,6,7,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager.html#ad6e3002ed357fb1594afb1c2ad54bd1c":[0,0,0,0,0,0,5,0,7,6,7,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager.html#ae4e329f84c70a8276763b6514f485225":[0,0,0,0,0,0,5,0,7,6,7,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html":[0,0,0,0,0,0,5,0,7,7,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html#a09176af9fb28110ff277cb8315bcdf17":[0,0,0,0,0,0,5,0,7,7,0,5]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager.html#ad6e3002ed357fb1594afb1c2ad54bd1c":[0,0,0,0,0,0,5,0,7,6,7,0]
 };

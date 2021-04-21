@@ -1,5 +1,8 @@
 var NAVTREEINDEX15 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aaf44ac3ac09d5dcbbc85047283a35ee6":[0,0,0,0,0,0,5,0,7,11,41],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ab7e276ad24b134d66cb0dd936a3c2471":[0,0,0,0,0,0,5,0,7,11,78],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#abc5ef72ee5874d9b22685d7f75936cce":[0,0,0,0,0,0,5,0,7,11,59],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac177d902e3daf52501b6b9961937a1fb":[0,0,0,0,0,0,5,0,7,11,81],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac1b47caf3d2b38c9c094b0c959f5bac8":[0,0,0,0,0,0,5,0,7,11,25],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ac265e304e3d245a6ae16be73e0b918b0":[0,0,0,0,0,0,5,0,7,11,63],
@@ -246,8 +249,5 @@ var NAVTREEINDEX15 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a520b76b04036edb732854490dd29d175":[0,0,0,0,0,0,5,0,7,22,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a56a5a064364c007d098a8ce16045f998":[0,0,0,0,0,0,5,0,7,22,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a5a82d57034e9c2e2938767777a6c4239":[0,0,0,0,0,0,5,0,7,22,28],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a7079cdd61d665bda82434457d84d2796":[0,0,0,0,0,0,5,0,7,22,24],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a70e76e9d44ee2ee0ade730cc085d507d":[0,0,0,0,0,0,5,0,7,22,35],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a723d835fd3079b770a521968d36721b8":[0,0,0,0,0,0,5,0,7,22,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a74cb358dfa2444d0bf6883ca60901c60":[0,0,0,0,0,0,5,0,7,22,33]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a7079cdd61d665bda82434457d84d2796":[0,0,0,0,0,0,5,0,7,22,24]
 };

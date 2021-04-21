@@ -1,5 +1,13 @@
 var NAVTREEINDEX68 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a66ecc67dd53189a512c6b5697c37ce46":[0,0,0,0,0,0,2,64,0,8],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a6838ad7d54ff224d28cbb63607de5d55":[0,0,0,0,0,0,2,64,0,4],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a82829f40a056377f65c3e8a81008403a":[0,0,0,0,0,0,2,64,0,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a831c750db93e0d14fe4d70858d097d29":[0,0,0,0,0,0,2,64,0,6],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a86c096f803e47c8db4ba209ad6ee54e3":[0,0,0,0,0,0,2,64,0,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a94d84bf05a209eceb91828050c5a71fc":[0,0,0,0,0,0,2,64,0,9],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#afd65f3a337162a502601c514d8ee4725":[0,0,0,0,0,0,2,64,0,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAIScript.html":[0,0,0,0,0,0,2,65],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAIScript.html#ade0d2b5dcd93aeb4613413b6fcdae8a3":[0,0,0,0,0,0,2,65,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAIScript.html#af568d72e067d01a92b1c8e6295cfe4d3":[0,0,0,0,0,0,2,65,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html":[0,0,0,0,0,0,2,66],
@@ -241,13 +249,5 @@ var NAVTREEINDEX68 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#acf85da119950e9f5342955445a0a8110":[0,0,0,0,0,0,2,68,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ad15c23bef0f8b5fc43afb61dac591f3e":[0,0,0,0,0,0,2,68,46],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ad505ad31ad20ca6ba2c4fd256dd2a81a":[0,0,0,0,0,0,2,68,21],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ad7997e5feb333738eedcde8d7fbba1d4":[0,0,0,0,0,0,2,68,70],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#adacf4eab61a801aecec8e2262f23d57f":[0,0,0,0,0,0,2,68,26],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ae2a66c40a96471073313e4619074c022":[0,0,0,0,0,0,2,68,28],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ae355e6dbee8ecb6431086eab7f2c72a0":[0,0,0,0,0,0,2,68,42],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ae6ce4c077440aefd6e3db22e36d398ff":[0,0,0,0,0,0,2,68,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ae719f4ced7f1ebc5f86b398ebe609b5c":[0,0,0,0,0,0,2,68,16],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ae8d960f900e161b3811bd77fa511b28a":[0,0,0,0,0,0,2,68,45],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ae925953305f96439f44052059c95d381":[0,0,0,0,0,0,2,68,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#aebd3be6bc02c7ab4e49009b15bda5c95":[0,0,0,0,0,0,2,68,54]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ad7997e5feb333738eedcde8d7fbba1d4":[0,0,0,0,0,0,2,68,70]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX47 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#af7554973581d97358554b9641e899702":[0,0,0,0,0,0,9,0,1,48],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#af9bf00fa985903419639e9e983b91819":[0,0,0,0,0,0,9,0,1,31],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreBuildObjectiveTypePicker.html":[0,0,0,0,0,0,9,0,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreBuildObjectiveTypePicker.html#ac969bacbb2ffe4b8167c5d88a78bde16":[0,0,0,0,0,0,9,0,2,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreBuildObjectiveTypePicker.html#aec43f792257f043391302efd952d4d67":[0,0,0,0,0,0,9,0,2,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1BaseTooltipCreator.html":[0,0,0,0,0,0,10,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX47 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html#a58af68053904b8a988346b3556b77862":[0,0,0,0,0,0,0,43,6],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html#a5cf7f47688950b75b626e52434c835c3":[0,0,0,0,0,0,0,43,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html#a5fed977f9a54131ed518264d335ae85f":[0,0,0,0,0,0,0,43,2],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html#abbf795f647172c17948188583f537051":[0,0,0,0,0,0,0,43,1],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html#acee36c93cb303e121b0a300399f00c97":[0,0,0,0,0,0,0,43,4],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html":[0,0,0,0,0,0,0,55],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html#a06a433c6af3b296499327297e7fa3a43":[0,0,0,0,0,0,0,55,7]
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html#abbf795f647172c17948188583f537051":[0,0,0,0,0,0,0,43,1]
 };

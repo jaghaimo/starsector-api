@@ -1,5 +1,8 @@
 var NAVTREEINDEX40 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a2ee7d4b0070bb7d6ff9f88df9e1c611d":[0,0,0,0,0,0,5,0,16,11,19],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a3635fc9ee88a15162735dea2565bc288":[0,0,0,0,0,0,5,0,16,11,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a4154dc7585218f527c6d66cb5daba127":[0,0,0,0,0,0,5,0,16,11,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a57334820cdba9dbc12e8a511c62f511e":[0,0,0,0,0,0,5,0,16,11,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a5cab79ff2a5015f94cf841fd30ddd210":[0,0,0,0,0,0,5,0,16,11,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a610fb604b28481c2697b2c12b7ff8734":[0,0,0,0,0,0,5,0,16,11,20],
@@ -246,8 +249,5 @@ var NAVTREEINDEX40 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a849ff3a1d414a3868abbddd82d46d9ce":[0,0,0,0,0,0,5,0,16,21,30],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a858116f41bfebdf7a3e22ecc0d732c39":[0,0,0,0,0,0,5,0,16,21,29],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a8a0b835f21c88b4a52b40aa443a6dea2":[0,0,0,0,0,0,5,0,16,21,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a8f41efe33e9a5fd7203d33401d9605c4":[0,0,0,0,0,0,5,0,16,21,41],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a933b55d6f85c50ba46497a339a5872c1":[0,0,0,0,0,0,5,0,16,21,39],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a94590307b6e1b57610544793637f5ac7":[0,0,0,0,0,0,5,0,16,21,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a990545ceca180b5a11b889857690095e":[0,0,0,0,0,0,5,0,16,21,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a8f41efe33e9a5fd7203d33401d9605c4":[0,0,0,0,0,0,5,0,16,21,41]
 };

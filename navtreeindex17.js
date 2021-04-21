@@ -1,5 +1,8 @@
 var NAVTREEINDEX17 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a9a7551dacae2af6ffa524617f89aa48a":[0,0,0,0,0,0,5,0,7,0,0,6,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a9f8003a84bb434c5d6c3defec23cd08e":[0,0,0,0,0,0,5,0,7,0,0,6,56],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa27389212f9517813bc7d91f26a3551c":[0,0,0,0,0,0,5,0,7,0,0,6,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa33549abaefdedabb7549582ffb4890b":[0,0,0,0,0,0,5,0,7,0,0,6,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa4deb343618d64551bc09595436472aa":[0,0,0,0,0,0,5,0,7,0,0,6,47],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa8f2f88c2af400761df21c81416e01a7":[0,0,0,0,0,0,5,0,7,0,0,6,31],
@@ -246,8 +249,5 @@ var NAVTREEINDEX17 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEvent.html#afaeeccee47b15cc31ac7e69473ade613":[0,0,0,0,0,0,5,0,7,0,0,20,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEventCreator.html":[0,0,0,0,0,0,5,0,7,0,0,21],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEventCreator.html#a0b297351e30e3d7e67b8ff6909d8b224":[0,0,0,0,0,0,5,0,7,0,0,21,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html":[0,0,0,0,0,0,5,0,7,0,0,22],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html#a0022514bf75097a3501ecf197acfc531":[0,0,0,0,0,0,5,0,7,0,0,22,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html#a3880f1c6dc2f2cef17a654887f81010e":[0,0,0,0,0,0,5,0,7,0,0,22,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html#a592377f19ca4383329ff0eaeb462544d":[0,0,0,0,0,0,5,0,7,0,0,22,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PirateBaseRumorBarEvent.html":[0,0,0,0,0,0,5,0,7,0,0,22]
 };

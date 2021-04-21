@@ -1,5 +1,8 @@
 var NAVTREEINDEX20 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#ae42b9bf9d24d23ef8defb6ed5cc50a35":[0,0,0,0,0,0,5,0,7,1,0,25],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#ae68a791ece28cd77d857af401338298e":[0,0,0,0,0,0,5,0,7,1,0,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#ae72c3901d3980bc67d86b337dc3e9e53":[0,0,0,0,0,0,5,0,7,1,0,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#af4ceea9063c0771229595ec4f6b37c19":[0,0,0,0,0,0,5,0,7,1,0,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#af57cfc6a0ff217ae61609a757a7bc8a0":[0,0,0,0,0,0,5,0,7,1,0,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#af80608cde4462a67b5c112984690e4b9":[0,0,0,0,0,0,5,0,7,1,0,11],
@@ -246,8 +249,5 @@ var NAVTREEINDEX20 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a0914233e1d8d03e16322d16658ee6fa6":[0,0,0,0,0,0,5,0,7,2,0,34],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a0a9b0f4c84d41e737d43454302bd2603":[0,0,0,0,0,0,5,0,7,2,0,46],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a0d7b970bfaf72c44135ffc512c1019d2":[0,0,0,0,0,0,5,0,7,2,0,49],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a152c31ec3e9c7dd65284f94c62935f50":[0,0,0,0,0,0,5,0,7,2,0,21],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a16ee20ac6c7928348c816bb8d9b7df82":[0,0,0,0,0,0,5,0,7,2,0,47],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a1df517b52edb7a5abeb74d2dc5675aaf":[0,0,0,0,0,0,5,0,7,2,0,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a21080ede105c484ff86d497f815c1ab9":[0,0,0,0,0,0,5,0,7,2,0,50]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a152c31ec3e9c7dd65284f94c62935f50":[0,0,0,0,0,0,5,0,7,2,0,21]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX21 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a16ee20ac6c7928348c816bb8d9b7df82":[0,0,0,0,0,0,5,0,7,2,0,47],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a1df517b52edb7a5abeb74d2dc5675aaf":[0,0,0,0,0,0,5,0,7,2,0,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a21080ede105c484ff86d497f815c1ab9":[0,0,0,0,0,0,5,0,7,2,0,50],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a24f857b5b19e82d93131bc1b53797a91":[0,0,0,0,0,0,5,0,7,2,0,48],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a287b5a8a87623fadaf847a2d957532d4":[0,0,0,0,0,0,5,0,7,2,0,40],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html#a29b663ed7f8e5a58e4e858a51eed252d":[0,0,0,0,0,0,5,0,7,2,0,20],
@@ -246,8 +249,5 @@ var NAVTREEINDEX21 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a377421495b186ae317d23298bb11611c":[0,0,0,0,0,0,5,0,7,5,2,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a4679e1b813a7147e8277ce24e81ec5bc":[0,0,0,0,0,0,5,0,7,5,2,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a4af6c33b392393e2231793bbec36360d":[0,0,0,0,0,0,5,0,7,5,2,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a50c969fbfa0a92bb28609b7e044715e3":[0,0,0,0,0,0,5,0,7,5,2,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a51406eac3298b396eff22505825d3334":[0,0,0,0,0,0,5,0,7,5,2,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a553dc4c87ef9c49edf51c57678321097":[0,0,0,0,0,0,5,0,7,5,2,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a6b3afcfdf48775f33e199b689de91e12":[0,0,0,0,0,0,5,0,7,5,2,15]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a50c969fbfa0a92bb28609b7e044715e3":[0,0,0,0,0,0,5,0,7,5,2,18]
 };

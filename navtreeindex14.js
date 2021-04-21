@@ -1,5 +1,8 @@
 var NAVTREEINDEX14 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a3fa7a12bf0e105a71f3fe42a0ad31a7e":[0,0,0,0,0,0,5,0,5,5,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a6225f532aa3d5a567534bec40e2210b4":[0,0,0,0,0,0,5,0,5,5,19],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a6df2db93dae9f6ad15298668af08e51f":[0,0,0,0,0,0,5,0,5,5,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a97363a84aac3f8f02259ebbb58e7b6f7":[0,0,0,0,0,0,5,0,5,5,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa1773ccb185fa991f6421447aefb80bc":[0,0,0,0,0,0,5,0,5,5,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa9790c01956ae1948bd98eba2a4e7826":[0,0,0,0,0,0,5,0,5,5,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX14 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#a9e443024a6224a5c170e5d1476514954":[0,0,0,0,0,0,5,0,7,11,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa559f5b75690347e75d8b10c909c079c":[0,0,0,0,0,0,5,0,7,11,34],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa97466aeeeda8efaa762a17d5dbb37b9":[0,0,0,0,0,0,5,0,7,11,69],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00":[0,0,0,0,0,0,5,0,7,11,26],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aaf44ac3ac09d5dcbbc85047283a35ee6":[0,0,0,0,0,0,5,0,7,11,41],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#ab7e276ad24b134d66cb0dd936a3c2471":[0,0,0,0,0,0,5,0,7,11,78],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#abc5ef72ee5874d9b22685d7f75936cce":[0,0,0,0,0,0,5,0,7,11,59]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html#aa9964eb74c87437bc9870cef6c4f5d00":[0,0,0,0,0,0,5,0,7,11,26]
 };

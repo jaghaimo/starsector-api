@@ -1,5 +1,8 @@
 var NAVTREEINDEX5 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a490a2765c16c3ef2bf58e810a71bc40c":[0,0,0,0,0,0,5,0,63,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a496ed7b4e0cbe225d1b38a1c166082a3":[0,0,0,0,0,0,5,0,63,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a7bbcbc0bf15740d95677fb2fc3d0a0c5":[0,0,0,0,0,0,5,0,63,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#adbd5b1eb774f804bb9f8d6a3779df0fc":[0,0,0,0,0,0,5,0,63,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#af48843cfc5750c3144e581cdd0bdf048":[0,0,0,0,0,0,5,0,63,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OverheadTooltipCreator.html":[0,0,0,0,0,0,5,0,64],
@@ -246,8 +249,5 @@ var NAVTREEINDEX5 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a1053bc9856da0485a675780940a2a272":[0,0,0,0,0,0,5,0,0,3,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a12adf882423877632cedb6d50fbbe2f4":[0,0,0,0,0,0,5,0,0,3,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a206fef8ef4f4dba10d8ba3f71e4e9c90":[0,0,0,0,0,0,5,0,0,3,22],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2324a0cbf8a7db75371a93495b16f520":[0,0,0,0,0,0,5,0,0,3,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2ce592aecdfd219c19d7424a40946d6a":[0,0,0,0,0,0,5,0,0,3,19],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a3e8ae9f4c6f68275ae9a1762df54e158":[0,0,0,0,0,0,5,0,0,3,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a46eec76eab013e869ec7b72ca0e6daf3":[0,0,0,0,0,0,5,0,0,3,17]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2324a0cbf8a7db75371a93495b16f520":[0,0,0,0,0,0,5,0,0,3,4]
 };

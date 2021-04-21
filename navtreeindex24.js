@@ -1,5 +1,8 @@
 var NAVTREEINDEX24 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a248dfa0be0323022728e329f4211a6ff":[0,0,0,0,0,0,5,0,8,6,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a29145395d7dbfa03a8bdf20392f3a273":[0,0,0,0,0,0,5,0,8,6,13],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a326bf4afca78e0e7c7c6f3eb97ad77ed":[0,0,0,0,0,0,5,0,8,6,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a381e4cc35162b15e95a62f576fd1355d":[0,0,0,0,0,0,5,0,8,6,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a4380c6fdb3e7af269c770e42b0e1dfff":[0,0,0,0,0,0,5,0,8,6,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a46aee2370b89287e333c2c2df0b052ad":[0,0,0,0,0,0,5,0,8,6,17],
@@ -246,8 +249,5 @@ var NAVTREEINDEX24 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#acb1825a7245ea1910c22bb034fb9287b":[0,0,0,0,0,0,5,0,8,19,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html":[0,0,0,0,0,0,5,0,8,20],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a10bf9bf5f8b88ec3f8c27e811327b55f":[0,0,0,0,0,0,5,0,8,20,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a4113dbd410f334e74afa53cfbdd0c3b7":[0,0,0,0,0,0,5,0,8,20,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a4aa54bb89fad744584e645740e436c53":[0,0,0,0,0,0,5,0,8,20,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a9023a5f6164437a28f721ad9dea232ac":[0,0,0,0,0,0,5,0,8,20,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#ac7e809f2a3acbec9df7a40f90eb7f439":[0,0,0,0,0,0,5,0,8,20,5]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a4113dbd410f334e74afa53cfbdd0c3b7":[0,0,0,0,0,0,5,0,8,20,2]
 };

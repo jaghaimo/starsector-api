@@ -1,5 +1,8 @@
 var NAVTREEINDEX6 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a2ce592aecdfd219c19d7424a40946d6a":[0,0,0,0,0,0,5,0,0,3,19],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a3e8ae9f4c6f68275ae9a1762df54e158":[0,0,0,0,0,0,5,0,0,3,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a46eec76eab013e869ec7b72ca0e6daf3":[0,0,0,0,0,0,5,0,0,3,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a6660cd1f7c73d05a9b8cf5c1ca59bfaa":[0,0,0,0,0,0,5,0,0,3,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a6f23d39da4af9512392890d804613bde":[0,0,0,0,0,0,5,0,0,3,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html#a74192905e74961103f2f38ec94da533a":[0,0,0,0,0,0,5,0,0,3,28],
@@ -246,8 +249,5 @@ var NAVTREEINDEX6 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1EmergencyBurnAbilityAI.html#af33d8e5deb253aae2b293782f27e0980":[0,0,0,0,0,0,5,0,0,0,1,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1GoDarkAbilityAI.html":[0,0,0,0,0,0,5,0,0,0,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1GoDarkAbilityAI.html#a3e5fc3c0d126f6e2af030d640579985f":[0,0,0,0,0,0,5,0,0,0,2,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html":[0,0,0,0,0,0,5,0,0,0,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html#a025a6f839276e4e702fdf561346117a0":[0,0,0,0,0,0,5,0,0,0,3,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html#a510935ccde668e06f1c984b57c3a658a":[0,0,0,0,0,0,5,0,0,0,3,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SensorBurstAbilityAI.html":[0,0,0,0,0,0,5,0,0,0,4]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html":[0,0,0,0,0,0,5,0,0,0,3]
 };

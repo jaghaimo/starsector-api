@@ -1,5 +1,8 @@
 var NAVTREEINDEX13 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html#a5ee4171e3dbcfcf731e0c1522bcc684b":[0,0,0,0,0,0,5,0,4,19,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html#a8d170ddbd1e593b7dc6065441eb73dee":[0,0,0,0,0,0,5,0,4,19,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html#ab170c5748bdd4e9e7d2fa5fb74f65ed8":[0,0,0,0,0,0,5,0,4,19,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercFleetManagerV2.html":[0,0,0,0,0,0,5,0,4,20],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercFleetManagerV2.html#a258eb40c531631bc2931daa84df0ce54":[0,0,0,0,0,0,5,0,4,20,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercFleetManagerV2.html#a3a3199eafe135a1e9c207437f1a7f262":[0,0,0,0,0,0,5,0,4,20,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX13 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a2b9c8edb0f9bac636b78cf5fa8a1061b":[0,0,0,0,0,0,5,0,5,5,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a33eedb1cce8e8943a71d46368a4e9466":[0,0,0,0,0,0,5,0,5,5,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a3a6cbbdf0db53e0a94984bf135b4cbbb":[0,0,0,0,0,0,5,0,5,5,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a3f4622edf84f758ccdc7b8302d18c682":[0,0,0,0,0,0,5,0,5,5,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a3fa7a12bf0e105a71f3fe42a0ad31a7e":[0,0,0,0,0,0,5,0,5,5,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a6225f532aa3d5a567534bec40e2210b4":[0,0,0,0,0,0,5,0,5,5,19],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a6df2db93dae9f6ad15298668af08e51f":[0,0,0,0,0,0,5,0,5,5,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a3f4622edf84f758ccdc7b8302d18c682":[0,0,0,0,0,0,5,0,5,5,3]
 };

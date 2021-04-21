@@ -1,5 +1,8 @@
 var NAVTREEINDEX26 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html":[0,0,0,0,0,0,5,0,8,0,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a15f1cc00aa03d71111b256e66088a1e8":[0,0,0,0,0,0,5,0,8,0,15,27],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a26f5974f0d90895749cbdf8366223cea":[0,0,0,0,0,0,5,0,8,0,15,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a33ed7de17e0024ef8ac08c389f3d2a45":[0,0,0,0,0,0,5,0,8,0,15,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a4eecbe6c3e15323dfb82adc8d5d4b680":[0,0,0,0,0,0,5,0,8,0,15,26],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a5b0cd90bb5192bc8af2b6a28c92410ce":[0,0,0,0,0,0,5,0,8,0,15,21],
@@ -246,8 +249,5 @@ var NAVTREEINDEX26 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#afc4b95106750f1525c4cfab9d0adb51e":[0,0,0,0,0,0,5,0,8,1,15,0,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#aff2233f693b42de0246bdf4002b718f1":[0,0,0,0,0,0,5,0,8,1,15,0,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html":[0,0,0,0,0,0,5,0,8,1,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html#a5b1a67a44ef3c2f4cf9dba9dd4c7fa22":[0,0,0,0,0,0,5,0,8,1,16,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html#a93c75911bec73ff30a5d56ef84fa98eb":[0,0,0,0,0,0,5,0,8,1,16,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html#aa6f047fdfec2208d5afdf8cefe6cc133":[0,0,0,0,0,0,5,0,8,1,16,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1UnderworldCustomBounty.html":[0,0,0,0,0,0,5,0,8,1,17]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html#a5b1a67a44ef3c2f4cf9dba9dd4c7fa22":[0,0,0,0,0,0,5,0,8,1,16,0]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX27 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html#a93c75911bec73ff30a5d56ef84fa98eb":[0,0,0,0,0,0,5,0,8,1,16,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html#aa6f047fdfec2208d5afdf8cefe6cc133":[0,0,0,0,0,0,5,0,8,1,16,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1UnderworldCustomBounty.html":[0,0,0,0,0,0,5,0,8,1,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1UnderworldCustomBounty.html#a37beb47a9b7af51815ce3e99e295f029":[0,0,0,0,0,0,5,0,8,1,17,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1UnderworldCustomBounty.html#a6d43127906bc6355a126113dd3968ca7":[0,0,0,0,0,0,5,0,8,1,17,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1UnderworldCustomBounty.html#ac18d349d28c24e788d2cfac56f7ad077":[0,0,0,0,0,0,5,0,8,1,17,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX27 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa79ae82ed10e2ca6bb73017ec68ef156":[0,0,0,0,0,0,5,0,8,2,0,348],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa7d99befb516117ae284164779d06577":[0,0,0,0,0,0,5,0,8,2,0,184],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa86a9717167d9123dfc34065acd345b3":[0,0,0,0,0,0,5,0,8,2,0,129],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa88f62d918e783b1c760077f210cf6d8":[0,0,0,0,0,0,5,0,8,2,0,31],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa8939ddf90b9469f53c831223ff47184":[0,0,0,0,0,0,5,0,8,2,0,68],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa8a0fd81d06496cbdd07180384b10532":[0,0,0,0,0,0,5,0,8,2,0,293],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa8f448c276eee1a1bbfd060d3ef31bae":[0,0,0,0,0,0,5,0,8,2,0,324]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa88f62d918e783b1c760077f210cf6d8":[0,0,0,0,0,0,5,0,8,2,0,31]
 };

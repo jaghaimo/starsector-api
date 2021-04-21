@@ -1,5 +1,8 @@
 var NAVTREEINDEX7 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html#a025a6f839276e4e702fdf561346117a0":[0,0,0,0,0,0,5,0,0,0,3,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html#a510935ccde668e06f1c984b57c3a658a":[0,0,0,0,0,0,5,0,0,0,3,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SensorBurstAbilityAI.html":[0,0,0,0,0,0,5,0,0,0,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SensorBurstAbilityAI.html#a888e1bf3d496fdda24954578ac4dd7e8":[0,0,0,0,0,0,5,0,0,0,4,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SustainedBurnAbilityAI.html":[0,0,0,0,0,0,5,0,0,0,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SustainedBurnAbilityAI.html#a1f85fe56acc19643a0cf1c3105251442":[0,0,0,0,0,0,5,0,0,0,5,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX7 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1RuralPolity.html#a795ec369691870d74dc2e1edf4905fea":[0,0,0,0,0,0,5,0,2,39,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShipbreakingCenter.html":[0,0,0,0,0,0,5,0,2,40],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShipbreakingCenter.html#a5edbb6cd42716a1305219968d6dda4cb":[0,0,0,0,0,0,5,0,2,40,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShipbreakingCenter.html#adc144dd6921a2fa445ab2209c9553d54":[0,0,0,0,0,0,5,0,2,40,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html":[0,0,0,0,0,0,5,0,2,41],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a1d92c75493bfed4a82613dfaef83bc12":[0,0,0,0,0,0,5,0,2,41,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a256acc10d6091fe102e2fb3c173a0b72":[0,0,0,0,0,0,5,0,2,41,12]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShipbreakingCenter.html#adc144dd6921a2fa445ab2209c9553d54":[0,0,0,0,0,0,5,0,2,40,1]
 };

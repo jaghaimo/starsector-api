@@ -1,5 +1,8 @@
 var NAVTREEINDEX29 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3b339ccf55a4ad8d6469889c546f2cff":[0,0,0,0,0,0,5,0,8,2,7,16],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3bca634cf1348a13a15fec0decc2790d":[0,0,0,0,0,0,5,0,8,2,7,25],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3cce931b44e09de0fdca98fcf8c31c2d":[0,0,0,0,0,0,5,0,8,2,7,167],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3ce5f991b9d573c4014f0128c3bf886a":[0,0,0,0,0,0,5,0,8,2,7,183],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3d1e390b02fa2f879a0271b7276e2435":[0,0,0,0,0,0,5,0,8,2,7,155],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3d72d20fcd41dccd00fd5459734a4391":[0,0,0,0,0,0,5,0,8,2,7,61],
@@ -246,8 +249,5 @@ var NAVTREEINDEX29 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a4457fa39282c1cd23331e1443ed6c520":[0,0,0,0,0,0,5,0,8,2,8,223],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a455bb3356470821b8d8db1cac33e3719":[0,0,0,0,0,0,5,0,8,2,8,191],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a46f478c165b39623abeb61461e0bafbe":[0,0,0,0,0,0,5,0,8,2,8,238],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a48b89a69ac50f94df30a685b8db34176":[0,0,0,0,0,0,5,0,8,2,8,131],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a48bc2647d7249c86bcaec3402d6b913a":[0,0,0,0,0,0,5,0,8,2,8,207],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a48d33180be2d25ba99f66406ff228786":[0,0,0,0,0,0,5,0,8,2,8,119],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a4b5565e25d6fd914d16860e26472dfca":[0,0,0,0,0,0,5,0,8,2,8,203]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a48b89a69ac50f94df30a685b8db34176":[0,0,0,0,0,0,5,0,8,2,8,131]
 };

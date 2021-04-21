@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a529ff80bc6f8044a71447401e71f2258":[0,0,0,0,0,0,5,0,16,33,23],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a563daf46d0d67eb4129e798d6e052d61":[0,0,0,0,0,0,5,0,16,33,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a5e8fe838f8dbfa8178be9b647bb28b56":[0,0,0,0,0,0,5,0,16,33,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a6d012137b640c45d0198bf8d5b112ad3":[0,0,0,0,0,0,5,0,16,33,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a701f9c06ef1ef7a5dd066764879a746e":[0,0,0,0,0,0,5,0,16,33,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a7052d69e487e0f052c05695a08e898f0":[0,0,0,0,0,0,5,0,16,33,26],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#a6c06f25bb26d95b532f392092eb6f7b8":[0,0,0,0,0,0,5,0,17,13,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#a7b2891c8543c54aa0f38c7b68798e389":[0,0,0,0,0,0,5,0,17,13,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#a8d3bbfd2263f1c60366f0d4c54385a5e":[0,0,0,0,0,0,5,0,17,13,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ab33985a657adee53f3300ec776aba580":[0,0,0,0,0,0,5,0,17,13,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ac1b325732dae3d9ffa8ab50c542e67d9":[0,0,0,0,0,0,5,0,17,13,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ac4603afdaea0e1099ca02763bc669c2d":[0,0,0,0,0,0,5,0,17,13,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ac695aff4fdbd1d6d6ad034541844d931":[0,0,0,0,0,0,5,0,17,13,10]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ab33985a657adee53f3300ec776aba580":[0,0,0,0,0,0,5,0,17,13,8]
 };

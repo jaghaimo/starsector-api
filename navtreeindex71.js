@@ -1,5 +1,13 @@
 var NAVTREEINDEX71 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#a551c31ee7183e3deb30d94f7994bb7d7":[0,0,0,0,0,0,5,0,8,2,3,12],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#a5b01469d8fa26b4a164f053e61c054ba":[0,0,0,0,0,0,5,0,8,2,3,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#a5fc215c2fa076a316f09e3279ac91c18":[0,0,0,0,0,0,5,0,8,2,3,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#a6a94cbe90414c0b2babbb250d6028981":[0,0,0,0,0,0,5,0,8,2,3,6],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#a6cf964d195758106678b1b0093a71be0":[0,0,0,0,0,0,5,0,8,2,3,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#a7708cc5bc0b1331817619f41a1b0e7df":[0,0,0,0,0,0,5,0,8,2,3,7],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#a779b222ae5aa8d7932bfa0d0f760c8b5":[0,0,0,0,0,0,5,0,8,2,3,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#a9df0da55fe07d45d2d626895f9967e3f":[0,0,0,0,0,0,5,0,8,2,3,15],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#aa4168f18dd299d3f06c225bb836ba6d6":[0,0,0,0,0,0,5,0,8,2,3,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#ab560648fb303102d5e7ae72cfa6335fc":[0,0,0,0,0,0,5,0,8,2,3,16],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html#acd145951e98ab23e2ce00f38216e182e":[0,0,0,0,0,0,5,0,8,2,3,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX71 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a029cdd950dd03bf86ccdc06b6f3a4f15":[0,0,0,0,0,0,7,10,11],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a045e2ddd6dc1368c172d023f682a98ac":[0,0,0,0,0,0,7,10,19],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a09218aa0b6f5d0d022999a372bd88392":[0,0,0,0,0,0,7,10,33],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a1a162fdf5fe87ef21e2e4142e6155dc0":[0,0,0,0,0,0,7,10,10],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a1b14c86885ce4aa21606c600ce012e3d":[0,0,0,0,0,0,7,10,28],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a1f8de6d2139ae6b23503fcd5d6231b89":[0,0,0,0,0,0,7,10,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a286c27855b3ebf414d40047c100a03eb":[0,0,0,0,0,0,7,10,29],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a3162e5e48989b21cff9e631793deadf8":[0,0,0,0,0,0,7,10,24],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a35709bb3bbc74182500952452fc80197":[0,0,0,0,0,0,7,10,17],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a4da0c60e951b176a3550afc620943355":[0,0,0,0,0,0,7,10,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a578f2feb435012f670565ffcc4355abe":[0,0,0,0,0,0,7,10,23],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a5eaebd8f53d2d99a94e3ba7b1b47ad55":[0,0,0,0,0,0,7,10,2]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a1a162fdf5fe87ef21e2e4142e6155dc0":[0,0,0,0,0,0,7,10,10]
 };

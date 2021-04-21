@@ -1,5 +1,15 @@
 var NAVTREEINDEX74 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a12a742c04ef8a6eec0ab7d4fce58577d":[0,0,0,0,0,0,10,14,50],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a1364ea336507b59b32c333e6574e11d7":[0,0,0,0,0,0,10,14,98],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a15baad4542aab7d99b39575efcef6b73":[0,0,0,0,0,0,10,14,38],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a17e759bd7f8acd90c62d06610ab85e6b":[0,0,0,0,0,0,10,14,95],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a199862b142e21b1a33589e4fd76f8aae":[0,0,0,0,0,0,10,14,81],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a22d4441b31c5011aac095c90a39e45d1":[0,0,0,0,0,0,10,14,44],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a282ec5a8bd4b8b59da73f4cd29913174":[0,0,0,0,0,0,10,14,104],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a2eb2f02704c86b1c3a038ab2998950a2":[0,0,0,0,0,0,10,14,18],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a2f18098b0201e83c4f4c40586a5623f9":[0,0,0,0,0,0,10,14,94],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a2f2646f6de96afa416396a63b35d3427":[0,0,0,0,0,0,10,14,76],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a32cdcfd160a9495ae0f8b8dc05afcac2":[0,0,0,0,0,0,10,14,67],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a3cb08ff91ea8279c55c693b753078a3f":[0,0,0,0,0,0,10,14,14],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a3fb5bea714970d1255a169436c81374b":[0,0,0,0,0,0,10,14,84],

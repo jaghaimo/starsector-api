@@ -1,5 +1,8 @@
 var NAVTREEINDEX12 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html":[0,0,0,0,0,0,5,0,4,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a3f0e481d0e254f6cdbb9d8bc45962b8f":[0,0,0,0,0,0,5,0,4,0,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a7b1c74288118fe9373a4bceece4bd926":[0,0,0,0,0,0,5,0,4,0,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a9ca3d61588d59b2fa22457d2753dc423":[0,0,0,0,0,0,5,0,4,0,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#acb0e5539ff0e51c17fd7a8ea2470267e":[0,0,0,0,0,0,5,0,4,0,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#ada861a20f0a69672e1b1367202a03137":[0,0,0,0,0,0,5,0,4,0,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX12 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1LuddicPathFleetManager.html#acfe8b5c99174f169c25fc0324ecc29cd":[0,0,0,0,0,0,5,0,4,18,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html":[0,0,0,0,0,0,5,0,4,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html#a0ddb70689f4d7751d2fb4b271ef5a37e":[0,0,0,0,0,0,5,0,4,19,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html#a31218867fbddabf5bf1bfac3ba4fb1c8":[0,0,0,0,0,0,5,0,4,19,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html#a5ee4171e3dbcfcf731e0c1522bcc684b":[0,0,0,0,0,0,5,0,4,19,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html#a8d170ddbd1e593b7dc6065441eb73dee":[0,0,0,0,0,0,5,0,4,19,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html#ab170c5748bdd4e9e7d2fa5fb74f65ed8":[0,0,0,0,0,0,5,0,4,19,0]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html#a31218867fbddabf5bf1bfac3ba4fb1c8":[0,0,0,0,0,0,5,0,4,19,2]
 };

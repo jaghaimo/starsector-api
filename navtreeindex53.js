@@ -1,5 +1,10 @@
 var NAVTREEINDEX53 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a038672beb3d801ede198b430cf02029e":[0,0,0,0,0,0,0,51,46],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a04181ba54270275b641a2f27e9f6b6d8":[0,0,0,0,0,0,0,51,58],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0631f4744ad934f3b80a30f8d1eb7087":[0,0,0,0,0,0,0,51,144],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a07241e596bbcdd1aa3b717af271d4482":[0,0,0,0,0,0,0,51,45],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a08565d97186e1f0a60cd0903a036154a":[0,0,0,0,0,0,0,51,152],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a085c9b63f050e1d814a9a6e8baed8b68":[0,0,0,0,0,0,0,51,108],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0a586acb89cf52d46a86eface8ba78b4":[0,0,0,0,0,0,0,51,51],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a0d66fd74284eb8cbf672bedd563639d5":[0,0,0,0,0,0,0,51,157],
@@ -244,10 +249,5 @@ var NAVTREEINDEX53 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#a8485aeef709550e85b8e7dbf57776b41":[0,0,0,0,0,0,0,56,35],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#a94d814ca53ef29261e4ec10fe90ef9b2":[0,0,0,0,0,0,0,56,26],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#a954e085509b342485e9d635a7ebd3e98":[0,0,0,0,0,0,0,56,33],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#a9f375d282a7442231a4b1b4a1b674c3d":[0,0,0,0,0,0,0,56,36],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#a9f9e141d704bc9f6f7c562613a0b0d47":[0,0,0,0,0,0,0,56,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aac3da6109643b61c9fbf54915cef5271":[0,0,0,0,0,0,0,56,27],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aadb5afa47963d2ce331fa7f203f695e1":[0,0,0,0,0,0,0,56,19],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aae3057dba1c046f7e1bbe35de5f20119":[0,0,0,0,0,0,0,56,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ab2de0db9c0af59dc8a00f1b88655c64f":[0,0,0,0,0,0,0,56,22]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#a9f375d282a7442231a4b1b4a1b674c3d":[0,0,0,0,0,0,0,56,36]
 };

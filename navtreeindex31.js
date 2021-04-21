@@ -1,5 +1,8 @@
 var NAVTREEINDEX31 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html":[0,0,0,0,0,0,5,0,9,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#a13f6893b4f0da0f3bf66046e0ce9b49a":[0,0,0,0,0,0,5,0,9,4,10],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#a1e68fc933dbd99ec29ef719873cc438c":[0,0,0,0,0,0,5,0,9,4,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#a4d1dc2cf7bf9624dfb7090803e2a686a":[0,0,0,0,0,0,5,0,9,4,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#a5349f5a8c4d6a8f1fa16f39b46667316":[0,0,0,0,0,0,5,0,9,4,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html#a63575dc41cb56a15d4d0faed654c6b26":[0,0,0,0,0,0,5,0,9,4,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX31 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DefenderDataOverride.html#ae5c663d9be3cb43e29da8e4ce122101c":[0,0,0,0,0,0,5,0,11,10,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html":[0,0,0,0,0,0,5,0,11,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a270350741b9cde6c1d8d10a4f052fe41":[0,0,0,0,0,0,5,0,11,11,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a2a77e068ed1ef4f15cb04ef01ac9f7e4":[0,0,0,0,0,0,5,0,11,11,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a31dc452d2a552d2401fb7eae23ae4342":[0,0,0,0,0,0,5,0,11,11,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a3fd71e011428cbd0a540db59a7af0cde":[0,0,0,0,0,0,5,0,11,11,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a44fe466c1850408bc04a0e07a9247d40":[0,0,0,0,0,0,5,0,11,11,22]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a2a77e068ed1ef4f15cb04ef01ac9f7e4":[0,0,0,0,0,0,5,0,11,11,8]
 };

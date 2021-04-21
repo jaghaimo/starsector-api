@@ -1,5 +1,8 @@
 var NAVTREEINDEX32 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a31dc452d2a552d2401fb7eae23ae4342":[0,0,0,0,0,0,5,0,11,11,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a3fd71e011428cbd0a540db59a7af0cde":[0,0,0,0,0,0,5,0,11,11,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a44fe466c1850408bc04a0e07a9247d40":[0,0,0,0,0,0,5,0,11,11,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4a6a125c41977c029f0390e95a16493f":[0,0,0,0,0,0,5,0,11,11,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4b8ab06f0ad64d05966709fbae5eb6b3":[0,0,0,0,0,0,5,0,11,11,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html#a4eb3812a1985a8fd3ed0e48f13a8b62a":[0,0,0,0,0,0,5,0,11,11,11],
@@ -246,8 +249,5 @@ var NAVTREEINDEX32 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#aa9948d1f10528a24232a90d12a1c0f42":[0,0,0,0,0,0,5,0,11,34,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#aaf9d329a930a1575c7461b9e4192c8c1":[0,0,0,0,0,0,5,0,11,34,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#ac1020e22601eecaea65734ec42b81b81":[0,0,0,0,0,0,5,0,11,34,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#acb4e835fcef14ff61fea6b5167460670":[0,0,0,0,0,0,5,0,11,34,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#acbf9e6fd886d5e3b4a4d154b439e7db7":[0,0,0,0,0,0,5,0,11,34,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#adfdadb228fa49fd912ee2d6035508bce":[0,0,0,0,0,0,5,0,11,34,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#af606c314ed47f537d464cbbe4d8ecd6d":[0,0,0,0,0,0,5,0,11,34,19]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#acb4e835fcef14ff61fea6b5167460670":[0,0,0,0,0,0,5,0,11,34,8]
 };

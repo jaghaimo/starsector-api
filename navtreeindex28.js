@@ -1,5 +1,8 @@
 var NAVTREEINDEX28 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa8939ddf90b9469f53c831223ff47184":[0,0,0,0,0,0,5,0,8,2,0,68],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa8a0fd81d06496cbdd07180384b10532":[0,0,0,0,0,0,5,0,8,2,0,293],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa8f448c276eee1a1bbfd060d3ef31bae":[0,0,0,0,0,0,5,0,8,2,0,324],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa92c28a022174c5d69284c9335b5f01d":[0,0,0,0,0,0,5,0,8,2,0,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa9b23c0565f1eabdaf123d5a254c63db":[0,0,0,0,0,0,5,0,8,2,0,281],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aa9f89f73c39de616dbd3f8ac2c7c65d1":[0,0,0,0,0,0,5,0,8,2,0,222],
@@ -246,8 +249,5 @@ var NAVTREEINDEX28 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a37bb91f8f69c8076a9a7be96cc3d3c74":[0,0,0,0,0,0,5,0,8,2,7,71],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a37d37b9ab9738237e89487a7969a4ce4":[0,0,0,0,0,0,5,0,8,2,7,98],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a398cd602edd8e4b97a33c07fd1f42ce1":[0,0,0,0,0,0,5,0,8,2,7,165],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3a8be3d9081f34eb57c83218fd8ee71a":[0,0,0,0,0,0,5,0,8,2,7,177],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3b339ccf55a4ad8d6469889c546f2cff":[0,0,0,0,0,0,5,0,8,2,7,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3bca634cf1348a13a15fec0decc2790d":[0,0,0,0,0,0,5,0,8,2,7,25],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3cce931b44e09de0fdca98fcf8c31c2d":[0,0,0,0,0,0,5,0,8,2,7,167]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3a8be3d9081f34eb57c83218fd8ee71a":[0,0,0,0,0,0,5,0,8,2,7,177]
 };

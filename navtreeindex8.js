@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html":[0,0,0,0,0,0,5,0,2,41],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a1d92c75493bfed4a82613dfaef83bc12":[0,0,0,0,0,0,5,0,2,41,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a256acc10d6091fe102e2fb3c173a0b72":[0,0,0,0,0,0,5,0,2,41,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a27b919a2237d8320eabd5415c6230024":[0,0,0,0,0,0,5,0,2,41,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a48aba2efadbbffbbddf2f5284b032c88":[0,0,0,0,0,0,5,0,2,41,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a492a316c2e0c2e4ef5c7f7a78e3f78b3":[0,0,0,0,0,0,5,0,2,41,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae2e156c5897a67999d5f58bb827a0cee":[0,0,0,0,0,0,5,0,2,0,0,131],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae669ae4e66af2dbab5a7030c16e94759":[0,0,0,0,0,0,5,0,2,0,0,115],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae6c0de55fffbfaafbfa0355d02b79f23":[0,0,0,0,0,0,5,0,2,0,0,35],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae6ff25ed53b13e5003f298dd891e6dc5":[0,0,0,0,0,0,5,0,2,0,0,170],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae7fa4bd5c6ff749aa7a2fae48988657d":[0,0,0,0,0,0,5,0,2,0,0,96],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae83bd560b90002336c6d6de0b14747d3":[0,0,0,0,0,0,5,0,2,0,0,181],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae9864bc7101934b76dfe62837edefef9":[0,0,0,0,0,0,5,0,2,0,0,86]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ae6ff25ed53b13e5003f298dd891e6dc5":[0,0,0,0,0,0,5,0,2,0,0,170]
 };

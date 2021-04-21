@@ -1,5 +1,8 @@
 var NAVTREEINDEX23 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager.html#ae4e329f84c70a8276763b6514f485225":[0,0,0,0,0,0,5,0,7,6,7,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html":[0,0,0,0,0,0,5,0,7,7,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html#a09176af9fb28110ff277cb8315bcdf17":[0,0,0,0,0,0,5,0,7,7,0,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html#a11948820a95537081948c30e978a285e":[0,0,0,0,0,0,5,0,7,7,0,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html#a665da647130904ab7218b8e18335d5c4":[0,0,0,0,0,0,5,0,7,7,0,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html#a83e1e8b2cd44208e2ebac2afa6cac9ac":[0,0,0,0,0,0,5,0,7,7,0,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX23 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a166730426ea4c82a198eef4d12b78218":[0,0,0,0,0,0,5,0,8,6,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a19b81cac5728392acc7d4726b32c6f87":[0,0,0,0,0,0,5,0,8,6,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a1c160bb0541505aa5cefdb1ad6919e5f":[0,0,0,0,0,0,5,0,8,6,19],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a23bea55866b193a790aeb01bcf0f7bc5":[0,0,0,0,0,0,5,0,8,6,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a248dfa0be0323022728e329f4211a6ff":[0,0,0,0,0,0,5,0,8,6,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a29145395d7dbfa03a8bdf20392f3a273":[0,0,0,0,0,0,5,0,8,6,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a326bf4afca78e0e7c7c6f3eb97ad77ed":[0,0,0,0,0,0,5,0,8,6,12]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a23bea55866b193a790aeb01bcf0f7bc5":[0,0,0,0,0,0,5,0,8,6,1]
 };

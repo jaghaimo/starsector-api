@@ -1,5 +1,8 @@
 var NAVTREEINDEX39 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ae33d0b1977716dc6b23573582f4a6564":[0,0,0,0,0,0,5,0,15,3,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af0986a3f39a95fbe98befceaf040a2da":[0,0,0,0,0,0,5,0,15,3,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af87fb4176c3e685a0da42f336bce49ec":[0,0,0,0,0,0,5,0,15,3,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#aff8169ec1834a4f6e905426f2c9fda87":[0,0,0,0,0,0,5,0,15,3,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1OpenMarketPlugin.html":[0,0,0,0,0,0,5,0,15,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1OpenMarketPlugin.html#a09d67a9864a1afddb114e94640247733":[0,0,0,0,0,0,5,0,15,4,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX39 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a14ceeb80540bf4f0fa12dfd353fdf8f4":[0,0,0,0,0,0,5,0,16,11,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a1f861f584a9bbc63072641330c7351ef":[0,0,0,0,0,0,5,0,16,11,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a23bf6397ef3dfb58fb9b26cf28cec0bf":[0,0,0,0,0,0,5,0,16,11,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a24ac44b6878721325b0b4fe1f19efebb":[0,0,0,0,0,0,5,0,16,11,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a2ee7d4b0070bb7d6ff9f88df9e1c611d":[0,0,0,0,0,0,5,0,16,11,19],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a3635fc9ee88a15162735dea2565bc288":[0,0,0,0,0,0,5,0,16,11,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a4154dc7585218f527c6d66cb5daba127":[0,0,0,0,0,0,5,0,16,11,17]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a24ac44b6878721325b0b4fe1f19efebb":[0,0,0,0,0,0,5,0,16,11,2]
 };

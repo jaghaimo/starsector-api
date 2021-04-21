@@ -1,5 +1,8 @@
 var NAVTREEINDEX37 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#ac37c489ed2181a68bd2efca605b3eb86":[0,0,0,0,0,0,5,0,12,3,16,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#acc26614e178f76303066b47566060d7d":[0,0,0,0,0,0,5,0,12,3,16,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#accaa3616803ae885b81247450af08c7b":[0,0,0,0,0,0,5,0,12,3,16,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#adf5768f7d7428417a6133125b217179b":[0,0,0,0,0,0,5,0,12,3,16,20],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#aec3223f71c6c883becff2c1c7d839f2c":[0,0,0,0,0,0,5,0,12,3,16,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed.html":[0,0,0,0,0,0,5,0,12,3,17],
@@ -246,8 +249,5 @@ var NAVTREEINDEX37 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a54c4ce9ba544284e58793c40c7c09ee6":[0,0,0,0,0,0,5,0,14,4,27],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a70c672bb4fb87648a68ef8a4ef0d25fb":[0,0,0,0,0,0,5,0,14,4,24],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a7ef4838d8c5282f76cf395f79d2f54f6":[0,0,0,0,0,0,5,0,14,4,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a84c65cb524ccd85363d8515250c3bed6":[0,0,0,0,0,0,5,0,14,4,22],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a868ad4996e6e5c88bff10af0e847fb3b":[0,0,0,0,0,0,5,0,14,4,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a8b7e5d6b2d9c95deba83fd53472781a6":[0,0,0,0,0,0,5,0,14,4,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a8d235b3a8e85b6eb096395830da0092d":[0,0,0,0,0,0,5,0,14,4,18]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a84c65cb524ccd85363d8515250c3bed6":[0,0,0,0,0,0,5,0,14,4,22]
 };

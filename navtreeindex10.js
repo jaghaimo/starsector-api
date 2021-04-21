@@ -1,5 +1,8 @@
 var NAVTREEINDEX10 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a45b0d635212858ef06ff3384ab345da3":[0,0,0,0,0,0,5,0,2,0,18,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a70527419f336fca77ca87fcb6bbfecf2":[0,0,0,0,0,0,5,0,2,0,18,13],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a71ab04e035581ce58bf43589454a81fe":[0,0,0,0,0,0,5,0,2,0,18,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a7ad93f71747cdc32dbc36c57bfe3ef14":[0,0,0,0,0,0,5,0,2,0,18,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#a87ca6911026a5fa03a05433a9ce19f23":[0,0,0,0,0,0,5,0,2,0,18,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#ab4e02b22e7e5e90a0c6439e291efa6f8":[0,0,0,0,0,0,5,0,2,0,18,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX10 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#afb6728ea9c0ee511eeffc2696e5195f2":[0,0,0,0,0,0,5,0,3,1,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#afdc8099d9df144312e390638433e788b":[0,0,0,0,0,0,5,0,3,1,26],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html":[0,0,0,0,0,0,5,0,3,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a16046666ec98babf81ef13f206eb9bcf":[0,0,0,0,0,0,5,0,3,2,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a288e69c738282878673269544b733814":[0,0,0,0,0,0,5,0,3,2,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a33eb9d90486abc3c408260271bd512f9":[0,0,0,0,0,0,5,0,3,2,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a34d5ff9e0661fed8681bcf0298d47cff":[0,0,0,0,0,0,5,0,3,2,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a16046666ec98babf81ef13f206eb9bcf":[0,0,0,0,0,0,5,0,3,2,0]
 };

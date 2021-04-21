@@ -1,5 +1,8 @@
 var NAVTREEINDEX45 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStatsBackup.html#a6db7dae870e72728165b474c090c7d14":[0,0,0,0,0,0,5,1,58,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStatsBackup.html#a7ef1a2ac2c1ee42324e71583c503562c":[0,0,0,0,0,0,5,1,58,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStatsBackup.html#acd2eb416ec85ba860df2f0bc97b4a5cd":[0,0,0,0,0,0,5,1,58,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1VPDriverEffect.html":[0,0,0,0,0,0,5,1,59],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1VPDriverEffect.html#a03182bdbd1306cb38f5c0a173dd473ba":[0,0,0,0,0,0,5,1,59,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1VPDriverEffect.html#a90c93edd0dbb17107141f44d285b72ae":[0,0,0,0,0,0,5,1,59,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX45 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a381f5e3b7ea95fdefbf1e436130e070c":[0,0,0,0,0,0,7,2,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a3a9afaa22613c2dcb4c3ceca3344a51e":[0,0,0,0,0,0,7,2,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a3afe41776129c3c8609b3bedb2cf0fcb":[0,0,0,0,0,0,7,2,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a3b26c8777ead94aa02e06c8dbbfa0572":[0,0,0,0,0,0,7,2,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a47e062e791ee0e449260697f5c1c9e95":[0,0,0,0,0,0,7,2,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a4db588bbf677a0258f3f55ae452e388d":[0,0,0,0,0,0,7,2,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a4fe81c367daa79e6dcac1bef28c6809d":[0,0,0,0,0,0,7,2,0]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a3b26c8777ead94aa02e06c8dbbfa0572":[0,0,0,0,0,0,7,2,7]
 };

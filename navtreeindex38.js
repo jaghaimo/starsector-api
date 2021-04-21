@@ -1,5 +1,8 @@
 var NAVTREEINDEX38 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a868ad4996e6e5c88bff10af0e847fb3b":[0,0,0,0,0,0,5,0,14,4,20],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a8b7e5d6b2d9c95deba83fd53472781a6":[0,0,0,0,0,0,5,0,14,4,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a8d235b3a8e85b6eb096395830da0092d":[0,0,0,0,0,0,5,0,14,4,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a94af5418a21a4339aaeb7aee5b67badf":[0,0,0,0,0,0,5,0,14,4,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a95a297f099f5f299a8c412e42ae06f2c":[0,0,0,0,0,0,5,0,14,4,28],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html#a9722e2e1aa9c63513de8e6dc3299c497":[0,0,0,0,0,0,5,0,14,4,21],
@@ -246,8 +249,5 @@ var NAVTREEINDEX38 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ab77eda88de5f57859a07fc89b2889a09":[0,0,0,0,0,0,5,0,15,3,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#abed5dee93ccdca708cbb4cd3ec437100":[0,0,0,0,0,0,5,0,15,3,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ad1c37bf0d14b6a160c423ed8c7c8698e":[0,0,0,0,0,0,5,0,15,3,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ad4ef4e3d2048f4efb8e0bbdb5f005c3d":[0,0,0,0,0,0,5,0,15,3,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ae33d0b1977716dc6b23573582f4a6564":[0,0,0,0,0,0,5,0,15,3,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af0986a3f39a95fbe98befceaf040a2da":[0,0,0,0,0,0,5,0,15,3,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af87fb4176c3e685a0da42f336bce49ec":[0,0,0,0,0,0,5,0,15,3,19]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ad4ef4e3d2048f4efb8e0bbdb5f005c3d":[0,0,0,0,0,0,5,0,15,3,10]
 };

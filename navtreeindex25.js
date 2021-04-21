@@ -1,5 +1,8 @@
 var NAVTREEINDEX25 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a4aa54bb89fad744584e645740e436c53":[0,0,0,0,0,0,5,0,8,20,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a9023a5f6164437a28f721ad9dea232ac":[0,0,0,0,0,0,5,0,8,20,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#ac7e809f2a3acbec9df7a40f90eb7f439":[0,0,0,0,0,0,5,0,8,20,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#aca68eb80cfdf1b16cb79cdfafdebc4ed":[0,0,0,0,0,0,5,0,8,20,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#af65b66c707f2e2e61827f473b39e5c3d":[0,0,0,0,0,0,5,0,8,20,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#aff01a5c3c05a9cfc39234f95330fc8c8":[0,0,0,0,0,0,5,0,8,20,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX25 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#a9dc1d6bb4a14276d252223254dd0b336":[0,0,0,0,0,0,5,0,8,0,14,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#ab4a9ad5580f907dc17752f9cfbe058af":[0,0,0,0,0,0,5,0,8,0,14,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#ad85565823e962b7d304fec8dbe71404a":[0,0,0,0,0,0,5,0,8,0,14,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#af97fe6c234f53a9b104e56ef1a876d2e":[0,0,0,0,0,0,5,0,8,0,14,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html":[0,0,0,0,0,0,5,0,8,0,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a15f1cc00aa03d71111b256e66088a1e8":[0,0,0,0,0,0,5,0,8,0,15,27],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a26f5974f0d90895749cbdf8366223cea":[0,0,0,0,0,0,5,0,8,0,15,8]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#af97fe6c234f53a9b104e56ef1a876d2e":[0,0,0,0,0,0,5,0,8,0,14,6]
 };

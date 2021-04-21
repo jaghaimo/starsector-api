@@ -1,5 +1,8 @@
 var NAVTREEINDEX43 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ac1b325732dae3d9ffa8ab50c542e67d9":[0,0,0,0,0,0,5,0,17,13,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ac4603afdaea0e1099ca02763bc669c2d":[0,0,0,0,0,0,5,0,17,13,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ac695aff4fdbd1d6d6ad034541844d931":[0,0,0,0,0,0,5,0,17,13,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ae23d7dfcd6e0deb56959ad7ad6380d06":[0,0,0,0,0,0,5,0,17,13,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html":[0,0,0,0,0,0,5,0,17,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a05771ab843edae40a21ca4a39cb53023":[0,0,0,0,0,0,5,0,17,14,13],
@@ -246,8 +249,5 @@ var NAVTREEINDEX43 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GenericCombatPlugin.html#a0107f4b2233021a1f0105d113dc5474e":[0,0,0,0,0,0,5,1,18,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GenericCombatPlugin.html#a241a388ec72d4e310782fd1fdfbf4380":[0,0,0,0,0,0,5,1,18,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GenericCombatPlugin.html#a57059cecb6e6e1eef07e1e3e68ec9653":[0,0,0,0,0,0,5,1,18,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GenericCombatPlugin.html#aec1db16bcab84dec4c61184a26096314":[0,0,0,0,0,0,5,1,18,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GravityPullEffect.html":[0,0,0,0,0,0,5,1,19],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GravityPullEffect.html#a1b3f1b178f43ae866de535e8aa9c4682":[0,0,0,0,0,0,5,1,19,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GravityPullEffect.html#a1d5310843e6ef16b42cdf5ecd38f3099":[0,0,0,0,0,0,5,1,19,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GenericCombatPlugin.html#aec1db16bcab84dec4c61184a26096314":[0,0,0,0,0,0,5,1,18,0]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX16 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a70e76e9d44ee2ee0ade730cc085d507d":[0,0,0,0,0,0,5,0,7,22,35],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a723d835fd3079b770a521968d36721b8":[0,0,0,0,0,0,5,0,7,22,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a74cb358dfa2444d0bf6883ca60901c60":[0,0,0,0,0,0,5,0,7,22,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a7894a66cd7cb92fb87bb251432356662":[0,0,0,0,0,0,5,0,7,22,29],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a7e08804d4eed89b6fc1871c2e7e9d2ae":[0,0,0,0,0,0,5,0,7,22,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a82b306a768275c464738371c4daabfda":[0,0,0,0,0,0,5,0,7,22,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX16 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a901f3d095c7b28b7ec652a1afce54006":[0,0,0,0,0,0,5,0,7,0,0,6,49],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a9330ebe250fbc363d0d9a07751a9abf9":[0,0,0,0,0,0,5,0,7,0,0,6,40],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a96786089a6860fe0dbb8d7c95e1826a3":[0,0,0,0,0,0,5,0,7,0,0,6,21],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a9906410df4a3bd0d203edcad839c0c23":[0,0,0,0,0,0,5,0,7,0,0,6,42],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a9a7551dacae2af6ffa524617f89aa48a":[0,0,0,0,0,0,5,0,7,0,0,6,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a9f8003a84bb434c5d6c3defec23cd08e":[0,0,0,0,0,0,5,0,7,0,0,6,56],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#aa27389212f9517813bc7d91f26a3551c":[0,0,0,0,0,0,5,0,7,0,0,6,33]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a9906410df4a3bd0d203edcad839c0c23":[0,0,0,0,0,0,5,0,7,0,0,6,42]
 };

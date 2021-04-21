@@ -1,5 +1,8 @@
 var NAVTREEINDEX36 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html#a01ec174606de3c8185e2897b34da9509":[0,0,0,0,0,0,5,0,12,3,4,22],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html#a022cfdbc2de93f9a42901d353d493e68":[0,0,0,0,0,0,5,0,12,3,4,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html#a08565d9aac422c032c57866f90a96325":[0,0,0,0,0,0,5,0,12,3,4,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html#a0cf673bcd39691f711fe1f7dadcdf16b":[0,0,0,0,0,0,5,0,12,3,4,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html#a12378a34016d838c0f84db48560cbd5f":[0,0,0,0,0,0,5,0,12,3,4,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html#a32983690d5e007bce65a0f1711194e09":[0,0,0,0,0,0,5,0,12,3,4,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX36 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#aaa9d314ca4ad5c63a34224f45d32fe62":[0,0,0,0,0,0,5,0,12,3,16,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#ab3cc381b93ea2bdfd8c19008ed80209b":[0,0,0,0,0,0,5,0,12,3,16,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#ab4fa57c9f6ba52ce013fef190fe82005":[0,0,0,0,0,0,5,0,12,3,16,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#abdfa9fef0d0b7c05a5080cb0a5cf82c1":[0,0,0,0,0,0,5,0,12,3,16,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#ac37c489ed2181a68bd2efca605b3eb86":[0,0,0,0,0,0,5,0,12,3,16,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#acc26614e178f76303066b47566060d7d":[0,0,0,0,0,0,5,0,12,3,16,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#accaa3616803ae885b81247450af08c7b":[0,0,0,0,0,0,5,0,12,3,16,19]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html#abdfa9fef0d0b7c05a5080cb0a5cf82c1":[0,0,0,0,0,0,5,0,12,3,16,13]
 };

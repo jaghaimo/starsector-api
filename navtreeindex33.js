@@ -1,5 +1,8 @@
 var NAVTREEINDEX33 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#acbf9e6fd886d5e3b4a4d154b439e7db7":[0,0,0,0,0,0,5,0,11,34,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#adfdadb228fa49fd912ee2d6035508bce":[0,0,0,0,0,0,5,0,11,34,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html#af606c314ed47f537d464cbbe4d8ecd6d":[0,0,0,0,0,0,5,0,11,34,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html":[0,0,0,0,0,0,5,0,11,35],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a01fc50c0b92df9c8d8a9692098a5c7d3":[0,0,0,0,0,0,5,0,11,35,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a020472849ce2541c736d5f95c94e315d":[0,0,0,0,0,0,5,0,11,35,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX33 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#ae3cdfa1b4faa65bb186492f71636e037":[0,0,0,0,0,0,5,0,11,0,11,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#ae4bffff3ff091158c35d4990cdf1b989":[0,0,0,0,0,0,5,0,11,0,11,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html":[0,0,0,0,0,0,5,0,11,0,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a067f06c64dad0ec501b216c0fee224bb":[0,0,0,0,0,0,5,0,11,0,12,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a12b1e4b2e4a48c3ad8b4f6ba51c25b0d":[0,0,0,0,0,0,5,0,11,0,12,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a3bf2c777bf83d6e74f31e2d25bac6244":[0,0,0,0,0,0,5,0,11,0,12,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a45ec739d22abbb6abb4c1fcb55b310a3":[0,0,0,0,0,0,5,0,11,0,12,4]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a067f06c64dad0ec501b216c0fee224bb":[0,0,0,0,0,0,5,0,11,0,12,0]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX34 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a12b1e4b2e4a48c3ad8b4f6ba51c25b0d":[0,0,0,0,0,0,5,0,11,0,12,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a3bf2c777bf83d6e74f31e2d25bac6244":[0,0,0,0,0,0,5,0,11,0,12,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a45ec739d22abbb6abb4c1fcb55b310a3":[0,0,0,0,0,0,5,0,11,0,12,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a46cc4ecacf61f630e7c6c9b70cd4bc4c":[0,0,0,0,0,0,5,0,11,0,12,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a8ba9be38a9d175fe6cb252abf1ed5a55":[0,0,0,0,0,0,5,0,11,0,12,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsThemeGenerator.html#a9cd3e6d6301d17fc78e4433f84548939":[0,0,0,0,0,0,5,0,11,0,12,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX34 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html#aca205ec4e4b99f6bdfaf3e62b86e3720":[0,0,0,0,0,0,5,0,12,103,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html#adc18d52957209678bc45e268319fd19c":[0,0,0,0,0,0,5,0,12,103,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html#ae8d3543ff48a7b9e3fd9b7a730dbad60":[0,0,0,0,0,0,5,0,12,103,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html#af68630dd562f9adf4477b571f2752137":[0,0,0,0,0,0,5,0,12,103,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html#af78dbd0e7fc36662a3a6baad4d0a9c7b":[0,0,0,0,0,0,5,0,12,103,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html#afb6b037af408421e65fd91f2f34050e2":[0,0,0,0,0,0,5,0,12,103,21],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptionsExample.html":[0,0,0,0,0,0,5,0,12,104]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html#af68630dd562f9adf4477b571f2752137":[0,0,0,0,0,0,5,0,12,103,17]
 };
