@@ -26,6 +26,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI =
     [ "isInterceptor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html#ae7264d5227dcbc584d5c528bc8d65812", null ],
     [ "isRegularFighter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html#a61fe54447f43cba391dadb9aac185bce", null ],
     [ "isSupport", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html#a0e3353910378baf667611e0617de051e", null ],
+    [ "resetAutofitPriorityCategories", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html#a838a165d488b83e7aede970e9a9802ca", null ],
     [ "setAttackPositionOffset", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html#a219175df67ad6082dc23b53cb554fff6", null ],
     [ "setAttackRunRange", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html#a52f799d57a66349a6bb7ae0439c35c48", null ],
     [ "setBaseValue", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html#ad9bd557d32c358b57411700290c2e4c6", null ],

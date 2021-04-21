@@ -6,6 +6,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI =
     [ "createWaypoint", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a3898c3f80e2897e22aedee32531e2116", null ],
     [ "getAllEverDeployedCopy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a2094cc25b711722a47d870f2acab36b7", null ],
     [ "getAllFleetCommanders", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#ac9905a1bab275a8a6f60236bb22c5d50", null ],
+    [ "getBiggestStationDeployedOrNot", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a4764a1740f0f8b224863af58ef94105d", null ],
     [ "getDefaultCommander", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#abe8f9149109c034be8110936e308aae8", null ],
     [ "getDeployedCopy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#abb98321121409c688584e983731588ac", null ],
     [ "getDeployedCopyDFM", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#acc1f4a208ab987f7f8b0e89425803922", null ],

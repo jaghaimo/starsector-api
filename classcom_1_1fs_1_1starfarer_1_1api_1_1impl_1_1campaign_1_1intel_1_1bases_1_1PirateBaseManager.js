@@ -19,6 +19,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1
     [ "setNumDestroyed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a1f2ecca0a80c953fc071a249ddbfcf76", null ],
     [ "extraDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a8cc0fab14ca74fe945c456d8f491e429", null ],
     [ "numDestroyed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a60019dd31ac174ab92eb6cf13f9990a4", null ],
+    [ "numSpawnChecksToSkip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#aa667e2eaf354cdb2dfd4f9ef01973d3d", null ],
     [ "random", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a15a3e3d0befddbe2ad16d87390ce3876", null ],
     [ "start", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html#a540177195c2b54dda09e9a2279f49c71", null ]
 ];

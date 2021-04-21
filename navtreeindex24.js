@@ -1,5 +1,13 @@
 var NAVTREEINDEX24 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#aeea01517e2e03fe24d7e0a498d84f0d9":[0,0,0,0,0,0,5,0,8,5,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#af26168bc8c6695d38b98eeb9618b82dd":[0,0,0,0,0,0,5,0,8,5,8],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html":[0,0,0,0,0,0,5,0,8,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a08e7eb1e52c4e5663075dbe6a35f013d":[0,0,0,0,0,0,5,0,8,6,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a166730426ea4c82a198eef4d12b78218":[0,0,0,0,0,0,5,0,8,6,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a19b81cac5728392acc7d4726b32c6f87":[0,0,0,0,0,0,5,0,8,6,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a1c160bb0541505aa5cefdb1ad6919e5f":[0,0,0,0,0,0,5,0,8,6,19],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a23bea55866b193a790aeb01bcf0f7bc5":[0,0,0,0,0,0,5,0,8,6,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a248dfa0be0323022728e329f4211a6ff":[0,0,0,0,0,0,5,0,8,6,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a29145395d7dbfa03a8bdf20392f3a273":[0,0,0,0,0,0,5,0,8,6,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a326bf4afca78e0e7c7c6f3eb97ad77ed":[0,0,0,0,0,0,5,0,8,6,12],
@@ -241,13 +249,5 @@ var NAVTREEINDEX24 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a383c5c8ab50868289bbd86a547459df0":[0,0,0,0,0,0,5,0,8,19,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a45d0617bfb70dee697b6539893648cd4":[0,0,0,0,0,0,5,0,8,19,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a52c3550c3fbc7c6994a80fc7c652e9ae":[0,0,0,0,0,0,5,0,8,19,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a5a25c44be67a88010085f5675bc42541":[0,0,0,0,0,0,5,0,8,19,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a7513dddbabedf46fb70780289f8e201d":[0,0,0,0,0,0,5,0,8,19,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a92351cd74e793864155836e1f48e60af":[0,0,0,0,0,0,5,0,8,19,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a9630a7f58728615e563adcdf35052a03":[0,0,0,0,0,0,5,0,8,19,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#aa50cb378bd85cbe0c1939988fedb38a7":[0,0,0,0,0,0,5,0,8,19,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#acb1825a7245ea1910c22bb034fb9287b":[0,0,0,0,0,0,5,0,8,19,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html":[0,0,0,0,0,0,5,0,8,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a10bf9bf5f8b88ec3f8c27e811327b55f":[0,0,0,0,0,0,5,0,8,20,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a4113dbd410f334e74afa53cfbdd0c3b7":[0,0,0,0,0,0,5,0,8,20,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a5a25c44be67a88010085f5675bc42541":[0,0,0,0,0,0,5,0,8,19,16]
 };

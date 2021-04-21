@@ -18,7 +18,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1
     [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a6150a80fc80180e68b36cb5ea9b94ea8", null ],
     [ "getPostfixForState", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a412adf8c8770ab4e2ab2aed885d5f543", null ],
     [ "notifyEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a9ccfd6e87b4e77e684ff9d8f92f0b4a9", null ],
-    [ "pickCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a3f179ddd71aa6d228208cf38857888e9", null ],
+    [ "pickCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae525e130beeeea68e2bdf2d69fe53446", null ],
     [ "pickDifficulty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ad14bd1fed56331d276006508bdbeb9eb", null ],
     [ "reportBattleOccurred", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#aa09b3f9f7e72ce9724290a7dcb84db4a", null ],
     [ "reportFleetDespawnedToListener", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ac8a4f37841703778d5eba41a51474a01", null ],

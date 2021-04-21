@@ -150,6 +150,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_
     [ "requireMarketHidden", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#afd951197db5d102abc66b5ce2f97f6d3", null ],
     [ "requireMarketIndustries", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#aad48cd208f1d74a41239dde150ce94e6", null ],
     [ "requireMarketIs", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a3098ddb5d753e71b73f39ad0cf6d2ece", null ],
+    [ "requireMarketIs", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#a941c74a8e19df0c6c69d0eb36d72cc32", null ],
     [ "requireMarketIsMilitary", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#aca0d098a3bb12614798b2adffa44e939", null ],
     [ "requireMarketIsNot", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#aa02f030e5925e1c837bb54bf11213583", null ],
     [ "requireMarketLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#ac752f6ff067b069151ab355731c4d856", null ],

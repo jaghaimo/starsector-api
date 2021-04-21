@@ -1,5 +1,13 @@
 var NAVTREEINDEX26 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#a7f771f35da5e5bdafc2cc4db5f97db6e":[0,0,0,0,0,0,5,0,8,0,14,8],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#a89b08d2f711766dc8ebc9a1e9c29c3dc":[0,0,0,0,0,0,5,0,8,0,14,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#a8f10918cfc47efa0dc9109224da1cb37":[0,0,0,0,0,0,5,0,8,0,14,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#a965ce6ab80f7ef8b6b1a7e45172dd3c9":[0,0,0,0,0,0,5,0,8,0,14,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#a9dc1d6bb4a14276d252223254dd0b336":[0,0,0,0,0,0,5,0,8,0,14,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#ab4a9ad5580f907dc17752f9cfbe058af":[0,0,0,0,0,0,5,0,8,0,14,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#ad85565823e962b7d304fec8dbe71404a":[0,0,0,0,0,0,5,0,8,0,14,10],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html#af97fe6c234f53a9b104e56ef1a876d2e":[0,0,0,0,0,0,5,0,8,0,14,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html":[0,0,0,0,0,0,5,0,8,0,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a15f1cc00aa03d71111b256e66088a1e8":[0,0,0,0,0,0,5,0,8,0,15,27],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a26f5974f0d90895749cbdf8366223cea":[0,0,0,0,0,0,5,0,8,0,15,8],
@@ -88,7 +96,6 @@ var NAVTREEINDEX26 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a19d5d89e74daa7bff57947ee068c8403":[0,0,0,0,0,0,5,0,8,1,0,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a22975d451f30525eddceb390ef2e0ecd":[0,0,0,0,0,0,5,0,8,1,0,30],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a2cfd5a76d30159fd333406be0d5e59b2":[0,0,0,0,0,0,5,0,8,1,0,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a3f179ddd71aa6d228208cf38857888e9":[0,0,0,0,0,0,5,0,8,1,0,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a412adf8c8770ab4e2ab2aed885d5f543":[0,0,0,0,0,0,5,0,8,1,0,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a4645bf3c1ef61f6fedb7e2fa2abeb29d":[0,0,0,0,0,0,5,0,8,1,0,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a50d899c0401dba4b6a164dd6ecbac6f4":[0,0,0,0,0,0,5,0,8,1,0,0],
@@ -113,6 +120,7 @@ var NAVTREEINDEX26 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#addfe92062c557e833a8be5fcd0f22015":[0,0,0,0,0,0,5,0,8,1,0,27],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae2f6954d83496312d70eb4fe10e79e80":[0,0,0,0,0,0,5,0,8,1,0,36],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae5188180fb4819c9dddc5eaedbfd19d8":[0,0,0,0,0,0,5,0,8,1,0,33],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae525e130beeeea68e2bdf2d69fe53446":[0,0,0,0,0,0,5,0,8,1,0,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae5b2e2ff567bb1df02490cab758bdad7":[0,0,0,0,0,0,5,0,8,1,0,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#aeda41b70323c6c7fa0a8dc773b95802d":[0,0,0,0,0,0,5,0,8,1,0,34],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#af13fcad79e38d1d2520572d4de734d2b":[0,0,0,0,0,0,5,0,8,1,0,32],
@@ -241,13 +249,5 @@ var NAVTREEINDEX26 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#a75e92a0d31aa3f09b4e1359cc3ce6a52":[0,0,0,0,0,0,5,0,8,1,15,0,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#a7d999014ceda5440f92654178c6198c2":[0,0,0,0,0,0,5,0,8,1,15,0,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#a880358b72e8b72686cd648f3a19b9c97":[0,0,0,0,0,0,5,0,8,1,15,0,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#a988fec259b9e2f5ee79d7020e4077594":[0,0,0,0,0,0,5,0,8,1,15,0,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#abeda7a192f48f898c068ce3bb52036a7":[0,0,0,0,0,0,5,0,8,1,15,0,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#ad957f67e79d720c8985168696699a6b8":[0,0,0,0,0,0,5,0,8,1,15,0,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#ae54358e4d39fc804fb3eebdeab291a18":[0,0,0,0,0,0,5,0,8,1,15,0,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#afb9b5f88faf3d5c35ddc6cb70625c7ea":[0,0,0,0,0,0,5,0,8,1,15,0,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#afc4b95106750f1525c4cfab9d0adb51e":[0,0,0,0,0,0,5,0,8,1,15,0,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#aff2233f693b42de0246bdf4002b718f1":[0,0,0,0,0,0,5,0,8,1,15,0,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html":[0,0,0,0,0,0,5,0,8,1,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html#a5b1a67a44ef3c2f4cf9dba9dd4c7fa22":[0,0,0,0,0,0,5,0,8,1,16,0]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html#a988fec259b9e2f5ee79d7020e4077594":[0,0,0,0,0,0,5,0,8,1,15,0,5]
 };

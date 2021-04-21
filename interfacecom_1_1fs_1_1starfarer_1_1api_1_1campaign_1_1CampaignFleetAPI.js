@@ -26,6 +26,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI =
     [ "getFleetPoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a2f64517a0c1bd9f51740fee49142d806", null ],
     [ "getFleetSizeCount", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a81836d8c06e2b8a3bc94b7ad6734d044", null ],
     [ "getForceNoSensorProfileUpdate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a19deb7df85a9b21d06eda50c81a48328", null ],
+    [ "getGoSlowOneFrame", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#ac0fe4503f3c92e07fb03b1c8e2e12d0a", null ],
     [ "getGoSlowStop", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a99f07ec36c265a7c79cc4dbfe7a41d03", null ],
     [ "getInflater", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#aab04a1599beb955a08533b8b231346d7", null ],
     [ "getInteractionTarget", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a5925c2a493d80c75b12a3fa265293bf8", null ],

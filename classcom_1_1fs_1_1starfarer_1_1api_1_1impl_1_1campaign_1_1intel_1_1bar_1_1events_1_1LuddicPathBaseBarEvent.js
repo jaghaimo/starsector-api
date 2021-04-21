@@ -10,6 +10,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getPersonPost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a78b29978193492104db72303ff49f194", null ],
     [ "getPersonRank", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a2fb7c0dd1320f1af695f9935f3c45361", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#ac15e2692e9c26e7d001f9a49a659f104", null ],
+    [ "isAlwaysShow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a966dbecab43aec66a2f30598f4cce7bc", null ],
     [ "optionSelected", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#af204f0f62105ff7b0ff02026aff06f99", null ],
     [ "regen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a3d9371f9523549ffed824954bf63850c", null ],
     [ "shouldRemoveEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a082669c3ab36ea8a02556413df9c964d", null ],

@@ -1,5 +1,9 @@
 var NAVTREEINDEX19 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#af4462a65b88c178b7e8180aaffbdba43":[0,0,0,0,0,0,5,0,7,0,0,36,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html":[0,0,0,0,0,0,5,0,7,0,0,37],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html#a742db56662fcd717a458f3047b5ee310":[0,0,0,0,0,0,5,0,7,0,0,37,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html#ae7bb8a2674c919a687e9d0310052023b":[0,0,0,0,0,0,5,0,7,0,0,37,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html#affdb9a2d59f685f3b7d0663fd8d05a6d":[0,0,0,0,0,0,5,0,7,0,0,37,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOffer.html":[0,0,0,0,0,0,5,0,7,0,0,0,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOffer.html#a1379b105a8fb6a9c59aedfacea971c98":[0,0,0,0,0,0,5,0,7,0,0,0,0,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX19 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#aaad766ae2b0f96f9577d4358ddef9722":[0,0,0,0,0,0,5,0,7,1,0,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#aad14c1f7c7b1b39c1c1c9729a1ec0fa2":[0,0,0,0,0,0,5,0,7,1,0,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#ab6075c007dca50d13c4a92d3f3c696b9":[0,0,0,0,0,0,5,0,7,1,0,45],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#ab6a5b8046918d7afee59fbea9620d5c5":[0,0,0,0,0,0,5,0,7,1,0,27],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#ab733e739be2e047b20b74f0fdd5f50ea":[0,0,0,0,0,0,5,0,7,1,0,47],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#ac42720a1a7666afd74572d9c33a52f56":[0,0,0,0,0,0,5,0,7,1,0,30],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#aceab84299851d09e1fefa9ba93524393":[0,0,0,0,0,0,5,0,7,1,0,33],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#acf8a7e30157d4e017150eaa6c0c5debf":[0,0,0,0,0,0,5,0,7,1,0,15]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html#ab6a5b8046918d7afee59fbea9620d5c5":[0,0,0,0,0,0,5,0,7,1,0,27]
 };

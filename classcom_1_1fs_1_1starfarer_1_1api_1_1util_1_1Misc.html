@@ -1392,6 +1392,10 @@ static boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isStoryCrit
 <tr class="memitem:a527c41e63b2aaf7e637bc81504c8a9ed"><td class="memItemLeft" align="right" valign="top"><a id="a527c41e63b2aaf7e637bc81504c8a9ed"></a>
 static boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isStoryCritical</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html">MemoryAPI</a> memory)</td></tr>
 <tr class="separator:a527c41e63b2aaf7e637bc81504c8a9ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c5f751aa8bc371e03e407927ae664e"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc.html#a96c5f751aa8bc371e03e407927ae664e">isInsignificant</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet)</td></tr>
+<tr class="separator:a96c5f751aa8bc371e03e407927ae664e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab158bbb8279213a0fabf5a2f515436ed"><td class="memItemLeft" align="right" valign="top">static boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc.html#ab158bbb8279213a0fabf5a2f515436ed">shouldNotWantRunFromPlayerEvenIfWeaker</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet)</td></tr>
+<tr class="separator:ab158bbb8279213a0fabf5a2f515436ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -1872,6 +1876,39 @@ static Boolean&#160;</td><td class="memItemRight" valign="bottom"><b>canCheckVra
 
 </div>
 </div>
+<a id="a96c5f751aa8bc371e03e407927ae664e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c5f751aa8bc371e03e407927ae664e">&#9670;&nbsp;</a></span>isInsignificant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.fs.starfarer.api.util.Misc.isInsignificant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a>&#160;</td>
+          <td class="paramname"><em>fleet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Whether it prevents salvage, surveying, etc. But NOT things that require only being seen to ruin them, such as SpySat deployments. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fleet</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <a id="aad1bc7a3db6f3758b5084d3827fda27c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad1bc7a3db6f3758b5084d3827fda27c">&#9670;&nbsp;</a></span>isPirateFaction()</h2>
 
@@ -1965,6 +2002,40 @@ static Boolean&#160;</td><td class="memItemRight" valign="bottom"><b>canCheckVra
     <tr><td class="paramname">flagKey</td><td></td></tr>
     <tr><td class="paramname">reason</td><td></td></tr>
     <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ab158bbb8279213a0fabf5a2f515436ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab158bbb8279213a0fabf5a2f515436ed">&#9670;&nbsp;</a></span>shouldNotWantRunFromPlayerEvenIfWeaker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static boolean com.fs.starfarer.api.util.Misc.shouldNotWantRunFromPlayerEvenIfWeaker </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a>&#160;</td>
+          <td class="paramname"><em>fleet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Mainly for avoiding stuff like "pirate fleet with 4 rustbuckets will run away from the player's
+4 regular-quality frigates". Fleets that this evaluates to true for will avoid the player slowly. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fleet</td><td></td></tr>
   </table>
   </dd>
 </dl>

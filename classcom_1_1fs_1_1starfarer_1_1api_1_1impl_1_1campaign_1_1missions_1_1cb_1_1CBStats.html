@@ -99,9 +99,27 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <div class="title">com.fs.starfarer.api.impl.campaign.missions.cb.CBStats Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for com.fs.starfarer.api.impl.campaign.missions.cb.CBStats:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBStats__coll__graph.png" border="0" usemap="#acom_8fs_8starfarer_8api_8impl_8campaign_8missions_8cb_8CBStats_coll__map" alt="Collaboration graph"/></div>
+<map name="acom_8fs_8starfarer_8api_8impl_8campaign_8missions_8cb_8CBStats_coll__map" id="acom_8fs_8starfarer_8api_8impl_8campaign_8missions_8cb_8CBStats_coll__map">
+<area shape="rect" title=" " alt="" coords="5,109,299,151"/>
+<area shape="rect" title=" " alt="" coords="37,5,267,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5f73246229fe4b6f61d4e565c88ce78e"><td class="memItemLeft" align="right" valign="top"><a id="a5f73246229fe4b6f61d4e565c88ce78e"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>setThresholds</b> (Class bounty, int challenging, int normal)</td></tr>
+<tr class="separator:a5f73246229fe4b6f61d4e565c88ce78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a151504776217792fc28fbfedc02aef5f"><td class="memItemLeft" align="right" valign="top"><a id="a151504776217792fc28fbfedc02aef5f"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>getThresholdNotHigh</b> (Class c)</td></tr>
+<tr class="separator:a151504776217792fc28fbfedc02aef5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3106358616db70d20b3392ca91101610"><td class="memItemLeft" align="right" valign="top"><a id="a3106358616db70d20b3392ca91101610"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>getThresholdNotNormal</b> (Class c)</td></tr>
+<tr class="separator:a3106358616db70d20b3392ca91101610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39e3dacd8c8905baa4b10014a9510f8e"><td class="memItemLeft" align="right" valign="top"><a id="a39e3dacd8c8905baa4b10014a9510f8e"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>getBaseBounty</b> (int difficulty, float mult, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html">BaseHubMission</a> mission)</td></tr>
 <tr class="separator:a39e3dacd8c8905baa4b10014a9510f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,10 +127,10 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>getBaseBounty</
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a3cff819e71fee6d61d8f6d5ef3bc3721"><td class="memItemLeft" align="right" valign="top"><a id="a3cff819e71fee6d61d8f6d5ef3bc3721"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>BASE_REWARD</b> = Global.getSettings().getInt(&quot;basePersonBounty&quot;)</td></tr>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>BASE_REWARD</b> = Global.getSettings().getInt(&quot;baseCustomBounty&quot;)</td></tr>
 <tr class="separator:a3cff819e71fee6d61d8f6d5ef3bc3721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb87b5099451e9f1485c656806a0fc5b"><td class="memItemLeft" align="right" valign="top"><a id="adb87b5099451e9f1485c656806a0fc5b"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>REWARD_PER_DIFFICULTY</b> = Global.getSettings().getInt(&quot;personBountyPerLevel&quot;)</td></tr>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>REWARD_PER_DIFFICULTY</b> = Global.getSettings().getInt(&quot;personCustomBountyPerLevel&quot;)</td></tr>
 <tr class="separator:adb87b5099451e9f1485c656806a0fc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a730cff388006967f966be7d4debd9075"><td class="memItemLeft" align="right" valign="top"><a id="a730cff388006967f966be7d4debd9075"></a>
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_DAYS</b> = 120</td></tr>
@@ -180,6 +198,8 @@ static float&#160;</td><td class="memItemRight" valign="bottom"><b>REMNANT_PLUS_
 <tr class="memitem:a88b83283a826a9538fbfa4cbfc8c6052"><td class="memItemLeft" align="right" valign="top"><a id="a88b83283a826a9538fbfa4cbfc8c6052"></a>
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>ENEMY_STATION_MULT</b> = 2f</td></tr>
 <tr class="separator:a88b83283a826a9538fbfa4cbfc8c6052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8578a7da96e905381d279a3a17bd9b95"><td class="memItemLeft" align="right" valign="top">static Map&lt; Class, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Pair.html">Pair</a>&lt; Integer, Integer &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>THRESHOLDS</b></td></tr>
+<tr class="separator:a8578a7da96e905381d279a3a17bd9b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae19ddbbf1636f1c9bc5dab69189fb6f6"><td class="memItemLeft" align="right" valign="top"><a id="ae19ddbbf1636f1c9bc5dab69189fb6f6"></a>
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>TRADER_FREQ</b> = 1f</td></tr>
 <tr class="separator:ae19ddbbf1636f1c9bc5dab69189fb6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,6 +213,31 @@ static float&#160;</td><td class="memItemRight" valign="bottom"><b>TRADER_MULT</
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>PATROL_MULT</b> = 1f</td></tr>
 <tr class="separator:a70c2f7d9cba49a5f157b078fd6ef4125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8578a7da96e905381d279a3a17bd9b95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8578a7da96e905381d279a3a17bd9b95">&#9670;&nbsp;</a></span>THRESHOLDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map&lt;Class, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Pair.html">Pair</a>&lt;Integer, Integer&gt; &gt; com.fs.starfarer.api.impl.campaign.missions.cb.CBStats.THRESHOLDS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= </div>
+<div class="line">                            <span class="keyword">new</span> LinkedHashMap&lt;Class, Pair&lt;Integer,Integer&gt;&gt;()</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/campaign/missions/cb/CBStats.java</li>
 </ul>

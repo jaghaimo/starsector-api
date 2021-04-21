@@ -12,6 +12,8 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStat
     [ "getAdminNumber", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#ae4e0baef70cb7d76f2be852ad48968b1", null ],
     [ "getAptitudeLevel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a1d5ce0b7e4632705b5518beaf94ee990", null ],
     [ "getBonusXp", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a4006d1638515ef1afdcc98922ca2b36b", null ],
+    [ "getBonusXPForSpendingStoryPointBeforeSpendingIt", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#ab7088d855522f26b7c5046d8fba0cd63", null ],
+    [ "getBonusXPUsed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a1c1420f6fa86202c0870e26b36a499d8", null ],
     [ "getCommandPoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a69d3b61dbb3cedd2f4193de834a7e7a9", null ],
     [ "getDeferredBonusXp", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a75cd5596eecb6c4bc7790ee5290316db", null ],
     [ "getDynamic", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a1334a0cd63bea91d5d69ece288d794d8", null ],
