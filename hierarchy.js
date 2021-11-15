@@ -1564,8 +1564,6 @@ var hierarchy =
     [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageEntityGeneratorOld", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageEntityGeneratorOld.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.Salvaging", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Salvaging.html", null ],
-    [ "com.fs.starfarer.api.util.SaveableIterator< com.fs.starfarer.api.campaign.StarSystemAPI >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html", null ],
-    [ "com.fs.starfarer.api.util.SaveableIterator< String >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html", null ],
     [ "com.fs.starfarer.api.Script", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html", [
       [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAFCReplaceArchon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFCReplaceArchon.html", null ]
     ] ],
@@ -1720,11 +1718,6 @@ var hierarchy =
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.themes.Themes", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1Themes.html", null ],
     [ "com.fs.starfarer.api.util.TimeoutTracker< T >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
-    [ "com.fs.starfarer.api.util.TimeoutTracker< AbilityUseData >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
-    [ "com.fs.starfarer.api.util.TimeoutTracker< com.fs.starfarer.api.campaign.SectorEntityToken >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
-    [ "com.fs.starfarer.api.util.TimeoutTracker< com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarEvent >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
-    [ "com.fs.starfarer.api.util.TimeoutTracker< GenericBarEventCreator >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
-    [ "com.fs.starfarer.api.util.TimeoutTracker< String >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
     [ "com.fs.starfarer.api.util.TimeoutTrackerMap< K, V >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html", null ],
     [ "com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html", [
       [ "com.fs.starfarer.api.impl.campaign.MonthlyReportNodeTooltipCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MonthlyReportNodeTooltipCreator.html", null ],
@@ -1763,12 +1756,6 @@ var hierarchy =
     [ "com.fs.starfarer.api.combat.listeners.WeaponRangeModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponRangeModifier.html", null ],
     [ "com.fs.starfarer.api.loading.WeaponSlotAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html", null ],
     [ "com.fs.starfarer.api.loading.WeaponSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSpecAPI.html", null ],
-    [ "com.fs.starfarer.api.util.WeightedRandomPicker< com.fs.starfarer.api.campaign.PlanetAPI >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html", null ],
-    [ "com.fs.starfarer.api.util.WeightedRandomPicker< com.fs.starfarer.api.campaign.SectorEntityToken >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html", null ],
-    [ "com.fs.starfarer.api.util.WeightedRandomPicker< com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html", null ],
-    [ "com.fs.starfarer.api.util.WeightedRandomPicker< com.fs.starfarer.api.loading.WeaponSlotAPI >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html", null ],
-    [ "com.fs.starfarer.api.util.WeightedRandomPicker< Object >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html", null ],
-    [ "com.fs.starfarer.api.util.WeightedRandomPicker< String >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.WingCommander", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WingCommander.html", null ],
     [ "com.fs.starfarer.api.loading.WingRole", "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WingRole.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.WolfpackTactics", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WolfpackTactics.html", null ],

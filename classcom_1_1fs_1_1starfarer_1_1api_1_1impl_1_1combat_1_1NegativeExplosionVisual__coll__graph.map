@@ -1,12 +1,12 @@
 <map id="com.fs.starfarer.api.impl.combat.NegativeExplosionVisual" name="com.fs.starfarer.api.impl.combat.NegativeExplosionVisual">
-<area shape="rect" id="node1" title=" " alt="" coords="748,237,956,279"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="369,96,607,137"/>
+<area shape="rect" id="node1" title=" " alt="" coords="748,169,956,211"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="369,71,607,112"/>
 <area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,47"/>
 <area shape="rect" id="node4" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,71,199,112"/>
 <area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,136,199,177"/>
-<area shape="rect" id="node6" title=" " alt="" coords="373,195,603,236"/>
-<area shape="rect" id="node7" title=" " alt="" coords="69,202,148,229"/>
-<area shape="rect" id="node8" title=" " alt="" coords="83,266,135,293"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="411,260,565,301"/>
-<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="395,325,581,367"/>
+<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="411,136,565,177"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="395,201,581,243"/>
+<area shape="rect" id="node8" title=" " alt="" coords="373,267,603,308"/>
+<area shape="rect" id="node9" title=" " alt="" coords="69,242,148,269"/>
+<area shape="rect" id="node10" title=" " alt="" coords="83,306,135,333"/>
 </map>

@@ -1,13 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.GateEntityPlugin" name="com.fs.starfarer.api.impl.campaign.GateEntityPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="925,212,1147,253"/>
+<area shape="rect" id="node1" title=" " alt="" coords="925,296,1147,337"/>
 <area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="557,29,779,71"/>
 <area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="280,5,475,47"/>
 <area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,71,475,112"/>
 <area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,231,112"/>
-<area shape="rect" id="node6" title=" " alt="" coords="642,95,694,122"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="591,147,745,188"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WarpingSpriteRendererUtil.html" title=" " alt="" coords="581,212,755,253"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="591,277,745,319"/>
-<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="575,405,761,447"/>
-<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1JitterUtil.html" title=" " alt="" coords="591,471,745,512"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="575,156,761,197"/>
+<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WarpingSpriteRendererUtil.html" title=" " alt="" coords="581,221,755,263"/>
+<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="591,287,745,328"/>
+<area shape="rect" id="node9" title=" " alt="" coords="642,353,694,379"/>
+<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1JitterUtil.html" title=" " alt="" coords="591,404,745,445"/>
+<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="591,469,745,511"/>
 </map>

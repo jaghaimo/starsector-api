@@ -1,28 +1,10 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent =
 [
-    [ "adjustRep", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a6617eb53fd0e81dc32a89f69d09ffec9", null ],
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a8dfc587d2b5d4c2952affae6245c9dc2", null ],
     [ "callEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#af98adbc49c6019e8cd1893489ae6de70", null ],
-    [ "generateDistressCallAmbush", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a38703d8dcdc3e88248a6be57544d3b1e", null ],
-    [ "generateDistressCallAmbushTrap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ab67bec31c4658a345b0a903a06260ffd", null ],
-    [ "generateDistressCallNormal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#afc5a204adca7f6ca4537bf0b392dfdc5", null ],
-    [ "generateDistressDerelictShip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#aedfcd7aeb4ee98eaf89b71108e30b7b9", null ],
-    [ "getEventCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a5656808efd57c49fa0e88b08a794dff8", null ],
-    [ "getEventTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ad7677e7210d9df06c79f98c87999227e", null ],
-    [ "getHighlightColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ab2d2258d5be8df5b5889758982d9bbf1", null ],
-    [ "getHighlights", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#afcc5464184a693977dd491d415019dcb", null ],
-    [ "getTokenReplacements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#acfdd646786dbef7f59ac6a73d42deb1c", null ],
+    [ "getHighlightColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a73ed2853aab0f9d07691c0a97c95c2c6", null ],
+    [ "getHighlights", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ae9fe82037ad801038d7ef0ec3286658c", null ],
+    [ "getTokenReplacements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ac936cb61796de330829a88977603cc7d", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a8597dbfe7d3e10d8d361e068dcd61afa", null ],
-    [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ae00d5056bac6251ed80a1957093fc10d", null ],
-    [ "maybeSpawnDerelictShip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a0f1d727ffa411baa50e3b15f68f87b2e", null ],
-    [ "maybeSpawnDistressCall", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a2dccf1bdc3a52cebb82ef36d30263313", null ],
-    [ "reportAboutToBeDespawnedByRouteManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a40086176a10c9ebbbcf96be3fe359b69", null ],
-    [ "shouldCancelRouteAfterDelayCheck", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a76d5c5b9a5768131674035a5f11b5b63", null ],
-    [ "shouldRepeat", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a30914288f920ece8d7d9cb5b025f76f3", null ],
     [ "showAllMessagesIfOngoing", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a839b947fbf4e0ff74e7c8236cd01909e", null ],
-    [ "spawnFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#aab1667f0ffe7d50c2b20189e8d961213", null ],
-    [ "startEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ae560d4ff816788abc62e291f33506d3f", null ],
-    [ "derelictShipInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a9dcfd0b6eeb6800458812f38f9618a1a", null ],
-    [ "distressCallInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a010eff0808b9b9fd64a01dfaf3202d95", null ],
-    [ "skipForDistressCalls", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#a27f4331180cf93634474b1cebd26dd30", null ]
+    [ "startEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html#ae560d4ff816788abc62e291f33506d3f", null ]
 ];

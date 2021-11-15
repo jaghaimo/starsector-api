@@ -1,6 +1,5 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomUIPanel =
 [
-    [ "ExampleCustomUIPanel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomUIPanel.html#a3fbf5eee992e9326b77480772152e113", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomUIPanel.html#afeb60b97ab417c4bd687606d175ef98a", null ],
     [ "positionChanged", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomUIPanel.html#a7f252b9e48e0c91e8c4a4ad3b346b2ed", null ],
     [ "processInput", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomUIPanel.html#a9effd75b4b71dd8b1dcec388eebb0cba", null ],

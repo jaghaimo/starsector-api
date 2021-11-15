@@ -1,8 +1,8 @@
 <map id="com.fs.starfarer.api.impl.campaign.GenericFieldItemSprite" name="com.fs.starfarer.api.impl.campaign.GenericFieldItemSprite">
-<area shape="rect" id="node1" title=" " alt="" coords="600,101,821,143"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,5,475,47"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,5,231,47"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="300,71,455,112"/>
-<area shape="rect" id="node5" title=" " alt="" coords="342,138,413,165"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="284,205,471,247"/>
+<area shape="rect" id="node1" title=" " alt="" coords="600,100,821,141"/>
+<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="284,5,471,47"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,71,475,112"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,231,112"/>
+<area shape="rect" id="node5" title=" " alt="" coords="342,137,413,163"/>
+<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="300,188,455,229"/>
 </map>
