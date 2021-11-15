@@ -1,0 +1,28 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin =
+[
+    [ "advance", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a4ef83ed44a51219ba8be9d1360cf5e24", null ],
+    [ "forceTargetReEval", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a944822b953c14f87d4c7201370c7c980", null ],
+    [ "getLargestEnemy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a62d91286e9d00cdacfe826aaf827b05e", null ],
+    [ "getPriorityTarget", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a15d3800ca25ffcdbd0c68941c723cdc3", null ],
+    [ "getPursuitDays", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a50f8b87a28e5fbbb12945e9779532df8", null ],
+    [ "getTarget", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a3a6e57cd55f6be946ef05698dbdaa899", null ],
+    [ "isBusy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a5955f7adbdb637d10fbe110af865068f", null ],
+    [ "isFleeing", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a9436300a4272cf7023dcdff2a7588dba", null ],
+    [ "isHostileTo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a96a7be7d0481b025dbc4e3b2584c24d2", null ],
+    [ "isHostileTo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#abb417c36bdf5bf954c5ae91974a72ff0", null ],
+    [ "isMaintainingContact", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#ae68bfb7cac45068acfea5585adc0ef37", null ],
+    [ "isStandingDown", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a6fe210f5efd6bbb22dcdfbb9ebe7ce63", null ],
+    [ "makeBoardingDecision", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a2a30e9dec353b9fb38cabab8bf646cbc", null ],
+    [ "notifyInteractedWith", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#ad00f3998ee6464365105275dd02278de", null ],
+    [ "performCrashMothballingPriorToEscape", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a2d9dca8c77139b861edb21e4c69d6613", null ],
+    [ "pickBoardingResponse", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a59b4b1a278b8aa64650affeb97933346", null ],
+    [ "pickBoardingTaskForce", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a073b474e91475d449fed6e0826d7943a", null ],
+    [ "pickEncounterOption", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a6f59af0838f9aad659e27a13af3fc2b9", null ],
+    [ "pickEncounterOption", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a36d4587dbf9a34bef49eae581cb51f1f", null ],
+    [ "pickPursuitOption", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a12ee5e4fef6d0ed81fe51afdba280b2e", null ],
+    [ "reportNearbyAction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a31b635ded43471c87e3cc853f7d92ed4", null ],
+    [ "setPriorityTarget", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#ac66fd1a78a57995298ce2fc9d093d5b1", null ],
+    [ "setTarget", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a629caec52808333b517afc8af9b455cf", null ],
+    [ "setTravelDestination", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a50c31e4308cce2d71661aa79a6229c3c", null ],
+    [ "wantsToJoin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a2369514387b0325a83c056f567a67573", null ]
+];

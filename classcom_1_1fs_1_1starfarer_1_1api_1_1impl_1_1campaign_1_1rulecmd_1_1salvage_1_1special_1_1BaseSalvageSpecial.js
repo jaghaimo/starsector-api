@@ -1,0 +1,27 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial =
+[
+    [ "addTempExtraSalvage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a765fd0aec2a00fdaad474eff7eef431a", null ],
+    [ "addText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a544240523ec9644e7f318558571e8b37", null ],
+    [ "endWithContinue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a686700a355f8e0f1283803c3c48d4a93", null ],
+    [ "getString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ab190371a39692364104ab196859d369e", null ],
+    [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a27b2795ca95e07b0407dea2266f74c49", null ],
+    [ "initNothing", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a5b4d2cee83738c3e6402bf7d76b29d05", null ],
+    [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a1b295c71e529d1bc1b36907329d0875f", null ],
+    [ "optionSelected", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a26913511fb9a1c78c35f00c251148d54", null ],
+    [ "setDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a1a337a2a4c502467d45f95b880cd412e", null ],
+    [ "setEndWithContinue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ab5ef87f6c8c03f6b1119eaf675b27b35", null ],
+    [ "setShouldAbortSalvageAndRemoveEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#af736acf75b4501028e32152f0d4ce21c", null ],
+    [ "setShowAgain", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a856848f323e25feaf93a56e8744afd08", null ],
+    [ "shouldAbortSalvageAndRemoveEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a49fef4d055a5a17987e9055adede5ff6", null ],
+    [ "shouldShowAgain", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a9393b90ae52f5cff59711883af0e6d50", null ],
+    [ "dialog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a52a1f4bf10534c4251533752d1632277", null ],
+    [ "done", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a4c2eef6c722da2bd3f2f75cbf8dbf360", null ],
+    [ "endWithContinue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a5e1d1f5367f65edd77c9deb9dd4b5a64", null ],
+    [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ac773b2f252bf75b95964ca6a11c321b7", null ],
+    [ "memoryMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a03c76a469fe7dfbd3e20efc4c31b723a", null ],
+    [ "options", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ab1473eb46dd540fb08f8ed344f8f431d", null ],
+    [ "playerFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#ab6e02fe6a5bfe2321c79f0e83203c9ff", null ],
+    [ "random", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a64ea9f5f42e454f9603a7ac6a5d6d612", null ],
+    [ "text", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#affb5500b3ddd423098ece1c609164b5f", null ],
+    [ "visual", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html#a141385261a0050a33dd490ae11032769", null ]
+];

@@ -1,0 +1,27 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility =
+[
+    [ "activateImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a9d63d3315e72f54a3d287113511b8b7d", null ],
+    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a5406b6bb4c0fe50fcca0b949ae08ad46", null ],
+    [ "applyEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#ac1a569cb37fe3dc73e371f3b759f2673", null ],
+    [ "cleanupImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a351f5cec7eff1cd2cb1f45d164f64b18", null ],
+    [ "createTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a1139d06aa5586652ca44225a555c898d", null ],
+    [ "deactivate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#ae9f306799059457470ce756052efbf2b", null ],
+    [ "deactivateImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#aae655588f132f25c912f2f130878c96b", null ],
+    [ "getActivationMessage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4d51aefeb93acc49b3eb79d55c46d140", null ],
+    [ "getActivationText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a520f93734aadc0faf475a74799f9e739", null ],
+    [ "getCooldownColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a75525e6dfb5c2c6dde531b04aacbfd09", null ],
+    [ "getCooldownFraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a0a19a71c69bcfc49b4474a9d7cf6323b", null ],
+    [ "getDeactivationMessage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#ac521e9c965d2d7215c3aa3e296b70c53", null ],
+    [ "getDeactivationText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a13937e32e9d5e96f764cf8ea55afbdbd", null ],
+    [ "getFactionList", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a97e5b013905f96047e9d358a4e389619", null ],
+    [ "getFactionsThatWouldBecomeHostile", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a25affe580497bcd6743d013e9553649a", null ],
+    [ "getProgressColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#adb95dd34b9027fbfd0fc2794d7d80afd", null ],
+    [ "getProgressFraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a95b736d1772c5e3a8fd7dcfbb76e6936", null ],
+    [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a8b8bc166a28f358ce3f990b22aa3c63f", null ],
+    [ "isCooldownRenderingAdditive", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a2eeed6992e241543363dced512ad091e", null ],
+    [ "isOnCooldown", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a8de11140e699fbb298d64827707983e1", null ],
+    [ "pressButton", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#aa9f4865b51b3dd7fafaa2e2586a48ae2", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#abca8886764e08477a2a185128faf7cab", null ],
+    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a3e78fb350363a1cb6415bcce38fb42cc", null ],
+    [ "showProgressIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4cfa6023b8355cabf30de6d5ca69f6f9", null ]
+];
