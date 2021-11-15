@@ -1,12 +1,12 @@
 <map id="com.fs.starfarer.api.impl.campaign.tutorial.TutorialRespawnDialogPluginImpl" name="com.fs.starfarer.api.impl.campaign.tutorial.TutorialRespawnDialogPluginImpl">
 <area shape="rect" id="node1" title=" " alt="" coords="833,169,1096,211"/>
 <area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html" title=" " alt="" coords="524,5,719,47"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="524,71,719,112"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,31,475,72"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,31,231,72"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="280,96,475,137"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html" title=" " alt="" coords="524,136,719,177"/>
-<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html" title=" " alt="" coords="524,201,719,243"/>
-<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html" title=" " alt="" coords="524,267,719,308"/>
-<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html" title=" " alt="" coords="524,332,719,373"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html" title=" " alt="" coords="524,71,719,112"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html" title=" " alt="" coords="524,136,719,177"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html" title=" " alt="" coords="524,201,719,243"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html" title=" " alt="" coords="524,267,719,308"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="524,332,719,373"/>
+<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,283,475,324"/>
+<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,283,231,324"/>
+<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="280,348,475,389"/>
 </map>

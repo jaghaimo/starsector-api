@@ -1,13 +1,10 @@
 <map id="com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition" name="com.fs.starfarer.api.impl.campaign.econ.ResourceDepositsCondition">
-<area shape="rect" id="node1" title=" " alt="" coords="1320,189,1572,231"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1212,120,1464,161"/>
 <area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseHazardCondition.html" title=" " alt="" coords="911,71,1163,112"/>
 <area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html" title=" " alt="" coords="609,71,861,112"/>
 <area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionPlugin.html" title=" " alt="" coords="280,5,505,47"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionAPI.html" title=" " alt="" coords="280,71,505,112"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="280,136,505,177"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,136,231,177"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="280,71,505,112"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,231,112"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionAPI.html" title=" " alt="" coords="280,136,505,177"/>
 <area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketImmigrationModifier.html" title=" " alt="" coords="924,136,1149,177"/>
-<area shape="rect" id="node9" title=" " alt="" coords="987,202,1086,229"/>
-<area shape="rect" id="node10" title=" " alt="" coords="961,257,1112,283"/>
-<area shape="rect" id="node11" title=" " alt="" coords="965,317,1109,343"/>
 </map>

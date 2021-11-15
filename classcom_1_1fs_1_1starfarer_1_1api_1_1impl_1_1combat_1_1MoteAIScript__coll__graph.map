@@ -1,14 +1,12 @@
 <map id="com.fs.starfarer.api.impl.combat.MoteAIScript" name="com.fs.starfarer.api.impl.combat.MoteAIScript">
-<area shape="rect" id="node1" title=" " alt="" coords="980,211,1188,253"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAIPlugin.html" title=" " alt="" coords="617,7,798,49"/>
-<area shape="rect" id="node3" title=" " alt="" coords="588,73,827,114"/>
-<area shape="rect" id="node4" title=" " alt="" coords="308,5,379,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="236,130,451,171"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="253,59,434,101"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="5,194,187,235"/>
-<area shape="rect" id="node12" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html" title=" " alt="" coords="253,253,434,294"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="630,318,785,359"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="630,383,785,425"/>
-<area shape="rect" id="node10" title=" " alt="" coords="600,449,815,490"/>
-<area shape="rect" id="node11" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html" title=" " alt="" coords="617,253,798,294"/>
+<area shape="rect" id="node1" title=" " alt="" coords="947,145,1155,187"/>
+<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAIPlugin.html" title=" " alt="" coords="583,5,765,47"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html" title=" " alt="" coords="583,123,765,164"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html" title=" " alt="" coords="236,123,417,164"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="5,123,187,164"/>
+<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="236,188,417,229"/>
+<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="597,253,751,295"/>
+<area shape="rect" id="node7" title=" " alt="" coords="555,188,793,229"/>
+<area shape="rect" id="node8" title=" " alt="" coords="291,254,362,281"/>
+<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="597,319,751,360"/>
 </map>

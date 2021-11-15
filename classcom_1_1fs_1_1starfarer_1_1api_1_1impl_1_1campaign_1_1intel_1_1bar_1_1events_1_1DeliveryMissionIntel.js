@@ -1,29 +1,5 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel =
 [
-    [ "DeliveryMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aa9baa93e59a28a1da1c5c5f0d2a28ae9", null ],
-    [ "addBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#ae70bc0ec31f9cb8c6c7085d84e724109", null ],
-    [ "advanceMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a455ca309af9ae2405ea5ac068d3701f6", null ],
-    [ "applyTradeValueImpact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a1f8def840f243fabecd247bfec7316e1", null ],
-    [ "canAbandonWithoutPenalty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a337cf4091244bb8751ae205c2892e0e4", null ],
-    [ "createAbandonedResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a03e8065b55692fab4b4414a63263d87a", null ],
-    [ "createIntelInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a716a83c38585db36f01fd8cfd4f932ee", null ],
-    [ "createSmallDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a4bdc7c481533122441739f7afb534795", null ],
-    [ "createTimeRanOutFailedResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a3a27b016b0e76009b08ffd0fc5f16eb6", null ],
-    [ "endMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aad22cee8de1acedf8a1fc041cd43914d", null ],
-    [ "getCommodity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a15a25a0e9dcf5c1cea23206179677cce", null ],
-    [ "getDestination", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a8a6a59948f72abb0613ad75577cb7ad3", null ],
-    [ "getEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a598022a45520808c6447ac1b047e69f4", null ],
-    [ "getFactionForUIColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a031bab69b2ae8638cda47487bb020ff4", null ],
     [ "getIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a92aa8e711cf38b3af65ec05356bb6d30", null ],
-    [ "getIntelTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a9a9b4a8f96565064472c7d9e22a2d08e", null ],
-    [ "getMapLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a0d53353413bc24d3a3a4c682f8c5e649", null ],
-    [ "getMissionTypeNoun", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#ad23f353fc62663d64d4e87295427c05d", null ],
-    [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a62145396816aa4c11064c6faabef76fb", null ],
-    [ "getSmallDescriptionTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a0b68f7f257d80eee4ef1c149c2de93bc", null ],
-    [ "getSortString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a63aaf38a92ee75c848e0cdb6824fbbd5", null ],
-    [ "hasEnough", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a7ed5a634456cdc8396d429b57cf29046", null ],
-    [ "missionAccepted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aac1bbac597198846ae977cde6ef1e1ca", null ],
-    [ "performDelivery", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aff53cd70438c58db811cf2022132164c", null ],
-    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aaf58b23912a84e967643bc42e7d503a7", null ],
-    [ "event", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e", null ]
+    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aaf58b23912a84e967643bc42e7d503a7", null ]
 ];

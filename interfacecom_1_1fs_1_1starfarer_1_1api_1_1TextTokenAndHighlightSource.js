@@ -1,6 +1,5 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1TextTokenAndHighlightSource =
 [
-    [ "getHighlightColors", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1TextTokenAndHighlightSource.html#a5f05e1247733b9a14214a74bee7f0ab8", null ],
-    [ "getHighlights", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1TextTokenAndHighlightSource.html#a294991f86f946c5267e8cd04e5f28294", null ],
-    [ "getTokenReplacements", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1TextTokenAndHighlightSource.html#ab8a291f60959f2356edb3f0093eb6b4c", null ]
+    [ "getHighlights", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1TextTokenAndHighlightSource.html#aee024924de60df421e8e65292baa4a67", null ],
+    [ "getTokenReplacements", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1TextTokenAndHighlightSource.html#a4a5aabdf441d6cbba16f32879cc2ca56", null ]
 ];

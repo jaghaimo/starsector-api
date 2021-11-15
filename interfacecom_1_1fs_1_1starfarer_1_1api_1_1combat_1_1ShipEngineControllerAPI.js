@@ -1,28 +1,5 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI =
 [
     [ "ShipEngineAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI_1_1ShipEngineAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI_1_1ShipEngineAPI" ],
-    [ "computeDisabledFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a3766e502c5fce93bcf4598eebe6cc37b", null ],
-    [ "computeEffectiveStats", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a08ad55206186363e394b5c747a1e4df6", null ],
-    [ "extendFlame", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a9a63f46f98a26c75eb4091ae29521a19", null ],
-    [ "fadeToOtherColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a755b23b83a4210755413fa96cc26de3f", null ],
-    [ "forceFlameout", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a3fd2ac45c0e2e7a33172da2fec9da60f", null ],
-    [ "forceFlameout", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a87cfddaba460ab80227deb5db8efc9ce", null ],
-    [ "forceShowAccelerating", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#aaaa9a7686dfaa35a3598d1ae27e631f9", null ],
-    [ "getExtendGlowFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#ab048ff4b08f26b9d93065dfacb956a5f", null ],
-    [ "getExtendLengthFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#ab8a142d2f594232c1a5519a02fbc3771", null ],
-    [ "getExtendWidthFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a590ddcfe5c2c4736b6748c20ea03b4ba", null ],
-    [ "getFlameoutFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#ab3f6c82751df985ffcfb43053a1a3f50", null ],
-    [ "getMaxSpeedWithoutBoost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a0f932d6b15929f8a6d8e36122a8c685d", null ],
-    [ "getShipEngines", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#abc393b136f575b45eb73ed4efdbcbe04", null ],
-    [ "isAccelerating", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a00f87df0c0f48c4f72460a297222ecc5", null ],
-    [ "isAcceleratingBackwards", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a43f21c5f9657d123986a4bc4a9c57791", null ],
-    [ "isDecelerating", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#ade6bbd748c1c6e513653611f7f8dbc12", null ],
-    [ "isDisabled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#aedffd3867170075c43a7aec38d9e1ead", null ],
-    [ "isFlamedOut", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#aae756eeee4ebcf1ddabf07e672044986", null ],
-    [ "isFlamingOut", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#acec89a9242d726f02317a0f8142ff88d", null ],
-    [ "isStrafingLeft", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#aa6e1a5d417717f1fe82ce9fdd5a0fac7", null ],
-    [ "isStrafingRight", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#ad49ed50b792133ead750cb54dfdb9719", null ],
-    [ "isTurningLeft", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a792da11c6b6aff1a6798351c8dddbff3", null ],
-    [ "isTurningRight", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#adce6129cd5dbf591e2e7bb4441bfd518", null ],
     [ "setFlameLevel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a58798a46b84568e8b32b0798761be051", null ]
 ];

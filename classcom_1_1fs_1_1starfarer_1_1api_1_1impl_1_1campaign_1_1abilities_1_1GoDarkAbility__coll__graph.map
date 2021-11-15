@@ -1,10 +1,10 @@
 <map id="com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility" name="com.fs.starfarer.api.impl.campaign.abilities.GoDarkAbility">
-<area shape="rect" id="node1" title=" " alt="" coords="1196,104,1464,145"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html" title=" " alt="" coords="879,104,1147,145"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html" title=" " alt="" coords="561,104,829,145"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1196,89,1464,131"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseToggleAbility.html" title=" " alt="" coords="879,89,1147,131"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html" title=" " alt="" coords="561,89,829,131"/>
 <area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html" title=" " alt="" coords="280,5,479,47"/>
 <area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="296,71,463,112"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html" title=" " alt="" coords="290,136,469,177"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="282,201,477,243"/>
-<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,201,231,243"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="282,136,477,177"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,136,231,177"/>
+<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html" title=" " alt="" coords="290,201,469,243"/>
 </map>
