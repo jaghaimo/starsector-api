@@ -11,12 +11,12 @@ import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.util.Misc;
@@ -138,7 +138,7 @@ public class RouteManager implements FleetEventListener {
 		}
 		
 		public boolean isInSystem() {
-			if (to == null && !from.getContainingLocation().isHyperspace()) return true;
+			if (to == null && from != null && from.getContainingLocation() != null && !from.getContainingLocation().isHyperspace()) return true;
 			
 			if (!from.getContainingLocation().isHyperspace() && 
 					from.getContainingLocation() == to.getContainingLocation()) {

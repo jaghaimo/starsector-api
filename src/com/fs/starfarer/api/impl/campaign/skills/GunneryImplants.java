@@ -7,12 +7,12 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class GunneryImplants {
 	
-	public static float RECOIL_BONUS = 50f;
+	public static float RECOIL_BONUS = 25f;
 	public static float TARGET_LEADING_BONUS = 100f;
 	public static float RANGE_BONUS = 15f;
 	
-	public static float EW_FRIGATES = 6f;
-	public static float EW_DESTROYERS = 3f;
+	public static float EW_FRIGATES = 4f;
+	public static float EW_DESTROYERS = 2f;
 	public static float EW_OTHER = 1f;
 	
 	public static class Level1A implements ShipSkillEffect {

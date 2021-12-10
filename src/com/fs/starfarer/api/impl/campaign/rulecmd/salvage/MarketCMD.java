@@ -102,10 +102,10 @@ public class MarketCMD extends BaseCommandPlugin {
 	public static enum RaidDangerLevel {
 		NONE("None", "None", Misc.getPositiveHighlightColor(), 0f, 60f, 1),
 		MINIMAL("Minimal", "Minimal", Misc.getPositiveHighlightColor(), 0.02f, 50f, 1),
-		LOW("Low", "Light", Misc.getPositiveHighlightColor(), 0.05f, 40f, 2),
-		MEDIUM("Medium", "Moderate", Misc.getHighlightColor(), 0.1f, 30f, 3),
-		HIGH("High", "Heavy", Misc.getNegativeHighlightColor(), 0.2f, 20f, 5),
-		EXTREME("Extreme", "Extreme", Misc.getNegativeHighlightColor(), 0.4f, 10f, 7);
+		LOW("Low", "Light", Misc.getPositiveHighlightColor(), 0.04f, 40f, 2),
+		MEDIUM("Medium", "Moderate", Misc.getHighlightColor(), 0.08f, 30f, 3),
+		HIGH("High", "Heavy", Misc.getNegativeHighlightColor(), 0.16f, 20f, 5),
+		EXTREME("Extreme", "Extreme", Misc.getNegativeHighlightColor(), 0.32f, 10f, 7);
 		
 		private static RaidDangerLevel [] vals = values();
 		
@@ -242,6 +242,7 @@ public class MarketCMD extends BaseCommandPlugin {
 	protected TempData temp = new TempData();
 	
 	public MarketCMD() {
+		//DebugFlags.MARKET_HOSTILITIES_DEBUG = false;
 	}
 	
 	protected void clearTemp() {
@@ -870,6 +871,11 @@ public class MarketCMD extends BaseCommandPlugin {
 		float width = 350;
 		float opad = 10f;
 		float small = 5f;
+		
+//		if (true) {
+//			Global.getSector().getCampaignUI().showCoreUITab(CoreUITabId.CARGO);
+//			return;
+//		}
 		
 		Color h = Misc.getHighlightColor();
 		
@@ -1511,6 +1517,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		} else {
 			if (entity != null) {
 				long seed = Misc.getSalvageSeed(entity);
+				seed /= 321L;
 				seed *= (Global.getSector().getClock().getMonth() + 10);
 				random = new Random(seed);
 			} else {
@@ -1550,11 +1557,21 @@ public class MarketCMD extends BaseCommandPlugin {
 		float reMult = 1f;
 		if (temp.raidMult > MIN_RE_TO_REDUCE_MARINE_LOSSES) {
 			float extra = (temp.raidMult - MIN_RE_TO_REDUCE_MARINE_LOSSES) / (1f - MIN_RE_TO_REDUCE_MARINE_LOSSES);
+//			extra = (float) Math.sqrt(extra);
+//			extra *= 0.5f;
 			extra = MAX_MARINE_LOSS_REDUCTION_MULT + (1f - MAX_MARINE_LOSS_REDUCTION_MULT) * (1f - extra);
 			reMult = extra;
 		} else if (temp.raidMult < RE_PER_MARINE_TOKEN) {
 			float extra = 1f + (RE_PER_MARINE_TOKEN - temp.raidMult) / RE_PER_MARINE_TOKEN;
 			reMult = extra;
+		}
+		
+		if (market != null && reMult < 1f) {
+			float minMarinesForAssignedTokens = getMarinesFor(market, (int) Math.round(assignedTokens));
+			float actualMarines = Global.getSector().getPlayerFleet().getCargo().getMarines();
+			if (actualMarines > minMarinesForAssignedTokens && actualMarines > 0) {
+				reMult *= 0.5f + (0.5f * minMarinesForAssignedTokens / actualMarines);
+			}
 		}
 
 		float reservesMult = 1f;
@@ -1661,7 +1678,16 @@ public class MarketCMD extends BaseCommandPlugin {
 			if (Misc.isPlayerFactionSetUp()) {
 				reason = playerFaction.getDisplayName() + " raid";
 			}
-			stabilityPenalty = applyRaidStabiltyPenalty(market, reason, temp.raidMult);
+			float raidMultForStabilityPenalty = temp.raidMult;
+			if (temp.objectives != null) {
+				float assignedTokens = 0f;
+				for (GroundRaidObjectivePlugin curr : temp.objectives) {
+					assignedTokens += curr.getMarinesAssigned();
+				}
+				raidMultForStabilityPenalty = assignedTokens * 0.1f; 
+			}
+			
+			stabilityPenalty = applyRaidStabiltyPenalty(market, reason, raidMultForStabilityPenalty);
 			Misc.setFlagWithReason(market.getMemoryWithoutUpdate(), MemFlags.RECENTLY_RAIDED, 
 								   Factions.PLAYER, true, 30f);
 			Misc.setRaidedTimestamp(market);
@@ -2102,9 +2128,9 @@ public class MarketCMD extends BaseCommandPlugin {
 	
 	public static int applyRaidStabiltyPenalty(MarketAPI target, String desc, float re) {
 		int penalty = 0;
-		if (re >= 0.75f) penalty = 3;
-		else if (re >= 0.5f) penalty = 2;
-		else if (re >= 0.25f) penalty = 1;
+		if (re >= 0.79f) penalty = 3;
+		else if (re >= 0.59f) penalty = 2;
+		else if (re >= 0.29f) penalty = 1;
 		if (penalty > 0) {
 			RecentUnrest.get(target).add(penalty, desc);
 		}
@@ -3006,6 +3032,9 @@ public class MarketCMD extends BaseCommandPlugin {
 		float contractDur = Global.getSettings().getFloat("officerMercContractDur");
 		
 		for (OfficerDataAPI od : mercs) {
+			if (debt && od.getPerson().getMemoryWithoutUpdate().contains(key)) {
+				continue;
+			}
 			float elapsed = Misc.getMercDaysSinceHired(od.getPerson());
 			
 			if (elapsed > contractDur || debt) {
@@ -3028,6 +3057,7 @@ public class MarketCMD extends BaseCommandPlugin {
 			
 			String key = "$mercs_leaveTimeout";
 			Global.getSector().getMemoryWithoutUpdate().set(key, true, 5f + (float) Math.random() * 5f);
+			merc.getMemoryWithoutUpdate().set(key, true, 35f + (float) Math.random() * 5f);
 		}
 		
 	}

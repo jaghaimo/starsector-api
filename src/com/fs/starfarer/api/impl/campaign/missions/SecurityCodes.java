@@ -107,6 +107,7 @@ public class SecurityCodes extends HubMissionWithBarEvent implements ColonyPlaye
 			triggerComplicationEnd(true);
 		}
 		
+		//addTempIntel();
 		return true;
 	}
 	

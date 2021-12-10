@@ -6,9 +6,10 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class Helmsmanship {
 	
-	public static final float MANEUVERABILITY_BONUS = 50;
-	public static final float DAMAGE_TO_MODULES_REDUCTION = 50;
+	public static float MANEUVERABILITY_BONUS = 50;
 	public static float SPEED_BONUS = 10f;
+	
+	public static float ELITE_SPEED_BONUS_FLAT = 5f;
 	
 	public static float ZERO_FLUX_LEVEL = 1f;
 	
@@ -107,7 +108,7 @@ public class Helmsmanship {
 		}
 		
 		public String getEffectDescription(float level) {
-			return "The 0-flux speed boost is activated at any flux level, as long as the ship is not generating flux";
+			return "The 0-flux speed boost is activated at any flux level, as long as the ship is not generating flux or is venting / overloaded";
 		}
 		
 		public String getEffectPerLevelDescription() {
@@ -119,4 +120,25 @@ public class Helmsmanship {
 		}
 	}
 	
+	public static class Level4 implements ShipSkillEffect {
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			stats.getMaxSpeed().modifyFlat(id, ELITE_SPEED_BONUS_FLAT);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getMaxSpeed().unmodify(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			return "+" + (int)(ELITE_SPEED_BONUS_FLAT) + " su/second to top speed";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
 }

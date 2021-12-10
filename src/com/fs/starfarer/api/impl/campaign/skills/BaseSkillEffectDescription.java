@@ -20,6 +20,8 @@ import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
+import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
@@ -36,6 +38,7 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 	public static float OP_THRESHOLD = 1000;
 	public static float OP_LOW_THRESHOLD = 500;
 	public static float OP_ALL_LOW_THRESHOLD = 500;
+	public static float OP_ALL_THRESHOLD = 1000;
 	public static float PHASE_OP_THRESHOLD = 150;
 	public static float MILITARIZED_OP_THRESHOLD = 50;
 	
@@ -43,20 +46,24 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 	
 	public static boolean USE_RECOVERY_COST = true;
 	
+	//public static String RECOVERY_COST = "recovery cost";
+	public static String RECOVERY_COST = "deployment point cost";
+	
 	static {
 		if (USE_RECOVERY_COST) {
 			// working off 60% of the default battle size of 300 for these, which is 180
 			OP_THRESHOLD = 240;
 			OP_LOW_THRESHOLD = 120;
-			OP_ALL_LOW_THRESHOLD = 60;
+			OP_ALL_LOW_THRESHOLD = 120;
+			OP_ALL_THRESHOLD = 240;
 //			OP_THRESHOLD = 150;
 //			OP_LOW_THRESHOLD = 75;
 //			OP_ALL_LOW_THRESHOLD = 50;
 			
 			
-			PHASE_OP_THRESHOLD = 30;
+			PHASE_OP_THRESHOLD = 40;
 			MILITARIZED_OP_THRESHOLD = 5;
-			AUTOMATED_POINTS_THRESHOLD = 30;
+			AUTOMATED_POINTS_THRESHOLD = 120;
 		}
 	}
 	
@@ -64,6 +71,7 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 	public static enum ThresholdBonusType {
 		OP,
 		OP_LOW,
+		OP_ALL,
 		OP_ALL_LOW,
 		MILITARIZED_OP,
 		PHASE_OP,
@@ -86,6 +94,21 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		alpha = 255;
 		float level = stats.getSkillLevel(skill.getId());
 		if (level <= 0) {
+			tc = Misc.getGrayColor();
+			hc = dhc;
+			alpha = 155;
+		}
+		dtc = Misc.getGrayColor();
+	}
+	
+	public void initElite(MutableCharacterStatsAPI stats, SkillSpecAPI skill) {
+		indent = BaseIntelPlugin.BULLET;
+		tc = Misc.getTextColor();
+		hc = Misc.getHighlightColor();
+		dhc = Misc.setAlpha(hc, 155);
+		alpha = 255;
+		float level = stats.getSkillLevel(skill.getId());
+		if (level <= 1) {
 			tc = Misc.getGrayColor();
 			hc = dhc;
 			alpha = 155;
@@ -117,12 +140,12 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		if (USE_RECOVERY_COST) {
 			if (isInCampaign()) {
 				float op = getTotalCombatOP(data, cStats);
-				info.addPara(indent + "Maximum at %s or less total combat ship recovery cost, your fleet's total is %s",
+				info.addPara(indent + "Maximum at %s or less total combat ship " + RECOVERY_COST + ", your fleet's total is %s",
 						0f, tc, hc, 
 						"" + (int) threshold,
 						"" + (int)Math.round(op));
 			} else {
-				info.addPara(indent + "Maximum at %s or less total combat ship recovery cost for fleet",
+				info.addPara(indent + "Maximum at %s or less total combat ship " + RECOVERY_COST + " for fleet",
 						0f, tc, hc, 
 						"" + (int) threshold);
 			}
@@ -147,12 +170,12 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		if (USE_RECOVERY_COST) {
 			if (isInCampaign()) {
 				float op = getTotalOP(data, cStats);
-				info.addPara(indent + "Maximum at %s or less total deployment recovery cost, your fleet's total is %s",
+				info.addPara(indent + "Maximum at %s or less total " + RECOVERY_COST + ", your fleet's total is %s",
 						0f, tc, hc, 
 						"" + (int) threshold,
 						"" + (int)Math.round(op));
 			} else {
-				info.addPara(indent + "Maximum at %s or less total deployment recovery cost for fleet",
+				info.addPara(indent + "Maximum at %s or less total " + RECOVERY_COST + " for fleet",
 						0f, tc, hc, 
 						"" + (int) threshold);
 			}
@@ -179,12 +202,12 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		if (USE_RECOVERY_COST) {
 			if (isInCampaign()) {
 				float op = getPhaseOP(data, cStats);
-				info.addPara(indent + "Maximum at %s or less total combat phase ship recovery cost, your fleet's total is %s",
+				info.addPara(indent + "Maximum at %s or less total combat phase ship " + RECOVERY_COST + ", your fleet's total is %s",
 						0f, tc, hc, 
 						"" + (int) PHASE_OP_THRESHOLD,
 						"" + (int)Math.round(op));
 			} else {
-				info.addPara(indent + "Maximum at %s or less total combat phase ship recovery cost for fleet",
+				info.addPara(indent + "Maximum at %s or less total combat phase ship " + RECOVERY_COST + " for fleet",
 						0f, tc, hc, 
 						"" + (int) PHASE_OP_THRESHOLD);
 			}
@@ -240,12 +263,12 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		if (USE_RECOVERY_COST) {
 			if (isInCampaign()) {
 				float op = getMilitarizedOP(data, cStats);
-				info.addPara(indent + "Maximum at %s or less total deployment recovery cost for ships with Militarized Subsystems, your fleet's total is %s",
+				info.addPara(indent + "Maximum at %s or less total " + RECOVERY_COST + " for ships with Militarized Subsystems, your fleet's total is %s",
 						0f, tc, hc, 
 						"" + (int) MILITARIZED_OP_THRESHOLD,
 						"" + (int)Math.round(op));
 			} else {
-				info.addPara(indent + "Maximum at %s or less total deployment recovery cost for ships with Militarized Subsystems for fleet",
+				info.addPara(indent + "Maximum at %s or less total " + RECOVERY_COST + " for ships with Militarized Subsystems for fleet",
 						0f, tc, hc, 
 						"" + (int) MILITARIZED_OP_THRESHOLD);
 			}
@@ -296,6 +319,9 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		} else if (type == ThresholdBonusType.OP_ALL_LOW) {
 			currValue = getTotalOP(data, cStats);
 			threshold = OP_ALL_LOW_THRESHOLD;
+		} else if (type == ThresholdBonusType.OP_ALL) {
+			currValue = getTotalOP(data, cStats);
+			threshold = OP_ALL_THRESHOLD;
 		} else if (type == ThresholdBonusType.MILITARIZED_OP) {
 			currValue = getMilitarizedOP(data, cStats);
 			threshold = MILITARIZED_OP_THRESHOLD;
@@ -588,8 +614,10 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		if (member == null) return false;
 		MutableShipStatsAPI stats = member.getStats();
 		return stats != null && stats.getVariant() != null && 
-				stats.getVariant().hasHullMod(HullMods.CIVGRADE) && 
-				!stats.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS);// &&
+				((stats.getVariant().hasHullMod(HullMods.CIVGRADE) && 
+				!stats.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) ||
+				(!stats.getVariant().hasHullMod(HullMods.CIVGRADE) &&
+						stats.getVariant().getHullSpec().getHints().contains(ShipTypeHints.CIVILIAN)));// &&
 				//!stats.getVariant().getHullSpec().getHints().contains(ShipTypeHints.CARRIER);
 	}
 	
@@ -720,7 +748,22 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		float bays = 0;
 		for (FleetMemberAPI curr : data.getMembersListCopy()) {
 			if (curr.isMothballed()) continue;
-			bays += curr.getNumFlightDecks();
+			bays += getNumBaysIncludingModules(curr);
+			//bays += curr.getNumFlightDecks();
+		}
+		return bays;
+	}
+	
+	public static float getNumBaysIncludingModules(FleetMemberAPI member) {
+		float bays = 0f;
+		bays += member.getNumFlightDecks();
+		if (member.getVariant().getModuleSlots() != null) {
+			for (String slotId : member.getVariant().getModuleSlots()) {
+				if (slotId == null) continue;
+				ShipVariantAPI variant = member.getVariant().getModuleVariant(slotId);
+				if (variant == null) continue;
+				bays += variant.getHullSpec().getFighterBays();
+			}
 		}
 		return bays;
 	}
@@ -729,7 +772,8 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		List<FleetMemberPointContrib> result = new ArrayList<BaseSkillEffectDescription.FleetMemberPointContrib>();
 		for (FleetMemberAPI curr : data.getMembersListCopy()) {
 			if (curr.isMothballed()) continue;
-			int pts = curr.getNumFlightDecks();
+			//int pts = curr.getNumFlightDecks();
+			int pts = (int)Math.round(getNumBaysIncludingModules(curr));
 			if (pts <= 0) continue;
 			result.add(new FleetMemberPointContrib(curr, pts));
 		}
@@ -741,10 +785,13 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		for (FleetMemberAPI curr : data.getMembersListCopy()) {
 			if (curr.isMothballed()) continue;
 			if (!Misc.isAutomated(curr)) continue;
-			if (curr.getCaptain().isAICore()) {
+			float mult = 1f;
+			//if (curr.getCaptain().isAICore()) {
 				points += curr.getCaptain().getMemoryWithoutUpdate().getFloat(AICoreOfficerPlugin.AUTOMATED_POINTS_VALUE);
-			}
-			points += getPoints(curr, stats);
+				mult = curr.getCaptain().getMemoryWithoutUpdate().getFloat(AICoreOfficerPlugin.AUTOMATED_POINTS_MULT);
+				if (mult == 0) mult = 1;
+			//}
+			points += Math.round(getPoints(curr, stats) * mult);
 		}
 		return Math.round(points);
 	}
@@ -754,12 +801,14 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		for (FleetMemberAPI curr : data.getMembersListCopy()) {
 			if (curr.isMothballed()) continue;
 			if (!Misc.isAutomated(curr)) continue;
-			
+			float mult = 1f;
 			int pts = (int) Math.round(getPoints(curr, stats));
-			if (curr.getCaptain().isAICore()) {
+			//if (curr.getCaptain().isAICore()) {
 				pts += (int) Math.round(curr.getCaptain().getMemoryWithoutUpdate().getFloat(AICoreOfficerPlugin.AUTOMATED_POINTS_VALUE));
-			}
-			result.add(new FleetMemberPointContrib(curr, pts));
+				mult = curr.getCaptain().getMemoryWithoutUpdate().getFloat(AICoreOfficerPlugin.AUTOMATED_POINTS_MULT);
+				if (mult == 0) mult = 1;
+			//}
+			result.add(new FleetMemberPointContrib(curr, Math.round(pts * mult)));
 		}
 		return result;
 	}
@@ -781,7 +830,17 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		FleetMemberAPI member = stats.getFleetMember();
 		if (member == null) return null;
 		PersonAPI commander = member.getFleetCommanderForStats();
-		if (commander == null) commander = member.getFleetCommander();
+		if (commander == null) {
+			boolean orig = false;
+			if (member.getFleetData() != null) {
+				orig = member.getFleetData().isForceNoSync();
+				member.getFleetData().setForceNoSync(true);
+			}
+			commander = member.getFleetCommander();
+			if (member.getFleetData() != null) {
+				member.getFleetData().setForceNoSync(orig);
+			}
+		}
 		if (commander != null) {
 			return commander.getStats();
 		}

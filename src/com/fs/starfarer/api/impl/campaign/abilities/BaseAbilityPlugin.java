@@ -311,4 +311,9 @@ public abstract class BaseAbilityPlugin implements AbilityPlugin, EveryFrameScri
 	public void render(CampaignEngineLayers layer, ViewportAPI viewport) {
 	}
 
+	public float getLevel() {
+		return 0;
+	}
+
+	
 }

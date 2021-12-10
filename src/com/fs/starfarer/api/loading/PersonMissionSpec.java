@@ -13,6 +13,18 @@ import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMission;
 import com.fs.starfarer.api.util.Misc;
 
+/**
+ * Note: if person id, tagsAll, tagsAny, and tagsNotAny are all blank, 
+ * the mission will not be offered by any contact without specific 
+ * scripting to make it so (via BeginMission, etc). 
+ * 
+ * Otherwise, the mission may be offered by any contact that 
+ * meets the conditions specified by these columns.
+ * 
+ * @author Alex
+ *
+ * Copyright 2021 Fractal Softworks, LLC
+ */
 public class PersonMissionSpec {
 	
 	//mission id	person id	tagsAny	tagsAll	tagsNotAny

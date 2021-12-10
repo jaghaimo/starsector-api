@@ -70,6 +70,11 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 		baseBounty = Global.getSettings().getFloat("factionCommissionBounty");
 	}
 	
+	protected Object readResolve() {
+		baseBounty = Global.getSettings().getFloat("factionCommissionBounty");
+		return this;
+	}
+	
 	@Override
 	public void advanceMission(float amount) {
 		float days = Global.getSector().getClock().convertToDays(amount);

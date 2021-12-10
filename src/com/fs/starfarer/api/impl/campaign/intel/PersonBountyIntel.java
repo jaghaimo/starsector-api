@@ -14,6 +14,7 @@ import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
@@ -558,6 +559,9 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 	
 	
 	private void spawnFleet() {
+//		level = 10;
+//		bountyType = BountyType.PIRATE;
+		
 		String fleetFactionId = Factions.PIRATES;
 		if (bountyType == BountyType.DESERTER) {
 			fleetFactionId = faction.getId();
@@ -585,6 +589,10 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		if (level >= 10) {
 			fp += 50f;
 		}
+		
+		FactionAPI faction = Global.getSector().getFaction(fleetFactionId);
+		float maxFp = faction.getApproximateMaxFPPerFleet(ShipPickMode.PRIORITY_THEN_ALL) * 1.1f;
+		if (fp > maxFp) fp = maxFp;
 		
 		FleetParamsV3 params = new FleetParamsV3(
 				null, 
@@ -983,8 +991,18 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		return entity;
 	}
 
+	public PersonAPI getPerson() {
+		return person;
+	}
+
+	public CampaignFleetAPI getFleet() {
+		return fleet;
+	}
 	
-	
+//	@Override
+//	public boolean hasLargeDescription() {
+//		return true;
+//	}
 }
 
 

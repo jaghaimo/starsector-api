@@ -28,6 +28,7 @@ public class HyperStormBoost implements EveryFrameScript {
 		
 		DURATION_SECONDS = 1.25f;
 		STORM_SPEED_BURST = Global.getSettings().getSpeedPerBurnLevel() * 75f;
+		
 //		DURATION_SECONDS = 2f;
 //		STORM_SPEED_BURST = Global.getSettings().getSpeedPerBurnLevel() * 50f;
 		
@@ -85,12 +86,12 @@ public class HyperStormBoost implements EveryFrameScript {
 		if (v.length() < 10) angleHeading = fleet.getFacing();
 		
 		boost = Misc.getUnitVectorAtDegreeAngle(angleHeading);
-		boost.negate();
+		//boost.negate();
 		if (boost.length() >= 1) {
 			float durIn = 1f;
 			float durOut = 3f;
 			float intensity = 1f;
-			float sizeNormal = 5f + 30f * intensity;
+			float sizeNormal = 5f + 20f * intensity;
 			String modId = "boost " + cell.i + cell.j * 100;
 			Color glowColor = new Color(100, 100, 255, 75);
 			for (FleetMemberViewAPI view : fleet.getViews()) {

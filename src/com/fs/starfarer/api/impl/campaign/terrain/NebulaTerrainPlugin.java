@@ -211,6 +211,7 @@ public class NebulaTerrainPlugin extends BaseTiledTerrain implements NebulaTextu
 		
 		if (layer == CampaignEngineLayers.TERRAIN_8) {
 			alphaMult *= 0.20f;
+			//alphaMult *= 0.50f;
 		}
 		
 		Color color = getRenderColor();

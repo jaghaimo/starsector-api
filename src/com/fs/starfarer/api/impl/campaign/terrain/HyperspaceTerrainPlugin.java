@@ -46,12 +46,12 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 	
 	//public static final float STORM_CR_LOSS_MULT = 0.25f;
 	
-	public static final float FUEL_USE_FRACTION = 1f;
+	//public static float FUEL_USE_FRACTION = 1f;
 	//public static final float SPEED_MULT = 1f;
 	//public static final float STORM_SPEED_MULT = 0.2f;
-	public static final float STORM_SPEED_MULT = 1f;
-	public static final float STORM_SENSOR_RANGE_MULT = 1f;
-	public static final float STORM_VISIBILITY_FLAT = 0f;
+	public static float STORM_SPEED_MULT = 1f;
+	public static float STORM_SENSOR_RANGE_MULT = 1f;
+	public static float STORM_VISIBILITY_FLAT = 0f;
 	
 	
 	public static float TILE_SIZE = 200;
@@ -959,6 +959,10 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 	
 	@Override
 	public boolean containsEntity(SectorEntityToken other) {
+		//if (!isPreventedFromAffecting(other)) return false;
+//		if (isPreventedFromAffecting(other)) {
+//			return !isInClouds(other);
+//		}
 		return true;
 	}
 
@@ -969,6 +973,7 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 	
 	public boolean isInClouds(SectorEntityToken other) {
 		if (other.getContainingLocation() != this.entity.getContainingLocation()) return false;
+		if (isPreventedFromAffecting(other)) return false;
 		return super.containsPoint(other.getLocation(), other.getRadius());
 	}
 	
@@ -1035,6 +1040,45 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 			}
 		}
 		return found;
+	}
+	public CellStateTracker getExactCellAt(Vector2f location) {
+		int [] tile = getTile(location);
+		CellStateTracker cell = null; 
+		if (tile != null) {
+			cell = activeCells[tile[0]][tile[1]];
+		}
+		return cell;
+	}
+	
+	public int [] getTile(Vector2f test) {
+		float x = this.entity.getLocation().x;
+		float y = this.entity.getLocation().y;
+		float size = getTileSize();
+		float containsSize = getTileContainsSize();
+		
+		float w = tiles.length * size;
+		float h = tiles[0].length * size;
+
+		x -= w/2f;
+		y -= h/2f;
+		
+		float extra = (containsSize - size) / 2f;
+		
+		if (test.x + extra < x) return null;
+		if (test.y + extra < y) return null;
+		if (test.x > x + w + extra) return null;
+		if (test.y > y + h + extra) return null;
+		
+		int xIndex = (int) ((test.x - x) / size);
+		int yIndex = (int) ((test.y - y) / size);
+		
+		if (xIndex < 0) xIndex = 0;
+		if (yIndex < 0) yIndex = 0;
+		
+		if (xIndex >= tiles.length) xIndex = tiles.length - 1;
+		if (yIndex >= tiles[0].length) yIndex = tiles[0].length - 1;
+		
+		return new int[] {xIndex, yIndex};
 	}
 	
 	public LocationState getStateAt(SectorEntityToken entity, float extraRadius) {
@@ -1463,6 +1507,110 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 
 	public static void main(String[] args) {
 		System.out.println(1.5f - (int) 1.5f);
+	}
+	
+	
+	public void turnOffStorms(Vector2f loc, float radius) {
+		setTileState(loc, radius, CellState.OFF, -1f, -1f);
+	}
+	
+	public void setTileState(Vector2f loc, float radius, CellState state, float waitDur, float signalDur) {
+		setTileState(loc, radius, state, waitDur, signalDur, signalDur);
+	}
+	public void setTileState(Vector2f loc, float radius, CellState state, float waitDur, float minSignalDur, float maxSignalDur) {
+		float x = this.entity.getLocation().x;
+		float y = this.entity.getLocation().y;
+		float size = getTileSize();
+		float containsSize = getTileContainsSize();
+		
+		float w = tiles.length * size;
+		float h = tiles[0].length * size;
+
+		x -= w/2f;
+		y -= h/2f;
+		
+		float extra = (containsSize - size) / 2f;
+		
+		if (loc.x + radius + extra < x) return;
+		if (loc.y + radius + extra < y) return;
+		if (loc.x > x + w + radius + extra) return;
+		if (loc.y > y + h + radius + extra) return;
+		
+		int xMin = (int) ((loc.x - x - radius) / size);
+		int yMin = (int) ((loc.y - y - radius) / size);
+		int xMax = (int) ((loc.x - x + radius) / size);
+		int yMax = (int) ((loc.y - y + radius) / size);
+		
+		if (xMin < 0) xMin = 0;
+		if (yMin < 0) yMin = 0;
+		if (xMin >= tiles.length) xMin = tiles.length - 1;
+		if (yMin >= tiles[0].length) yMin= tiles[0].length - 1;
+		
+		if (xMax < 0) xMax = 0;
+		if (yMax < 0) yMax = 0;
+		if (xMax >= tiles.length) xMax = tiles.length - 1;
+		if (yMax >= tiles[0].length) yMax = tiles[0].length - 1;
+		
+		for (int i = xMin; i <= xMax; i++) {
+			for (int j = yMin; j <= yMax; j++) {
+				int texIndex = tiles[i][j];
+				if (texIndex >= 0) {
+					float tx = x + i * size + size/2f - containsSize/2f;
+					float ty = y + j * size + size/2f - containsSize/2f;
+					 
+					float dist = Misc.getDistance(loc.x, loc.y, tx, ty);
+					if (dist > radius) continue;
+//					if (loc.x + radius < tx) continue;
+//					if (loc.y + radius < ty) continue;
+//					if (loc.x > tx + containsSize + radius) continue;
+//					if (loc.y > ty + containsSize + radius) continue;
+					//
+					CellStateTracker cell = activeCells[i][j];
+					float interval = auto.getInterval().getIntervalDuration();
+					float wait = interval * 0f + interval * 1.5f * (float) Math.random();
+					if (waitDur >= 0f) wait = waitDur;
+					float signal = interval * 0.5f + interval * 0.5f * (float) Math.random();
+					if (minSignalDur >= 0f) signal = minSignalDur + (maxSignalDur - minSignalDur) * (float) Math.random();
+					
+					wait *= 0.9f + (float) Math.random() * 0.2f;
+					signal *= 0.9f + (float) Math.random() * 0.2f;
+					
+					if (cell == null && state != CellState.OFF) {
+						cell = activeCells[i][j] = new CellStateTracker(i, j, wait, signal);
+						cell.state = state;
+					} else if (cell != null && state == CellState.OFF) {
+						if (cell.state == CellState.STORM || 
+								cell.state == CellState.STORM_WANE ||
+								cell.state == CellState.SIGNAL) {
+							float dur = 0.1f;
+							if (wait >= 0f) {
+								dur *= wait;
+							}
+							if (cell.state == CellState.STORM_WANE) {
+								dur = Math.min(cell.wane, dur);
+							} else {
+								cell.maxWane = dur * 4f;
+							}
+							cell.wane = dur;
+							cell.state = CellState.STORM_WANE;
+						} else {
+							activeCells[i][j] = null;
+						}
+					} else if (cell != null) {
+						cell.state = state;
+						if (state == CellState.WAIT) {
+							cell.wait = wait;
+						}
+						if (state == CellState.SIGNAL) {
+							//signal = Math.min(cell.signal, signal);
+							cell.signal = signal;
+							cell.maxSignal = signal;
+						}
+					}
+					
+				}
+			}
+		}
 	}
 }
 

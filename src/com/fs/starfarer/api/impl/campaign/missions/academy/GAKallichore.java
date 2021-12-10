@@ -136,7 +136,7 @@ public class GAKallichore extends GABaseMission {
 		
 		beginStageTrigger(Stage.COMPLETED);
 		triggerRemoveTags(relay, Tags.STORY_CRITICAL);
-		triggerMakeNonStoryCritical(gargoyle.getMarket(), arroyo.getMarket(), loke.getMarket());
+		triggerMakeNonStoryCritical(gargoyle.getMarket(), arroyo.getMarket(), loke.getMarket(), coatl);
 		triggerMovePersonToMarket(gargoyle, baird.getMarket(), true);
 		triggerUnhideCommListing(gargoyle);
 		endTrigger();

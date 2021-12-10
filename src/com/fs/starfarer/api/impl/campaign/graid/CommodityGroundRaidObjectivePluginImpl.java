@@ -5,9 +5,9 @@ import java.util.Random;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
@@ -26,9 +26,11 @@ public class CommodityGroundRaidObjectivePluginImpl extends BaseGroundRaidObject
 	// for causing deficit; higher value means less units need to be raided to cause same deficit	
 	public static float ECON_IMPACT_MULT = 1f;
 	
-	public static float QUANTITY_MULT_NORMAL = 0.5f; 
-	public static float QUANTITY_MULT_EXCESS = 2f; 
-	public static float QUANTITY_MULT_DEFICIT = -0.5f; 
+	public static float QUANTITY_MULT_NORMAL = 0.1f; 
+	//public static float QUANTITY_MULT_NORMAL_FOR_DEFICIT = 0.5f; 
+	public static float QUANTITY_MULT_NORMAL_FOR_DEFICIT = 1f; 
+	public static float QUANTITY_MULT_EXCESS = 1f; 
+	public static float QUANTITY_MULT_DEFICIT = -0.1f; 
 	public static float QUANTITY_MULT_OVERALL = 0.1f;
 	
 	protected CommodityOnMarketAPI com;
@@ -89,11 +91,12 @@ public class CommodityGroundRaidObjectivePluginImpl extends BaseGroundRaidObject
 	}
 	
 	public int getDeficitCaused() {
-		float quantity = getQuantity(getMarinesAssigned());
+		float quantity = getQuantity(getMarinesAssigned(), true);
 		quantity *= ECON_IMPACT_MULT;
 		int diff = Misc.computeEconUnitChangeFromTradeModChange(com, -(int)quantity);
 		diff = -diff;
 		if (diff < 0) diff = 0;
+		if (diff == 0 && getProjectedCreditsValue() > 1000) diff = 1;
 		return diff;
 	}
 	
@@ -127,7 +130,11 @@ public class CommodityGroundRaidObjectivePluginImpl extends BaseGroundRaidObject
 	}
 	
 	public float getQuantity(int marines) {
-		float base = getBaseRaidQuantity();
+		return getQuantity(marines, false);
+	}
+	
+	public float getQuantity(int marines, boolean forDeficit) {
+		float base = getBaseRaidQuantity(forDeficit);
 		return base * marines;
 	}
 	
@@ -136,7 +143,7 @@ public class CommodityGroundRaidObjectivePluginImpl extends BaseGroundRaidObject
 	}
 	
 	
-	public float getBaseRaidQuantity() {
+	public float getBaseRaidQuantity(boolean forDeficit) {
 		//CommodityOnMarketAPI com = market.getCommodityData(id);
 		float unit = com.getCommodity().getEconUnit();
 		
@@ -144,7 +151,11 @@ public class CommodityGroundRaidObjectivePluginImpl extends BaseGroundRaidObject
 		
 		float result = 0f;
 		
-		result += Math.max(0, counts.available - counts.extra) * unit * QUANTITY_MULT_NORMAL;
+		if (forDeficit) {
+			result += Math.max(0, counts.available - counts.extra) * unit * QUANTITY_MULT_NORMAL_FOR_DEFICIT;
+		} else {
+			result += Math.max(0, counts.available - counts.extra) * unit * QUANTITY_MULT_NORMAL;
+		}
 		result += counts.extra * unit * QUANTITY_MULT_EXCESS;
 		result += counts.deficit * unit * QUANTITY_MULT_DEFICIT;
 		

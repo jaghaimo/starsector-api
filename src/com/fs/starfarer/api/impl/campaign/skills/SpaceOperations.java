@@ -12,7 +12,7 @@ public class SpaceOperations {
 	
 	public static class Level1 implements MarketSkillEffect {
 		public void apply(MarketAPI market, String id, float level) {
-			market.getAccessibilityMod().modifyFlat(id, ACCESS, "Fleet logistics");
+			market.getAccessibilityMod().modifyFlat(id, ACCESS, "Space operations");
 		}
 
 		public void unapply(MarketAPI market, String id) {

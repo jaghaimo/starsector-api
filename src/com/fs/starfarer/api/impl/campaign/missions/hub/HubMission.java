@@ -10,7 +10,7 @@ import com.fs.starfarer.api.characters.PersonAPI;
 
 public interface HubMission {
 	String getTriggerPrefix();
-	String getBlurbText();
+	@Deprecated String getBlurbText();
 	
 	String getMissionId();
 	void setMissionId(String missionId);

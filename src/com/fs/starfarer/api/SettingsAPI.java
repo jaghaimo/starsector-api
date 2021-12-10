@@ -12,6 +12,7 @@ import org.json.JSONObject;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.campaign.CustomEntitySpecAPI;
+import com.fs.starfarer.api.campaign.CustomUIPanelPlugin;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetSpecAPI;
@@ -30,6 +31,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.ShipSystemSpecAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.loading.AbilitySpecAPI;
 import com.fs.starfarer.api.loading.BarEventSpec;
@@ -44,7 +46,11 @@ import com.fs.starfarer.api.loading.RoleEntryAPI;
 import com.fs.starfarer.api.loading.TerrainSpecAPI;
 import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.plugins.LevelupPlugin;
+import com.fs.starfarer.api.ui.ButtonAPI;
+import com.fs.starfarer.api.ui.ButtonAPI.UICheckboxSize;
+import com.fs.starfarer.api.ui.CustomPanelAPI;
 import com.fs.starfarer.api.ui.LabelAPI;
+import com.fs.starfarer.api.ui.TextFieldAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.ListMap;
 
@@ -275,6 +281,7 @@ public interface SettingsAPI {
 
 	void profilerBegin(String id);
 	void profilerEnd();
+	void profilerPrintResultsTree();
 
 	List<PlanetSpecAPI> getAllPlanetSpecs();
 
@@ -445,5 +452,42 @@ public interface SettingsAPI {
 	float getFloatFromArray(String key, int index);
 
 	int getIntFromArray(String key, int index);
+
+	void loadTextureConvertBlackToAlpha(String filename) throws IOException;
+
+	String getControlDescriptionForEnumName(String name);
+
+	ShipAIPlugin pickShipAIPlugin(FleetMemberAPI member, ShipAPI ship);
+
+	void unloadTexture(String filename);
+
+	void profilerSetEnabled(boolean enabled);
+
+	void profilerReset();
+
+	void profilerRestore();
+
+	Color getBrightPlayerColor();
+
+	Color getDarkPlayerColor();
+
+	void forceMipmapsFor(String filename, boolean forceMipmaps) throws IOException;
+
+	/**
+	 * Returns e.g. "0.95a-RC12"
+	 * @return
+	 */
+	String getGameVersion();
+
+	float computeStringWidth(String in, String font);
+
+	TextFieldAPI createTextField(String text, String font);
+
+	ButtonAPI createCheckbox(String text, UICheckboxSize size);
+	ButtonAPI createCheckbox(String text, String font, Color checkColor, UICheckboxSize size);
+
+	CustomPanelAPI createCustom(float width, float height, CustomUIPanelPlugin plugin);
+
+	int getMissionScore(String id);
 
 }

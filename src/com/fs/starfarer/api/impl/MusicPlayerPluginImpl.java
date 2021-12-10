@@ -193,6 +193,11 @@ public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 			String musicSetId = market.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
 			if (musicSetId != null) return musicSetId;
 			
+			if (market.getPrimaryEntity() != null &&
+					market.getPrimaryEntity().getMemoryWithoutUpdate().getBoolean("$abandonedStation")) {
+				return getPlanetSurveyMusicSetId(param);
+			}
+			
 			FactionAPI faction = market.getFaction();
 			if (faction != null) {
 				String type = null;

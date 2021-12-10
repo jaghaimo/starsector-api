@@ -13,16 +13,19 @@ import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class GraviticScanAbility extends BaseToggleAbility {
 
-	public static final String COMMODITY_ID = Commodities.VOLATILES;
-	public static final float COMMODITY_PER_DAY = 1f;
+	public static float SLIPSTREAM_DETECTION_RANGE = 20000f;
 	
-	public static final float DETECTABILITY_PERCENT = 50f;
+	public static String COMMODITY_ID = Commodities.VOLATILES;
+	public static float COMMODITY_PER_DAY = 1f;
+	
+	public static float DETECTABILITY_PERCENT = 50f;
 	
 	
 	@Override
@@ -77,6 +80,7 @@ public class GraviticScanAbility extends BaseToggleAbility {
 		tooltip.addPara("Reconfigures the fleet's drive field to act as a neutrino detector, " +
 				"allowing detection of human-made artifacts - and occasionally fleets - at extreme ranges. ", pad);
 		
+		tooltip.addSectionHeading("Normal space", Alignment.MID, pad);
 		tooltip.addPara("High-emission sources such as stars, planets, jump-points, or space stations produce constant streams. " +
 				"Average sources produce periodic bursts. Low-emission sources produce occasional bursts.", pad);
 		
@@ -101,11 +105,20 @@ public class GraviticScanAbility extends BaseToggleAbility {
 			);
 		}
 		
-		if (getFleet() != null && getFleet().isInHyperspace()) {
-			tooltip.addPara("Can not function in hyperspace.", bad, pad);
-		} else {
-			tooltip.addPara("Can not function in hyperspace.", pad);
+		int maxRange = (int) Math.round(SLIPSTREAM_DETECTION_RANGE / Misc.getUnitsPerLightYear());
+		tooltip.addSectionHeading("Hyperspace", Alignment.MID, pad);
+		tooltip.addPara("Reliably detects the presence of slipstreams out to a range of %s light-years. "
+				+ "The background noise levels are such that it is unable to detect any other neutrino sources. "
+				+ "When the fleet is traversing a slipstream, the detector is overwhelmed and shuts down.",
+				pad, highlight, "" + maxRange);
+		if (Misc.isInsideSlipstream(getFleet())) {
+			tooltip.addPara("Cannot activate while inside slipstream.", bad, pad);
 		}
+//		if (getFleet() != null && getFleet().isInHyperspace()) {
+//			tooltip.addPara("Can not function in hyperspace.", bad, pad);
+//		} else {
+//			tooltip.addPara("Can not function in hyperspace.", pad);
+//		}
 		
 		//tooltip.addPara("Disables the transponder when activated.", pad);
 		addIncompatibleToTooltip(tooltip, expanded);
@@ -131,8 +144,8 @@ public class GraviticScanAbility extends BaseToggleAbility {
 	}
 	
 
-	private float phaseAngle;
-	private GraviticScanData data = null;
+	protected float phaseAngle;
+	protected GraviticScanData data = null;
 	@Override
 	protected void applyEffect(float amount, float level) {
 		CampaignFleetAPI fleet = getFleet();
@@ -162,9 +175,12 @@ public class GraviticScanAbility extends BaseToggleAbility {
 			}
 		}
 		
-		if (fleet.isInHyperspace()) {
+		if (Misc.isInsideSlipstream(fleet)) {
 			deactivate();
 		}
+//		if (fleet.isInHyperspace()) {
+//			deactivate();
+//		}
 	}
 	
 	public CommoditySpecAPI getCommodity() {
@@ -176,7 +192,8 @@ public class GraviticScanAbility extends BaseToggleAbility {
 		CampaignFleetAPI fleet = getFleet();
 		if (fleet == null) return false;
 		
-		return isActive() || !fleet.isInHyperspace();
+		return !Misc.isInsideSlipstream(fleet);
+		//return isActive() || !fleet.isInHyperspace();
 	}
 	
 
@@ -202,7 +219,7 @@ public class GraviticScanAbility extends BaseToggleAbility {
 		//return getFleet().getRadius() + 25f;	
 	}
 	
-	transient private SpriteAPI texture;
+	transient protected SpriteAPI texture;
 	@Override
 	public void render(CampaignEngineLayers layer, ViewportAPI viewport) {
 		

@@ -178,7 +178,7 @@ public class RuinsFleetRouteManager extends BaseRouteFleetManager {
 		transport *= 1.5f;
 		
 		FleetParamsV3 params = new FleetParamsV3(
-				route != null ? route.getMarket() : null, 
+				route != null ? route.getMarket() : source, 
 				locInHyper,
 				Factions.SCAVENGERS, // quality will always be reduced by non-market-faction penalty, which is what we want 
 				route == null ? null : route.getQualityOverride(),
@@ -203,7 +203,7 @@ public class RuinsFleetRouteManager extends BaseRouteFleetManager {
 		
 		fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_SCAVENGER, true);
 		
-		if (pirate) {
+		if (pirate || true) {
 			Misc.makeLowRepImpact(fleet, "scav");
 		}
 		

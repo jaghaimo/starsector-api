@@ -14,6 +14,12 @@ public interface AICoreOfficerPlugin {
 	 */
 	public static String AUTOMATED_POINTS_VALUE = "$autoPointsValue";
 	
+	/**
+	 * In person memory, by how much it multiplies the automated points cost
+	 * on an automated ship, for the purposes of the Automated Ships skill ONLY.
+	 */
+	public static String AUTOMATED_POINTS_MULT = "$autoPointsMult";
+	
 	public PersonAPI createPerson(String aiCoreId, String factionId, Random random);
 	public void createPersonalitySection(PersonAPI person, TooltipMakerAPI tooltip);
 	//StoryPointActionDelegate createIntegrateDelegate(PersonAPI person, FleetMemberAPI member);

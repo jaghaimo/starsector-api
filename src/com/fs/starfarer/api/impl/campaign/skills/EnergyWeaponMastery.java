@@ -12,11 +12,11 @@ import com.fs.starfarer.api.combat.BeamAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageAPI;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
-import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
 import com.fs.starfarer.api.combat.listeners.DamageDealtModifier;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -136,7 +136,7 @@ public class EnergyWeaponMastery {
 								   		CombatEntityAPI target, DamageAPI damage,
 								   		Vector2f point, boolean shieldHit) {
 			
-			if (param instanceof MissileAPI) return null;
+			//if (param instanceof MissileAPI) return null;
 			
 			Vector2f from = null;
 			WeaponAPI weapon = null;
@@ -151,6 +151,7 @@ public class EnergyWeaponMastery {
 			}
 			
 			if (weapon == null || ship == null) return null;
+			if (weapon.getSpec().getType() != WeaponType.ENERGY) return null;
 			
 			float mag = ship.getFluxBasedEnergyWeaponDamageMultiplier() - 1f;
 			if (mag <= 0) return null;

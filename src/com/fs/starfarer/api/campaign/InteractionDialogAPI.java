@@ -102,6 +102,9 @@ public interface InteractionDialogAPI {
 	void showCampaignEntityPicker(String title, String selectedText, String okText, FactionAPI factionForUIColors,
 							  List<SectorEntityToken> entities, CampaignEntityPickerListener listener);
 	boolean isCurrentOptionHadAConfirm();
+	void showCustomVisualDialog(float customPanelWidth, float customPanelHeight, CustomVisualDialogDelegate delegate);
+	void showCargoPickerDialog(String title, String okText, String cancelText, boolean small, float textPanelWidth,
+			float width, float height, CargoAPI cargo, CargoPickerListener listener);
 }
 
 

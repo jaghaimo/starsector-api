@@ -161,35 +161,37 @@ public class AsteroidBeltTerrainPlugin extends BaseRingTerrain implements Astero
 //			if (fleet.isPlayerFleet()) {
 //				System.out.println("efwefwe");
 //			}
-			String key = "$asteroidImpactTimeout";
-			String sKey = "$skippedImpacts";
-			String recentKey = "$recentImpact";
-			float probPerSkip = 0.15f;
-			float maxProb = 1f;
-			float maxSkipsToTrack = 7;
-			float durPerSkip = 0.2f;
-			MemoryAPI mem = fleet.getMemoryWithoutUpdate();
-			if (!mem.contains(key)) {
-				float expire = mem.getExpire(sKey);
-				if (expire < 0) expire = 0;
-				
-				float hitProb = Misc.getFleetRadiusTerrainEffectMult(fleet) * 0.5f;
-				//hitProb = 0.33f;
-				hitProb = 0.5f;
-				//hitProb = 1f;
-				hitProb = expire / durPerSkip * probPerSkip;
-				if (hitProb > maxProb) hitProb = maxProb;
-				if ((float) Math.random() < hitProb) {
-					boolean hadRecent = mem.is(recentKey, true);
-					hadRecent &= (float) Math.random() > 0.5f;
-					fleet.addScript(new AsteroidImpact(fleet, hadRecent));
-					mem.set(sKey, true, 0);
-					mem.set(recentKey, true, 0.5f + 1f * (float) Math.random());
-				} else {
-					mem.set(sKey, true, Math.min(expire + durPerSkip, maxSkipsToTrack * durPerSkip));
+			if (!fleet.isInHyperspaceTransition()) {
+				String key = "$asteroidImpactTimeout";
+				String sKey = "$skippedImpacts";
+				String recentKey = "$recentImpact";
+				float probPerSkip = 0.15f;
+				float maxProb = 1f;
+				float maxSkipsToTrack = 7;
+				float durPerSkip = 0.2f;
+				MemoryAPI mem = fleet.getMemoryWithoutUpdate();
+				if (!mem.contains(key)) {
+					float expire = mem.getExpire(sKey);
+					if (expire < 0) expire = 0;
+					
+					float hitProb = Misc.getFleetRadiusTerrainEffectMult(fleet) * 0.5f;
+					//hitProb = 0.33f;
+					hitProb = 0.5f;
+					//hitProb = 1f;
+					hitProb = expire / durPerSkip * probPerSkip;
+					if (hitProb > maxProb) hitProb = maxProb;
+					if ((float) Math.random() < hitProb) {
+						boolean hadRecent = mem.is(recentKey, true);
+						hadRecent &= (float) Math.random() > 0.5f;
+						fleet.addScript(new AsteroidImpact(fleet, hadRecent));
+						mem.set(sKey, true, 0);
+						mem.set(recentKey, true, 0.5f + 1f * (float) Math.random());
+					} else {
+						mem.set(sKey, true, Math.min(expire + durPerSkip, maxSkipsToTrack * durPerSkip));
+					}
+					mem.set(key, true, (float) (0.05f + 0.1f * Math.random()));
+					//mem.set(key, true, (float) (0.01f + 0.02f * Math.random()));
 				}
-				mem.set(key, true, (float) (0.05f + 0.1f * Math.random()));
-				//mem.set(key, true, (float) (0.01f + 0.02f * Math.random()));
 			}
 		}
 	}

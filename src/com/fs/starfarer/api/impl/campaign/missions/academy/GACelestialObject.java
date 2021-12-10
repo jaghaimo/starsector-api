@@ -139,6 +139,8 @@ public class GACelestialObject extends GABaseMission {
 			
 		}
 		
+		setMapMarkerNameColorBasedOnStar(system);
+		
 		
 		return true;
 	}
@@ -176,7 +178,7 @@ public class GACelestialObject extends GABaseMission {
 	public boolean addNextStepText(TooltipMakerAPI info, Color tc, float pad) {
 		Color h = Misc.getHighlightColor();
 		if (currentStage == Stage.GO_TO_OBJECT) {
-			info.addPara("Scan " + getTerrainNameAOrAn(object)  + " " + getTerrainType(object) +
+			info.addPara("Scan " + getTerrainTypeAOrAn(object)  + " " + getTerrainType(object) +
 						 " in the " + system.getNameWithLowercaseTypeShort(), tc, pad);
 			return true;
 		}
@@ -185,16 +187,16 @@ public class GACelestialObject extends GABaseMission {
 	
 	protected String getObjectNameWithTypeLong() {
 		if (hasSpecialName(object)) {
-			return getTerrainName(object) + " - that's " + getTerrainNameAOrAn(object) + " " + getTerrainType(object);
+			return getTerrainName(object) + " - that's " + getTerrainTypeAOrAn(object) + " " + getTerrainType(object);
 		} else {
-			return getTerrainNameAOrAn(object) + " " + getTerrainType(object);
+			return getTerrainTypeAOrAn(object) + " " + getTerrainType(object);
 		}
 	}
 	protected String getObjectNameWithTypeShort() {
 		if (hasSpecialName(object)) {
-			return getTerrainName(object) + ", " + getTerrainNameAOrAn(object) + " " + getTerrainType(object);
+			return getTerrainName(object) + ", " + getTerrainTypeAOrAn(object) + " " + getTerrainType(object);
 		} else {
-			return getTerrainNameAOrAn(object) + " " + getTerrainType(object);
+			return getTerrainTypeAOrAn(object) + " " + getTerrainType(object);
 		}
 	}
 	

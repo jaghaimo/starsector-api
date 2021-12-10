@@ -65,10 +65,12 @@ public class SpecialModifications {
 
 	public static class Level2 implements CharacterStatsSkillEffect {
 		public void apply(MutableCharacterStatsAPI stats, String id, float level) {
+			//stats.getShipOrdnancePointBonus().modifyPercent(id, 50f);
 			stats.getMaxVentsBonus().modifyFlat(id, VENTS_BONUS);
 		}
 
 		public void unapply(MutableCharacterStatsAPI stats, String id) {
+			//stats.getShipOrdnancePointBonus().unmodifyPercent(id);
 			stats.getMaxVentsBonus().unmodify(id);
 		}
 

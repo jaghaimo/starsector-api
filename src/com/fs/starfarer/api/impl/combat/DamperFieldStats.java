@@ -6,8 +6,8 @@ import java.util.Map;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.ShipSystemAPI;
 
 public class DamperFieldStats extends BaseShipSystemScript {
 
@@ -23,7 +23,7 @@ public class DamperFieldStats extends BaseShipSystemScript {
 	protected Object STATUSKEY1 = new Object();
 	
 	//public static final float INCOMING_DAMAGE_MULT = 0.25f;
-	public static final float INCOMING_DAMAGE_CAPITAL = 0.5f;
+	//public static final float INCOMING_DAMAGE_CAPITAL = 0.5f;
 	
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 		effectLevel = 1f;
@@ -44,7 +44,7 @@ public class DamperFieldStats extends BaseShipSystemScript {
 			player = ship == Global.getCombatEngine().getPlayerShip();
 		}
 		if (player) {
-			ShipSystemAPI system = ship.getSystem();
+			ShipSystemAPI system = getDamper(ship);
 			if (system != null) {
 				float percent = (1f - mult) * effectLevel * 100;
 				Global.getCombatEngine().maintainStatusForPlayerShip(STATUSKEY1,
@@ -53,6 +53,14 @@ public class DamperFieldStats extends BaseShipSystemScript {
 			}
 		}
 	}
+	
+	public static ShipSystemAPI getDamper(ShipAPI ship) {
+		ShipSystemAPI system = ship.getSystem();
+		if (system != null && system.getId().equals("damper")) return system;
+		if (system != null && system.getId().equals("damper_omega")) return system;
+		return ship.getPhaseCloak();
+	}
+	
 	public void unapply(MutableShipStatsAPI stats, String id) {
 		stats.getHullDamageTakenMult().unmodify(id);
 		stats.getArmorDamageTakenMult().unmodify(id);

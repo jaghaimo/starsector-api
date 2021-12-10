@@ -17,7 +17,6 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
-import com.fs.starfarer.api.impl.campaign.RuleBasedInteractionDialogPluginImpl;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
@@ -107,7 +106,7 @@ public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootLi
 				for (ShipHullSpecAPI spec : Global.getSettings().getAllShipHullSpecs()) {
 					if (!spec.hasTag(Items.TAG_RARE_BP)) continue;
 					if (spec.hasTag(Tags.NO_DROP)) continue;
-					if (Global.getSector().getPlayerFaction().knowsWeapon(spec.getHullId())) continue;
+					if (Global.getSector().getPlayerFaction().knowsShip(spec.getHullId())) continue;
 					float w = spec.getRarity() * getQualityMultForTier(spec.getFleetPoints() / 6);;
 					picker.add(spec, w);
 				}
@@ -260,7 +259,6 @@ public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootLi
 			endTrigger();
 		}
 		
-		
 		return true;
 	}
 	
@@ -269,7 +267,7 @@ public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootLi
 		for (CargoStackAPI stack : loot.getStacksCopy()) {
 			if (item.equals(stack.getData())) {
 				Global.getSector().getListenerManager().removeListener(this);
-				setCurrentStage(Stage.COMPLETED, dialog, ((RuleBasedInteractionDialogPluginImpl)dialog.getPlugin()).getMemoryMap());
+				setCurrentStage(Stage.COMPLETED, dialog, dialog.getPlugin().getMemoryMap());
 				break;
 			}
 		}

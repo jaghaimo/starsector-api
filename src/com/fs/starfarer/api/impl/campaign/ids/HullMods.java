@@ -11,6 +11,9 @@ public class HullMods {
 	public static final String ADVANCED_TARGETING_CORE = "advancedcore";
 	
 	
+	public static final String ADAPTIVE_COILS = "adaptive_coils";
+	public static final String PHASE_ANCHOR = "phase_anchor";
+	
 	public static final String BLAST_DOORS = "blast_doors";
 	public static final String REINFORCEDHULL = "reinforcedhull";
 	public static final String HARDENED_SUBSYSTEMS = "hardened_subsystems";
@@ -18,6 +21,9 @@ public class HullMods {
 	public static final String AUXILIARY_THRUSTERS = "auxiliarythrusters";
 	public static final String FLUX_DISTRIBUTOR = "fluxdistributor";
 	public static final String FLUX_COIL = "fluxcoil";
+	
+	public static final String NEURAL_INTERFACE = "neural_interface";
+	public static final String NEURAL_INTEGRATOR = "neural_integrator";
 	
 	
 	
@@ -104,6 +110,7 @@ public class HullMods {
 	public static final String TAG_UI_LOGISTICS = "Logistics";
 	public static final String TAG_REQ_SPACEPORT = "req_spaceport";
 	public static final String TAG_NON_PHASE = "non_phase";
+	public static final String TAG_PHASE = "phase";
 	public static final String TAG_CIV_PACKAGE = "civ_package";
 	
 }

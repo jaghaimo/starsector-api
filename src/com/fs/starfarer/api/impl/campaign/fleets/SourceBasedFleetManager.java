@@ -9,9 +9,9 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.util.Misc;
 
@@ -24,7 +24,7 @@ import com.fs.starfarer.api.util.Misc;
  *
  * Copyright 2017 Fractal Softworks, LLC
  */
-public abstract class SourceBasedFleetManager implements FleetEventListener, EveryFrameScript{
+public abstract class SourceBasedFleetManager implements FleetEventListener, EveryFrameScript {
 
 	public static float DESPAWN_THRESHOLD_PAD_LY = 1;
 	public static float DESPAWN_MIN_DIST_LY = 3;
@@ -121,7 +121,9 @@ public abstract class SourceBasedFleetManager implements FleetEventListener, Eve
 			CampaignFleetAPI fleet = spawnFleet();
 			if (fleet != null) {
 				fleets.add(fleet);
-				fleet.addEventListener(this);
+				//if (shouldAddEventListenerToFleet()) {
+					fleet.addEventListener(this);
+				//}
 			}
 		}
 		
@@ -129,6 +131,10 @@ public abstract class SourceBasedFleetManager implements FleetEventListener, Eve
 			setDone(true);
 		}
 	}
+	
+//	protected boolean shouldAddEventListenerToFleet() {
+//		return true;
+//	}
 
 	private boolean done = false;
 	public boolean isDone() {

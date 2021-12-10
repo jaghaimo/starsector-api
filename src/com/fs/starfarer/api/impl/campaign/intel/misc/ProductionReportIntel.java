@@ -251,6 +251,8 @@ public class ProductionReportIntel extends FleetLogIntel {
 
 	@Override
 	public boolean shouldRemoveIntel() {
+		if (isImportant()) return false;
+		if (getDaysSincePlayerVisible() < 30) return false;
 		return super.shouldRemoveIntel();
 	}
 

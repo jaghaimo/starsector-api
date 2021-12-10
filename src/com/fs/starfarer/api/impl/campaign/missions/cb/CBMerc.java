@@ -109,7 +109,7 @@ public class CBMerc extends BaseCustomBountyCreator {
 			mission.triggerFleetAddCommanderSkill(Skills.WOLFPACK_TACTICS, 1);
 			mission.triggerFleetAddCommanderSkill(Skills.ELECTRONIC_WARFARE, 1);
 			mission.triggerFleetAddCommanderSkill(Skills.FLUX_REGULATION, 1);
-			mission.triggerFleetAddCommanderSkill(Skills.WEAPON_DRILLS, 1);
+			mission.triggerFleetAddCommanderSkill(Skills.TACTICAL_DRILLS, 1);
 			mission.triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.UNUSUALLY_HIGH);
 		} else {
 			if (difficulty <= 6) {

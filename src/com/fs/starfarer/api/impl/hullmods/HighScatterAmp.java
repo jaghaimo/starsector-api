@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.impl.hullmods;
 
+import java.awt.Color;
+
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.combat.BaseHullMod;
@@ -10,15 +12,26 @@ import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.listeners.DamageDealtModifier;
+import com.fs.starfarer.api.combat.listeners.WeaponBaseRangeModifier;
+import com.fs.starfarer.api.ui.Alignment;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 public class HighScatterAmp extends BaseHullMod {
 
-	public static float RANGE_PENALTY_PERCENT = 50f;
+	//public static float RANGE_PENALTY_PERCENT = 50f;
+	public static float RANGE_FRIGATE = 500;
+	public static float RANGE_DESTROYER = 600;
+	public static float RANGE_LARGE = 700;
+	
+	public static float DAMAGE_BONUS_PERCENT = 10f;
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getBeamWeaponRangeBonus().modifyMult(id, 1f - RANGE_PENALTY_PERCENT * 0.01f);
+		//stats.getBeamWeaponRangeBonus().modifyMult(id, 1f - RANGE_PENALTY_PERCENT * 0.01f);
+		stats.getBeamWeaponDamageMult().modifyPercent(id, DAMAGE_BONUS_PERCENT);
 		
 		// test code for WeaponOPCostModifier, FighterOPCostModifier
 //		stats.addListener(new WeaponOPCostModifier() {
@@ -49,6 +62,7 @@ public class HighScatterAmp extends BaseHullMod {
 	@Override
 	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
 		ship.addListener(new HighScatterAmpDamageDealtMod(ship));
+		ship.addListener(new HighScatterAmpRangeMod());
 		
 		/* test code for WeaponRangeModifier
 		ship.addListener(new WeaponRangeModifier() {
@@ -67,11 +81,6 @@ public class HighScatterAmp extends BaseHullMod {
 		});
 		*/
 	}
-
-	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int)RANGE_PENALTY_PERCENT + "%";
-		return null;
-	}
 	
 	public static class HighScatterAmpDamageDealtMod implements DamageDealtModifier {
 		protected ShipAPI ship;
@@ -88,6 +97,66 @@ public class HighScatterAmp extends BaseHullMod {
 			}
 			return null;
 		}
+	}
+	
+
+	public static class HighScatterAmpRangeMod implements WeaponBaseRangeModifier {
+		public HighScatterAmpRangeMod() {
+		}
+		public float getWeaponBaseRangePercentMod(ShipAPI ship, WeaponAPI weapon) {
+			return 0;
+		}
+		public float getWeaponBaseRangeMultMod(ShipAPI ship, WeaponAPI weapon) {
+			return 1f;
+		}
+		public float getWeaponBaseRangeFlatMod(ShipAPI ship, WeaponAPI weapon) {
+			if (weapon.isBeam()) {
+				float range = weapon.getSpec().getMaxRange();
+				float max = range;
+				if (ship.isFighter() || ship.isFrigate()) {
+					max = RANGE_FRIGATE;
+				} else if (ship.isDestroyer()) {
+					max = RANGE_DESTROYER;
+				} else if (ship.isCruiser() || ship.isCapital()) {
+					max = RANGE_LARGE;
+				}
+				return Math.min(0f, max - range);
+			}
+			return 0f;
+		}
+	}
+
+	public String getDescriptionParam(int index, HullSize hullSize) {
+		//if (index == 0) return "" + (int)RANGE_PENALTY_PERCENT + "%";
+		return null;
+	}
+	
+	@Override
+	public boolean shouldAddDescriptionToTooltip(HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
+		return false;
+	}
+
+	@Override
+	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		float pad = 3f;
+		float opad = 10f;
+		Color h = Misc.getHighlightColor();
+		Color bad = Misc.getNegativeHighlightColor();
+		
+		tooltip.addPara("Beam weapons deal %s more damage and deal hard flux damage to shields.", opad, h,
+				"" + (int)DAMAGE_BONUS_PERCENT + "%"
+				);
+		
+		tooltip.addPara("Reduces the base range of beam weapons to %s for frigates, %s for destroyers, "
+				+ "and %s for larger ships.", opad, h,
+				"" + (int)RANGE_FRIGATE,
+				"" + (int)RANGE_DESTROYER,
+				"" + (int)RANGE_LARGE
+				);
+		
+		tooltip.addSectionHeading("Interactions with other modifiers", Alignment.MID, opad);
+		tooltip.addPara("The base range is reduced, thus percentage and multiplicative modifiers - such as from Integrated Targeting Unit, "
+				+ "skills, or similar sources - apply to the reduced base value.", opad);
 	}
 }
 

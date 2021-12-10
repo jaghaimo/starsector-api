@@ -40,13 +40,13 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 			
 			getCargo().getMothballedShips().clear();
 			
-			float freighters = 20f;
+			float freighters = 10f;
 			CommodityOnMarketAPI com = market.getCommodityData(Commodities.SHIPS);
-			freighters += com.getMaxSupply() * 3f;
-			if (freighters > 40) freighters = 40;
+			freighters += com.getMaxSupply() * 2f;
+			if (freighters > 30) freighters = 30;
 			
 			addShips(market.getFactionId(),
-					20f, // combat
+					10f, // combat
 					freighters, // freighter 
 					0f, // tanker
 					10f, // transport
@@ -54,11 +54,11 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 					5f, // utilityPts
 					null, // qualityOverride
 					0f, // qualityMod
-					ShipPickMode.IMPORTED,
+					ShipPickMode.PRIORITY_THEN_ALL,
 					null);
 			
 			addShips(market.getFactionId(),
-					30f, // combat
+					40f, // combat
 					0f, // freighter 
 					0f, // tanker
 					0f, // transport

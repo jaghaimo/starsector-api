@@ -62,4 +62,6 @@ public interface ShipSystemAPI {
 	void setCooldown(float cooldown);
 
 	Vector2f getTargetLoc();
+
+	void forceState(SystemState state, float progress);
 }

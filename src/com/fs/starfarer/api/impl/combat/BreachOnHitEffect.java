@@ -14,7 +14,7 @@ import com.fs.starfarer.api.util.Misc;
 
 public class BreachOnHitEffect implements OnHitEffectPlugin {
 
-	public static float DAMAGE = 200;
+	public static float DAMAGE = 300;
 
 	public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target,
 					  Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {

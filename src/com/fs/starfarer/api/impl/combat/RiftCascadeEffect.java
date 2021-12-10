@@ -8,12 +8,12 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BeamAPI;
 import com.fs.starfarer.api.combat.BeamEffectPlugin;
 import com.fs.starfarer.api.combat.BoundsAPI;
+import com.fs.starfarer.api.combat.BoundsAPI.SegmentAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.EmpArcEntityAPI;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.BoundsAPI.SegmentAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.loading.MissileSpecAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
@@ -366,7 +366,8 @@ public class RiftCascadeEffect implements BeamEffectPlugin { //WithReset {
 	
 	public float getSizeMult() {
 		float sizeMult = 1f - spawned / (float) Math.max(1, numToSpawn - 1);
-		sizeMult = 0.5f + 0.5f * sizeMult;
+		sizeMult = 0.75f + (1f - sizeMult) * 0.5f;
+		//sizeMult = 0.5f + 0.5f * sizeMult;
 		return sizeMult;
 	}
 	
@@ -381,7 +382,7 @@ public class RiftCascadeEffect implements BeamEffectPlugin { //WithReset {
 		// "spawned" does not include this mine
 		float sizeMult = getSizeMult();
 		mine.setCustomData(RiftCascadeMineExplosion.SIZE_MULT_KEY, sizeMult);
-			
+		
 		if (source != null) {
 			Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(
 											source, WeaponType.MISSILE, false, mine.getDamage());

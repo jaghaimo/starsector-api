@@ -58,4 +58,5 @@ public interface CombatTaskManagerAPI {
 	float getCPRateMult();
 	float getCPInterval();
 	MutableStat getCPRateModifier();
+	void removeAssignment(AssignmentInfo info);
 }

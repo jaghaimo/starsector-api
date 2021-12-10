@@ -935,6 +935,53 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 			return true;
 		}
 		
+		if ("showMap".equals(action)) {
+			SectorEntityToken mapLoc = getMapLocation(null, startingStage);
+			if (mapLoc != null) {
+				String title = params.get(1).getStringWithTokenReplacement(ruleId, dialog, memoryMap);
+				String text = "";
+				Set<String> tags = getIntelTags(null);
+				tags.remove(Tags.INTEL_ACCEPTED);
+				String icon = getIcon();
+				
+				Color color = getFactionForUIColors().getBaseUIColor();
+				//String factionId = getFactionForUIColors().getId();
+				if (mapLoc != null && mapLoc.getFaction() != null && !mapLoc.getFaction().isNeutralFaction()) {
+					color = mapLoc.getFaction().getBaseUIColor();
+					//factionId = mapLoc.getFaction().getId();
+				} else if (mapLoc instanceof PlanetAPI) {
+					PlanetAPI planet = (PlanetAPI) mapLoc;
+					if (planet.getStarSystem() != null && planet.getFaction().isNeutralFaction()) {
+						StarSystemAPI system = planet.getStarSystem();
+						if (system.getStar() == planet || system.getCenter() == planet) {
+							if (planet.getMarket() != null) {
+								color = planet.getMarket().getTextColorForFactionOrPlanet();
+							} else {
+								color = Misc.setAlpha(planet.getSpec().getIconColor(), 255);
+								color = Misc.setBrightness(color, 235);
+							}
+						} else {
+							color = Misc.setAlpha(planet.getSpec().getIconColor(), 255);
+							color = Misc.setBrightness(color, 235);
+						}
+					}
+				}
+				if (mapMarkerNameColor != null) {
+					color = mapMarkerNameColor;
+				}
+				
+				dialog.getVisualPanel().showMapMarker(mapLoc, 
+						title, color, 
+						true, icon, text, tags);
+			}
+			return true;
+		}
+		
+		if ("hideMap".equals(action)) {
+			dialog.getVisualPanel().removeMapMarkerFromPersonInfo();
+			return true;
+		}
+		
 //		if (action.equals("endSuccess")) {
 //			doNotEndMission = true;
 //			checkStageChangesAndTriggers();
@@ -1994,6 +2041,9 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 	}
 	
 	public SectorEntityToken getMapLocation(SectorMapAPI map, Object currentStage) {
+		if (currentStage == null) {
+			currentStage = startingStage;
+		}
 		StageData stage = getData(currentStage);
 		ImportanceData data = null;
 		for (ImportanceData curr : stage.important) {
@@ -2184,8 +2234,10 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 				}
 			} else if (isFailed()) {
 				addResultBulletsAssumingAlreadyIndented(info, mode);
+				addNextStepText(info, tc, initPad);
 			} else if (isSucceeded()) {
 				addResultBulletsAssumingAlreadyIndented(info, mode);
+				addNextStepText(info, tc, initPad);
 			} else {
 				addNextStepText(info, tc, initPad);
 			}
@@ -2763,8 +2815,18 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 		
 		boolean createdNewPerson = !ip.isLastGetPersonResultWasExistingPerson();
 		
+		if (person != null && !createdNewPerson &&
+				Misc.flagHasReason(person.getMemoryWithoutUpdate(), "$requiredForMissions", getReason())) {
+			// this can happen if the person was already created *for this exact type of mission*
+			// so, don't use them - they're already the target of the same mission and mission
+			// creation would fail later anyway.
+			// this also causes - when this mission is aborted - for that person to be removed from
+			// their market in this failed mission's abort(), because it's requiredForMissions with the
+			// same id as this.
+			person = null;
+		}
+		
 		if (person == null) {
-			// shouldn't happen, but just in case
 			person = faction.createRandomPerson(genRandom);
 			WeightedRandomPicker<String> postPicker = new WeightedRandomPicker<String>(genRandom);
 			for (String post : posts) {
@@ -2812,7 +2874,7 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 	public void makePersonRequired(PersonAPI person) {
 		PersonMadeRequired req = new PersonMadeRequired(person);
 		// always add at the start so the flag is unset and the person can be deleted by the PersonAdded change
-		changes.add(0, req); // always add at the start so the flag is unset and the person can be deleted by the PersonAdded change
+		changes.add(0, req);
 		Misc.setFlagWithReason(person.getMemoryWithoutUpdate(), "$requiredForMissions", getReason(), true, -1f);
 	}
 	
@@ -3250,10 +3312,17 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 			return terrain.getPlugin().getNameAOrAn();
 		}
 	}
+	public static String getTerrainTypeAOrAn(CampaignTerrainAPI terrain) {
+		String type = getTerrainType(terrain);
+		if (type != null) {
+			return Misc.getAOrAnFor(type);
+		} else {
+			return terrain.getPlugin().getNameAOrAn();
+		}
+	}
 	public static String getTerrainType(CampaignTerrainAPI terrain) {
 		return terrain.getPlugin().getNameForTooltip().toLowerCase();
 	}
-	
 	
 	
 //	public void addGetWithinCommsRangeText(TooltipMakerAPI info, float pad) {
@@ -3588,6 +3657,20 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 	public MarketAPI getMarket(String id) {
 		return Global.getSector().getEconomy().getMarket(id);
 	}
+	
+	protected Color mapMarkerNameColor = null;
+	public void setMapMarkerNameColor(Color mapMarkerColor) {
+		this.mapMarkerNameColor = mapMarkerColor;
+	}
+	
+	public void setMapMarkerNameColorBasedOnStar(StarSystemAPI system) {
+		if (system.getCenter() instanceof PlanetAPI) {
+			Color color = Misc.setAlpha(((PlanetAPI)system.getCenter()).getSpec().getIconColor(), 255);
+			color = Misc.setBrightness(color, 235);
+			setMapMarkerNameColor(color);
+		}
+	}
+
 }
 
 

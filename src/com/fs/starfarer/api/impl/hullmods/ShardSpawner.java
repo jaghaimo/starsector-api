@@ -148,7 +148,9 @@ public class ShardSpawner extends BaseHullMod {
 	@Override
 	public void advanceInCombat(ShipAPI ship, float amount) {
 		CombatEngineAPI engine = Global.getCombatEngine();
-		engine.setCombatNotOverForAtLeast(SPAWN_TIME + 1f);
+		if (ship.getOriginalOwner() != 0) {
+			engine.setCombatNotOverForAtLeast(SPAWN_TIME + 1f);
+		}
 		
 		if (!ship.isHulk() || !engine.isEntityInPlay(ship)) return;
 		

@@ -1,6 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 
+import java.util.LinkedHashSet;
 import java.util.Map;
+import java.util.Set;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
@@ -10,11 +12,12 @@ import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
-import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -189,10 +192,18 @@ public class PlanetaryShieldBarEvent extends BaseBarEventWithPerson {
 					"\"" + pilot.getNameString() + " would - that's the pilot,\" " + getHeOrShe() + " finally admits.");
 
 			text.addPara("The old spacer tells you that " + pilot.getName().getFirst() + " did not live the experience in such " +
-						 "stride as  " + getHimOrHerself() + ", and has taken to drinking themselves senseless " +
+						 "stride as " + getHimOrHerself() + ", and has taken to drinking themselves senseless " +
 						 "in semi-retirement " + pilotMarket.getOnOrAt() + " " + pilotMarket.getName() + ". " +
 						 "\"Some folks, I don't think they react well " +
 						 "to the emergency cryo-pods. Like a bit o' their brain is still froze up and not coming back.\"");
+			
+			String icon = Global.getSettings().getSpriteName("intel", "red_planet");
+			Set<String> tags = new LinkedHashSet<String>();
+			tags.add(Tags.INTEL_MISSIONS);
+			
+			dialog.getVisualPanel().showMapMarker(pilotMarket.getPrimaryEntity(), 
+						"Destination: " + pilotMarket.getName(), pilotMarket.getFaction().getBaseUIColor(), 
+						true, icon, null, tags);
 			
 			options.addOption("Continue", OptionId.CONTINUE_3);
 			break;

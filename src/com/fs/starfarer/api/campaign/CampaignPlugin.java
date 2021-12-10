@@ -209,6 +209,7 @@ public interface CampaignPlugin {
 	
 	/**
 	 * member will be null when picking plugin to assign idle officers from fleet screen.
+	 * Only used for autofit in the refit screen. For NPC fleets, see: DefaultFleetInflater.
 	 * @param member
 	 * @return
 	 */

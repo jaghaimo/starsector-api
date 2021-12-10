@@ -83,9 +83,8 @@ public class TutorialLevelUpDialogPluginImpl implements InteractionDialogPlugin 
 			options.addOption("Continue", OptionId.CONT1, null);
 			break;
 		case CONT1:
-			textPanel.addParagraph("Skill points are used to learn skills. Skills are arranged in 4 aptitudes - " +
-					"Combat, Leadership, Technology, and Industry. Each aptitude has 5 tiers, and you can pick one of the " +
-					"two skills at each tier.");
+			textPanel.addParagraph("Skill points are used to learn skills. Skills are arranged in four aptitudes - " +
+					"Combat, Leadership, Technology, and Industry. Each aptitude has a number of tiers, you advance to the higher tiers by picking skills from the lower ones.");
 			
 			textPanel.addPara("Skills that affect your piloted ship - all Combat skills, and a few skills in other " +
 					"aptitudes - can be made \"elite\" at the cost of a " + Misc.STORY + " point.",

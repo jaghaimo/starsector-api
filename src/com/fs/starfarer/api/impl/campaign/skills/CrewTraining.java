@@ -24,7 +24,7 @@ public class CrewTraining {
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
 			if (!isCivilian(stats)) {
 				float crBonus = computeAndCacheThresholdBonus(stats, "ct_cr", CR_PERCENT, ThresholdBonusType.OP);
-				stats.getMaxCombatReadiness().modifyFlat(id, crBonus * 0.01f, "Crew training skill");
+				stats.getMaxCombatReadiness().modifyFlat(id, crBonus * 0.01f, "Crew Training skill");
 			}
 		}
 		
@@ -46,7 +46,7 @@ public class CrewTraining {
 			info.addPara("+%s maximum combat readiness for combat ships (maximum: %s)", 0f, hc, hc,
 					"" + (int) crBonus + "%",
 					"" + (int) CR_PERCENT + "%");
-			//addOPThresholdInfo(info, data, stats, OP_THRESHOLD);
+			addOPThresholdInfo(info, data, stats, OP_THRESHOLD);
 		}
 	}
 	public static class Level2 extends BaseSkillEffectDescription implements ShipSkillEffect, FleetTotalSource {

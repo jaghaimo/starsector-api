@@ -87,6 +87,7 @@ public class SpySatDeployment extends HubMissionWithBarEvent {
 		if (!setEntityMissionRef(target, "$ssat_ref")) return false;
 		
 		makeImportant(target, "$ssat_target", Stage.DEPLOY);
+		setMapMarkerNameColor(market.getTextColorForFactionOrPlanet());
 		
 		setStartingStage(Stage.DEPLOY);
 		setSuccessStage(Stage.COMPLETED);

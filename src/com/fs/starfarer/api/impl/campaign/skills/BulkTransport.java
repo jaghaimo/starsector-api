@@ -5,9 +5,9 @@ import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.ShipSkillEffect;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
-import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
@@ -22,7 +22,7 @@ public class BulkTransport {
 	public static float PERSONNEL_CAPACITY_MAX_PERCENT = 50;
 	public static float PERSONNEL_CAPACITY_THRESHOLD = 5000;
 	
-	public static float BURN_BONUS = 1;
+	public static float BURN_BONUS = 2;
 	
 	public static class Level4 extends BaseSkillEffectDescription implements ShipSkillEffect {
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {

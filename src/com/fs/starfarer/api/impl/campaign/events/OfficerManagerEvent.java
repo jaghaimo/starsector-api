@@ -289,9 +289,8 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		if (market == null) return null;
 
 		WeightedRandomPicker<Integer> tierPicker = new WeightedRandomPicker<Integer>();
-		tierPicker.add(0, 25);
-		tierPicker.add(1, 70);
-		tierPicker.add(2, 5);
+		tierPicker.add(0, 60);
+		tierPicker.add(1, 40);
 
 		int tier = tierPicker.pick();
 		
@@ -316,6 +315,9 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		List<String> allSkillIds = Global.getSettings().getSortedSkillIds();
 		for (String skillId : allSkillIds) {
 			SkillSpecAPI skill = Global.getSettings().getSkillSpec(skillId);
+			if (skill.hasTag(Skills.TAG_DEPRECATED)) continue;
+			if (skill.hasTag(Skills.TAG_PLAYER_ONLY)) continue;
+			if (skill.hasTag(Skills.TAG_AI_CORE_ONLY)) continue;
 			if (skill.isAdminSkill()) {
 				picker.add(skillId);
 			}
@@ -335,12 +337,7 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		
 		
 		WeightedRandomPicker<String> personalityPicker = faction.getPersonalityPicker().clone();
-//		personalityPicker.add(Personalities.TIMID, 2f);
-//		personalityPicker.add(Personalities.CAUTIOUS, 2f);
-//		personalityPicker.add(Personalities.STEADY, 2f);
-//		personalityPicker.add(Personalities.AGGRESSIVE, 2f);
-//		personalityPicker.add(Personalities.RECKLESS, 2f);
-		
+
 		String personality = personalityPicker.pick();
 		person.setPersonality(personality);
 		
@@ -404,24 +401,46 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 	}
 	
 	public static PersonAPI createMercInternal(FactionAPI faction, int level, int numElite, boolean allowNonDoctrinePersonality, Random random) {
-		SkillPickPreference pref = SkillPickPreference.GENERIC;
-		float f = (float) Math.random();
-		if (f < 0.05f) {
-			pref = SkillPickPreference.ANY;
-		} else if (f < 0.1f) {
-			pref = SkillPickPreference.PHASE;
-		} else if (f < 0.25f) {
-			pref = SkillPickPreference.CARRIER;
-		}
+//		SkillPickPreference pref = SkillPickPreference.GENERIC;
+//		float f = (float) Math.random();
+//		if (f < 0.05f) {
+//			pref = SkillPickPreference.ANY;
+//		} else if (f < 0.1f) {
+//			pref = SkillPickPreference.PHASE;
+//		} else if (f < 0.25f) {
+//			pref = SkillPickPreference.CARRIER;
+//		}
+		SkillPickPreference pref = SkillPickPreference.ANY;
 		return createOfficer(faction, level, pref, allowNonDoctrinePersonality,
 				null, true, true, numElite, random);
 	}
 	
 	
 	public static enum SkillPickPreference {
-		CARRIER,
-		GENERIC,
-		PHASE,
+		@Deprecated CARRIER,
+		@Deprecated GENERIC,
+		@Deprecated PHASE,
+		
+		/**
+		 * Passing essentially three params using this enum to maintain API backwards compability with 0.95a, sigh.
+		 * It's 4 now, bigger sigh. 
+		 */
+		YES_ENERGY_YES_BALLISTIC_YES_MISSILE_YES_DEFENSE,
+		YES_ENERGY_YES_BALLISTIC_NO_MISSILE_YES_DEFENSE,
+		YES_ENERGY_YES_BALLISTIC_YES_MISSILE_NO_DEFENSE,
+		YES_ENERGY_YES_BALLISTIC_NO_MISSILE_NO_DEFENSE,
+		YES_ENERGY_NO_BALLISTIC_YES_MISSILE_YES_DEFENSE,
+		YES_ENERGY_NO_BALLISTIC_NO_MISSILE_YES_DEFENSE,
+		YES_ENERGY_NO_BALLISTIC_YES_MISSILE_NO_DEFENSE,
+		YES_ENERGY_NO_BALLISTIC_NO_MISSILE_NO_DEFENSE,
+		NO_ENERGY_YES_BALLISTIC_YES_MISSILE_YES_DEFENSE,
+		NO_ENERGY_YES_BALLISTIC_NO_MISSILE_YES_DEFENSE,
+		NO_ENERGY_YES_BALLISTIC_YES_MISSILE_NO_DEFENSE,
+		NO_ENERGY_YES_BALLISTIC_NO_MISSILE_NO_DEFENSE,
+		NO_ENERGY_NO_BALLISTIC_YES_MISSILE_YES_DEFENSE,
+		NO_ENERGY_NO_BALLISTIC_NO_MISSILE_YES_DEFENSE,
+		NO_ENERGY_NO_BALLISTIC_YES_MISSILE_NO_DEFENSE,
+		NO_ENERGY_NO_BALLISTIC_NO_MISSILE_NO_DEFENSE,
 		ANY,
 	}
 	
@@ -556,33 +575,52 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
 		List<String> generic = new ArrayList<String>();
 		
+		boolean energy = pref.name().contains("YES_ENERGY"); // lol
+		boolean ballistic = pref.name().contains("YES_BALLISTIC");
+		boolean missile = pref.name().contains("YES_MISSILE");
+		boolean defense = pref.name().contains("YES_DEFENSE");
+		
+		
 		for (String id : skills) {
 			SkillSpecAPI spec = Global.getSettings().getSkillSpec(id);
-			boolean carrierSkill = spec.hasTag(Skills.TAG_CARRIER);
-			boolean phaseSkill = spec.hasTag(Skills.TAG_PHASE);
-			boolean specSkill = spec.hasTag(Skills.TAG_SPEC);
+//			boolean carrierSkill = spec.hasTag(Skills.TAG_CARRIER);
+//			boolean phaseSkill = spec.hasTag(Skills.TAG_PHASE);
+//			boolean specSkill = spec.hasTag(Skills.TAG_SPEC);
 			
-			boolean preferred = false;
+			boolean energySkill = spec.hasTag(Skills.TAG_ENERGY_WEAPONS);
+			boolean ballisticSkill = spec.hasTag(Skills.TAG_BALLISTIC_WEAPONS);
+			boolean missileSkill = spec.hasTag(Skills.TAG_MISSILE_WEAPONS);
+			boolean defenseSkill = spec.hasTag(Skills.TAG_ACTIVE_DEFENSES);
 			
-			preferred |= pref == SkillPickPreference.ANY;
-			preferred |= pref == SkillPickPreference.CARRIER && carrierSkill;
-			preferred |= pref == SkillPickPreference.PHASE && phaseSkill;
-			preferred |= pref == SkillPickPreference.GENERIC && !phaseSkill && !carrierSkill;
+			boolean preferred = true;
 			
-			if (specSkill && !carrierSkill && !phaseSkill && numSpec >= 1) {
-				preferred = false;
+			if (pref != SkillPickPreference.ANY) {
+				if (!energy && energySkill) preferred = false;
+				if (!ballistic && ballisticSkill) preferred = false;
+				if (!missile && missileSkill) preferred = false;
+				if (!defense && defenseSkill) preferred = false;
 			}
+			
+//			preferred |= pref == SkillPickPreference.ANY;
+//			preferred |= pref == SkillPickPreference.CARRIER && carrierSkill;
+//			preferred |= pref == SkillPickPreference.PHASE && phaseSkill;
+//			preferred |= pref == SkillPickPreference.GENERIC && !phaseSkill && !carrierSkill;
+			
+//			if (specSkill && !carrierSkill && !phaseSkill && numSpec >= 1) {
+//				preferred = false;
+//			}
 			if (spec.hasTag(Skills.TAG_PLAYER_ONLY)) {
 				preferred = false;
 			}
 			
 			if (preferred) {
 				picker.add(id);
-			}
-			
-			if ((!specSkill || numSpec < 1) && !carrierSkill && !phaseSkill) {
+			} else {
 				generic.add(id);
 			}
+			
+			//if ((!specSkill || numSpec < 1) && !carrierSkill && !phaseSkill) {
+			//}
 		}
 		if (picker.isEmpty()) {
 			picker.addAll(generic);

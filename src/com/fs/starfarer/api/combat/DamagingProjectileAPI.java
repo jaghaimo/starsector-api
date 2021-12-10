@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.combat;
 
+import java.util.List;
+
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.loading.ProjectileSpawnType;
@@ -65,10 +67,6 @@ public interface DamagingProjectileAPI extends CombatEntityAPI {
 	float getElapsed();
 	
 	
-	/**
-	 * Do not call for explosions.
-	 * @return
-	 */
 	DamageAPI getDamage();
 	
 	boolean isFromMissile();
@@ -103,5 +101,6 @@ public interface DamagingProjectileAPI extends CombatEntityAPI {
 	 * @return
 	 */
 	Vector2f getTailEnd();
+	List<CombatEntityAPI> getDamagedAlready();
 	
 }

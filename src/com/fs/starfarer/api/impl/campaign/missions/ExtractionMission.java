@@ -49,7 +49,7 @@ public class ExtractionMission extends HubMissionWithBarEvent {
 	@Override
 	protected boolean create(MarketAPI createdAt, boolean barEvent) {
 		//genRandom = Misc.random;
-		
+
 		if (Factions.PIRATES.equals(createdAt.getFaction().getId())) return false;
 		
 		if (barEvent) {

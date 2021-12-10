@@ -8,8 +8,10 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class DefectiveManufactory extends BaseHullMod {
 
-	public static float SPEED_REDUCTION = 0.33333333f;
-	public static float DAMAGE_INCREASE = 0.5f;
+	//public static float SPEED_REDUCTION = 0.33333333f;
+	//public static float DAMAGE_INCREASE = 0.5f;
+	public static float SPEED_REDUCTION = 0.25f;
+	public static float DAMAGE_INCREASE = 0.25f;
 	
 	
 	public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
@@ -23,7 +25,8 @@ public class DefectiveManufactory extends BaseHullMod {
 		stats.getShieldDamageTakenMult().modifyPercent(id, DAMAGE_INCREASE * 100f * effect);
 		stats.getHullDamageTakenMult().modifyPercent(id, DAMAGE_INCREASE * 100f * effect);
 		
-		fighter.setHeavyDHullOverlay();
+		//fighter.setHeavyDHullOverlay();
+		fighter.setLightDHullOverlay();
 	}
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {

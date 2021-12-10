@@ -6,8 +6,8 @@ import java.util.Random;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
-import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry.IndustryTooltipMode;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
@@ -117,7 +117,8 @@ public class DisruptIndustryRaidObjectivePluginImpl extends BaseGroundRaidObject
 		source.setDisrupted(already + dur);
 		addedDisruptionDays = dur;
 		
-		text.addPara("The raid was successful in disrupting " + source.getNameForModifier() + " operations." +
+		//text.addPara("The raid was successful in disrupting " + source.getNameForModifier() + " operations." +
+		text.addPara("The raid was successful in disrupting " + source.getCurrentName() + " operations." +
 				" It will take at least %s days for normal operations to resume.",
 				Misc.getHighlightColor(), "" + (int) Math.round(source.getDisruptedDays()));
 		

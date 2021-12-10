@@ -21,6 +21,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AbilityPlugin;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
@@ -28,6 +29,7 @@ import com.fs.starfarer.api.impl.campaign.abilities.TransponderAbility;
 import com.fs.starfarer.api.impl.campaign.ids.Abilities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.rulecmd.DumpMemory;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.loading.Description;
 import com.fs.starfarer.api.loading.Description.Type;
@@ -133,12 +135,36 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 	public void optionSelected(String text, Object optionData) {
 		if (optionData == null) return;
 		
+		if (DumpMemory.OPTION_ID == optionData) {
+			Map<String, MemoryAPI> memoryMap = new HashMap<String, MemoryAPI>();
+			MemoryAPI memory = dialog.getInteractionTarget().getMemory();
+			
+			memoryMap.put(MemKeys.LOCAL, memory);
+			if (dialog.getInteractionTarget().getFaction() != null) {
+				memoryMap.put(MemKeys.FACTION, dialog.getInteractionTarget().getFaction().getMemory());
+			} else {
+				memoryMap.put(MemKeys.FACTION, Global.getFactory().createMemory());
+			}
+			memoryMap.put(MemKeys.GLOBAL, Global.getSector().getMemory());
+			memoryMap.put(MemKeys.PLAYER, Global.getSector().getCharacterData().getMemory());
+			
+			if (dialog.getInteractionTarget().getMarket() != null) {
+				memoryMap.put(MemKeys.MARKET, dialog.getInteractionTarget().getMarket().getMemory());
+			}
+			new DumpMemory().execute(null, dialog, null, memoryMap);
+			return;
+		} else if (DevMenuOptions.isDevOption(optionData)) {
+			DevMenuOptions.execute(dialog, (String) optionData);
+			return;
+		}
+		
 		OptionId option = (OptionId) optionData;
 		
 		if (text != null) {
 			//textPanel.addParagraph(text, Global.getSettings().getColor("buttonText"));
 			dialog.addOptionSelectedText(option);
 		}
+		
 		
 		boolean unstable = jumpPoint.getMemoryWithoutUpdate().getBoolean(UNSTABLE_KEY);
 		boolean stabilizing = jumpPoint.getMemoryWithoutUpdate().getExpire(UNSTABLE_KEY) > 0;
@@ -185,7 +211,11 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 			
 			if (unstable) {
 				if (stabilizing && !canTransverseJump) {
-					addText("This jump-point is stabilizing and should be usable within a day at the most.");
+					if (tutorialInProgress) {
+						addText("This jump-point is stabilizing and should be usable within a day at the most.");
+					} else {
+						addText("This jump-point is stabilizing but will not be usable for some time.");
+					}
 				} else {
 					addText("This jump-point is unstable and can not be used.");
 				}
@@ -498,6 +528,8 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 				optionSelected(null, OptionId.JUMP_1);
 			}
 		}
+		
+		DevMenuOptions.addOptions(dialog);
 	}
 	
 	

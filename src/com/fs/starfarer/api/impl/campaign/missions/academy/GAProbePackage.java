@@ -58,9 +58,9 @@ public class GAProbePackage extends GABaseMission {
 		if (!setGlobalReference("$gaProbe_ref")) {
 			return false;
 		}
-		
+
 		//genRandom = Misc.random;
-		
+
 		pickDepartmentAllTags(GADepartments.SCIENCE, GADepartments.WEIRD);
 
 		requireSystemTags(ReqMode.NOT_ANY, Tags.THEME_UNSAFE, Tags.THEME_CORE);
@@ -75,18 +75,18 @@ public class GAProbePackage extends GABaseMission {
 		preferSystemNotBlackHole();
 		preferSystemUnexplored();
 		preferTerrainInDirectionOfOtherMissions();
-		
+
 		object = pickTerrain();
-		
+
 		if (object == null) {
 			return false;
 		}
-		
+
 		system = object.getStarSystem();
-		
-//		PROB_IT_BLEW_UP = 1f;
-//		PROB_PATHERS = 1f;
-		
+
+		//		PROB_IT_BLEW_UP = 1f;
+		//		PROB_PATHERS = 1f;
+
 		if (rollProbability(PROB_IT_BLEW_UP)) {
 			variation = Variation.IT_BLEW_UP;
 		} else if (rollProbability(PROB_MISSING)) {
@@ -100,22 +100,22 @@ public class GAProbePackage extends GABaseMission {
 		//variation = Variation.BASIC;
 		//variation = Variation.IT_BLEW_UP;
 		//variation = Variation.PACKAGE_MISSING;
-		
+
 		setStartingStage(Stage.GO_TO_PROBE);
 		addSuccessStages(Stage.COMPLETED);
 		addFailureStages(Stage.FAILED);
-		
+
 		SectorEntityToken probe = spawnEntity(Entities.GENERIC_PROBE, new LocData(object));
 		if (probe == null) return false;
-		
+
 		probe.setId("gaProbe_probe");
 		makeImportant(probe, "$gaProbe_probe", Stage.GO_TO_PROBE);
 		makeImportant(getPerson(), "$gaProbe_returnHere", Stage.RETURN_TO_ACADEMY);
-		
+
 		connectWithGlobalFlag(Stage.GO_TO_PROBE, Stage.FIND_SCAVENGER, "$gaProbe_scavengerTookIt");
 		setStageOnGlobalFlag(Stage.RETURN_TO_ACADEMY, "$gaProbe_canReturn");
 		connectWithGlobalFlag(Stage.RETURN_TO_ACADEMY, Stage.COMPLETED, "$gaProbe_finished");
-		
+
 		if (WITH_TIME_LIMIT) {
 			setTimeLimit(Stage.FAILED, MISSION_DAYS, system, Stage.RETURN_TO_ACADEMY);
 		}
@@ -126,7 +126,7 @@ public class GAProbePackage extends GABaseMission {
 			hazardPay = getCreditsReward() / 2;
 			spawnDebrisField(DEBRIS_SMALL, DEBRIS_DENSE, new LocData(probe, false));
 			spawnShipGraveyard(Factions.LUDDIC_PATH, 3, 5, new LocData(probe, false));
-		
+
 			if (rollProbability(PROB_PATHERS)) {
 				beginWithinHyperspaceRangeTrigger(object, 1f, false, Stage.GO_TO_PROBE);
 				triggerCreateFleet(FleetSize.TINY, FleetQuality.VERY_LOW, Factions.LUDDIC_PATH, FleetTypes.PATROL_SMALL, object);
@@ -145,34 +145,35 @@ public class GAProbePackage extends GABaseMission {
 				endTrigger();
 			}
 		}
-		
-		 if (variation == Variation.SCAVENGER) {
+
+		if (variation == Variation.SCAVENGER) {
 			beginWithinHyperspaceRangeTrigger(object, 1f, false, Stage.GO_TO_PROBE);
 			triggerCreateFleet(FleetSize.MEDIUM, FleetQuality.LOWER, Factions.SCAVENGERS, FleetTypes.SCAVENGER_MEDIUM, system);
 			triggerAutoAdjustFleetStrengthMajor();
 			triggerSetFleetFaction(Factions.INDEPENDENT);
-			
+
 			triggerMakeLowRepImpact();
 			triggerFleetSetAvoidPlayerSlowly();
 			triggerMakeFleetIgnoredByOtherFleets();
-			
+
 			triggerPickLocationAtClosestToEntityJumpPoint(system, probe);
 			triggerSetEntityToPickedJumpPoint();
 			triggerPickLocationAroundEntity(5000);
-			
+
 			// so the flag is there prior to the FIND_SCAVENGER stage
 			triggerSpawnFleetAtPickedLocation("$gaProbe_scavenger", null);
-			
+
 			triggerFleetSetTravelActionText("exploring system");
 			triggerFleetSetPatrolActionText("preparing to leave system");
 			triggerOrderFleetPatrolEntity(false);
-			
+
 			triggerFleetMakeImportant("$gaProbe_scavenger", Stage.FIND_SCAVENGER);
 			triggerFleetAddDefeatTrigger("gaProbeScavengerDefeated");
 			endTrigger();
-		 }
-		
-		
+		}
+
+		setMapMarkerNameColorBasedOnStar(system);
+
 		return true;
 	}
 	
@@ -239,9 +240,9 @@ public class GAProbePackage extends GABaseMission {
 	
 	protected String getObjectNameWithType() {
 		if (hasSpecialName(object)) {
-			return getTerrainNameAOrAn(object) + " " + getTerrainType(object) + " called " + getTerrainName(object);
+			return getTerrainTypeAOrAn(object) + " " + getTerrainType(object) + " called " + getTerrainName(object);
 		} else {
-			return getTerrainNameAOrAn(object) + " " + getTerrainType(object);
+			return getTerrainTypeAOrAn(object) + " " + getTerrainType(object);
 		}
 	}
 	

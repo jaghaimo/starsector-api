@@ -51,6 +51,9 @@ public class DModManager {
 	
 	public static int reduceNextDmodsBy = 0;
 	
+	/**
+	 * This is the d-mods post combat method.
+	 */
 	public static void addDMods(FleetMemberData data, boolean own, CampaignFleetAPI recoverer, Random random) {
 		addDMods(data.getMember(), data.getStatus() == Status.DESTROYED, own, recoverer, random);
 	}
@@ -101,7 +104,8 @@ public class DModManager {
 		if (variant.getHullSpec().getFighterBays() > 0) {
 			potentialMods.addAll(getModsWithTags(Tags.HULLMOD_FIGHTER_BAY_DAMAGE));
 		}
-		if (variant.getHullSpec().getDefenseType() == ShieldType.PHASE) {
+		//if (variant.getHullSpec().getDefenseType() == ShieldType.PHASE) {
+		if (variant.getHullSpec().isPhase()) {
 			potentialMods.addAll(getModsWithTags(Tags.HULLMOD_DAMAGE_PHASE));
 		}
 		
@@ -121,8 +125,9 @@ public class DModManager {
 		reduction += reduceNextDmodsBy;
 		reduceNextDmodsBy = 0;
 		if (recoverer != null) {
-			reduction = (int) recoverer.getStats().getDynamic().getValue(Stats.SHIP_DMOD_REDUCTION, 0);
-			reduction = random.nextInt(reduction + 1);
+			int extra = (int) recoverer.getStats().getDynamic().getValue(Stats.SHIP_DMOD_REDUCTION, 0);
+			extra = random.nextInt(reduction + 1);
+			reduction += extra;
 		}
 		
 		num -= reduction;
@@ -198,7 +203,8 @@ public class DModManager {
 		//if (variant.getHullSpec().getFighterBays() > 0 || variant.isCarrier()) {			
 			potentialMods.addAll(getModsWithTags(Tags.HULLMOD_FIGHTER_BAY_DAMAGE));
 		}
-		if (variant.getHullSpec().getDefenseType() == ShieldType.PHASE) {
+		//if (variant.getHullSpec().getDefenseType() == ShieldType.PHASE) {
+		if (variant.getHullSpec().isPhase()) {
 			potentialMods.addAll(getModsWithTags(Tags.HULLMOD_DAMAGE_PHASE));
 		}
 		
@@ -238,7 +244,8 @@ public class DModManager {
 	public static void removeUnsuitedMods(ShipVariantAPI variant, List<HullModSpecAPI> mods) {
 		boolean auto = variant.hasHullMod(HullMods.AUTOMATED);
 		boolean civ = variant.getHullSpec().getHints().contains(ShipTypeHints.CIVILIAN);
-		boolean phase = variant.getHullSpec().getDefenseType() == ShieldType.PHASE;
+		//boolean phase = variant.getHullSpec().getDefenseType() == ShieldType.PHASE;
+		boolean phase = variant.getHullSpec().isPhase();
 		boolean peakTime = variant.getHullSpec().getNoCRLossTime() < 10000;
 		boolean shields = variant.getHullSpec().getDefenseType() == ShieldType.FRONT || 
 						  variant.getHullSpec().getDefenseType() == ShieldType.OMNI; 

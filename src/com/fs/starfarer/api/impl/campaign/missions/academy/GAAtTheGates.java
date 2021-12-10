@@ -126,8 +126,8 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 		ALARM,
 	}
 	
-	public static float KANTA_RAID_DIFFICULTY = 100f;
-	public static float COTTON_RAID_DIFFICULTY = 100f;
+	public static float KANTA_RAID_DIFFICULTY = 1000f;
+	public static float COTTON_RAID_DIFFICULTY = 1000f;
 	
 	@Override
 	protected boolean create(MarketAPI createdAt, boolean barEvent) {
@@ -268,6 +268,7 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 		makeImportant(kantasDen, "$gaATG_talkToKanta", Stage.TALK_TO_KANTA);
 		makeImportant(epiphany, "$gaATG_findingLoke", Stage.FINDING_LOKE);
 		makeImportant(kanta.getMarket(), null, Stage.RETURN_TO_KANTA);
+		makeImportant(magecGate, null, Stage.GO_TO_MAGEC_GATE);
 		makeImportant(baird.getMarket(), null, Stage.ZAL_TO_GALATIA);
 		
 		//setStageOnGlobalFlag(Stage.TALK_TO_COUREUSE, "$gaATG_goTalkToCoureuse");
@@ -430,7 +431,25 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 	}
 	
 	@Override
+	public void advance(float amount) {
+		super.advance(amount);
+		if ( currentStage == Stage.TALK_TO_COUREUSE || 
+				 currentStage == Stage.TALK_TO_YARIBAY ||
+				 currentStage == Stage.TALK_TO_HEGEMON || 
+				 currentStage == Stage.DO_SCANS) { 
+			int scanned = GateEntityPlugin.getNumGatesScanned();
+			if (scanned >= 6 && 
+					!Global.getSector().getMemoryWithoutUpdate().contains("$gaATG_scannedSixGates")) { // failsafe; apparently possible to not have this be set?
+				Global.getSector().getMemoryWithoutUpdate().set("$gaATG_scannedSixGates", true);
+				checkStageChangesAndTriggers(null, null);
+			}
+		}
+	}
+	
+	@Override
 	public void addDescriptionForNonEndStage(TooltipMakerAPI info, float width, float height) {
+		
+		
 		
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
@@ -926,7 +945,7 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 			//triggerFleetSetPatrolActionText("guarding");
 			//triggerMakeFleetIgnoreOtherFleets(); // actually yes, chase the player. Or anyone else, who cares.
 			triggerMakeFleetGoAwayAfterDefeat();
-			triggerFleetSetPatrolLeashRange(30f); // very close.
+			triggerFleetSetPatrolLeashRange(60f); // very close.
 			triggerSetFleetMissionRef("$gaATG_ref"); // so they can be made unimportant
 			//triggerFleetAddDefeatTrigger("GAATGpatherScanFleetDefeated"); // don't need it - they won't block the gate except via hostility.
 			triggerFleetSetName("Ambush Fleet");

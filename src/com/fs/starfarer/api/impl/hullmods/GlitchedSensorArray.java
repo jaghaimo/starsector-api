@@ -7,7 +7,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class GlitchedSensorArray extends BaseHullMod {
-	public static final float RANGE_MULT = 0.85f;
+	public static final float RANGE_MULT = 0.9f;
 	public static final float SENSOR_MULT = 0.5f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {

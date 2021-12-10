@@ -23,7 +23,7 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class MineStrikeStats extends BaseShipSystemScript implements MineStrikeStatsAIInfoProvider {
 	
-	protected static float MINE_RANGE = 1500f;
+	protected static float MINE_RANGE = 1000f;
 	
 	public static final float MIN_SPAWN_DIST = 75f;
 	public static final float MIN_SPAWN_DIST_FRIGATE = 110f;
@@ -244,8 +244,15 @@ public class MineStrikeStats extends BaseShipSystemScript implements MineStrikeS
 //			Vector2f otherLoc = other.getLocation();
 //			float otherR = other.getCollisionRadius();
 			
+//			if (other.isPiece()) {
+//				System.out.println("ewfewfewfwe");
+//			}
 			Vector2f otherLoc = other.getShieldCenterEvenIfNoShield();
 			float otherR = other.getShieldRadiusEvenIfNoShield();
+			if (other.isPiece()) {
+				otherLoc = other.getLocation();
+				otherR = other.getCollisionRadius();
+			}
 			
 			
 //			float dist = Misc.getDistance(loc, other.getLocation());

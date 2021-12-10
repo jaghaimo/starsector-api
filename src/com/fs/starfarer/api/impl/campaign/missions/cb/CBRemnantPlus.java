@@ -48,11 +48,15 @@ public class CBRemnantPlus extends BaseCustomBountyCreator {
 	}
 	
 	@Override
+	public String getIconName() {
+		return Global.getSettings().getSpriteName("campaignMissions", "remnant_bounty");
+	}
+	
+	@Override
 	public CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage) {
 		CustomBountyData data = new CustomBountyData();
 		data.difficulty = difficulty;
 		
-		mission.setIconName("campaignMissions", "remnant_bounty");
 		//mission.requireSystem(this);
 		mission.requireSystemTags(ReqMode.NOT_ANY, Tags.THEME_CORE);
 		mission.preferSystemTags(ReqMode.ANY, Tags.HAS_CORONAL_TAP);

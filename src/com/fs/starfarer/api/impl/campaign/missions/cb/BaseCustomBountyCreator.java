@@ -325,6 +325,9 @@ public class BaseCustomBountyCreator implements CustomBountyCreator {
 	public void updateInteractionData(HubMissionWithBarEvent mission, CustomBountyData data) {
 		
 	}
+	public String getIconName() {
+		return null;
+	}
 
 }
 

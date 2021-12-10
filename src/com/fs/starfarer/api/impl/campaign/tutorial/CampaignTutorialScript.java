@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.impl.campaign.tutorial;
 
+import org.lwjgl.util.vector.Vector2f;
+
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
@@ -135,6 +137,16 @@ public class CampaignTutorialScript implements EveryFrameScript {
 		return false;
 	}
 	
+	protected void leashToStartLocation() {
+		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
+		float dist = Misc.getDistance(pf.getLocation(), debrisField.getLocation());
+		if (dist > 1500) {
+			Vector2f loc = debrisField.getLocation();
+			pf.setLocation(loc.x, loc.y);
+			Global.getSector().getCampaignUI().showMessageDialog("Please follow the instructions near the bottom of the screen and quicksave to advance the tutorial.");
+		}
+	}
+	
 	protected boolean charTabWasOpen = false;
 	public void advance(float amount) {
 		if (Global.getSector().isInFastAdvance()) return;
@@ -209,6 +221,9 @@ public class CampaignTutorialScript implements EveryFrameScript {
 			return;
 		}
 		
+		if (quickSaveFrom == CampaignTutorialStage.SAVE_NAG_1) {
+			leashToStartLocation();
+		}
 		if (quickSaveNag(CampaignTutorialStage.SAVE_NAG_1, CampaignTutorialStage.SHOW_PIRATE_DIALOG, 0)) {
 			return;
 		}
@@ -236,8 +251,10 @@ public class CampaignTutorialScript implements EveryFrameScript {
 				
 				long xp = Global.getSector().getPlayerPerson().getStats().getXP();
 				long add = Global.getSettings().getLevelupPlugin().getXPForLevel(2) - xp;
-				Global.getSector().getPlayerPerson().getStats().addPoints(1);
-				Global.getSector().getPlayerPerson().getStats().addXP(add);
+				if (add > 0) {
+					Global.getSector().getPlayerPerson().getStats().addPoints(1);
+					Global.getSector().getPlayerPerson().getStats().addXP(add);
+				}
 			}
 			return;
 		}

@@ -14,6 +14,7 @@ import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
 import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.ui.ButtonAPI.UICheckboxSize;
 
 
 
@@ -211,6 +212,18 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 				  int[] quantities);
 	void showCost(Color color, Color dark, float pad, String[] res, int[] quantities);
 	UIComponentAPI getPrev();
+	ButtonAPI addAreaCheckbox(String text, Object data, Color base, Color bg, Color bright, float width, float height,
+			float pad, boolean leftAlign);
+	UIComponentAPI addSkillPanel(PersonAPI person, float pad);
+	float computeStringWidth(String in);
+	TextFieldAPI addTextField(float width, float pad);
+	TextFieldAPI addTextField(float width, String font, float pad);
+	TextFieldAPI addTextField(float width, float height, String font, float pad);
+	ButtonAPI addCheckbox(float width, float height, String text, UICheckboxSize size, float pad);
+	ButtonAPI addCheckbox(float width, float height, String text, String font, Color textColor, UICheckboxSize size,
+			float pad);
+	void setAreaCheckboxFont(String areaCheckboxFont);
+	void setAreaCheckboxFontDefault();
 	
 	
 	

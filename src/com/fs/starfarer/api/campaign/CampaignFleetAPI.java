@@ -289,6 +289,7 @@ public interface CampaignFleetAPI extends SectorEntityToken, FleetOrStubAPI {
 	boolean getGoSlowStop();
 	void goSlowOneFrame();
 	boolean getGoSlowOneFrame();
+	Vector2f getVelocityFromMovementModule();
 }
 
 

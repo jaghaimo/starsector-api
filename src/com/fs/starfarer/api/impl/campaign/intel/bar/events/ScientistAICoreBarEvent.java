@@ -192,11 +192,28 @@ public class ScientistAICoreBarEvent extends BaseGetCommodityBarEvent {
 				"I won't be held back by small-minds like all of you!\" Most of the other patrons pretend extreme " +
 				"interest in their drinks, though at least one looses a mocking laugh.";
 	}
-
 	
 	protected boolean showCargoCap() {
 		return false;
 	}
+
+	@Override
+	protected void showTotalAndOptions() {
+		super.showTotalAndOptions();
+		
+		// can't actually show the location of the cache pre-accept because it's only
+		// generated once the mission is accepted
+//		String icon = Global.getSettings().getCommoditySpec(Commodities.ALPHA_CORE).getIconName();
+//		String text = null;
+//		Set<String> tags = new LinkedHashSet<String>();
+//		tags.add(Tags.INTEL_MISSIONS);
+//		
+//		dialog.getVisualPanel().showMapMarker(getDestination().getPrimaryEntity(), 
+//					"Destination: " + getDestination().getName(), getDestination().getFaction().getId(), 
+//					true, icon, text, tags);
+	}
+	
+	
 }
 
 

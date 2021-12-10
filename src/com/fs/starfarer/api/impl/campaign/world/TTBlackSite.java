@@ -323,10 +323,13 @@ public class TTBlackSite {
 		person.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 2);
 		person.getStats().setSkillLevel(Skills.GUNNERY_IMPLANTS, 2);
 		person.getStats().setSkillLevel(Skills.ENERGY_WEAPON_MASTERY, 2);
-		person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 2);
-		person.getStats().setSkillLevel(Skills.RANGED_SPECIALIZATION, 2);
+		person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 2);
+		//person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 2);
+		//person.getStats().setSkillLevel(Skills.RANGED_SPECIALIZATION, 2);
+		person.getStats().setSkillLevel(Skills.POLARIZED_ARMOR, 2);
 		person.getStats().setSkillLevel(Skills.MISSILE_SPECIALIZATION, 2);
-		person.getStats().setSkillLevel(Skills.PHASE_MASTERY, 2);
+		//person.getStats().setSkillLevel(Skills.PHASE_MASTERY, 2);
+		person.getStats().setSkillLevel(Skills.FIELD_MODULATION, 2);
 		person.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 2);
 		
 		person.getStats().setSkillLevel(Skills.NAVIGATION, 1);

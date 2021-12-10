@@ -3,6 +3,8 @@ package com.fs.starfarer.api.impl.campaign;
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -30,6 +32,7 @@ import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.PlayerMarketTransaction;
+import com.fs.starfarer.api.campaign.PlayerMarketTransaction.ShipSaleInfo;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
@@ -49,10 +52,13 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AdminData;
 import com.fs.starfarer.api.characters.OfficerDataAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.characters.SkillsChangeRemoveExcessOPEffect;
+import com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin.DerelictShipData;
-import com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality;
+import com.fs.starfarer.api.impl.campaign.econ.impl.InstallableItemEffect;
+import com.fs.starfarer.api.impl.campaign.econ.impl.ItemEffectsRepo;
 import com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.MarketFilter;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
@@ -60,7 +66,9 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Drops;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.MessageIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.ProductionReportIntel;
@@ -77,9 +85,13 @@ import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldSource;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager.CustomStreamRevealer;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamSegment;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.loading.WeaponSpecAPI;
+import com.fs.starfarer.api.util.CollisionGridUtil;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -126,6 +138,96 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 		}
 		
 		RouteManager.getInstance().advance(amount);
+		
+		Misc.computeCoreWorldsExtent();
+		
+		//updateSlipstreamVisibility(amount);
+	}
+	
+	protected transient CampaignTerrainAPI currentStream = null;
+	public void updateSlipstreamVisibility(float amount) {
+		float sw = Global.getSettings().getFloat("sectorWidth");
+		float sh = Global.getSettings().getFloat("sectorHeight");
+		float minCellSize = 12000f;
+		float cellSize = Math.max(minCellSize, sw * 0.05f);
+		CollisionGridUtil grid = new CollisionGridUtil(-sw/2f, sw/2f, -sh/2f, sh/2f, cellSize);
+		Set<String> seenSystems = new LinkedHashSet<String>();
+		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
+			if (market.isHidden()) continue;
+			if (market.getContainingLocation() == null) continue;
+			if (!market.getContainingLocation().isHyperspace()) {
+				String systemId = market.getContainingLocation().getId();
+				if (seenSystems.contains(systemId)) continue;
+				seenSystems.add(systemId);
+			}
+			//if (market.hasIndustry(Industries.SPACEPORT)) continue;
+			Industry spaceport = market.getIndustry(Industries.SPACEPORT);
+			if (spaceport == null || !spaceport.isFunctional()) continue;
+			
+			Vector2f loc = market.getLocationInHyperspace();
+			float size = 10000f;
+			if (!market.getContainingLocation().hasTag(Tags.THEME_CORE)) {
+				size = 10000f;
+			}
+			//size = 200000;
+//			if (market.getName().equals("Tartessus")) {
+//				System.out.println("ewfwefe");
+//			}
+			CustomStreamRevealer revealer = new CustomStreamRevealer(loc, size);
+			grid.addObject(revealer, loc, size * 2f, size * 2f);
+		}
+		
+		//System.out.println("BEGIN");
+		float maxDist = 0f;
+		List<CampaignTerrainAPI> terrainList = Global.getSector().getHyperspace().getTerrainCopy();
+		boolean processNext = false;
+		for (CampaignTerrainAPI terrain : terrainList) {
+			if (terrain.getPlugin() instanceof SlipstreamTerrainPlugin2) {
+				boolean process = false;
+				if (currentStream == null || processNext) {
+					process = true;
+				} else if (currentStream == terrain) {
+					processNext = true;
+				}
+				
+				if (!process) continue;
+				
+				currentStream = terrain;
+				if (terrainList.indexOf(terrain) == terrainList.size() - 1) {
+					currentStream = null;
+				}
+				//System.out.println("Processing: " + terrain.getId());
+				SlipstreamTerrainPlugin2 stream = (SlipstreamTerrainPlugin2) terrain.getPlugin();
+				for (SlipstreamSegment curr : stream.getSegments()) {
+					if (curr.discovered) continue;
+					Iterator<Object> iter = grid.getCheckIterator(curr.loc, curr.width / 2f, curr.width / 2f);
+					//Iterator<Object> iter = grid.getCheckIterator(curr.loc, 100f, 100f);
+					while (iter.hasNext()) {
+						Object obj = iter.next();
+						if (obj instanceof CustomStreamRevealer) {
+							CustomStreamRevealer rev = (CustomStreamRevealer) obj;
+							Vector2f loc = rev.loc;
+							float radius = rev.radius;
+							
+							float dist = Misc.getDistance(loc, curr.loc);
+							if (dist > maxDist) {
+								maxDist = dist;
+//								if (dist >= 32500) {
+//									System.out.println("Rev loc: " + rev.loc);
+//									//grid.getCheckIterator(curr.loc, 100f, 100f);
+//								}
+							}
+							if (dist < radius) {
+								curr.discovered = true;
+								break;
+							}
+						}
+					}
+				}
+				break;
+			}
+		}
+		//System.out.println("Max dist: " + maxDist);
 	}
 	
 	
@@ -178,6 +280,15 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 	public void reportPlayerMarketTransaction(PlayerMarketTransaction transaction) {
 		super.reportPlayerMarketTransaction(transaction);
 		
+		for (ShipSaleInfo info : transaction.getShipsBought()) {
+			FleetMemberAPI member = info.getMember();
+			if (!member.getVariant().hasTag(Tags.VARIANT_ALLOW_EXCESS_OP_ETC)){ 
+				SkillsChangeRemoveExcessOPEffect.clampOP(member, Global.getSector().getPlayerStats());
+				SkillsChangeRemoveVentsCapsEffect.clampNumVentsAndCaps(member, Global.getSector().getPlayerStats());
+			}
+		}
+
+		
 		
 		SubmarketAPI submarket = transaction.getSubmarket();
 		MarketAPI market = transaction.getMarket();
@@ -192,8 +303,16 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 				
 				SpecialItemData data = stack.getSpecialDataIfSpecial();
 				
+				InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(data.getId());
 				for (Industry ind : market.getIndustries()) {
 					if (ind.wantsToUseSpecialItem(data)) {
+						if (effect != null) {
+							List<String> unmet = effect.getUnmetRequirements(ind);
+							if (unmet != null && !unmet.isEmpty()) {
+								continue;
+							}
+						}
+						
 						if (ind.getSpecialItem() != null) { // upgrade, put item into cargo
 							cargo.addItems(CargoItemType.SPECIAL, ind.getSpecialItem(), 1);
 						}
@@ -767,7 +886,9 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 		float quality = 0f;
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (!market.isPlayerOwned()) continue;
-			quality = Math.max(quality, ShipQuality.getShipQuality(market, Factions.PLAYER));
+			//quality = Math.max(quality, ShipQuality.getShipQuality(market, Factions.PLAYER));
+			quality = market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).computeEffective(0f);
+			quality += market.getStats().getDynamic().getMod(Stats.FLEET_QUALITY_MOD).computeEffective(0f);
 		}
 		quality -= Global.getSector().getFaction(Factions.PLAYER).getDoctrine().getShipQualityContribution();
 		quality += 4f * Global.getSettings().getFloat("doctrineFleetQualityPerPoint");

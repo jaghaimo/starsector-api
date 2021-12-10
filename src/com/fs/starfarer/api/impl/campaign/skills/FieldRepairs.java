@@ -16,63 +16,64 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
 public class FieldRepairs {
 	
-//	public static final float MIN_HULL = 20f;
-//	public static final float MAX_HULL = 40f;
-//	
-//	public static final float MIN_CR = 20f;
-//	public static final float MAX_CR = 40f;
+	public static final float MIN_HULL = 30f;
+	public static final float MAX_HULL = 40f;
 	
-	public static final float REPAIR_RATE_BONUS = 100f;
-	public static final float INSTA_REPAIR_PERCENT = 50f;
-	public static final float DMOD_REDUCTION = 2f;
+	public static final float MIN_CR = 30f;
+	public static final float MAX_CR = 40f;
+	
+	public static final float REPAIR_RATE_BONUS = 50f;
+	public static final float INSTA_REPAIR_PERCENT = 25f;
+	//public static final float DMOD_REDUCTION = 2f;
 
-//	public static class Level1 implements FleetStatsSkillEffect {
-//		public void apply(MutableFleetStatsAPI stats, String id, float level) {
-//			stats.getDynamic().getMod(Stats.RECOVERED_HULL_MIN).modifyFlat(id, MIN_HULL * 0.01f);
-//			stats.getDynamic().getMod(Stats.RECOVERED_HULL_MAX).modifyFlat(id, MAX_HULL * 0.01f);
-//		}
-//		
-//		public void unapply(MutableFleetStatsAPI stats, String id) {
-//			stats.getDynamic().getMod(Stats.RECOVERED_HULL_MIN).unmodify(id);
-//			stats.getDynamic().getMod(Stats.RECOVERED_HULL_MAX).unmodify(id);
-//		}
-//		
-//		public String getEffectDescription(float level) {
-//			return "Recovered ships start with " + (int) MIN_HULL + "-" + (int)MAX_HULL + "% hull integrity";
-//		}
-//		
-//		public String getEffectPerLevelDescription() {
-//			return null;
-//		}
-//		
-//		public ScopeDescription getScopeDescription() {
-//			return ScopeDescription.FLEET;
-//		}
-//	}
-//	
-//	public static class Level1B implements FleetStatsSkillEffect {
-//		public void apply(MutableFleetStatsAPI stats, String id, float level) {
-//			stats.getDynamic().getMod(Stats.RECOVERED_CR_MIN).modifyFlat(id, MIN_CR * 0.01f);
-//			stats.getDynamic().getMod(Stats.RECOVERED_CR_MAX).modifyFlat(id, MAX_CR * 0.01f);
-//		}
-//		
-//		public void unapply(MutableFleetStatsAPI stats, String id) {
-//			stats.getDynamic().getMod(Stats.RECOVERED_CR_MIN).unmodify(id);
-//			stats.getDynamic().getMod(Stats.RECOVERED_CR_MAX).unmodify(id);
-//		}
-//		
-//		public String getEffectDescription(float level) {
-//			return "Recovered ships start with " + (int) MIN_CR + "-" + (int)MAX_CR + "% combat readiness";
-//		}
-//		
-//		public String getEffectPerLevelDescription() {
-//			return null;
-//		}
-//		
-//		public ScopeDescription getScopeDescription() {
-//			return ScopeDescription.FLEET;
-//		}
-//	}
+	
+	public static class Level5A implements FleetStatsSkillEffect {
+		public void apply(MutableFleetStatsAPI stats, String id, float level) {
+			stats.getDynamic().getMod(Stats.RECOVERED_HULL_MIN).modifyFlat(id, MIN_HULL * 0.01f);
+			stats.getDynamic().getMod(Stats.RECOVERED_HULL_MAX).modifyFlat(id, MAX_HULL * 0.01f);
+		}
+		
+		public void unapply(MutableFleetStatsAPI stats, String id) {
+			stats.getDynamic().getMod(Stats.RECOVERED_HULL_MIN).unmodify(id);
+			stats.getDynamic().getMod(Stats.RECOVERED_HULL_MAX).unmodify(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			return "Recovered ships start with " + (int) MIN_HULL + "-" + (int)MAX_HULL + "% hull integrity";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.FLEET;
+		}
+	}
+	
+	public static class Level5B implements FleetStatsSkillEffect {
+		public void apply(MutableFleetStatsAPI stats, String id, float level) {
+			stats.getDynamic().getMod(Stats.RECOVERED_CR_MIN).modifyFlat(id, MIN_CR * 0.01f);
+			stats.getDynamic().getMod(Stats.RECOVERED_CR_MAX).modifyFlat(id, MAX_CR * 0.01f);
+		}
+		
+		public void unapply(MutableFleetStatsAPI stats, String id) {
+			stats.getDynamic().getMod(Stats.RECOVERED_CR_MIN).unmodify(id);
+			stats.getDynamic().getMod(Stats.RECOVERED_CR_MAX).unmodify(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			return "Recovered ships start with " + (int) MIN_CR + "-" + (int)MAX_CR + "% combat readiness";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.FLEET;
+		}
+	}
 	
 //	public static class Level1 implements CharacterStatsSkillEffect {
 //		public void apply(MutableCharacterStatsAPI stats, String id, float level) {
@@ -108,7 +109,7 @@ public class FieldRepairs {
 				if (stats != null && stats.getFleet() != null) {
 					data = stats.getFleet().getFleetData();
 				}
-				float repBonus = computeAndCacheThresholdBonus(data, stats, "fr_repRate", REPAIR_RATE_BONUS, ThresholdBonusType.OP_ALL_LOW);
+				float repBonus = computeAndCacheThresholdBonus(data, stats, "fr_repRate", REPAIR_RATE_BONUS, ThresholdBonusType.OP_ALL);
 				stats.getRepairRateMult().modifyPercent(id, repBonus);
 			//}
 		}
@@ -125,7 +126,7 @@ public class FieldRepairs {
 			if (stats != null && stats.getFleet() != null) {
 				data = stats.getFleet().getFleetData();
 			}
-			float damBonus = computeAndCacheThresholdBonus(data, stats, "fr_repRate", REPAIR_RATE_BONUS, ThresholdBonusType.OP_ALL_LOW);
+			float damBonus = computeAndCacheThresholdBonus(data, stats, "fr_repRate", REPAIR_RATE_BONUS, ThresholdBonusType.OP_ALL);
 			
 			info.addPara("+%s ship repair rate outside of combat (maximum: %s)", 0f, hc, hc,
 					"" + (int) damBonus + "%",
@@ -147,7 +148,7 @@ public class FieldRepairs {
 		
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
 			//if (!isCivilian(stats)) {
-				float instaRep = computeAndCacheThresholdBonus(stats, "fr_instaRep", INSTA_REPAIR_PERCENT, ThresholdBonusType.OP_ALL_LOW);
+				float instaRep = computeAndCacheThresholdBonus(stats, "fr_instaRep", INSTA_REPAIR_PERCENT, ThresholdBonusType.OP_ALL);
 				stats.getDynamic().getMod(Stats.INSTA_REPAIR_FRACTION).modifyFlat(id, instaRep * 0.01f);
 			//}
 		}
@@ -165,12 +166,12 @@ public class FieldRepairs {
 			init(stats, skill);
 			
 			FleetDataAPI data = getFleetData(null);
-			float instaRep = computeAndCacheThresholdBonus(data, stats, "fr_instaRep", INSTA_REPAIR_PERCENT, ThresholdBonusType.OP_ALL_LOW);
+			float instaRep = computeAndCacheThresholdBonus(data, stats, "fr_instaRep", INSTA_REPAIR_PERCENT, ThresholdBonusType.OP_ALL);
 			
 			info.addPara("%s of hull and armor damage taken repaired after combat ends, at no cost (maximum: %s)", 0f, hc, hc,
 					"" + (int) instaRep + "%",
 					"" + (int) INSTA_REPAIR_PERCENT + "%");
-			addOPThresholdAll(info, data, stats, OP_ALL_LOW_THRESHOLD);
+			addOPThresholdAll(info, data, stats, OP_ALL_THRESHOLD);
 			
 			info.addSpacer(5f);
 		}
@@ -205,56 +206,56 @@ public class FieldRepairs {
 //	}
 	
 	
-	public static class Level3 implements FleetStatsSkillEffect {
-		public void apply(MutableFleetStatsAPI stats, String id, float level) {
-			stats.getDynamic().getMod(Stats.SHIP_DMOD_REDUCTION).modifyFlat(id, DMOD_REDUCTION);	
-		}
-		
-		public void unapply(MutableFleetStatsAPI stats, String id) {
-			stats.getDynamic().getMod(Stats.SHIP_DMOD_REDUCTION).unmodifyFlat(id);
-		}
-		
-		public String getEffectDescription(float level) {
-			//return "Recovered non-friendly ships have an average of " + (int) DMOD_REDUCTION + " less subsystem with lasting damage";
-			//return "Recovered ships have up to " + (int) DMOD_REDUCTION + " less d-mods";
-			return "Recovered ships have fewer d-mods on average";
-		}
-		
-		public String getEffectPerLevelDescription() {
-			return null;
-		}
-		
-		public ScopeDescription getScopeDescription() {
-			return ScopeDescription.FLEET;
-		}
-	}
+//	public static class Level3 implements FleetStatsSkillEffect {
+//		public void apply(MutableFleetStatsAPI stats, String id, float level) {
+//			stats.getDynamic().getMod(Stats.SHIP_DMOD_REDUCTION).modifyFlat(id, DMOD_REDUCTION);	
+//		}
+//		
+//		public void unapply(MutableFleetStatsAPI stats, String id) {
+//			stats.getDynamic().getMod(Stats.SHIP_DMOD_REDUCTION).unmodifyFlat(id);
+//		}
+//		
+//		public String getEffectDescription(float level) {
+//			//return "Recovered non-friendly ships have an average of " + (int) DMOD_REDUCTION + " less subsystem with lasting damage";
+//			//return "Recovered ships have up to " + (int) DMOD_REDUCTION + " less d-mods";
+//			return "Recovered ships have fewer d-mods on average";
+//		}
+//		
+//		public String getEffectPerLevelDescription() {
+//			return null;
+//		}
+//		
+//		public ScopeDescription getScopeDescription() {
+//			return ScopeDescription.FLEET;
+//		}
+//	}
 	
-	public static class Level4 implements FleetStatsSkillEffect {
-		public void apply(MutableFleetStatsAPI stats, String id, float level) {
-		}
-		
-		public void unapply(MutableFleetStatsAPI stats, String id) {
-		}
-		
-		public String getEffectDescription(float level) {
-			if (FieldRepairsScript.MONTHS_PER_DMOD_REMOVAL == 1) {
-				return "Chance to remove one d-mod per month from a randomly selected ship in your fleet";
-			} else if (FieldRepairsScript.MONTHS_PER_DMOD_REMOVAL == 2) {
-				return "Chance to remove a d-mod from a randomly selected ship in your fleet every two months";
-			} else {
-				return "Chance to remove a d-mod from a randomly selected ship in your fleet every " +
-							FieldRepairsScript.MONTHS_PER_DMOD_REMOVAL + " months";
-			}
-		}
-		
-		public String getEffectPerLevelDescription() {
-			return null;
-		}
-		
-		public ScopeDescription getScopeDescription() {
-			return ScopeDescription.FLEET;
-		}
-	}
+//	public static class Level4 implements FleetStatsSkillEffect {
+//		public void apply(MutableFleetStatsAPI stats, String id, float level) {
+//		}
+//		
+//		public void unapply(MutableFleetStatsAPI stats, String id) {
+//		}
+//		
+//		public String getEffectDescription(float level) {
+//			if (FieldRepairsScript.MONTHS_PER_DMOD_REMOVAL == 1) {
+//				return "Chance to remove one d-mod per month from a randomly selected ship in your fleet";
+//			} else if (FieldRepairsScript.MONTHS_PER_DMOD_REMOVAL == 2) {
+//				return "Chance to remove a d-mod from a randomly selected ship in your fleet every two months";
+//			} else {
+//				return "Chance to remove a d-mod from a randomly selected ship in your fleet every " +
+//							FieldRepairsScript.MONTHS_PER_DMOD_REMOVAL + " months";
+//			}
+//		}
+//		
+//		public String getEffectPerLevelDescription() {
+//			return null;
+//		}
+//		
+//		public ScopeDescription getScopeDescription() {
+//			return ScopeDescription.FLEET;
+//		}
+//	}
 	
 	
 //	public static class Level3B implements ShipSkillEffect {

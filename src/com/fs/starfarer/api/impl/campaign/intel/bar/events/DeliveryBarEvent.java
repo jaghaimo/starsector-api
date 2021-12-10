@@ -2,8 +2,10 @@ package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
@@ -490,9 +492,11 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 		
 		String where = "located in hyperspace,";
 		if (data.dest.getStarSystem() != null) {
-			where = "located in the " + data.dest.getStarSystem().getNameWithLowercaseType() + ", which is";
+			//where = "located in the " + data.dest.getStarSystem().getNameWithLowercaseType() + ", which is";
+			where = "located in the " + data.dest.getStarSystem().getNameWithLowercaseType() + "";
 		}
-		str += "\n\nYou recall that " + data.dest.getName() + " is under %s control, and " + where + " %s light-years away. ";
+		//str += "\n\nYou recall that " + data.dest.getName() + " is under %s control, and " + where + " %s light-years away. ";
+		str += "\n\nYou recall that " + data.dest.getName() + " is under %s control, and " + where + ". ";
 		
 		CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();
 		if (data.comFrom.isFuel()) {
@@ -541,7 +545,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 		}
 		return new String [] { Misc.getWithDGS(quantity), data.dest.getName(), 
 							   data.dest.getFaction().getPersonNamePrefix(),
-							   Misc.getRoundedValueMaxOneAfterDecimal(data.distLY),
+							   //Misc.getRoundedValueMaxOneAfterDecimal(data.distLY),
 							   cap > 1 ? Misc.getWithDGS(cap) : " ",
 							   Misc.getDGSCredits(reward),
 							   Misc.getWithDGS(duration),
@@ -553,7 +557,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 							  //data.dest.getFaction().getBaseUIColor(),
 							  Misc.getTextColor(),
 							  data.dest.getFaction().getBaseUIColor(),
-							  Misc.getHighlightColor(),
+							  //Misc.getHighlightColor(),
 							  Misc.getHighlightColor(),
 							  Misc.getHighlightColor(), 
 							  Misc.getHighlightColor(), 
@@ -620,6 +624,22 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 	protected boolean showCargoCap() {
 		return false;
 	}
+
+	@Override
+	protected void showTotalAndOptions() {
+		super.showTotalAndOptions();
+
+		String icon = Global.getSettings().getCommoditySpec(commodity).getIconName();
+		String text = null;
+		Set<String> tags = new LinkedHashSet<String>();
+		tags.add(Tags.INTEL_MISSIONS);
+		
+		dialog.getVisualPanel().showMapMarker(getDestination().getPrimaryEntity(), 
+					"Destination: " + getDestination().getName(), getDestination().getFaction().getBaseUIColor(), 
+					true, icon, text, tags);
+	}
+	
+	
 	
 }
 

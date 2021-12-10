@@ -29,4 +29,16 @@ public interface CombatUIAPI {
 
 	boolean isShowingDeploymentDialog();
 	List<FleetMemberAPI> getCurrentlySelectedInFleetDeploymentDialog();
+
+	boolean isAutopilotOn();
+
+	void setDisablePlayerShipControlOneFrame(boolean disablePlayerShipControlOneFrame);
+
+	boolean isDisablePlayerShipControlOneFrame();
+
+	void setShipInfoFanOutBrightness(float b);
+
+	void reFanOutShipInfo();
+
+	void hideShipInfo();
 }

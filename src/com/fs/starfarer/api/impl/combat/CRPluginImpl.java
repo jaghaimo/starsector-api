@@ -9,11 +9,11 @@ import com.fs.starfarer.api.campaign.FleetDataAPI;
 import com.fs.starfarer.api.combat.CombatReadinessPlugin;
 import com.fs.starfarer.api.combat.FighterLaunchBayAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
-import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipEngineControllerAPI.ShipEngineAPI;
+import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
@@ -552,7 +552,7 @@ public class CRPluginImpl implements CombatReadinessPlugin {
 			refitStr = "+" + refitStr;
 		}
 		
-		result.add(new CREffectDetail("Maneuverability", speedStr, getTypeFor(speed, false)));
+		result.add(new CREffectDetail("Speed & maneuverability", speedStr, getTypeFor(speed, false)));
 		result.add(new CREffectDetail("Damage taken", damageStr, getTypeFor(damage, true)));
 		result.add(new CREffectDetail("Damage dealt", rofStr, getTypeFor(damageDealt, false)));
 		

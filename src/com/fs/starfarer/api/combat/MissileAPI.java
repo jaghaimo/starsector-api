@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.util.EnumSet;
 
 import org.json.JSONObject;
+import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.loading.MissileSpecAPI;
@@ -174,5 +175,20 @@ public interface MissileAPI extends DamagingProjectileAPI {
 	void setEccmChanceBonus(float eccmChanceBonus);
 	void setSource(ShipAPI source);
 	ShipAPI getSourceAPI();
+	boolean isNoFlameoutOnFizzling();
+	void setNoFlameoutOnFizzling(boolean noFlameoutOnFizzling);
+	DamagingProjectileAPI explode();
+	float getMaxRange();
+	void setMaxRange(float maxRange);
+	void setMaxFlightTime(float maxFlightTime);
+	float getSpriteAlphaOverride();
+	void setSpriteAlphaOverride(float spriteAlphaOverride);
+	
+	/**
+	 * Location it spawned at, used to fizzle out if fizzling is range-based.
+	 * @return
+	 */
+	Vector2f getStart();
+	void setStart(Vector2f start);
 }
 

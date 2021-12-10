@@ -142,6 +142,11 @@ public class SmugglingScanScript implements EveryFrameScript {
 		// if visible, keep extending "pursue player" duration by a day
 		// so, player has to lose the patrol for a day to be able to sneak into market
 		CampaignFleetAPI player = Global.getSector().getPlayerFleet();
+		if (player.isInHyperspace() || player.isInHyperspaceTransition()) {
+			cleanUpCurr();
+			return;
+		}
+		
 		VisibilityLevel vis = player.getVisibilityLevelTo(curr);
 		
 		if (vis != VisibilityLevel.NONE) {

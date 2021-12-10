@@ -292,6 +292,10 @@ public interface LocationAPI {
 
 	String getNameWithTypeShort();
 
+	List<NascentGravityWellAPI> getGravityWells();
+
+	List<CustomCampaignEntityAPI> getCustomEntities();
+
 }
 
 

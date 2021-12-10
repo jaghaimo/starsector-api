@@ -1,8 +1,8 @@
 package com.fs.starfarer.api.impl.hullmods;
 
 import java.awt.Color;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
@@ -13,7 +13,8 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
+import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -21,23 +22,28 @@ import com.fs.starfarer.api.util.Misc;
 @SuppressWarnings("unchecked")
 public class PhaseField extends BaseHullMod implements HullModFleetEffect {
 
-	private static Map mag = new HashMap();
-	static {
-		mag.put(HullSize.FRIGATE, Global.getSettings().getFloat("baseSensorFrigate"));
-		mag.put(HullSize.DESTROYER, Global.getSettings().getFloat("baseSensorDestroyer"));
-		mag.put(HullSize.CRUISER, Global.getSettings().getFloat("baseSensorCruiser"));
-		mag.put(HullSize.CAPITAL_SHIP, Global.getSettings().getFloat("baseSensorCapital"));
-	}
+//	private static Map mag = new HashMap();
+//	static {
+//		mag.put(HullSize.FRIGATE, Global.getSettings().getFloat("baseSensorFrigate"));
+//		mag.put(HullSize.DESTROYER, Global.getSettings().getFloat("baseSensorDestroyer"));
+//		mag.put(HullSize.CRUISER, Global.getSettings().getFloat("baseSensorCruiser"));
+//		mag.put(HullSize.CAPITAL_SHIP, Global.getSettings().getFloat("baseSensorCapital"));
+//	}
+	
 	public static float MIN_CR = 0.1f;
 	public static String MOD_KEY = "core_PhaseField";
 	
+	public static float PROFILE_MULT = 0.5f;
+	
+	public static float MIN_FIELD_MULT = 0.25f;
+	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getSensorProfile().modifyMult(id, 0f);
-		
-		stats.getDynamic().getMod(Stats.PHASE_FIELD_SENSOR_PROFILE_MOD).modifyFlat(id, (Float) mag.get(hullSize));
+		stats.getSensorProfile().modifyMult(id, PROFILE_MULT);
+		//stats.getDynamic().getMod(Stats.PHASE_FIELD_SENSOR_PROFILE_MOD).modifyFlat(id, (Float) mag.get(hullSize));
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "" + (int) ((1f - PROFILE_MULT) * 100f) + "%";
 		return null;
 	}
 
@@ -52,15 +58,12 @@ public class PhaseField extends BaseHullMod implements HullModFleetEffect {
 	}
 
 	public void onFleetSync(CampaignFleetAPI fleet) {
-		float modifier = getAdjustedPhaseFieldModifier(fleet, null, 0f);
-		if (modifier <= 0) {
-			fleet.getDetectedRangeMod().unmodifyFlat(MOD_KEY);
+		float mult = getPhaseFieldMultBaseProfileAndTotal(fleet, null, 0f, 0f)[0];
+		if (fleet.isTransponderOn()) mult = 1f;
+		if (mult <= 0) {
+			fleet.getDetectedRangeMod().unmodifyMult(MOD_KEY);
 		} else {
-			fleet.getDetectedRangeMod().modifyFlat(MOD_KEY, -modifier, "Phase ships in fleet");
-		}
-		if (fleet.isPlayerFleet()) {
-			// needed to make Phase Corps effect that boosts this bonus work
-			fleet.getCommanderStats().refreshCharacterStatsEffects();
+			fleet.getDetectedRangeMod().modifyMult(MOD_KEY, mult, "Phase ships in fleet");
 		}
 	}
 	
@@ -76,29 +79,45 @@ public class PhaseField extends BaseHullMod implements HullModFleetEffect {
 		Color h = Misc.getHighlightColor();
 		Color bad = Misc.getNegativeHighlightColor();
 		
-		tooltip.addPara("In addition, a ship with a phase field reduces the fleet's sensor profile by %s/%s/%s/%s," +
-				" depending on hull size. " +
-				"Each additional ship with a phase field provides diminishing returns. " +
-				"The higher the highest sensor profile reduction from a single ship in the fleet, the later diminishing returns kick in.", 
-				opad, h,
-				"" + ((Float) mag.get(HullSize.FRIGATE)).intValue(),
-				"" + ((Float) mag.get(HullSize.DESTROYER)).intValue(),
-				"" + ((Float) mag.get(HullSize.CRUISER)).intValue(),
-				"" + ((Float) mag.get(HullSize.CAPITAL_SHIP)).intValue()
-				);
+		int numProfileShips = Global.getSettings().getInt("maxSensorShips");
+		tooltip.addPara("In addition, the fleet's detected-at range is reduced by a multiplier based on the total "
+				+ "sensor profile of the %s highest-profile ships in the fleet, and the total sensor strength of the %s "
+				+ "phase ships with the highest sensor strength values. This effect only applies when the "
+				+ "fleet's transponder is turned off.", opad,
+				h,
+				"" + numProfileShips, "" + numProfileShips);
+		
+		tooltip.addPara("Fleetwide sensor strength increases - such as from High Resolution Sensors - do not factor into "
+				+ "this calculation.", opad);
 		
 		if (isForModSpec || ship == null) return;
 		if (Global.getSettings().getCurrentState() == GameState.TITLE) return;
 		
+		
 		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
-		float fleetMod = getAdjustedPhaseFieldModifier(fleet, null, 0f);
-		float currShipMod = (Float) mag.get(hullSize);
+		float [] data = getPhaseFieldMultBaseProfileAndTotal(fleet, null, 0f, 0f);
+		float [] dataWithOneMore = getPhaseFieldMultBaseProfileAndTotal(fleet, null,
+				ship.getMutableStats().getSensorProfile().getModifiedValue(),
+				ship.getMutableStats().getSensorStrength().getModifiedValue());
+		float [] dataWithOneLess = getPhaseFieldMultBaseProfileAndTotal(fleet, ship.getFleetMemberId(), 0f, 0f);
 		
-		float fleetModWithOneMore = getAdjustedPhaseFieldModifier(fleet, null, currShipMod);
-		float fleetModWithoutThisShip = getAdjustedPhaseFieldModifier(fleet, ship.getFleetMemberId(), 0f);
+		float mult = data[0];
+		float profile = data[1];
+		float sensors = data[2];
 		
-		tooltip.addPara("The total sensor profile reduction for your fleet is %s.", opad, h,
-				"" + (int)Math.round(fleetMod));
+		tooltip.addPara("The sensor profile of the %s top ships in your fleet is %s. The sensor strength of the top %s phase ships "
+				+ "is %s.", opad, h,
+				"" + numProfileShips,
+				"" + (int)Math.round(profile),
+				"" + numProfileShips,
+				"" + (int)Math.round(sensors)
+				);
+		
+		tooltip.addPara("The detected-at range multiplier for your fleet is %s. The fleet's transponder must be off "
+				+ "for the multiplier to be applied.",
+				opad, h,
+				Strings.X + Misc.getRoundedValueFloat(mult),
+				"transponder must be off");
 		
 		float cr = ship.getCurrentCR();
 		for (FleetMemberAPI member : Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy()) {
@@ -110,58 +129,131 @@ public class PhaseField extends BaseHullMod implements HullModFleetEffect {
 		if (cr < MIN_CR) {
 			LabelAPI label = tooltip.addPara("This ship's combat readiness is below %s " +
 					"and the phase field's fleetwide effect can not be utilized. Bringing this ship into readiness " +
-					"would increase the fleetwide bonus to %s.",
+					"would improve the multiplier to %s.",
 					opad, h,
 					"" + (int) Math.round(MIN_CR * 100f) + "%",
-					"" + (int)Math.round(fleetModWithOneMore));
+					Strings.X + Misc.getRoundedValueFloat(dataWithOneMore[0]));
 			label.setHighlightColors(bad, h);
-			label.setHighlight("" + (int) Math.round(MIN_CR * 100f) + "%", "" + (int)Math.round(fleetModWithOneMore));
+			label.setHighlight("" + (int) Math.round(MIN_CR * 100f) + "%", Strings.X + Misc.getRoundedValueFloat(dataWithOneMore[0]));
 		} else {
-			if (fleetMod > currShipMod) {
-				tooltip.addPara("Removing this ship would decrease it to %s. Adding another ship of the same type " +
-						"would increase it to %s.", opad, h,
-						"" + (int)Math.round(fleetModWithoutThisShip),
-						"" + (int)Math.round(fleetModWithOneMore));
-			} else {
-				tooltip.addPara("Adding another ship of the same type " +
-						"would increase it to %s.", opad, h,
-						"" + (int)Math.round(fleetModWithOneMore));
-			}
+			tooltip.addPara("Removing this ship would change the multiplier to %s. Adding another ship with the same sensor strength " +
+					"would improve it to %s.", opad, h,
+					Strings.X + Misc.getRoundedValueFloat(dataWithOneLess[0]),
+					Strings.X + Misc.getRoundedValueFloat(dataWithOneMore[0]));
 		}
 	}
 
-	public static float getAdjustedPhaseFieldModifier(CampaignFleetAPI fleet, String skipId, float add) {
-		float max = 0f;
-		float total = 0f;
+//	public static float getAdjustedPhaseFieldModifier(CampaignFleetAPI fleet, String skipId, float add) {
+//		float max = 0f;
+//		float total = 0f;
+//		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+//			if (member.isMothballed()) continue;
+//			if (member.getRepairTracker().getCR() < MIN_CR) continue;
+//			
+//			if (member.getId().equals(skipId)) { 
+//				continue;
+//			}
+//			float v = member.getStats().getDynamic().getMod(Stats.PHASE_FIELD_SENSOR_PROFILE_MOD).computeEffective(0f);
+//			if (v <= 0) continue;
+//			
+//			if (v > max) max = v;
+//			total += v;
+//		}
+//		if (add > max) max = add;
+//		total += add;
+//		
+//		if (max <= 0) return 0f;
+//		float units = total / max;
+//		if (units <= 1) return max;
+//		float mult = Misc.logOfBase(2.5f, units) + 1f;
+//		float result = total * mult / units;
+//		if (result <= 0) {
+//			result = 0;
+//		} else {
+//			result = Math.round(result * 100f) / 100f;
+//			result = Math.max(result, 1f);
+//		}
+//		return result;
+//	}
+	
+	
+	public static float [] getPhaseFieldMultBaseProfileAndTotal(CampaignFleetAPI fleet, String skipId, float addProfile, float addSensor) {
+		List<FleetMemberAPI> members = new ArrayList<FleetMemberAPI>();
+		List<FleetMemberAPI> phase = new ArrayList<FleetMemberAPI>();
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
-			if (member.isMothballed()) continue;
-			if (member.getRepairTracker().getCR() < MIN_CR) continue;
-			
 			if (member.getId().equals(skipId)) { 
 				continue;
 			}
-			float v = member.getStats().getDynamic().getMod(Stats.PHASE_FIELD_SENSOR_PROFILE_MOD).computeEffective(0f);
-			if (v <= 0) continue;
+			members.add(member);
 			
-			if (v > max) max = v;
-			total += v;
+			if (member.isMothballed()) continue;
+			if (member.getRepairTracker().getCR() < MIN_CR) continue;
+			if (member.getVariant().hasHullMod(HullMods.PHASE_FIELD)) {
+				phase.add(member);
+			}
 		}
-		if (add > max) max = add;
-		total += add;
 		
-		if (max <= 0) return 0f;
-		float units = total / max;
-		if (units <= 1) return max;
-		float mult = Misc.logOfBase(2.5f, units) + 1f;
-		float result = total * mult / units;
-		if (result <= 0) {
-			result = 0;
+		float [] profiles = new float [members.size()];
+		if (addProfile <= 0) {
+			profiles = new float [members.size()];
 		} else {
-			result = Math.round(result * 100f) / 100f;
-			result = Math.max(result, 1f);
+			profiles = new float [members.size() + 1];
 		}
-		return result;
+		float [] phaseSensors;
+		if (addSensor <= 0) {
+			phaseSensors = new float [phase.size()];
+		} else {
+			phaseSensors = new float [phase.size() + 1];
+		}
+		
+		int i = 0;
+		for (FleetMemberAPI member : members) {
+			profiles[i] = member.getStats().getSensorProfile().getModifiedValue();
+			i++;
+		}
+		if (addProfile > 0) profiles[i] = addProfile;
+		i = 0;
+		for (FleetMemberAPI member : phase) {
+			phaseSensors[i] = member.getStats().getSensorStrength().getModifiedValue();
+			i++;
+		}
+		if (addSensor > 0) phaseSensors[i] = addSensor;
+		
+		int numProfileShips = Global.getSettings().getInt("maxSensorShips");
+		int numPhaseShips = numProfileShips;
+		
+		float totalProfile = getTopKValuesSum(profiles, numProfileShips);
+		float totalPhaseSensors = getTopKValuesSum(phaseSensors, numPhaseShips);
+		
+		float total = Math.max(totalProfile + totalPhaseSensors, 1f);
+		
+		float mult = totalProfile / total;
+		
+		if (mult < MIN_FIELD_MULT) mult = MIN_FIELD_MULT;
+		if (mult > 1f) mult = 1f;
+		
+		return new float[] {mult, totalProfile, totalPhaseSensors};
 	}
 	
 
+	public static float getTopKValuesSum(float [] arr, int k) {
+		k = Math.min(k, arr.length);
+		
+		float kVal = Misc.findKth(arr, arr.length - k);
+		float total = 0;
+		int found = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > kVal) {
+				found++;
+				total += arr[i];
+			}
+		}
+		if (k > found) {
+			total += (k - found) * kVal;
+		}
+		return total;
+	}
 }
+
+
+

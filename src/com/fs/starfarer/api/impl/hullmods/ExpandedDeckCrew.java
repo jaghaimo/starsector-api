@@ -8,10 +8,10 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class ExpandedDeckCrew extends BaseHullMod {
 
-	public static final float RATE_DECREASE_MODIFIER = 10f;
-	public static final float RATE_INCREASE_MODIFIER = 20f;
+	public static float RATE_DECREASE_MODIFIER = 10f;
+	public static float RATE_INCREASE_MODIFIER = 20f;
 	
-	public static final float CREW_PER_DECK = 20f;
+	public static float CREW_PER_DECK = 20f;
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {

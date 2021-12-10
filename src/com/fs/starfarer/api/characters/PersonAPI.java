@@ -124,6 +124,8 @@ public interface PersonAPI extends HasMemory {
 	String getVoice();
 	void setVoice(String voice);
 
+	void setStats(MutableCharacterStatsAPI stats);
+
 
 }
 

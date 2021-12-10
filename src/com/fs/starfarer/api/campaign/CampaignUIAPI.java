@@ -116,6 +116,11 @@ public interface CampaignUIAPI {
 	float getLastLegDistance(SectorEntityToken courseTarget);
 
 	boolean isFastForward();
+
+	boolean isPlayerFleetFollowingMouse();
+
+	void showMessageDialog(String message);
+
 }
 
 

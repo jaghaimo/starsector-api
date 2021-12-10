@@ -117,7 +117,7 @@ public abstract class BaseEventManager implements EveryFrameScript {
 			}
 		}
 		active.removeAll(remove);
-		
+		//days *= 1000f;
 		tracker.advance(days * getIntervalRateMult());
 		if (this instanceof PirateBaseManager && DebugFlags.RAID_DEBUG) {
 			tracker.advance(days * 1000000f);

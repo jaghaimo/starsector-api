@@ -50,5 +50,6 @@ public interface HullModSpecAPI {
 	Set<String> getUITags();
 	void addUITag(String tag);
 	boolean hasUITag(String tag);
+	void setManufacturer(String manufacturer);
 
 }

@@ -46,6 +46,10 @@ public interface SkillSpecAPI {
 	void setScopeStr2(String scopeStr2);
 	Color getGoverningAptitudeColor();
 	String getGoverningAptitudeName();
+	int getReqPoints();
+	void setReqPoints(int reqPoints);
+	int getReqPointsPer();
+	void setReqPointsPer(int reqPointsPer);
 	
 
 }

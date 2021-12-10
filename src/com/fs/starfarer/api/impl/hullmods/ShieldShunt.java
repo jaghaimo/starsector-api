@@ -8,11 +8,15 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class ShieldShunt extends BaseHullMod {
 
-	public static final float EMP_RESISTANCE = 50f;
+	//public static float EMP_RESISTANCE = 50f;
+	//public static float VENT_RATE_BONUS = 50f;
+	public static float ARMOR_BONUS = 25f;
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getEmpDamageTakenMult().modifyMult(id, 1f - EMP_RESISTANCE * 0.01f);
+		//stats.getVentRateMult().modifyPercent(id, VENT_RATE_BONUS);
+		stats.getArmorBonus().modifyPercent(id, ARMOR_BONUS);
+		//stats.getEmpDamageTakenMult().modifyMult(id, 1f - EMP_RESISTANCE * 0.01f);
 	}
 	
 	@Override
@@ -22,7 +26,9 @@ public class ShieldShunt extends BaseHullMod {
 
 
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int) EMP_RESISTANCE + "%";
+		//if (index == 0) return "" + (int) EMP_RESISTANCE + "%";
+		//if (index == 0) return "" + (int) VENT_RATE_BONUS + "%";
+		if (index == 0) return "" + (int) ARMOR_BONUS + "%";
 		return null;
 	}
 

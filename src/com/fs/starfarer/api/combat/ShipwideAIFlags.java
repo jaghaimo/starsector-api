@@ -15,6 +15,7 @@ public class ShipwideAIFlags {
 		AVOIDING_BORDER,
 		
 		MANEUVER_TARGET,
+		MOVEMENT_DEST_WHILE_SIDETRACKED,
 		CARRIER_FIGHTER_TARGET,
 		MAINTAINING_STRIKE_RANGE,
 		//CARRIER_DEFEND_TARGET,
@@ -36,6 +37,8 @@ public class ShipwideAIFlags {
 		BACKING_OFF,
 		SAFE_VENT,
 		OK_TO_CANCEL_SYSTEM_USE_TO_VENT,
+		
+		MANEUVER_RANGE_FROM_TARGET,
 		
 		SAFE_FROM_DANGER_TIME,
 		
@@ -114,7 +117,7 @@ public class ShipwideAIFlags {
 	}
 	
 	public void setFlag(AIFlags flag) {
-//		if (flag == AIFlags.DO_NOT_BACK_OFF) {
+//		if (flag == AIFlags.BACK_OFF) {
 //			System.out.println("fwfwefew");
 //		}
 		FlagData data = flags.get(flag);
@@ -137,7 +140,9 @@ public class ShipwideAIFlags {
 //		if (flag == AIFlags.CARRIER_FIGHTER_TARGET) {
 //			System.out.println("fwfwefew");
 //		}
-		
+//		if (flag == AIFlags.BACK_OFF) {
+//			System.out.println("fwfwefew");
+//		}
 		FlagData data = flags.get(flag);
 		if (data != null) {
 			data.elapsed = 0;

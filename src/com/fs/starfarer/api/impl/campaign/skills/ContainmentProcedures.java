@@ -12,9 +12,9 @@ import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.ShipSkillEffect;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
-import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.MutableFleetStatsAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
@@ -27,7 +27,7 @@ public class ContainmentProcedures {
 	//public static final float DMOD_EFFECT_MULT = 0.5f;
 	
 	public static float FUEL_PROD_BONUS = 1f;
-	public static float CREW_LOSS_REDUCTION = 75f;
+	public static float CREW_LOSS_REDUCTION = 50f;
 	public static float FUEL_SALVAGE_BONUS = 25f;
 	public static float FUEL_USE_REDUCTION_MAX_PERCENT = 50;
 	public static float FUEL_USE_REDUCTION_MAX_FUEL = 25;
@@ -40,7 +40,7 @@ public class ContainmentProcedures {
 		}
 		
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
-			float lossPercent = computeAndCacheThresholdBonus(stats, "sp_crewloss", CREW_LOSS_REDUCTION, ThresholdBonusType.OP_ALL_LOW);
+			float lossPercent = computeAndCacheThresholdBonus(stats, "sp_crewloss", CREW_LOSS_REDUCTION, ThresholdBonusType.OP_ALL);
 			stats.getCrewLossMult().modifyMult(id, 1f - (lossPercent * 0.01f));
 		}
 			
@@ -58,12 +58,12 @@ public class ContainmentProcedures {
 			
 			//info.addSpacer(5f);
 			FleetDataAPI data = getFleetData(null);
-			float damBonus = computeAndCacheThresholdBonus(data, stats, "sp_crewloss", CREW_LOSS_REDUCTION, ThresholdBonusType.OP_ALL_LOW);
+			float damBonus = computeAndCacheThresholdBonus(data, stats, "sp_crewloss", CREW_LOSS_REDUCTION, ThresholdBonusType.OP_ALL);
 			
 			info.addPara("-%s crew lost due to hull damage in combat (maximum: %s)", 0f, hc, hc,
 					"" + (int) damBonus + "%",
 					"" + (int) CREW_LOSS_REDUCTION + "%");
-			addOPThresholdAll(info, data, stats, OP_ALL_LOW_THRESHOLD);
+			addOPThresholdAll(info, data, stats, OP_ALL_THRESHOLD);
 			
 		}
 		
@@ -156,7 +156,7 @@ public class ContainmentProcedures {
 		protected float getFuelUseMult(String id, FleetDataAPI data) {
 			if (data == null) return 0f;
 			
-			String key = "nav1";
+			String key = "conproc1";
 			Float bonus = (Float) data.getCacheClearedOnSync().get(key);
 			if (bonus != null) return bonus;
 			

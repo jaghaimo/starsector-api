@@ -11,6 +11,7 @@ import com.fs.starfarer.api.combat.BattleObjectiveAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatFleetManagerAPI;
 import com.fs.starfarer.api.combat.DeployedFleetMemberAPI;
+import com.fs.starfarer.api.combat.MutableStat.StatMod;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.impl.campaign.ids.BattleObjectives;
@@ -54,9 +55,40 @@ public class CoordinatedManeuversScript extends BaseEveryFrameCombatPlugin {
 		updateForSide(engine.getFleetManager(0));
 		updateForSide(engine.getFleetManager(1));
 		
+		// nothing to do with Coordinated Maneuvers, just a convenient place to add this
+		updateForceConcentration(engine.getFleetManager(0));
+		updateForceConcentration(engine.getFleetManager(1));
+		
+		updateDPFromSupportDoctrine();
 	}
 	
-	
+	protected ShipAPI undoDPMod = null;
+	protected void updateDPFromSupportDoctrine() {
+		// making sure that while transferring command away from something, the previous player ship
+		// does NOT receive the DP reduction until transferring command is finished
+		
+		ShipAPI from = engine.getShipPlayerIsTransferringCommandFrom();
+		String id = SupportDoctrine.SUPPORT_DOCTRINE_DP_REDUCTION_ID + "_reverse";
+		if (from != null) {
+			StatMod bonus = from.getMutableStats().getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).getFlatBonus(SupportDoctrine.SUPPORT_DOCTRINE_DP_REDUCTION_ID);
+			if (bonus != null && bonus.value != 0) {
+				undoDPMod = from;
+				from.getMutableStats().getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyFlat(id, -bonus.value);
+				if (from.getFleetMember() != null) {
+					from.getFleetMember().getStats().getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyFlat(id, -bonus.value);
+				}
+			}
+		} else if (undoDPMod != null) {
+			undoDPMod.getMutableStats().getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).unmodifyFlat(id);
+			if (undoDPMod.getFleetMember() != null) {
+				undoDPMod.getFleetMember().getStats().getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).unmodifyFlat(id);
+			}
+			undoDPMod = null;
+		}
+		
+	}
+
+
 	private void updateForSide(CombatFleetManagerAPI manager) {
 
 //		PersonAPI commander = manager.getFleetCommander();
@@ -155,6 +187,51 @@ public class CoordinatedManeuversScript extends BaseEveryFrameCombatPlugin {
 				if (member.isFighterWing()) continue;
 				if (member.getShip() == null) continue;
 				member.getShip().getMutableStats().getMaxSpeed().unmodify(BONUS_ID);
+			}
+		}
+	}
+	
+	
+	protected void updateForceConcentration(CombatFleetManagerAPI manager) {
+		if (true) return;
+		List<DeployedFleetMemberAPI> deployed = manager.getDeployedCopyDFM();
+		for (DeployedFleetMemberAPI member : deployed) {
+			if (member.isFighterWing()) continue;
+			if (member.isStationModule()) continue;
+			if (member.getMember() == null) continue;
+			
+			
+			PersonAPI fc = member.getMember().getFleetCommander();
+			if (fc == null) fc = member.getMember().getFleetCommanderForStats();
+			ShipAPI ship = member.getShip();
+			
+			if (ship == null) continue;
+			if (fc == null) continue;
+			
+			//boolean hasFC = fc.getStats().getDynamic().getMod(Stats.HAS_FORCE_CONCENTRATION_BONUS_MOD).computeEffective(0f) > 0f;
+			boolean hasFC = false;
+			
+			String id = "fc_zf_bonus";
+			if (hasFC) {
+				boolean hasZF = ship.isEngineBoostActive();
+				if (ship.areAnyEnemiesInRange()) {
+					ship.getMutableStats().getZeroFluxSpeedBoost().modifyFlat(id, ForceConcentration.ZERO_FLUX_SPEED_BONUS_SMALL);
+				} else {
+					ship.getMutableStats().getZeroFluxSpeedBoost().modifyFlat(id, ForceConcentration.ZERO_FLUX_SPEED_BONUS);
+				}
+				
+				boolean applyAccelAndTurnModifiers = !ship.areAnyEnemiesInRange() && hasZF;
+				if (applyAccelAndTurnModifiers) {
+					ship.getMutableStats().getAcceleration().modifyFlat(id, ForceConcentration.ZERO_FLUX_ACCEL_BONUS);
+					ship.getMutableStats().getDeceleration().modifyFlat(id, ForceConcentration.ZERO_FLUX_ACCEL_BONUS);
+					ship.getMutableStats().getMaxTurnRate().modifyFlat(id, ForceConcentration.ZERO_FLUX_TURN_BONUS);
+					ship.getMutableStats().getTurnAcceleration().modifyFlat(id, ForceConcentration.ZERO_FLUX_TURN_ACCEL_BONUS);
+				} else {
+					ship.getMutableStats().getAcceleration().unmodifyFlat(id);
+					ship.getMutableStats().getDeceleration().unmodifyFlat(id);
+					ship.getMutableStats().getMaxTurnRate().unmodifyFlat(id);
+					ship.getMutableStats().getTurnAcceleration().unmodifyFlat(id);
+				}
 			}
 		}
 	}

@@ -322,9 +322,13 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 		return 550f;
 	}
 	
+	protected void createDeleteConfirmationPrompt(TooltipMakerAPI prompt) {
+		prompt.addPara("Are you sure you want to permanently delete this fleet log entry?", Misc.getTextColor(), 0f);
+	}
+	
 	public void createConfirmationPrompt(Object buttonId, TooltipMakerAPI prompt) {
 		if (buttonId == BUTTON_DELETE) {
-			prompt.addPara("Are you sure you want to permanently delete this fleet log entry?", Misc.getTextColor(), 0f);
+			createDeleteConfirmationPrompt(prompt);
 		}
 	}
 	
@@ -722,6 +726,11 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	
 	public void storyActionConfirmed(Object buttonId, IntelUIAPI ui) {
 		
+	}
+
+	public Color getCircleBorderColorOverride() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

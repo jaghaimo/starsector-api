@@ -110,7 +110,7 @@ public class MakeshiftEquipment {
 		protected float getSupplyUseMult(String id, FleetDataAPI data) {
 			if (data == null) return 0f;
 			
-			String key = "nav1";
+			String key = "makeshift1";
 			Float bonus = (Float) data.getCacheClearedOnSync().get(key);
 			if (bonus != null) return bonus;
 			

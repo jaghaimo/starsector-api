@@ -154,7 +154,7 @@ public class PlanetaryShield extends BaseIndustry {
 							1f + IMPROVE_DEFENSE_BONUS,
 							getImprovementsDescForModifiers() + " (" + getNameForModifier() + ")");
 		} else {
-			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId(3));
+			market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId(2));
 		}
 	}
 	

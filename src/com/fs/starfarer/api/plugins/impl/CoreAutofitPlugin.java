@@ -455,10 +455,17 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 					mods.add(HullMods.HARDENED_SUBSYSTEMS);
 				}
 				mods.add(HullMods.BLAST_DOORS);
-				while (!mods.isEmpty() && current.hasHullMod(mods.get(0))) {
-					mods.remove(0);
+				Iterator<String> iter = mods.iterator();
+				while (iter.hasNext()) {
+					String modId = iter.next();
+					if (current.getPermaMods().contains(modId)) {
+						iter.remove();
+					}
 				}
-				for (int i = 0; i < remaining; i++) {
+//				while (!mods.isEmpty() && current.hasHullMod(mods.get(0))) {
+//					mods.remove(0);
+//				}
+				for (int i = 0; i < remaining && !mods.isEmpty(); i++) {
 					current.setNumFluxCapacitors(0);
 					current.setNumFluxVents(0);
 					String modId = mods.get(Math.min(i, mods.size() - 1));
@@ -509,7 +516,9 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		for (String id : current.getHullMods()) {
 			if (current.getPermaMods().contains(id)) continue;
 			if (current.getHullSpec().getBuiltInMods().contains(id)) continue;
-			mods.add(DModManager.getMod(id));
+			HullModSpecAPI mod = DModManager.getMod(id);
+			if (mod.hasTag(Tags.HULLMOD_NO_BUILD_IN)) continue;
+			mods.add(mod);
 		}
 		
 		final HullSize size = current.getHullSize();
@@ -698,6 +707,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		
 		int addedTotal = 0;
 		for (String mod : mods) {
+			if (current.hasHullMod(mod)) continue;
 //			if (mod.equals(HullMods.INTEGRATED_TARGETING_UNIT)) {
 //				System.out.println("wefwefwefe");
 //			}
@@ -741,6 +751,11 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 					continue;
 				}
 			}
+			if (!current.getHullSpec().isPhase()) {
+				if (modSpec.hasTag(HullMods.TAG_PHASE)) {
+					continue;
+				}
+			}
 			
 			int cost = addModIfPossible(modSpec, delegate, current, opLeft);;
 			//int cost = addModIfPossible(mod, delegate, current, opLeft);
@@ -760,20 +775,21 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 	}
 	
 	public int addModIfPossible(HullModSpecAPI mod, AutofitPluginDelegate delegate, ShipVariantAPI current, int opLeft) {
+		if (mod == null) return 0;
+		
 		if (current.hasHullMod(mod.getId())) return 0;
 		if (delegate.isPlayerCampaignRefit() && !delegate.canAddRemoveHullmodInPlayerCampaignRefit(mod.getId())) return 0;
 		
-		if (mod == null) return 0;
 		
 		int cost = mod.getCostFor(current.getHullSize());
 		if (cost > opLeft) return 0;
 
 		ShipAPI ship = delegate.getShip();
 		ShipVariantAPI orig = null;
-		if (ship != null) {
-			orig = ship.getVariant();
-			ship.setVariantForHullmodCheckOnly(current);
-		}
+//		if (ship != null) {
+//			orig = ship.getVariant();
+//			ship.setVariantForHullmodCheckOnly(current);
+//		}
 		if (ship != null && mod.getEffect() != null && ship.getVariant() != null && !mod.getEffect().isApplicableToShip(ship)
 				&& !ship.getVariant().hasHullMod(mod.getId())) return 0;
 		
@@ -995,7 +1011,8 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			
 			List<String> categories = desired.getAutofitCategoriesInPriorityOrder(); 
 			List<String> alternate = altWeaponCats.get(desired);
-			if (randomize && (alternate != null || random.nextFloat() < RANDOMIZE_CHANCE)) {
+			RANDOMIZE_CHANCE = 1f;
+			if (false && randomize && (alternate != null || random.nextFloat() < RANDOMIZE_CHANCE)) {
 				if (alternate == null) {
 					alternate = new ArrayList<String>();
 					for (String cat : categories) {
@@ -1024,7 +1041,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			
 			AvailableWeapon pick = null;
 			for (String catId : categories) {
-				pick = getBestMatch(desired, upgradeMode, catId, alreadyUsed, possible, delegate);
+				pick = getBestMatch(desired, upgradeMode, catId, alreadyUsed, possible, slot, delegate);
 				if (pick != null) {
 					break;
 				}
@@ -1210,7 +1227,14 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 	
 	
 	public AvailableWeapon getBestMatch(WeaponSpecAPI desired, boolean useBetter,
+			String catId, Set<String> alreadyUsed, List<AvailableWeapon> possible,
+			AutofitPluginDelegate delegate) {
+		return getBestMatch(desired, useBetter, catId, alreadyUsed, possible, null, delegate);
+	}
+	
+	public AvailableWeapon getBestMatch(WeaponSpecAPI desired, boolean useBetter,
 			   							String catId, Set<String> alreadyUsed, List<AvailableWeapon> possible,
+			   							WeaponSlotAPI slot,
 			   							AutofitPluginDelegate delegate) {
 		//AvailableWeapon best = null;
 		float bestScore = -1f;
@@ -1247,10 +1271,16 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 //			desiredPD = true;
 //		}
 		
+		int iter = 0;
 		for (AvailableWeapon w : possible) {
+			iter++;
 			WeaponSpecAPI spec = w.getSpec();
 			String catTag = getCategoryTag(cat, spec.getTags());
 			if (catTag == null) continue; // not in this category
+			
+//			if (desired.getWeaponId().equals("autopulse") && spec.getWeaponId().contains("phase")) {
+//				System.out.println("wefwefwe");
+//			}
 			
 			boolean currLongRange = spec.hasTag(LR);
 			boolean currShortRange = spec.hasTag(SR);
@@ -1269,8 +1299,28 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			if (worseDueToPriority) continue;
 			
 			float level = getLevel(catTag);
-			if (randomize) level += random.nextInt(20);
-			if (!useBetter && !betterDueToPriority && level > desiredLevel) continue;
+			//if (randomize) level += random.nextInt(20);
+			if (!randomize && !useBetter && !betterDueToPriority && level > desiredLevel) continue;
+			int rMag = 0;
+			if (randomize && desired.getSize() == spec.getSize()) {
+				rMag = 20;
+			} else if (desired.getSize() == spec.getSize()) {
+				//if (delegate.getFaction() != null && delegate.getFaction().getDoctrine().getAutofitRandomizeProbability() > 0) {
+				if (delegate.isAllowSlightRandomization()) {
+					rMag = 4;
+				}
+			}
+			if (rMag > 0) {
+				boolean symmetric = random.nextFloat() < 0.75f;
+				if (slot != null && symmetric) {
+					long seed = (Math.abs((int)(slot.getLocation().x/2f)) * 723489413945245311L) ^ 1181783497276652981L;
+					Random r = new Random((seed + weaponFilterSeed) * iter);
+					level += r.nextInt(rMag);
+				} else {
+					level += random.nextInt(rMag);
+				}
+			}
+			
 			
 			float score = level;
 //			if (delegate.isPriority(spec)) {
@@ -1287,6 +1337,9 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 				best.add(w);
 			}
 		}
+//		if (desired.getWeaponId().equals("autopulse")) {
+//			System.out.println("wefwefwe");
+//		}
 		
 		
 		// if the best-match tier includes the weapon specified in the target variant, use that
@@ -1370,8 +1423,20 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			if (worseDueToPriority) continue;
 			
 			float level = getLevel(catTag);
-			if (randomize) level += random.nextInt(20);
-			if (!useBetter && !betterDueToPriority && level > desiredLevel) continue;
+			if (!randomize && !useBetter && !betterDueToPriority && level > desiredLevel) continue;
+			//if (randomize) level += random.nextInt(20);
+			
+			int rMag = 0;
+			if (randomize) {
+				rMag = 20;
+			} else {
+				if (delegate.isAllowSlightRandomization()) {
+					rMag = 2;
+				}
+			}
+			if (rMag > 0) {
+				level += random.nextInt(rMag);
+			}
 
 			float score = level;
 //			if (delegate.isPriority(spec)) {
@@ -1564,7 +1629,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			result.add(w);
 		}
 		
-		if (randomize) {
+		if (randomize && false) {
 			Random filterRandom = new Random(weaponFilterSeed);
 			int num = Math.max(1, result.size() / 3 * 2);
 			Set<Integer> picks = DefaultFleetInflater.makePicks(num, result.size(), filterRandom);
@@ -1642,7 +1707,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 //		}
 		availableMods = new LinkedHashSet<String>(delegate.getAvailableHullmods());
 		
-		if (current.getHullSize().ordinal() >= HullSize.DESTROYER.ordinal()) {
+		if (current.getHullSize().ordinal() >= HullSize.DESTROYER.ordinal() && !current.isCivilian()) {
 			addHullmods(current, delegate, HullMods.INTEGRATED_TARGETING_UNIT);
 		}
 		
@@ -1687,27 +1752,11 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 	
 	
 	public static class AutoAssignScore {
-		public float combat = 0;
-		public float carrier = 0;
+		public float [] score;
 		public FleetMemberAPI member;
 		public PersonAPI officer;
 	}
 	
-	public float getCarrierFraction(FleetMemberAPI member) {
-		float decks = member.getNumFlightDecks();
-		float max = 1f;
-		switch (member.getHullSpec().getHullSize()) {
-		case CAPITAL_SHIP: max = 6f; break;
-		case CRUISER: max = 3f; break;
-		case DESTROYER: max = 2f; break;
-		case FRIGATE: max = 1f; break;
-		}
-		
-		float f = decks / max;
-		if (f < 0) f = 0;
-		if (f > 1) f = 1;
-		return f;
-	}
 	
 	@Override
 	public void autoAssignOfficers(CampaignFleetAPI fleet) {
@@ -1727,8 +1776,11 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		int max = (int) fleet.getCommander().getStats().getOfficerNumber().getModifiedValue();
 		int count = 0;
 		for (OfficerDataAPI officer : fleet.getFleetData().getOfficersCopy()) {
-			count++;
-			if (count > max) break;
+			boolean merc = Misc.isMercenary(officer.getPerson());
+			if (!merc) {
+				count++;
+			}
+			if (count > max && !merc) continue;
 			
 			boolean found = false;
 			for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
@@ -1746,51 +1798,30 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		List<AutoAssignScore> shipScores = new ArrayList<AutoAssignScore>();
 		List<AutoAssignScore> officerScores = new ArrayList<AutoAssignScore>();
 		
-		float maxCombat = 1f;
-		float maxCarrier = 1f;
+		float maxMemberTotal = 1f;
+		float maxOfficerTotal = 1f;
+		
 		for (FleetMemberAPI member : members) {
 			AutoAssignScore score = new AutoAssignScore();
 			shipScores.add(score);
 			score.member = member;
+			score.score = computeMemberScore(member);
 			
-			float w = (float) member.getFleetPointCost() * getVariantOPFraction(member);
-			if (member.isCivilian() && !member.isCarrier()) w *= 0.001f;
-			
-			float f = getCarrierFraction(member);
-			score.combat = w * (1 - f);
-			score.carrier = w * f;
-			
-			maxCombat = Math.max(maxCombat, score.combat);
-			maxCarrier = Math.max(maxCarrier, score.carrier);
+			maxMemberTotal = Math.max(maxMemberTotal, score.score[4]);
 		}
 		
-		for (AutoAssignScore score : shipScores) {
-			score.combat /= maxCombat;
-			score.carrier /= maxCarrier;
-		}
-		
-		
-		maxCombat = 1f;
-		maxCarrier = 1f;
 		for (OfficerDataAPI officer : officers) {
 			AutoAssignScore score = new AutoAssignScore();
 			officerScores.add(score);
 			score.officer = officer.getPerson();
-			
-			score.combat = getSkillTotal(officer, false);
-			score.carrier = getSkillTotal(officer, true);
-			
-			maxCombat = Math.max(maxCombat, score.combat);
-			maxCarrier = Math.max(maxCarrier, score.carrier);
+			score.score = computeOfficerScore(officer.getPerson());
+			maxOfficerTotal = Math.max(maxOfficerTotal, score.score[4]);
 		}
 		
 		for (AutoAssignScore score : officerScores) {
-			score.combat /= maxCombat;
-			score.carrier /= maxCarrier;
-			
 			// so that the best officers are closer to the best ships
 			// and the lowest-level officers are still closer to the best ships than to the worst ships
-			score.combat = 1f + (1f - score.combat);
+			score.score[4] = maxMemberTotal + (maxOfficerTotal - score.score[4]);
 		}
 		
 		while (!shipScores.isEmpty() && !officerScores.isEmpty()) {
@@ -1802,7 +1833,12 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 //					System.out.println("wefewfew");
 //				}
 				for (AutoAssignScore officer : officerScores) {
-					float dist = Math.abs(ship.combat - officer.combat) + Math.abs(ship.carrier - officer.carrier);
+					float dist = Math.abs(ship.score[0] - officer.score[0]) + 
+								 Math.abs(ship.score[1] - officer.score[1]) +
+								 Math.abs(ship.score[2] - officer.score[2]) +
+								 Math.abs(ship.score[3] - officer.score[3]) +
+								 Math.abs(ship.score[4] - officer.score[4]);
+
 					if (dist < minDist) {
 						minDist = dist;
 						bestShip = ship;
@@ -1818,9 +1854,105 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			officerScores.remove(bestOfficer);
 			bestShip.member.setCaptain(bestOfficer.officer);
 		}
-		
 	}
 
+	public float [] computeOfficerScore(PersonAPI officer) {
+		float energy = 0f;
+		float ballistic = 0f;
+		float missile = 0f;
+		float defense = 0f;
+		float total = 0f;
+		
+		for (SkillLevelAPI sl : officer.getStats().getSkillsCopy()) {
+			if (!sl.getSkill().isCombatOfficerSkill()) continue;
+			float w = sl.getLevel();
+			if (w == 2) w = 1.33f; // weigh elite skills as less than double
+			if (w <= 0f) {
+				continue;
+			}
+			
+			if (sl.getSkill().hasTag(Skills.TAG_ENERGY_WEAPONS)) {
+				energy++;
+			} else if (sl.getSkill().hasTag(Skills.TAG_BALLISTIC_WEAPONS)) {
+				ballistic++;
+			} else if (sl.getSkill().hasTag(Skills.TAG_MISSILE_WEAPONS)) {
+				missile++;
+			} else if (sl.getSkill().hasTag(Skills.TAG_ACTIVE_DEFENSES)) {
+				defense++;
+			}
+			total++;
+		}
+		
+		if (total < 1f) total = 1f;
+		energy /= total;
+		ballistic /= total;
+		missile /= total;
+		defense /= total;
+		
+		float [] result = new float [5];
+		result[0] = energy;
+		result[1] = ballistic;
+		result[2] = missile;
+		result[3] = defense;
+		result[4] = total;
+		return result;
+	}
+	
+	public float [] computeMemberScore(FleetMemberAPI member) {
+		float energy = 0f;
+		float ballistic = 0f;
+		float missile = 0f;
+		float total = 0f;
+		
+		for (String slotId : member.getVariant().getFittedWeaponSlots()) {
+			WeaponSlotAPI slot = member.getVariant().getSlot(slotId);
+			if (slot.isDecorative() || slot.isSystemSlot()) continue;
+			
+			WeaponSpecAPI weapon = member.getVariant().getWeaponSpec(slotId);
+			float w = 1f;
+			switch (weapon.getSize()) {
+			case LARGE: w = 4f; break;
+			case MEDIUM: w = 2f; break;
+			case SMALL: w = 1f; break;
+			}
+			WeaponType type = weapon.getType();
+			if (type == WeaponType.BALLISTIC) { 
+				ballistic += w;
+				total += w;
+			} else if (type == WeaponType.ENERGY) { 
+				energy += w;
+				total += w;
+			} else if (type == WeaponType.MISSILE) { 
+				missile += w;
+				total += w;
+			} else {
+				total += w;
+			}
+		}
+		if (total < 1f) total = 1f;
+		energy /= total;
+		ballistic /= total;
+		missile /= total;
+
+		boolean d = member.getHullSpec().getShieldType() == ShieldType.FRONT ||
+			 		member.getHullSpec().getShieldType() == ShieldType.OMNI || 
+			 		member.getHullSpec().isPhase();
+		
+		float [] result = new float [5];
+		result[0] = energy;
+		result[1] = ballistic;
+		result[2] = missile;
+		if (d) {
+			result[3] = 1f;
+		} else {
+			result[3] = 0f;
+		}
+		result[4] = total;
+		
+		return result;
+	}
+	
+	
 	
 	public float getVariantOPFraction(FleetMemberAPI member) {
 		float f = 1f;

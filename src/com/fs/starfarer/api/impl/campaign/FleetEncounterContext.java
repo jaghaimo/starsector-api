@@ -1,6 +1,8 @@
 package com.fs.starfarer.api.impl.campaign;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -1401,6 +1403,11 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		List<FleetMemberData> ownCasualties = winnerData.getOwnCasualties();
 		List<FleetMemberData> all = new ArrayList<FleetMemberData>();
 		all.addAll(ownCasualties);
+		Collections.sort(all, new Comparator<FleetMemberData>() {
+			public int compare(FleetMemberData o1, FleetMemberData o2) {
+				return o2.getMember().getVariant().getSMods().size() - o1.getMember().getVariant().getSMods().size();
+			}
+		});
 		
 		
 		// since the number of recoverable ships is limited, prefer "better" ships
@@ -1414,7 +1421,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			case DESTROYER: base = 10f; break;
 			case FRIGATE: base = 5f; break;
 			}
-			float w = curr.getMember().getDeploymentPointsCost() / base;
+			float w = curr.getMember().getUnmodifiedDeploymentPointsCost() / base;
 			
 			enemyPicker.add(curr, w);
 		}
@@ -1428,7 +1435,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		
-		int maxRecoverablePerType = 16;
+		int maxRecoverablePerType = 24;
 		
 		float probLessDModsOnNext = Global.getSettings().getFloat("baseProbLessDModsOnRecoverableEnemyShip");
 		float lessDmodsOnNextMult = Global.getSettings().getFloat("lessDModsOnRecoverableEnemyShipMultNext");
@@ -1441,7 +1448,10 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 
 			boolean own = ownCasualties.contains(data);
 			if (own && data.getMember().isAlly()) continue;
-			
+
+//			if (data.getMember().getHullId().startsWith("vanguard_pirates")) {
+//				System.out.println("wefwefwefe12341234");
+//			}
 			
 			float mult = 1f;
 			if (data.getStatus() == Status.DESTROYED) mult = 0.5f;
@@ -1465,19 +1475,24 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 				}
 			}
 	
-			
+//			if (data.getMember().getHullId().startsWith("cerberus")) {
+//				System.out.println("wefwefew");
+//			}
 			boolean normalRecovery = !noRecovery && 
-						Misc.isShipRecoverable(data.getMember(), playerFleet, own, useOfficerRecovery, battle.getSeed(), 1f * mult);
+						Misc.isShipRecoverable(data.getMember(), playerFleet, own, useOfficerRecovery, 1f * mult);
 			boolean storyRecovery = !noRecovery && !normalRecovery;
+		
 
-			if (!own && (storyRecovery || normalRecovery)) {
+			float shipRecProb = data.getMember().getStats().getDynamic().getMod(Stats.INDIVIDUAL_SHIP_RECOVERY_MOD).computeEffective(0f);
+			if (!own && (storyRecovery || normalRecovery) && shipRecProb < 1f) {
 				float per = Global.getSettings().getFloat("probNonOwnNonRecoverablePerDMod");
 				float perAlready = Global.getSettings().getFloat("probNonOwnNonRecoverablePerAlreadyRecoverable");
 				float max = Global.getSettings().getFloat("probNonOwnNonRecoverableMax");
 				int dmods = DModManager.getNumDMods(data.getMember().getVariant());
 				
 				float assumedAddedDmods = 3f;
-				assumedAddedDmods += Global.getSector().getPlayerFleet().getStats().getDynamic().getValue(Stats.SHIP_DMOD_REDUCTION, 0) * 0.5f;
+				assumedAddedDmods -= Global.getSector().getPlayerFleet().getStats().getDynamic().getValue(Stats.SHIP_DMOD_REDUCTION, 0) * 0.5f;
+				assumedAddedDmods = Math.min(assumedAddedDmods, 5 - dmods);
 				
 				float recoveredSoFar = 0f;
 				if (storyRecovery) recoveredSoFar = storyRecoverableShips.size();
@@ -1540,9 +1555,19 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 					DModManager.reduceNextDmodsBy = 3;	
 				}
 				
-				DModManager.addDMods(data, own, Global.getSector().getPlayerFleet(), dModRandom);
-				if (DModManager.getNumDMods(variant) > 0) {
-					DModManager.setDHull(variant);
+				float probAvoidDmods = 
+						data.getMember().getStats().getDynamic().getMod(
+								Stats.DMOD_AVOID_PROB_MOD).computeEffective(0f);
+				
+				float probAcquireDmods = 
+						data.getMember().getStats().getDynamic().getMod(
+								Stats.DMOD_ACQUIRE_PROB_MOD).computeEffective(1f);
+				
+				if (dModRandom.nextFloat() >= probAvoidDmods && dModRandom.nextFloat() < probAcquireDmods) {
+					DModManager.addDMods(data, own, Global.getSector().getPlayerFleet(), dModRandom);
+					if (DModManager.getNumDMods(variant) > 0) {
+						DModManager.setDHull(variant);
+					}
 				}
 				
 				float weaponProb = Global.getSettings().getFloat("salvageWeaponProb");
@@ -1939,6 +1964,22 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 	
 	protected float xpGained = 0;
 	protected void gainXP(DataForEncounterSide side, DataForEncounterSide otherSide) {
+		float bonusXP = 0f;
+		float points = 0f;
+		for (FleetMemberData data : side.getOwnCasualties()) {
+			if (data.getStatus() == Status.DISABLED || 
+					data.getStatus() == Status.DESTROYED) {
+				float [] bonus = Misc.getBonusXPForScuttling(data.getMember());
+				points += bonus[0];
+				bonusXP += bonus[1];
+			}
+		}
+		if (bonusXP > 0 && points > 0) {
+			Global.getSector().getPlayerStats().setOnlyAddBonusXPDoNotSpendStoryPoints(true);
+			Global.getSector().getPlayerStats().spendStoryPoints((int)Math.round(points), true, textPanelForXPGain, false, bonusXP, null);
+			Global.getSector().getPlayerStats().setOnlyAddBonusXPDoNotSpendStoryPoints(false);
+		}
+		
 		//CampaignFleetAPI fleet = side.getFleet();
 		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
 		int fpTotal = 0;
@@ -2013,11 +2054,13 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		
 		
 		float maxProb = Global.getSettings().getFloat("maxOfficerPromoteProb");
+		float probMult = Global.getSettings().getFloat("officerPromoteProbMult");
 		int max = Misc.getMaxOfficers(Global.getSector().getPlayerFleet());
 		int curr = Misc.getNumNonMercOfficers(Global.getSector().getPlayerFleet());
 
 		float prob = fpDestroyed / (Math.max(1f, fpInFleet));
-		prob /= 5f;
+		//prob /= 5f;
+		prob *= probMult;
 		
 		if (curr >= max) prob *= 0.5f;
 		if (prob > maxProb) prob = maxProb;
@@ -3178,8 +3221,9 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			for (int i = 0; i < dMods; i++) {
 				mult *= dModMult;
 			}
-			scoreEnemy += member.getDeploymentPointsCost() * mult;
+			scoreEnemy += member.getUnmodifiedDeploymentPointsCost() * mult;
 		}
+		scoreEnemy *= 0.67f;
 		
 		officerBase *= 0.5f;
 		officerPerLevel *= 0.5f;
@@ -3200,7 +3244,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			for (int i = 0; i < dMods; i++) {
 				mult *= dModMult;
 			}
-			scorePlayer += member.getDeploymentPointsCost() * mult;
+			scorePlayer += member.getUnmodifiedDeploymentPointsCost() * mult;
 		}
 		
 

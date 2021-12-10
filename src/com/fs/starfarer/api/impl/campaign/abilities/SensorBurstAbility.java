@@ -5,6 +5,7 @@ import java.awt.Color;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Pings;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -61,6 +62,11 @@ public class SensorBurstAbility extends BaseDurationAbility {
 		
 		CampaignFleetAPI fleet = getFleet();
 		if (fleet == null) return;
+		
+		if (entity.isInCurrentLocation()) {
+			Global.getSector().getMemoryWithoutUpdate().set(MemFlags.GLOBAL_SENSOR_BURST_JUST_USED_IN_CURRENT_LOCATION, true, 0.1f);
+		}
+		fleet.getMemoryWithoutUpdate().set(MemFlags.JUST_DID_SENSOR_BURST, true, 0.1f);
 		
 //		if (fleet.isPlayerFleet()) {
 //			System.out.println("Level: " + level);

@@ -204,7 +204,7 @@ public class ContactIntel extends BaseIntelPlugin {
 	}
 	
 	public void relocateToMarket(MarketAPI other, boolean withIntelUpdate) {
-		if (wasAddedToCommDirectory != null && wasAddedToCommDirectory && market.getCommDirectory() != null) {
+		if (wasAddedToCommDirectory != null && wasAddedToCommDirectory && market != null && market.getCommDirectory() != null) {
 			market.getCommDirectory().removePerson(person);
 			wasAddedToCommDirectory = null;
 		}
@@ -236,7 +236,7 @@ public class ContactIntel extends BaseIntelPlugin {
 	@Override
 	protected void notifyEnding() {
 		super.notifyEnding();
-		if (wasAddedToCommDirectory != null && wasAddedToCommDirectory && market.getCommDirectory() != null) {
+		if (wasAddedToCommDirectory != null && wasAddedToCommDirectory && market != null && market.getCommDirectory() != null) {
 			market.getCommDirectory().removePerson(person);
 			wasAddedToCommDirectory = null;
 		}
@@ -510,6 +510,19 @@ public class ContactIntel extends BaseIntelPlugin {
 		Color color = Misc.getStoryOptionColor();
 		Color dark = Misc.getStoryDarkColor();
 		
+		TooltipCreator noDeleteTooltip = new TooltipCreator() {
+			public boolean isTooltipExpandable(Object tooltipParam) {
+				return false;
+			}
+			public float getTooltipWidth(Object tooltipParam) {
+				return TOOLTIP_WIDTH;
+			}
+			
+			public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
+				tooltip.addPara("Can not delete or suspend contact at this time.", 0f);
+			}
+		};
+		
 		if (state == ContactState.POTENTIAL || state == ContactState.SUSPENDED){
 			if (state == ContactState.POTENTIAL && POTENTIAL_EXPIRES) {
 				float days = DURATION - getDaysSincePlayerVisible();
@@ -540,10 +553,18 @@ public class ContactIntel extends BaseIntelPlugin {
 		} else if (state == ContactState.NON_PRIORITY || state == ContactState.PRIORITY) {
 			ButtonAPI suspend = addGenericButton(info, width, color, dark, "Suspend contact", BUTTON_SUSPEND);
 			suspend.setShortcut(Keyboard.KEY_U, true);
+			if (Global.getSector().getIntel().isInShowMap()) {
+				suspend.setEnabled(false);
+				info.addTooltipToPrevious(noDeleteTooltip, TooltipLocation.LEFT);
+			}
 		}
 		
 		info.addSpacer(-10f);
 		ButtonAPI delete = addGenericButton(info, width, "Delete contact", BUTTON_DELETE);
+		if (Global.getSector().getIntel().isInShowMap()) {
+			delete.setEnabled(false);
+			info.addTooltipToPrevious(noDeleteTooltip, TooltipLocation.LEFT);
+		}
 		delete.setShortcut(Keyboard.KEY_G, true);
 	}
 	
@@ -563,6 +584,7 @@ public class ContactIntel extends BaseIntelPlugin {
 		} else if (buttonId == BUTTON_DELETE) {
 			endImmediately();
 			ui.recreateIntelUI();
+			//Global.getSector().getCampaignUI().showCoreUITab(CoreUITabId.CARGO);
 		}
 	}
 
@@ -829,6 +851,7 @@ public class ContactIntel extends BaseIntelPlugin {
 	public static void addPotentialContact(float probability, PersonAPI contact, MarketAPI market, TextPanelAPI text) {
 		if (playerHasContact(contact)) return;
 		if (contact.getFaction().isPlayerFaction()) return;
+		if (market == null) return;
 		if (market != null && market.getMemoryWithoutUpdate().getBoolean(NO_CONTACTS_ON_MARKET)) return;
 		if (contact != null && contact.getFaction().getCustomBoolean(Factions.CUSTOM_NO_CONTACTS)) return;
 		

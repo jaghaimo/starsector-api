@@ -4,8 +4,8 @@ import java.util.Random;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.util.Misc;
@@ -33,7 +33,7 @@ public abstract class BaseBarEventWithPerson extends BaseBarEvent {
 		String p = getPersonPortrait();
 		if (p != null) person.setPortraitSprite(p);
 		person.setRankId(getPersonRank());
-		person.setPostId(getPersonRank());
+		person.setPostId(getPersonPost());
 		return person;
 	}
 	

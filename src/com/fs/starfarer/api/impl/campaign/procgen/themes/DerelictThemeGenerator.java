@@ -117,14 +117,17 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 			if (hasHab) w += 5;
 			w += numPlanets;
 			
+			if (use == backup) {
+				w *= 0.0001f;
+			}
 			use.add(system, w);
 		}
 		
-		if (cryoSystems.isEmpty()) {
+		int numCryo = 2;
+		if (cryoSystems.isEmpty() || cryoSystems.getItems().size() < numCryo + 1) {
 			cryoSystems.addAll(backup);
 		}
 		
-		int numCryo = 2;
 		int added = 0;
 		WeightedRandomPicker<String> cryosleeperNames = new WeightedRandomPicker<String>(random);
 		cryosleeperNames.add("Calypso");

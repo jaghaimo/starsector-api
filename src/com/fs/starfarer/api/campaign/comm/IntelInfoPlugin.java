@@ -157,6 +157,8 @@ public interface IntelInfoPlugin {
 	float getTimeRemainingFraction();
 
 	
+	Color getCircleBorderColorOverride();
+	
 	boolean forceAddNextFrame();
 	void setForceAddNextFrame(boolean add);
 

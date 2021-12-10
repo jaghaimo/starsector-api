@@ -1,5 +1,6 @@
 package com.fs.starfarer.api.impl.campaign.missions.cb;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
@@ -7,11 +8,11 @@ import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithBarEvent;
-import com.fs.starfarer.api.impl.campaign.missions.hub.ReqMode;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetQuality;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetSize;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OfficerNum;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OfficerQuality;
+import com.fs.starfarer.api.impl.campaign.missions.hub.ReqMode;
 
 public class CBDerelict extends BaseCustomBountyCreator {
 
@@ -25,11 +26,17 @@ public class CBDerelict extends BaseCustomBountyCreator {
 	}
 	
 	@Override
+	public String getIconName() {
+		return Global.getSettings().getSpriteName("campaignMissions", "derelict_bounty");
+	}
+	
+
+	@Override
 	public CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage) {
 		CustomBountyData data = new CustomBountyData();
 		data.difficulty = difficulty;
 		
-		mission.setIconName("campaignMissions", "derelict_bounty");
+		//mission.setIconName("campaignMissions", "derelict_bounty");
 		
 		//mission.requireSystem(this);
 		mission.requireSystemTags(ReqMode.NOT_ANY, Tags.THEME_CORE);

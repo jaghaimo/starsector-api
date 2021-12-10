@@ -38,7 +38,6 @@ public class SolarArray extends BaseMarketConditionPlugin {
 		for (String cid : SUPPRESSED_CONDITIONS) {
 			market.unsuppressCondition(cid);
 		}
-		
 		Industry industry = getIndustry();
 		if (industry != null) {
 			industry.getSupplyBonusFromOther().unmodifyFlat(id);

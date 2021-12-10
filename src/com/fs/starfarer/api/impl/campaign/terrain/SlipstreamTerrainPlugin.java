@@ -245,7 +245,7 @@ public class SlipstreamTerrainPlugin extends BaseTerrain {
 
 	@Override
 	public boolean containsEntity(SectorEntityToken other) {
-		return containsPointCaching(other, other.getLocation(), other.getRadius());
+		return containsPointCaching(other, other.getLocation(), other.getRadius()) && !isPreventedFromAffecting(other);
 	}
 
 	@Override

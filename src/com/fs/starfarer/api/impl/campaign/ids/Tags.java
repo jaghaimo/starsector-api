@@ -2,12 +2,33 @@ package com.fs.starfarer.api.impl.campaign.ids;
 
 public class Tags {
 	
-	public static final String NO_MARKET_INFO = "no_market_info";
 	
+	public static final String SPECIAL_ALLOWS_SYSTEM_USE = "special_allows_system_use";
+	public static final String SYSTEM_ALLOWS_SPECIAL_USE = "system_allows_special_use";
+	
+	
+	/**
+	 * Derelict ship does not allow story point recovery. 
+	 */
+	public static final String UNRECOVERABLE = "unrecoverable";
+	
+	public static final String VARIANT_ALLOW_EXCESS_OP_ETC = "variant_allow_excess_op_etc";
 	public static final String VARIANT_ALWAYS_RETAIN_SMODS_ON_SALVAGE = "variant_always_retain_smods_on_salvage";
-	
 	public static final String VARIANT_CONSISTENT_WEAPON_DROPS = "consistent_weapon_drops";
 	public static final String VARIANT_DO_NOT_DROP_AI_CORE_FROM_CAPTAIN = "no_ai_core_drop";
+	public static final String VARIANT_ALWAYS_RECOVERABLE = "always_recoverable";
+	public static final String VARIANT_UNBOARDABLE = "unboardable";
+
+	
+	
+	/**
+	 * For phase cloak, whether it can be disrupted by nearby shots/objects.
+	 */
+	public static final String DISRUPTABLE = "disruptable";
+	
+	public static final String NO_MARKET_INFO = "no_market_info";
+	
+	
 	
 	public static final String MARKET_NO_INDUSTRIES_ALLOWED = "market_no_industries_allowed";
 	
@@ -135,6 +156,7 @@ public class Tags {
 	public static final String WING_MATCH_LEADER_FACING = "match_leader_facing";
 	public static final String WING_ATTACK_AT_AN_ANGLE = "attack_at_an_angle";
 	public static final String WING_INDEPENDENT_OF_CARRIER = "independent_of_carrier";
+	public static final String WING_TARGET_ESCORT_TARGET = "target_escort_target";
 	
 	public static final String NO_DROP = "no_drop"; // general-purpose
 	public static final String NO_BP_DROP = "no_bp_drop"; // no blueprints dropped during raid
@@ -216,6 +238,8 @@ public class Tags {
 	
 	public static final String NOT_RANDOM_MISSION_TARGET = "not_random_mission_target";
 	
+
+	
 	public static final String NEUTRINO = "neutrino";
 	public static final String NEUTRINO_LOW = "neutrino_low";
 	public static final String NEUTRINO_HIGH = "neutrino_high";
@@ -247,6 +271,7 @@ public class Tags {
 	public static final String INTEL_LOCAL = "Local";
 	public static final String INTEL_TRADE = "Trade";
 	public static final String INTEL_MISSIONS = "Missions";
+	//public static final String INTEL_OFFERS = "Offers";
 	public static final String INTEL_ACCEPTED = "Accepted";
 	public static final String INTEL_STORY = "Story";
 	public static final String INTEL_COMMISSION = "Commission";
@@ -269,6 +294,14 @@ public class Tags {
 	
 	public static final String INVOLUNTARY_RETIREMENT = "involuntary_retirement";
 	public static final String REPLACEMENT_ARCHON = "replacement_archon";
+	
+	public static final String GHOST = "ghost";
+	
+	public static final String UNAFFECTED_BY_SLIPSTREAM = "unaffected_by_slipstream";
+	public static final String IMMUNE_TO_REMORA_PULSE = "immune_to_remora_pulse";
+	public static final String ZIG_GHOST = "zig_ghost";
+	
+	public static final String OMEGA = "omega";
 }
 
 

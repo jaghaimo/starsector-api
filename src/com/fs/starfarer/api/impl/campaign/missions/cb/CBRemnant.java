@@ -1,5 +1,6 @@
 package com.fs.starfarer.api.impl.campaign.missions.cb;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
@@ -28,11 +29,15 @@ public class CBRemnant extends BaseCustomBountyCreator {
 	}
 	
 	@Override
+	public String getIconName() {
+		return Global.getSettings().getSpriteName("campaignMissions", "remnant_bounty");
+	}
+	
+	@Override
 	public CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage) {
 		CustomBountyData data = new CustomBountyData();
 		data.difficulty = difficulty;
 		
-		mission.setIconName("campaignMissions", "remnant_bounty");
 		//mission.requireSystem(this);
 		mission.requireSystemTags(ReqMode.NOT_ANY, Tags.THEME_CORE);
 //		mission.requireSystemTags(ReqMode.ANY, Tags.THEME_RUINS, Tags.THEME_MISC, Tags.THEME_REMNANT,
@@ -80,15 +85,32 @@ public class CBRemnant extends BaseCustomBountyCreator {
 		//setIconName("campaignMissions", "station_bounty");
 		
 		beginFleet(mission, data);
-		mission.triggerCreateFleet(size, quality, Factions.REMNANTS, type, data.system);
-		mission.triggerSetFleetOfficers(oNum, oQuality);
-		mission.triggerAutoAdjustFleetSize(size, size.next());
-		mission.triggerSetRemnantConfigActive();
-		mission.triggerSetFleetNoCommanderSkills();
-		mission.triggerFleetAddCommanderSkill(Skills.FLUX_REGULATION, 1);
-		mission.triggerFleetAddCommanderSkill(Skills.ELECTRONIC_WARFARE, 1);
-		mission.triggerFleetAddCommanderSkill(Skills.COORDINATED_MANEUVERS, 1);
-		mission.triggerFleetSetAllWeapons();
+		if (false) {
+			mission.triggerCreateFleet(FleetSize.LARGE, FleetQuality.SMOD_2, Factions.MERCENARY, FleetTypes.MERC_BOUNTY_HUNTER, data.system);
+			mission.triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.HIGHER);
+			mission.triggerSetFleetFaction(Factions.TRITACHYON);
+			mission.triggerMakeHostileAndAggressive();
+			mission.triggerMakeLowRepImpact();
+			mission.triggerSetFleetDoctrineComp(0, 0, 5);
+			mission.triggerFleetMakeFaster(true, 1, true);
+		} else {
+			mission.triggerCreateFleet(size, quality, Factions.REMNANTS, type, data.system);
+			mission.triggerSetFleetOfficers(oNum, oQuality);
+			mission.triggerAutoAdjustFleetSize(size, size.next());
+			mission.triggerSetRemnantConfigActive();
+			mission.triggerSetFleetNoCommanderSkills();
+			mission.triggerFleetAddCommanderSkill(Skills.FLUX_REGULATION, 1);
+			mission.triggerFleetAddCommanderSkill(Skills.ELECTRONIC_WARFARE, 1);
+			mission.triggerFleetAddCommanderSkill(Skills.COORDINATED_MANEUVERS, 1);
+			
+			mission.triggerFleetSetAllWeapons();
+		}
+//		if (difficulty >= 9) {
+//			mission.triggerSetFleetDoctrineOther(5, -1);
+//		}
+		//mission.triggerSetFleetDoctrineRandomize(1f);
+		//mission.triggerSetFleetDoctrineRandomize(0f);
+		
 		mission.triggerPickLocationAtInSystemJumpPoint(data.system);
 		mission.triggerSpawnFleetAtPickedLocation(null, null);
 		//mission.triggerFleetSetPatrolActionText("patrolling");

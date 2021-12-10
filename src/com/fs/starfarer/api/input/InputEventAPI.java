@@ -33,4 +33,7 @@ public interface InputEventAPI {
 	boolean isUnmodified();
 	boolean isDoubleClick();
 	boolean isModifierKey();
+	boolean isControlDownEvent(String controlEnumName);
+	boolean isControlUpEvent(String controlEnumName);
+	boolean isControlActivated(String enumName);
 }

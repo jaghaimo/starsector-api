@@ -1,18 +1,36 @@
 package com.fs.starfarer.api.impl.campaign.skills;
 
+import java.awt.Color;
+
+import org.lwjgl.util.vector.Vector2f;
+
+import com.fs.starfarer.api.characters.AfterShipCreationSkillEffect;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.ShipSkillEffect;
+import com.fs.starfarer.api.characters.SkillSpecAPI;
+import com.fs.starfarer.api.combat.CombatEntityAPI;
+import com.fs.starfarer.api.combat.DamageAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
+import com.fs.starfarer.api.combat.listeners.DamageTakenModifier;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
 public class DamageControl {
 	
-	public static final float INSTA_REPAIR = 0.25f;
-	public static final float CREW_LOSS_REDUCTION = 50;
-	public static final float MODULE_REPAIR_BONUS = 50;
-	public static final float HULL_DAMAGE_REDUCTION = 25;
-//	public static final float OVERLOAD_REDUCTION = 25;
+	public static float SECONDS_PER_PROC = 2f;
+	
+	public static float INSTA_REPAIR = 0.25f;
+	public static float CREW_LOSS_REDUCTION = 50;
+	public static float MODULE_REPAIR_BONUS = 50;
+	public static float HULL_DAMAGE_REDUCTION = 25;
+	
+	public static float ELITE_DAMAGE_THRESHOLD = 500;
+	public static float ELITE_DAMAGE_REDUCTION_PERCENT = 60;
 
+	
 	public static class Level2 implements ShipSkillEffect {
 
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
@@ -85,28 +103,6 @@ public class DamageControl {
 		}
 	}
 	
-	public static class Level5 implements ShipSkillEffect {
-		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
-			stats.getDynamic().getMod(Stats.INSTA_REPAIR_FRACTION).modifyFlat(id, INSTA_REPAIR);
-		}
-		
-		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
-			stats.getDynamic().getMod(Stats.INSTA_REPAIR_FRACTION).unmodify(id);
-		}	
-		
-		public String getEffectDescription(float level) {
-			return "" + (int) Math.round(INSTA_REPAIR * 100f) + "% of hull and armor damage taken repaired after combat ends, at no cost";
-		}
-		
-		public String getEffectPerLevelDescription() {
-			return null;
-		}
-		
-		public ScopeDescription getScopeDescription() {
-			return ScopeDescription.PILOTED_SHIP;
-		}
-	}
-	
 	public static class Level4 implements ShipSkillEffect {
 
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
@@ -130,19 +126,17 @@ public class DamageControl {
 		}
 	}
 	
-	/*
-	public static class Level3B implements ShipSkillEffect {
-		
+	public static class Level5 implements ShipSkillEffect {
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
-			stats.getOverloadTimeMod().modifyMult(id, 1f - OVERLOAD_REDUCTION / 100f);
+			stats.getDynamic().getMod(Stats.INSTA_REPAIR_FRACTION).modifyFlat(id, INSTA_REPAIR);
 		}
 		
 		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
-			stats.getOverloadTimeMod().unmodify(id);
+			stats.getDynamic().getMod(Stats.INSTA_REPAIR_FRACTION).unmodify(id);
 		}	
 		
 		public String getEffectDescription(float level) {
-			return "-" + (int)(OVERLOAD_REDUCTION) + "% overload duration";
+			return "" + (int) Math.round(INSTA_REPAIR * 100f) + "% of hull and armor damage taken repaired after combat ends, at no cost";
 		}
 		
 		public String getEffectPerLevelDescription() {
@@ -153,5 +147,76 @@ public class DamageControl {
 			return ScopeDescription.PILOTED_SHIP;
 		}
 	}
-	*/
+	
+	public static class Level6 extends BaseSkillEffectDescription implements AfterShipCreationSkillEffect {
+		public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+			ship.addListener(new DamageControlDamageTakenMod(ship));
+		}
+
+		public void unapplyEffectsAfterShipCreation(ShipAPI ship, String id) {
+			ship.removeListenerOfClass(DamageControlDamageTakenMod.class);
+		}
+		
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {}
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {}
+		
+		public String getEffectDescription(float level) {
+			return null;
+		}
+		
+		public void createCustomDescription(MutableCharacterStatsAPI stats, SkillSpecAPI skill, 
+											TooltipMakerAPI info, float width) {
+			init(stats, skill);
+
+			Color c = hc;
+			float level = stats.getSkillLevel(skill.getId());
+			if (level < 2) {
+				c = dhc;
+			}
+			String seconds = "" + (int) SECONDS_PER_PROC + " seconds";
+			if (SECONDS_PER_PROC == 1f) seconds = "second";
+			//info.addPara("Single-hit hull damage above %s points has the portion above %s reduced by %s",
+			info.addPara("At most once every " +  seconds + ", single-hit hull damage above %s points has the portion above %s reduced by %s",
+					0f, c, c,
+					"" + (int) ELITE_DAMAGE_THRESHOLD,
+					"" + (int) ELITE_DAMAGE_THRESHOLD,
+					"" + (int) ELITE_DAMAGE_REDUCTION_PERCENT + "%"
+			);
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
+	
+	
+	public static class DamageControlDamageTakenMod implements DamageTakenModifier, AdvanceableListener {
+		protected ShipAPI ship;
+		protected float sinceProc = SECONDS_PER_PROC + 1f;
+		public DamageControlDamageTakenMod(ShipAPI ship) {
+			this.ship = ship;
+		}
+		
+		public void advance(float amount) {
+			sinceProc += amount;
+		}
+		
+		public String modifyDamageTaken(Object param, CombatEntityAPI target, 
+										DamageAPI damage, Vector2f point,
+										boolean shieldHit) {
+			if (!shieldHit && sinceProc > SECONDS_PER_PROC) {
+				float mult = 1f - ELITE_DAMAGE_REDUCTION_PERCENT / 100f;
+				ship.setNextHitHullDamageThresholdMult(ELITE_DAMAGE_THRESHOLD, mult);
+				sinceProc = 0f;
+			}
+			return null;
+		}
+	}
+	
 }
+
+
+
+
+
+

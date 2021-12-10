@@ -71,6 +71,8 @@ public class ZigLeashAssignmentAI extends BaseAssignmentAI {
 
 	
 	public static void spawnMote(SectorEntityToken from) {
+		if (!from.isInCurrentLocation()) return;
+		
 		float dur = 1f + 2f * (float) Math.random();
 		dur *= 2f;
 		float size = 3f + (float) Math.random() * 5f;

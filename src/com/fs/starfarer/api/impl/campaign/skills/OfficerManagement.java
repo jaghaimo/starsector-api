@@ -17,7 +17,7 @@ public class OfficerManagement {
 		public String getString() {
 			int baseOfficers = (int)Global.getSector().getPlayerStats().getOfficerNumber().getBaseValue();
 			
-			return "The base maximum number of officers you're able to command is " + baseOfficers + ".";
+			return "*The base maximum number of officers you're able to command is " + baseOfficers + ".";
 		}
 		public Color[] getHighlightColors() {
 			Color h = Misc.getDarkHighlightColor();
@@ -43,7 +43,7 @@ public class OfficerManagement {
 		
 		public String getEffectDescription(float level) {
 			//return "Able to command up to " + (int) (max) + " officers";
-			return "+" + (int)NUM_OFFICERS_BONUS + " to maximum number of officers you're able to command";
+			return "+" + (int)NUM_OFFICERS_BONUS + " to maximum number of officers* you're able to command";
 		}
 		
 		public String getEffectPerLevelDescription() {

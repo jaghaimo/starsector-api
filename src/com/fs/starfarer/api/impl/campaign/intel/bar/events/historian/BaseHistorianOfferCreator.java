@@ -55,6 +55,7 @@ public class BaseHistorianOfferCreator implements HistorianOfferCreator {
 					
 					// skip derelict ships etc that will expire
 					if (entity.hasTag(Tags.EXPIRES)) continue;
+					if (entity.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
 					if (entity.getCircularOrbitRadius() > 10000f) continue;
 					picker.add(entity, w);
 				}

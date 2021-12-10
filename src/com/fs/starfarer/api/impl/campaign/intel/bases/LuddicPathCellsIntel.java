@@ -344,7 +344,11 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		String aiCoreId = market.getAdmin().getAICoreId();
 		if (aiCoreId != null) {
 			int s = (int) Math.round(LuddicPathBaseManager.AI_CORE_ADMIN_INTEREST);
-			info.addPara(indent + "AI core administrator (%s)", initPad, h, "" + s);
+			if (market.getAdmin().getMemoryWithoutUpdate().getBoolean(MemFlags.SUSPECTED_AI)) {
+				info.addPara(indent + "Suspected AI core administrator (%s)", initPad, h, "" + s);
+			} else {
+				info.addPara(indent + "AI core administrator (%s)", initPad, h, "" + s);
+			}
 			initPad = 3f;
 			added = true;
 		}

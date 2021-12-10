@@ -990,7 +990,14 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 			curr = Math.round(mod.value);
 		}
 		
+		int avWithoutPenalties = (int) Math.round(com.getAvailableStat().getBaseValue());
+		for (StatMod m : com.getAvailableStat().getFlatMods().values()) {
+			if (m.value < 0) continue;
+			avWithoutPenalties += (int) Math.round(m.value);
+		}
+		
 		int a = com.getAvailable() - curr;
+		a = avWithoutPenalties - curr;
 		int d = com.getMaxDemand();
 		if (d > a) {
 			//int supply = Math.max(1, d - a - 1);

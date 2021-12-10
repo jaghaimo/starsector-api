@@ -29,7 +29,23 @@ public interface ShipAPI extends CombatEntityAPI {
 		FRIGATE,
 		DESTROYER,
 		CRUISER,
-		CAPITAL_SHIP,
+		CAPITAL_SHIP;
+		
+		public HullSize smaller(boolean allowFighter) {
+			if (this == FRIGATE && allowFighter) return FIGHTER;			
+			if (this == DESTROYER) return FRIGATE;			
+			if (this == CRUISER) return DESTROYER;			
+			if (this == CAPITAL_SHIP) return CRUISER;
+			return this;
+		}
+		
+		public HullSize larger() {
+			if (this == FIGHTER) return FRIGATE;			
+			if (this == FRIGATE) return DESTROYER;			
+			if (this == DESTROYER) return CRUISER;			
+			if (this == CRUISER) return CAPITAL_SHIP;			
+			return this;
+		}
 	}
 	
 	/**
@@ -646,6 +662,40 @@ public interface ShipAPI extends CombatEntityAPI {
 
 	void setFluxVentTextureSheet(String textureId);
 	String getFluxVentTextureSheet();
+
+	float getAimAccuracy();
+
+
+	float getForceCarrierTargetTime();
+	void setForceCarrierTargetTime(float forceCarrierTargetTime);
+	float getForceCarrierPullBackTime();
+	void setForceCarrierPullBackTime(float forceCarrierPullBackTime);
+	ShipAPI getForceCarrierTarget();
+	void setForceCarrierTarget(ShipAPI forceCarrierTarget);
+
+
+	void setWing(FighterWingAPI wing);
+	float getExplosionScale();
+	void setExplosionScale(float explosionScale);
+	Color getExplosionFlashColorOverride();
+	void setExplosionFlashColorOverride(Color explosionFlashColorOverride);
+	Vector2f getExplosionVelocityOverride();
+	void setExplosionVelocityOverride(Vector2f explosionVelocityOverride);
+
+
+	void setNextHitHullDamageThresholdMult(float threshold, float multBeyondThreshold);
+
+
+	boolean isEngineBoostActive();
+
+
+	void makeLookDisabled();
+
+
+	void setExtraAlphaMult2(float transparency);
+
+
+	float getExtraAlphaMult2();
 
 }
 

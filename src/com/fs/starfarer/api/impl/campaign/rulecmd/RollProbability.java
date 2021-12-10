@@ -23,6 +23,7 @@ public class RollProbability extends BaseCommandPlugin {
 		long seed;
 		if (dialog.getInteractionTarget() != null) {
 			seed = Misc.getSalvageSeed(dialog.getInteractionTarget());
+			seed /= 321L;
 			seed *= (Global.getSector().getClock().getMonth() + 10 + prob * 10f);
 		} else {
 			seed = Misc.genRandomSeed();
@@ -30,7 +31,11 @@ public class RollProbability extends BaseCommandPlugin {
 		
 		Random r = Misc.getRandom(seed, 1);
 		
-		return r.nextFloat() < prob;
+		float f = r.nextFloat();
+		//System.out.println("Seed: " + seed);
+		//System.out.println("rolled: " + f);
+		
+		return f < prob;  //r.nextFloat() < prob;
 	}
 
 	

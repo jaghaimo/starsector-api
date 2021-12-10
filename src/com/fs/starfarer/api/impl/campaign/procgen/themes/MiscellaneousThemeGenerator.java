@@ -74,10 +74,16 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 			}
 			
 			for (StarSystemData data  : systems) {
+				//if (data.system.getName().toLowerCase().contains("alpha mok morred")) {
+//				if (data.system.getName().toLowerCase().contains("vasuki")) {
+//					System.out.println("efwefwef");
+//				}
 				boolean derelict = data.system.hasTag(Tags.THEME_DERELICT);
-				if (!derelict && theme != null) continue;
+				if (!derelict && theme != null && !data.system.getTags().isEmpty()) continue;
+//				if (!derelict && theme != null && !theme.equals(Themes.DERELICTS) &&
+//						!theme.equals(Themes.NO_THEME)) continue;
 				
-				if (random.nextFloat() > PROB_TO_ADD_SOMETHING) {
+				if (random.nextFloat() > PROB_TO_ADD_SOMETHING || (derelict && theme != null)) {
 					data.system.addTag(Tags.THEME_MISC_SKIP);
 					continue;
 				}

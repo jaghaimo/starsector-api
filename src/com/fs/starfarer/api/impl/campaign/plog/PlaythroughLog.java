@@ -3,6 +3,7 @@ package com.fs.starfarer.api.impl.campaign.plog;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -58,10 +59,15 @@ public class PlaythroughLog implements EconomyTickListener,
 	transient protected List<PLSnapshot> data = new ArrayList<PLSnapshot>();
 	protected String saved = "";
 	
+	protected List<SModRecord> smodsInstalled = new ArrayList<SModRecord>();
+	protected List<OfficerSkillGainRecord> officerSkillsLearned = new ArrayList<OfficerSkillGainRecord>();
+	
 	public PlaythroughLog() {
 		//Global.getSector().getEconomy().addUpdateListener(this);
 		initStats();
 	}
+	
+	
 	
 //	// called from the UI when the player visits a colony etc
 //	// take some samples here so that we have a better chance of catching changes in credits/fleet size/etc.
@@ -151,7 +157,33 @@ public class PlaythroughLog implements EconomyTickListener,
 	}
 
 	
+	public List<SModRecord> getSModsInstalled() {
+		return smodsInstalled;
+	}
+
+	public void addSModsInstalled(SModRecord record) {
+		smodsInstalled.add(record);
+	}
 	
+	public List<OfficerSkillGainRecord> getOfficerSkillsLearned() {
+		return officerSkillsLearned;
+	}
+
+	public void addOfficerSkillRecord(OfficerSkillGainRecord record) {
+		officerSkillsLearned.add(record);
+	}
+	public void removeOfficerSkillRecord(String personId, String skillId, boolean elite) {
+		Iterator<OfficerSkillGainRecord> iter = officerSkillsLearned.iterator();
+		while (iter.hasNext()) {
+			OfficerSkillGainRecord record = iter.next();
+			if (record.personId.equals(personId) && record.skillId.equals(skillId) && record.elite == elite) {
+				iter.remove();
+			}
+		}
+	}
+
+
+
 	protected Object readResolve() throws DataFormatException, UnsupportedEncodingException {
 		if (stats == null) {
 			stats = new LinkedHashMap<String, PLStat>();
@@ -159,6 +191,13 @@ public class PlaythroughLog implements EconomyTickListener,
 		}
 		if (data == null) {
 			data = new ArrayList<PLSnapshot>();
+		}
+		
+		if (smodsInstalled == null) {
+			smodsInstalled = new ArrayList<SModRecord>();
+		}
+		if (officerSkillsLearned == null) {
+			officerSkillsLearned = new ArrayList<OfficerSkillGainRecord>();
 		}
 		
 		

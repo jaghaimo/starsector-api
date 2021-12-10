@@ -74,8 +74,8 @@ public class BarEventManager implements EveryFrameScript {
 	public long getSeed(SectorEntityToken entity, PersonAPI person, String extra) {
 		//updateSeed();
 		long mult = 1;
-		if (entity != null) mult *= (long) entity.getId().hashCode();
-		if (person != null) mult *= (long) person.getId().hashCode();
+		if (entity != null) mult *= (long) entity.getName().hashCode();
+		if (person != null) mult *= (long) person.getNameString().hashCode();
 		if (extra != null) mult *= (long) extra.hashCode();
 		
 		return seed + mult * 181783497276652981L;
@@ -190,7 +190,10 @@ public class BarEventManager implements EveryFrameScript {
 		active.advance(days);
 		timeout.advance(days);
 		
-		if (DebugFlags.BAR_DEBUG) days *= 100f;
+		if (DebugFlags.BAR_DEBUG) {
+			days *= 100f;
+			timeout.clear();
+		}
 		
 		tracker.advance(days);
 		

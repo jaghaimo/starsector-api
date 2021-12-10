@@ -17,4 +17,6 @@ public enum TerrainAIFlags {
 	REDUCES_SPEED_ALL,
 	
 	DANGEROUS_UNLESS_GO_SLOW,
+	
+	MOVES_FLEETS,
 }

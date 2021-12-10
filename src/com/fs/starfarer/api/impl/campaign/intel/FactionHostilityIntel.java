@@ -185,6 +185,11 @@ public class FactionHostilityIntel extends BaseIntelPlugin {
 			label.setHighlightColors(one.getBaseUIColor(), two.getBaseUIColor());
 		}
 		
+//		String font = Global.getSettings().getString("defaultFont");
+//		info.addCheckbox(200, 28, "Testing!", UICheckboxSize.TINY, opad);
+//		info.addCheckbox(200, 28, "Testing!", UICheckboxSize.SMALL, opad);
+//		info.addCheckbox(200, 28, "Testing!", font, Misc.getHighlightColor(), UICheckboxSize.LARGE, opad);
+//		info.addTextField(200, opad);
 		
 //		info.addPara("wkefhuiwehfuweffewfewfeddewefewewefwefwewefwefweehfuwefwewefwefwehfuwefwewefwefwehfuwefwewefwefwkwejfwffhwejkfhkwejfh423wfwhel" +
 //				"fewfwefwefwefweh[%s]fh2fwfwefwefwefwefwfkwghfieuwhfekhwejkuhfiohwef1wef2wef3wef4wefewfwefwe", 10f,

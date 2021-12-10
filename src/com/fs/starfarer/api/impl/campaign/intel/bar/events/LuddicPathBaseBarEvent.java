@@ -59,6 +59,8 @@ public class LuddicPathBaseBarEvent extends BaseBarEventWithPerson {
 
 	public boolean shouldShowAtMarket(MarketAPI market) {
 		for (LuddicPathCellsIntel cell : LuddicPathCellsIntel.getCellsForBase(intel, true)) {
+			if (cell.isSleeper()) continue;
+			if (cell.getSleeperTimeout() > 0) continue;
 			if (cell.getMarket() == market) return true;
 		}
 		return false;
@@ -81,7 +83,7 @@ public class LuddicPathBaseBarEvent extends BaseBarEventWithPerson {
 	protected PersonAPI createPerson() {
 		FactionAPI faction = Global.getSector().getFaction(Factions.LUDDIC_PATH);
 		int level = 1;
-		PersonAPI person = OfficerManagerEvent.createOfficer(faction, level, SkillPickPreference.GENERIC, 
+		PersonAPI person = OfficerManagerEvent.createOfficer(faction, level, SkillPickPreference.NO_ENERGY_YES_BALLISTIC_YES_MISSILE_YES_DEFENSE, 
 				true, null, true, false, 0, random);
 		return person;
 	}

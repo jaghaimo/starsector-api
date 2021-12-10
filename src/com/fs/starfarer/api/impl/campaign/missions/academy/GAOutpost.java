@@ -91,6 +91,7 @@ public class GAOutpost extends GABaseMission {
 		
 		resetSearch();
 		
+		//genRandom = new Random();
 //		requireSystemTags(ReqMode.ANY, Tags.THEME_REMNANT, Tags.THEME_DERELICT, 
 //						  Tags.THEME_MISC, Tags.THEME_MISC_SKIP, Tags.THEME_RUINS);
 		preferSystemInteresting();

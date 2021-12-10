@@ -129,6 +129,7 @@ public class DemandCargo extends BaseCommandPlugin {
 		} else {
 			//random = new Random(Misc.getSalvageSeed(otherFleet));
 			long seed = Misc.getSalvageSeed(otherFleet);
+			seed /= 321L;
 			seed *= (Global.getSector().getClock().getMonth() + 10);
 			random = new Random(seed);
 		}

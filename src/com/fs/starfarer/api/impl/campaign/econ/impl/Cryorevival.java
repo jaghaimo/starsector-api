@@ -205,6 +205,9 @@ public class Cryorevival extends BaseIndustry implements MarketImmigrationModifi
 		for (SectorEntityToken entity : Global.getSector().getCustomEntitiesWithTag(Tags.CRYOSLEEPER)) {
 			if (!usable || entity.getMemoryWithoutUpdate().contains("$usable")) {
 				float dist = Misc.getDistanceLY(locInHyper, entity.getLocationInHyperspace());
+				if (Math.round(dist * 10f) <= MAX_BONUS_DIST_LY * 10f) {
+					dist = MAX_BONUS_DIST_LY;
+				}
 				if (dist < minDist) {
 					minDist = dist;
 					nearest = entity;

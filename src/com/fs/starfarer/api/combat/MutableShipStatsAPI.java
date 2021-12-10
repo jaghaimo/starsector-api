@@ -53,7 +53,7 @@ public interface MutableShipStatsAPI {
 	 * @return
 	 */
 	public MutableStat getCriticalMalfunctionChance();
-	
+
 	public MutableStat getShieldMalfunctionChance();
 	public MutableStat getShieldMalfunctionFluxLevel();
 	
@@ -362,6 +362,14 @@ public interface MutableShipStatsAPI {
 	boolean hasListener(Object listener);
 	boolean hasListenerOfClass(Class<?> c);
 	<T> List<T> getListeners(Class<T> c);
+
+	MutableStat getBallisticProjectileSpeedMult();
+
+	MutableStat getEnergyProjectileSpeedMult();
+
+	MutableStat getMissileAmmoRegenMult();
+	MutableStat getEnergyAmmoRegenMult();
+	MutableStat getBallisticAmmoRegenMult();
 
 }
 

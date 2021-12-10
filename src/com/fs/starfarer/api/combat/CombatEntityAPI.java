@@ -76,5 +76,6 @@ public interface CombatEntityAPI {
 	void setCustomData(String key, Object data);
 	void removeCustomData(String key);
 	Map<String, Object> getCustomData();
+	void setHitpoints(float hitpoints);
 	
 }

@@ -86,6 +86,7 @@ public class DeadDropMission extends HubMissionWithBarEvent {
 		
 //		requireSystemTags(ReqMode.NOT_ANY, Tags.THEME_UNSAFE, Tags.THEME_CORE);
 //		preferSystemTags(ReqMode.ANY, Tags.THEME_INTERESTING, Tags.THEME_INTERESTING_MINOR);
+		requireSystemNot(createdAt.getStarSystem());
 		requireSystemInterestingAndNotUnsafeOrCore();
 		preferSystemInInnerSector();
 		preferSystemUnexplored();
@@ -98,7 +99,7 @@ public class DeadDropMission extends HubMissionWithBarEvent {
 		if (!setEntityMissionRef(target, "$ddro_ref")) return false;
 		
 		makeImportant(target, "$ddro_target", Stage.DROP_OFF);
-		
+		//setMapMarkerNameColor(Misc.getGrayColor());
 
 		setStartingStage(Stage.DROP_OFF);
 		setSuccessStage(Stage.COMPLETED);

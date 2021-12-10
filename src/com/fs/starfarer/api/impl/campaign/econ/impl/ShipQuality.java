@@ -6,8 +6,8 @@ import java.util.Map;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
-import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.EconomyAPI.EconomyUpdateListener;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
@@ -87,7 +87,7 @@ public class ShipQuality implements EconomyUpdateListener {
 			prod = Math.max(Math.min(com.getAvailable(), com.getMaxSupply()), prod);
 			if (prod >= d.prod && prod > 0) {
 				float q = market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).computeEffective(0f);
-				if (q >= d.qMod) {
+				if (q >= d.qMod || prod > d.prod) {
 					d.prod = prod;
 					d.qMod = q;
 					d.market = market;

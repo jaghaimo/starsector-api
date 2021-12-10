@@ -28,8 +28,13 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
+import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
 import com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality;
@@ -96,13 +101,13 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 	
 	public static float MILITARY_MAX_COST_DECREASE = 0.3f;
 	public static float TRADE_MAX_COST_INCREASE = 0.3f;
-	public static float DEALER_FIXED_COST_INCREASE = 1f;
-	public static float DEALER_VARIABLE_COST_INCREASE = 1f;
+	public static float DEALER_FIXED_COST_INCREASE = 0.5f;
+	public static float DEALER_VARIABLE_COST_INCREASE = 0.5f;
 	
 	public static enum Stage {
 		WAITING,
 		DELIVERED,
-		COMPLETED,
+		COMPLETED, // unused, left in for save compat
 		FAILED,
 	}
 
@@ -125,6 +130,10 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 		boolean allowArmsDealer = true; // anywhere is fine
 		boolean allowTrader = createdAt != null && createdAt.getCommodityData(Commodities.SHIPS).getMaxSupply() > 0;
 		boolean allowMilitary = allowTrader && createdAt != null && Misc.isMilitary(createdAt);
+		if (createdAt.isPlayerOwned()) {
+			allowTrader = false;
+			allowMilitary = false;
+		}
 		if (Factions.PIRATES.equals(createdAt.getFaction().getId())) {
 			allowMilitary = false;
 		}
@@ -159,6 +168,12 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 					setGiverFaction(Factions.INDEPENDENT);
 				}
 			}
+			if (post == null && allowArmsDealer) {
+				setGiverRank(Ranks.CITIZEN);
+				post = Ranks.POST_ARMS_DEALER;
+				setGiverTags(Tags.CONTACT_UNDERWORLD);
+				setGiverFaction(Factions.PIRATES);
+			}
 			if (post == null) return false;
 			
 			setGiverPost(post);
@@ -192,7 +207,7 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 //		armsDealer = Ranks.POST_ARMS_DEALER.equals(person.getPostId());
 //		if (!armsDealer) allowArmsDealer = false;
 		armsDealer = getPerson().hasTag(Tags.CONTACT_UNDERWORLD);
-		
+
 		maxCapacity = getRoundNumber(MIN_CAPACITY + (MAX_CAPACITY - MIN_CAPACITY) * getQuality());
 		if (barEvent) {
 			maxCapacity += genRoundNumber(BAR_CAPACITY_BONUS_MIN, BAR_CAPACITY_BONUS_MAX);
@@ -228,11 +243,12 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 		}
 
 		setStartingStage(Stage.WAITING);
-		setSuccessStage(Stage.COMPLETED);
+		setSuccessStage(Stage.DELIVERED);
 		setFailureStage(Stage.FAILED);
 		setNoAbandon();
 		
 		connectWithDaysElapsed(Stage.WAITING, Stage.DELIVERED, PROD_DAYS);
+		//connectWithDaysElapsed(Stage.WAITING, Stage.DELIVERED, 1f);
 		setStageOnMarketDecivilized(Stage.FAILED, market);
 		
 		return true;
@@ -252,26 +268,109 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 			add[2] = true;
 		}
 
+		Set<WeaponType> wTypes = new LinkedHashSet<WeaponAPI.WeaponType>();
+		Set<WeaponSize> wSizes = new LinkedHashSet<WeaponAPI.WeaponSize>();
+		Set<HullSize> hullSizes = new LinkedHashSet<HullSize>();
+
+		WeightedRandomPicker<WeaponType> wTypePicker = new WeightedRandomPicker<WeaponType>(genRandom);
+		wTypePicker.add(WeaponType.BALLISTIC);
+		wTypePicker.add(WeaponType.ENERGY);
+		wTypePicker.add(WeaponType.MISSILE);
+		WeightedRandomPicker<WeaponSize> wSizePicker = new WeightedRandomPicker<WeaponSize>(genRandom);
+		wSizePicker.add(WeaponSize.SMALL);
+		wSizePicker.add(WeaponSize.MEDIUM);
+		wSizePicker.add(WeaponSize.LARGE);
+		
+		int nWeapons = 0;
+		int nShips = 0;
+		int nFighters = 0;
+		
+		switch (imp) {
+		case VERY_LOW:
+			add[1] = true;
+			wSizes.add(WeaponSize.SMALL);
+			wTypes.add(wTypePicker.pickAndRemove());
+			nWeapons = 5 + genRandom.nextInt(6);
+			nFighters = 1 + genRandom.nextInt(3);
+			break;
+		case LOW:
+			add[1] = true;
+			wSizePicker.remove(WeaponSize.LARGE);
+			wSizes.add(wSizePicker.pickAndRemove());
+			wTypes.add(wTypePicker.pickAndRemove());
+			hullSizes.add(HullSize.FRIGATE);
+			nWeapons = 10 + genRandom.nextInt(6);
+			nShips = 5 + genRandom.nextInt(3);
+			nFighters = 3 + genRandom.nextInt(3);
+			break;
+		case MEDIUM:
+			add[1] = true;
+			wSizes.add(wSizePicker.pickAndRemove());
+			wSizes.add(wSizePicker.pickAndRemove());
+			wTypes.add(wTypePicker.pickAndRemove());
+			hullSizes.add(HullSize.FRIGATE);
+			hullSizes.add(HullSize.DESTROYER);
+			nWeapons = 20 + genRandom.nextInt(6);
+			nShips = 10 + genRandom.nextInt(3);
+			nFighters = 5 + genRandom.nextInt(3);
+			break;
+		case HIGH:
+			add[1] = true;
+			wSizes.add(wSizePicker.pickAndRemove());
+			wSizes.add(wSizePicker.pickAndRemove());
+			wTypes.add(wTypePicker.pickAndRemove());
+			wTypes.add(wTypePicker.pickAndRemove());
+			hullSizes.add(HullSize.FRIGATE);
+			hullSizes.add(HullSize.DESTROYER);
+			hullSizes.add(HullSize.CRUISER);
+			nWeapons = 20 + genRandom.nextInt(6);
+			nShips = 10 + genRandom.nextInt(3);
+			nFighters = 7 + genRandom.nextInt(3);
+			break;
+		case VERY_HIGH:
+			wSizes.add(WeaponSize.SMALL);
+			wSizes.add(WeaponSize.MEDIUM);
+			wSizes.add(WeaponSize.LARGE);
+			
+			hullSizes.add(HullSize.FRIGATE);
+			hullSizes.add(HullSize.DESTROYER);
+			hullSizes.add(HullSize.CRUISER);
+			hullSizes.add(HullSize.CAPITAL_SHIP);
+			
+			wTypes.add(WeaponType.BALLISTIC);
+			wTypes.add(WeaponType.ENERGY);
+			wTypes.add(WeaponType.MISSILE);
+			nWeapons = 1000;
+			nShips = 1000;
+			nFighters = 1000;
+			break;
+		}
+		
+
 		FactionProductionAPI prod = Global.getSector().getPlayerFaction().getProduction().clone();
 		prod.clear();
 		
 		if (add[0]) {
 			WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(genRandom);
 			for (ShipHullSpecAPI spec : Global.getSettings().getAllShipHullSpecs()) {
-				if (!spec.hasTag(Items.TAG_RARE_BP) && !spec.hasTag(Items.TAG_DEALER)) continue;
-//				if (spec.hasTag(Tags.NO_DROP)) continue;
-//				if (spec.hasTag(Tags.NO_SELL)) continue;
+				//if (!spec.hasTag(Items.TAG_RARE_BP) && !spec.hasTag(Items.TAG_DEALER)) continue;
 				if (spec.hasTag(Items.TAG_NO_DEALER)) continue;
+				if (spec.hasTag(Tags.NO_SELL) && !spec.hasTag(Items.TAG_DEALER)) continue;
+				if (spec.hasTag(Tags.RESTRICTED)) continue;
+				if (spec.getHints().contains(ShipTypeHints.HIDE_IN_CODEX)) continue;
+				if (spec.getHints().contains(ShipTypeHints.UNBOARDABLE)) continue;
 				if (spec.isDefaultDHull() || spec.isDHull()) continue;
 				if (ships.contains(spec.getHullId())) continue;
+				if (!hullSizes.contains(spec.getHullSize())) continue;
 				float cost = prod.createSampleItem(ProductionItemType.SHIP, spec.getHullId(), 1).getBaseCost();
 				cost = (int)Math.round(cost * costMult);
 				if (cost > maxCapacity) continue;
 				picker.add(spec.getHullId(), 10f);
 			}
-			int num = 2 + (int)Math.round(genRandom.nextInt(5) * getQuality());
-			num += imp.ordinal() * 2;
-			if (imp == PersonImportance.VERY_HIGH) num = 1000;
+//			int num = 2 + (int)Math.round(genRandom.nextInt(5) * getQuality());
+//			num += imp.ordinal() * 2;
+//			if (imp == PersonImportance.VERY_HIGH) num = 1000;
+			int num = nShips;
 			for (int i = 0; i < num && !picker.isEmpty(); i++) {
 				ships.add(picker.pickAndRemove());
 			}
@@ -280,20 +379,23 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 		if (add[1]) {
 			WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(genRandom);
 			for (WeaponSpecAPI spec : Global.getSettings().getAllWeaponSpecs()) {
-				if (!spec.hasTag(Items.TAG_RARE_BP) && !spec.hasTag(Items.TAG_DEALER)) continue;
-//				if (spec.hasTag(Tags.NO_DROP)) continue;
-//				if (spec.hasTag(Tags.NO_SELL)) continue;
+				//if (!spec.hasTag(Items.TAG_RARE_BP) && !spec.hasTag(Items.TAG_DEALER)) continue;
 				if (spec.hasTag(Items.TAG_NO_DEALER)) continue;
+				if (spec.hasTag(Tags.NO_SELL) && !spec.hasTag(Items.TAG_DEALER)) continue;
+				if (spec.hasTag(Tags.RESTRICTED)) continue;
 				if (spec.getAIHints().contains(AIHints.SYSTEM)) continue;
 				if (weapons.contains(spec.getWeaponId())) continue;
+				if (!wTypes.contains(spec.getType())) continue;
+				if (!wSizes.contains(spec.getSize())) continue;
 				float cost = prod.createSampleItem(ProductionItemType.WEAPON, spec.getWeaponId(), 1).getBaseCost();
 				cost = (int)Math.round(cost * costMult);
 				if (cost > maxCapacity) continue;
 				picker.add(spec.getWeaponId(), 10f);
 			}
-			int num = 3 + (int)Math.round(genRandom.nextInt(7) * getQuality());
-			num += imp.ordinal() * 2;
-			if (imp == PersonImportance.VERY_HIGH) num = 1000;
+//			int num = 3 + (int)Math.round(genRandom.nextInt(7) * getQuality());
+//			num += imp.ordinal() * 2;
+//			if (imp == PersonImportance.VERY_HIGH) num = 1000;
+			int num = nWeapons;
 			for (int i = 0; i < num && !picker.isEmpty(); i++) {
 				weapons.add(picker.pickAndRemove());
 			}
@@ -302,19 +404,22 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 		if (add[2]) {
 			WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(genRandom);
 			for (FighterWingSpecAPI spec : Global.getSettings().getAllFighterWingSpecs()) {
-				if (!spec.hasTag(Items.TAG_RARE_BP) && !spec.hasTag(Items.TAG_DEALER)) continue;
+				//if (!spec.hasTag(Items.TAG_RARE_BP) && !spec.hasTag(Items.TAG_DEALER)) continue;
 //				if (spec.hasTag(Tags.NO_DROP)) continue;
 //				if (spec.hasTag(Tags.NO_SELL)) continue;
 				if (spec.hasTag(Items.TAG_NO_DEALER)) continue;
+				if (spec.hasTag(Tags.NO_SELL) && !spec.hasTag(Items.TAG_DEALER)) continue;
+				if (spec.hasTag(Tags.RESTRICTED)) continue;
 				if (fighters.contains(spec.getId())) continue;
 				float cost = prod.createSampleItem(ProductionItemType.FIGHTER, spec.getId(), 1).getBaseCost();
 				cost = (int)Math.round(cost * costMult);
 				if (cost > maxCapacity) continue;
 				picker.add(spec.getId(), 10f);
 			}
-			int num = 1 + (int)Math.round(genRandom.nextInt(3) * getQuality());
-			num += imp.ordinal() * 2;
-			if (imp == PersonImportance.VERY_HIGH) num = 1000;
+//			int num = 1 + (int)Math.round(genRandom.nextInt(3) * getQuality());
+//			num += imp.ordinal() * 2;
+//			if (imp == PersonImportance.VERY_HIGH) num = 1000;
+			int num = nFighters;
 			for (int i = 0; i < num && !picker.isEmpty(); i++) {
 				fighters.add(picker.pickAndRemove());
 			}
@@ -461,6 +566,7 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 				cargo.addAll(curr, true);
 			}
 			
+			//endSuccess(dialog, memoryMap);
 			
 			if (armsDealer && rollProbability(ARMS_DEALER_PROB_PATROL_AFTER)) {
 				PersonAPI person = getPerson();
@@ -556,6 +662,9 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 		CargoAPI cargo = data.getCargo("Order manifest");
 		
 		float quality = ShipQuality.getShipQuality(market, market.getFactionId());
+		if (armsDealer) {
+			quality = Math.max(quality, 1f);
+		}
 
 		CampaignFleetAPI ships = Global.getFactory().createEmptyFleet(market.getFactionId(), "temp", true);
 		ships.setCommander(Global.getSector().getPlayerPerson());

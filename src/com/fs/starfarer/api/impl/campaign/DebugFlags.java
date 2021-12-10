@@ -41,6 +41,8 @@ public class DebugFlags {
 	
 	public static boolean ALLOW_ALL_CONTACT_MISSIONS = false; // regardless of importance or relationship or requirement structure
 	
+	public static boolean SLIPSTREAM_DEBUG = false;
+	
 	
 	// not really a debug flag...
 	public static boolean SEND_UPDATES_WHEN_NO_COMM = false;
@@ -80,6 +82,8 @@ public class DebugFlags {
 		PRINT_RULES_DEBUG_INFO = Global.getSettings().getBoolean("printRulesDebugInfo");
 		OBJECTIVES_DEBUG = dev;
 		
+		SLIPSTREAM_DEBUG = dev;
+		
 		ALWAYS_ADD_POTENTIAL_CONTACT = dev;
 		
 		COLONY_DEBUG = dev;
@@ -107,6 +111,7 @@ public class DebugFlags {
 		PRINT_RULES_DEBUG_INFO = Global.getSettings().getBoolean("printRulesDebugInfo");
 		OBJECTIVES_DEBUG = false;
 		ALWAYS_ADD_POTENTIAL_CONTACT = false;
+		SLIPSTREAM_DEBUG = false;
 		
 		COLONY_DEBUG = false;
 		ALLOW_VIEW_UNEXPLORED_SYSTEM_MAP = false;

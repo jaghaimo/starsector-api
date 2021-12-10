@@ -79,12 +79,12 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		int fpTwo = 0;
 		for (FleetMemberAPI member : playerFleet.getFleetData().getMembersListCopy()) {
 			if (member.canBeDeployedForCombat() || playerGoal == FleetGoal.ESCAPE) {
-				fpOne += member.getDeploymentPointsCost();
+				fpOne += member.getUnmodifiedDeploymentPointsCost();
 			}
 		}
 		for (FleetMemberAPI member : otherFleet.getFleetData().getMembersListCopy()) {
 			if (member.canBeDeployedForCombat() || playerGoal == FleetGoal.ESCAPE) {
-				fpTwo += member.getDeploymentPointsCost();
+				fpTwo += member.getUnmodifiedDeploymentPointsCost();
 			}
 		}
 		
@@ -187,6 +187,8 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 			} else {
 				context.setStandoffRange(6000f);
 			}
+			
+			context.setFlankDeploymentDistance(height/2f); // matters for Force Concentration
 		}
 	}
 	

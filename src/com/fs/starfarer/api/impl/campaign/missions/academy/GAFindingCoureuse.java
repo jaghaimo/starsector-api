@@ -5,12 +5,15 @@ import java.util.List;
 import java.util.Map;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.listeners.BaseFleetEventListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
@@ -379,6 +382,7 @@ public class GAFindingCoureuse extends GABaseMission {
 		triggerMakeLowRepImpact();
 		triggerFleetSetAvoidPlayerSlowly();
 		triggerMakeFleetIgnoredByOtherFleets();
+		triggerMakeFleetIgnoreOtherFleetsExceptPlayer();
 		//triggerPickLocationAtClosestToEntityJumpPoint(probeSystem, fleetLocation);
 		triggerPickLocationAtInSystemJumpPoint(probeSystem); // so it's not always the one closest to the star...
 		triggerSetEntityToPickedJumpPoint();
@@ -430,11 +434,12 @@ public class GAFindingCoureuse extends GABaseMission {
 		//triggerMakeNoRepImpact();
 		triggerFleetAllowLongPursuit();
 		triggerSetFleetAlwaysPursue();
-		triggerMakeLowRepImpact();
+		//triggerMakeLowRepImpact();
 		triggerPickLocationTowardsPlayer(isirah.getHyperspaceAnchor(), 90f, getUnits(1.5f));
 		triggerSpawnFleetAtPickedLocation("$gaFC_isirahMerc", null);
 		triggerOrderFleetInterceptPlayer();
-		triggerFleetMakeImportant(null, Stage.CONFRONT_ARCHON);
+		triggerFleetMakeImportant(null, Stage.SEARCH_ISIRAH);
+		// ^ was CONFRONT_ARCHON - but should come a stage sooner to intercept player before reaching Isirah system
 		endTrigger();
 	}
 	

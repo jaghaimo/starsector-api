@@ -1,7 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.graid;
 
 import java.awt.Color;
+import java.util.LinkedHashSet;
 import java.util.Random;
+import java.util.Set;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
@@ -26,6 +28,7 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class BlueprintGroundRaidObjectivePluginImpl extends BaseGroundRaidObjectivePluginImpl {
 	
+	public static float PROBABILITY_TO_DROP_BP_NOT_DROPPED_BEFORE = 0.8f;
 	
 	protected int bpUseScale = 0;
 	public BlueprintGroundRaidObjectivePluginImpl(MarketAPI market) {
@@ -85,16 +88,15 @@ public class BlueprintGroundRaidObjectivePluginImpl extends BaseGroundRaidObject
 
 	public Pair<Integer, Integer> getQuantityRange() {
 		Pair<Integer, Integer> q = new Pair<Integer, Integer>();
-		if (bpUseScale <= 0) {
+		int scale = bpUseScale - 995;
+		//scale = bpUseScale;
+		if (scale <= 0) {
 			q.one = 0;
 			q.two = 0;
-		} else if (bpUseScale <= 3) {
+		} else if (scale <= 5) {
 			q.one = 1;
 			q.two = 2;
-		} else if (bpUseScale <= 5) {
-			q.one = 2;
-			q.two = 3;
-		} else if (bpUseScale <= 7) {
+		} else if (scale <= 7) {
 			q.one = 2;
 			q.two = 3;
 		} else {
@@ -153,6 +155,17 @@ public class BlueprintGroundRaidObjectivePluginImpl extends BaseGroundRaidObject
 		return stack;
 	}
 	
+	@SuppressWarnings("unchecked")
+	public Set<String> getDropped() {
+		String key = "BlueprintGroundRaidObjectivePluginImpl_dropped";
+		Object data = Global.getSector().getPersistentData().get(key);
+		if (data == null) {
+			data = new LinkedHashSet<String>();
+			Global.getSector().getPersistentData().put(key, data);
+		}
+		return (Set<String>) data;
+	}
+	
 	protected CargoAPI looted = Global.getFactory().createCargo(true);
 	
 	public int performRaid(CargoAPI loot, Random random, float lootMult, TextPanelAPI text) {
@@ -166,44 +179,57 @@ public class BlueprintGroundRaidObjectivePluginImpl extends BaseGroundRaidObject
 		
 		FactionAPI playerFaction = Global.getSector().getPlayerFaction();
 		
-		WeightedRandomPicker<String> unknown = new WeightedRandomPicker<String>(random);
-		WeightedRandomPicker<String> all = new WeightedRandomPicker<String>(random);
+		Set<String> droppedBefore = getDropped();
+		
+		WeightedRandomPicker<String> notDroppedBefore = new WeightedRandomPicker<String>(random);
+		WeightedRandomPicker<String> other = new WeightedRandomPicker<String>(random);
 		for (String id : market.getFaction().getKnownShips()) {
 			if (Global.getSettings().getHullSpec(id).hasTag(Tags.NO_BP_DROP)) continue;
-			if (!playerFaction.knowsShip(id)) {
-				unknown.add(ship + id, 1f);
+			
+			String id2 = ship + id;
+			if (!playerFaction.knowsShip(id) && !droppedBefore.contains(id2)) {
+				notDroppedBefore.add(id2, 1f);
 			} else {
-				all.add(ship + id, 1f);
+				other.add(id2, 1f);
 			}
 		}
 		for (String id : market.getFaction().getKnownWeapons()) {
 			if (Global.getSettings().getWeaponSpec(id).hasTag(Tags.NO_BP_DROP)) continue;
-			if (!playerFaction.knowsWeapon(id)) {
-				unknown.add(weapon + id, 1f);
+			
+			String id2 = weapon + id;
+			if (!playerFaction.knowsWeapon(id) && !droppedBefore.contains(id2)) {
+				notDroppedBefore.add(weapon + id, 1f);
 			} else {
-				all.add(weapon + id, 1f);
+				other.add(weapon + id, 1f);
 			}
 		}
 		for (String id : market.getFaction().getKnownFighters()) {
 			if (Global.getSettings().getFighterWingSpec(id).hasTag(Tags.NO_BP_DROP)) continue;
-			if (!playerFaction.knowsFighter(id)) {
-				unknown.add(fighter + id, 1f);
+			
+			String id2 = fighter + id;
+			if (!playerFaction.knowsFighter(id) && !droppedBefore.contains(id2)) {
+				notDroppedBefore.add(fighter + id, 1f);
 			} else {
-				all.add(fighter + id, 1f);
+				other.add(fighter + id, 1f);
 			}
 		}
-		
 		
 		looted.clear();
 		
 		Pair<Integer, Integer> q = getQuantityRange();
-		int num = q.one + random.nextInt(q.two - q.one);
-		for (int i = 0; i < num && (!unknown.isEmpty() || !all.isEmpty()); i++) {
-			String id = unknown.pickAndRemove();
+		int num = q.one + random.nextInt(q.two - q.one + 1);
+		for (int i = 0; i < num && (!notDroppedBefore.isEmpty() || !other.isEmpty()); i++) {
+			String id = null;
+			if (random.nextFloat() < PROBABILITY_TO_DROP_BP_NOT_DROPPED_BEFORE) {
+				id = notDroppedBefore.pickAndRemove();
+			}
+			 
 			if (id == null) {
-				id = all.pickAndRemove();
+				id = other.pickAndRemove();
 			}
 			if (id == null) continue;
+			
+			droppedBefore.add(id);
 			
 			if (id.startsWith(ship)) {
 				String specId = id.substring(ship.length());
@@ -258,8 +284,9 @@ public class BlueprintGroundRaidObjectivePluginImpl extends BaseGroundRaidObject
 		t.addPara("Blueprints that enable heavy industry to construct ships, ship weapons, and fighter LPCs. " +
 				"Availability based on the scale of the biggest blueprint-using industry at the colony.", 0f);
 		
-		t.addPara("The value of the recovered blueprints can vary wildly, but your marines will focus on " +
-				"acquiring unknown blueprints first.", opad);
+//		t.addPara("The value of the recovered blueprints can vary wildly, but your marines will focus on " +
+//				"acquiring unknown blueprints first.", opad);
+		t.addPara("The value of the recovered blueprints can vary wildly.", opad);
 	}
 
 }

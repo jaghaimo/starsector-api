@@ -517,6 +517,10 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 					(dist < baseSensorRange || (visible && level != VisibilityLevel.SENSOR_CONTACT)) && 
 					((fleet.getAI() != null && fleet.getAI().wantsToJoin(b, true)) || fleet.isStationMode())) {
 				
+				boolean ignore = fleet.getMemoryWithoutUpdate() != null && 
+						fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.FLEET_IGNORES_OTHER_FLEETS);
+				if (ignore) continue;
+				
 				BattleSide joiningSide = b.pickSide(fleet, true);
 				if (!config.pullInAllies && joiningSide == playerSide) continue;
 				if (!config.pullInEnemies && joiningSide != playerSide) continue;
@@ -1359,7 +1363,8 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 								CampaignFleetAPI ally = null;
 								float alliedFP = 0;
 								for (CampaignFleetAPI curr : context.getBattle().getPlayerSide()) {
-									if (!curr.isPlayerFleet() && !curr.getFleetData().getMembersListCopy().isEmpty()) {
+									if (!curr.isPlayerFleet() && !curr.getFleetData().getMembersListCopy().isEmpty() &&
+											!curr.isStationMode()) {
 										if (ally == null) ally = curr;
 										alliedFP += ally.getFleetPoints();
 									}
@@ -2100,6 +2105,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 					}
 				}
 				
+				boolean onlyDifficultRecovery = recoverableShips.isEmpty() && !storyRecoverableShips.isEmpty();
 				if (playerShipsRecoverable) {
 					textPanel.setFontSmallInsignia();
 					textPanel.addParagraph(	"Disabled ships from your fleet are available for recovery", Misc.getHighlightColor());
@@ -2107,10 +2113,19 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 					options.addOption("Consider ship recovery", OptionId.RECOVERY_SELECT, Misc.getHighlightColor(),
 							"Disabled ships from your fleet are available for recovery.");
 				} else {
-					options.addOption("Consider ship recovery", OptionId.RECOVERY_SELECT, null);
+					Color color = Misc.getButtonTextColor();
+					if (onlyDifficultRecovery) {
+						color = Misc.getStoryOptionColor();
+					}
+					options.addOption("Consider ship recovery", OptionId.RECOVERY_SELECT, color, null);
 				}
 				
 				options.addOption("Continue", OptionId.RECOVERY_CONTINUE, null);
+				if (playerShipsRecoverable) {
+					options.addOptionConfirmation(OptionId.RECOVERY_CONTINUE, 
+							"Disabled ships from your fleet are available for recovery.\n\nIf you proceed without recovering them, "
+							+ "they will be lost permanently.", "Proceed", "Cancel");
+				}
 				
 				return;
 			}
@@ -2823,7 +2838,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 								options.addOption("Disengage by executing a series of special maneuvers", OptionId.CLEAN_DISENGAGE,
 												  "Allows your fleet to disengage without being pursued.");
 								SetStoryOption.set(dialog, 1, OptionId.CLEAN_DISENGAGE, "cleanDisengage", Sounds.STORY_POINT_SPEND_COMBAT,
-										"Manuevered to disengage from " + otherFleet.getNameWithFactionKeepCase());
+										"Maneuvered to disengage from " + otherFleet.getNameWithFactionKeepCase());
 								
 								addEmergencyRepairsOption();
 							}

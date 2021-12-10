@@ -6,6 +6,7 @@ import java.util.Map;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.CoreInteractionListener;
 import com.fs.starfarer.api.campaign.CustomCampaignEntityPlugin;
 import com.fs.starfarer.api.campaign.CustomEntitySpecAPI;
@@ -16,14 +17,13 @@ import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.RuleBasedDialog;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.CampaignObjective;
-import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
+import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
@@ -127,6 +127,8 @@ public class Objectives extends BaseCommandPlugin {
 			String action = params.get(1).getString(memoryMap);
 			if (action.equals("hack")) {
 				hack();
+			} else if (action.equals("reset")) {
+				reset();
 			} else if (action.equals("unhack")) {
 				unhack();
 			} else if (action.equals("control")) {
@@ -257,6 +259,18 @@ public class Objectives extends BaseCommandPlugin {
 			CampaignObjective o = (CampaignObjective) plugin;
 			o.setHacked(true);
 		}
+		updateMemory();
+	}
+	
+	public void reset() {
+		CustomCampaignEntityPlugin plugin = entity.getCustomPlugin();
+		if (plugin instanceof CampaignObjective) {
+			CampaignObjective o = (CampaignObjective) plugin;
+			o.setReset(true);
+		}
+		// so that a false sensor reading doesn't spawn immediately after "introducing false readings"
+		Global.getSector().getPlayerFleet().getMemoryWithoutUpdate().set(MemFlags.FLEET_NOT_CHASING_GHOST, true,
+								0.5f +Misc.random.nextFloat() * 1f);
 		updateMemory();
 	}
 	

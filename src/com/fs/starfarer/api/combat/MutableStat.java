@@ -87,6 +87,12 @@ public class MutableStat {
 		return this;
 	}
 	
+	public MutableStat createCopy() {
+		MutableStat copy = new MutableStat(getBaseValue());
+		copy.applyMods(this);
+		return copy;
+	}
+	
 	protected Object writeReplace() {
 		return this;
 	}

@@ -516,7 +516,7 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 			for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 				if (itemGenRandom.nextFloat() > p) continue;
 				if (member.getHullSpec().hasTag(Tags.NO_SELL)) continue;
-				if (isMilitaryMarket() && member.getHullSpec().hasTag(Tags.MILITARY_MARKET_ONLY)) continue;
+				if (!isMilitaryMarket() && member.getHullSpec().hasTag(Tags.MILITARY_MARKET_ONLY)) continue;
 				String emptyVariantId = member.getHullId() + "_Hull";
 				addShip(emptyVariantId, true, params.qualityOverride);
 			}

@@ -8,8 +8,8 @@ public class MissileSpecialization {
 	
 	public static final float MISSILE_AMMO_BONUS = 100f;
 	public static final float MISSILE_SPEC_PERK_HEALTH_BONUS = 50f;
-	//public static final float MISSILE_SPEC_PERK_DAMAGE_BONUS = 25f;
 	public static final float MISSILE_SPEC_ROF_BONUS = 50f;
+	public static final float MISSILE_SPEC_DAMAGE_BONUS = 10f;
 
 	public static class Level1 implements ShipSkillEffect {
 		
@@ -82,6 +82,28 @@ public class MissileSpecialization {
 		public ScopeDescription getScopeDescription() {
 			return ScopeDescription.PILOTED_SHIP;
 		}
-
+	}
+	
+	public static class Level4 implements ShipSkillEffect {
+		
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			stats.getMissileWeaponDamageMult().modifyPercent(id, MISSILE_SPEC_DAMAGE_BONUS);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getMissileWeaponDamageMult().unmodify(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			return "+" + (int)(MISSILE_SPEC_DAMAGE_BONUS) + "% damage dealt by missile weapons";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
 	}
 }

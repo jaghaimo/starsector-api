@@ -59,7 +59,7 @@ public class GADepartments {
 		add("Hyperspace Physics", SCIENCE);
 		add("LAMBDA-F Lab", SCIENCE, WEIRD);
 		add("Nanotech Engineering", INDUSTRIAL);
-		add("Nanorobotics", INDUSTRIAL, SCIENCE, WEIRD);
+		add("Nanorobotics Lab", INDUSTRIAL, SCIENCE, WEIRD);
 		add("Nonlinear Mathematics", SCIENCE, WEIRD);
 		add("Orbital Architecture", SOCIAL, INDUSTRIAL, MILITARY);
 		add("Post-Expansion Philosophy", SOCIAL);
@@ -67,7 +67,7 @@ public class GADepartments {
 		add("Phase Physics", SCIENCE);
 		add("Quantum Chemistry", SCIENCE, WEIRD);
 		add("N-Space Resonance Lab", SCIENCE, WEIRD);
-		add("Special Collections", SOCIAL, INDUSTRIAL, SCIENCE, WEIRD, MILITARY);
+		add("Special Collections Library", SOCIAL, INDUSTRIAL, SCIENCE, WEIRD, MILITARY);
 		add("Tau Hyperphysics", SCIENCE, WEIRD);
 		add("Templeman Hyperwave Theory", WEIRD);
 		add("Terran Biology", SCIENCE); 

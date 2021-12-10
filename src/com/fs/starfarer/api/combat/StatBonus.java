@@ -66,6 +66,12 @@ public class StatBonus {
 		return true;
 	}
 
+	public StatBonus createCopy() {
+		StatBonus copy = new StatBonus();
+		copy.applyMods(this);
+		return copy;
+	}
+	
 	public float flatBonus = 0f;
 	public float mult = 1f;
 	public float percentMod = 0f;

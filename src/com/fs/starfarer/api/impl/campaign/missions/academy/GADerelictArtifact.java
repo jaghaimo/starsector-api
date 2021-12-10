@@ -55,12 +55,12 @@ public class GADerelictArtifact extends GABaseMission {
 		
 		pickDepartment(GADepartments.INDUSTRIAL, GADepartments.SOCIAL, 
 					   GADepartments.MILITARY, GADepartments.SCIENCE, GADepartments.WEIRD);
-		widget = pickOne(	"unique superconducting structural elements",
+		widget = pickOne(	"unique superconducting structural element",
 							"an advanced field conversion prototype",
 							"a transparametric integrator",
 							"an extremely rare material sample",
 							"an uncommon power system component",
-							"Domain-era forge components",
+							"a Domain-era forge component",
 							"a small-scale momentum decoupling device",
 						 	"a fascinating low-power field projector");
 		
@@ -109,6 +109,8 @@ public class GADerelictArtifact extends GABaseMission {
 				variation = Variation.BASIC;
 			}
 		}
+		
+		setMapMarkerNameColorBasedOnStar(system);
 		
 //		variation = Variation.BASIC;
 //		variation = Variation.PIRATES;

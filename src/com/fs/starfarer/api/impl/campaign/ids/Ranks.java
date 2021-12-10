@@ -24,7 +24,9 @@ public class Ranks {
 	public static String TERRORIST = "terrorist";
 	public static String CLONE = "clone";
 	public static String BROTHER = "brother";
+	public static String FATHER = "father";
 	public static String SISTER = "sister";
+	public static String MOTHER = "mother";
 	
 	public static String KNIGHT_CAPTAIN = "knightCaptain";
 	
@@ -92,6 +94,8 @@ public class Ranks {
 	public static String POST_PENSIONER = "pensioner";
 	public static String POST_ACTIVIST = "activist";
 	public static String POST_TERRORIST = "terrorist";
+	public static String POST_SYNOD_SUBCURATE = "synodSubcurate";
+	public static String POST_ARCHCURATE = "synodSubcurate";
 	public static String POST_WARLORD = "warlord";
 	public static String POST_UNKNOWN = "unknown";
 	

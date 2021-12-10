@@ -19,6 +19,7 @@ import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.misc.GateIntel;
 import com.fs.starfarer.api.impl.campaign.world.ZigLeashAssignmentAI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -277,6 +278,8 @@ public class GateEntityPlugin extends BaseCustomEntityPlugin {
 				}
 				entity.setCustomDescriptionId("active_gate");
 				entity.setInteractionImage("illustrations", "active_gate");
+				entity.removeTag(Tags.NEUTRINO);
+				entity.addTag(Tags.NEUTRINO_HIGH);
 				madeActive = true;
 			}
 		}

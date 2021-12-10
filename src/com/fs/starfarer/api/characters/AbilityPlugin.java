@@ -143,6 +143,8 @@ public interface AbilityPlugin {
 	void setCooldownLeft(float days);
 
 	float getCooldownLeft();
+
+	float getLevel();
 	
 	
 }

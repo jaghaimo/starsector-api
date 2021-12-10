@@ -9,7 +9,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 @SuppressWarnings("unchecked")
 public class DegradedShields extends BaseHullMod {
 
-	public static float SHIELD_PERCENT = 15f;
+	public static float SHIELD_PERCENT = 10f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		float effect = stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);

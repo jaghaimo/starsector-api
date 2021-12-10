@@ -206,6 +206,9 @@ public class BaseMissionHub implements MissionHub, CallableEvent {
 	}
 	
 	public void listMissions(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap, boolean withBlurbs) {
+		if (dialog != null && dialog.getVisualPanel() != null) {
+			dialog.getVisualPanel().removeMapMarkerFromPersonInfo();
+		}
 		MemoryAPI pMem = dialog.getInteractionTarget().getActivePerson().getMemoryWithoutUpdate();
 		updateCountAndFirstInlineBlurb(dialog, memoryMap);
 		
@@ -241,9 +244,13 @@ public class BaseMissionHub implements MissionHub, CallableEvent {
 			
 			if (curr.getBlurbText() == null) {
 				if (withBlurbs) {
-					FireBest.fire(null, dialog, memoryMap, curr.getTriggerPrefix() + "_blurb true");
+					if (!FireBest.fire(null, dialog, memoryMap, curr.getTriggerPrefix() + "_blurb true")) {
+						dialog.getTextPanel().addPara("No blurb found for " + curr.getTriggerPrefix(), Misc.getNegativeHighlightColor());
+					}
 				}
-				FireBest.fire(null, dialog, memoryMap, curr.getTriggerPrefix() + "_option true"); 
+				if (!FireBest.fire(null, dialog, memoryMap, curr.getTriggerPrefix() + "_option true")) {
+					dialog.getTextPanel().addPara("No option found for " + curr.getTriggerPrefix(), Misc.getNegativeHighlightColor());
+				}
 			}
 		}
 		

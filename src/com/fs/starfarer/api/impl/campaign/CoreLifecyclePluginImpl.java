@@ -14,6 +14,7 @@ import com.fs.starfarer.api.BaseModPlugin;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.PluginPick;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignPlugin.PickPriority;
 import com.fs.starfarer.api.campaign.CampaignTerrainAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
@@ -36,7 +37,13 @@ import com.fs.starfarer.api.campaign.listeners.CoreDiscoverEntityPlugin;
 import com.fs.starfarer.api.campaign.listeners.ListenerManagerAPI;
 import com.fs.starfarer.api.characters.AdminData;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.characters.SkillsChangeOfficerEffect;
+import com.fs.starfarer.api.characters.SkillsChangeRemoveExcessOPEffect;
+import com.fs.starfarer.api.characters.SkillsChangeRemoveSmodsEffect;
+import com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect;
 import com.fs.starfarer.api.combat.ShipAIConfig;
 import com.fs.starfarer.api.combat.ShipAIPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -138,6 +145,7 @@ import com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality;
 import com.fs.starfarer.api.impl.campaign.econ.impl.Spaceport;
 import com.fs.starfarer.api.impl.campaign.econ.impl.TechMining;
 import com.fs.starfarer.api.impl.campaign.econ.impl.Waystation;
+import com.fs.starfarer.api.impl.campaign.enc.EncounterManager;
 import com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin;
 import com.fs.starfarer.api.impl.campaign.events.CoreEventProbabilityManager;
 import com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent;
@@ -186,6 +194,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteSegment;
 import com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager.SeededFleet;
 import com.fs.starfarer.api.impl.campaign.fleets.SourceBasedFleetManager;
+import com.fs.starfarer.api.impl.campaign.ghosts.SensorGhostManager;
 import com.fs.starfarer.api.impl.campaign.graid.StandardGroundRaidObjectivesCreator;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
@@ -199,7 +208,6 @@ import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
-import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityIntelCreator;
 import com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityMissionIntel;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
@@ -367,7 +375,6 @@ import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin.RadioChatterParams;
 import com.fs.starfarer.api.impl.campaign.terrain.RingSystemTerrainPlugin;
-import com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaAkaMainyuTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin.CoronaParams;
@@ -380,6 +387,11 @@ import com.fs.starfarer.api.impl.campaign.tutorial.SaveNagScript;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialLeashAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent.TutorialMissionStage;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
+import com.fs.starfarer.api.impl.campaign.velfield.BoundingBox;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamParams2;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamSegment;
 import com.fs.starfarer.api.impl.campaign.world.TTBlackSite;
 import com.fs.starfarer.api.loading.CampaignPingSpec;
 import com.fs.starfarer.api.plugins.impl.CoreBuildObjectiveTypePicker;
@@ -419,6 +431,8 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 //				fleet.forceSensorFaderBrightness(0f);
 //			}
 //		}
+		
+		convertTo0951aSkillSystemIfNeeded();
 	}
 	
 	public static void verifyFactionData() {
@@ -513,6 +527,15 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		PlayerFleetPersonnelTracker.getInstance();
 		
 		
+		if (!sector.hasScript(EncounterManager.class)) {
+			sector.addScript(new EncounterManager());
+		}
+		if (!sector.hasScript(SlipstreamManager.class)) {
+			sector.addScript(new SlipstreamManager());
+		}
+		if (!sector.hasScript(SensorGhostManager.class)) {
+			sector.addScript(new SensorGhostManager());
+		}
 		if (!sector.hasScript(OfficerManagerEvent.class)) {
 			sector.addScript(new OfficerManagerEvent());
 		}
@@ -581,6 +604,10 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		
 		PlaythroughLog.getInstance();
 		
+		sector.getListenerManager().addListener(new SkillsChangeRemoveExcessOPEffect(), true);
+		sector.getListenerManager().addListener(new SkillsChangeRemoveVentsCapsEffect(), true);
+		sector.getListenerManager().addListener(new SkillsChangeRemoveSmodsEffect(), true);
+		sector.getListenerManager().addListener(new SkillsChangeOfficerEffect(), true);
 	}
 	
 	protected void addBarEvents() {
@@ -810,7 +837,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		Misc.makeStoryCritical("epiphany", id);
 		Misc.makeStoryCritical("fikenhild", id);
 		Misc.makeStoryCritical("kantas_den", id);
-		Misc.makeStoryCritical("new_maxios", id);
+		//Misc.makeStoryCritical("new_maxios", id);
 	}
 	
 //	protected void addBaseBlueprints() {
@@ -1064,14 +1091,14 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 	
 
 	private void initSlipstream() {
-		for (StarSystemAPI system : Global.getSector().getStarSystems()) {
-			SectorEntityToken slipstream = system.addTerrain(Terrain.SLIPSTREAM, null);
-			slipstream.getLocation().set(0, 0);
-			system.getPersistentData().put(SlipstreamTerrainPlugin.LOCATION_SLIPSTREAM_KEY, slipstream);
-		}
-		SectorEntityToken slipstream = Global.getSector().getHyperspace().addTerrain(Terrain.SLIPSTREAM, null);
-		slipstream.getLocation().set(0, 0);
-		Global.getSector().getHyperspace().getPersistentData().put(SlipstreamTerrainPlugin.LOCATION_SLIPSTREAM_KEY, slipstream);
+//		for (StarSystemAPI system : Global.getSector().getStarSystems()) {
+//			SectorEntityToken slipstream = system.addTerrain(Terrain.SLIPSTREAM, null);
+//			slipstream.getLocation().set(0, 0);
+//			system.getPersistentData().put(SlipstreamTerrainPlugin.LOCATION_SLIPSTREAM_KEY, slipstream);
+//		}
+//		SectorEntityToken slipstream = Global.getSector().getHyperspace().addTerrain(Terrain.SLIPSTREAM, null);
+//		slipstream.getLocation().set(0, 0);
+//		Global.getSector().getHyperspace().getPersistentData().put(SlipstreamTerrainPlugin.LOCATION_SLIPSTREAM_KEY, slipstream);
 	}
 	
 	private void createInitialPeople() {
@@ -1347,7 +1374,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 			person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
 			
 			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
-			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
+			//person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
 			
 			for (PersonAPI p : market.getPeopleCopy()) {
 				if (Ranks.POST_ADMINISTRATOR.equals(p.getPostId())) {
@@ -1361,6 +1388,10 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 			market.setAdmin(person);
 			market.getCommDirectory().addPerson(person, 0);
 			market.addPerson(person);
+			
+			ip.addPerson(person);
+			ip.getData(person).getLocation().setMarket(market);
+			ip.checkOutPerson(person, "permanent_staff");
 		}
 		}
 		
@@ -1374,9 +1405,11 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				
 				// totally not a front for an Alpha Core
 				person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
-				person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
-				person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
+				person.getStats().setSkillLevel(Skills.HYPERCOGNITION, 1);
+//				person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
+//				person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
 				person.setAICoreId(Commodities.ALPHA_CORE);
+				person.getMemoryWithoutUpdate().set(MemFlags.SUSPECTED_AI, true);
 				person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
 				
 				for (PersonAPI p : market.getPeopleCopy()) {
@@ -1391,6 +1424,10 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				market.setAdmin(person);
 				market.getCommDirectory().addPerson(person, 0);
 				market.addPerson(person);
+				
+				ip.addPerson(person);
+				ip.getData(person).getLocation().setMarket(market);
+				ip.checkOutPerson(person, "permanent_staff");
 			}
 		}
 		
@@ -1398,9 +1435,12 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 
 	protected void addSkillsAndAssignAdmin(MarketAPI market, PersonAPI admin) {
 		List<String> skills = Global.getSettings().getSortedSkillIds();
-		if (!skills.contains(Skills.PLANETARY_OPERATIONS) ||
-				!skills.contains(Skills.SPACE_OPERATIONS) ||
-				!skills.contains(Skills.INDUSTRIAL_PLANNING)) {
+//		if (!skills.contains(Skills.PLANETARY_OPERATIONS) ||
+//				!skills.contains(Skills.SPACE_OPERATIONS) ||
+//				!skills.contains(Skills.INDUSTRIAL_PLANNING)) {
+//			return;
+//		}
+		if (!skills.contains(Skills.INDUSTRIAL_PLANNING)) {
 			return;
 		}
 		
@@ -1408,36 +1448,18 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		if (size <= 4) return;
 		
 		int industries = 0;
-		int defenses = 0;
-		boolean military = market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY);
 		
 		for (Industry curr : market.getIndustries()) {
 			if (curr.isIndustry()) {
 				industries++;
-			}
-			if (curr.getSpec().hasTag(Industries.TAG_GROUNDDEFENSES)) {
-				defenses++;
 			}
 		}
 		
 		
 		admin.getStats().setSkipRefresh(true);
 		
-		int num = 0;
-		if (industries >= 2 || (industries == 1 && defenses == 1)) {
+		if (industries >= 2 || size >= 6) {
 			admin.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
-			num++;
-		}
-		
-		if (num == 0 || size >= 7) {
-			if (military) {
-				admin.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
-			} else if (defenses > 0) {
-				admin.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
-			} else {
-				// nothing else suitable, so just make sure there's at least one skill, if this wasn't already set
-				admin.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
-			}
 		}
 		
 		admin.getStats().setSkipRefresh(false);
@@ -1493,6 +1515,75 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 //		x.aliasAttribute(FleetParams.class, "random", "r");
 //		x.aliasAttribute(FleetParams.class, "withOfficers", "wO");
 //		x.aliasAttribute(FleetParams.class, "maxShipSize", "mSS");
+		
+		x.alias("SlipParams", SlipstreamParams2.class);
+		x.aliasAttribute(SlipstreamParams2.class, "spriteKey1", "sK1");
+		x.aliasAttribute(SlipstreamParams2.class, "spriteKey2", "sK2");
+		x.aliasAttribute(SlipstreamParams2.class, "spriteKey3", "sK3");
+		x.aliasAttribute(SlipstreamParams2.class, "edgeKey", "eK");
+		x.aliasAttribute(SlipstreamParams2.class, "spriteColor", "sC");
+		x.aliasAttribute(SlipstreamParams2.class, "windGlowColor", "wGC");
+		x.aliasAttribute(SlipstreamParams2.class, "edgeColor", "eC");
+		x.aliasAttribute(SlipstreamParams2.class, "baseWidth", "bW");
+		x.aliasAttribute(SlipstreamParams2.class, "widthForMaxSpeed", "wFMS");
+		x.aliasAttribute(SlipstreamParams2.class, "edgeWidth", "eW");
+		x.aliasAttribute(SlipstreamParams2.class, "areaPerParticle", "aPP");
+		x.aliasAttribute(SlipstreamParams2.class, "maxParticles", "maxP");
+		x.aliasAttribute(SlipstreamParams2.class, "minSpeed", "minS");
+		x.aliasAttribute(SlipstreamParams2.class, "maxSpeed", "maxS");
+		x.aliasAttribute(SlipstreamParams2.class, "minColor", "minC");
+		x.aliasAttribute(SlipstreamParams2.class, "maxColor", "maxC");
+		x.aliasAttribute(SlipstreamParams2.class, "mapColor", "mCol");
+		x.aliasAttribute(SlipstreamParams2.class, "minDur", "minD");
+		x.aliasAttribute(SlipstreamParams2.class, "maxDur", "maxD");
+		x.aliasAttribute(SlipstreamParams2.class, "particleFadeInTime", "pFIT");
+		x.aliasAttribute(SlipstreamParams2.class, "lineLengthFractionOfSpeed", "lLFOS");
+		x.aliasAttribute(SlipstreamParams2.class, "burnLevel", "bL");
+		x.aliasAttribute(SlipstreamParams2.class, "maxBurnLevelForTextureScroll", "mBLFTS");
+		x.aliasAttribute(SlipstreamParams2.class, "slowDownInWiderSections", "slow");
+		x.aliasAttribute(SlipstreamParams2.class, "widthForMaxSpeedMinMult", "wFMSMin");
+		x.aliasAttribute(SlipstreamParams2.class, "widthForMaxSpeedMaxMult", "wFMSMax");
+		x.aliasAttribute(SlipstreamParams2.class, "name", "name");
+		x.aliasAttribute(SlipstreamParams2.class, "texScrollMult0", "tSM0");
+		x.aliasAttribute(SlipstreamParams2.class, "texScrollMult1", "tSM1");
+		x.aliasAttribute(SlipstreamParams2.class, "texScrollMult2", "tSM2");
+		
+		
+		x.alias("SSeg", SlipstreamSegment.class);
+		x.aliasAttribute(SlipstreamSegment.class, "locB", "B");
+		x.aliasAttribute(SlipstreamSegment.class, "loc", "l");
+		x.aliasAttribute(SlipstreamSegment.class, "width", "w");
+		x.aliasAttribute(SlipstreamSegment.class, "bMult", "m");
+		x.aliasAttribute(SlipstreamSegment.class, "discovered", "d");
+		x.aliasAttribute(SlipstreamSegment.class, "fader", "f");
+		
+		x.alias("SlipTP2", SlipstreamTerrainPlugin2.class);
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "params", "p");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "segments", "s");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "totalLength", "tL");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "needsRecompute", "nR");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "bounds", "b");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "segmentsPerBox", "sPB");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "texProgress0", "tP0");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "texProgress1", "tP1");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "texProgress2", "tP2");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "despawnNoise", "dN");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "despawnDelay", "dDe");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "despawnDays", "dDa");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "despawnElapsed", "dE");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "spawnNoise", "sN");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "spawnDays", "sD");
+		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "spawnElapsed", "sE");
+		
+		x.alias("BBox", BoundingBox.class);
+		x.aliasAttribute(BoundingBox.class, "box", "b");
+		x.aliasAttribute(BoundingBox.class, "padding", "p");
+		x.aliasAttribute(BoundingBox.class, "rotatedBox", "rB");
+		x.aliasAttribute(BoundingBox.class, "angle", "a");
+		x.aliasAttribute(BoundingBox.class, "boxComputed", "bC");
+		x.aliasAttribute(BoundingBox.class, "center", "c");
+		x.aliasAttribute(BoundingBox.class, "radius", "r");
+		
 		
 		x.alias("FParams", FleetParamsV3.class);
 		x.aliasAttribute(FleetParamsV3.class, "source", "srcL");
@@ -2703,6 +2794,155 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 //		}
 //		return null;
 //	}
+	
+	public void convertTo0951aSkillSystemIfNeeded() {
+		if (Global.getSector().getCharacterData().getSavefileVersion() != null) {
+			return;
+		}
+		
+		SectorAPI engine = Global.getSector();
+		engine.getCharacterData().setSavefileVersion("0.95.1a");
+		
+		for (AdminData admin : engine.getCharacterData().getAdmins()) {
+			convertPersonSkillsTo0951a(admin.getPerson());
+		}
+	
+		List<LocationAPI> all = new ArrayList<LocationAPI>();
+		all.add(engine.getHyperspace());
+		all.addAll(engine.getStarSystems());
+		for (LocationAPI curr : all) {
+			for (CampaignFleetAPI fleet : curr.getFleets()) {
+				for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+					convertPersonSkillsTo0951a(member.getCaptain());
+					if (fleet.isPlayerFleet() && member.getCaptain().isAICore()) {
+						String aiCoreId = member.getCaptain().getAICoreId();
+						boolean alpha = Commodities.ALPHA_CORE.equals(aiCoreId);
+						boolean beta = Commodities.BETA_CORE.equals(aiCoreId);
+						boolean gamma = Commodities.GAMMA_CORE.equals(aiCoreId);
+						
+						int points = 0;
+						float mult = 1f;
+						if (alpha) {
+							points = AICoreOfficerPluginImpl.ALPHA_POINTS;
+							mult = AICoreOfficerPluginImpl.ALPHA_MULT;
+						} else if (beta) {
+							points = AICoreOfficerPluginImpl.BETA_POINTS;
+							mult = AICoreOfficerPluginImpl.BETA_MULT;
+						} else if (gamma) {
+							points = AICoreOfficerPluginImpl.GAMMA_POINTS;
+							mult = AICoreOfficerPluginImpl.GAMMA_MULT;
+						}
+						member.getCaptain().getMemoryWithoutUpdate().unset(AICoreOfficerPluginImpl.AUTOMATED_POINTS_VALUE);
+						member.getCaptain().getMemoryWithoutUpdate().set(AICoreOfficerPluginImpl.AUTOMATED_POINTS_MULT, mult);
+					}
+				}
+			}
+		}
+		
+		for (LocationAPI curr : all) {
+			for (SectorEntityToken entity : curr.getAllEntities()) {
+				if (entity.getMarket() != null && entity.getMarket().getAdmin() != null) { 
+					convertPersonSkillsTo0951a(entity.getMarket().getAdmin());
+				}
+				if (entity.getMemoryWithoutUpdate() != null && entity.getMemoryWithoutUpdate().contains("$defenderFleet")) {
+					CampaignFleetAPI fleet = (CampaignFleetAPI) entity.getMemoryWithoutUpdate().get("$defenderFleet");
+					if (fleet != null) {
+						for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+							convertPersonSkillsTo0951a(member.getCaptain());
+						}
+					}
+				}
+			}
+		}
+		
+		MutableCharacterStatsAPI stats = engine.getPlayerStats();
+		int skillPoints = 0;
+		int storyPoints = 0;
+		for (SkillLevelAPI sl : stats.getSkillsCopy()) {
+			int level = (int) sl.getLevel();
+			if (level > 0) skillPoints++;
+			if (level > 1) storyPoints++;
+			for (int i = 0; i < level; i++) {
+				stats.decreaseSkill(sl.getSkill().getId());
+			}
+		}
+		stats.setPoints(stats.getPoints() + skillPoints);
+		stats.setStoryPoints(stats.getStoryPoints() + storyPoints);
+		stats.refreshCharacterStatsEffects();
+		stats.refreshAllOutpostsEffectsForPlayerOutposts();
+		
+		engine.addTransientScript(new EveryFrameScript() {
+			int frames = 0;
+			boolean done = false;
+			public boolean runWhilePaused() {
+				return true;
+			}
+			public boolean isDone() {
+				return done;
+			}
+			public void advance(float amount) {
+				frames++;
+				if (frames > 2 && !Global.getSector().getCampaignUI().isShowingDialog()) {
+					Global.getSector().getCampaignUI().showConfirmDialog("Your skills have been reset "
+							+ "to accomodate the new skill system. Skill and story points have been refunded.\n\n"
+							+ "Officer, administrator, and AI core skills have been adjusted for the new system.",
+							"Ok", null, null, null);
+					done = true;
+				}
+			}
+		});
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void convertPersonSkillsTo0951a(PersonAPI person) {
+		if (person == null || person.isPlayer() || person.isDefault()) return;
+		
+		MutableCharacterStatsAPI stats = person.getStats();
+		stats.setSkipRefresh(true);
+		
+		convertSkill(Skills.SHIELD_MODULATION, Skills.FIELD_MODULATION, person);
+		convertSkill(Skills.RELIABILITY_ENGINEERING, Skills.COMBAT_ENDURANCE, person);
+		
+		convertSkill(Skills.STRIKE_COMMANDER, Skills.HELMSMANSHIP, person);
+		convertSkill(Skills.STRIKE_COMMANDER, Skills.POLARIZED_ARMOR, person);
+		
+		convertSkill(Skills.RANGED_SPECIALIZATION, Skills.TARGET_ANALYSIS, person);
+		convertSkill(Skills.RANGED_SPECIALIZATION, Skills.BALLISTIC_MASTERY, person);
+		
+		convertSkill(Skills.PHASE_MASTERY, Skills.FIELD_MODULATION, person);
+		convertSkill(Skills.PHASE_MASTERY, Skills.ORDNANCE_EXPERTISE, person);
+		
+		convertSkill(Skills.WEAPON_DRILLS, Skills.TACTICAL_DRILLS, person);
+		convertSkill(Skills.SPECIAL_MODIFICATIONS, Skills.BEST_OF_THE_BEST, person);
+		
+		
+		removeSkill(Skills.COLONY_MANAGEMENT, person);
+		removeSkill(Skills.SPACE_OPERATIONS, person);
+		removeSkill(Skills.PLANETARY_OPERATIONS, person);
+		removeSkill(Skills.AUXILIARY_SUPPORT, person);
+
+		if (person.isAICore() && stats.hasSkill(Skills.INDUSTRIAL_PLANNING)) {
+			stats.setSkillLevel(Skills.HYPERCOGNITION, 1);
+		}
+		
+		stats.setSkipRefresh(false);
+		
+	}
+	
+	public void removeSkill(String id, PersonAPI person) {
+		for (int i = 0; i < 10; i++) {
+			person.getStats().decreaseSkill(id);
+		}
+	}
+	public void convertSkill(String from, String to, PersonAPI person) {
+		int level = (int) person.getStats().getSkillLevel(from);
+		if (level > 0) {
+			for (int i = 0; i < level; i++) {
+				person.getStats().decreaseSkill(from);
+			}
+			person.getStats().setSkillLevel(to, level);
+		}
+	}
 	
 }
 

@@ -76,7 +76,7 @@ public class CBStats {
 	
 	// bounty mult
 	public static float TRADER_MULT = 0.5f;
-	public static float PATROL_MULT = 1f;
+	public static float PATROL_MULT = 0.67f;
 	
 	
 	

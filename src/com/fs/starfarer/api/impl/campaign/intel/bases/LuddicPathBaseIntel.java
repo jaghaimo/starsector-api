@@ -872,7 +872,10 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 		return entity;
 	}
 
-	
+	public boolean isLarge() {
+		return large;
+	}
+
 }
 
 

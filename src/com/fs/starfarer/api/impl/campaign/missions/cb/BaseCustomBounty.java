@@ -2,14 +2,17 @@ package com.fs.starfarer.api.impl.campaign.missions.cb;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
@@ -225,6 +228,7 @@ public class BaseCustomBounty extends HubMissionWithBarEvent implements FleetEve
 		
 		int dLow = pickDifficulty(DifficultyChoice.LOW);
 		creatorLow = pickCreator(dLow, DifficultyChoice.LOW);
+		//creatorLow = new CBDerelict();
 		if (creatorLow != null) {
 			dataLow = creatorLow.createBounty(createdAt, this, dLow, Stage.BOUNTY);
 		}
@@ -336,7 +340,25 @@ public class BaseCustomBounty extends HubMissionWithBarEvent implements FleetEve
 			String trigger = showCreator.getId() + "OfferDesc";
 			FireBest.fire(null, dialog, memoryMap, trigger);
 			
-			//showCreator.addIntelAssessment(dialog.getTextPanel(), this, showData);
+			if (showData != null && showData.system != null) {
+				String icon = showCreator.getIconName();
+				if (icon == null) icon = getIcon();
+				String text = null;
+				Set<String> tags = new LinkedHashSet<String>();
+				tags.add(Tags.INTEL_MISSIONS);
+				Color color = Misc.getBasePlayerColor();
+			
+				if (showData.system.getCenter() != null && showData.system.getCenter().getMarket() != null) {
+					color = showData.system.getCenter().getMarket().getTextColorForFactionOrPlanet();
+				} else if (showData.system.getCenter() instanceof PlanetAPI) {
+					color = Misc.setAlpha(((PlanetAPI)showData.system.getCenter()).getSpec().getIconColor(), 255);
+					color = Misc.setBrightness(color, 235);
+				}
+			
+				dialog.getVisualPanel().showMapMarker(showData.system.getCenter(), 
+							"Target: " + showData.system.getNameWithLowercaseTypeShort(), color, 
+							true, icon, text, tags);
+			}
 			return true;
 		} else if ("showBountyAssessment".equals(action) && showCreator != null) {
 			showCreator.addIntelAssessment(dialog.getTextPanel(), this, showData);
@@ -384,6 +406,9 @@ public class BaseCustomBounty extends HubMissionWithBarEvent implements FleetEve
 		
 		MarketAPI createdAt = getPerson().getMarket();
 		if (createdAt == null) createdAt = dialog.getInteractionTarget().getMarket();
+		if (creator.getIconName() != null) {
+			setIconName(creator.getIconName());
+		}
 		creator.notifyAccepted(createdAt, this, data);
 		
 		target = data.fleet.getCommander();

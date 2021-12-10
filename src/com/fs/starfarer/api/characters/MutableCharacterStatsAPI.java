@@ -121,6 +121,10 @@ public interface MutableCharacterStatsAPI {
 	void addStoryPoints(int points, TextPanelAPI textPanel, boolean makeCharTabFlash);
 	long getBonusXPForSpendingStoryPointBeforeSpendingIt();
 	long getBonusXPUsed(long normalXP);
+	void setOnlyAddBonusXPDoNotSpendStoryPoints(boolean onlyAddBonusXPDoNotSpendStoryPoints);
+	void decreaseSkill(String id);
+	boolean hasSkill(String id);
+	void refreshCharacterStatsEffects(boolean withColonyEffects);
 	
 
 }

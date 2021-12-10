@@ -56,6 +56,9 @@ public interface FighterWingAPI {
 
 
 	List<ReturningFighter> getReturning();
+
+
+	void removeMember(ShipAPI member);
 }
 
 

@@ -33,7 +33,7 @@ public class FleetDesc extends BaseCommandPlugin {
 		FactionAPI faction = fleet.getFaction();
 		TextPanelAPI text = dialog.getTextPanel();
 		
-		if (Global.getSettings().isDevMode()) {
+		if (Global.getSettings().isDevMode() && !Global.getSettings().getBoolean("playtestingMode")) {
 			text.addParagraph("Admiral skills:");
 			for (SkillLevelAPI skill : fleet.getCommanderStats().getSkillsCopy()) {
 				if (skill.getSkill().isAdmiralSkill()) {

@@ -136,6 +136,10 @@ public interface FleetDataAPI {
 
 	void sortToMatchOrder(List<FleetMemberAPI> originalOrder);
 
+	boolean isForceNoSync();
+
+	void setForceNoSync(boolean forceNoSync);
+
 }
 
 

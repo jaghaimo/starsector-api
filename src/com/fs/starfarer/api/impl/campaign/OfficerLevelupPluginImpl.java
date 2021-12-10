@@ -6,19 +6,22 @@ import java.util.Random;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
+import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
-import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.plugins.OfficerLevelupPlugin;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.SkillData;
-import com.fs.starfarer.api.util.WeightedRandomPicker;
 import com.fs.starfarer.api.util.SkillData.SkillsForAptitude;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 
+	//public static float XP_MULT = 5f;
+	public static float XP_MULT = Global.getSettings().getFloat("officerXPRequiredMult");
+	
 	public long getXPForLevel(int level) {
 
 		if (level <= 1) return 0;
@@ -41,6 +44,8 @@ public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 		float r = f1 * mult1 * base +
 			      f2 * mult2 * base +
 			      f3 * mult3 * base;
+		
+		r *= XP_MULT;
 		
 		return (long) r * 6;
 	}
@@ -128,8 +133,68 @@ public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 		
 		return result;
 	}
+	
+	
+	public List<String> pickLevelupSkillsV3(PersonAPI person, Random random) {
+		if (random == null) random = new Random();
+		
+		
+		List<SkillSpecAPI> top = new ArrayList<SkillSpecAPI>();
+		List<SkillSpecAPI> leftovers = new ArrayList<SkillSpecAPI>();
+		
+		MutableCharacterStatsAPI stats = person.getStats();
+		int level = stats.getLevel();
+		
+		for (String ap : SkillData.getAptitudes().keySet()) {
+			SkillsForAptitude skills = SkillData.getSkills(ap);
+			for (List<SkillSpecAPI> list : skills.tiers) {
+				boolean topTier = false;
+				for (SkillSpecAPI skill : list) {
+					if (!skill.isCombatOfficerSkill()) continue;
+					if (skill.hasTag(Skills.TAG_DEPRECATED)) continue;
+					if (stats.getSkillLevel(skill.getId()) <= 0) {
+						if (skill.getTier() == 5) topTier = true;
+						if (!topTier || level >= 3) {
+							if (topTier) {
+								top.add(skill);
+							} else {
+								leftovers.add(skill);
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		int max = 4;
+		if (Misc.isMentored(person)) {
+			max = 6;
+		}
+		List<String> result = new ArrayList<String>();
+		
+		if (!top.isEmpty()) {
+			WeightedRandomPicker<SkillSpecAPI> picker = new WeightedRandomPicker<SkillSpecAPI>(random);
+			picker.addAll(top);
+			while (!picker.isEmpty() && result.size() < max) {
+				SkillSpecAPI pick = picker.pickAndRemove();
+				result.add(pick.getId());
+			}
+		}
+		if (!leftovers.isEmpty()) {
+			WeightedRandomPicker<SkillSpecAPI> picker = new WeightedRandomPicker<SkillSpecAPI>(random);
+			picker.addAll(leftovers);
+			while (!picker.isEmpty() && result.size() < max) {
+				SkillSpecAPI pick = picker.pickAndRemove();
+				result.add(pick.getId());
+			}
+		}
+		
+		return result;
+	}
+	
+	
 	public List<String> pickLevelupSkills(PersonAPI person, Random random) {
-		if (true) return pickLevelupSkillsV2(person, random);
+		if (true) return pickLevelupSkillsV3(person, random);
 		if (random == null) random = new Random();
 		
 		boolean hasCarrierSkills = false;

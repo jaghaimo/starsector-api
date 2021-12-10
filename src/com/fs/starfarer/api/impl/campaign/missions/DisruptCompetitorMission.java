@@ -155,6 +155,7 @@ public class DisruptCompetitorMission extends HubMissionWithBarEvent {
 	protected void updateInteractionDataImpl() {
 		set("$dcom_barEvent", isBarEvent());
 		set("$dcom_manOrWoman", getPerson().getManOrWoman());
+		set("$dcom_hisOrHer", getPerson().getHisOrHer());
 		set("$dcom_reward", Misc.getWithDGS(getCreditsReward()));
 		
 		set("$dcom_systemName", market.getStarSystem().getNameWithLowercaseTypeShort());

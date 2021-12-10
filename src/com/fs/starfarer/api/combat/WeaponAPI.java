@@ -80,6 +80,7 @@ public interface WeaponAPI {
 		PD_ALSO, // PD, but only if there are no other targets
 		USE_VS_FRIGATES,
 		STRIKE,
+		DANGEROUS, /** like STRIKE but only for when the enemy ship is considering it, not for its own weapon use */
 		BOMB,
 		GUIDED_POOR,
 		DO_NOT_AIM,
@@ -107,6 +108,7 @@ public interface WeaponAPI {
 		MISSILE_SPREAD,
 		DIRECT_AIM,
 		NO_TURN_RATE_BOOST_WHEN_IDLE,
+		RESET_BARREL_INDEX_ON_BURST,
 	}
 	
 	
@@ -248,6 +250,7 @@ public interface WeaponAPI {
 	void setTurnRateOverride(Float turnRateOverride);
 	SpriteAPI getGlowSpriteAPI();
 	AmmoTrackerAPI getAmmoTracker();
+	void setRefireDelay(float delay);
 }
 
 

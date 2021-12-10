@@ -498,6 +498,7 @@ public class MoteControlScript extends BaseShipSystemScript {
 			if (other.isFighter()) continue;
 			if (other.getOwner() == from.getOwner()) continue;
 			if (other.isHulk()) continue;
+			if (!other.isTargetable()) continue;
 			
 			float dist = Misc.getDistance(slotLoc, other.getLocation());
 			if (dist > getRange(from)) continue;

@@ -160,6 +160,14 @@ public class AddRaidObjective extends BaseCommandPlugin {
 			if (customOnly && type != RaidType.CUSTOM_ONLY) return;
 			if (type == RaidType.DISRUPT) return;
 			
+			if (customOnly && entity != null &&
+					entity.getMemoryWithoutUpdate().contains("$raidRestrictToTrigger")) {
+				String restrict = entity.getMemoryWithoutUpdate().getString("$raidRestrictToTrigger");
+				if (restrict != null && !restrict.isEmpty() && !restrict.equals(trigger)) {
+					return;
+				}
+			}
+			
 			if ((this.market != null && market == this.market) ||
 					(this.entity != null && entity == this.entity)) {
 				CustomRaidObjective custom = new CustomRaidObjective(this);

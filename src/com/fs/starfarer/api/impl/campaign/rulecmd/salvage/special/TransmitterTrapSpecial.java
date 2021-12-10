@@ -242,7 +242,7 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 		fleet.getMemoryWithoutUpdate().set(FleetAIFlags.PLACE_TO_LOOK_FOR_TARGET, new Vector2f(playerFleet.getLocation()), interceptDays);
 
 		if (makeLowRepImpact) {
-			Misc.makeLowRepImpact(playerFleet, "ttSpecial");
+			Misc.makeLowRepImpact(fleet, "ttSpecial");
 		}
 		
 		if (fleet.getAI() instanceof ModularFleetAIAPI) {

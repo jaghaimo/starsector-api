@@ -117,7 +117,7 @@ public class CargoPods extends BaseCommandPlugin {
 
 	protected void computeStabilizeData() {
 		float total = podsCargo.getTotalPersonnel() + podsCargo.getSpaceUsed() + podsCargo.getFuel();
-		float stabilizeSupplies = Math.max((int) total / 50, 2);
+		float stabilizeSupplies = Math.max((int) total / 200, 2);
 		
 		memory.set("$stabilizeSupplies", (int) stabilizeSupplies, 0f);
 		

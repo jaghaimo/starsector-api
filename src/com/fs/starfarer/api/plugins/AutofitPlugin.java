@@ -61,6 +61,8 @@ public interface AutofitPlugin {
 		
 		FactionAPI getFaction();
 		
+		boolean isAllowSlightRandomization();
+		
 		boolean isPlayerCampaignRefit();
 		boolean canAddRemoveHullmodInPlayerCampaignRefit(String modId);
 	}

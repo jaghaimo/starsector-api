@@ -32,6 +32,8 @@ public class JailbreakMission extends HubMissionWithBarEvent {
 	
 	@Override
 	protected boolean create(MarketAPI createdAt, boolean barEvent) {
+//		System.out.println("JAILBREAK: " + genRandom.nextLong());
+		
 		if (barEvent) {
 			setGiverRank(Ranks.CITIZEN);
 			setGiverPost(pickOne(Ranks.POST_AGENT, Ranks.POST_SMUGGLER, Ranks.POST_GANGSTER, 

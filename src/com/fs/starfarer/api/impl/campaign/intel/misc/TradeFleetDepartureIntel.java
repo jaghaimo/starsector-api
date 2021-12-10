@@ -382,6 +382,7 @@ public class TradeFleetDepartureIntel extends BaseIntelPlugin {
 	@Override
 	public boolean shouldRemoveIntel() {
 		if (route.getDelay() > 0) return false;
+		if (isImportant()) return false;
 		if (sinceLaunched != null && sinceLaunched < getBaseDaysAfterEnd()) {
 			return false;
 		}

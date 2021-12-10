@@ -71,5 +71,11 @@ public interface ProjectileSpecAPI {
 	void setOnFireClassName(String onFireClassName);
 	String getOnFireClassName();
 	OnFireEffectPlugin getOnFireEffect();
+	void setNoNonShieldImpactSounds(boolean noNonShieldImpactSounds);
+	void setNoImpactSounds(boolean noImpactSounds);
+	boolean isNoShieldImpactSounds();
+	void setNoShieldImpactSounds(boolean noShieldImpactSounds);
+	boolean isNoNonShieldImpactSounds();
+	boolean isNoImpactSounds();
 
 }

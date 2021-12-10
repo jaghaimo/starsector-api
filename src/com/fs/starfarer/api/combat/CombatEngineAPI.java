@@ -419,6 +419,17 @@ public interface CombatEngineAPI {
 	void setCustomExit(String buttonTitle, String confirmString);
 	String getCustomExitButtonTitle();
 	String getCustomExitButtonConfirmString();
+
+	void addFloatingTextAlways(Vector2f loc, String text, float size, Color color, CombatEntityAPI attachedTo,
+			float flashFrequency, float flashDuration, float durInPlace, float durFloatingUp, float durFadingOut, float baseAlpha);
+
+	WeaponAPI createFakeWeapon(ShipAPI ship, String weaponId);
+
+	ShipAPI getShipPlayerIsTransferringCommandFrom();
+
+	ShipAPI getShipPlayerIsTransferringCommandTo();
+
+	ShipAPI getShipPlayerLastTransferredCommandTo();
 	
 	//float getElapsedInCurrentFrame();
 

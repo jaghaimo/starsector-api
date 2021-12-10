@@ -307,8 +307,9 @@ public abstract class BaseDurationAbility extends BaseAbilityPlugin {
 	public boolean isFadingOut() {
 		return fadingOut;
 	}
-
-	
+	public float getLevel() {
+		return level;
+	}
 	
 }
 

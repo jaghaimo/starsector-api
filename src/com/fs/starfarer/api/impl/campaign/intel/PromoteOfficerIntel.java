@@ -30,6 +30,7 @@ import com.fs.starfarer.api.util.Misc;
 public class PromoteOfficerIntel extends BaseIntelPlugin {
 	
 	public static String BUTTON_PROMOTE = "button_promote";
+	public static String BUTTON_DELETE = "button_delete";
 	public static float DURATION = 120f;
 	
 	protected PersonAPI person;
@@ -149,6 +150,11 @@ public class PromoteOfficerIntel extends BaseIntelPlugin {
 		
 		ButtonAPI button = addGenericButton(info, width, color, dark, "Promote to ship command", BUTTON_PROMOTE);
 		button.setShortcut(Keyboard.KEY_T, true);
+
+		info.addSpacer(-10f);
+		addDeleteButton(info, width, "Disregard");
+//		ButtonAPI delete = addGenericButton(info, width, "Disregard", BUTTON_DELETE);
+//		delete.setShortcut(Keyboard.KEY_G, true);
 		
 		if (curr >= max) {
 			button.setEnabled(false);
@@ -157,12 +163,45 @@ public class PromoteOfficerIntel extends BaseIntelPlugin {
 		
 	}
 	
+	@Override
+	protected void createDeleteConfirmationPrompt(TooltipMakerAPI prompt) {
+		prompt.addPara("Are you sure? This action can not be undone.", Misc.getTextColor(), 0f);
+	}
+	
+//	@Override
+//	public void buttonPressConfirmed(Object buttonId, IntelUIAPI ui) {
+//		if (buttonId == BUTTON_DELETE) {
+//			endImmediately();
+//			ui.recreateIntelUI();
+//		}
+//	}
+	
 	public void storyActionConfirmed(Object buttonId, IntelUIAPI ui) {
 		if (buttonId == BUTTON_PROMOTE) {
 			endImmediately();
 			ui.recreateIntelUI();
 		}
 	}
+	
+//	@Override
+//	public void createConfirmationPrompt(Object buttonId, TooltipMakerAPI prompt) {
+//		prompt.setParaInsigniaLarge();
+//		if (buttonId == BUTTON_DELETE) {
+//			prompt.addPara("Are you sure? Disregarding this promotion opportunity is permanent.", 0f);				
+//		} else if (buttonId == BUTTON_DEVELOP) {
+//			prompt.addPara("Develop a relationship with this contact?", 0f);
+//			return;	
+//		}
+//		super.createConfirmationPrompt(buttonId, prompt);
+//		return;
+//	}
+//	
+//	@Override
+//	public boolean doesButtonHaveConfirmDialog(Object buttonId) {
+//		if (buttonId == BUTTON_DELETE) return true;
+//		if (buttonId == BUTTON_DEVELOP) return true;
+//		return super.doesButtonHaveConfirmDialog(buttonId);
+//	}
 	
 	
 	public StoryPointActionDelegate getButtonStoryPointActionDelegate(Object buttonId) {

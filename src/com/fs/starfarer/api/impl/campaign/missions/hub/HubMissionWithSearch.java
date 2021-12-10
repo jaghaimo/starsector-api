@@ -856,7 +856,10 @@ public abstract class HubMissionWithSearch extends HubMissionWithTriggers {
 			this.negate = negate;
 		}
 		public boolean systemMatchesRequirement(StarSystemAPI system) {
-			boolean result = system.isEnteredByPlayer();
+//			if (system.getNameWithNoType().equals("Stella Vitae")) {
+//				System.out.println("wefwefwef");
+//			}
+			boolean result = !system.isEnteredByPlayer();
 			if (DebugFlags.ALLOW_VIEW_UNEXPLORED_SYSTEM_MAP) {
 				result = system.getDaysSinceLastPlayerVisit() >= 100000f;
 			}
@@ -1442,6 +1445,7 @@ public abstract class HubMissionWithSearch extends HubMissionWithTriggers {
 		});
 	}
 	public void requireSystemNot(final StarSystemAPI system) {
+		if (system == null) return;
 		search.systemReqs.add(new StarSystemRequirement() {
 			public boolean systemMatchesRequirement(StarSystemAPI param) {
 				return system != param;

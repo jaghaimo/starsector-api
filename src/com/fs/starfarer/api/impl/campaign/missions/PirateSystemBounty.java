@@ -112,6 +112,8 @@ public class PirateSystemBounty extends HubMissionWithBarEvent implements FleetE
 			return false;
 		}
 		
+		makeImportant(market, "$psb_target", Stage.BOUNTY);
+		
 		system = market.getStarSystem();
 
 		faction = person.getFaction();
@@ -158,6 +160,7 @@ public class PirateSystemBounty extends HubMissionWithBarEvent implements FleetE
 		set("$psb_baseBounty", Misc.getWithDGS(baseBounty));
 		set("$psb_days", "" + (int) BOUNTY_DAYS);
 		set("$psb_systemName", system.getNameWithLowercaseType());
+		set("$psb_systemNameShort", system.getNameWithLowercaseTypeShort());
 		set("$psb_baseName", market.getName());
 		set("$psb_dist", getDistanceLY(market));
 	}

@@ -39,6 +39,12 @@ public class DamagingExplosionSpec implements Cloneable {
 	private boolean showGraphic = true;
 	private boolean useDetailedExplosion = true;
 	
+	private float detailedExplosionRadius = -1f;
+	private float detailedExplosionFlashRadius = -1f;
+	private Color detailedExplosionFlashColorFringe = null;
+	private Color detailedExplosionFlashColorCore = null;
+	private float detailedExplosionFlashDuration = -1f;
+	
 	private OnHitEffectPlugin effect;
 	
 	private MutableStat modifier = new MutableStat(1f);
@@ -114,6 +120,13 @@ public class DamagingExplosionSpec implements Cloneable {
 			);
 
 			spec.useDetailedExplosion = explosionSpecJson.optBoolean("useDetailedExplosion", false);
+			
+			spec.detailedExplosionRadius = (float) explosionSpecJson.optDouble("detailedExplosionRadius", -1f);
+			spec.detailedExplosionFlashRadius = (float) explosionSpecJson.optDouble("detailedExplosionFlashRadius", -1f);
+			spec.detailedExplosionFlashDuration = (float) explosionSpecJson.optDouble("detailedExplosionFlashDuration", -1f);
+			spec.detailedExplosionFlashColorFringe = Misc.optColor(explosionSpecJson, "detailedExplosionFlashColorFringe", null);
+			spec.detailedExplosionFlashColorCore = Misc.optColor(explosionSpecJson, "detailedExplosionFlashColorCore", null);
+			
 			
 			if (spec.getParticleCount() == 0) {
 				spec.setShowGraphic(false);
@@ -297,6 +310,46 @@ public class DamagingExplosionSpec implements Cloneable {
 
 	public void setModifier(MutableStat modifier) {
 		this.modifier = modifier;
+	}
+
+	public float getDetailedExplosionRadius() {
+		return detailedExplosionRadius;
+	}
+
+	public void setDetailedExplosionRadius(float detailedExplosionRadius) {
+		this.detailedExplosionRadius = detailedExplosionRadius;
+	}
+
+	public float getDetailedExplosionFlashRadius() {
+		return detailedExplosionFlashRadius;
+	}
+
+	public void setDetailedExplosionFlashRadius(float detailedExplosionFlashRadius) {
+		this.detailedExplosionFlashRadius = detailedExplosionFlashRadius;
+	}
+
+	public Color getDetailedExplosionFlashColorFringe() {
+		return detailedExplosionFlashColorFringe;
+	}
+
+	public void setDetailedExplosionFlashColorFringe(Color detailedExplosionFlashColorFringe) {
+		this.detailedExplosionFlashColorFringe = detailedExplosionFlashColorFringe;
+	}
+
+	public Color getDetailedExplosionFlashColorCore() {
+		return detailedExplosionFlashColorCore;
+	}
+
+	public void setDetailedExplosionFlashColorCore(Color detailedExplosionFlashColorCore) {
+		this.detailedExplosionFlashColorCore = detailedExplosionFlashColorCore;
+	}
+
+	public float getDetailedExplosionFlashDuration() {
+		return detailedExplosionFlashDuration;
+	}
+
+	public void setDetailedExplosionFlashDuration(float detailedExplosionFlashDuration) {
+		this.detailedExplosionFlashDuration = detailedExplosionFlashDuration;
 	}
 	
 	

@@ -134,8 +134,9 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 //		System.out.println(sizeMult);
 		float dur = 1f;
 		float rampUp = 0f;
+		Color c = Misc.scaleAlpha(color, projectile.getBrightness());
 		engine.addNebulaParticle(point, vel, size, 5f + 3f * sizeMult,
-										rampUp, 0f, dur, color);
+										rampUp, 0f, dur, c);
 //		engine.addNegativeNebulaParticle(point, vel, size, 2f,
 //										rampUp, 0f, dur, inverted);
 //		engine.addNegativeParticle(point, vel, size,

@@ -72,6 +72,8 @@ public class Entities {
 	
 	public static final String EXPLOSION = "explosion";
 	
+	public static final String SENSOR_GHOST = "sensor_ghost";
+	
 	
 }
 

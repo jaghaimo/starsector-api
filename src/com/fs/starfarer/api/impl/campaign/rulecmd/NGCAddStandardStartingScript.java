@@ -127,7 +127,8 @@ public class NGCAddStandardStartingScript extends BaseCommandPlugin {
 						if (!member.isFlagship()) {
 							//PersonAPI officer = OfficerManagerEvent.createOfficer(Global.getSector().getPlayerFaction(), 1, true, SkillPickPreference.NON_CARRIER);
 							PersonAPI officer = Global.getSector().getPlayerFaction().createRandomPerson(new Random());
-							officer.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 1);
+							officer.getStats().setSkillLevel(Skills.HELMSMANSHIP, 1);
+							//officer.getStats().setSkillLevel(Skills.IMPACT_MITIGATION, 1);
 							//officer.getStats().setSkillLevel(Skills.DAMAGE_CONTROL, 1);
 							officer.setRankId(Ranks.SPACE_LIEUTENANT);
 							officer.setPostId(Ranks.POST_OFFICER);

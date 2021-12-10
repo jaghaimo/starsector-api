@@ -26,6 +26,7 @@ public class NavBuoyEntityPlugin extends BaseCampaignObjectivePlugin {
 	
 	public void advance(float amount) {
 		if (entity.getContainingLocation() == null || entity.isInHyperspace()) return;
+		if (isReset()) return;
 		
 		String id = getModId();
 		for (CampaignFleetAPI fleet : entity.getContainingLocation().getFleets()) {
@@ -62,6 +63,10 @@ public class NavBuoyEntityPlugin extends BaseCampaignObjectivePlugin {
 		}
 		text.addPara(BaseIntelPlugin.INDENT + "%s burn level for all same-faction fleets in system",
 				pad, Misc.getHighlightColor(), "+" + bonus);
+		
+		if (isReset()) {
+			text.addPara(BaseIntelPlugin.INDENT + "Auto-calibrating after factory reset; non-functional", 3f);
+		}
 	}
 	
 	public void printNonFunctionalAndHackDescription(TextPanelAPI text) {
@@ -69,8 +74,11 @@ public class NavBuoyEntityPlugin extends BaseCampaignObjectivePlugin {
 			text.addPara("This one, however, does not appear to be transmitting a navigation telemetry broadcast. The cause of its lack of function is unknown.");
 		}
 		if (isHacked()) {
-			text.addPara("You have a hack running on this sensor array.");
+			text.addPara("You have a hack running on this nav buoy.");
 		}
+//		if (isReset()) {
+//			text.addPara("This nav buoy is auto-calibrating after a factory reset and is effectively non-functional.");
+//		}
 	}
 	
 	

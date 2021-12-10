@@ -16,12 +16,21 @@ public class People {
 	public static String HEGEMONY_AGENT = "heg_agent";
 	public static String HEGEMONY_GA_OFFICER = "heg_ga_officer";
 	public static String RAO = "rao";
+	public static String NERIENE_RAO = "neriene_rao";
+	public static String CASPIAN = "caspian";
+	public static String AUGUSTA_RAO = "augusta_rao";
+	public static String MAGNUS = "magnus_cardona";
 	
 	// Diktat
 	public static String ANDRADA = "andrada";
+	public static String SEC_OFFICER = "sec_officer";
 	
 	// Pathers
 	public static String COTTON = "cotton";
+	
+	// Luddic Church / CGR
+	public static String BORNANEW = "bornanew";
+	public static String JASPIS = "jaspis";
 	
 	// pirates
 	public static String KANTA = "kanta";
@@ -39,6 +48,7 @@ public class People {
 	public static String COUREUSE = "coureuse";
 	public static String GARGOYLE = "gargoyle";
 	public static String ZAL = "zal";
+	public static String ELEK = "elek";
 	
 	// gaFC minor characters
 	public static String ADONYA = "adonya_coureuse";
@@ -308,6 +318,44 @@ public class People {
 			market.addPerson(person);
 			ip.addPerson(person);
 		}
+		
+		market =  Global.getSector().getEconomy().getMarket("gilead");
+		if (market != null) {
+			PersonAPI person = Global.getFactory().createPerson();
+			person.setId(BORNANEW);
+			person.setFaction(Factions.LUDDIC_CHURCH);
+			person.setGender(Gender.MALE);
+			person.setRankId(Ranks.BROTHER);
+			person.setPostId(Ranks.POST_SYNOD_SUBCURATE);
+			person.setImportance(PersonImportance.MEDIUM);
+			person.getName().setFirst("Jethro");
+			person.getName().setLast("Bornanew");
+			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "jethro_bornanew"));
+
+			market.getCommDirectory().addPerson(person);
+			market.getCommDirectory().getEntryForPerson(person).setHidden(true);
+			market.addPerson(person);
+			ip.addPerson(person);
+		}
+		
+		market =  Global.getSector().getEconomy().getMarket("gilead");
+		if (market != null) {
+			PersonAPI person = Global.getFactory().createPerson();
+			person.setId(JASPIS);
+			person.setFaction(Factions.LUDDIC_CHURCH);
+			person.setGender(Gender.FEMALE);
+			person.setRankId(Ranks.MOTHER);
+			person.setPostId(Ranks.POST_ARCHCURATE);
+			person.setImportance(PersonImportance.HIGH);
+			person.getName().setFirst("Sophronia");
+			person.getName().setLast("Jaspis");
+			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "jaspis"));
+
+			market.getCommDirectory().addPerson(person);
+			market.getCommDirectory().getEntryForPerson(person).setHidden(true);
+			market.addPerson(person);
+			ip.addPerson(person);
+		}
 
 		{
 			// TriTach bar encounter after GAKallichore hack
@@ -437,6 +485,22 @@ public class People {
 		person2.getMemoryWithoutUpdate().set(BaseMissionHub.NUM_BONUS_MISSIONS, 1);
 		BaseMissionHub.set(person2, new BaseMissionHub(person2));
 		
+		
+		PersonAPI person3 = Global.getFactory().createPerson();
+		person3.setId(People.ELEK);
+		person3.setImportance(PersonImportance.MEDIUM);
+		person3.setFaction(Factions.INDEPENDENT);
+		person3.setGender(Gender.MALE);
+		person3.setRankId(Ranks.CITIZEN);
+		person3.setPostId(Ranks.POST_ACADEMICIAN);
+		person3.getName().setFirst("Cornelius");
+		person3.getName().setLast("Elek");
+		person3.setPortraitSprite(Global.getSettings().getSpriteName("characters", "elek"));
+		
+		market.getCommDirectory().addPerson(person3);
+		market.getCommDirectory().getEntryForPerson(person3).setHidden(true);
+		market.addPerson(person3);
+		Global.getSector().getImportantPeople().addPerson(person3); // so the person can be retrieved by id
 	}
 	
 	
@@ -456,14 +520,39 @@ public class People {
 			person.getName().setFirst("Phillip");
 			person.getName().setLast("Andrada");
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "andrada"));
-			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
-			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
-			person.getStats().setSkillLevel(Skills.WEAPON_DRILLS, 1);
+			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
+//			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
+//			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
+			person.getStats().setSkillLevel(Skills.TACTICAL_DRILLS, 1);
 			market.setAdmin(person);
 			market.getCommDirectory().addPerson(person, 0);
 			market.addPerson(person);
 			ip.addPerson(person);
 		}
+		
+		market =  Global.getSector().getEconomy().getMarket("sindria");
+		if (market != null) {
+			// answers the holophone if you call Andrada
+			// Spencer Balashi
+			
+			PersonAPI person = Global.getFactory().createPerson();
+			person.setId(SEC_OFFICER);
+			person.setFaction(Factions.DIKTAT);
+			person.setGender(Gender.MALE);
+			person.setRankId(Ranks.SPACE_LIEUTENANT);
+			person.setPostId(Ranks.POST_OFFICER);
+			person.setImportance(PersonImportance.VERY_LOW);
+			person.setVoice(Voices.SOLDIER);
+			person.getName().setFirst("Spender");
+			person.getName().setLast("Balashi");
+			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "balashi"));
+
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+			market.getCommDirectory().getEntryForPerson(person).setHidden(true);
+			ip.addPerson(person);
+		}
+
 		
 		market =  Global.getSector().getEconomy().getMarket("kantas_den");
 		if (market != null) {
@@ -479,8 +568,8 @@ public class People {
 			person.getName().setLast("Kanta"); // Kanta
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "kanta"));
 			person.getStats().setSkillLevel(Skills.WOLFPACK_TACTICS, 1);
-			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
-			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
+//			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
+//			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
 			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
 			
 			/* Maybe she's a little removed from day-to-day operations?
@@ -531,8 +620,8 @@ public class People {
 			person.getName().setLast("Sun");
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "sun"));
 			person.getStats().setSkillLevel(Skills.BULK_TRANSPORT, 1);
-			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
-			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
+//			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
+//			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
 			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
 			
 			market.setAdmin(person);
@@ -553,10 +642,11 @@ public class People {
 			person.getName().setFirst("Baikal");
 			person.getName().setLast("Daud");
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "baikal"));
-			person.getStats().setSkillLevel(Skills.AUXILIARY_SUPPORT, 1); // if a skill uses his quote, you can bet he's going to get the skill
-			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
-			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
+//			person.getStats().setSkillLevel(Skills.AUXILIARY_SUPPORT, 1); // if a skill uses his quote, you can bet he's going to get the skill // :( -am
+//			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
+//			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 1);
 			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
+			person.getStats().setSkillLevel(Skills.TACTICAL_DRILLS, 1);
 			
 			market.setAdmin(person);
 			market.getCommDirectory().addPerson(person, 0);
@@ -578,13 +668,89 @@ public class People {
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "orcus_rao"));
 			person.getStats().setSkillLevel(Skills.HELMSMANSHIP, 1);
 			person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 1);
-			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
-			person.getStats().setSkillLevel(Skills.SPECIAL_MODIFICATIONS, 1);
+//			person.getStats().setSkillLevel(Skills.SPACE_OPERATIONS, 1);
+//			person.getStats().setSkillLevel(Skills.SPECIAL_MODIFICATIONS, 1);
 			
 			market.setAdmin(person);
 			market.getCommDirectory().addPerson(person, 0);
 			market.addPerson(person);
 			ip.addPerson(person);
+		}
+		
+		market =  Global.getSector().getEconomy().getMarket("eventide");
+		if (market != null) {
+			PersonAPI person = Global.getFactory().createPerson();
+			person.setId("neriene_rao");
+			person.setFaction(Factions.HEGEMONY);
+			person.setGender(Gender.FEMALE);
+			person.setRankId(Ranks.SPACE_COMMANDER);
+			person.setPostId(Ranks.POST_OFFICER);
+			person.setImportance(PersonImportance.MEDIUM);
+			person.getName().setFirst("Neriene");
+			person.getName().setLast("Rao");
+			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "neriene_rao"));
+
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+			ip.addPerson(person);
+			market.getCommDirectory().getEntryForPerson(person).setHidden(true);
+		}
+		
+		market =  Global.getSector().getEconomy().getMarket("eventide");
+		if (market != null) {
+			PersonAPI person = Global.getFactory().createPerson();
+			person.setId("augusta_rao");
+			person.setFaction(Factions.HEGEMONY);
+			person.setGender(Gender.FEMALE);
+			person.setRankId(Ranks.CITIZEN);
+			person.setPostId(Ranks.POST_ARISTOCRAT);
+			person.setImportance(PersonImportance.HIGH);
+			person.getName().setFirst("Augusta");
+			person.getName().setLast("Rao");
+			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "augusta_rao"));
+
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+			ip.addPerson(person);
+			market.getCommDirectory().getEntryForPerson(person).setHidden(true);
+		}
+		
+		market =  Global.getSector().getEconomy().getMarket("eventide");
+		if (market != null) {
+			PersonAPI person = Global.getFactory().createPerson();
+			person.setId("caspian");
+			person.setFaction(Factions.HEGEMONY);
+			person.setGender(Gender.MALE);
+			person.setRankId(Ranks.SPACE_LIEUTENANT);
+			person.setPostId(Ranks.POST_OFFICER);
+			person.setImportance(PersonImportance.LOW);
+			person.getName().setFirst("Caspian");
+			person.getName().setLast("Sang");
+			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "caspian"));
+
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+			ip.addPerson(person);
+			market.getCommDirectory().getEntryForPerson(person).setHidden(true);
+		}
+		
+		market =  Global.getSector().getEconomy().getMarket("eventide");
+		if (market != null) {
+			PersonAPI person = Global.getFactory().createPerson();
+			person.setId("magnus_cardona");
+			person.setFaction(Factions.HEGEMONY);
+			person.setGender(Gender.MALE);
+			person.setRankId(Ranks.SPACE_COMMANDER);
+			person.setPostId(Ranks.POST_OFFICER);
+			person.setImportance(PersonImportance.LOW);
+			person.getName().setFirst("Magnus");
+			person.getName().setLast("Cardona");
+			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "magnus_cardona"));
+
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+			ip.addPerson(person);
+			market.getCommDirectory().getEntryForPerson(person).setHidden(true);
 		}
 	}
 	

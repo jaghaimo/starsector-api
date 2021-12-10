@@ -206,6 +206,8 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 			if (skipForDistressCalls.contains(system.getId())) continue;
 			
 			if (system.hasPulsar()) continue;
+			if (system.hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) continue;
+			if (system.hasTag(Tags.THEME_HIDDEN)) continue;
 			
 			float sincePlayerVisit = system.getDaysSinceLastPlayerVisit();
 			if (sincePlayerVisit < DISTRESS_MIN_SINCE_PLAYER_IN_SYSTEM) {

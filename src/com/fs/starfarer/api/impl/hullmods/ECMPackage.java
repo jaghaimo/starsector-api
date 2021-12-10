@@ -12,10 +12,10 @@ public class ECMPackage extends BaseHullMod {
 
 	private static Map mag = new HashMap();
 	static {
-		mag.put(HullSize.FRIGATE, 2f);
-		mag.put(HullSize.DESTROYER, 3f);
-		mag.put(HullSize.CRUISER, 4f);
-		mag.put(HullSize.CAPITAL_SHIP, 5f);
+		mag.put(HullSize.FRIGATE, 1f);
+		mag.put(HullSize.DESTROYER, 2f);
+		mag.put(HullSize.CRUISER, 3f);
+		mag.put(HullSize.CAPITAL_SHIP, 4f);
 	}
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {

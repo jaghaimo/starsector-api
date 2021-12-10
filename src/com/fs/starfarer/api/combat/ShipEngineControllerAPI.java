@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.lwjgl.util.vector.Vector2f;
 
+import com.fs.starfarer.api.util.ColorShifterAPI;
 import com.fs.starfarer.api.util.ValueShifterAPI;
 
 public interface ShipEngineControllerAPI {
@@ -82,5 +83,6 @@ public interface ShipEngineControllerAPI {
 	ValueShifterAPI getExtendWidthFraction();
 	ValueShifterAPI getExtendGlowFraction();
 	void forceShowAccelerating();
+	ColorShifterAPI getFlameColorShifter();
 	
 }

@@ -1,5 +1,8 @@
 package com.fs.starfarer.api.campaign;
 
+import java.awt.Color;
+import java.util.Set;
+
 import com.fs.starfarer.api.InteractionDialogImageVisual;
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.characters.CharacterCreationData;
@@ -71,4 +74,14 @@ public interface VisualPanelAPI {
 	void showPersonInfo(PersonAPI person, boolean minimalMode, boolean withRelBar);
 	void showThirdPerson(PersonAPI person);
 	void hideThirdPerson();
+
+	void showCore(CoreUITabId tabId, SectorEntityToken other, Object custom, CoreInteractionListener listener);
+
+	void showMapMarker(SectorEntityToken marker, String title, Color titleColor, 
+						boolean withIntel, String icon, String text, Set<String> intelTags);
+
+	void removeMapMarkerFromPersonInfo();
 }
+
+
+

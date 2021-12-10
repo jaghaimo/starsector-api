@@ -80,6 +80,9 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 			pop.add(id, inc.get(id) * f);
 		}
 		
+//		if (market.getName().equals("Ang")) {
+//			System.out.println("efwefwefew");
+//		}
 		float min = getWeightForMarketSize(market.getSize());
 		float max = getWeightForMarketSize(market.getSize() + 1);
 		//if (market.getSize() >= 10) max = min;

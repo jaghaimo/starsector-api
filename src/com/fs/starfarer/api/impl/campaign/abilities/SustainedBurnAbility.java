@@ -15,11 +15,13 @@ import com.fs.starfarer.api.util.Misc;
 
 public class SustainedBurnAbility extends BaseToggleAbility {
 
-	//public static final float SENSOR_RANGE_MULT = 0.75f;
-	public static final float DETECTABILITY_PERCENT = 100f;
-	//public static final float MAX_BURN_MOD = 10f;
-	public static final float MAX_BURN_PERCENT = 100f;
-	private static final float ACCELERATION_MULT = 0.2f;
+	public static String SB_NO_STOP = "$sb_active";
+	public static String SB_NO_SLOW = "$sb_no_slow";
+	//public static float SENSOR_RANGE_MULT = 0.75f;
+	public static float DETECTABILITY_PERCENT = 100f;
+	//public static float MAX_BURN_MOD = 10f;
+	public static float MAX_BURN_PERCENT = 100f;
+	public static float ACCELERATION_MULT = 0.2f;
 	
 //	public String getSpriteName() {
 //		return Global.getSettings().getSpriteName("abilities", Abilities.SUSTAINED_BURN);
@@ -38,7 +40,7 @@ public class SustainedBurnAbility extends BaseToggleAbility {
 		CampaignFleetAPI fleet = getFleet();
 		if (fleet == null) return;
 		
-		if (!fleet.getMemoryWithoutUpdate().is("$sb_active", true)) {
+		if (!fleet.getMemoryWithoutUpdate().is(SB_NO_STOP, true)) {
 			fleet.setVelocity(0, 0);
 		}
 	}
@@ -57,9 +59,9 @@ public class SustainedBurnAbility extends BaseToggleAbility {
 			return;
 		}
 		
-		fleet.getMemoryWithoutUpdate().set("$sb_active", true, 0.3f);
+		fleet.getMemoryWithoutUpdate().set(SB_NO_STOP, true, 0.3f);
 		
-		if (level > 0 && level < 1 && amount > 0) {
+		if (level > 0 && level < 1 && amount > 0 && !fleet.getMemoryWithoutUpdate().is(SB_NO_SLOW, true)) {
 			float activateSeconds = getActivationDays() * Global.getSector().getClock().getSecondsPerDay();
 			float speed = fleet.getVelocity().length();
 			float acc = Math.max(speed, 200f)/activateSeconds + fleet.getAcceleration();

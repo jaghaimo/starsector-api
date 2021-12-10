@@ -142,6 +142,7 @@ public class ProcurementMission extends HubMissionWithBarEvent {
 			}
 			requireMarketFaction(market.getFactionId());
 			requireMarketNotHidden();
+			requireMarketLocationNot(createdAt.getContainingLocation());
 			requireCommodityIsNotPersonnel();
 			if (person.hasTag(Tags.CONTACT_UNDERWORLD) && rollProbability(PROB_ILLEGAL_IF_UNDERWORLD)) {
 				preferCommodityIllegal();
@@ -209,7 +210,6 @@ public class ProcurementMission extends HubMissionWithBarEvent {
 			setRepFactionChangesLow();
 		}
 		setRepPersonChangesMedium();
-		
 		
 		return true;
 	}

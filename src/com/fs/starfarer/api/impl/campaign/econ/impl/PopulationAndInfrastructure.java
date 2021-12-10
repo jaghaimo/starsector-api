@@ -450,7 +450,6 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 	
 	public static void modifyStability2(Industry industry, MarketAPI market, String modId) {
 		if (Misc.getNumIndustries(market) > Misc.getMaxIndustries(market)) {
-			Misc.getMaxIndustries(market);
 			market.getStability().modifyFlat("_" + modId + "_overmax", -Misc.OVER_MAX_INDUSTRIES_PENALTY, "Maximum number of industries exceeded");
 		} else {
 			market.getStability().unmodifyFlat("_" + modId + "_overmax");
@@ -828,6 +827,9 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		for (SectorEntityToken entity : Global.getSector().getCustomEntitiesWithTag(Tags.CORONAL_TAP)) {
 			if (!usable || entity.getMemoryWithoutUpdate().contains("$usable")) {
 				float dist = Misc.getDistanceLY(locInHyper, entity.getLocationInHyperspace());
+				if (Math.round(dist * 10f) <= ItemEffectsRepo.CORONAL_TAP_LIGHT_YEARS * 10f) {
+					dist = ItemEffectsRepo.CORONAL_TAP_LIGHT_YEARS;
+				}
 				if (dist < minDist) {
 					minDist = dist;
 					nearest = entity;

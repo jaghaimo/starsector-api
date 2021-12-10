@@ -9,6 +9,14 @@ public class Stats {
 	public static final String BUILD_IN_BONUS_XP_MOD = "build_in_bonus_xp_mod";
 	public static final String CUSTOM_PRODUCTION_MOD = "custom_production_mod";
 	
+	public static final String DEPLOYMENT_POINTS_FRACTION_OF_BATTLE_SIZE_BONUS_MOD = "deployment_points_fraction_of_battle_size_bonus_mod";
+	public static final String DEPLOYMENT_POINTS_MIN_FRACTION_OF_BATTLE_SIZE_BONUS_MOD = "deployment_points_min_fraction_of_battle_size_bonus_mod";
+	
+	/**
+	 * Set for both character (from having Neural Link skill) and ship (from having Neural Interface hullmod.
+	 */
+	public static final String HAS_NEURAL_LINK = "custom_production_mod";
+	
 	public static final String NUM_MAX_CONTACTS_MOD = "num_max_contacts_mod";
 	
 	// outposts - these are admin stats, so, applied in "CharacterStatsSkillEffect"
@@ -45,6 +53,8 @@ public class Stats {
 	public static final String MAX_INDUSTRIES = "max_industries";
 	
 	// fleets
+	public static final String FUEL_USE_NOT_SHOWN_ON_MAP_MULT = "fuel_use_not_shown_on_map_mult";
+	
 	public static final String PLANETARY_OPERATIONS_MOD = "ground_attack_mod";
 	public static final String PLANETARY_OPERATIONS_CASUALTIES_MULT = "ground_attack_casualties_mult";
 	
@@ -66,6 +76,9 @@ public class Stats {
 	public static final String SALVAGE_VALUE_MULT_FLEET_NOT_RARE = "salvage_value_bonus_fleet_not_rare";
 	public static final String BATTLE_SALVAGE_MULT_FLEET = "battle_salvage_value_bonus_fleet";
 	
+	/**
+	 * This one is on the commander, not the fleet.
+	 */
 	public static final String COMMAND_POINT_RATE_COMMANDER = "command_point_rate";
 	public static final String NON_COMBAT_CREW_LOSS_MULT = "overall_crew_loss_mult";
 	
@@ -121,10 +134,21 @@ public class Stats {
 	// ships
 	public static final String ACT_AS_COMBAT_SHIP = "act_as_combat_ship";
 	
+	/**
+	 * Modifying suppliesToRecover does not affect deployment points.
+	 * But this modifies the base value of supplies to recover for deployment points purposes only.
+	 */
+	public static final String DEPLOYMENT_POINTS_MOD = "deployment_points_mod";
+	
+	//public static final String HAS_FORCE_CONCENTRATION_BONUS_MOD = "has_force_concentration_bonus";
+	public static final String CAN_DEPLOY_LEFT_RIGHT_MOD = "can_deploy_left_right";
+	
+	public static final String PHASE_CLOAK_FLUX_LEVEL_FOR_MIN_SPEED_MOD = "phase_cloak_flux_level_for_min_speed_mod";
 	
 	public static final String MAX_PERMANENT_HULLMODS_MOD = "max_permanent_hullmods_mod";
 	public static final String MAX_LOGISTICS_HULLMODS_MOD = "max_logistics_hullmods_mod";
 	public static final String PHASE_CLOAK_SPEED_MOD = "phase_cloak_speed";
+	public static final String PHASE_CLOAK_ACCEL_MOD = "phase_cloak_accel";
 	
 	public static final String PD_IGNORES_FLARES = "pd_ignores_flares";
 	public static final String PD_BEST_TARGET_LEADING = "pd_best_target_leading";
@@ -151,6 +175,12 @@ public class Stats {
 	public static final String REPLACEMENT_RATE_INCREASE_MULT = "replacement_rate_increase_mult";
 	
 	public static final String DMOD_EFFECT_MULT = "dmod_effect_mult";
+	public static final String DMOD_AVOID_PROB_MOD = "dmod_avoid_prob_mod";
+	
+	/**
+	 * Base value is 1.
+	 */
+	public static final String DMOD_ACQUIRE_PROB_MOD = "dmod_acquire_prob_mod";
 	public static final String DMOD_REDUCE_MAINTENANCE = "dmod_reduce_maintenance";
 	
 	

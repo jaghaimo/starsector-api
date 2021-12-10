@@ -18,6 +18,9 @@ import com.fs.starfarer.api.util.Misc;
 
 public class GateExplosionScript implements EveryFrameScript {
 
+	public static float UNSTABLE_DAYS_MIN = 200;
+	public static float UNSTABLE_DAYS_MAX = 400;
+	
 	protected boolean done = false;
 	protected boolean playedWindup = false;
 	protected SectorEntityToken explosion = null;
@@ -91,7 +94,8 @@ public class GateExplosionScript implements EveryFrameScript {
 				StarSystemAPI system = gate.getStarSystem();
 				if (system != null) {
 					for (SectorEntityToken jp : system.getJumpPoints()) {
-						jp.getMemoryWithoutUpdate().set(JumpPointInteractionDialogPluginImpl.UNSTABLE_KEY, true);
+						float days = UNSTABLE_DAYS_MIN + (UNSTABLE_DAYS_MAX - UNSTABLE_DAYS_MIN) * (float) Math.random();
+						jp.getMemoryWithoutUpdate().set(JumpPointInteractionDialogPluginImpl.UNSTABLE_KEY, true, days);
 					}
 				}
 			}

@@ -1,5 +1,6 @@
 package com.fs.starfarer.api.campaign.listeners;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -23,13 +24,18 @@ import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.campaign.listeners.GroundRaidObjectivesListener.RaidResultData;
 import com.fs.starfarer.api.campaign.listeners.SubmarketInteractionListener.SubmarketInteractionType;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.combat.CollisionGridAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.enc.EncounterPoint;
+import com.fs.starfarer.api.impl.campaign.enc.EncounterPointProvider;
 import com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.TempData;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class ListenerUtil {
 	
@@ -266,6 +272,18 @@ public class ListenerUtil {
 		}
 	}
 	
+	public static void updateSlipstreamBlockers(CollisionGridAPI grid, SlipstreamManager manager) {
+		for (SlipstreamBlockerUpdater x : Global.getSector().getListenerManager().getListeners(SlipstreamBlockerUpdater.class)) {
+			x.updateSlipstreamBlockers(grid, manager);
+		}
+	}
+	public static void updateSlipstreamConfig(String prevConfig, WeightedRandomPicker<String> nextConfigPicker,
+											  SlipstreamManager manager) {
+		for (SlipstreamConfigUpdater x : Global.getSector().getListenerManager().getListeners(SlipstreamConfigUpdater.class)) {
+			x.updateSlipstreamConfig(prevConfig, nextConfigPicker, manager);
+		}
+	}
+	
 	public static int countOtherFactors(SectorEntityToken entity) {
 		int count = 0;
 		for (ColonyOtherFactorsListener x : Global.getSector().getListenerManager().getListeners(ColonyOtherFactorsListener.class)) {
@@ -275,6 +293,17 @@ public class ListenerUtil {
 	}
 	public static boolean hasOtherFactors(SectorEntityToken entity) {
 		return countOtherFactors(entity) > 0;
+	}
+	
+	public static List<EncounterPoint> generateEncounterPoints(LocationAPI where) {
+		List<EncounterPoint> result = new ArrayList<EncounterPoint>();
+		for (EncounterPointProvider x : Global.getSector().getListenerManager().getListeners(EncounterPointProvider.class)) {
+			List<EncounterPoint> curr = x.generateEncounterPoints(where);
+			if (curr != null) {
+				result.addAll(curr);
+			}
+		}
+		return result;
 	}
 	
 //	public static void reportFleetSpawnedToListener(CampaignFleetAPI fleet) {

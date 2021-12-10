@@ -20,6 +20,7 @@ public enum CampaignEngineLayers {
 	TERRAIN_7,
 	//JUMP_POINTS,
 	TERRAIN_7A,
+	TERRAIN_SLIPSTREAM,
 	FLEETS,
 	TERRAIN_8,
 	TERRAIN_9,

@@ -18,6 +18,8 @@ import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.combat.WeaponAPI;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.DModManager;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
@@ -53,18 +55,39 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 	}
 	
 	public static class WeaponsForTier {
-		private Map<String, List<AvailableWeapon>> catMap = new LinkedHashMap<String, List<AvailableWeapon>>();
-
-		public List<AvailableWeapon> getWeapons(String cat) {
-			List<AvailableWeapon> list = catMap.get(cat);
+//		private Map<String, List<AvailableWeapon>> catMap = new LinkedHashMap<String, List<AvailableWeapon>>();
+//
+//		public List<AvailableWeapon> getWeapons(String cat) {
+//			List<AvailableWeapon> list = catMap.get(cat);
+//			if (list == null) {
+//				list = new ArrayList<AvailableWeapon>();
+//				catMap.put(cat, list);
+//			}
+//			return list;
+//		}
+		private Map<String, WeaponsForSize> catMap = new LinkedHashMap<String, WeaponsForSize>();
+		
+		public WeaponsForSize getWeapons(String cat) {
+			WeaponsForSize size = catMap.get(cat);
+			if (size == null) {
+				size = new WeaponsForSize();
+				catMap.put(cat, size);
+			}
+			return size;
+		}
+	}
+	
+	public static class WeaponsForSize {
+		private Map<WeaponSize, List<AvailableWeapon>> sizeMap = new LinkedHashMap<WeaponAPI.WeaponSize, List<AvailableWeapon>>();
+		public List<AvailableWeapon> getWeapons(WeaponSize size) {
+			List<AvailableWeapon> list = sizeMap.get(size);
 			if (list == null) {
 				list = new ArrayList<AvailableWeapon>();
-				catMap.put(cat, list);
+				sizeMap.put(size, list);
 			}
 			return list;
 		}
 	}
-	
 	
 	public static class AvailableFighterImpl implements AvailableFighter {
 		private FighterWingSpecAPI spec;
@@ -253,10 +276,10 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 			String cat = spec.getAutofitCategory();
 			
 			if (isPriority(spec)) {
-				List<AvailableWeapon> list = priorityWeapons.getWeapons(tier).getWeapons(cat);
+				List<AvailableWeapon> list = priorityWeapons.getWeapons(tier).getWeapons(cat).getWeapons(spec.getSize());
 				list.add(new AvailableWeaponImpl(spec, 1000));
 			} else {
-				List<AvailableWeapon> list = nonPriorityWeapons.getWeapons(tier).getWeapons(cat);
+				List<AvailableWeapon> list = nonPriorityWeapons.getWeapons(tier).getWeapons(cat).getWeapons(spec.getSize());
 				list.add(new AvailableWeaponImpl(spec, 1000));
 			}
 			weaponCategories.add(cat);
@@ -300,6 +323,9 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 			if (!forceAutofit && member.getHullSpec().hasTag(Items.TAG_NO_AUTOFIT)) {
 				continue;
 			}
+			if (!forceAutofit && member.getVariant() != null && member.getVariant().hasTag(Items.TAG_NO_AUTOFIT)) {
+				continue;
+			}
 			
 			// need this so that when reinflating a fleet that lost members, the members reinflate consistently
 			if (p.seed != null) {
@@ -308,38 +334,62 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 				auto.setRandom(random);
 				dmodRandom = Misc.getRandom(p.seed * extra, 5);
 			}
+
+			List<WeaponSize> sizes = new ArrayList<WeaponAPI.WeaponSize>();
+			sizes.add(WeaponSize.SMALL);
+			sizes.add(WeaponSize.MEDIUM);
+			sizes.add(WeaponSize.LARGE);
 			
 			weapons = new ArrayList<AvailableWeapon>();
 			for (String cat : weaponCategories) {
-				for (int tier = 0; tier < 4; tier++) {
-					float p = getTierProbability(tier, this.p.quality);
-					if (this.p.allWeapons != null && this.p.allWeapons) {
-						p = 1f;
-					}
-					
-					if (random.nextFloat() >= p) continue;
-					
-					int num = 4;
-					
-					if (this.p.allWeapons != null && this.p.allWeapons) {
-						num = 500;
-					}
-					
-					List<AvailableWeapon> priority = priorityWeapons.getWeapons(tier).getWeapons(cat);
-
-					Set<Integer> picks = makePicks(num, priority.size(), random);
-					for (Integer index : picks) {
-						AvailableWeapon w = priority.get(index);
-						weapons.add(w);
-					}
-					
-					num -= picks.size();
-					if (num > 0) {
-						List<AvailableWeapon> nonPriority = nonPriorityWeapons.getWeapons(tier).getWeapons(cat);
-						picks = makePicks(num, nonPriority.size(), random);
+				for (WeaponSize size : sizes) {
+					boolean foundSome = false;
+					for (int tier = 0; tier < 4; tier++) {
+						float p = getTierProbability(tier, this.p.quality);
+						if (this.p.allWeapons != null && this.p.allWeapons) {
+							p = 1f;
+						}
+						
+						List<AvailableWeapon> priority = priorityWeapons.getWeapons(tier).getWeapons(cat).getWeapons(size);
+						List<AvailableWeapon> nonPriority = nonPriorityWeapons.getWeapons(tier).getWeapons(cat).getWeapons(size);
+						
+						if (!foundSome) {
+							p = 1f;
+						}
+						
+						boolean tierAvailable = random.nextFloat() < p;
+						if (!tierAvailable && foundSome) continue;
+						//if (random.nextFloat() >= p) continue;
+						
+						int num = 2;
+						switch (size) {
+						case LARGE: num = 2; break;
+						case MEDIUM: num = 2; break;
+						case SMALL: num = 2; break;
+						}
+//						if (!tierAvailable) {
+//							num = 1;
+//						}
+						
+						if (this.p.allWeapons != null && this.p.allWeapons) {
+							num = 500;
+						}
+						
+						Set<Integer> picks = makePicks(num, priority.size(), random);
 						for (Integer index : picks) {
-							AvailableWeapon w = nonPriority.get(index);
+							AvailableWeapon w = priority.get(index);
 							weapons.add(w);
+							foundSome = true;
+						}
+						
+						num -= picks.size();
+						if (num > 0) {
+							picks = makePicks(num, nonPriority.size(), random);
+							for (Integer index : picks) {
+								AvailableWeapon w = nonPriority.get(index);
+								weapons.add(w);
+								foundSome = true;
+							}
 						}
 					}
 				}
@@ -409,7 +459,9 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 				currVariant.setOriginalVariant(target.getHullVariantId());
 			}
 			
-			boolean randomize = random.nextFloat() < faction.getDoctrine().getAutofitRandomizeProbability();
+			float rProb = faction.getDoctrine().getAutofitRandomizeProbability();
+			if (p.rProb != null) rProb = p.rProb;
+			boolean randomize = random.nextFloat() < rProb;
 			if (member.isStation()) randomize = false;
 			auto.setChecked(CoreAutofitPlugin.RANDOMIZE, randomize);
 			
@@ -630,5 +682,10 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 
 	public boolean isPlayerCampaignRefit() {
 		return false;
+	}
+
+
+	public boolean isAllowSlightRandomization() {
+		return true;
 	}
 }

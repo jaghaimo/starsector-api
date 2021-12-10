@@ -72,6 +72,7 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 		SMALL(0.2f),
 		MEDIUM(0.35f),
 		LARGE(0.5f),
+		LARGER(0.6f),
 		VERY_LARGE(0.7f),
 		HUGE(0.9f),
 		MAXIMUM(1.1f);
@@ -1781,7 +1782,7 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 					break;
 				case UNUSUALLY_HIGH:
 					params.officerLevelBonus = 4;
-					params.officerLevelLimit = SalvageSpecialAssigner.MAX_PODS_OFFICER_LEVEL;
+					params.officerLevelLimit = SalvageSpecialAssigner.EXCEPTIONAL_PODS_OFFICER_LEVEL;
 					break;
 				case AI_GAMMA:
 				case AI_BETA:
@@ -2599,7 +2600,7 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 	}
 	
 	/**
-	 * Fleet will respond to WarSimScript orders. 
+	 * Fleet will respond to WarSimScript orders and get distracted by false sensor readings from a sensor array, etc. 
 	 */
 	public void triggerSetFleetNotBusy() {
 		triggerUnsetFleetFlag(MemFlags.FLEET_BUSY);
@@ -2685,7 +2686,10 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 	public void triggerSetRemnantConfig() {
 		triggerSetRemnantConfig(false);
 	}
-	public void triggerSetRemnantConfig(final boolean dormant) {
+	public void triggerSetRemnantConfigDormant() {
+		triggerSetRemnantConfig(true);
+	}
+	public void triggerSetRemnantConfig(boolean dormant) {
 		//final long seed = Misc.genRandomSeed();
 		long seed = Misc.seedUniquifier() ^ genRandom.nextLong();
 		triggerCustomAction(new SetRemnantConfigAction(dormant, seed));
@@ -3290,6 +3294,7 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 		triggerSpawnFleetAtPickedLocation(null, null);
 		triggerOrderFleetPatrol(entityToPatrol);
 		triggerSetFleetExtraSmugglingSuspicion(extraSuspicion);
+		triggerSetFleetNotBusy(); // so that it can be distracted and in general acts like a normal patrol
 		if (market != null) {
 			triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, market.getId());
 		}

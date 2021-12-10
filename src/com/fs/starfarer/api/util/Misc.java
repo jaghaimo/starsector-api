@@ -104,7 +104,9 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
+import com.fs.starfarer.api.combat.listeners.CombatListenerUtil;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
@@ -134,6 +136,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel;
 import com.fs.starfarer.api.impl.campaign.intel.MessageIntel;
 import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
+import com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog;
+import com.fs.starfarer.api.impl.campaign.plog.SModRecord;
 import com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl;
 import com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride;
 import com.fs.starfarer.api.impl.campaign.procgen.PlanetConditionGenerator;
@@ -153,6 +157,8 @@ import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamSegment;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.plugins.FactionPersonalityPickerPlugin;
@@ -166,6 +172,16 @@ import sun.nio.ch.DirectBuffer;
 
 
 public class Misc {
+	
+	private static boolean cbMode = Global.getSettings().getBoolean("colorblindMode");
+	
+	public static Color MOUNT_BALLISTIC = Global.getSettings().getColor("mountYellowColor");
+	public static Color MOUNT_MISSILE = Global.getSettings().getColor("mountGreenColor");
+	public static Color MOUNT_ENERGY = cbMode ? new Color(155,155,155,255) : Global.getSettings().getColor("mountBlueColor");
+	public static Color MOUNT_UNIVERSAL = Global.getSettings().getColor("mountGrayColor");
+	public static Color MOUNT_HYBRID = Global.getSettings().getColor("mountOrangeColor");
+	public static Color MOUNT_SYNERGY = Global.getSettings().getColor("mountCyanColor");
+	public static Color MOUNT_COMPOSITE = Global.getSettings().getColor("mountCompositeColor");
 	
 	// for combat entities
 	public static final int OWNER_NEUTRAL = 100;
@@ -665,6 +681,14 @@ public class Misc {
 		return new Vector2f(x, y);
 	}
 	
+	public static Vector2f getPointWithinRadiusUniform(Vector2f from, float minR, float maxR, Random random) {
+		float r = (float) (minR + (maxR - minR) * Math.sqrt(random.nextFloat()));
+		float angle = (float) (random.nextFloat() * Math.PI * 2f);
+		float x = (float) (Math.cos(angle) * r) + from.x;
+		float y = (float) (Math.sin(angle) * r) + from.y;
+		return new Vector2f(x, y);
+	}
+	
 	public static float getSnapshotFPLost(CampaignFleetAPI fleet) {
 		float fp = fleet.getFleetPoints();
 		float before = 0;
@@ -699,6 +723,12 @@ public class Misc {
 	
 	public static Color getStoryDarkColor() {
 		return setAlpha(scaleColorOnly(getStoryOptionColor(), 0.4f), 175);
+	}
+	public static Color getStoryBrightColor() {
+		Color bright = interpolateColor(getStoryOptionColor(), 
+		   		setAlpha(Color.white, 255),
+		   		0.35f);
+		return bright;
 	}
 	public static Color getStoryOptionColor() {
 		//return Misc.interpolateColor(Misc.getButtonTextColor(), Misc.getPositiveHighlightColor(), 0.5f);
@@ -1082,6 +1112,9 @@ public class Misc {
 		});
 	}
 	
+	public static Vector2f getUnitVector(Vector2f from, Vector2f to) {
+		return getUnitVectorAtDegreeAngle(getAngleInDegrees(from, to));
+	}
 	
 	public static float RAD_PER_DEG = 0.01745329251f;
 	public static Vector2f getUnitVectorAtDegreeAngle(float degrees) {
@@ -1100,6 +1133,17 @@ public class Misc {
 		r.x = v.x * cos - v.y * sin;
 		r.y = v.x * sin + v.y * cos;
 		return r;
+	}
+	
+	public static Vector2f rotateAroundOrigin(Vector2f v, float angle, Vector2f origin) {
+		float cos = (float) Math.cos(angle * RAD_PER_DEG);
+		float sin = (float) Math.sin(angle * RAD_PER_DEG);
+		Vector2f r = Vector2f.sub(v, origin, new Vector2f());
+		Vector2f r2 = new Vector2f();
+		r2.x = r.x * cos - r.y * sin;
+		r2.y = r.x * sin + r.y * cos;
+		Vector2f.add(r2, origin, r2);
+		return r2;
 	}
 	
 	/**
@@ -1818,6 +1862,92 @@ public class Misc {
 
 	}
 	
+	
+	public static Vector2f intersectLines(Vector2f a1, Vector2f a2, Vector2f b1, Vector2f b2) {
+		float denom = (b2.y - b1.y) * (a2.x - a1.x) - (b2.x - b1.x) * (a2.y - a1.y);
+		float numUa = (b2.x - b1.x) * (a1.y - b1.y) - (b2.y - b1.y) * (a1.x - b1.x);
+		float numUb = (a2.x - a1.x) * (a1.y - b1.y) - (a2.y - a1.y) * (a1.x - b1.x);
+
+		if (denom == 0 && !(numUa == 0 && numUb == 0)) { // parallel, not coincident
+			return null;
+		}
+
+		if (denom == 0 && numUa == 0 && numUb == 0) { // coincident
+			return new Vector2f(a1);
+		}
+
+		float Ua = numUa / denom;
+		float Ub = numUb / denom;
+		Vector2f result = new Vector2f();
+		result.x = a1.x + Ua * (a2.x - a1.x);
+		result.y = a1.y + Ua * (a2.y - a1.y);
+		return result;
+	}
+	
+	
+	
+	
+	/**
+	 * Going from p1 to p2.  Returns the closer intersection.
+	 * @param p1
+	 * @param p2
+	 * @param p3
+	 * @param r
+	 * @return
+	 */
+	public static Vector2f intersectSegmentAndCircle(Vector2f p1, Vector2f p2, Vector2f p3, float r) {
+
+		float uNom = (p3.x - p1.x) * (p2.x - p1.x) + (p3.y - p1.y) * (p2.y - p1.y);
+		float uDenom = (p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y);
+
+		Vector2f closest = new Vector2f();
+		if (uDenom == 0) { // p1 and p2 are coincident
+			closest.set(p1);
+		} else {
+			float u = uNom / uDenom;
+			closest.x = p1.x + u * (p2.x - p1.x);
+			closest.y = p1.y + u * (p2.y - p1.y);
+		}
+
+		float distSq = (closest.x - p3.x) * (closest.x - p3.x) + (closest.y - p3.y) * (closest.y - p3.y);
+		if (distSq > r * r) { // closest point is farther than radius
+			//System.out.println("shorted");
+			return null;
+		} else if (uDenom == 0) {
+			return closest; // in the case where p1==p2 and they're inside the circle, return p1.
+		}
+
+		float a = (p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y);
+		float b = 2f * ( (p2.x - p1.x) * (p1.x - p3.x) + (p2.y - p1.y) *
+				(p1.y - p3.y) );
+		float c = p3.x * p3.x + p3.y * p3.y + p1.x * p1.x + p1.y * p1.y - 2f
+				* (p3.x * p1.x + p3.y * p1.y) - r * r;
+
+		float bb4ac = b * b - 4f * a * c;
+
+		if (bb4ac < 0) return null;
+
+		float mu1 = (-b + (float) Math.sqrt(bb4ac)) / (2 * a);
+		float mu2 = (-b - (float) Math.sqrt(bb4ac)) / (2 * a);
+
+		float minMu = mu1;
+		if ((mu2 < minMu && mu2 >= 0) || minMu < 0) minMu = mu2;
+
+		if (minMu < 0 || minMu > 1) {
+			float p2DistSq = (p2.x - p3.x) * (p2.x - p3.x) + (p2.y - p3.y) * (p2.y - p3.y);
+			if (p2DistSq <= r * r) return p2;
+			else return null;
+		}
+		//System.out.println("mu1: " + mu1 + ", mu2: " + mu2);
+
+		Vector2f result = new Vector2f();
+		result.x = p1.x + minMu * (p2.x - p1.x);
+		result.y = p1.y + minMu * (p2.y - p1.y);
+
+		return result;
+	}
+	
+	
 	public static boolean areSegmentsCoincident(Vector2f a1, Vector2f a2, Vector2f b1, Vector2f b2) {
 		float denom = (b2.y - b1.y) * (a2.x - a1.x) - (b2.x - b1.x) * (a2.y - a1.y);
 		float numUa = (b2.x - b1.x) * (a1.y - b1.y) - (b2.y - b1.y) * (a1.x - b1.x);
@@ -1841,18 +1971,54 @@ public class Misc {
 		return perp;
 	}
 	
-	public static float getClosestTurnDirection(float facing, Vector2f from, Vector2f to) {
-		Vector2f desired = getDiff(to, from);
-		if (desired.lengthSquared() == 0) return 0;
-		//float angle = getAngleInDegrees(desired);
-		Vector2f more = getUnitVectorAtDegreeAngle(facing + 1);
-		Vector2f less = getUnitVectorAtDegreeAngle(facing - 1);
+	public static float getClosestTurnDirection(float facing, float desired) {
+		float diff = Misc.normalizeAngle(desired) - Misc.normalizeAngle(facing);
+		if (diff < 0) diff += 360;
 		
-		float fromMore = Vector2f.angle(more, desired);
-		float fromLess = Vector2f.angle(less, desired);
-		if (fromMore == fromLess) return 0f;
-		if (fromMore > fromLess) return -1f;
-		return 1f;
+		if (diff == 0 || diff == 360f) {
+			return 0f;
+		} else if (diff > 180) {
+			return -1f;
+		} else {
+			return 1f;
+		}
+//		facing = normalizeAngle(facing);
+//		desired = normalizeAngle(desired);
+//		if (facing == desired) return 0;
+//		
+//		Vector2f desiredVec = getUnitVectorAtDegreeAngle(desired);
+//		//if (desiredVec.lengthSquared() == 0) return 0;
+//		Vector2f more = getUnitVectorAtDegreeAngle(facing + 1);
+//		Vector2f less = getUnitVectorAtDegreeAngle(facing - 1);
+//		
+//		float fromMore = Vector2f.angle(more, desiredVec);
+//		float fromLess = Vector2f.angle(less, desiredVec);
+//		if (fromMore > fromLess) return -1f;
+//		return 1f;
+	}
+	
+	public static float getClosestTurnDirection(float facing, Vector2f from, Vector2f to) {
+		float diff = Misc.normalizeAngle(getAngleInDegrees(from, to)) - Misc.normalizeAngle(facing);
+		if (diff < 0) diff += 360;
+		
+		if (diff == 0 || diff == 360f) {
+			return 0f;
+		} else if (diff > 180) {
+			return -1f;
+		} else {
+			return 1f;
+		}
+//		Vector2f desired = getDiff(to, from);
+//		if (desired.lengthSquared() == 0) return 0;
+//		//float angle = getAngleInDegrees(desired);
+//		Vector2f more = getUnitVectorAtDegreeAngle(facing + 1);
+//		Vector2f less = getUnitVectorAtDegreeAngle(facing - 1);
+//		
+//		float fromMore = Vector2f.angle(more, desired);
+//		float fromLess = Vector2f.angle(less, desired);
+//		if (fromMore == fromLess) return 0f;
+//		if (fromMore > fromLess) return -1f;
+//		return 1f;
 	}
 	
 	public static float getClosestTurnDirection(Vector2f one, Vector2f two) {
@@ -2224,7 +2390,7 @@ public class Misc {
 	}
 	
 	public static void genFractalNoise(Random random, float[][] noise, int x1, int y1,
-			int x2, int y2, int iter, float spikes) {
+										int x2, int y2, int iter, float spikes) {
 		if (x1 + 1 >= x2 || y1 + 1 >= y2) return; // no more values to fill
 
 		int midX = (x1 + x2) / 2;
@@ -2256,22 +2422,6 @@ public class Misc {
 		}
 	}
 	
-	
-	public static float getClosestTurnDirection(float facing, float desired) {
-		facing = normalizeAngle(facing);
-		desired = normalizeAngle(desired);
-		if (facing == desired) return 0;
-		
-		Vector2f desiredVec = getUnitVectorAtDegreeAngle(desired);
-		//if (desiredVec.lengthSquared() == 0) return 0;
-		Vector2f more = getUnitVectorAtDegreeAngle(facing + 1);
-		Vector2f less = getUnitVectorAtDegreeAngle(facing - 1);
-		
-		float fromMore = Vector2f.angle(more, desiredVec);
-		float fromLess = Vector2f.angle(less, desiredVec);
-		if (fromMore > fromLess) return -1f;
-		return 1f;
-	}
 	
 	public static float computeAngleSpan(float radius, float range) {
 		if (range <= 1) return 180f;
@@ -2329,10 +2479,17 @@ public class Misc {
 	}
 	
 	public static float getFleetwideTotalMod(CampaignFleetAPI fleet, String dynamicMemberStatId, float base) {
+		return getFleetwideTotalMod(fleet, dynamicMemberStatId, base, null);
+	}
+	public static float getFleetwideTotalMod(CampaignFleetAPI fleet, String dynamicMemberStatId, float base, ShipAPI ship) {
 		float total = 0;
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 			if (member.isMothballed()) continue;
-			total += member.getStats().getDynamic().getValue(dynamicMemberStatId, base);
+			if (ship != null && ship.getFleetMember() == member) {
+				total += ship.getMutableStats().getDynamic().getValue(dynamicMemberStatId, base);
+			} else {
+				total += member.getStats().getDynamic().getValue(dynamicMemberStatId, base);
+			}
 		}
 		return total;
 	}
@@ -2728,6 +2885,30 @@ public class Misc {
 			}
 		});
 	}
+//	public static void fadeSensorContactAndExpire(final SectorEntityToken entity, final float seconds) {
+//		entity.addTag(Tags.NON_CLICKABLE);
+//		entity.addTag(Tags.FADING_OUT_AND_EXPIRING);
+//		//entity.getContainingLocation().addScript(new EveryFrameScript() {
+//		entity.addScript(new EveryFrameScript() {
+//			float elapsed = 0f;
+//			public boolean runWhilePaused() {
+//				return false;
+//			}
+//			public boolean isDone() {
+//				return entity.isExpired();
+//			}
+//			public void advance(float amount) {
+//				elapsed += amount;
+//				if (elapsed > seconds) {
+//					entity.setExpired(true);
+//				}
+//				float b = 1f - elapsed / seconds;
+//				if (b < 0) b = 0;
+//				if (b > 1) b = 1;
+//				entity.forceSensorContactFaderBrightness(Math.min(entity.getSensorContactFaderBrightness(), b));
+//			}
+//		});
+//	}
 	
 	public static CustomCampaignEntityAPI addCargoPods(LocationAPI where, Vector2f loc) {
 		CustomCampaignEntityAPI pods = where.addCustomEntity(null, null, Entities.CARGO_PODS, Factions.NEUTRAL);
@@ -2778,6 +2959,9 @@ public class Misc {
 	}
 
 	public static boolean isUnboardable(FleetMemberAPI member) {
+		if (member.getVariant() != null && member.getVariant().hasTag(Tags.VARIANT_UNBOARDABLE)) {
+			return true;
+		}
 		return isUnboardable(member.getHullSpec());
 	}
 	
@@ -2798,25 +2982,38 @@ public class Misc {
 	}
 	
 
-	public static boolean isShipRecoverable(FleetMemberAPI member, CampaignFleetAPI recoverer, boolean own, boolean useOfficerRecovery, long seed, float chanceMult) {
+	public static boolean isShipRecoverable(FleetMemberAPI member, CampaignFleetAPI recoverer, boolean own, boolean useOfficerRecovery, float chanceMult) {
 		//Random rand = new Random(1000000 * (member.getId().hashCode() + seed + Global.getSector().getClock().getDay()));
 		//Random rand = new Random(1000000 * (member.getId().hashCode() + Global.getSector().getClock().getDay()));
+		if (own) {
+			if (!member.getVariant().getSMods().isEmpty()) {
+				return true;
+			}
+			if (member.getCaptain() != null && !member.getCaptain().isDefault()) {
+				return true;
+			}
+		}
+		if (member.getVariant().hasTag(Tags.VARIANT_ALWAYS_RECOVERABLE)) {
+			return true;
+		}
+		
 		Random rand = new Random(1000000 * member.getId().hashCode() + Global.getSector().getPlayerBattleSeed());
 		//rand = new Random();
 		float chance = Global.getSettings().getFloat("baseShipRecoveryChance");
 		if (own) {
 			chance = Global.getSettings().getFloat("baseOwnShipRecoveryChance");
 		}
-		chance = member.getStats().getDynamic().getValue(Stats.INDIVIDUAL_SHIP_RECOVERY_MOD, chance);
+		chance = member.getStats().getDynamic().getMod(Stats.INDIVIDUAL_SHIP_RECOVERY_MOD).computeEffective(chance);
 		if (recoverer != null) {
-			chance = recoverer.getStats().getDynamic().getValue(Stats.SHIP_RECOVERY_MOD, chance);
+			chance = recoverer.getStats().getDynamic().getMod(Stats.SHIP_RECOVERY_MOD).computeEffective(chance);
 			if (useOfficerRecovery) {
-				chance = recoverer.getStats().getDynamic().getValue(Stats.OFFICER_SHIP_RECOVERY_MOD, chance);
+				chance = recoverer.getStats().getDynamic().getMod(Stats.OFFICER_SHIP_RECOVERY_MOD).computeEffective(chance);
 			}
 		}
+		chance *= chanceMult;
+		
 		if (chance < 0) chance = 0;
 		if (chance > 1f) chance = 1f;
-		chance *= chanceMult;
 		return rand.nextFloat() < chance;
 	}
 
@@ -3377,6 +3574,39 @@ public class Misc {
 		
 		return p3;
 	}
+	
+	public static Vector2f getInterceptPoint(SectorEntityToken from, SectorEntityToken to, float maxSpeedFrom) {
+		
+		//if (true) return new Vector2f(to.getLocation());
+		//Vector2f v1 = new Vector2f(from.getVelocity());
+		//Vector2f v2 = new Vector2f(to.getVelocity());
+		Vector2f v2 = Vector2f.sub(to.getVelocity(), from.getVelocity(), new Vector2f());
+		
+		float s1 = maxSpeedFrom;
+		float s2 = v2.length();
+		
+		if (s1 < 10) s1 = 10;
+		if (s2 < 10) s2 = 10;
+		
+		Vector2f p1 = new Vector2f(from.getLocation());
+		Vector2f p2 = new Vector2f(to.getLocation());
+		
+		float dist = getDistance(p1, p2);
+		float time = dist / s1;
+		float maxTime = dist / s2 * 0.75f;
+		if (time > maxTime) time = maxTime; // to ensure intercept point is never behind the from fleet
+		
+		Vector2f p3 = getUnitVectorAtDegreeAngle(getAngleInDegrees(v2));
+		
+		p3.scale(time * s2);
+		Vector2f.add(p2, p3, p3);
+		
+		Vector2f overshoot = getUnitVectorAtDegreeAngle(getAngleInDegrees(p1, p3));
+		overshoot.scale(3000f);
+		Vector2f.add(p3, overshoot, p3);
+		
+		return p3;
+	}
 
 	public static void stopPlayerFleet() {
 		CampaignFleetAPI player = Global.getSector().getPlayerFleet();
@@ -3797,11 +4027,14 @@ public class Misc {
 	}
 	
 	public static float getOfficerSalary(PersonAPI officer) {
+		return getOfficerSalary(officer, Misc.isMercenary(officer));
+	}
+	public static float getOfficerSalary(PersonAPI officer, boolean mercenary) {
 		int officerBase = Global.getSettings().getInt("officerSalaryBase");
 		int officerPerLevel = Global.getSettings().getInt("officerSalaryPerLevel");
 		
 		float payMult = 1f;
-		if (Misc.isMercenary(officer)) {
+		if (mercenary) {
 			payMult = Global.getSettings().getFloat("officerMercPayMult");
 		}
 		
@@ -4859,6 +5092,17 @@ public class Misc {
 		if (ship == null) return 0;
 		return (int) Math.round(ship.getMutableStats().getDynamic().getMod(Stats.MAX_PERMANENT_HULLMODS_MOD).computeEffective(MAX_PERMA_MODS));
 	}
+	
+	public static int getMaxPermanentMods(FleetMemberAPI member, MutableCharacterStatsAPI stats) {
+		if (member == null) return 0;
+		PersonAPI prev = member.getFleetCommanderForStats();
+		PersonAPI fake = Global.getFactory().createPerson();
+		fake.setStats(stats);
+		member.setFleetCommanderForStats(fake, null);
+		int num = (int) Math.round(member.getStats().getDynamic().getMod(Stats.MAX_PERMANENT_HULLMODS_MOD).computeEffective(MAX_PERMA_MODS));
+		member.setFleetCommanderForStats(prev, null);
+		return num;
+	}
 
 	
 	public static float getBuildInBonusXP(HullModSpecAPI mod, HullSize size) {
@@ -5074,6 +5318,22 @@ public class Misc {
 		if (f > 1) f = 1;
 		
 		return f;
+	}
+	
+	public static float [] getBonusXPForScuttling(FleetMemberAPI member) {
+		float points = 0f;
+		float xp = 0f;
+		for (SModRecord record : PlaythroughLog.getInstance().getSModsInstalled()) {
+			//if (member.getId() != null && member.getId().equals(record.getMemberId())) {
+			if (member == record.getMember() && record.getMember() != null) {
+				points += record.getSPSpent();
+				xp += record.getBonusXPFractionGained() * record.getSPSpent();
+			}
+		}
+		if (points > 0) {
+			return new float[] {points, 1f - xp/points};
+		}
+		return new float[] {0f, 0f};
 	}
 	
 	public static float getSpawnFPMult(CampaignFleetAPI fleet) {
@@ -5597,6 +5857,213 @@ public class Misc {
 		
 		return false;
 	}
+	
+	public static float findKth(float[] arr, int k) {
+		if (arr == null || arr.length <= k || k < 0) {
+			return -1;
+		}
+
+		int from = 0;
+		int to = arr.length - 1;
+
+		while (from < to) {
+			int r = from;
+			int w = to;
+			float mid = arr[(r + w) / 2];
+
+			while (r < w) {
+				if (arr[r] >= mid) {
+					float tmp = arr[w];
+					arr[w] = arr[r];
+					arr[r] = tmp;
+					w--;
+				} else {
+					r++;
+				}
+			}
+
+			if (arr[r] > mid) r--;
+
+			if (k <= r) {
+				to = r;
+			} else {
+				from = r + 1;
+			}
+		}
+
+		return arr[k];
+	}
+
+	public static float getAdjustedBaseRange(float base, ShipAPI ship, WeaponAPI weapon) {
+		if (ship == null || weapon == null) return base;
+		float flat = CombatListenerUtil.getWeaponBaseRangeFlatMod(ship, weapon);
+		float percent = CombatListenerUtil.getWeaponBaseRangePercentMod(ship, weapon);
+		float mult = CombatListenerUtil.getWeaponBaseRangeMultMod(ship, weapon);
+		return (base * (1f + percent/100f) + flat) * mult;
+	}
+	
+	
+	public static Vector2f bezier(Vector2f p0, Vector2f p1, Vector2f p2, float t) {
+		if (t < 0) t = 0;
+		if (t > 1) t = 1;
+		Vector2f r = new Vector2f();
+		r.x = (1f - t) * (1f - t) * p0.x + 2f * (1f - t) * t * p1.x + t * t * p2.x;
+		r.y = (1f - t) * (1f - t) * p0.y + 2f * (1f - t) * t * p1.y + t * t * p2.y;
+		return r;
+	}
+	
+	public static Vector2f bezierCubic(Vector2f p0, Vector2f p1, Vector2f p2, Vector2f p3, float t) {
+		if (t < 0) t = 0;
+		if (t > 1) t = 1;
+		Vector2f r = new Vector2f();
+		
+		r.x = (1f - t) * (1f - t) * (1f -t) * p0.x + 
+				3f * (1f - t) * (1f - t) * t * p1.x +
+				3f * (1f - t) * t * t * p2.x +
+				t * t * t * p3.x;
+		r.y = (1f - t) * (1f - t) * (1f -t) * p0.y + 
+				3f * (1f - t) * (1f - t) * t * p1.y +
+				3f * (1f - t) * t * t * p2.y +
+				t * t * t * p3.y;
+		return r;
+	}
+	
+	public static boolean isInsideSlipstream(Vector2f loc, float radius) {
+		return isInsideSlipstream(loc, radius, Global.getSector().getHyperspace());
+	}
+	public static boolean isInsideSlipstream(Vector2f loc, float radius, LocationAPI location) {
+		if (location == null) return false;
+		for (CampaignTerrainAPI ter : location.getTerrainCopy()) {
+			if (ter.getPlugin() instanceof SlipstreamTerrainPlugin2) {
+				SlipstreamTerrainPlugin2 plugin = (SlipstreamTerrainPlugin2) ter.getPlugin();
+				if (plugin.containsPoint(loc, radius)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	public static boolean isInsideSlipstream(SectorEntityToken entity) {
+		if (entity == null || entity.getContainingLocation() == null) return false;
+		for (CampaignTerrainAPI ter : entity.getContainingLocation().getTerrainCopy()) {
+			if (ter.getPlugin() instanceof SlipstreamTerrainPlugin2) {
+				SlipstreamTerrainPlugin2 plugin = (SlipstreamTerrainPlugin2) ter.getPlugin();
+				if (plugin.containsEntity(entity)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	public static boolean isOutsideSector(Vector2f loc) {
+		float sw = Global.getSettings().getFloat("sectorWidth");
+		float sh = Global.getSettings().getFloat("sectorHeight");
+		return loc.x < -sw/2f || loc.x > sw/2f || loc.y < -sh/2f || loc.y > sh/2f;
+	}
+	
+	public static boolean crossesAnySlipstream(LocationAPI location, Vector2f from, Vector2f to) {
+		for (CampaignTerrainAPI ter : location.getTerrainCopy()) {
+			if (ter.getPlugin() instanceof SlipstreamTerrainPlugin2) {
+				SlipstreamTerrainPlugin2 plugin = (SlipstreamTerrainPlugin2) ter.getPlugin();
+				List<SlipstreamSegment> segments = plugin.getSegments();
+				int skip = Math.max(20, segments.size() / 10);
+				for (int i = 0; i < segments.size(); i += skip) {
+					int i2 = i + skip;
+					if (i2 > segments.size() - skip/2) i2 = segments.size() - 1;
+					if (i2 >= segments.size()) i2 = segments.size() - 1;
+					
+					if (i2 <= i) break;
+					
+					Vector2f p = intersectSegments(segments.get(i).loc, segments.get(i2).loc, from, to);
+					if (p != null) return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	public static void computeCoreWorldsExtent() {
+		Vector2f min = new Vector2f();
+		Vector2f max = new Vector2f();
+		for (StarSystemAPI curr : Global.getSector().getStarSystems()) {
+			if (curr.hasTag(Tags.THEME_CORE)) {
+				Vector2f loc = curr.getLocation();
+				min.x = Math.min(min.x, loc.x);
+				min.y = Math.min(min.y, loc.y);
+				max.x = Math.max(max.x, loc.x);
+				max.y = Math.max(max.y, loc.y);
+			}
+		}
+		
+		Vector2f core = Vector2f.add(min, max, new Vector2f());
+		core.scale(0.5f);
+		
+		Global.getSector().getMemoryWithoutUpdate().set("$coreWorldsMin", min);
+		Global.getSector().getMemoryWithoutUpdate().set("$coreWorldsMax", max);
+		Global.getSector().getMemoryWithoutUpdate().set("$coreWorldsCenter", core);
+	}
+
+	public static Vector2f getCoreMin() {
+		Vector2f v = (Vector2f) Global.getSector().getMemoryWithoutUpdate().get("$coreWorldsMin");
+		if (v == null) {
+			computeCoreWorldsExtent();
+			v = (Vector2f) Global.getSector().getMemoryWithoutUpdate().get("$coreWorldsMin");
+		}
+		return v;
+	}
+	public static Vector2f getCoreMax() {
+		Vector2f v = (Vector2f) Global.getSector().getMemoryWithoutUpdate().get("$coreWorldsMax");
+		if (v == null) {
+			computeCoreWorldsExtent();
+			v = (Vector2f) Global.getSector().getMemoryWithoutUpdate().get("$coreWorldsMax");
+		}
+		return v;
+	}
+	public static Vector2f getCoreCenter() {
+		Vector2f v = (Vector2f) Global.getSector().getMemoryWithoutUpdate().get("$coreWorldsCenter");
+		if (v == null) {
+			computeCoreWorldsExtent();
+			v = (Vector2f) Global.getSector().getMemoryWithoutUpdate().get("$coreWorldsCenter");
+		}
+		return v;
+	}
+	
+	
+//	public static void createColonyStatic(MarketAPI market) 
+//	{
+//		String factionId = Factions.PLAYER;
+//		
+//		market.setSize(3);
+//		market.addCondition("population_3");
+//		market.setFactionId(factionId);
+//		market.setPlanetConditionMarketOnly(false);
+//		
+//		if (market.hasCondition(Conditions.DECIVILIZED))
+//		{
+//			market.removeCondition(Conditions.DECIVILIZED);
+//			market.addCondition(Conditions.DECIVILIZED_SUBPOP);
+//		}
+//		market.addIndustry(Industries.POPULATION);
+//		
+//		market.addSubmarket(Submarkets.LOCAL_RESOURCES);
+//		market.addSubmarket(Submarkets.SUBMARKET_STORAGE);
+//		
+//		market.setSurveyLevel(MarketAPI.SurveyLevel.FULL);
+//		for (MarketConditionAPI cond : market.getConditions())
+//		{
+//			cond.setSurveyed(true);
+//		}
+//		
+//		Global.getSector().getEconomy().addMarket(market, true);
+//		market.getPrimaryEntity().setFaction(factionId);
+//		
+//		market.setPlayerOwned(true);
+//		market.addIndustry(Industries.SPACEPORT);
+//		SubmarketAPI storage = market.getSubmarket(Submarkets.SUBMARKET_STORAGE);
+//		if (storage != null)
+//			((StoragePlugin)storage.getPlugin()).setPlayerPaidToUnlock(true);
+//	}
 }
 
 

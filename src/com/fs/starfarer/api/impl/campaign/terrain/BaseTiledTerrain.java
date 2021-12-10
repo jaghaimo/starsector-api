@@ -149,7 +149,7 @@ public abstract class BaseTiledTerrain extends BaseTerrain {
 	@Override
 	public boolean containsEntity(SectorEntityToken other) {
 		if (other.getContainingLocation() != this.entity.getContainingLocation()) return false;
-		return containsPoint(other.getLocation(), other.getRadius());
+		return containsPoint(other.getLocation(), other.getRadius()) && !isPreventedFromAffecting(other);
 	}
 	
 	public boolean containsPoint(Vector2f test, float r) {

@@ -235,42 +235,43 @@ public class RemnantOfficerGeneratorPlugin extends BaseGenerateFleetOfficersPlug
 		
 		person.getStats().setSkipRefresh(true);
 		
-		if (member.isCarrier()) {
-			person.getStats().setSkillLevel(Skills.STRIKE_COMMANDER, 2);
-			if (person.getStats().getSkillLevel(Skills.POINT_DEFENSE) <= 0) {
-				person.getStats().setSkillLevel(Skills.POINT_DEFENSE, 2);
-				person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 0);
-			}
-		} else {
+//		if (member.isCarrier()) {
+//			person.getStats().setSkillLevel(Skills.STRIKE_COMMANDER, 2);
+//			if (person.getStats().getSkillLevel(Skills.POINT_DEFENSE) <= 0) {
+//				person.getStats().setSkillLevel(Skills.POINT_DEFENSE, 2);
+//				person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 0);
+//			}
+//		} else {
 			if (person.getStats().getSkillLevel(Skills.ENERGY_WEAPON_MASTERY) <= 0) {
 				person.getStats().setSkillLevel(Skills.ENERGY_WEAPON_MASTERY, 2);
 			} else {
 				person.getStats().setSkillLevel(Skills.MISSILE_SPECIALIZATION, 2);
 			}
 			if (member.isCapital() || member.isStation()) {
-				if (person.getStats().getSkillLevel(Skills.RANGED_SPECIALIZATION) <= 0) {
-					person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 0);
-					person.getStats().setSkillLevel(Skills.RANGED_SPECIALIZATION, 2);
+				if (person.getStats().getSkillLevel(Skills.POLARIZED_ARMOR) <= 0) {
+					person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 0);
+					person.getStats().setSkillLevel(Skills.POLARIZED_ARMOR, 2);
 				}
 			}
-		}
+		//}
 		
 		person.getStats().setSkipRefresh(false);
 	}
 	
 	
 	public static SkillPickPreference getSkillPrefForShip(FleetMemberAPI member) {
-		float weight = FleetFactoryV3.getMemberWeight(member);
-		float fighters = member.getVariant().getFittedWings().size();
-		boolean wantCarrierSkills = weight > 0 && fighters / weight >= 0.5f;
-		SkillPickPreference pref = SkillPickPreference.GENERIC;
-		if (wantCarrierSkills) {
-			pref = SkillPickPreference.CARRIER;
-		} else if (member.isPhaseShip()) {
-			pref = SkillPickPreference.PHASE;
-		}
-		
-		return pref;
+		return FleetFactoryV3.getSkillPrefForShip(member);
+//		float weight = FleetFactoryV3.getMemberWeight(member);
+//		float fighters = member.getVariant().getFittedWings().size();
+//		boolean wantCarrierSkills = weight > 0 && fighters / weight >= 0.5f;
+//		SkillPickPreference pref = SkillPickPreference.GENERIC;
+//		if (wantCarrierSkills) {
+//			pref = SkillPickPreference.CARRIER;
+//		} else if (member.isPhaseShip()) {
+//			pref = SkillPickPreference.PHASE;
+//		}
+//		
+//		return pref;
 	}
 	
 	

@@ -638,6 +638,7 @@ public class RemnantThemeGenerator extends BaseThemeGenerator {
 					// alpha for both types; damaged is already weaker
 					//coreId = Commodities.BETA_CORE;
 					fleet.getMemoryWithoutUpdate().set("$damagedStation", true);
+					fleet.setName(fleet.getName() + " (Damaged)");
 				}
 					
 				AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(coreId);

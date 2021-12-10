@@ -166,12 +166,12 @@ public class CBEnemyStation extends BaseCustomBountyCreator {
 		return " - " + data.fleet.getName();
 	}
 	
+	
 	@Override
 	public CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage) {
 		CustomBountyData data = new CustomBountyData();
 		data.difficulty = difficulty;
 		
-		mission.setIconName("campaignMissions", "station_bounty");
 		
 		WeightedRandomPicker<CampaignFleetAPI> picker = new WeightedRandomPicker<CampaignFleetAPI>(mission.getGenRandom());
 		picker.addAll(getStations(mission, difficulty));
@@ -216,6 +216,11 @@ public class CBEnemyStation extends BaseCustomBountyCreator {
 		
 		mission.connectWithHostilitiesEnded(Stage.BOUNTY, Stage.FAILED_NO_PENALTY, mission.getPerson(), market);
 		mission.setStageOnHostilitiesEnded(Stage.FAILED_NO_PENALTY, mission.getPerson(), market);
+	}
+	
+	@Override
+	public String getIconName() {
+		return Global.getSettings().getSpriteName("campaignMissions", "station_bounty");
 	}
 	
 

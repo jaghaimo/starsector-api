@@ -172,11 +172,15 @@ public class CBRemnantStation extends BaseCustomBountyCreator {
 	}
 	
 	@Override
+	public String getIconName() {
+		return Global.getSettings().getSpriteName("campaignMissions", "remnant_bounty");
+	}
+	
+	@Override
 	public CustomBountyData createBounty(MarketAPI createdAt, HubMissionWithBarEvent mission, int difficulty, Object bountyStage) {
 		CustomBountyData data = new CustomBountyData();
 		data.difficulty = difficulty;
 		
-		mission.setIconName("campaignMissions", "remnant_bounty");
 		
 		WeightedRandomPicker<CampaignFleetAPI> picker = new WeightedRandomPicker<CampaignFleetAPI>(mission.getGenRandom());
 		picker.addAll(getStations(mission, difficulty));

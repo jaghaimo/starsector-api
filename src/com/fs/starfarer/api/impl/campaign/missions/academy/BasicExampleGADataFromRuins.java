@@ -124,9 +124,10 @@ public class BasicExampleGADataFromRuins extends GABaseMission {
 	
 	@Override
 	public String getBlurbText() {
-		return "The " + department + " department has turned up records of a data cache on " +
-				planet.getName() + " in the " + planet.getStarSystem().getNameWithNoType() + " system; " +
-				"they just need someone to go find it and transmit the contents back to the Academy.";
+		return null; // this should be done via rules.csv
+//		return "The " + department + " department has turned up records of a data cache on " +
+//				planet.getName() + " in the " + planet.getStarSystem().getNameWithNoType() + " system; " +
+//				"they just need someone to go find it and transmit the contents back to the Academy.";
 	}
 
 }

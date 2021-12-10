@@ -22,6 +22,8 @@ import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
+import com.fs.starfarer.api.impl.campaign.eventide.DuelDialogDelegate;
+import com.fs.starfarer.api.impl.campaign.eventide.DuelPanel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionManager;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager;
@@ -44,6 +46,8 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 		ADD_LOG_INTEL,
 		INCREASE_COLONY_SIZE,
 		FINISH_CONSTRUCTION,
+		FIGHT,
+		TUTORIAL,
 		LEAVE,
 	}
 	
@@ -126,6 +130,31 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 //			stats.addXP((long) (6000f * (float) Math.random() + 100f), textPanel, true);
 //			stats.spendStoryPoints(2, true, textPanel, false, 1f, null);
 			
+			break;
+		case TUTORIAL:
+			final DuelPanel duelPanel = DuelPanel.createTutorial(true, "soe_ambience");
+			dialog.showCustomVisualDialog(1024, 700, new DuelDialogDelegate(null, duelPanel, dialog, null, true));
+			break;
+		case FIGHT:
+			final DuelPanel duelPanel2 = DuelPanel.createDefault(true, true, "soe_ambience");
+			dialog.showCustomVisualDialog(1024, 700, new DuelDialogDelegate("music_soe_fight", duelPanel2, dialog, null, true));
+//			dialog.showCustomVisualDialog(1024, 700, new CustomVisualDialogDelegate() {
+//				public CustomUIPanelPlugin getCustomPanelPlugin() {
+//					return duelPanel2;
+//				}
+//				public void init(CustomPanelAPI panel, DialogCallbacks callbacks) {
+//					duelPanel2.init(panel, callbacks, dialog);
+//				}
+//				public float getNoiseAlpha() {
+//					return 0;
+//				}
+//				public void advance(float amount) {
+//					
+//				}
+//				public void reportDismissed(int option) {
+//				}
+//			});
+			//dialog.hideTextPanel();
 			break;
 		case PIRATE_RAID:
 			MarketAPI market = getNearestMarket(false);
@@ -258,6 +287,10 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 	
 	protected void createInitialOptions() {
 		options.clearOptions();
+		
+//		options.addOption("Fight!", OptionId.FIGHT);
+//		options.addOption("Fight tutorial", OptionId.TUTORIAL);
+		
 		MarketAPI market = getNearestMarket(false);
 		if (market != null) {
 			options.addOption("Send pirate raid to " + market.getContainingLocation().getName(), OptionId.PIRATE_RAID, null);

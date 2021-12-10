@@ -27,8 +27,10 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
+import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.fleet.ShipRolePick;
@@ -44,6 +46,7 @@ import com.fs.starfarer.api.impl.campaign.ids.ShipRoles;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.loading.AbilitySpecAPI;
+import com.fs.starfarer.api.loading.WeaponSlotAPI;
 import com.fs.starfarer.api.plugins.CreateFleetPlugin;
 import com.fs.starfarer.api.plugins.OfficerLevelupPlugin;
 import com.fs.starfarer.api.util.Misc;
@@ -451,6 +454,9 @@ public class FleetFactoryV3 {
 		p.mode = mode;
 		p.timestamp = params.timestamp;
 		p.allWeapons = params.allWeapons;
+		if (params.doctrineOverride != null) {
+			p.rProb = params.doctrineOverride.getAutofitRandomizeProbability();
+		}
 		if (params.factionId != null) {
 			p.factionId = params.factionId;
 		}
@@ -847,165 +853,10 @@ public class FleetFactoryV3 {
 	}
 	
 	public static void addCommanderAndOfficers(CampaignFleetAPI fleet, FleetParamsV3 params, Random random) {
-		
 		if (true) {
 			addCommanderAndOfficersV2(fleet, params, random);
 			return;
 		}
-//		
-//		OfficerLevelupPlugin plugin = (OfficerLevelupPlugin) Global.getSettings().getPlugin("officerLevelUp");
-//		int min = 5;
-//		int max = plugin.getMaxLevel(null);
-//		if (max > params.officerLevelLimit) max = params.officerLevelLimit;
-//		
-//		FactionAPI faction = fleet.getFaction();
-//		
-//		List<FleetMemberAPI> members = fleet.getFleetData().getMembersListCopy();
-//		float combatPoints = 0f;
-//		for (FleetMemberAPI member : members) {
-//			if (member.isCivilian()) continue;
-//			combatPoints += member.getFleetPointCost();
-//		}
-//		
-//		boolean debug = true;
-//		debug = false;
-//		
-//		FactionDoctrineAPI doctrine = faction.getDoctrine();
-//		if (params.doctrineOverride != null) {
-//			doctrine = params.doctrineOverride;
-//		}
-//		
-//		float doctrineBonus = ((float) doctrine.getOfficerQuality() - 1f) * 0.25f;
-//		float fleetSizeBonus = combatPoints / 50f * 0.2f;
-//		if (fleetSizeBonus > 1f) fleetSizeBonus = 1f;
-//		
-//		float officerLevelValue = doctrineBonus * 0.7f + fleetSizeBonus * 0.3f;
-//		float commanderLevelValue = Math.max(officerLevelValue, doctrineBonus * 0.3f + fleetSizeBonus * 0.7f);
-//		
-//		if (debug) System.out.println("officerLevelValue: " + officerLevelValue);
-//		if (debug) System.out.println("commanderLevelValue: " + commanderLevelValue);
-//		
-//		int maxLevel = (int)(min + Math.round((float)(max - min) * officerLevelValue));
-//		maxLevel += params.officerLevelBonus;
-//		int minLevel = maxLevel - 4;
-//		
-//		if (maxLevel > max) maxLevel = max;
-//		if (minLevel > max) minLevel = max;
-//		
-//		if (minLevel < min) minLevel = min;
-//		if (maxLevel < min) maxLevel = min;
-//		
-//		
-//		
-//		WeightedRandomPicker<FleetMemberAPI> picker = new WeightedRandomPicker<FleetMemberAPI>(random);
-//		WeightedRandomPicker<FleetMemberAPI> flagshipPicker = new WeightedRandomPicker<FleetMemberAPI>(random);
-//		
-//		int maxSize = 0;
-//		for (FleetMemberAPI member : members) {
-//			if (member.isFighterWing()) continue;
-//			if (member.isFlagship()) continue;
-//			if (!member.getCaptain().isDefault()) continue;
-//			int size = member.getHullSpec().getHullSize().ordinal();
-//			if (size > maxSize) {
-//				maxSize = size;
-//			}
-//		}
-//		for (FleetMemberAPI member : members) {
-//			if (member.isFighterWing()) continue;
-//			if (member.isFlagship()) continue;
-//			if (!member.getCaptain().isDefault()) continue;
-//			
-//			float q = 1f;
-//			if (member.isCivilian()) q *= 0.0001f;
-//			
-//			float weight = (float) member.getFleetPointCost() * q;
-//			int size = member.getHullSpec().getHullSize().ordinal();
-//			if (size >= maxSize) {
-//				flagshipPicker.add(member, weight);
-//				weight *= 1000f;
-//			}
-//			
-//			picker.add(member, weight);
-//		}
-//		
-//		
-//		int baseOfficers = Global.getSettings().getInt("baseNumOfficers");
-//		int numOfficersIncludingCommander = 1 + random.nextInt(baseOfficers + 1);
-//		
-//		
-//		boolean commander = true;
-//		for (int i = 0; i < numOfficersIncludingCommander; i++) {
-//			FleetMemberAPI member = null;
-//			
-//			if (commander) {
-//				member = flagshipPicker.pickAndRemove();
-//			}
-//			if (member == null) {
-//				member = picker.pickAndRemove();
-//			} else {
-//				picker.remove(member);
-//			}
-//			
-//			if (member == null) {
-//				break; // out of ships that need officers
-//			}
-//			
-//			int level = (int) Math.min(max, Math.round(minLevel + random.nextFloat() * (maxLevel - minLevel)));
-//			if (Misc.isEasy()) {
-//				 level = (int) Math.ceil((float) level * Global.getSettings().getFloat("easyOfficerLevelMult"));
-//			}
-//			
-//			if (level <= 0) continue;
-//			
-//			float weight = getMemberWeight(member);
-//			float fighters = member.getVariant().getFittedWings().size();
-//			boolean wantCarrierSkills = weight > 0 && fighters / weight >= 0.5f;
-//			SkillPickPreference pref = SkillPickPreference.GENERIC;
-//			if (wantCarrierSkills) pref = SkillPickPreference.CARRIER;
-//			
-//			PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), level, pref, random);
-//			if (person.getPersonalityAPI().getId().equals(Personalities.TIMID)) {
-//				person.setPersonality(Personalities.CAUTIOUS);
-//			}
-//			
-//			if (commander) {
-//				if (params.commander != null) {
-//					person = params.commander;
-//				} else {
-//					addCommanderSkills(person, fleet, params, random);
-//				}
-//				person.setRankId(Ranks.SPACE_COMMANDER);
-//				person.setPostId(Ranks.POST_FLEET_COMMANDER);
-//				fleet.setCommander(person);
-//				fleet.getFleetData().setFlagship(member);
-//				commander = false;
-//				
-//				int officerNumLimit = person.getStats().getOfficerNumber().getModifiedInt();
-//				int aboveBase = officerNumLimit - baseOfficers + params.officerNumberBonus;
-//				
-//				if (aboveBase < 0) aboveBase = 0;
-//				numOfficersIncludingCommander += aboveBase;
-//				
-//				numOfficersIncludingCommander *= params.officerNumberMult;
-//				if (numOfficersIncludingCommander < 1) numOfficersIncludingCommander = 1;
-//				
-//				
-//				int maxOfficers = Global.getSettings().getInt("maxOfficersInAIFleet") + 1;
-//				if (numOfficersIncludingCommander > maxOfficers) {
-//					maxLevel += (numOfficersIncludingCommander - maxOfficers) * 2;
-//					numOfficersIncludingCommander = maxOfficers;
-//					
-//					minLevel = maxLevel - 4;
-//					if (maxLevel > max) maxLevel = max;
-//					if (minLevel > max) minLevel = max;
-//					
-//					if (minLevel < min) minLevel = min;
-//					if (maxLevel < min) maxLevel = min;
-//				}
-//			} else {
-//				member.setCaptain(person);
-//			}
-//		}
 	}
 	
 	
@@ -1199,15 +1050,54 @@ public class FleetFactoryV3 {
 	}
 	
 	public static SkillPickPreference getSkillPrefForShip(FleetMemberAPI member) {
-		float weight = getMemberWeight(member);
-		float fighters = member.getVariant().getFittedWings().size();
-		boolean wantCarrierSkills = weight > 0 && fighters / weight >= 0.5f;
-		SkillPickPreference pref = SkillPickPreference.GENERIC;
-		if (wantCarrierSkills) {
-			pref = SkillPickPreference.CARRIER;
-		} else if (member.isPhaseShip()) {
-			pref = SkillPickPreference.PHASE;
+		float energy = 0f;
+		float ballistic = 0f;
+		float missile = 0f;
+		float total = 0f;
+		
+		for (WeaponSlotAPI slot : member.getHullSpec().getAllWeaponSlotsCopy()) {
+			float w = 1f;
+			switch (slot.getSlotSize()) {
+			case LARGE: w = 4f; break;
+			case MEDIUM: w = 2f; break;
+			case SMALL: w = 1f; break;
+			}
+			WeaponType type = slot.getWeaponType();
+			if (type == WeaponType.BALLISTIC || type == WeaponType.HYBRID) { 
+				ballistic += w;
+				total += w;
+			} else if (type == WeaponType.ENERGY) { 
+				energy += w;
+				total += w;
+			} else if (type == WeaponType.MISSILE || type == WeaponType.SYNERGY || type == WeaponType.COMPOSITE) { 
+				missile += w;
+				total += w;
+			}
 		}
+		
+		if (total <= 0f) total = 1f;
+		
+		boolean e = energy >= total * 0.33f;
+		boolean b = ballistic >= total * 0.33f;
+		if (b && e) {
+			if (ballistic * 1.5f >= energy) {
+				e = false;
+			} else {
+				b = false;
+			}
+		}
+		boolean m = missile >= total * 0.17f;
+		
+		boolean d = member.getHullSpec().getShieldType() == ShieldType.FRONT ||
+				 	member.getHullSpec().getShieldType() == ShieldType.OMNI || 
+					member.getHullSpec().isPhase();
+		
+		// doing things in this, ah, "elegant" way to keep method signatures the same for now...
+		String n1 = e ? "YES_ENERGY" : "NO_ENERGY";
+		String n2 = b ? "YES_BALLISTIC" : "NO_BALLISTIC";
+		String n3 = m ? "YES_MISSILE" : "NO_MISSILE";
+		String n4 = d ? "YES_DEFENSE" : "NO_DEFENSE";
+		SkillPickPreference pref = SkillPickPreference.valueOf(n1 + "_" + n2 + "_" + n3 + "_" + n4);
 		
 		return pref;
 	}

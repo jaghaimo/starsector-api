@@ -53,4 +53,6 @@ public interface FluxTrackerAPI {
 	void showOverloadFloatyIfNeeded(String text, Color color, float fontSizeBonus, boolean alwaysShow);
 	
 	float getEngineBoostLevel();
+	void setOverloadProgress(float empProgress);
+	void setOverloadDuration(float empDuration);
 }

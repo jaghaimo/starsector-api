@@ -100,6 +100,12 @@ public interface SoundPlayerAPI {
 	void playUILoop(String id, float pitch, float volume);
 
 	void playLoop(String id, Object playingEntity, float pitch, float volume, Vector2f loc, Vector2f vel, float fadeIn, float fadeOut);
+
+	void applyLowPassFilter(float gain, float gainHF);
+
+	void setListenerPosOverrideOneFrame(Vector2f listenerPosOverrideOneFrame);
+
+	void pauseMusic();
 }
 
 

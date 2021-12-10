@@ -22,6 +22,7 @@ public class Description {
 	private String id;
 	
 	private String text1 ="No description... yet", text2 ="No description... yet", text3 ="No description... yet";
+	private String text4 = null;
 
 	public Description(String id, Type type) {
 		this.type = type;
@@ -30,6 +31,17 @@ public class Description {
 	
 	public String getUID() {
 		return id + "_" + type.name();
+	}
+	
+	public String getText4() {
+		return text4;
+	}
+
+	public void setText4(String text4) {
+		this.text4 = text4;
+	}
+	public boolean hasText4() {
+		return text4 != null && !text4.isEmpty();
 	}
 
 	public String getText1() {
@@ -98,5 +110,6 @@ public class Description {
 		if (str == null || str.isEmpty() || str.equals("No description... yet")) return false;
 		return true;
 	}
+	
 	
 }

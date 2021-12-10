@@ -81,15 +81,31 @@ public class SkillData {
 				}
 			});
 			
+			boolean useTier = true;
+			for (SkillSpecAPI skill : skills.all) {
+				useTier &= skill.getReqPoints() == 0;
+			}
+			
 			int currTier = -1;
+			int prevReq = -1;
 			List<SkillSpecAPI> soFar = new ArrayList<SkillSpecAPI>();
 			for (SkillSpecAPI skill : skills.all) {
-				if (skill.getTier() != currTier) {
-					if (!soFar.isEmpty()) {
-						skills.tiers.add(soFar);
+				if (!useTier) {
+					if (skill.getReqPoints() != prevReq) {
+						if (!soFar.isEmpty()) {
+							skills.tiers.add(soFar);
+						}
+						soFar = new ArrayList<SkillSpecAPI>();
+						prevReq = skill.getReqPoints();
 					}
-					soFar = new ArrayList<SkillSpecAPI>();
-					currTier = skill.getTier();
+				} else {
+					if (skill.getTier() != currTier) {
+						if (!soFar.isEmpty()) {
+							skills.tiers.add(soFar);
+						}
+						soFar = new ArrayList<SkillSpecAPI>();
+						currTier = skill.getTier();
+					}
 				}
 				soFar.add(skill);
 			}

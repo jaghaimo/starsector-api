@@ -13,6 +13,19 @@ package com.fs.starfarer.api.impl.campaign.ids;
  */
 public class MemFlags {
 
+	public static final String GLOBAL_SENSOR_BURST_JUST_USED_IN_CURRENT_LOCATION = "$sensorBurstJustUsed";
+	public static final String JUST_DID_SENSOR_BURST = "$justDidSensorBurst";
+	
+	public static final String GLOBAL_INTERDICTION_PULSE_JUST_USED_IN_CURRENT_LOCATION = "$interdictionPulseJustUsed";
+	public static final String JUST_DID_INTERDICTION_PULSE = "$justDidInterdictionPulse";
+	
+	public static final String EXTRA_SENSOR_INDICATORS = "$extraSensorIndicators";
+	public static final String SENSOR_INDICATORS_OVERRIDE = "$sensorIndicatorsOverride";
+	
+	public static final String EXCEPTIONAL_SLEEPER_POD_OFFICER = "$exceptionalSleeperPodOfficer";
+	
+	public static final String SUSPECTED_AI = "$suspectedAI";
+	
 	public static final String PLAYER_ATROCITIES = "$atrocities";
 	
 	public static final String STORY_CRITICAL = "$story_critical";
@@ -71,6 +84,10 @@ public class MemFlags {
 	
 	public static final String FLEET_BUSY = "$core_fleetBusy";
 	public static final String FLEET_MILITARY_RESPONSE = "$core_fleetMilitaryResponse";
+	
+	public static final String FLEET_CHASING_GHOST = "$core_fleetChasingGhost";
+	public static final String FLEET_NOT_CHASING_GHOST = "$core_fleetNotChasingGhost";
+	public static final String FLEET_CHASING_GHOST_RANDOM = "$core_fleetChasingGhostRandom";
 	
 	public static final String MEMORY_KEY_PATROL_ALLOW_TOFF = "$patrolAllowTOff";
 	public static final String OBJECTIVE_NON_FUNCTIONAL = "$objectiveNonFunctional";

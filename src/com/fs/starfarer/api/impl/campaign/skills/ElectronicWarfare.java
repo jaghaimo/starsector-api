@@ -15,7 +15,7 @@ public class ElectronicWarfare {
 //	public static final float LEVEL_2_BONUS = 5f;
 //	public static final float LEVEL_3_BONUS = 5f;
 	
-	public static float PER_SHIP_BONUS = 2f;
+	public static float PER_SHIP_BONUS = 1f;
 
 	
 //	public static float getBase(HullSize hullSize) {

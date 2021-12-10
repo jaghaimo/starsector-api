@@ -179,6 +179,8 @@ public interface ShipVariantAPI {
 
 	void refreshBuiltInWings();
 
+	boolean hasDMods();
+
 
 
 }

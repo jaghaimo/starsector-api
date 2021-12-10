@@ -37,6 +37,23 @@ public abstract class BoostIndustryInstallableItemEffect extends BaseInstallable
 					Misc.ucFirst(spec.getName().toLowerCase()));
 		}
 	}
+
+	public int getSupplyIncrease() {
+		return supplyIncrease;
+	}
+
+	public void setSupplyIncrease(int supplyIncrease) {
+		this.supplyIncrease = supplyIncrease;
+	}
+
+	public int getDemandIncrease() {
+		return demandIncrease;
+	}
+
+	public void setDemandIncrease(int demandIncrease) {
+		this.demandIncrease = demandIncrease;
+	}
+	
 	
 //	public void addItemDescription(TooltipMakerAPI text, SpecialItemData data, InstallableItemDescriptionMode mode) {
 //	}

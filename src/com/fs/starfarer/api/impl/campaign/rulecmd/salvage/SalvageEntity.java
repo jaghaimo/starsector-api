@@ -1121,6 +1121,9 @@ public class SalvageEntity extends BaseCommandPlugin {
 			if (Misc.getSalvageSpecial(entity) instanceof ShipRecoverySpecialData) {
 				return false;
 			}
+			if (entity.hasTag(Tags.UNRECOVERABLE)) {
+				return false;
+			}
 			
 //			int room = Global.getSettings().getMaxShipsInFleet() - 
 //			   		   Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy().size();

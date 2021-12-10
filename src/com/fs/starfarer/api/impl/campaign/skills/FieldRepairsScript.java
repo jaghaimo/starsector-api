@@ -1,5 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.skills;
 
+import java.util.LinkedHashSet;
+import java.util.Random;
+
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
@@ -16,20 +19,50 @@ import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
+/**
+ * Used for the Hull Restoration skill, but keeping the name for save compatibility.
+ * 
+ * @author Alex
+ *
+ * Copyright 2021 Fractal Softworks, LLC
+ */
 public class FieldRepairsScript implements EveryFrameScript {
 
 	public static int MONTHS_PER_DMOD_REMOVAL = 1;
 	
+	public static boolean REMOVE_DMOD_FROM_NEW_SHIPS = true;
+	public static float MIN_NEW_REMOVE_PROB = 0.2f;
+	public static float NEW_REMOVE_PROB_PER_DMOD = 0.2f;
+	
 	protected IntervalUtil tracker = new IntervalUtil(10f, 20f);
+	protected IntervalUtil tracker2 = new IntervalUtil(3f, 5f);
+	
+	protected FleetMemberAPI pickedNew = null;
+	protected String dmodNew = null;
+	protected Random newRandom = new Random(Misc.genRandomSeed());
+	protected LinkedHashSet<String> seen = new LinkedHashSet<String>();
 	
 	protected FleetMemberAPI picked = null;
 	protected String dmod = null;
+	
+	Object readResolve() {
+		if (seen == null) {
+			seen =  new LinkedHashSet<String>();
+		}
+		if (tracker2 == null) {
+			tracker2 = new IntervalUtil(3f, 5f);
+		}
+		if (newRandom == null) {
+			newRandom = new Random(Misc.genRandomSeed());
+		}
+		return this;
+	}
 	
 	public void advance(float amount) {
 		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
 		if (fleet == null) return;
 		
-		if (Global.getSector().getPlayerStats().getSkillLevel(Skills.FIELD_REPAIRS) <= 0) {
+		if (Global.getSector().getPlayerStats().getSkillLevel(Skills.HULL_RESTORATION) <= 0) {
 			picked = null;
 			dmod = null;
 			return;
@@ -46,7 +79,8 @@ public class FieldRepairsScript implements EveryFrameScript {
 			if (picked == null || dmod == null) {
 				pickNext();
 			} else {
-				if (fleet.getFleetData().getMembersListCopy().contains(picked)) {
+				if (fleet.getFleetData().getMembersListCopy().contains(picked) &&
+						DModManager.getNumDMods(picked.getVariant()) > 0) {
 					DModManager.removeDMod(picked.getVariant(), dmod);
 					
 					HullModSpecAPI spec = DModManager.getMod(dmod);
@@ -61,6 +95,35 @@ public class FieldRepairsScript implements EveryFrameScript {
 				}
 				picked = null;
 				pickNext();
+			}
+		}
+		
+		tracker2.advance(days);
+		if (tracker2.intervalElapsed() && REMOVE_DMOD_FROM_NEW_SHIPS) {
+			if (pickedNew == null || dmodNew == null) {
+				pickNextNew();
+			} else {
+				seen.add(pickedNew.getId());
+				
+				float numDmods = DModManager.getNumDMods(pickedNew.getVariant());
+				if (fleet.getFleetData().getMembersListCopy().contains(pickedNew) && numDmods > 0) {
+					float probRemove = MIN_NEW_REMOVE_PROB + numDmods * NEW_REMOVE_PROB_PER_DMOD;
+					if (newRandom.nextFloat() < probRemove) {
+						DModManager.removeDMod(pickedNew.getVariant(), dmodNew);
+						
+						HullModSpecAPI spec = DModManager.getMod(dmodNew);
+						MessageIntel intel = new MessageIntel(pickedNew.getShipName() + " - repaired " + spec.getDisplayName(), Misc.getBasePlayerColor());
+						intel.setIcon(Global.getSettings().getSpriteName("intel", "repairs_finished"));
+						Global.getSector().getCampaignUI().addMessage(intel, MessageClickAction.REFIT_TAB, pickedNew);
+						
+						int dmods = DModManager.getNumDMods(pickedNew.getVariant());
+						if (dmods <= 0) {
+							restoreToNonDHull(pickedNew.getVariant());
+						}
+					}
+				}
+				pickedNew = null;
+				pickNextNew();
 			}
 		}
 	}
@@ -94,7 +157,43 @@ public class FieldRepairsScript implements EveryFrameScript {
 				picked = null;
 			}
 		}
+	}
+	
+	public void pickNextNew() {
+		pickedNew = null;
+		dmodNew = null;
 		
+		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
+		WeightedRandomPicker<FleetMemberAPI> picker = new WeightedRandomPicker<FleetMemberAPI>();
+		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+			if (member.getVariant().isStockVariant()) {
+				seen.add(member.getId());
+				continue;
+			}
+			if (seen.contains(member.getId())) continue;
+			int dmods = DModManager.getNumNonBuiltInDMods(member.getVariant());
+			if (dmods > 0) {
+				picker.add(member, 1);
+			} else {
+				seen.add(member.getId());
+			}
+		}
+		pickedNew = picker.pick();
+		
+		if (pickedNew != null) {
+			ShipVariantAPI variant = pickedNew.getVariant();
+			WeightedRandomPicker<String> modPicker = new WeightedRandomPicker<String>();
+			for (String id : variant.getHullMods()) {
+				if (DModManager.getMod(id).hasTag(Tags.HULLMOD_DMOD)) {
+					if (variant.getHullSpec().getBuiltInMods().contains(id)) continue;
+					modPicker.add(id);
+				}
+			}
+			dmodNew = modPicker.pick();
+			if (dmodNew == null) {
+				pickedNew = null;
+			}
+		}
 	}
 
 	public boolean isDone() {

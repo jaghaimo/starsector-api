@@ -40,7 +40,10 @@ public class OperationsCenter extends BaseHullMod {
 		boolean apply = ship == engine.getPlayerShip();
 		PersonAPI commander = null;
 		if (member.getMember() != null) {
-			member.getMember().getFleetCommander();
+			commander = member.getMember().getFleetCommander();
+			if (member.getMember().getFleetCommanderForStats() != null) {
+				commander = member.getMember().getFleetCommanderForStats();
+			}
 		}
 		apply |= commander != null && ship.getCaptain() == commander;
 		

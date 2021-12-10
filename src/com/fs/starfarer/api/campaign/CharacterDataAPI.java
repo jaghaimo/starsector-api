@@ -6,8 +6,8 @@ import java.util.Set;
 
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AdminData;
-import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
+import com.fs.starfarer.api.characters.PersonAPI;
 
 public interface CharacterDataAPI {
 
@@ -37,5 +37,11 @@ public interface CharacterDataAPI {
 
 	void setPortraitName(String portraitName);
 	void setName(String name, Gender gender);
+
+	Set<String> getSkillsEverMadeElite();
+
+	String getSavefileVersion();
+
+	void setSavefileVersion(String skillVersion);
 
 }

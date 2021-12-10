@@ -2,8 +2,6 @@ package com.fs.starfarer.api.impl.campaign.abilities;
 
 import java.awt.Color;
 
-import org.lwjgl.util.vector.Vector2f;
-
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
@@ -17,6 +15,7 @@ import com.fs.starfarer.api.characters.AbilityPlugin;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
 import com.fs.starfarer.api.impl.campaign.ids.Abilities;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Pings;
 import com.fs.starfarer.api.loading.CampaignPingSpec;
 import com.fs.starfarer.api.ui.LabelAPI;
@@ -207,15 +206,15 @@ public class InterdictionPulseAbility extends BaseDurationAbility {
 		
 		if (level > 0 && level < 1 && amount > 0) {
 			showRangePing(amount);
-			
-			float activateSeconds = getActivationDays() * Global.getSector().getClock().getSecondsPerDay();
-			float speed = fleet.getVelocity().length();
-			float acc = Math.max(speed, 200f)/activateSeconds + fleet.getAcceleration();
-			float ds = acc * amount;
-			if (ds > speed) ds = speed;
-			Vector2f dv = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(fleet.getVelocity()));
-			dv.scale(ds);
-			fleet.setVelocity(fleet.getVelocity().x - dv.x, fleet.getVelocity().y - dv.y);
+//			float activateSeconds = getActivationDays() * Global.getSector().getClock().getSecondsPerDay();
+//			float speed = fleet.getVelocity().length();
+//			float acc = Math.max(speed, 200f)/activateSeconds + fleet.getAcceleration();
+//			float ds = acc * amount;
+//			if (ds > speed) ds = speed;
+//			Vector2f dv = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(fleet.getVelocity()));
+//			dv.scale(ds);
+//			fleet.setVelocity(fleet.getVelocity().x - dv.x, fleet.getVelocity().y - dv.y);
+			fleet.goSlowOneFrame();
 			return;
 		}
 		
@@ -223,6 +222,11 @@ public class InterdictionPulseAbility extends BaseDurationAbility {
 		
 		boolean playedHit = !(entity.isInCurrentLocation() && entity.isVisibleToPlayerFleet());
 		if (level == 1 && primed != null) {
+			
+			if (entity.isInCurrentLocation()) {
+				Global.getSector().getMemoryWithoutUpdate().set(MemFlags.GLOBAL_INTERDICTION_PULSE_JUST_USED_IN_CURRENT_LOCATION, true, 0.1f);
+			}
+			fleet.getMemoryWithoutUpdate().set(MemFlags.JUST_DID_INTERDICTION_PULSE, true, 0.1f);
 			
 			CampaignPingSpec custom = new CampaignPingSpec();
 			custom.setUseFactionColor(true);
@@ -408,7 +412,7 @@ public class InterdictionPulseAbility extends BaseDurationAbility {
 		int range = (int) getRange(fleet);
 		
 		
-		tooltip.addPara("Stops the fleet and uses its active sensor network to charge and release a powerful energy pulse that " +
+		tooltip.addPara("Slows* the fleet and uses its active sensor network to charge and release a powerful energy pulse that " +
 				"can disrupt the drive fields of nearby fleets.", pad);
 		
 		Color c = Misc.getTooltipTitleAndLightHighlightColor();
@@ -433,6 +437,7 @@ public class InterdictionPulseAbility extends BaseDurationAbility {
 						"open warfare.", pad);
 		
 		tooltip.addPara("*2000 units = 1 map grid cell", gray, pad);
+		tooltip.addPara("*A fleet is considered slow-moving at a burn level of half that of its slowest ship.", gray, pad);
 		addIncompatibleToTooltip(tooltip, expanded);
 	}
 

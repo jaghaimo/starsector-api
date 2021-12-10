@@ -15,8 +15,8 @@ public class OmegaECM {
 	static {
 		BONUS.put(HullSize.FRIGATE, 5f);
 		BONUS.put(HullSize.DESTROYER, 10f);
-		BONUS.put(HullSize.CRUISER, 20f);
-		BONUS.put(HullSize.CAPITAL_SHIP, 40f);
+		BONUS.put(HullSize.CRUISER, 15f);
+		BONUS.put(HullSize.CAPITAL_SHIP, 30f);
 	}
 
 	public static class Level1 implements ShipSkillEffect {

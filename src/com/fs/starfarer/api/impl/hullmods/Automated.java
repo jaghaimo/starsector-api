@@ -28,6 +28,7 @@ public class Automated extends BaseHullMod {
 
 
 	public String getDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "" + (int)Math.round(MAX_CR_PENALTY * 100f);
 		return null;
 	}
 	

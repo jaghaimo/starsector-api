@@ -181,6 +181,9 @@ public interface FleetMemberAPI {
 	void setId(String id);
 
 
+	float getUnmodifiedDeploymentPointsCost();
+
+
 }
 
 

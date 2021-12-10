@@ -12,5 +12,9 @@ public interface CampaignObjective {
 	Boolean isHacked();
 	void setHacked(boolean hacked);
 	void setHacked(boolean hacked, float days);
+	
+	Boolean isReset();
+	void setReset(boolean reset);
+	void setReset(boolean reset, float days);
 
 }

@@ -349,6 +349,10 @@ public interface MarketAPI extends HasMemory {
 	void addCondition(MarketConditionAPI mc);
 	
 	PersonAPI getAdmin();
+	/**
+	 * The old admin, if any, is removed from the market and its comm directory. 
+	 * @param admin
+	 */
 	void setAdmin(PersonAPI admin);
 	float getDaysInExistence();
 	void setDaysInExistence(float daysInExistence);
@@ -414,6 +418,8 @@ public interface MarketAPI extends HasMemory {
 	float getImmigrationIncentivesCost();
 	boolean isInvalidMissionTarget();
 	void setInvalidMissionTarget(Boolean invalidMissionTarget);
+	void setSuppressedConditions(LinkedHashSet<String> suppressedConditions);
+	void setRetainSuppressedConditionsSetWhenEmpty(Boolean retainSuppressedConditionsSetWhenEmpty);
 }
 
 

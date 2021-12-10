@@ -51,4 +51,7 @@ public interface TextPanelAPI {
 	boolean addCostPanel(String title, Color color, Color dark, Object ... params);
 	boolean addCostPanel(String title, Object ... params);
 	void addSkillPanel(PersonAPI person, boolean admin);
+	void setFontOrbitronUnnecessarilyLarge();
+	void addImage(String category, String key);
+	void addImage(String spriteName);
 }

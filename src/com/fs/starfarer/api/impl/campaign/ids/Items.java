@@ -15,6 +15,7 @@ public class Items {
 	public static final String TAG_HIGHTECH_BP = "hightech_bp";
 	public static final String TAG_BASE_BP = "base_bp";
 	public static final String TAG_RARE_BP = "rare_bp";
+	
 	public static final String TAG_DEALER = "dealer";
 	public static final String TAG_NO_DEALER = "no_dealer";
 	

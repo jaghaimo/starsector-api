@@ -101,6 +101,7 @@ public class CheapCommodityMission extends HubMissionWithBarEvent {
 		CommodityOnMarketAPI com = null;
 		if (variation == Variation.LOCAL) {
 			requireMarketIs(market);
+			requireMarketLocationNot(createdAt.getContainingLocation());
 			requireCommodityIsNotPersonnel();
 			requireCommodityDeficitAtMost(0);
 			requireCommodityAvailableAtLeast(1);

@@ -168,7 +168,6 @@ public class BaseMarketConditionPlugin implements MarketConditionPlugin {
 		
 		tokens.put("$playerName", Global.getSector().getCharacterData().getName());
 		if (market != null) {
-			tokens.put("$market", market.getName());
 			tokens.put("$marketFaction", market.getFaction().getDisplayName());
 			tokens.put("$TheMarketFaction", Misc.ucFirst(market.getFaction().getDisplayNameWithArticle()));
 			tokens.put("$theMarketFaction", market.getFaction().getDisplayNameWithArticle());
@@ -179,6 +178,7 @@ public class BaseMarketConditionPlugin implements MarketConditionPlugin {
 			} else {
 				tokens.put("$marketSystem", "hyperspace");
 			}
+			tokens.put("$market", market.getName());
 		}
 		
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();

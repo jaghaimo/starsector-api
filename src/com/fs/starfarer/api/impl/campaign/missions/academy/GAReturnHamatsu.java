@@ -59,7 +59,7 @@ public class GAReturnHamatsu extends GABaseMission { //implements ShipRecoveryLi
 		setRepRewardFaction(RepRewards.HIGH);
 		
 		setRepPenaltyPerson(0f); // handled in rules, is in fact very high
-		setRepPenaltyFaction(RepRewards.HIGH);
+		setRepPenaltyFaction(0f);
 		
 		setPersonIsPotentialContactOnSuccess(callisto, 1f);
 		

@@ -253,7 +253,7 @@ public class GADeliverVIP extends GABaseMission {
 		setStageOnGlobalFlag(Stage.FAILED, "$gaVIP_failed");
 		connectWithMarketDecivilized(Stage.DELIVER_VIP, Stage.FAILED_DECIV, destination);
 		
-		setTimeLimit(Stage.FAILED, MISSION_DAYS, null, Stage.DELIVER_VIP);
+		setTimeLimit(Stage.FAILED, MISSION_DAYS, null);
 		if (variation == Variation.BASIC) {
 			//setCreditReward(30000, 40000);
 			setCreditReward(CreditReward.AVERAGE);

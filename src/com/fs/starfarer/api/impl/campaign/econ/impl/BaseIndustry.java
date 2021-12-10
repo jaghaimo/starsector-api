@@ -218,6 +218,11 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 	public void unapply() {
 		applyNoAICoreModifiers();
 		
+		Boolean wasImproved = improved;
+		improved = null;
+		applyImproveModifiers(); // to unapply them
+		improved = wasImproved;
+		
 		if (this instanceof MarketImmigrationModifier) {
 			market.removeTransientImmigrationModifier((MarketImmigrationModifier) this);
 		}
@@ -932,6 +937,12 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		
 		
 		MarketAPI copy = market.clone();
+		// the copy is a shallow copy and its conditions point to the original market
+		// so, make it share the suppressed conditions list, too, otherwise
+		// e.g. SolarArray will suppress conditions in the original market and the copy will still apply them
+		copy.setSuppressedConditions(market.getSuppressedConditions());
+		copy.setRetainSuppressedConditionsSetWhenEmpty(true);
+		market.setRetainSuppressedConditionsSetWhenEmpty(true);
 		MarketAPI orig = market;
 		
 		//int numBeforeAdd = Misc.getNumIndustries(market);
@@ -1115,11 +1126,16 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 					label.setHighlightColors(bad, highlight, highlight);
 				}
 			} else if (mode == IndustryTooltipMode.DOWNGRADE) {
-				float refundFraction = Global.getSettings().getFloat("industryRefundFraction");
-				int cost = (int) (getBuildCost() * refundFraction);
-				String refundStr = Misc.getDGSCredits(cost);
-				
-				tooltip.addPara("%s refunded for downgrade.", opad, highlight, refundStr);
+				if (getSpec().getUpgrade() != null) {
+					float refundFraction = Global.getSettings().getFloat("industryRefundFraction");
+					
+					//int cost = (int) (getBuildCost() * refundFraction);
+					IndustrySpecAPI spec = Global.getSettings().getIndustrySpec(getSpec().getUpgrade());
+					int cost = (int) (spec.getCost() * refundFraction);
+					String refundStr = Misc.getDGSCredits(cost);
+					
+					tooltip.addPara("%s refunded for downgrade.", opad, highlight, refundStr);
+				}
 			}
 			
 			
@@ -1261,6 +1277,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			market.getIndustries().remove(this);
 		}
 		market = orig;
+		market.setRetainSuppressedConditionsSetWhenEmpty(null);
 		if (!needToAddIndustry) {
 			reapply();
 		}

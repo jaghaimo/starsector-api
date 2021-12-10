@@ -137,8 +137,6 @@ public class MessageIntel extends BaseIntelPlugin {
 		return getSoundMinorMessage();
 	}
 	
-	
-	
 }
 
 

@@ -9,12 +9,15 @@ import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.CampaignTerrainAPI;
 import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.OrbitalStationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamSegment;
 import com.fs.starfarer.api.util.FaderUtil;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
@@ -75,10 +78,10 @@ public class GraviticScanData {
 	public void advance(float days) {
 		if (ability.getFleet() == null || ability.getFleet().getContainingLocation() == null) return;
 		
-		if (ability.getFleet().isInHyperspace()) {
-			data = null;
-			return;
-		}
+//		if (ability.getFleet().isInHyperspace()) {
+//			data = null;
+//			return;
+//		}
 		
 		Iterator<GSPing> iter = pings.iterator();
 		while (iter.hasNext()) {
@@ -185,6 +188,8 @@ public class GraviticScanData {
 	//private float totalForce;
 	public void doSpecialPings() {
 		CampaignFleetAPI fleet = ability.getFleet();
+		if (fleet.isInHyperspace()) return;
+		
 		Vector2f loc = fleet.getLocation();
 		LocationAPI location = fleet.getContainingLocation();
 		
@@ -300,12 +305,73 @@ public class GraviticScanData {
 		return 1f - 0.85f * range / max;
 	}
 	
+	
+	public void maintainSlipstreamPings() {
+		CampaignFleetAPI fleet = ability.getFleet();
+		Vector2f loc = fleet.getLocation();
+		LocationAPI location = fleet.getContainingLocation();
+		
+		float range = GraviticScanAbility.SLIPSTREAM_DETECTION_RANGE;
+
+		if (Misc.isInsideSlipstream(fleet)) return;
+		
+		for (CampaignTerrainAPI ter : location.getTerrainCopy()) {
+			if (ter.getPlugin() instanceof SlipstreamTerrainPlugin2) {
+				SlipstreamTerrainPlugin2 plugin = (SlipstreamTerrainPlugin2) ter.getPlugin();
+				if (plugin.containsEntity(fleet)) continue;
+				List<SlipstreamSegment> inRange = new ArrayList<SlipstreamSegment>();
+				List<SlipstreamSegment> near = plugin.getSegmentsNear(loc, range);
+				int skip = 0;
+				for (SlipstreamSegment curr : near) {
+					if (skip > 0) {
+						skip--;
+						continue;
+					}
+					if (curr.bMult <= 0) continue;
+					float dist = Misc.getDistance(loc, curr.loc);
+					if (dist < range) {
+						inRange.add(curr);
+						skip = 5;
+					}
+				}
+				if (!inRange.isEmpty()) {
+					for (SlipstreamSegment curr : inRange) {
+						float dist = Misc.getDistance(loc, curr.loc);
+						
+						float arc = Misc.computeAngleSpan(curr.width, dist);
+						arc *= 2f;
+						if (arc > 150f) arc = 150f;
+						if (arc < 20) arc = 20;
+						//arc += 30f;
+						float angle = Misc.getAngleInDegrees(loc, curr.loc);
+						float g = 500f;
+						g *= .1f;
+						g *= getRangeGMult(dist);
+						float in = planetInterval.getIntervalDuration() * 5f;
+						float out = in;
+						GSPing ping = new GSPing(angle, arc, g, in, out);
+						pings.add(ping);
+					}
+				}
+			}
+		}
+		
+	}
+	
+	
 	public void maintainHighSourcePings() {
 		CampaignFleetAPI fleet = ability.getFleet();
 		Vector2f loc = fleet.getLocation();
 		LocationAPI location = fleet.getContainingLocation();
 		
-		Vector2f netForce = new Vector2f();
+		maintainSlipstreamPings();
+		
+		if (fleet.isInHyperspace()) {
+			return;
+		}
+		
+		
+//		Vector2f netForce = new Vector2f();
 
 		List<SectorEntityToken> all = new ArrayList<SectorEntityToken>(location.getPlanets());
 		for (Object object : location.getEntities(CustomCampaignEntityAPI.class)) {
@@ -367,9 +433,9 @@ public class GraviticScanData {
 			
 			g *= getRangeGMult(dist);
 			
-			Vector2f dir = Misc.getUnitVectorAtDegreeAngle(angle);
-			dir.scale(g);
-			Vector2f.add(netForce, dir, netForce);
+//			Vector2f dir = Misc.getUnitVectorAtDegreeAngle(angle);
+//			dir.scale(g);
+//			Vector2f.add(netForce, dir, netForce);
 //			if (Misc.isInArc(90, 30, angle)) {
 //				System.out.println("fwefewf");
 //			}

@@ -119,4 +119,5 @@ public interface WeaponSpecAPI {
 	void setWeaponName(String weaponName);
 	float getMaxRange();
 	void setMaxRange(float maxRange);
+	void setOrdnancePointCost(float armamentCapacity);
 }

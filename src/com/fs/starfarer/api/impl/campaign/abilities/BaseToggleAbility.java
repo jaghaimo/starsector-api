@@ -251,7 +251,9 @@ public abstract class BaseToggleAbility extends BaseAbilityPlugin {
 	public boolean runWhilePaused() {
 		return false;
 	}
-	
+	public float getLevel() {
+		return level;
+	}
 	
 }
 

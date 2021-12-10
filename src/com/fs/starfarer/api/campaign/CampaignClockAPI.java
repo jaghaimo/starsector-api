@@ -10,6 +10,10 @@ import java.util.GregorianCalendar;
  */
 public interface CampaignClockAPI {
 	public int getCycle();
+	/**
+	 * 1 = January, 12 = December.
+	 * @return
+	 */
 	public int getMonth();
 	public int getDay();
 	public int getHour();

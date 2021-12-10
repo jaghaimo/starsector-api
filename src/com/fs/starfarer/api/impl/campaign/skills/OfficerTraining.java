@@ -18,7 +18,7 @@ public class OfficerTraining {
 	public static class Level0 implements DescriptionSkillEffect {
 		public String getString() {
 			int base = (int)Global.getSettings().getInt("officerMaxLevel");
-			return "The base maximum officer level is " + base + "."; 
+			return "*The base maximum officer level is " + base + "."; 
 		}
 		public Color[] getHighlightColors() {
 			Color h = Misc.getDarkHighlightColor();
@@ -44,7 +44,7 @@ public class OfficerTraining {
 		}
 		
 		public String getEffectDescription(float level) {
-			return "+" + (int) MAX_LEVEL_BONUS + " to maximum level of officers under your command";
+			return "+" + (int) MAX_LEVEL_BONUS + " to maximum level* of officers under your command";
 		}
 		
 		public String getEffectPerLevelDescription() {

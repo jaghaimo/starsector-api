@@ -25,7 +25,7 @@ public class MercsOnTheRunBarEvent extends BaseGetCommodityBarEvent {
 			return false;
 		}
 		
-		if (market.getStabilityValue() >= 7) return false;
+		//if (market.getStabilityValue() >= 7) return false;
 		
 		return true;
 	}

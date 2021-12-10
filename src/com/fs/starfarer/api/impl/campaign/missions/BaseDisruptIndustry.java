@@ -156,7 +156,7 @@ public class BaseDisruptIndustry extends HubMissionWithBarEvent implements Colon
 		setCreditRewardWithBonus(getRewardTier(), bonus);
 		
 		addExtraTriggers(createdAt);
-		
+
 		return true;
 	}
 	

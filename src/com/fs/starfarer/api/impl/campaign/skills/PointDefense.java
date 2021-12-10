@@ -6,12 +6,12 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class PointDefense {
 	
-	public static float FIGHTER_DAMAGE_BONUS = 100f;
+	public static float FIGHTER_DAMAGE_BONUS = 50f;
 	public static float MISSILE_DAMAGE_BONUS = 50f;
 //	public static float FIGHTER_DAMAGE_BONUS = 75f;
 //	public static float MISSILE_DAMAGE_BONUS = 75f;
 	
-	public static float PD_RANGE_BONUS_FLAT = 100f;
+	public static float PD_RANGE_BONUS_FLAT = 200f;
 	
 	
 	

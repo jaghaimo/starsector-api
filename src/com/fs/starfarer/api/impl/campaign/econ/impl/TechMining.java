@@ -128,6 +128,7 @@ public class TechMining extends BaseIndustry implements MarketImmigrationModifie
 				"there's also a chance to find blueprints and other rare items. Anything " +
 				"found will be delivered to the designated production gathering point.", opad);
 		
+		boolean hasRuins = true;
 		if (market.hasCondition(Conditions.RUINS_VAST)) {
 			tooltip.addPara("The vast ruins here offer incredible potential for valuable finds.", opad);
 		} else if (market.hasCondition(Conditions.RUINS_EXTENSIVE)) {
@@ -136,17 +137,21 @@ public class TechMining extends BaseIndustry implements MarketImmigrationModifie
 			tooltip.addPara("The widespread ruins here offer a solid chance of finding something valuable, given time.", opad);
 		} else if (market.hasCondition(Conditions.RUINS_SCATTERED)) {
 			tooltip.addPara("The scattered ruins here offer only a slight chance of finding something valuable, though one never knows what might be located given enough time.", opad);
+		} else {
+			hasRuins = false;
 		}
 		
-		float mult = getTechMiningMult();
-		if (mult >= .9f) {
-			tooltip.addPara("These ruins are largely untapped.", opad);
-		} else if (mult >= .5f) {
-			tooltip.addPara("These ruins have been stripped of easy pickings, but the more difficult areas remain, filled with promise.", opad);
-		} else if (mult >= 0.25f) {
-			tooltip.addPara("These ruins have been combed through, though the chance for a few new finds still remains.", opad);
-		} else {
-			tooltip.addPara("These ruins have been comprehensively combed over multiple times, and there is little chance of a new valuable find.", opad);
+		if (hasRuins) {
+			float mult = getTechMiningMult();
+			if (mult >= .9f) {
+				tooltip.addPara("These ruins are largely untapped.", opad);
+			} else if (mult >= .5f) {
+				tooltip.addPara("These ruins have been stripped of easy pickings, but the more difficult areas remain, filled with promise.", opad);
+			} else if (mult >= 0.25f) {
+				tooltip.addPara("These ruins have been combed through, though the chance for a few new finds still remains.", opad);
+			} else {
+				tooltip.addPara("These ruins have been comprehensively combed over multiple times, and there is little chance of a new valuable find.", opad);
+			}
 		}
 		// add something re: size of ruins and chance to find stuff
 		

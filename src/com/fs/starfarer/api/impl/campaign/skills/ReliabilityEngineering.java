@@ -7,11 +7,11 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class ReliabilityEngineering {
 	
-	public static final float PEAK_TIME_BONUS = 60;
-	public static final float DEGRADE_REDUCTION_PERCENT = 25f;
-	public static final float MAX_CR_BONUS = 15;
+	public static float PEAK_TIME_BONUS = 60;
+	public static float DEGRADE_REDUCTION_PERCENT = 25f;
+	public static float MAX_CR_BONUS = 15;
 	
-	public static final float OVERLOAD_REDUCTION = 30f;
+	public static float OVERLOAD_REDUCTION = 30f;
 
 	public static class Level1 implements ShipSkillEffect {
 		

@@ -293,6 +293,10 @@ public interface SectorEntityToken extends HasMemory {
 
 	void autoUpdateHyperLocationBasedOnInSystemEntityAtRadius(SectorEntityToken entity, float radius);
 
+	void forceSensorContactFaderBrightness(float b);
+
+	void forceSensorFaderOut();
+
 }
 	
 	

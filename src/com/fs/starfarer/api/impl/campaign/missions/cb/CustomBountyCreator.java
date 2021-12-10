@@ -65,4 +65,5 @@ public interface CustomBountyCreator extends StarSystemRequirement {
 	void updateInteractionData(HubMissionWithBarEvent mission, CustomBountyData data);
 	void addTargetLocationAndDescription(TooltipMakerAPI info, float width, float height, HubMissionWithBarEvent mission, CustomBountyData data);
 	void addTargetLocationAndDescriptionBulletPoint(TooltipMakerAPI info, Color tc, float pad, HubMissionWithBarEvent mission, CustomBountyData data);
+	String getIconName();
 }

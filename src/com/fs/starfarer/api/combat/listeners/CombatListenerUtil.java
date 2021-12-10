@@ -84,6 +84,17 @@ public class CombatListenerUtil {
 		}
 	}
 	
+	public static boolean notifyAboutToTakeHullDamage(ShipAPI ship, Object source, Vector2f point, float damageAmount) {
+		boolean result = false;
+		for (HullDamageAboutToBeTakenListener x : new ArrayList<HullDamageAboutToBeTakenListener>(Global.getCombatEngine().getListenerManager().getListeners(HullDamageAboutToBeTakenListener.class))) {
+			result |= x.notifyAboutToTakeHullDamage(source, ship, point, damageAmount);
+		}
+		for (HullDamageAboutToBeTakenListener x : new ArrayList<HullDamageAboutToBeTakenListener>(ship.getListeners(HullDamageAboutToBeTakenListener.class))) {
+			result |= x.notifyAboutToTakeHullDamage(source, ship, point, damageAmount);
+		}
+		return result;
+	}
+	
 	public static float getWeaponRangePercentMod(ShipAPI ship, WeaponAPI weapon) {
 		float mod = 0f;
 		if (ship != null) {
@@ -109,6 +120,37 @@ public class CombatListenerUtil {
 		if (ship != null && ship.getListenerManager() != null) {
 			for (WeaponRangeModifier x : new ArrayList<WeaponRangeModifier>(ship.getListeners(WeaponRangeModifier.class))) {
 				mod += x.getWeaponRangeFlatMod(ship, weapon);
+			}
+		}
+		return mod;
+	}
+	
+	
+	public static float getWeaponBaseRangePercentMod(ShipAPI ship, WeaponAPI weapon) {
+		float mod = 0f;
+		if (ship != null) {
+			for (WeaponBaseRangeModifier x : new ArrayList<WeaponBaseRangeModifier>(ship.getListeners(WeaponBaseRangeModifier.class))) {
+				mod += x.getWeaponBaseRangePercentMod(ship, weapon);
+			}
+		}
+		return mod;
+	}
+	
+	public static float getWeaponBaseRangeMultMod(ShipAPI ship, WeaponAPI weapon) {
+		float mod = 1f;
+		if (ship != null && ship.getListenerManager() != null) {
+			for (WeaponBaseRangeModifier x : new ArrayList<WeaponBaseRangeModifier>(ship.getListeners(WeaponBaseRangeModifier.class))) {
+				mod *= x.getWeaponBaseRangeMultMod(ship, weapon);
+			}
+		}
+		return mod;
+	}
+	
+	public static float getWeaponBaseRangeFlatMod(ShipAPI ship, WeaponAPI weapon) {
+		float mod = 0f;
+		if (ship != null && ship.getListenerManager() != null) {
+			for (WeaponBaseRangeModifier x : new ArrayList<WeaponBaseRangeModifier>(ship.getListeners(WeaponBaseRangeModifier.class))) {
+				mod += x.getWeaponBaseRangeFlatMod(ship, weapon);
 			}
 		}
 		return mod;

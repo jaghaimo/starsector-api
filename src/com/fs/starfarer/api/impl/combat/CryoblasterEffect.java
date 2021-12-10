@@ -47,9 +47,9 @@ public class CryoblasterEffect extends BaseCombatLayeredRenderingPlugin implemen
 			float dur = 1f;
 			//dur = 0.25f;
 			float rampUp = 0f;
-			
+			Color c = Misc.scaleAlpha(color, projectile.getBrightness());
 			engine.addNebulaParticle(point, vel, size, 5f + 3f * sizeMult,
-											rampUp, 0f, dur, color, true);
+											rampUp, 0f, dur, c, true);
 		}
 	}
 	

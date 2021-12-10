@@ -2,6 +2,7 @@ package com.fs.starfarer.api.combat;
 
 import java.awt.Color;
 import java.util.EnumSet;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
@@ -28,6 +29,20 @@ public interface ShipHullSpecAPI {
 		float getCenterY();
 	}
 	
+	public interface EngineSpecAPI {
+		float getTurnAcceleration();
+		void setTurnAcceleration(float turnAcceleration);
+		float getMaxTurnRate();
+		void setMaxTurnRate(float maxTurnRate);
+		float getAcceleration();
+		void setAcceleration(float acceleration);
+		float getDeceleration();
+		void setDeceleration(float deceleration);
+		float getMaxSpeed();
+		void setMaxSpeed(float maxSpeed);
+		String getManeuverabilityDisplayName(MutableShipStatsAPI stats);
+	}
+	
 	
 	public static enum ShipTypeHints {
 		FREIGHTER,
@@ -49,6 +64,8 @@ public interface ShipHullSpecAPI {
 		WEAPONS_BACK_TO_FRONT,
 		DO_NOT_SHOW_MODULES_IN_FLEET_LIST,
 		RENDER_ENGINES_BELOW_HULL,
+		
+		NO_NEURAL_LINK,
 		
 		/** for phase ships w/ a different type of phase system to show up under 
 		 * the "Phase" tag in doctrine/production
@@ -163,5 +180,39 @@ public interface ShipHullSpecAPI {
 
 	String getTravelDriveId();
 	void setTravelDriveId(String travelDriveId);
+
+	EngineSpecAPI getEngineSpec();
+
+	float getSuppliesToRecover();
+
+	void setSuppliesToRecover(float suppliesToRecover);
+
+	float getSuppliesPerMonth();
+
+	void setSuppliesPerMonth(float suppliesPerMonth);
+
+	void setRepairPercentPerDay(float repairPercentPerDay);
+
+	void setCRToDeploy(float crToDeploy);
+
+	float getNoCRLossSeconds();
+
+	void setNoCRLossSeconds(float noCRLossSeconds);
+
+	void setCRLossPerSecond(float crLossPerSecond);
+
+	HashMap<String, String> getBuiltInWeapons();
+
+	boolean isBuiltIn(String slotId);
+
+	void addBuiltInWeapon(String slotId, String weaponId);
+
+	String getShipDefenseId();
+
+	void setShipDefenseId(String shipDefenseId);
+
+	String getShipSystemId();
+
+	void setShipSystemId(String shipSystemId);
 
 }

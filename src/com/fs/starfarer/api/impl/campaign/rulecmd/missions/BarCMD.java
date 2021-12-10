@@ -187,7 +187,8 @@ public class BarCMD extends BaseCommandPlugin implements InteractionDialogPlugin
 		
 		if (DebugFlags.BAR_DEBUG) {
 			max = 8;
-			num = max;
+			num = 7;
+			//num = max;
 		}
 		
 		//num = 1000;
