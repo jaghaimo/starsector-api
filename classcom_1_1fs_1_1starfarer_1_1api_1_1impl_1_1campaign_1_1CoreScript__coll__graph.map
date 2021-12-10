@@ -1,8 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.CoreScript" name="com.fs.starfarer.api.impl.campaign.CoreScript">
-<area shape="rect" id="node1" title=" " alt="" coords="569,100,791,141"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html" title=" " alt="" coords="249,5,444,47"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="5,5,200,47"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="263,71,430,112"/>
-<area shape="rect" id="node5" title=" " alt="" coords="315,137,378,163"/>
-<area shape="rect" id="node6" title=" " alt="" coords="311,187,382,214"/>
+<area shape="rect" id="node1" title=" " alt="" coords="852,129,1073,171"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html" title=" " alt="" coords="524,5,719,47"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="280,5,475,47"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="538,71,705,112"/>
+<area shape="rect" id="node5" title=" " alt="" coords="590,137,653,163"/>
+<area shape="rect" id="node6" title=" " alt="" coords="586,187,657,214"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainAPI.html" title=" " alt="" coords="524,239,719,280"/>
+<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,239,475,280"/>
+<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,239,231,280"/>
 </map>

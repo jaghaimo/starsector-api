@@ -1,9 +1,11 @@
 <map id="com.fs.starfarer.api.characters.AfterShipCreationSkillEffect" name="com.fs.starfarer.api.characters.AfterShipCreationSkillEffect">
-<area shape="rect" id="node1" title=" " alt="" coords="499,104,697,145"/>
+<area shape="rect" id="node1" title=" " alt="" coords="499,169,697,211"/>
 <area shape="rect" id="node4" title=" " alt="" coords="745,5,1000,47"/>
 <area shape="rect" id="node5" title=" " alt="" coords="745,71,1000,112"/>
 <area shape="rect" id="node6" title=" " alt="" coords="745,136,1000,177"/>
 <area shape="rect" id="node7" title=" " alt="" coords="745,201,1000,243"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ShipSkillEffect.html" title=" " alt="" coords="252,104,451,145"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html" title=" " alt="" coords="5,104,204,145"/>
+<area shape="rect" id="node8" title=" " alt="" coords="745,267,1000,308"/>
+<area shape="rect" id="node9" title=" " alt="" coords="745,332,1000,373"/>
+<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ShipSkillEffect.html" title=" " alt="" coords="252,169,451,211"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html" title=" " alt="" coords="5,169,204,211"/>
 </map>

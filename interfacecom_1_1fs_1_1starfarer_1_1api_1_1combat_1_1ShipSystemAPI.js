@@ -1,5 +1,32 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI =
 [
+    [ "deactivate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a0c8218a0867144cd7e997919339487e2", null ],
+    [ "forceState", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a30bde13201840c79e23c5dd303c652b1", null ],
+    [ "getAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aee6152489c4ba0f88d40a9b6585bc621", null ],
+    [ "getChargeActiveDur", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ab014146d60f6751401ff1355ce12f505", null ],
+    [ "getChargeDownDur", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a515afc22fb3e7982118ae59972a4e44d", null ],
+    [ "getChargeUpDur", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a3fa746437c559bc9d3a20cfff8461a72", null ],
+    [ "getCooldown", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a9332329acbe900d4ce819936676edbdb", null ],
+    [ "getCooldownRemaining", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#abcf0826aa4b4bb658defcebed222bb17", null ],
+    [ "getDisplayName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a2edd6f5434873b654ffe3293cd1b4213", null ],
+    [ "getEffectLevel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a596c315c020bdef5a700551471a24dda", null ],
+    [ "getFluxPerSecond", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a391e8b8e4099338021bbfa9e7d6517f5", null ],
+    [ "getFluxPerUse", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aeebd2ea713bd2bc0c0df3c73d4b9ad77", null ],
+    [ "getId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ab5c8a1e6b048961b676b53e456df4df8", null ],
+    [ "getMaxAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ab7723910936429a3aabdc83ad0150008", null ],
+    [ "getSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aeb717179a1b209d7127bfc5d0b55e9e9", null ],
+    [ "getState", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#adda34ff0809ef0cc2bfdd95cadd85994", null ],
+    [ "getTargetLoc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#abdbc1dfb7c1f804df3dafd829d942627", null ],
     [ "isActive", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aa2dae1e0b7cfade6bfa8dbdbf1485f64", null ],
-    [ "isOn", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a923b1cbfe00f8e47d7682e7411b1518d", null ]
+    [ "isChargedown", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ab20e915bee18cb1f76084575ea12602b", null ],
+    [ "isChargeup", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a47616b8411b2175cde4b392e103696d6", null ],
+    [ "isCoolingDown", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a6160e800f592b6dd0f54d33ce1fed1b5", null ],
+    [ "isOn", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a923b1cbfe00f8e47d7682e7411b1518d", null ],
+    [ "isOutOfAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a284b1194e0bba148d88d621c4129ee2a", null ],
+    [ "isStateActive", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a49a5b0f231f0bb02630aaca5e2ad5fbb", null ],
+    [ "setAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a35167a2dae881a7354732411521098b2", null ],
+    [ "setCooldown", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a098db11519f6be5d2af1c9b5bc630e79", null ],
+    [ "setCooldownRemaining", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aadaea48b0b748933f1172c539c9c1b5f", null ],
+    [ "setFluxPerSecond", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ae81cefc311fca111f77fd5a1d9896249", null ],
+    [ "setFluxPerUse", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a7e0e05a9c4ea7fa7e09651b4edd59573", null ]
 ];

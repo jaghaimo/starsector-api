@@ -1,4 +1,28 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager =
 [
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a2295d7a47f2690b0299e4c0cd1496787", null ]
+    [ "addRecentSpawn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a0876cb246fbe83a34999601b2422e192", null ],
+    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a2295d7a47f2690b0299e4c0cd1496787", null ],
+    [ "getActionInsideText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#aa6c4fc3273c7a70a19427591c21dcc45", null ],
+    [ "getActionOutsideText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a97b4aa01377d7e32240072074d7d434c", null ],
+    [ "getCurrSpawnLoc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#af7e48de7777ce7983828118e7b94bda6", null ],
+    [ "getDesiredNumFleetsForSpawnLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a64f1f50b9572aa136ea792047bb5b582", null ],
+    [ "getExpireDaysPerFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#af60a9c630a52163d0326b6c069554c29", null ],
+    [ "getMaxFleets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a5f70ddd5e05d592b126b4490581c8e3e", null ],
+    [ "getRecentSpawnsForSystem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#ad32801e3be94df841cef8dbb663b4928", null ],
+    [ "getSpawnId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a95274691a990ec9099d104e33e30a917", null ],
+    [ "getSpawnKey", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#ac6422966d5686cad972af978a0f1de4d", null ],
+    [ "getSpawnRateMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a9171999f1ecfac604a082669f4c02a02", null ],
+    [ "getTravelText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a5ca02d8f919f1fd5e86d4388d0fa5088", null ],
+    [ "isOkToDespawnAssumingNotPlayerVisible", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a77a1229c19ae6a0943c655a5ecb121dd", null ],
+    [ "pickCurrentSpawnLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a7ea6091f926c7418598825ec4cc7d1ed", null ],
+    [ "pickNearestPopulatedSystem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a9b92b55845b1b296127426e2436497df", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a8f261837630e00c9477af11050d120a3", null ],
+    [ "setLocationAndOrders", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a8314f160e57da8209af49ffe69ceb870", null ],
+    [ "spawnFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a7f776202902353b04bc7c79ca4d6bd47", null ],
+    [ "spawnFleetImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a89adaf4e006c80588a1b93c98cfeb6e4", null ],
+    [ "updateSpawnRateMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#adf2933501278a424a5bd0cd7058c57fe", null ],
+    [ "currSpawnLoc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#abc4e6a27321ced47078fc491e44e05c2", null ],
+    [ "recentSpawns", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#ac4aadf440ad171a2b10ff846957c6018", null ],
+    [ "spawnRateMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a4250e3a8334c454e50ebdca74596c34a", null ],
+    [ "tracker2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a76f9c28445b55b826fff008d610d3e4c", null ]
 ];

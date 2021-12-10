@@ -1,5 +1,31 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator =
 [
+    [ "BaseThemeGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a8fb99f082c683571272ad052259e92e6", null ],
+    [ "addCaches", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a73513649957409cd5918584950304b3c", null ],
+    [ "addCommRelay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a8fc6fb64fb4b5f0c21e671cc44729ee1", null ],
+    [ "addDebrisField", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#abe92a892e7fbc08fb4a50cba202ed9ee", null ],
+    [ "addDebrisFields", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#abe6372e626afa055b3b9c551fd53f54a", null ],
+    [ "addDebrisFields", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#acb4720e95553e702e4d467819dec58bb", null ],
+    [ "addDerelictShip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a16240b1a41293faa871b853050aa6eb1", null ],
+    [ "addDerelictShip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a313fb67464c33082e10193ccb7a6479b", null ],
+    [ "addDerelictShips", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7eb2768ea34256eb9200a29dd1e86bd9", null ],
+    [ "addHabCenters", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ab8b2a73ba082e508eac24479b9c52902", null ],
+    [ "addInactiveGate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a9d35c6563710e554ce4f13769b9a9656", null ],
+    [ "addMiningStations", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#aecfffabed1b93c6919c75f60a2bd3118", null ],
+    [ "addObjectives", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a41aa502011ec8e5c417fd70c132d7d7a", null ],
+    [ "addResearchStations", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a55e491596b9f2d6510b19cbbc547f570", null ],
+    [ "addRuins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a05f710dcff1a605796ec6563fbace7f7", null ],
+    [ "addShipGraveyard", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a0318acbfb5fb846f454347be99194219", null ],
+    [ "addShipGraveyard", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#aebcf8a5430bb060e0a57767ce61aadd0", null ],
+    [ "addStation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ae6dfecdf64ca464bf6704d2c9595ecf0", null ],
+    [ "createStringPicker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a7c7d9f8da010346565db05f53df2e2c8", null ],
+    [ "generateForSector", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a78709393230ece8dfe6f1cf0e57d6179", null ],
     [ "getOrder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a2dd0161bbc1a3101098e92dcd96b9d66", null ],
-    [ "getWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a61e5a404c8661511b0340068ea785c46", null ]
+    [ "getRandom", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ab6829aa9b3c3c11546484c5f4e539308", null ],
+    [ "getThemeId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a6f534d5b5154a514cf5e12bf465291a9", null ],
+    [ "getWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a61e5a404c8661511b0340068ea785c46", null ],
+    [ "pickRuinsType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ad1aedb4efecb971321d5ab4506a71a67", null ],
+    [ "setRandom", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a37dd0e3a3a50d45b7129d40ae71a511c", null ],
+    [ "shouldHaveDecivilized", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#a5b60a838c4c570f1bff6d7db04436cf7", null ],
+    [ "random", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator.html#ac76a462cf7fa44da2d20f4da80800574", null ]
 ];

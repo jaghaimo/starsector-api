@@ -1,0 +1,26 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim =
+[
+    [ "CharAnim", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#affc5b11c1fe369ce2b4ea5ae9e2357ff", null ],
+    [ "addFrame", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a64cfa448e6d2bf1938772572cf2f08a3", null ],
+    [ "clone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#aacc915ebac535ccd74050c608cba742e", null ],
+    [ "getTotalTime", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a5c88d685133ca7df38fb3a606e02a6f6", null ],
+    [ "hasAttackFrames", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a465df2732e1449ceac7aa730834dc684", null ],
+    [ "hasBlockFrames", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#af13b1e52bc2a13051f07ee07e047bfe2", null ],
+    [ "interruptableBy", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#acd138c3287c9de258905e008bf654614", null ],
+    [ "removeFirstFrame", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#ad3ad8661ebb5335e8e86ec8b64bf961f", null ],
+    [ "skip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a8dfa4e84510eb223f0d4a77b00fcd216", null ],
+    [ "skip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#af3364076048f05d3cc184051afa6a3f9", null ],
+    [ "updateTextureScale", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#adf8a9d9b77348a9d52504ac7c82fb53e", null ],
+    [ "action", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#aba0f6d34f6fb1ae8ff93a849e2e0e33f", null ],
+    [ "frameHeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a5167bec59ce1d4b49f68210d2cbcf6f5", null ],
+    [ "frames", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a8bc2b5b87f7fd987d819c66362136244", null ],
+    [ "initialRelativeOffset", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a1d71d8e3459869b5d45ee3d12ae81ede", null ],
+    [ "interruptableBy", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a51c80d307328568ec7f21c33aef871bc", null ],
+    [ "last", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a0bcc668d6dfb6f76081763449fc00643", null ],
+    [ "moveToIdle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a6e531c0ef9523b571fb4b9a7ec5c10fb", null ],
+    [ "scale", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#aff2085bdc31b290acd650b71b3ff8052", null ],
+    [ "sprite", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a7c47e824389529db58478d1ed6febf43", null ],
+    [ "textureId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#afb55e1014e09748e59a8228697d93b38", null ],
+    [ "totalTime", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a7ea2f306b2d1c06de62e82a76e0d1511", null ],
+    [ "widthSoFar", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a36e1bad4fee7af9c46661dc18a7b0f12", null ]
+];
