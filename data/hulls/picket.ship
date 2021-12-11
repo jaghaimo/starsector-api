@@ -13,7 +13,10 @@
         1,
         28
     ],
-    "builtInMods": ["automated"],
+    "builtInMods": [
+        "automated",
+        "rugged"
+    ],
     "center": [
         30,
         24

@@ -2,7 +2,11 @@
 	"id":"carrier_group",
 	"governingAptitude":"leadership",
 	"compressHullmods":false,
-	"scope":ALL_CARRIERS,
+	#"scope":ALL_CARRIERS,
+	"scope":CUSTOM,
+	"scopeStr":"all ships with fighter bays",
+	"scope2":CUSTOM,
+	"scopeStr2":"grants increased effect to ships with officers, including flagship",
 	#"scopeStr":"all ships with non-built-in fighter bays",
 	"effectGroups":[
 		{

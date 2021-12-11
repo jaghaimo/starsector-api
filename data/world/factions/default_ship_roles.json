@@ -45,6 +45,12 @@
 		"mudskipper2_CS":5,
 		"mudskipper2_Hellbore":5,
 		
+		# a bit annoying to fight with a really small or weak fleet - not as much so as a centurion, but close enough
+		#"vanguard_Attack":5,
+		#"vanguard_Strike":5,
+		#"vanguard_pirates_Attack":5,
+		#"vanguard_pirates_Strike":5,
+		
 		"vigilance_AP":1,
 		"vigilance_FS":3,
 		"vigilance_Standard":3,
@@ -117,6 +123,11 @@
 		"mudskipper2_CS":3,
 		"mudskipper2_Hellbore":3,
 		
+		"vanguard_Attack":5,
+		"vanguard_Strike":5,
+		"vanguard_pirates_Attack":5,
+		"vanguard_pirates_Strike":5,
+		
 		"vigilance_AP":1,
 		"vigilance_FS":3,
 		"vigilance_Standard":3,
@@ -163,6 +174,11 @@
 		"hammerhead_Overdriven":2,
 		"hammerhead_Support":2,
 		
+		"manticore_Support":5,
+		"manticore_Assault":5,
+		"manticore_pirates_Support":5,
+		"manticore_pirates_Assault":5,
+		
 		"medusa_Attack":4,
 		"medusa_CS":3,
 		"medusa_PD":3,
@@ -208,6 +224,13 @@
 		"falcon_xiv_Escort":5,
 		"falcon_p_Strike":10,
 		
+		"eradicator_Assault":4,
+		"eradicator_Strike":3,
+		"eradicator_Support":2,
+		"eradicator_Overdriven":1,
+		"eradicator_pirates_Attack":8,
+		"eradicator_pirates_Overdriven":2,
+		
 		"fury_Attack":5,
 		"fury_Support":5,
 		
@@ -242,8 +265,9 @@
 		"odyssey_Balanced":10,
 		
 		"guardian_Standard":10,
-		"radiant_Standard":5,
-		"radiant_Strike":5,
+		"radiant_Standard":4,
+		"radiant_Strike":3,
+		"radiant_Assault":3,
 		
 		"atlas2_Standard":10,
 		"prometheus2_Standard":10,

@@ -106,7 +106,7 @@
 			"size":4,
 			"freePort":true,
 			"startingConditions":[
-				"population_3",
+				"population_4",
 				"volatiles_abundant",
 				"rare_ore_abundant",
 				"poor_light",

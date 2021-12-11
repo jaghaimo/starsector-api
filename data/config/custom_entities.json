@@ -1370,6 +1370,35 @@
 		"tags":["station"],
 		"layers":[STATIONS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
 	},
+	"sensor_ghost":{
+		"defaultName":"Unidentified Entity", # used if name=null in addCustomEntity()
+		"nameInText":"sensor ghost",
+		"shortName":"sensor ghost",
+		"aOrAn":"a",
+		"isOrAre":"is",
+		"detectionRange":1000, # must be >0 for discoverable/discoveryXP to be used
+		"discoverable":true,
+		"discoveryXP":0,		
+		"defaultRadius":25, # used if radius<0 in addCustomEntity()
+		"customDescriptionId":"sensor_ghost", # should be unused since it'll always be unidentified
+		"iconWidth":16,
+		"iconHeight":16,
+		#"sprite":"graphics/stations/probe.png",
+		#"spriteWidth":36,
+		#"spriteHeight":36,
+		"renderShadow":false,
+		"useLightColor":true,
+		"showInCampaign":true,
+		"showIconOnMap":true,
+		"showNameOnMap":false,
+		"scaleNameWithZoom":false,
+		"scaleIconWithZoom":true,
+		"tags":["ghost"],
+		"layers":[FLEETS], # what layer(s) to render in. See CampaignEngineLayers.java for possible values
+		"renderCircleIndicator":false,
+		"renderCircleIndicatorSelectionFlash":false,
+	},
+	
 }
 
 

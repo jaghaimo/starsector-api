@@ -190,7 +190,7 @@ item_cryoarithmetic_engine,rare_tech,10
 item_drone_replicator,rare_tech,10
 item_dealmaker_holosuite,rare_tech,10
 item_coronal_portal,rare_tech,10
-nothing,rare_tech,40%
+nothing,rare_tech,50%
 "#item_:{tags:[nanoforge]}, p:{}}",rare_tech,10
 ,,
 item_pristine_nanoforge,nanoforge_always,100
@@ -211,7 +211,7 @@ item_cryoarithmetic_engine,rare_tech_low,10
 item_drone_replicator,rare_tech_low,10
 item_dealmaker_holosuite,rare_tech_low,10
 item_coronal_portal,rare_tech_low,10
-nothing,rare_tech_low,85%
+nothing,rare_tech_low,90%
 ,,
 "item_ship_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints_low,100
 "item_weapon_bp:{tags:[rare_bp, !no_drop, !restricted]}",blueprints_low,100
@@ -240,7 +240,8 @@ nothing,package_bp,100
 "item_modspec:{tags:[!no_drop_salvage, !restricted]}",techmining_first_find,10
 "item_:{tags:[package_bp, !no_drop, !restricted]}",techmining_first_find,10
 item_corrupted_nanoforge,techmining_first_find,2
-item_synchrotron,techmining_first_find,1
+#item_synchrotron,techmining_first_find,1
+"item_:{tags:[hist3t, !no_drop, !restricted]}",techmining_first_find,2
 alpha_core,techmining_first_find,1
 beta_core,techmining_first_find,2
 gamma_core,techmining_first_find,5

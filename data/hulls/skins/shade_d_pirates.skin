@@ -9,6 +9,8 @@
 	"fleetPoints":8,
 	"ordnancePoints":35,
 	"baseValueMult":.8,
+	"suppliesToRecover":6,
+	"suppliesPerMonth":6,
 	"spriteName":"graphics/ships/shade/shade_d_pirates.png",
 	"removeWeaponSlots":["WS 003", "WS 005"], 		# ids
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file

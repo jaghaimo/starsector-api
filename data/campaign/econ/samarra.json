@@ -34,6 +34,7 @@
 				"ore_abundant",
 				"rare_ore_abundant",
 				"volatiles_abundant",
+				"poor_light",
 				"solar_array"
 				#"regional_capital",
 			],
@@ -41,7 +42,7 @@
 				"population",
 				"farming",
 				#"spaceport",
-				"spaceport",
+				["spaceport", "fullerene_spool"],
 				"lightindustry",
 				"mining",
 				"heavybatteries",

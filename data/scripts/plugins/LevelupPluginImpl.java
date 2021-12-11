@@ -14,23 +14,41 @@ public class LevelupPluginImpl implements LevelupPlugin {
 	 * Max level XP times this is how much XP it takes to gain storyPointsPerLevel story points once at max level.
 	 */
 	public static float XP_REQUIRED_FOR_STORY_POINT_GAIN_AT_MAX_LEVEL_MULT = 2f;
+	public static int LEVEL_FOR_BASE_XP_FOR_MAXED_STORY_POINT_GAIN = 15;
 	
 	public static long [] XP_PER_LEVEL = new long [] {
 		0,		// level 1
-		20000,
-		30000,
-		40000,
-		50000,  // level 5, ramp up after
-		100000,
-		200000,
+		50000,
+		70000,
+		90000,
+		100000,  // level 5, ramp up after
 		300000,
-		400000,
-		500000, // level 10, ramp up after
-		750000,
-		1000000,
-		1250000,
-		1500000,
+		500000,
+		700000,
+		900000,
+		1000000, // level 10, ramp up after
+		1200000,
+		1400000,
+		1600000,
+		1800000,
 		2000000, // level 15
+//		0,		// level 1
+//		20000,
+//		30000,
+//		40000,
+//		50000,  // level 5, ramp up after
+//		100000,
+//		200000,
+//		300000,
+//		400000,
+//		500000, // level 10, ramp up after
+//		750000,
+//		1000000,
+//		1250000,
+//		1500000,
+//		2000000, // level 15
+		
+		
 //		1000000,
 //		2000000,
 //		3000000,
@@ -64,13 +82,13 @@ public class LevelupPluginImpl implements LevelupPlugin {
 		return (int) Global.getSettings().getFloat("storyPointsPerLevel");
 	}
 	
-	public long getXPForNextLevel(int level) {
-		if (level < XP_PER_LEVEL.length) {
-			return XP_PER_LEVEL[level];
-		}
-		
-		return (long) (XP_PER_LEVEL[XP_PER_LEVEL.length - 1] * XP_REQUIRED_FOR_STORY_POINT_GAIN_AT_MAX_LEVEL_MULT);
-	}
+//	public long getXPForNextLevel(int level) {
+//		if (level < XP_PER_LEVEL.length) {
+//			return XP_PER_LEVEL[level];
+//		}
+//		
+//		return (long) (XP_PER_LEVEL[LEVEL_FOR_BASE_XP_FOR_MAXED_STORY_POINT_GAIN - 1] * XP_REQUIRED_FOR_STORY_POINT_GAIN_AT_MAX_LEVEL_MULT);
+//	}
 
 	
 	public long getXPForLevel(int level) {
@@ -90,7 +108,9 @@ public class LevelupPluginImpl implements LevelupPlugin {
 		}
 		
 		if (level >= max + 1) {
-			last *= XP_REQUIRED_FOR_STORY_POINT_GAIN_AT_MAX_LEVEL_MULT;
+			//last *= XP_REQUIRED_FOR_STORY_POINT_GAIN_AT_MAX_LEVEL_MULT;
+			last = (long) (XP_PER_LEVEL[LEVEL_FOR_BASE_XP_FOR_MAXED_STORY_POINT_GAIN - 1] * 
+						   XP_REQUIRED_FOR_STORY_POINT_GAIN_AT_MAX_LEVEL_MULT);
 			curr += last;
 		}
 		

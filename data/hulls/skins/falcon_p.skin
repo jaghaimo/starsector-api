@@ -7,6 +7,8 @@
 	"tags":["rare_bp"],
 	"tech":"Pirate",
 	#"restoreToBaseHull":true,
+	"suppliesToRecover":20,
+	"suppliesPerMonth":20,
 	"baseValueMult":1.25,
 	"spriteName":"graphics/ships/falcon/falcon_p.png",
 	"removeWeaponSlots":["WS 003","WS 004"], 		# ids

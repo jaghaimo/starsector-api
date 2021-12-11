@@ -9,7 +9,6 @@
 			"effectBasedOnLevel":false,
 			"effects":[
 				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.WeaponDrills$Level1"},
-				#{"type":"HULLMOD_UNLOCK", "hullmods":{"turretgyros":1, "armoredweapons":1}},
 				{"type":"HULLMOD_UNLOCK", "hullmods":{"turretgyros":1}},
 			]
 		},

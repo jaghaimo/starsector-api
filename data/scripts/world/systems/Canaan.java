@@ -69,7 +69,7 @@ public class Canaan {
 		gad.getSpec().setPlanetColor(new Color(245,255,195,255));
 		gad.applySpecChanges();
 		
-		system.addRingBand(gad, "misc", "rings_dust0", 256f, 2, Color.white, 256f, 400, 30, null, null);
+		system.addRingBand(gad, "misc", "rings_dust0", 256f, 2, Color.white, 256f, 400, 30, Terrain.RING, null);
 		
 			PlanetAPI asher = system.addPlanet("asher", gad, "Asher", "barren-desert", 0, 100, 1000, 40);
 			asher.getSpec().setTilt( 190f );

@@ -1,12 +1,12 @@
 {
     "bounds": [
-        43,
-        13,
-        37,
+        44,
+        14,
+        38,
         -14,
         5,
         -10,
-        14,
+        15,
         -19,
         13,
         -28,
@@ -19,26 +19,30 @@
         -19,
         -11,
         -20,
-        9,
+        10,
         -8,
-        15,
+        16,
         -23,
         17,
         -24,
-        26,
+        27,
         15,
         27,
         16,
-        18,
-        11,
-        12
+        19,
+        12,
+        13
     ],
-    "builtInMods": ["shielded_holds"],
+    "builtInMods": [
+        "rugged",
+        "shielded_holds"
+    ],
     "center": [
         31,
         27
     ],
     "collisionRadius": 73,
+    "coversColor": "",
     "engineSlots": [
         {
             "angle": 180,
@@ -81,7 +85,7 @@
             "arc": 5,
             "id": "WS 001",
             "locations": [
-                34,
+                35,
                 -6
             ],
             "mount": "HARDPOINT",

@@ -172,6 +172,8 @@
 			"stabilizedshieldemitter",
 			"hiressensors",
 			"efficiency_overhaul",
+			"adaptive_coils",
+			"phase_anchor",
 		],
 	},
 	"factionDoctrine":{
@@ -199,6 +201,7 @@
 			"fighter_uplink",
 			"carrier_group",
 			"flux_regulation",
+			"cybernetic_augmentation",
 		],
 	},
 	"illegalCommodities":[
@@ -223,6 +226,7 @@
 			"graphics/portraits/portrait_corporate08.png",
 			"graphics/portraits/portrait_corporate10.png",
 			"graphics/portraits/portrait13.png",
+			"graphics/portraits/portrait18.png",
 			"graphics/portraits/portrait25.png",
 			"graphics/portraits/portrait26.png",
 			"graphics/portraits/portrait30.png",
@@ -234,9 +238,13 @@
 			"graphics/portraits/portrait_corporate07.png",
 			"graphics/portraits/portrait_corporate09.png",
 			"graphics/portraits/portrait_mercenary02.png",
+			"graphics/portraits/portrait_mercenary08.png",
 			"graphics/portraits/portrait16.png",
+			"graphics/portraits/portrait21.png",
 			"graphics/portraits/portrait28.png",
+			"graphics/portraits/portrait32.png",
 			"graphics/portraits/portrait34.png",
+			"graphics/portraits/portrait41.png",
 		],
 	},
 	"ranks":{

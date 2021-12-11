@@ -43,7 +43,7 @@
 					"splitSound":"sabot_srm_split",
 					"numShots":5,
 					"damage":200,
-					"emp":400,
+					"emp":200, # needs to match highlight in weapon_data.csv
 					"damageType":KINETIC,
 					"hitpoints":500,
 					"evenSpread":true,

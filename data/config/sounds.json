@@ -25,7 +25,8 @@
 		],
 		
 		"music_combat":[
-			{"file":"battle_ambience_01.ogg","source":"sounds/music/music.bin","volume":1} 
+			{"file":"battle_ambience_01.ogg","source":"sounds/music/music.bin","volume":1}
+			#{"file":"miscallenous_main_menu.ogg","source":"sounds/music/music.bin","volume":0.5} 
 		],
 		"music_survey_and_scavenge":[
 			{"file":"scavenge_music_v1.ogg","source":"sounds/music/music.bin","volume":1} 
@@ -416,7 +417,12 @@
 				"randomStart":true, 
 			},
 		],
-		
+		"music_soe_party":[
+			{"file":"battle_ambience_01.ogg","source":"sounds/music/music.bin","volume":0},
+		],
+		"music_soe_fight":[
+			{"file":"eventide_music_fight.ogg","source":"sounds/music/music.bin","volume":1},
+		],
 	},
 
 	#"music_title":[
@@ -570,6 +576,10 @@
 	"system_phase_cloak_deactivate":[ 
 		{"file":"sounds/sfx_systems/phase_cloak_deactivate.ogg","pitch":1,"volume":1.0},
 	],
+	
+	"phase_anchor_vanish":[ 
+		{"file":"sounds/sfx_systems/phase_teleporter_oneshot.ogg","pitch":0.75,"volume":1.0},
+	],
 
 	"system_phase_cloak_collision":[ 
 		{"file":"sounds/sfx_systems/phase_cloak_collision.ogg","pitch":1,"volume":1.0},
@@ -649,6 +659,9 @@
 	"system_quantumdisruptor":[ 
 		{"file":"sounds/sfx_systems/quantum_disruptor_oneshot.ogg","pitch":1.0,"volume":1.0},
 	],
+	"system_termination_sequence":[
+		{"file":"sounds/sfx_systems/termination_sequence_activate.ogg","pitch":1.0,"volume":1.0},
+	],
 	
 	"system_interdictor":[ 
 		{"file":"sounds/sfx_systems/interdictor_array.ogg","pitch":1.0,"volume":1.0},
@@ -713,6 +726,25 @@
 			{"file":"sounds/sfx_systems/drone_launch.ogg","pitch":1,"volume":0.6},
 		],
 	},		
+	
+ 	"system_canister_flak_fire":[
+            {"file":"sounds/sfx_systems/canister_flak_01.ogg","pitch":1.0,"volume":1.0},
+            {"file":"sounds/sfx_systems/canister_flak_02.ogg","pitch":1.0,"volume":1.0},
+            {"file":"sounds/sfx_systems/canister_flak_03.ogg","pitch":1.0,"volume":1.0},
+            {"file":"sounds/sfx_systems/canister_flak_04.ogg","pitch":1.0,"volume":1.0},
+            {"file":"sounds/sfx_systems/canister_flak_05.ogg","pitch":1.0,"volume":1.0},
+            {"file":"sounds/sfx_systems/canister_flak_06.ogg","pitch":1.0,"volume":1.0},
+    ],
+
+    "system_canister_flak_explosion":{
+            "sounds":[
+                    {"file":"sounds/sfx_systems/canister_flak_explosion_01.ogg","pitch":1.0,"volume":0.7},
+                    {"file":"sounds/sfx_systems/canister_flak_explosion_02.ogg","pitch":1.0,"volume":0.7},
+                    {"file":"sounds/sfx_systems/canister_flak_explosion_03.ogg","pitch":1.0,"volume":0.7},
+                    {"file":"sounds/sfx_systems/canister_flak_explosion_04.ogg","pitch":1.0,"volume":0.7},
+                    {"file":"sounds/sfx_systems/canister_flak_explosion_05.ogg","pitch":1.0,"volume":0.7},
+            ],
+    },
 
 #collapseclose
 	
@@ -1010,7 +1042,12 @@
 	"breach_fire":
 	[
 		{"file":"sounds/sfx_wpn_missiles/harpoon_fire_01.ogg","pitch":1.25,"volume":0.5},
-	],	
+	],
+	
+	"hammer_fire":
+    [
+		{"file":"sounds/sfx_wpn_missiles/hammer_fire_01.ogg","pitch":1,"volume":0.8},
+ 	],
 
 	# HEAVY BURST LASER
 	"heavy_burst_laser_fire":
@@ -1047,6 +1084,14 @@
 	"hurricane_mirv_fire":
 	[
 		{"file":"sounds/sfx_wpn_missiles/hurricane_mirv_fire_01.ogg","pitch":1,"volume":0.9},
+	],
+	"hurricane_mirv_split":
+	[
+		{"file":"sounds/sfx_impacts/explosion_missile_01.ogg","pitch":0.86,"volume":0.7},
+		{"file":"sounds/sfx_impacts/explosion_missile_01.ogg","pitch":0.87,"volume":0.7},
+		{"file":"sounds/sfx_impacts/explosion_missile_01.ogg","pitch":0.88,"volume":0.7},
+		{"file":"sounds/sfx_impacts/explosion_missile_01.ogg","pitch":0.89,"volume":0.7},
+		{"file":"sounds/sfx_impacts/explosion_missile_01.ogg","pitch":0.90,"volume":0.7},
 	],
 
 	# HYPERVELOCITY DRIVER
@@ -1128,6 +1173,26 @@
 	[
 		{"file":"sounds/sfx_wpn_missiles/pilum_lrm_fire_01.ogg","pitch":0.8,"volume":0.3},
 	],
+	"pilum_lrm_split":{
+		"sounds":[
+			#{"file":"sounds/sfx_impacts/explosion_missile_01.ogg","pitch":0.86,"volume":0.5},
+			#{"file":"sounds/sfx_impacts/explosion_missile_01.ogg","pitch":0.87,"volume":0.5},
+			#{"file":"sounds/sfx_impacts/explosion_missile_01.ogg","pitch":0.88,"volume":0.5},
+			#{"file":"sounds/sfx_impacts/explosion_missile_01.ogg","pitch":0.89,"volume":0.5},
+			#{"file":"sounds/sfx_impacts/explosion_missile_01.ogg","pitch":0.90,"volume":0.5},
+			{"file":"sounds/sfx_wpn_missiles/pilum_lrm_fire_01.ogg","pitch":1.0,"volume":0.18},
+		],		
+	},
+
+	"proximity_charge_launcher_fire":
+    [
+        {"file":"sounds/sfx_wpn_missiles/proximity_charge_launcher_fire_01.ogg","pitch":1.0,"volume":0.8},
+    ],
+    
+	"proximity_charge_launcher_fighter_fire":
+    [
+        {"file":"sounds/sfx_wpn_missiles/proximity_charge_launcher_fire_01.ogg","pitch":1.25,"volume":0.3},
+    ],
 
 	# SABOT SRM
 	"sabot_srm_fire":
@@ -1146,8 +1211,9 @@
 	# SALAMANDER / HEATSEEKER
 	"salamander_fire":
 	[
-		{"file":"sounds/sfx_wpn_missiles/hurricane_mirv_fire_01.ogg","pitch":1.2,"volume":1},
+		{"file":"sounds/sfx_wpn_missiles/salamander_mrm_fire_01.ogg","pitch":1.0,"volume":0.33},
 	],
+
 
 	# SWARMER
 	"swarmer_fire":
@@ -1312,6 +1378,15 @@
                     {"file":"sounds/sfx_systems/mine_strike_explosion_02.ogg","pitch":1.0,"volume":1},
                     {"file":"sounds/sfx_systems/mine_strike_explosion_03.ogg","pitch":1.0,"volume":1},
                     {"file":"sounds/sfx_systems/mine_strike_explosion_04.ogg","pitch":1.0,"volume":1},
+            ],
+    },
+    
+    "prox_charge_explosion":{
+            "sounds":[
+                    {"file":"sounds/sfx_systems/mine_strike_explosion_01.ogg","pitch":1.2,"volume":0.5},
+                    {"file":"sounds/sfx_systems/mine_strike_explosion_02.ogg","pitch":1.2,"volume":0.5},
+                    {"file":"sounds/sfx_systems/mine_strike_explosion_03.ogg","pitch":1.2,"volume":0.5},
+                    {"file":"sounds/sfx_systems/mine_strike_explosion_04.ogg","pitch":1.2,"volume":0.5},
             ],
     },
     
@@ -2265,6 +2340,16 @@
 		],
 	},	
 	
+ 	"ui_neural_transfer_begin":{
+		"sounds":[
+			{"file":"sounds/sfx_interface/neural_link_transfer_begin.ogg","pitch":1,"volume":0.15},
+		],
+	},     
+	"ui_neural_transfer_complete":{
+		"sounds":[
+			{"file":"sounds/sfx_interface/neural_link_transfer_complete.ogg","pitch":1,"volume":0.22},
+		],
+	},
 	
 	# ballistic
 	"ui_refit_slot_filled_ballistic_small":[
@@ -2822,6 +2907,12 @@
 	"ui_cargo_luxury_drop":{"sounds":[
 		{"file":"sounds/sfx_cargo/cargo_luxuries_drop.ogg","pitch":1,"volume":0.3},
 	],},
+	"ui_cargo_volturn_lobster":{"sounds":[
+		{"file":"sounds/sfx_cargo/cargo_volturn_lobster_pickup.ogg","pitch":1,"volume":0.5},
+	],},
+	"ui_cargo_volturn_lobster_drop":{"sounds":[
+		{"file":"sounds/sfx_cargo/cargo_volturn_lobster_drop.ogg","pitch":1,"volume":0.5},
+	],},
 		
 
 #collapseclose
@@ -3234,21 +3325,30 @@
 		
 		"terrain_hyperspace_storm_signal":[
 			#{"file":"sounds/sfx_terrain/terrain_nebula_default.ogg","pitch":1,"volume":0.9},
-	],	
-		
+	],
+	
+	# 0.25, 0.4, 0.6 for lightning
 	"terrain_hyperspace_deep":[
-			{"file":"sounds/sfx_terrain/terrain_hyperspace_deep.ogg","pitch":1,"volume":0.25},
-	],	
+		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep.ogg","pitch":1,"volume":0.25},
+	],     
 	"terrain_hyperspace_storm":[
 		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm.ogg","pitch":1,"volume":0.4},
-	],		
-	"terrain_hyperspace_lightning":[
-		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm_lightning_01.ogg","pitch":1,"volume":0.6},
-		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm_lightning_02.ogg","pitch":1,"volume":0.6},
-		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm_lightning_03.ogg","pitch":1,"volume":0.6},
-		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm_lightning_04.ogg","pitch":1,"volume":0.6},
-		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm_lightning_05.ogg","pitch":1,"volume":0.6},
-	],
+	],             
+    "terrain_hyperspace_lightning":[
+		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm_lightning_01.ogg","pitch":1,"volume":0.8},
+		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm_lightning_02.ogg","pitch":1,"volume":0.8},
+		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm_lightning_03.ogg","pitch":1,"volume":0.8},
+		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm_lightning_04.ogg","pitch":1,"volume":0.8},
+		{"file":"sounds/sfx_terrain/terrain_hyperspace_deep_storm_lightning_05.ogg","pitch":1,"volume":0.8},
+    ],
+    "terrain_slipstream_near":[
+		#{"file":"sounds/sfx_terrain/terrain_corona_default.ogg","pitch":1,"volume":0.5},
+        {"file":"sounds/sfx_terrain/terrain_slipstream_outside.ogg","pitch":1,"volume":1.0},
+    ],
+    "terrain_slipstream":[
+		#{"file":"sounds/sfx_terrain/terrain_corona_am_default.ogg","pitch":1,"volume":0.5},
+		{"file":"sounds/sfx_terrain/terrain_slipstream_inside.ogg","pitch":1,"volume":1.0},
+    ],
 	
 			
 		"terrain_radio_chatter_1":[
@@ -3300,6 +3400,12 @@
 		{"file":"sounds/sfx_bar/portside_bar_neutral_v7.ogg","pitch":1,"volume":0.67},
 	],
 	
+	"ghost_remora_hit":{
+		"sounds":[
+			{"file":"sounds/sfx_abilities/ability-interdiction_pulse_hit.ogg","pitch":1,"volume":0.5},
+		],
+	},
+	
 	
 	### Stuff that is called but not actually used ###
 
@@ -3322,6 +3428,55 @@
 		],
 		
 	
+  	### Sword of Eventide
+    "soe_fall":[
+            {"file":"sounds/soe/eventide_bodyfall.ogg","pitch":1,"volume":1},
+    ],
+    "soe_cloth":[
+            {"file":"sounds/soe/eventide_cloth_movement1.ogg","pitch":1,"volume":1.0},
+            {"file":"sounds/soe/eventide_cloth_movement2.ogg","pitch":1,"volume":1.0},
+            {"file":"sounds/soe/eventide_cloth_movement3.ogg","pitch":1,"volume":1.0},
+            {"file":"sounds/soe/eventide_cloth_movement4.ogg","pitch":1,"volume":1.0},
+    ],
+    "soe_step":[
+            {"file":"sounds/soe/eventide_footstep1.ogg","pitch":1,"volume":0.6},
+            {"file":"sounds/soe/eventide_footstep2.ogg","pitch":1,"volume":0.6},
+            {"file":"sounds/soe/eventide_footstep3.ogg","pitch":1,"volume":0.6},
+            {"file":"sounds/soe/eventide_footstep4.ogg","pitch":1,"volume":0.6},
+            {"file":"sounds/soe/eventide_footstep5.ogg","pitch":1,"volume":0.6},
+    ],
+    "soe_clash":[
+            {"file":"sounds/soe/eventide_sword_clash1.ogg","pitch":1,"volume":1},
+            {"file":"sounds/soe/eventide_sword_clash2.ogg","pitch":1,"volume":1},
+            {"file":"sounds/soe/eventide_sword_clash3.ogg","pitch":1,"volume":1},
+            {"file":"sounds/soe/eventide_sword_clash4.ogg","pitch":1,"volume":1},
+
+    ],
+    "soe_rip":[
+            {"file":"sounds/soe/eventide_sword_wound1.ogg","pitch":1,"volume":1},
+            {"file":"sounds/soe/eventide_sword_wound2.ogg","pitch":1,"volume":1},
+            {"file":"sounds/soe/eventide_sword_wound3.ogg","pitch":1,"volume":1},
+            {"file":"sounds/soe/eventide_sword_wound4.ogg","pitch":1,"volume":1},
+    ],
+    "soe_swish":[
+            {"file":"sounds/soe/eventide_sword_swish1.ogg","pitch":1,"volume":0.8},
+            {"file":"sounds/soe/eventide_sword_swish2.ogg","pitch":1,"volume":0.8},
+            {"file":"sounds/soe/eventide_sword_swish3.ogg","pitch":1,"volume":0.8},
+            {"file":"sounds/soe/eventide_sword_swish4.ogg","pitch":1,"volume":0.8},
+            {"file":"sounds/soe/eventide_sword_swish5.ogg","pitch":1,"volume":0.8},
+            {"file":"sounds/soe/eventide_sword_swish6.ogg","pitch":1,"volume":0.8},
+            {"file":"sounds/soe/eventide_sword_swish7.ogg","pitch":1,"volume":0.8},
+            {"file":"sounds/soe/eventide_sword_swish8.ogg","pitch":1,"volume":0.8},
+    ],
+    "soe_ambience":[
+			{"file":"sounds/soe/eventide_ambience_wind.ogg","pitch":1,"volume":1},
+    ],
+ 	"soe_party_chatter":[
+		{"file":"sounds/soe/eventide_ambience_crowd.ogg","pitch":1,"volume":0.4},
+	],
+    "soe_crowd_gasp":[
+		{"file":"sounds/soe/eventide_ambience_crowd_gasp.ogg","pitch":1,"volume":0.6},
+    ],    
 }
 
 

@@ -1,31 +1,31 @@
 {
     "bounds": [
-        -58,
-        21,
-        -18,
-        42,
-        6,
+        -56,
+        25,
+        -20,
         43,
-        8,
-        31,
-        50,
-        21,
-        64,
-        33,
-        83,
         6,
-        75,
-        -31,
+        45,
+        8,
         33,
-        -22,
-        -18,
-        -28,
+        44,
+        21,
+        58,
+        36,
+        86,
+        8,
+        74,
         -35,
-        -34,
-        -58,
+        40,
+        -27,
+        -15,
+        -29,
+        -21,
+        -40,
+        -57,
         -26,
-        -50,
-        1
+        -51,
+        0
     ],
     "builtInMods": ["civgrade"],
     "center": [
@@ -33,13 +33,14 @@
         64
     ],
     "collisionRadius": 135,
+    "coversColor": "",
     "engineSlots": [
         {
             "angle": 180,
             "contrailSize": 64,
             "length": 64,
             "location": [
-                -61,
+                -60,
                 25
             ],
             "style": "LOW_TECH",
@@ -50,8 +51,19 @@
             "contrailSize": 64,
             "length": 64,
             "location": [
+                -61,
+                16
+            ],
+            "style": "LOW_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 64,
+            "location": [
                 -62,
-                15
+                7
             ],
             "style": "LOW_TECH",
             "width": 12
@@ -61,18 +73,7 @@
             "contrailSize": 64,
             "length": 64,
             "location": [
-                -63,
-                6
-            ],
-            "style": "LOW_TECH",
-            "width": 12
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 64,
-            "location": [
-                -63,
+                -62,
                 -6
             ],
             "style": "LOW_TECH",
@@ -83,7 +84,7 @@
             "contrailSize": 64,
             "length": 64,
             "location": [
-                -62,
+                -61,
                 -15
             ],
             "style": "LOW_TECH",
@@ -94,7 +95,7 @@
             "contrailSize": 64,
             "length": 64,
             "location": [
-                -61,
+                -60,
                 -24
             ],
             "style": "LOW_TECH",
@@ -106,7 +107,7 @@
     "hullName": "Buffalo Mk.II",
     "hullSize": "DESTROYER",
     "shieldCenter": [
-        12,
+        14,
         0
     ],
     "shieldRadius": 115,
@@ -119,7 +120,7 @@
             "arc": 210,
             "id": "WS 001",
             "locations": [
-                68,
+                69,
                 0
             ],
             "mount": "TURRET",
@@ -131,7 +132,7 @@
             "arc": 210,
             "id": "WS 002",
             "locations": [
-                -5,
+                -4,
                 37
             ],
             "mount": "TURRET",
@@ -143,7 +144,7 @@
             "arc": 210,
             "id": "WS 003",
             "locations": [
-                19,
+                20,
                 -24
             ],
             "mount": "TURRET",
@@ -155,8 +156,8 @@
             "arc": 5,
             "id": "WS 004",
             "locations": [
-                19,
-                30
+                20,
+                31
             ],
             "mount": "HARDPOINT",
             "size": "SMALL",
@@ -167,8 +168,8 @@
             "arc": 5,
             "id": "WS 005",
             "locations": [
-                38,
-                24
+                39,
+                25
             ],
             "mount": "HARDPOINT",
             "size": "SMALL",
@@ -179,7 +180,7 @@
             "arc": 5,
             "id": "WS 006",
             "locations": [
-                38,
+                39,
                 -24
             ],
             "mount": "HARDPOINT",
@@ -191,7 +192,7 @@
             "arc": 5,
             "id": "WS 007",
             "locations": [
-                65,
+                67,
                 28
             ],
             "mount": "HARDPOINT",
@@ -203,7 +204,7 @@
             "arc": 5,
             "id": "WS 008",
             "locations": [
-                65,
+                69,
                 -24
             ],
             "mount": "HARDPOINT",
@@ -215,7 +216,7 @@
             "arc": 5,
             "id": "WS 010",
             "locations": [
-                -17,
+                -16,
                 -29
             ],
             "mount": "HIDDEN",

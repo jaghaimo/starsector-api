@@ -7,6 +7,7 @@
 	"tags":["rare_bp"],
 	"spriteName":"graphics/ships/aeroshuttle/aeroshuttle_original.png",
 	"addHints":[CIVILIAN],
+	"ordnancePoints":30,
 	"fleetPoints":2,
 	"baseValueMult":1.5,
 	"removeWeaponSlots":["WS 001", "WS 002", "WS 003"], 		# ids

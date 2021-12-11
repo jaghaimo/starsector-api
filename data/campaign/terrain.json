@@ -86,6 +86,7 @@
 			"stormSound":"terrain_hyperspace_lightning",
 		},
 	},
+	
 	"spatial_anomaly":{
 		"plugin":"com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin",
 	},
@@ -108,12 +109,18 @@
 		},
 	},
 	
-	
-	#"wavefront":{
-	#	"plugin":"com.fs.starfarer.api.impl.campaign.terrain.WavefrontTerrainPlugin",
-	#},
-	#"slipstream":{
-	#	"plugin":"com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin",
-	#},
+	"slipstream":{
+		"plugin":"com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2",
+		"musicSuppression":1,
+		"loopOne":"terrain_slipstream",
+		"loopTwo":"terrain_slipstream_near",
+		"custom":{
+			"gain":0.75,
+			"gainHF":0.5,
+			"minPitch":0.5,
+			"maxPitch":1.25,
+			"outsideSoundRange":1000,
+		},
+	},
 }
 

@@ -60,7 +60,7 @@
 			"industries":[
 				"population",
 				"spaceport",
-				"militarybase",
+				#"militarybase",
 				"fuelprod",
 				"grounddefenses",
 				"patrolhq",

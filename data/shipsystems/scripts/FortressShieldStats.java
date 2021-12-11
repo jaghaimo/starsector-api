@@ -5,12 +5,15 @@ import com.fs.starfarer.api.impl.combat.BaseShipSystemScript;
 
 public class FortressShieldStats extends BaseShipSystemScript {
 
+	public static float DAMAGE_MULT = 0.9f;
+	//public static float DAMAGE_MULT = 0.8f;
+	
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 		//stats.getShieldTurnRateMult().modifyMult(id, 1f);
 		//stats.getShieldUnfoldRateMult().modifyPercent(id, 2000);
 		
 		//stats.getShieldDamageTakenMult().modifyMult(id, 0.1f);
-		stats.getShieldDamageTakenMult().modifyMult(id, 1f - .9f * effectLevel);
+		stats.getShieldDamageTakenMult().modifyMult(id, 1f - DAMAGE_MULT * effectLevel);
 		
 		stats.getShieldUpkeepMult().modifyMult(id, 0f);
 		

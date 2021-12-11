@@ -7,7 +7,7 @@
 "Press TAB to toggle the command UI. Use the command UI to give orders to your fleet.",
 "Ordering one ship to escort another limits the escort's mobility. Use the command with caution.",
 "If your shields take too much damage, the ship will overload and weapons and shields will be disabled for a few seconds.",
-"Long range missiles (LRMs) can hit targets from across the map. Press Tab to open the command UI and target far-away ships by clicking on them and then selecting 'Set as Target'.",
+"Long range missiles (LRMs) can hit targets from beyond visual range. Press Tab to open the command UI and target far-away ships by clicking on them and then selecting 'Set as Target'.",
 "In combat, move the mouse around to pan the view.  Press 'T' to anchor your view to your target, and press 'T' again to go back to the normal view.",
 "Press LMB to fire and RMB to use the shields.  Use WASD to pilot the ship.",
 "Kinetic damage is good against shields, while high-explosive damage is good against armor.",
@@ -48,7 +48,10 @@
 "Scuttling a ship - or simply not recovering it - will produce more value in fuel and supplies than selling it would.",
 "If a star system has few stable locations, you can create a new one by interacting with the star.",
 "Assigning marines to attack a low-danger objective can create a diversion and reduce casualties from a dangerous raid more than keeping those marines in reserve.",
-"The side with more capable officers in command of combat-ready ships gets more deployment points.",    
+"The side with more capable officers in command of combat-ready ships gets more deployment points.",
+"Ships with officers or s-mods are almost always recoverable if lost in combat. Some skills and hullmods can also make other ships always recoverable.",
+"Scuttling or losing a ship with s-mods you've built into it grants enough bonus XP to gain back the story points spent on building the hullmods in.",
+"Slipstreams are temporary and, in recent memory, synchronized with the standard Domain cycle. In the first half of the cycle, they tend to flow towards the galactic east, and in the second half, to the west.",      
      ],
      
      

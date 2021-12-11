@@ -1,7 +1,7 @@
 {
 	"id":"burndrive",
 	"type":"ENGINE_MOD",
-	"aiType":"BURN_DRIVE",
+	"aiType":"BURN_DRIVE_TOGGLE",
 	
 	"statsScript":"data.shipsystems.scripts.BurnDriveStats",
 	

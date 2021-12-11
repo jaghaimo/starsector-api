@@ -23,6 +23,6 @@
 				 "blowbackLength":10.0,
 				 "blowbackSpread":8.0,
 				 "particleColor":[95,70,155,110]},
-	"projectileSpecId":"phase_charge",
-	#"fireSoundTwo":"phase_charge_fire",
+	"projectileSpecId":"phase_charge_bomber",
+	"fireSoundTwo":"proximity_charge_launcher_fighter_fire",
 }

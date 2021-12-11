@@ -1,18 +1,18 @@
 {
     "bounds": [
-        -104,
+        -105,
         37,
         144,
-        20,
+        21,
         144,
-        -19,
-        -104,
+        -21,
+        -105,
         -36
     ],
     "builtInMods": ["ground_support"],
     "center": [
-        40,
-        111
+        42,
+        113
     ],
     "collisionRadius": 200,
     "coversColor": "",
@@ -22,8 +22,8 @@
             "contrailSize": 64,
             "length": 48,
             "location": [
-                -110,
-                28
+                -111,
+                29
             ],
             "style": "MIDLINE",
             "width": 12
@@ -33,7 +33,7 @@
             "contrailSize": 64,
             "length": 64,
             "location": [
-                -109,
+                -110,
                 20
             ],
             "style": "MIDLINE",
@@ -55,7 +55,7 @@
             "contrailSize": 64,
             "length": 64,
             "location": [
-                -109,
+                -110,
                 -19
             ],
             "style": "MIDLINE",
@@ -66,14 +66,14 @@
             "contrailSize": 64,
             "length": 48,
             "location": [
-                -110,
+                -111,
                 -28
             ],
             "style": "MIDLINE",
             "width": 12
         }
     ],
-    "height": 260,
+    "height": 264,
     "hullId": "valkyrie",
     "hullName": "Valkyrie",
     "hullSize": "DESTROYER",
@@ -82,7 +82,7 @@
         0
     ],
     "shieldRadius": 180,
-    "spriteName": "graphics/ships/valkyrie_ap.png",
+    "spriteName": "graphics/ships/valkyrie/valkyrie_ap.png",
     "style": "MIDLINE",
     "viewOffset": 0,
     "weaponSlots": [
@@ -91,7 +91,7 @@
             "arc": 190,
             "id": "WS 001",
             "locations": [
-                -62,
+                -63,
                 28
             ],
             "mount": "TURRET",
@@ -103,8 +103,8 @@
             "arc": 190,
             "id": "WS 002",
             "locations": [
-                -62,
-                -27
+                -63,
+                -28
             ],
             "mount": "TURRET",
             "size": "SMALL",
@@ -116,7 +116,7 @@
             "id": "WS 003",
             "locations": [
                 62,
-                22
+                23
             ],
             "mount": "TURRET",
             "size": "SMALL",
@@ -128,7 +128,7 @@
             "id": "WS 004",
             "locations": [
                 62,
-                -22
+                -23
             ],
             "mount": "TURRET",
             "size": "SMALL",
@@ -139,8 +139,8 @@
             "arc": 0,
             "id": "WS 005",
             "locations": [
-                142,
-                14
+                144,
+                16
             ],
             "mount": "HARDPOINT",
             "size": "SMALL",
@@ -151,8 +151,8 @@
             "arc": 0,
             "id": "WS 006",
             "locations": [
-                142,
-                -14
+                144,
+                -15
             ],
             "mount": "HARDPOINT",
             "size": "SMALL",
@@ -163,7 +163,7 @@
             "arc": 5,
             "id": "WS 007",
             "locations": [
-                149,
+                147,
                 0
             ],
             "mount": "HIDDEN",
@@ -171,5 +171,5 @@
             "type": "SYSTEM"
         }
     ],
-    "width": 80
+    "width": 84
 }

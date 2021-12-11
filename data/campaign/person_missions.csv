@@ -10,6 +10,7 @@ gaRR,sebestyen,,,,,10,30,60,INHOSPITABLE,,,,,,,com.fs.starfarer.api.impl.campaig
 gaTJ,sebestyen,,,,"priority, non_repeatable",10,30,60,FRIENDLY,,,,,,graphics/icons/missions/ga_transverse_jump.png,com.fs.starfarer.api.impl.campaign.missions.academy.GATransverseJump
 gaTTS,,,,,,,,,,,,,,,graphics/portraits/characters/sebestyen.png,com.fs.starfarer.api.impl.campaign.missions.academy.GATalkToSebestyen
 gaIntro,,,,,,,,,,,,,,,graphics/icons/missions/ga_intro.png,com.fs.starfarer.api.impl.campaign.missions.academy.GAIntro
+gaIntro2,,,,,,,,,,,,,,,graphics/icons/missions/ga_intro.png,com.fs.starfarer.api.impl.campaign.missions.academy.GAIntro2
 gaTTB,,,,,,,,,,,,,,,graphics/portraits/characters/provost_baird.png,com.fs.starfarer.api.impl.campaign.missions.academy.GATalkToBaird
 gaKA,,,,,,,,,,,,,,,graphics/icons/missions/kallichore_archive.png,com.fs.starfarer.api.impl.campaign.missions.academy.GAKallichore
 gaFC,,,,,,,,,,,,,,,graphics/icons/missions/finding_coureuse.png,com.fs.starfarer.api.impl.campaign.missions.academy.GAFindingCoureuse
@@ -37,3 +38,6 @@ hijack,,,underworld,,,10,30,60,INHOSPITABLE,,,,,,,com.fs.starfarer.api.impl.camp
 jabr,,,underworld,,,10,30,60,INHOSPITABLE,,,,,,graphics/icons/missions/jailbreak.png,com.fs.starfarer.api.impl.campaign.missions.JailbreakMission
 ddro,,,underworld,,,10,30,60,INHOSPITABLE,,,,,,graphics/icons/missions/dead_drop.png,com.fs.starfarer.api.impl.campaign.missions.DeadDropMission
 sitm,,,underworld,,,10,30,60,FRIENDLY,,,,,,graphics/icons/missions/blueprint_location.png,com.fs.starfarer.api.impl.campaign.missions.BlueprintIntel
+soe,,,,,,,,,,,,,,,graphics/icons/missions/eventide.png,com.fs.starfarer.api.impl.campaign.missions.SwordOfEventide
+,,,,,,,,,,,,,,,,
+"# note: if person id, tagsAll, tagsAny, and tagsNotAny are all blank, the mission will not be offered by any contact without specific scripting to make it so (via BeginMission, etc). Otherwise, the mission may be offered by any contact that meets the conditions specified by these columns.",,,,,,,,,,,,,,,,

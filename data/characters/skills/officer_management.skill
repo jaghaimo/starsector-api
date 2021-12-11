@@ -3,7 +3,7 @@
 	"governingAptitude":"leadership",
 	"compressHullmods":false,
 	"scope":"FLEET",
-	"permanent":true,
+	#"permanent":true,
 	"effectGroups":[
 		{
 			"requiredSkillLevel":0,

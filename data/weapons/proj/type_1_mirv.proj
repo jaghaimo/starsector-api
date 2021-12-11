@@ -9,7 +9,7 @@
 	"collisionClass":"MISSILE_NO_FF",
 	"explosionColor":[255,165,0,255],  # purely visual, will get a white additively blended core on top of this color
 	"explosionRadius":125, # purely visual
-	"engineSpec":{"turnAcc":1200,
+	"engineSpec":{"turnAcc":600,
 				  "turnRate":150,
 				  "acc":250,
 				  "dec":200},
@@ -38,8 +38,8 @@
 					"splitRange":1000,
 					"minTimeToSplit":2,
 					"canSplitEarly":true,
-					"splitSound":"hurricane_mirv_fire",
-					"numShots":11,
+					"splitSound":"hurricane_mirv_split",
+					"numShots":9,
 					"damage":500,
 					"impact":5,
 					"emp":0,

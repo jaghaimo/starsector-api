@@ -9,7 +9,7 @@
 			"effectBasedOnLevel":false,
 			"effects":[
 				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.CrewTraining$Level1"},
-				{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.CrewTraining$Level2"},
+				#{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.CrewTraining$Level2"},
 			]
 		},
 	],

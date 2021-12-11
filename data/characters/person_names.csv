@@ -1157,6 +1157,28 @@ Emmanuel,m,f,modern
 Gabriel,m,f,modern
 Harrier,m,f,modern
 du Bois,,l,modern
+Turnabout,,l,modern
+Vasona,,l,world
+Atateken,,l,world
+Nares,,l,world
+Hazen,,l,world
+Snowbank,,l,world
+Anadyr,,l,world
+Kolva,,l,world
+Onega,,l,world
+Voronya,f,f,world
+Suna,,l,world
+Malka,f,f,world
+Tobol,,l,world
+Katun,,l,world
+Kheta,,l,world
+Kacha,,l,world
+Orkhon,,l,world
+Molodo,,l,world
+Moloy,,l,world
+Kirenga,,l,world
+Chernaya,,l,world
+Zeya,,l,world
 Tremblay,,l,world
 Gagnon,,l,world
 Desjardins,,l,world
@@ -1193,6 +1215,20 @@ Angelis,,l,world
 Balaska,,l,world
 Aetos,,l,world
 Uther,m,f,world
+Sherbrooke,,l,world
+Mont-Royal,,l,world
+Laurier,,l,world
+Rosemont,,l,world
+Beaubien,,l,world
+Beaudry,,l,world
+Papineau,,l,world
+Frontenac,,l,world
+Joliette,,l,world
+Angrignon,,l,world
+Verdun,,l,world
+Lasalle,,l,world
+Atwater,,l,world
+Jean-Talon,,l,world
 Thor,m,f,myth
 Zeus,m,f,myth
 Isis,f,f,myth
@@ -1232,7 +1268,7 @@ Nevada,f,l,future
 America,,f,future
 Alaska,f,f,future
 Soyuz,f,f,future
-Baikal,m,f,future
+#Baikal,m,f,future
 Volna,f,f,future
 Technician,,l,future
 Fiore,,l,future
@@ -1468,7 +1504,7 @@ Patel,,l,world
 Pawar,,l,world
 Ram,,l,world
 Xu,,l,world
-Sun,,l,world
+#Sun,,l,world
 Ma,,l,world
 Sato,,l,world
 Suzuki,,l,world
@@ -1616,7 +1652,7 @@ Faith-my-joy,f,f,luddic
 Arise,m,f,"luddic, future"
 Confidence,m,f,luddic
 Humble,,l,luddic
-Livewell,,l,luddic
+#Livewell,,l,luddic
 Lively,,l,"luddic, old english"
 Weep-not,"m, f",f,luddic
 Seekwisdom,,l,luddic
@@ -1664,6 +1700,18 @@ Summer,f,f,"luddic, modern"
 Fall,m,f,luddic
 Autumn,m,f,"luddic, future"
 Winter,f,f,"luddic, future"
+Elipha,f,f,luddic
+Cleophas,f,f,luddic
+Obedience,f,f,luddic
+Zachariah,m,f,luddic
+Obediah,m,f,luddic
+Thaddeus,m,f,luddic
+Cyrus,m,f,luddic
+Azariah,m,f,luddic
+Theophilus,m,f,luddic
+Virgil,m,f,luddic
+Pleasant,,l,luddic
+Malachi,m,f,luddic
 Eureka,,f,ai
 Alabaster,,f,ai
 Crimson,,f,ai
@@ -1826,3 +1874,5 @@ Cutter,m,f,pirate
 Snip,f,f,pirate
 Slash,f,f,pirate
 Sirocco,,l,"pirate, future"
+Crashblossom,,l,pirate
+Shrapnel,"m, f",f,pirate

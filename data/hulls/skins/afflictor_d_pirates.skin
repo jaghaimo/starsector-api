@@ -9,13 +9,13 @@
 	"fleetPoints":9,
 	"ordnancePoints":40,
 	"baseValueMult":.8,
+	"suppliesToRecover":6,
+	"suppliesPerMonth":6,
 	"spriteName":"graphics/ships/afflictor/afflictor_d_pirates.png",
 	"removeWeaponSlots":["WS 001", "WS 004"], 		# ids
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
 	"removeBuiltInMods":[], 		# hullmod ids
 	"removeBuiltInWeapons":[], 		# weapon slot ids
-	#"builtInMods":["unstable_coils","degraded_engines","fragile_subsystems"],
-	#"builtInMods":["faulty_auto","damaged_mounts","degraded_life_support","degraded_shields"],
 	"builtInWeapons":{
     },
 }

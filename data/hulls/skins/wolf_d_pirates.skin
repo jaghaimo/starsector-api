@@ -10,6 +10,8 @@
 	"baseValueMult":.8,
 	"systemId":"displacer_degraded",
 	"spriteName":"graphics/ships/wolf/wolf_pirates.png",
+	"suppliesToRecover":4,
+	"suppliesPerMonth":4,
 	"removeWeaponSlots":["WS 002", "WS 003"], 		# ids
 	"removeEngineSlots":[], 		# indices, as engine slots have no id in the .ship file
 	"removeBuiltInMods":[], 		# hullmod ids

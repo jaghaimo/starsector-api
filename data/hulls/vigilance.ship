@@ -75,7 +75,7 @@
             ],
             "mount": "TURRET",
             "size": "MEDIUM",
-            "type": "ENERGY"
+            "type": "HYBRID"
         },
         {
             "angle": 0,
@@ -88,6 +88,30 @@
             "mount": "HARDPOINT",
             "size": "MEDIUM",
             "type": "MISSILE"
+        },
+        {
+            "angle": 30,
+            "arc": 5,
+            "id": "WS 003",
+            "locations": [
+                -20,
+                21
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": -30,
+            "arc": 5,
+            "id": "WS 004",
+            "locations": [
+                -20,
+                -18
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
         }
     ],
     "width": 63

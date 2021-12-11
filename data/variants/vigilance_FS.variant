@@ -1,12 +1,12 @@
 {
     "displayName": "Fire Support",
     "fluxCapacitors": 10,
-    "fluxVents": 10,
+    "fluxVents": 6,
     "goalVariant": true,
     "hullId": "vigilance",
     "hullMods": [
         "extendedshieldemitter",
-        "magazines"
+        "hardenedshieldemitter"
     ],
     "permaMods": [],
     "sMods": [],
@@ -15,7 +15,7 @@
         {
             "autofire": true,
             "mode": "ALTERNATING",
-            "weapons": {"WS 001": "heavyburst"}
+            "weapons": {"WS 001": "hveldriver"}
         },
         {
             "autofire": false,

@@ -32,6 +32,7 @@
 		"sister":{name:"Sister"},
 		"terrorist":{name:"Terrorist"},
 		"clone":{name:"Clone"},
+		
 	},
 	
 	"posts":{
@@ -97,6 +98,8 @@
 		"warlord":{name:"Warlord"},
 		"unknown":{name:"Unknown"},
 		"aristocrat":{name:"Aristocrat"},
+		
+		"synodSubcurate":{name:"Synod Subcurate"},
 	},
 }
 
