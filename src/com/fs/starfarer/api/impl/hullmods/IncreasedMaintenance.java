@@ -27,7 +27,7 @@ public class IncreasedMaintenance extends BaseHullMod {
 		if (index == 0) return "" + (int)((1f + (SUPPLY_USE_MULT - 1f) * effect - 1f) * 100f) + "%";
 		if (index == 1) return "" + (int)Math.round(CREW_PERCENT * effect) + "%";
 		if (index == 2) return "" + Math.round(MAX_CR_PENALTY * 100f * effect) + "%";
-		if (index >= 3) return CompromisedStructure.getCostDescParam(index, 2);
+		if (index >= 3) return CompromisedStructure.getCostDescParam(index, 3);
 		return null;
 	}
 

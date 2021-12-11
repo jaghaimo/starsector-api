@@ -200,7 +200,12 @@ public class BarCMD extends BaseCommandPlugin implements InteractionDialogPlugin
 		if (mem.contains(key)) {
 			List<String> eventIds = (List<String>) mem.get(key);
 			for (String id : eventIds) {
-				for (PortsideBarEvent event : data.getEvents()) {
+				OUTER: for (PortsideBarEvent event : data.getEvents()) {
+//					for (GenericBarEventCreator c : BarEventManager.getInstance().getTimeout().getItems()) {
+//						if (c.getBarEventId() != null && c.getBarEventId().equals(id)) {
+//							continue OUTER;
+//						}
+//					}
 					if (id.equals(event.getBarEventId())) {
 						events.add(event);
 					}

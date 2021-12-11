@@ -529,7 +529,9 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 			}
 		}
 		
-		DevMenuOptions.addOptions(dialog);
+		if (Global.getSettings().isDevMode()) {
+			DevMenuOptions.addOptions(dialog);
+		}
 	}
 	
 	

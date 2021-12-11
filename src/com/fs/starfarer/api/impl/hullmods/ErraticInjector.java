@@ -25,7 +25,7 @@ public class ErraticInjector extends BaseHullMod {
 		if (ship != null) effect = ship.getMutableStats().getDynamic().getValue(Stats.DMOD_EFFECT_MULT);
 		if (index == 0) return "" + (int)Math.round(FUEL_PERCENT * effect) + "%";
 		if (index == 1) return "" + (int)Math.round(ZERO_FLUX_PENALTY * effect) + "";
-		if (index >= 2) return CompromisedStructure.getCostDescParam(index, 1);
+		if (index >= 2) return CompromisedStructure.getCostDescParam(index, 2);
 		return null;
 	}
 

@@ -451,8 +451,15 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		return added;
 	}
 	
+	//public static boolean USE_NEW_SPAWN = false;
 	public AddedEntity addInactiveGate(StarSystemData data, float prob, float probDebris, float probShips, WeightedRandomPicker<String> factions) {
 		if (random.nextFloat() >= prob) return null;
+		
+//		USE_NEW_SPAWN = false;
+//		if (data.system != null && Misc.getDistance(data.system.getLocation(), new Vector2f(62500, -5500)) < 1000) {
+//			System.out.println("efwefwefe");
+//			USE_NEW_SPAWN = true;
+//		}
 		
 		LinkedHashMap<LocationType, Float> weights = new LinkedHashMap<LocationType, Float>();
 		weights.put(LocationType.STAR_ORBIT, 10f);
@@ -974,17 +981,40 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 				break;
 			case OUTER_SYSTEM:
 				SectorEntityToken near = pickOuterEntityToSpawnNear(random, system);
-				if (near != null) {
-					EntityLocation loc = new EntityLocation();
-					loc.type = type;
-					float orbitRadius = 3000 + 1500f * random.nextFloat();
-					float orbitDays = orbitRadius / (20f + random.nextFloat() * 5f);
-//					loc.orbit = Global.getFactory().createCircularOrbitWithSpin(system.getCenter(), 
+//				if (!USE_NEW_SPAWN && near != null) {
+//					EntityLocation loc = new EntityLocation();
+//					loc.type = type;
+//					float orbitRadius = 3000 + 1500f * random.nextFloat();
+//					float orbitDays = orbitRadius / (20f + random.nextFloat() * 5f);
+//					loc.orbit = Global.getFactory().createCircularOrbitWithSpin(near, 
 //							random.nextFloat() * 360f, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
-					loc.orbit = Global.getFactory().createCircularOrbitWithSpin(near, 
-							random.nextFloat() * 360f, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
-					locs.add(loc);
-				}
+//					locs.add(loc);
+//				} else {
+					if (near != null && near.getCircularOrbitRadius() > 0) {
+						EntityLocation loc = new EntityLocation();
+						loc.type = type;
+	//					float orbitRadius = 3000 + 1500f * random.nextFloat();
+	//					float orbitDays = orbitRadius / (20f + random.nextFloat() * 5f);
+	////					loc.orbit = Global.getFactory().createCircularOrbitWithSpin(system.getCenter(), 
+	////							random.nextFloat() * 360f, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
+	//					loc.orbit = Global.getFactory().createCircularOrbitWithSpin(near, 
+	//							random.nextFloat() * 360f, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
+						float orbitRadius = near.getCircularOrbitRadius() + 1000f + 1500f * random.nextFloat();
+						float orbitDays = near.getCircularOrbitPeriod();
+						loc.orbit = Global.getFactory().createCircularOrbitWithSpin(system.getCenter(), 
+								near.getCircularOrbitAngle() + 15f - 30f * random.nextFloat(),
+								orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);					
+						locs.add(loc);
+					} else if (near != null) {
+						EntityLocation loc = new EntityLocation();
+						loc.type = type;
+						float orbitRadius = outer + 500f + 500f * random.nextFloat();
+						float orbitDays = orbitRadius / (20f + random.nextFloat() * 5f);
+						loc.orbit = Global.getFactory().createCircularOrbitWithSpin(system.getCenter(), 
+								random.nextFloat() * 360f, orbitRadius, orbitDays, random.nextFloat() * 10f + 1f);
+						locs.add(loc);
+					}
+//				}
 				break;
 			case STAR_ORBIT:
 //				if (system.getType() == StarSystemType.TRINARY_1CLOSE_1FAR) {

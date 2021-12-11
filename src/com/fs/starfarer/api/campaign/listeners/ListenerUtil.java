@@ -297,6 +297,7 @@ public class ListenerUtil {
 	
 	public static List<EncounterPoint> generateEncounterPoints(LocationAPI where) {
 		List<EncounterPoint> result = new ArrayList<EncounterPoint>();
+		if (where == null) return result;
 		for (EncounterPointProvider x : Global.getSector().getListenerManager().getListeners(EncounterPointProvider.class)) {
 			List<EncounterPoint> curr = x.generateEncounterPoints(where);
 			if (curr != null) {

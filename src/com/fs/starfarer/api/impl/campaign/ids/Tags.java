@@ -3,6 +3,11 @@ package com.fs.starfarer.api.impl.campaign.ids;
 public class Tags {
 	
 	
+	/**
+	 * In ship_systems.csv, NOT on ships
+	 */
+	public static final String SYSTEM_USES_DAMPER_FIELD_AI = "uses_damper_ai";
+	
 	public static final String SPECIAL_ALLOWS_SYSTEM_USE = "special_allows_system_use";
 	public static final String SYSTEM_ALLOWS_SPECIAL_USE = "system_allows_special_use";
 	

@@ -4,6 +4,8 @@ public class HullMods {
 
 	//public static final String PDJAMMER = "pdjammer";
 	
+	public static final String HIGH_SCATTER_AMP = "high_scatter_amp";
+	
 	public static final String DETACH_WHEN_INACTIVE_SUBMODULE = "detach_when_inactive_submodule";
 	
 	public static final String DEDICATED_TARGETING_CORE = "dedicated_targeting_core";

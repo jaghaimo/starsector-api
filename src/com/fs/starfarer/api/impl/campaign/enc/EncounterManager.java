@@ -78,6 +78,7 @@ public class EncounterManager implements EveryFrameScript, EncounterPointProvide
 		if (interval.intervalElapsed()) {
 			
 			LocationAPI where = Global.getSector().getCurrentLocation();
+			if (where == null) return;
 			
 			float minRange = Global.getSettings().getMaxSensorRange(where);
 			float maxRange = minRange + MAX_EP_DIST_ADD;

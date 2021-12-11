@@ -8,6 +8,7 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipSystemAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 
 public class DamperFieldStats extends BaseShipSystemScript {
 
@@ -55,10 +56,16 @@ public class DamperFieldStats extends BaseShipSystemScript {
 	}
 	
 	public static ShipSystemAPI getDamper(ShipAPI ship) {
-		ShipSystemAPI system = ship.getSystem();
+//		ShipSystemAPI system = ship.getSystem();
+//		if (system != null && system.getId().equals("damper")) return system;
+//		if (system != null && system.getId().equals("damper_omega")) return system;
+//		if (system != null && system.getSpecAPI() != null && system.getSpecAPI().hasTag(Tags.SYSTEM_USES_DAMPER_FIELD_AI)) return system;
+//		return ship.getPhaseCloak();
+		ShipSystemAPI system = ship.getPhaseCloak();
 		if (system != null && system.getId().equals("damper")) return system;
 		if (system != null && system.getId().equals("damper_omega")) return system;
-		return ship.getPhaseCloak();
+		if (system != null && system.getSpecAPI() != null && system.getSpecAPI().hasTag(Tags.SYSTEM_USES_DAMPER_FIELD_AI)) return system;
+		return ship.getSystem();
 	}
 	
 	public void unapply(MutableShipStatsAPI stats, String id) {

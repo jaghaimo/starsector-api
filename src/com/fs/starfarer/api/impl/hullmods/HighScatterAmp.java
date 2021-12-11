@@ -15,6 +15,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.listeners.DamageDealtModifier;
 import com.fs.starfarer.api.combat.listeners.WeaponBaseRangeModifier;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -27,6 +28,19 @@ public class HighScatterAmp extends BaseHullMod {
 	public static float RANGE_LARGE = 700;
 	
 	public static float DAMAGE_BONUS_PERCENT = 10f;
+	
+	
+	@Override
+	public boolean isApplicableToShip(ShipAPI ship) {
+		return !ship.getVariant().getHullMods().contains(HullMods.ADVANCEDOPTICS);
+	}
+	
+	public String getUnapplicableReason(ShipAPI ship) {
+		if (ship.getVariant().getHullMods().contains(HullMods.ADVANCEDOPTICS)) {
+			return "Incompatible with Advanced Optics";
+		}
+		return null;
+	}
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {

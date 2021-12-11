@@ -29,7 +29,7 @@ public class DegradedLifeSupport extends BaseHullMod {
 		
 		if (index == 0) return "" + (int)Math.round((1f - crewMult) * 100f) + "%";
 		if (index == 1) return "" + Math.round(MAX_CR_PENALTY * 100f * effect) + "%";
-		if (index >= 2) return CompromisedStructure.getCostDescParam(index, 1);
+		if (index >= 2) return CompromisedStructure.getCostDescParam(index, 2);
 		return null;
 	}
 
