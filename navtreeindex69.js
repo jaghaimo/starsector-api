@@ -1,5 +1,7 @@
 var NAVTREEINDEX69 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html":[0,0,0,0,0,0,1,24],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html#a7ecc7fa168cc5ed7005d64a46e8a1fb5":[0,0,0,0,0,0,1,24,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html#a97f3809e1c39621b45eb6afe9ef40ffa":[0,0,0,0,0,0,1,24,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html#aa6ef33234acc08fa87aa4ecfec7d3b0d":[0,0,0,0,0,0,1,24,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html#aec4c5846a88448f5c3fe6fb8e9f004ec":[0,0,0,0,0,0,1,24,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX69 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a0d6c0c80b2a8b9b48928cbea0d9aa0d9":[0,0,0,0,0,0,2,24,29],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a0fda6af92a322759d8cb7fb83b83a77f":[0,0,0,0,0,0,2,24,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a14bfa8c5de8bb3908ca164e6f60bec70":[0,0,0,0,0,0,2,24,28],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a18280309c669f9cb1d858553d7f7eb5e":[0,0,0,0,0,0,2,24,25],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a1de991ed55372227474cdb28e932cff0":[0,0,0,0,0,0,2,24,43],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a1f2ab4e7584e633ce38d2d3958d82cae":[0,0,0,0,0,0,2,24,12]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a18280309c669f9cb1d858553d7f7eb5e":[0,0,0,0,0,0,2,24,25]
 };

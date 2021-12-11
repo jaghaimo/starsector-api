@@ -1,5 +1,7 @@
 var NAVTREEINDEX81 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1StatModValueGetter.html#a75e943eedbaea3fa4a1d2c4ec515f933":[0,0,0,0,0,0,10,15,1,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1StatModValueGetter.html#acd0224fa0e954edbb7ba702e65c92ded":[0,0,0,0,0,0,10,15,1,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html":[0,0,0,0,0,0,10,15,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html#aa53d968b4631d095c472b40239b16e4e":[0,0,0,0,0,0,10,15,2,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html#aae9ba687c28be93c07f6768d5efa8fc2":[0,0,0,0,0,0,10,15,2,1],

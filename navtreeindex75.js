@@ -1,5 +1,7 @@
 var NAVTREEINDEX75 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a98499eb696a5ecc0bbc96ca780202579":[0,0,0,0,0,0,2,69,74],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a98d74112daae634e6a76d04f641047cf":[0,0,0,0,0,0,2,69,39],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a98e82a07eeee2063307b62db27f73fe9":[0,0,0,0,0,0,2,69,83],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a9de6cd303b98d68ee4cd8e6bb6819626":[0,0,0,0,0,0,2,69,49],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a9efbecd53a321b35e48a9634b5feed6e":[0,0,0,0,0,0,2,69,70],
@@ -247,7 +249,5 @@ var NAVTREEINDEX75 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a27524de3ac4f2fe886069059d2f33d14":[0,0,0,0,0,0,3,4,35],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a2bfebf08595b6d83fe9d65d075abd64e":[0,0,0,0,0,0,3,4,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a2c96346b4243a5b29b1f5c603cf5dc2b":[0,0,0,0,0,0,3,4,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a306fe7ab88ee3eaa89423f8213b83663":[0,0,0,0,0,0,3,4,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a346ffd3b142fe2011e746e983533701f":[0,0,0,0,0,0,3,4,32],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a37d951e6db6adbe77f121c499951f0c5":[0,0,0,0,0,0,3,4,12]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a306fe7ab88ee3eaa89423f8213b83663":[0,0,0,0,0,0,3,4,8]
 };

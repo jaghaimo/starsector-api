@@ -1,5 +1,7 @@
 var NAVTREEINDEX64 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a15d3800ca25ffcdbd0c68941c723cdc3":[0,0,0,0,0,0,0,0,9,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a2369514387b0325a83c056f567a67573":[0,0,0,0,0,0,0,0,9,24],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a2a30e9dec353b9fb38cabab8bf646cbc":[0,0,0,0,0,0,0,0,9,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a2d9dca8c77139b861edb21e4c69d6613":[0,0,0,0,0,0,0,0,9,14],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a31b635ded43471c87e3cc853f7d92ed4":[0,0,0,0,0,0,0,0,9,20],
@@ -247,7 +249,5 @@ var NAVTREEINDEX64 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a8c1a521d342768917bbc690668cd5f96":[0,0,0,0,0,0,0,2,3,11],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a9161b0160c8aece0a927a3a0dd3523af":[0,0,0,0,0,0,0,2,3,36],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#a9fb312e37f4897f78d7d0166767d7210":[0,0,0,0,0,0,0,2,3,42],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#aa9c423c45b2acab694422b6ef4d356a5":[0,0,0,0,0,0,0,2,3,9],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#aab284993ecf75b36e961bee81ed7f668":[0,0,0,0,0,0,0,2,3,15],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#abdc9c79d59fcb93e42752ac8e8008607":[0,0,0,0,0,0,0,2,3,28]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html#aa9c423c45b2acab694422b6ef4d356a5":[0,0,0,0,0,0,0,2,3,9]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX79 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html":[0,0,0,0,0,0,7,16],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html#a6e38177acc5c7bbf8dca036b76cffd13":[0,0,0,0,0,0,7,16,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html#a7a221afadb5ff056d1f91573fc4412ba":[0,0,0,0,0,0,7,16,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html#a8e94bef48f2ed12965b27ae33ba0e49a":[0,0,0,0,0,0,7,16,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html#a9185d83555f9008274e593c764934b16":[0,0,0,0,0,0,7,16,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX79 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae79e7d30f655e0e834173131ed57df5d":[0,0,0,0,0,0,9,10,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae98263881f5862b78b2a8a69197209e9":[0,0,0,0,0,0,9,10,7],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae9a03b1ebfacce5e27337f08fefb3144":[0,0,0,0,0,0,9,10,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html":[0,0,0,0,0,0,10,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a20863b7dbcdf0ceae7520c81af3ccf21":[0,0,0,0,0,0,10,2,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a28b6acf2d41afe7500b82b851dc71d3c":[0,0,0,0,0,0,10,2,0]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html":[0,0,0,0,0,0,10,2]
 };

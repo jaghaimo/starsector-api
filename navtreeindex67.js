@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#aad18a70878c9310e114687a24cdc9bd5":[0,0,0,0,0,0,0,3,3,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#ab48b6cd49cbb3e4fddd039cec84ab351":[0,0,0,0,0,0,0,3,3,8],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#abb71a682d936605c59de9b95afd153cd":[0,0,0,0,0,0,0,3,3,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#ad2553f75d075bbe39064a5e1b2cfc16e":[0,0,0,0,0,0,0,3,3,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1ReportAPI.html":[0,0,0,0,0,0,0,3,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html":[0,0,0,0,0,0,1,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a0dc8f7286648943aed0e035c57a0e328":[0,0,0,0,0,0,1,12,18],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a0f435abc711641909a1d10136b3ca1cd":[0,0,0,0,0,0,1,12,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a16462c80bc02e344b891b828852b776c":[0,0,0,0,0,0,1,12,12],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a29d2ae544886d6ecf16733a839de5407":[0,0,0,0,0,0,1,12,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a32f8e92be45eff3b39637e57355a243b":[0,0,0,0,0,0,1,12,20]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a16462c80bc02e344b891b828852b776c":[0,0,0,0,0,0,1,12,12]
 };

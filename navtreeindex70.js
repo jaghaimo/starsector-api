@@ -1,5 +1,7 @@
 var NAVTREEINDEX70 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a1de991ed55372227474cdb28e932cff0":[0,0,0,0,0,0,2,24,43],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a1f2ab4e7584e633ce38d2d3958d82cae":[0,0,0,0,0,0,2,24,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a2094cc25b711722a47d870f2acab36b7":[0,0,0,0,0,0,2,24,4],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a20d5171773fe24dd6b9c2da50b545ea6":[0,0,0,0,0,0,2,24,18],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html#a29e68d61840d413e6d90e9472083227c":[0,0,0,0,0,0,2,24,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX70 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#ab1d449325e04e3faa9177cc103646e72":[0,0,0,0,0,0,2,41,10],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#ab2cb5a87c725e3b1bc34f2abe746155d":[0,0,0,0,0,0,2,41,11],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#ac45d238bb5451ea0cc8ffbcb72b99d4f":[0,0,0,0,0,0,2,41,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#ac6138598c11d3724bdb0f48165739e7e":[0,0,0,0,0,0,2,41,9],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#adab56fec5c81d403a2167ec28217fa0d":[0,0,0,0,0,0,2,41,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#af9423d8cb1798941758a52164ce28733":[0,0,0,0,0,0,2,41,7]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#ac6138598c11d3724bdb0f48165739e7e":[0,0,0,0,0,0,2,41,9]
 };

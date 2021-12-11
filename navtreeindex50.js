@@ -126,11 +126,13 @@ var NAVTREEINDEX50 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#afaafc2d88ccb2ac01b3ee325ee664366":[0,0,0,0,0,0,5,2,31,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighResSensors.html#afd123d1014179c94f446e110fb252fff":[0,0,0,0,0,0,5,2,31,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html":[0,0,0,0,0,0,5,2,32],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#a14050530d722ac696a5c2be8b1923642":[0,0,0,0,0,0,5,2,32,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#a1fa1610e233cfb40b618f0e5bdf1d860":[0,0,0,0,0,0,5,2,32,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#a7d13a58b883a740676958d792f349e94":[0,0,0,0,0,0,5,2,32,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#aa74615142f2cddc35460b754c31865b4":[0,0,0,0,0,0,5,2,32,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#aa74615142f2cddc35460b754c31865b4":[0,0,0,0,0,0,5,2,32,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#aad64ce7c6087e66ded9a3093cdaf717c":[0,0,0,0,0,0,5,2,32,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#af96b8ef57f6770a12c2210602a0510dc":[0,0,0,0,0,0,5,2,32,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp.html#aff0df640f3d6c89226f2fc82cfdd1b0a":[0,0,0,0,0,0,5,2,32,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html":[0,0,0,0,0,0,5,2,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#a1c6eae5e6f235fad3861bab980cfdfa5":[0,0,0,0,0,0,5,2,33,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1IncreasedMaintenance.html#a2d6f79044556a3a0dc23880017f593aa":[0,0,0,0,0,0,5,2,33,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a734573ed89c33d947d8da93581bb42ec":[0,0,0,0,0,0,7,1,32],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a7c340d81735cab60ff1bc979bcfce3d9":[0,0,0,0,0,0,7,1,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a7d6711e648c3a87fe739ed00c2ed3aa2":[0,0,0,0,0,0,7,1,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a80bdccbbdc568d727e33f268e6717ced":[0,0,0,0,0,0,7,1,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a86e79022f99b52b090de56fd4cf4a6d1":[0,0,0,0,0,0,7,1,34],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a8c5effefbf982bcf15c6230b6880ef7d":[0,0,0,0,0,0,7,1,7]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a80bdccbbdc568d727e33f268e6717ced":[0,0,0,0,0,0,7,1,6]
 };

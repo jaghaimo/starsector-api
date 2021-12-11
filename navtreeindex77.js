@@ -1,5 +1,7 @@
 var NAVTREEINDEX77 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html#a12684f1bca03be8ede88a10f10600461":[0,0,0,0,0,0,5,0,7,35,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html#a8806111bffb88beda28303380ac5d0bd":[0,0,0,0,0,0,5,0,7,35,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html#ae6b3071eea9941a7772a743470b8211b":[0,0,0,0,0,0,5,0,7,35,4],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html#af362d6639b1fdae196d920d713b3c044":[0,0,0,0,0,0,5,0,7,35,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html":[0,0,0,0,0,0,5,0,8,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX77 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a4bb095558f8504660d9455e4ee10196a":[0,0,0,0,0,0,7,6,7],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a58a57b24c19f0ff70036332dc95c261a":[0,0,0,0,0,0,7,6,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a6835f440eb112d1367eddd77bd425aea":[0,0,0,0,0,0,7,6,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a72b62365ba70914b6e9f9732d3164237":[0,0,0,0,0,0,7,6,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a796aa2a7a331cce148f1251702c287c7":[0,0,0,0,0,0,7,6,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#ab305e73419694c2dd0e8806cfd2e7cd7":[0,0,0,0,0,0,7,6,2]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a72b62365ba70914b6e9f9732d3164237":[0,0,0,0,0,0,7,6,1]
 };

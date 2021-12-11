@@ -1,5 +1,7 @@
 var NAVTREEINDEX55 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModManagerAPI.html":[0,0,0,0,0,0,22],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModManagerAPI.html#a0f7b40dd713b796495d5d7ba0e11d257":[0,0,0,0,0,0,22,4],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModManagerAPI.html#a22c158abfac7579c00a67b61bb980c14":[0,0,0,0,0,0,22,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModManagerAPI.html#aac62b7fe8551a7df9da21befcb9bbe6d":[0,0,0,0,0,0,22,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModManagerAPI.html#ab988c8e1135b9b41b21aefca7f1f564f":[0,0,0,0,0,0,22,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX55 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1VersionInfoAPI.html#ad777e53ddf3b21fa4fe7ec09bd2671a1":[0,0,0,0,0,0,33,7],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1VersionInfoAPI.html#ae01a0b65b244394272b61b3b40168175":[0,0,0,0,0,0,33,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1VersionInfoAPI.html#ae4ba8029ca181ca91fb780d9aa98ca54":[0,0,0,0,0,0,33,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1VersionInfoAPI.html#aefd750cea142702d058769737d74aa0c":[0,0,0,0,0,0,33,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreAdminPlugin.html":[0,0,0,0,0,0,0,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreAdminPlugin.html#ac46248cf99e1b4b14e83cf53bff94941":[0,0,0,0,0,0,0,7,0]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1VersionInfoAPI.html#aefd750cea142702d058769737d74aa0c":[0,0,0,0,0,0,33,8]
 };

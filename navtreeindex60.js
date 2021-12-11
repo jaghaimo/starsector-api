@@ -1,5 +1,7 @@
 var NAVTREEINDEX60 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubAPI.html#af18fe3469ee2771a73d88056360a441f":[0,0,0,0,0,0,0,62,8],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubAPI.html#af8703cc921497222ff43edec6716b664":[0,0,0,0,0,0,0,62,20],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubAPI.html#afd8fea70ab6e3c80407a8ea0cd262bb5":[0,0,0,0,0,0,0,62,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubConverterPlugin.html":[0,0,0,0,0,0,0,63],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubConverterPlugin.html#a1ac1417099449774a28193569c3857ef":[0,0,0,0,0,0,0,63,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX60 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a5761bc0d550d5961f83b5030241d9cb1":[0,0,0,0,0,0,0,78,4],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a92770b1a7048091a70b3dd41b5d79d27":[0,0,0,0,0,0,0,78,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#aa1251e31ad61c305ca0bf5b68705b115":[0,0,0,0,0,0,0,78,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#af441bb1c5f0904a51d923afbd2643846":[0,0,0,0,0,0,0,78,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitalStationAPI.html":[0,0,0,0,0,0,0,77],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html":[0,0,0,0,0,0,0,79]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#af441bb1c5f0904a51d923afbd2643846":[0,0,0,0,0,0,0,78,2]
 };

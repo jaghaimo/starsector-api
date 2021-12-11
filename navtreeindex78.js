@@ -1,5 +1,7 @@
 var NAVTREEINDEX78 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a796aa2a7a331cce148f1251702c287c7":[0,0,0,0,0,0,7,6,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#ab305e73419694c2dd0e8806cfd2e7cd7":[0,0,0,0,0,0,7,6,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#ab38452e92735527c279e24dcdd12fe9f":[0,0,0,0,0,0,7,6,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#af60f06750ecaa94cb6631bb5fc848a75":[0,0,0,0,0,0,7,6,4],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html":[0,0,0,0,0,0,7,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX78 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af61e03049f73827778be25c36ff431ef":[0,0,0,0,0,0,7,15,33],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af8c4d3d4eadc4e0a360677008bc00238":[0,0,0,0,0,0,7,15,64],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#afc7f448c595feec52058e9d103dac578":[0,0,0,0,0,0,7,15,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#affb8941d9ae9c2e7ecf798b3c85bab04":[0,0,0,0,0,0,7,15,30],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html":[0,0,0,0,0,0,7,16],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html#a6e38177acc5c7bbf8dca036b76cffd13":[0,0,0,0,0,0,7,16,1]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#affb8941d9ae9c2e7ecf798b3c85bab04":[0,0,0,0,0,0,7,15,30]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX61 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitalStationAPI.html":[0,0,0,0,0,0,0,77],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html":[0,0,0,0,0,0,0,79],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a08e8f062c1317f7f214d6978c07142ed":[0,0,0,0,0,0,0,79,15],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a0afc0c8b56a3bef34e66ea2eb4bea83b":[0,0,0,0,0,0,0,79,10],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a0f1d227b261af9fc30fc09a04207772e":[0,0,0,0,0,0,0,79,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX61 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a9a626962642d89308b545e9d342f5f1d":[0,0,0,0,0,0,0,91,11],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a9e12c26b67065352d5ea808676ee53f8":[0,0,0,0,0,0,0,91,80],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a9ea4efc2ffbcdaa27ef6cdbbece74e11":[0,0,0,0,0,0,0,91,76],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#aa289335494f4efbafd0828330d1d03aa":[0,0,0,0,0,0,0,91,68],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#aa73512ebc5d30bf5d4dd03586629b09f":[0,0,0,0,0,0,0,91,65],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#aaa2ae64c1dcd319122ebb33d15f9eca2":[0,0,0,0,0,0,0,91,84]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#aa289335494f4efbafd0828330d1d03aa":[0,0,0,0,0,0,0,91,68]
 };

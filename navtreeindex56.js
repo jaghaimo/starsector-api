@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreAdminPlugin.html":[0,0,0,0,0,0,0,7],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreAdminPlugin.html#ac46248cf99e1b4b14e83cf53bff94941":[0,0,0,0,0,0,0,7,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html":[0,0,0,0,0,0,0,8],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html#a9daf9cafaf6f973290400a294822a515":[0,0,0,0,0,0,0,8,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html#af43b0f55ff3b8316ae8fe7ca20ae6a64":[0,0,0,0,0,0,0,8,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignMissionPlugin.html#a5574ad2e20f82df2b7246f5c88033d54":[0,0,0,0,0,0,0,26,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignMissionPlugin.html#a562d5916193dc741666dd17e63006e0d":[0,0,0,0,0,0,0,26,4],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignMissionPlugin.html#a580d63e060dad59ec0a8253eaaf1e9f7":[0,0,0,0,0,0,0,26,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignMissionPlugin.html#a785ae21b4dd60839617daa10dc64ae93":[0,0,0,0,0,0,0,26,10],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignMissionPlugin.html#a8f7f7c3f32da86069ea195ac842b9caa":[0,0,0,0,0,0,0,26,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignMissionPlugin.html#ab81df58890435e3b43208fe82ed5cebe":[0,0,0,0,0,0,0,26,5]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignMissionPlugin.html#a785ae21b4dd60839617daa10dc64ae93":[0,0,0,0,0,0,0,26,10]
 };

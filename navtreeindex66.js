@@ -1,5 +1,7 @@
 var NAVTREEINDEX66 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6378e0d73132236d2d431d36614e5e02":[0,0,0,0,0,0,0,2,10,120],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a64c3437824f8a05ba3e6dc8a8ab61e62":[0,0,0,0,0,0,0,2,10,106],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a659aad8e1b60375e3ad99b300aeb689f":[0,0,0,0,0,0,0,2,10,26],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a694ebcbb06c82a84cfc4a13e13224f20":[0,0,0,0,0,0,0,2,10,52],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6b2de40e9375e183f42fbc4c5b6f22c8":[0,0,0,0,0,0,0,2,10,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX66 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#a5360507b2dd9374986a5344268d7b15e":[0,0,0,0,0,0,0,3,3,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#a5ee9a2852282fda418ab5d5e4033e5c7":[0,0,0,0,0,0,0,3,3,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#a8145301e211ae9e549761133c3849cd5":[0,0,0,0,0,0,0,3,3,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#a86f5782ccac95c6953116b419580db51":[0,0,0,0,0,0,0,3,3,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#aad18a70878c9310e114687a24cdc9bd5":[0,0,0,0,0,0,0,3,3,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#ab48b6cd49cbb3e4fddd039cec84ab351":[0,0,0,0,0,0,0,3,3,8]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1EventProbabilityAPI.html#a86f5782ccac95c6953116b419580db51":[0,0,0,0,0,0,0,3,3,3]
 };
