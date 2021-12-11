@@ -3127,22 +3127,26 @@ psi_salvage,DialogOptionSelected,$option == psi_salvage,RedPlanet genLoot,,,
 salRuins_scattered,PopulateOptions,"$market.isSurveyed
 $market.isPlanetConditionMarketOnly
 $market.mc:ruins_scattered
-!$market.ruinsExplored","$salvageSpecId = ruins_scattered
+!$market.ruinsExplored
+!$tag:gas_giant","$salvageSpecId = ruins_scattered
 FireBest DisableRuinsExploreIfNeeded","Scattered, broken domes dot the planet's surface, perchance holding lost caches of valuable materials.",5:salExplore:Explore the ruins,
 salRuins_widespread,PopulateOptions,"$market.isSurveyed
 $market.isPlanetConditionMarketOnly
 $market.mc:ruins_widespread
-!$market.ruinsExplored","$salvageSpecId = ruins_widespread
+!$market.ruinsExplored
+!$tag:gas_giant","$salvageSpecId = ruins_widespread
 FireBest DisableRuinsExploreIfNeeded","Widespread ruins, blips from radiation sources, and the distinctive burred radar-ping of foamed cerametal structures can be found across $market, evidence of a small but concerted colonization effort dating to the late expansion period of the Domain.",5:salExplore:Explore the ruins,
 salRuins_extensive,PopulateOptions,"$market.isSurveyed
 $market.isPlanetConditionMarketOnly
 $market.mc:ruins_extensive
-!$market.ruinsExplored","$salvageSpecId = ruins_extensive
+!$market.ruinsExplored
+!$tag:gas_giant","$salvageSpecId = ruins_extensive
 FireBest DisableRuinsExploreIfNeeded","Ruined cities can be found across the surface of $market, spilling from their broken hearts pitted roadways and crumbling magrail lines to the skeletons of factories, aquaponics domes, and comm-towers.",5:salExplore:Explore the ruins,
 salRuins_vast,PopulateOptions,"$market.isSurveyed
 $market.isPlanetConditionMarketOnly
 $market.mc:ruins_vast
-!$market.ruinsExplored","$salvageSpecId = ruins_vast
+!$market.ruinsExplored
+!$tag:gas_giant","$salvageSpecId = ruins_vast
 FireBest DisableRuinsExploreIfNeeded","$market is covered in vast ruins; cities, factories, mines, farms, homes. The dead are in dread abundance, entwined with salvageable materials, goods, tools, and weapons. This world is a tomb for the hubris of the Domain's project of galactic colonization and hegemony. ",5:salExplore:Explore the ruins,
 salRuins_alreadyExplored,PopulateOptions,"$market.hasRuins
 $market.ruinsExplored
@@ -11788,7 +11792,7 @@ soe_introNeriene2b:""I am.""
 soe_introNeriene2:""I am. Caspian was just leaving.""",
 soeIntroNeriene2a,DialogOptionSelected,$option == soe_introNeriene2a,"$option = soe_introNeriene2 0
 FireBest DialogOptionSelected",,,
-soeIntroNeriene2b,DialogOptionSelected,$option == soe_introNeriene2a,"$option = soe_introNeriene2 0
+soeIntroNeriene2b,DialogOptionSelected,$option == soe_introNeriene2b,"$option = soe_introNeriene2 0
 FireBest DialogOptionSelected",,,
 soeIntroNeriene2,DialogOptionSelected,"$option == soe_introNeriene2
 !$threwPunch","EndConversation DO_NOT_FIRE
@@ -11876,7 +11880,7 @@ AdjustRep hegemony SUSPICIOUS -1","Jeers and laughter come from the direction of
 
 You have no doubt that you'll be the butt of their jokes all night.
 
-A quick inquiry with one of the uniforned staff allows you access to a discreet servants' access lift and back to your shuttle's pad with a minimum of fuss.",soe_danceEscape3:Continue,
+A quick inquiry with one of the uniformed staff allows you access to a discreet servants' access lift and back to your shuttle's pad with a minimum of fuss.",soe_danceEscape3:Continue,
 soeDanceEscape3,DialogOptionSelected,$option == soe_danceEscape3,BeginConversation neriene_rao,"The staff is efficient; your entourage is summoned without requiring your intervention, though they seem to have been interrupted in the middle of a meal, wiping hands and one guard popping an anti-inebriant.
 
 Your shuttle is prepped and ready to leave.",soe_danceEscapeEnd:Board and order return to orbit,
@@ -11899,7 +11903,7 @@ soeDanceRound3,DialogOptionSelected,$option == soe_danceRound3,,"The next song b
 ""Why are you here, captain? I know it's not for Caspian Sang.""","soe_danceReplyImportant:""I was hoping to talk with someone important.""
 soe_danceReplyParty:""I just can't turn down an invitation to a good party.""
 soe_danceReplySang:""It really was to prove Sang wrong, somehow.""
-soe_danceReplyFelt:""Hard to say. It felt like I ought to be here""
+soe_danceReplyFelt:""Hard to say. It felt like I ought to be here.""
 soe_danceReplyYou:""For you, of course.""",
 soeDanceRound3important,DialogOptionSelected,$option == soe_danceReplyImportant,AdjustRepPerson neriene_rao FRIENDLY 1,"""Then I must apologize for disappointing you,"" she says with a wry smile.",soe_danceRound4:Continue,
 soeDanceRound3party,DialogOptionSelected,$option == soe_danceReplyParty,AdjustRepPerson neriene_rao FRIENDLY 1,"""Good,"" she says with a smile, ""Because I'm finally starting to enjoy myself.""",soe_danceRound4:Continue,

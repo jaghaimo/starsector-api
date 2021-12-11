@@ -9,7 +9,7 @@ Light Dual Autocannon,lightdualac,1,,300,700,,50,,3,20,5,,,,KINETIC,40,,0,0.6,2,
 Light Assault Gun,lightag,1,,300,700,,40,,3,40,5,,,,HIGH_EXPLOSIVE,40,,0,0.25,1,,0,5,1,5,,800,,,30,,,,"he6, lowtech_bp, midline_bp, merc",,,,Anti Armor,,,,,,,,,,3
 Stinger-class Proximity Mine,fragbomb,0,,100,500,,500,,10,0,1,2,0.1,,FRAGMENTATION,0,,0,1,1,,0,0,0,0,,50,20,7,150,,,"DO_NOT_AIM, ANTI_FTR, PD_ONLY, SYSTEM",he0,,,,Anti Fighter,,,,,,,,,TRUE,3.2
 Cluster Bomb Bay,clusterbomb,2,,350,1500,,300,,30,15,5,30,,,HIGH_EXPLOSIVE,0,,0,2,5,0.1,0,0,0,0,,20,20,60,75,,,"STRIKE,SYSTEM",he0,,,,Strike,,,,,,,,,TRUE,3.4
-Standard Bomb Bay,bomb,1,,200,2000,,400,,50,15,4,10,,,HIGH_EXPLOSIVE,0,,0,1,1,,0,0,0,0,,170,20,25,150,,,"STRIKE, BOMB","he0, no_drop, no_drop_salvage",,,,Strike,,,,,,,,,TRUE,3.5
+Standard Bomb Bay,bomb,1,,200,2000,,400,,50,15,4,10,,,HIGH_EXPLOSIVE,0,,0,1,1,,0,0,0,0,,170,20,25,150,,,"STRIKE, BOMB","he0, no_sell, no_drop, no_drop_salvage",,,,Strike,,,,,,,,,TRUE,3.5
 Light Needler,lightneedler,3,0.3,800,700,,50,,1,20,8,,,,KINETIC,40,,0,4.3,15,0.05,0,10,0.66,5,,1200,,,10,,,,"kinetic9, LR, remnant, rare_bp, hist1t, merc",,,,Anti Shield,,,,,,,,,,3.65
 Railgun,railgun,2,0.5,600,700,,100,,10,30,8,,,,KINETIC,90,,0.6,0,1,,,,,,,1000,,,50,,,,"kinetic8, LR, remnant, rare_bp, hist1t, merc",,,,Anti Shield,,,,,,,,,,3.75
 Thumper,shredder,0,,700,700,,100,,1,25,7,60,5,20,FRAGMENTATION,30,,0,0.55,20,0.05,0,7,1,20,,800,,,30,,,,"kinetic8, base_bp",,,,General,,,,,,,,,,3.8
