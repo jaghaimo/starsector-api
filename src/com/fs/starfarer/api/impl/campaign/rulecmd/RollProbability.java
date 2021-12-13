@@ -23,6 +23,7 @@ public class RollProbability extends BaseCommandPlugin {
 		long seed;
 		if (dialog.getInteractionTarget() != null) {
 			seed = Misc.getSalvageSeed(dialog.getInteractionTarget());
+			seed += (ruleId == null ? 0 : ruleId.hashCode());
 			seed /= 321L;
 			seed *= (Global.getSector().getClock().getMonth() + 10 + prob * 10f);
 		} else {

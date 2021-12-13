@@ -24,7 +24,7 @@ public class RemnantStationFleetManager extends SourceBasedFleetManager {
 	public class RemnantSystemEPGenerator implements EncounterPointProvider {
 		public List<EncounterPoint> generateEncounterPoints(LocationAPI where) {
 			if (!where.isHyperspace()) return null;
-			if (totalLost > 0) {
+			if (totalLost > 0 && source != null) {
 				String id = "ep_" + source.getId();
 				EncounterPoint ep = new EncounterPoint(id, where, source.getLocationInHyperspace(), EncounterManager.EP_TYPE_OUTSIDE_SYSTEM);
 				ep.custom = this;
@@ -79,6 +79,8 @@ public class RemnantStationFleetManager extends SourceBasedFleetManager {
 
 	@Override
 	protected CampaignFleetAPI spawnFleet() {
+		if (source == null) return null;
+		
 		Random random = new Random();
 		
 		int combatPoints = minPts + random.nextInt(maxPts - minPts + 1);
@@ -114,6 +116,7 @@ public class RemnantStationFleetManager extends SourceBasedFleetManager {
 		CampaignFleetAPI fleet = FleetFactoryV3.createFleet(params);
 		if (fleet == null) return null;;
 		
+		
 		LocationAPI location = source.getContainingLocation();
 		location.addEntity(fleet);
 		
@@ -134,7 +137,8 @@ public class RemnantStationFleetManager extends SourceBasedFleetManager {
 		super.reportFleetDespawnedToListener(fleet, reason, param);
 		if (reason == FleetDespawnReason.DESTROYED_BY_BATTLE) {
 			String sid = fleet.getMemoryWithoutUpdate().getString("$sourceId");
-			if (sid != null && sid.equals(source.getId())) {
+			if (sid != null && source != null && sid.equals(source.getId())) {
+			//if (sid != null && sid.equals(source.getId())) {
 				totalLost++;
 			}
 		}

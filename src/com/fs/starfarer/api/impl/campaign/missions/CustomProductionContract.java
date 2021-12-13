@@ -360,6 +360,7 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 				if (spec.getHints().contains(ShipTypeHints.HIDE_IN_CODEX)) continue;
 				if (spec.getHints().contains(ShipTypeHints.UNBOARDABLE)) continue;
 				if (spec.isDefaultDHull() || spec.isDHull()) continue;
+				if ("shuttlepod".equals(spec.getHullId())) continue;
 				if (ships.contains(spec.getHullId())) continue;
 				if (!hullSizes.contains(spec.getHullSize())) continue;
 				float cost = prod.createSampleItem(ProductionItemType.SHIP, spec.getHullId(), 1).getBaseCost();

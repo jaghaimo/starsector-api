@@ -34,7 +34,7 @@ public class RogueMinerMiscFleetManager extends SourceBasedFleetManager {
 		
 		float days = Global.getSector().getClock().convertToDays(amount);
 		daysRemaining -= days;
-		if (daysRemaining <= 0) {
+		if (daysRemaining <= 0 && source != null) {
 			// source is Derinkuyu; going back to independent status
 			if (source.getMarket() != null && source.getMarket().isInEconomy()) {
 				source.setFaction(Factions.INDEPENDENT);
@@ -54,6 +54,7 @@ public class RogueMinerMiscFleetManager extends SourceBasedFleetManager {
 
 	@Override
 	protected CampaignFleetAPI spawnFleet() {
+		if (source == null) return null;
 		CampaignFleetAPI fleet = createEmptyRogueFleet("Rogue Miner Force", false);
 	
 		WeightedRandomPicker<String> picker1 = new WeightedRandomPicker<String>();
