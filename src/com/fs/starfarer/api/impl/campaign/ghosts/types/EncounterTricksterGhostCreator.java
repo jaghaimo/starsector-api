@@ -180,6 +180,7 @@ public class EncounterTricksterGhostCreator extends BaseSensorGhostCreator {
 		}
 		
 		if (fleet == null) return null;
+		fleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);
 		fleet.addScript(new MissionFleetAutoDespawn(null, fleet));
 		
 		return fleet;

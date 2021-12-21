@@ -20,7 +20,7 @@ import com.fs.starfarer.api.util.Misc;
 public class PolarizedArmor {
 	
 	//public static float ARMOR_FRACTION_BONUS = 0.05f;
-	public static float EFFECTIVE_ARMOR_BONUS = 100;
+	public static float EFFECTIVE_ARMOR_BONUS = 50;
 	public static float EMP_BONUS_PERCENT = 50f;
 	
 	public static float VENT_RATE_BONUS = 25f;

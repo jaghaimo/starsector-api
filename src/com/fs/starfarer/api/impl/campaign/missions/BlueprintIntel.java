@@ -60,7 +60,7 @@ public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootLi
 		else if (tier == 2) qWeight = 2f;
 		else if (tier >= 3) qWeight = 4f;
 
-		return (1f - qWeight) + qWeight * q;
+		return (1f - qWeight) + qWeight * (1f + q);
 	}
 	
 	protected void pickItem() {
@@ -86,6 +86,8 @@ public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootLi
 				if (pick != null) {
 					item = new SpecialItemData(type, pick.getId());
 					price = (int) pick.getBaseValue();
+				} else {
+					typePicker.remove(type);
 				}
 			} else if (type.equals(Items.WEAPON_BP)) {
 				WeightedRandomPicker<WeaponSpecAPI> picker = new WeightedRandomPicker<WeaponSpecAPI>(genRandom);
@@ -100,6 +102,8 @@ public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootLi
 				if (pick != null) {
 					item = new SpecialItemData(type, pick.getWeaponId());
 					price = (int) pick.getBaseValue();
+				} else {
+					typePicker.remove(type);
 				}
 			} else if (type.equals(Items.SHIP_BP)) {
 				WeightedRandomPicker<ShipHullSpecAPI> picker = new WeightedRandomPicker<ShipHullSpecAPI>(genRandom);
@@ -114,7 +118,12 @@ public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootLi
 				if (pick != null) {
 					item = new SpecialItemData(type, pick.getHullId());
 					price = (int) pick.getBaseValue();
+				} else {
+					typePicker.remove(type);
 				}
+			} else {
+				// ???
+				break;
 			}
 		}
 		

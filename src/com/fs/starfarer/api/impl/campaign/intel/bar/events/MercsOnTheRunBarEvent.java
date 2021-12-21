@@ -33,6 +33,7 @@ public class MercsOnTheRunBarEvent extends BaseGetCommodityBarEvent {
 
 	@Override
 	protected void doExtraConfirmActions() {
+		PlayerFleetPersonnelTracker.getInstance().update();
 		PlayerFleetPersonnelTracker.getInstance().getMarineData().addXP((float)quantity);
 	}
 

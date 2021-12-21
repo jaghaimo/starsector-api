@@ -209,44 +209,45 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 			
 			List<Constellation> list = new ArrayList<Constellation>(context.constellations);
 			Collections.shuffle(list, random);
+			
+			List<StarSystemData> systems = new ArrayList<StarSystemData>();
 			for (Constellation c : list) {
-				List<StarSystemData> systems = new ArrayList<StarSystemData>();
 				for (StarSystemAPI system : c.getSystems()) {
 					StarSystemData data = computeSystemData(system);
 					systems.add(data);
 				}
+			}
 				
-				Collections.shuffle(systems, random);
-				for (StarSystemData data  : systems) {
-					boolean matches = false;
-					for (String tag : data.system.getTags()) {
-						if (tags.contains(tag)) {
-							matches = true;
-							break;
-						}
+			Collections.shuffle(systems, random);
+			for (StarSystemData data  : systems) {
+				boolean matches = false;
+				for (String tag : data.system.getTags()) {
+					if (tags.contains(tag)) {
+						matches = true;
+						break;
 					}
-					if (!matches) continue;
-	
-					EntityLocation loc = pickAnyLocation(random, data.system, 70f, null);
-					AddedEntity ae = addDerelictShip(data, loc, variant);
-					if (ae != null) {
-						if (numSalvageable > 0) {
-							numSalvageable--;
-							ShipRecoverySpecialCreator creator = new ShipRecoverySpecialCreator(random, 0, 0, false, null, null);
-							Object specialData = creator.createSpecial(ae.entity, new SpecialCreationContext());
-							if (specialData != null) {
-								Misc.setSalvageSpecial(ae.entity, specialData);
-							}
-						} else {
-							numNonSalvageable--;
-							SalvageSpecialAssigner.assignSpecials(ae.entity, true);
+				}
+				if (!matches) continue;
+
+				EntityLocation loc = pickAnyLocation(random, data.system, 70f, null);
+				AddedEntity ae = addDerelictShip(data, loc, variant);
+				if (ae != null) {
+					if (numSalvageable > 0) {
+						numSalvageable--;
+						ShipRecoverySpecialCreator creator = new ShipRecoverySpecialCreator(random, 0, 0, false, null, null);
+						Object specialData = creator.createSpecial(ae.entity, new SpecialCreationContext());
+						if (specialData != null) {
+							Misc.setSalvageSpecial(ae.entity, specialData);
 						}
-						if (DEBUG) System.out.println("      Added " + variant + " to " + data.system + "\n");
+					} else {
+						numNonSalvageable--;
+						SalvageSpecialAssigner.assignSpecials(ae.entity, true);
 					}
-					if (numSalvageable + numNonSalvageable <= 0) break;
+					if (DEBUG) System.out.println("      Added " + variant + " to " + data.system + "\n");
 				}
 				if (numSalvageable + numNonSalvageable <= 0) break;
 			}
+			//if (numSalvageable + numNonSalvageable <= 0) break;
 			
 			if (DEBUG) System.out.println("Finished adding " + variant + " to star systems\n\n\n\n\n");
 		}

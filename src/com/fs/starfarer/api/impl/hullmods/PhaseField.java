@@ -14,6 +14,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -48,10 +49,18 @@ public class PhaseField extends BaseHullMod implements HullModFleetEffect {
 	}
 
 	public void advanceInCampaign(CampaignFleetAPI fleet) {
+		//if (fleet.isPlayerFleet() && fleet.getMemoryWithoutUpdate() != null &&
+		String key = "$updatedPhaseFieldModifier";
+		if (fleet.isPlayerFleet() && fleet.getMemoryWithoutUpdate() != null &&
+				!fleet.getMemoryWithoutUpdate().getBoolean(key) &&
+				fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.JUST_TOGGLED_TRANSPONDER)) {
+			onFleetSync(fleet);
+			fleet.getMemoryWithoutUpdate().set(key, true, 0.1f);
+		}
 	}
 
 	public boolean withAdvanceInCampaign() {
-		return false;
+		return true;
 	}
 	public boolean withOnFleetSync() {
 		return true;

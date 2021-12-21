@@ -755,6 +755,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 //		List<CampaignFleetAPI> losers = battle.getSideFor(getLoserData().getFleet());
 		List<CampaignFleetAPI> winners = battle.getSnapshotSideFor(getWinnerData().getFleet());
 		List<CampaignFleetAPI> losers = battle.getSnapshotSideFor(getLoserData().getFleet());
+		if (winners == null || losers == null) return;
 		
 		for (CampaignFleetAPI loser : losers) {
 			for (FleetMemberAPI member : loser.getFleetData().getMembersListCopy()) {
@@ -2204,6 +2205,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			loot.addFuel((int) Math.round(fuel * (fuelMult - 1f)));
 		}
 		
+		if (getBattle().getSnapshotSideFor(loser.getFleet()) == null) return;
 		
 		List<DropData> dropRandom = new ArrayList<DropData>();
 		List<DropData> dropValue = new ArrayList<DropData>();
@@ -2348,6 +2350,8 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		
 		
 		List<CampaignFleetAPI> losers = battle.getSnapshotSideFor(loser.getFleet());
+		if (losers == null) return;
+		
 		List<LootableCargoStack> stacks = new ArrayList<LootableCargoStack>();
 		for (CampaignFleetAPI curr : losers) {
 			for (CargoStackAPI stack : curr.getCargo().getStacksCopy()) {
@@ -3023,7 +3027,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		
 		DataForEncounterSide data = getDataFor(result.getFleet());
 		CrewCompositionAPI recoverable = data.getRecoverableCrewLosses();
-		recoverable.removeAllCrew();
+		//recoverable.removeAllCrew();
 		
 		List<FleetMemberAPI> all = new ArrayList<FleetMemberAPI>();
 		all.addAll(result.getDisabled());
@@ -3124,10 +3128,10 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			if (maxCrew + playerCapacityLost > 0) {
 				total *= playerCapacityLost / (maxCrew + playerCapacityLost);
 			}
-			if (!wonBattle) {
-				total = totalCrew + marines;
-				recoverableTotal = 0f;
-			}
+//			if (!wonBattle) {
+//				total = totalCrew + marines;
+//				recoverableTotal = 0f;
+//			}
 			//if (total > playerOvercapLosses) total = playerOvercapLosses;
 			if (total > maxCrew) {
 				//float toLose = Math.min(maxExtraLoss, total - maxCrew);

@@ -15,6 +15,7 @@ public class MemFlags {
 
 	public static final String GLOBAL_SENSOR_BURST_JUST_USED_IN_CURRENT_LOCATION = "$sensorBurstJustUsed";
 	public static final String JUST_DID_SENSOR_BURST = "$justDidSensorBurst";
+	public static final String JUST_TOGGLED_TRANSPONDER = "$justToggledTransponder";
 	
 	public static final String GLOBAL_INTERDICTION_PULSE_JUST_USED_IN_CURRENT_LOCATION = "$interdictionPulseJustUsed";
 	public static final String JUST_DID_INTERDICTION_PULSE = "$justDidInterdictionPulse";

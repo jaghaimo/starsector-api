@@ -4,7 +4,10 @@ import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.FleetAssignment;
+import com.fs.starfarer.api.campaign.ai.FleetAssignmentDataAPI;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.util.Misc;
 
 public class MissionFleetAutoDespawn implements EveryFrameScript {
@@ -20,7 +23,34 @@ public class MissionFleetAutoDespawn implements EveryFrameScript {
 	
 	protected int framesWithNoAssignment = 0;
 	public void advance(float amount) {
+		boolean missionImportant = fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.ENTITY_MISSION_IMPORTANT);
+		FleetAssignmentDataAPI ad = fleet.getCurrentAssignment();
+		// make a hopefully reasonable guess that the fleet should stop chasing the player, if that's what it's doing
+		// it it's not "important" (i.e. likely wrong mission stage) and not in the same location and far away
+		if (ad != null && 
+				(ad.getAssignment() == FleetAssignment.INTERCEPT || ad.getAssignment() == FleetAssignment.FOLLOW) &&
+				ad.getTarget() == Global.getSector().getPlayerFleet() &&
+				!fleet.isInCurrentLocation() && !missionImportant) {
+			float dist = Misc.getDistanceLY(fleet, Global.getSector().getPlayerFleet());
+			if (dist > 4f) {
+				fleet.removeFirstAssignment();
+				if (fleet.getCurrentAssignment() == null) {
+					Misc.giveStandardReturnToSourceAssignments(fleet);
+				}
+			}
+		}
+		
+//		clean up, figure out details of exactly how to do this 
+//			- don't want to do it super quick when still during the mission
+//			- probably want to give some kind of assignment if there's nothing left after removing the intercept
+//			- and also when the mission's ended, give return assignments too? still auto-despawn! just, have it
+//					be returning instead of sitting around waiting
+		
 		if (isMissionEnded()) {
+			if (fleet.getCurrentAssignment() == null) {
+				Misc.giveStandardReturnToSourceAssignments(fleet);
+			}
+			
 			if (!fleet.isInCurrentLocation() && Misc.getDistanceToPlayerLY(fleet) > 3f) {
 				elapsedWaitingForDespawn += Global.getSector().getClock().convertToDays(amount);
 				if (elapsedWaitingForDespawn > 30f && fleet.getBattle() == null) {
@@ -30,6 +60,7 @@ public class MissionFleetAutoDespawn implements EveryFrameScript {
 			} else {
 				elapsedWaitingForDespawn = 0f;
 			}
+			
 		} else if (fleet.isInCurrentLocation() && fleet.getCurrentAssignment() == null) {
 			framesWithNoAssignment++;
 			if (framesWithNoAssignment >= 10) {

@@ -20,6 +20,7 @@ import com.fs.starfarer.api.combat.ShipCommand;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.combat.WeaponGroupAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.hullmods.NeuralInterface;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.mission.FleetSide;
 
@@ -36,6 +37,9 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 	public static boolean ALLOW_ENGINE_CONTROL_DURING_TRANSFER = false;
 	
 	public static final Object KEY_STATUS = new Object();
+	public static final Object KEY_STATUS2 = new Object();
+	
+	public static final String TRANSFER_COMPLETE_KEY = "neural_transfer_complete_key";
 	
 	
 	public static class SavedShipControlState {
@@ -117,6 +121,7 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 			if (untilTransfer <= 0) {
 				untilTransfer = 0;
 				Global.getSoundPlayer().playUISound("ui_neural_transfer_complete", 1f, 1f);
+				playerShip.setCustomData(TRANSFER_COMPLETE_KEY, true);
 				showTranferFloatyIfNeeded();
 				engine.getCombatUI().reFanOutShipInfo();
 				boolean autopilot = engine.getCombatUI().isAutopilotOn();
@@ -304,8 +309,37 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 			}
 		}
 		
+		if (linked.contains(playerShip)) {
+			ShipAPI other = null;
+			for (ShipAPI ship : linked) {
+				if (ship != playerShip) {
+					other = ship;
+					break;
+				}
+			}
+			
+			String title = "Neural System Reset";
+			//String title = "System Reset on Transfer";
+			String icon = Global.getSettings().getSpriteName("ui", "icon_neural_link");
+			String key = NeuralInterface.SYSTEM_RESET_TIMEOUT_KEY;
+//			Float timeout = (Float) Global.getCombatEngine().getCustomData().get(key);
+//			if (timeout == null) timeout = 0f;
+			Float timeout = null;
+			if (other != null) timeout = (Float) other.getCustomData().get(key);
+			if (timeout == null) timeout = 0f;
+			if (other == null) {
+				engine.maintainStatusForPlayerShip(KEY_STATUS2, icon, title, "No signal", true);
+			} else if (timeout <= 0) {
+				engine.maintainStatusForPlayerShip(KEY_STATUS2, icon, title, "Ready on transfer", false);
+			} else {
+				int show = (int) Math.ceil(timeout);
+				engine.maintainStatusForPlayerShip(KEY_STATUS2, icon, title, "Ready in " + show + " seconds", true);
+			}
+		}
+		
 		for (ShipAPI ship : linked) {
 			if (ship != playerShip) {
+				
 				if (untilTransfer <= 0f) {
 					String title = "Neural Link Active";
 					//String data = ship.getName() + ", " + ship.getHullSpec().getHullNameWithDashClass();
@@ -322,6 +356,7 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 						engine.maintainStatusForPlayerShip(KEY_STATUS, icon, title, data, true);
 					}
 				}
+				
 				break;
 			}
 		}
@@ -334,7 +369,6 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 			}
 			String icon = Global.getSettings().getSpriteName("ui", "icon_neural_link");
 			engine.maintainStatusForPlayerShip(KEY_STATUS, icon, title, data, true);
-			
 		}
 	}
 	
@@ -376,6 +410,7 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 		
 		if (untilTransfer <= 0) {
 			Global.getSoundPlayer().playUISound("ui_neural_transfer_complete", 1f, 1f);
+			ship.setCustomData(TRANSFER_COMPLETE_KEY, true);
 			showTranferFloatyIfNeeded();
 			engine.getCombatUI().reFanOutShipInfo();
 		} else {

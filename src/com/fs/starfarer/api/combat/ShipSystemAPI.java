@@ -64,4 +64,8 @@ public interface ShipSystemAPI {
 	Vector2f getTargetLoc();
 
 	void forceState(SystemState state, float progress);
+
+	float getAmmoPerSecond();
+
+	float getAmmoReloadProgress();
 }

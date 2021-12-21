@@ -2088,11 +2088,11 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			picker.add(HullMods.UNSTABLE_INJECTOR, 1f);
 		}
 		
-		if (availableMods.contains(HullMods.SAFETYOVERRIDES)) {
-			if (hull.getHullSize().ordinal() <= HullSize.CRUISER.ordinal()) {
-				picker.add(HullMods.SAFETYOVERRIDES, 1f);
-			}
-		}
+//		if (availableMods.contains(HullMods.SAFETYOVERRIDES)) {
+//			if (hull.getHullSize().ordinal() <= HullSize.CRUISER.ordinal()) {
+//				picker.add(HullMods.SAFETYOVERRIDES, 1f);
+//			}
+//		}
 		
 		
 		float addedTotal = 0;

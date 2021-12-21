@@ -52,6 +52,8 @@ public class SensorGhostManager implements EveryFrameScript {
 	}
 	
 	
+	public static float GHOST_SPAWN_RATE_MULT = 0.75f;
+	
 	public static float SB_ATTRACT_GHOSTS_PROBABILITY = 0.5f;
 	public static float SB_FAILED_TO_ATTRACT_TIMEOUT_MULT = 0.25f;
 	public static float MIN_SB_TIMEOUT = 5f;
@@ -115,7 +117,7 @@ public class SensorGhostManager implements EveryFrameScript {
 			checkSensorBursts();
 		}
 		
-		timeoutRemaining -= days;
+		timeoutRemaining -= days * GHOST_SPAWN_RATE_MULT;
 		if (timeoutRemaining <= 0f) {
 			spawnGhost();
 			spawnTriggeredBySensorBurst = false;

@@ -298,6 +298,9 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 	}
 	protected float computeAndCacheThresholdBonus(FleetDataAPI data, MutableCharacterStatsAPI cStats,
 			String key, float maxBonus, ThresholdBonusType type) {
+//		if (key.equals("pc_peak")) {
+//			System.out.println("efwfwefwe");
+//		}
 		if (data == null) return maxBonus;
 		if (cStats.getFleet() == null) return maxBonus;
 

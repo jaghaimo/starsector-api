@@ -38,7 +38,7 @@ public class GravityConditionGenerator implements ConditionGenerator {
 			float range = max - 140;
 			float chance = 0f;
 			if (range > 0) {
-				chance = 0.1f + 0.9f * ((max - radius) / range);
+				chance = 0.1f + 0.9f * (1f - ((max - radius) / range));
 			}
 			if (StarSystemGenerator.random.nextFloat() < chance) {
 				conditionsSoFar.add(Conditions.HIGH_GRAVITY);

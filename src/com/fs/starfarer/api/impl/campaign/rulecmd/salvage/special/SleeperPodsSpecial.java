@@ -92,6 +92,7 @@ public class SleeperPodsSpecial extends BaseSalvageSpecial {
 		SleeperSpecialType type = data.type;
 		
 		if (type == SleeperSpecialType.CREW) quantity = Math.min(crewBerths, quantity);
+		if (type == SleeperSpecialType.MARINES) quantity = Math.min(crewBerths, quantity);
 		//if (type == SleeperSpecialType.OFFICER) quantity = Math.min(officerBerths, quantity);
 		if (type == SleeperSpecialType.ADMIN || type == SleeperSpecialType.OFFICER) quantity = 1;
 		

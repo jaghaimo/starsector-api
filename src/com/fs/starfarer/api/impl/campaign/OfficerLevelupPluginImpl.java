@@ -22,32 +22,53 @@ public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 	//public static float XP_MULT = 5f;
 	public static float XP_MULT = Global.getSettings().getFloat("officerXPRequiredMult");
 	
+	public static float EXPONENT_BEYOND_MAX_SPECIFIED_LEVEL = 1.1f;
+	
+	public static long [] XP_PER_LEVEL = new long [] {
+		0,		// level 1
+		12000,
+		20000,
+		35000,
+		45000,  // level 5
+		50000,
+		50000,
+		50000,
+		50000,
+		50000,
+	};
+	
+	public static long [] TOTAL_XP_PER_LEVEL = new long [XP_PER_LEVEL.length];
+	
+	static {
+		long total = 0;
+		for (int i = 0; i < XP_PER_LEVEL.length; i++) {
+			total += XP_PER_LEVEL[i];
+			TOTAL_XP_PER_LEVEL[i] = total;
+		}
+	}
+	
 	public long getXPForLevel(int level) {
-
 		if (level <= 1) return 0;
 		
-		float p1 = 10;
-		float p2 = 35;
+		if (level - 1 < TOTAL_XP_PER_LEVEL.length) {
+			return (long) (TOTAL_XP_PER_LEVEL[level - 1] * XP_MULT);
+		}
 		
-		float f1 = 1f;
-		float f2 = Math.min(1, Math.max(0, level - p1) / 5f);
-		float f3 = Math.max(0, level - p2);
-		
-		float p1level = Math.max(0, level - p1 + 1);
-		float p2level = Math.max(0, level - p2 + 1);
-		float mult1 = (1f + (float) level) * 0.5f * (float) level * 1f;
-		float mult2 = (1f + (float) p1level) * 0.5f * (float) p1level * 0.25f;
-		float mult3 = (1f + (float) p2level) * 0.5f * (float) p2level * 2f;
-		
-		float base = 1500;
-		
-		float r = f1 * mult1 * base +
-			      f2 * mult2 * base +
-			      f3 * mult3 * base;
-		
-		r *= XP_MULT;
-		
-		return (long) r * 6;
+		int maxSpecified = TOTAL_XP_PER_LEVEL.length;
+		long curr = TOTAL_XP_PER_LEVEL[maxSpecified - 1];
+		long last = XP_PER_LEVEL[maxSpecified - 1];
+		for (int i = maxSpecified; i < level; i++) {
+			last *= EXPONENT_BEYOND_MAX_SPECIFIED_LEVEL;
+			curr += last;
+		}
+
+		return (long) (curr * XP_MULT);
+	}
+	
+	public static void main(String[] args) {
+		for (int i = 1; i <= 6; i++) {
+			System.out.println("Level " + i + ": " + new OfficerLevelupPluginImpl().getXPForLevel(i));
+		}
 	}
 
 	public int getMaxLevel(PersonAPI person) {

@@ -681,7 +681,9 @@ public class SalvageSpecialAssigner {
 				
 				PersonAPI officer = OfficerManagerEvent.createOfficer(faction, level, pref, true, null, true, 
 																	  true, eliteSkillNumOverride, random);
-				officer.getMemoryWithoutUpdate().set(MemFlags.EXCEPTIONAL_SLEEPER_POD_OFFICER, true);
+				if (level == EXCEPTIONAL_PODS_OFFICER_LEVEL) {
+					officer.getMemoryWithoutUpdate().set(MemFlags.EXCEPTIONAL_SLEEPER_POD_OFFICER, true);
+				}
 				data.officer = officer;
 				data.min = 1;
 				data.max = 1;

@@ -22,10 +22,12 @@ import com.fs.starfarer.api.util.Misc;
 
 public class HighScatterAmp extends BaseHullMod {
 
-	//public static float RANGE_PENALTY_PERCENT = 50f;
-	public static float RANGE_FRIGATE = 500;
-	public static float RANGE_DESTROYER = 600;
-	public static float RANGE_LARGE = 700;
+	public static float RANGE_THRESHOLD = 200f;
+	public static float RANGE_MULT = 0.5f;
+	
+//	public static float RANGE_FRIGATE = 500;
+//	public static float RANGE_DESTROYER = 600;
+//	public static float RANGE_LARGE = 700;
 	
 	public static float DAMAGE_BONUS_PERCENT = 10f;
 	
@@ -113,7 +115,6 @@ public class HighScatterAmp extends BaseHullMod {
 		}
 	}
 	
-
 	public static class HighScatterAmpRangeMod implements WeaponBaseRangeModifier {
 		public HighScatterAmpRangeMod() {
 		}
@@ -126,19 +127,40 @@ public class HighScatterAmp extends BaseHullMod {
 		public float getWeaponBaseRangeFlatMod(ShipAPI ship, WeaponAPI weapon) {
 			if (weapon.isBeam()) {
 				float range = weapon.getSpec().getMaxRange();
-				float max = range;
-				if (ship.isFighter() || ship.isFrigate()) {
-					max = RANGE_FRIGATE;
-				} else if (ship.isDestroyer()) {
-					max = RANGE_DESTROYER;
-				} else if (ship.isCruiser() || ship.isCapital()) {
-					max = RANGE_LARGE;
-				}
-				return Math.min(0f, max - range);
+				if (range < RANGE_THRESHOLD) return 0;
+				
+				float past = range - RANGE_THRESHOLD;
+				float penalty = past * (1f - RANGE_MULT);
+				return -penalty;
 			}
 			return 0f;
 		}
 	}
+//	public static class HighScatterAmpRangeMod implements WeaponBaseRangeModifier {
+//		public HighScatterAmpRangeMod() {
+//		}
+//		public float getWeaponBaseRangePercentMod(ShipAPI ship, WeaponAPI weapon) {
+//			return 0;
+//		}
+//		public float getWeaponBaseRangeMultMod(ShipAPI ship, WeaponAPI weapon) {
+//			return 1f;
+//		}
+//		public float getWeaponBaseRangeFlatMod(ShipAPI ship, WeaponAPI weapon) {
+//			if (weapon.isBeam()) {
+//				float range = weapon.getSpec().getMaxRange();
+//				float max = range;
+//				if (ship.isFighter() || ship.isFrigate()) {
+//					max = RANGE_FRIGATE;
+//				} else if (ship.isDestroyer()) {
+//					max = RANGE_DESTROYER;
+//				} else if (ship.isCruiser() || ship.isCapital()) {
+//					max = RANGE_LARGE;
+//				}
+//				return Math.min(0f, max - range);
+//			}
+//			return 0f;
+//		}
+//	}
 
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		//if (index == 0) return "" + (int)RANGE_PENALTY_PERCENT + "%";
@@ -161,12 +183,16 @@ public class HighScatterAmp extends BaseHullMod {
 				"" + (int)DAMAGE_BONUS_PERCENT + "%"
 				);
 		
-		tooltip.addPara("Reduces the base range of beam weapons to %s for frigates, %s for destroyers, "
-				+ "and %s for larger ships.", opad, h,
-				"" + (int)RANGE_FRIGATE,
-				"" + (int)RANGE_DESTROYER,
-				"" + (int)RANGE_LARGE
+		tooltip.addPara("Reduces the portion of the range of beam weapons that is above %s units by %s. The base range is affected.", opad, h,
+				"" + (int)RANGE_THRESHOLD,
+				"" + (int)Math.round((1f - RANGE_MULT) * 100f) + "%"
 				);
+//		tooltip.addPara("Reduces the base range of beam weapons to %s for frigates, %s for destroyers, "
+//				+ "and %s for larger ships.", opad, h,
+//				"" + (int)RANGE_FRIGATE,
+//				"" + (int)RANGE_DESTROYER,
+//				"" + (int)RANGE_LARGE
+//				);
 		
 		tooltip.addSectionHeading("Interactions with other modifiers", Alignment.MID, opad);
 		tooltip.addPara("The base range is reduced, thus percentage and multiplicative modifiers - such as from Integrated Targeting Unit, "

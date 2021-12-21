@@ -14,10 +14,48 @@ import com.fs.starfarer.api.impl.campaign.ExplosionEntityPlugin.ExplosionParams;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 
 public class GateExplosionScript implements EveryFrameScript {
 
+	public static class SystemCutOffRemoverScript implements EveryFrameScript {
+		public StarSystemAPI system;
+		public IntervalUtil interval = new IntervalUtil(0.5f, 1.5f);
+		public boolean done;
+		public float elapsed = 0f;
+		
+		public SystemCutOffRemoverScript(StarSystemAPI system) {
+			super();
+			this.system = system;
+		}
+		public boolean isDone() {
+			return done;
+		}
+		public boolean runWhilePaused() {
+			return false;
+		}
+
+		public void advance(float amount) {
+			if (done) return;
+			
+			float days = Global.getSector().getClock().convertToDays(amount);
+			elapsed += days;
+			interval.advance(days);
+			if (interval.intervalElapsed() && elapsed > 10f) { // make sure gate's already exploded
+				boolean allJPUsable = true;
+				for (SectorEntityToken jp : system.getJumpPoints()) {
+					allJPUsable &= !jp.getMemoryWithoutUpdate().getBoolean(JumpPointInteractionDialogPluginImpl.UNSTABLE_KEY);
+				}
+				if (allJPUsable) {
+					system.removeTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER);
+					done = true;
+				}
+			}
+		}
+		
+	}
+	
 	public static float UNSTABLE_DAYS_MIN = 200;
 	public static float UNSTABLE_DAYS_MAX = 400;
 	
@@ -39,9 +77,11 @@ public class GateExplosionScript implements EveryFrameScript {
 		StarSystemAPI system = gate.getStarSystem();
 		if (system != null) {
 			system.addTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER);
+			system.addScript(new SystemCutOffRemoverScript(system));
 		}
 		
 		delay = 1.2f; // plus approximately 2 seconds from how long plugin.jitter() takes to build up
+		
 	}
 
 

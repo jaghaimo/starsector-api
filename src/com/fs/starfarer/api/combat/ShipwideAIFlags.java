@@ -31,6 +31,11 @@ public class ShipwideAIFlags {
 		HAS_INCOMING_DAMAGE,
 		KEEP_SHIELDS_ON,
 		DO_NOT_BACK_OFF,
+		
+		/**
+		 * To function reliably, requires DO_NOT_BACK_OFF to be set, also.
+		 */
+		DO_NOT_BACK_OFF_EVEN_WHILE_VENTING,
 		BACK_OFF,
 		BACK_OFF_MIN_RANGE,
 		STANDING_OFF_VS_SHIP_ON_MAP_BORDER,

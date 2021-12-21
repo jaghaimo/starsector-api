@@ -10,6 +10,7 @@ import com.fs.starfarer.api.campaign.CustomVisualDialogDelegate.DialogCallbacks;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.ui.CustomPanelAPI;
+import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.PositionAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.FaderUtil;
@@ -73,8 +74,10 @@ public class DuelTutorialPanel implements CustomUIPanelPlugin {
 		} else if (curr == TutStage.ATTACK) {
 			info.addPara("Press SPACE to attack.", 0f, h, "SPACE");
 		} else if (curr == TutStage.BLOCK) {
-			info.addPara("Press UP to block or parry. "
+			LabelAPI label = info.addPara("Press UP to block or parry. "
 					+ "A skilled fighter can also execute a quick attack, or a \"riposte\", by attacking immediately after deflecting their opponent's attack.", 0f, h, "UP");
+			label.setHighlightColors(h, Misc.getStoryOptionColor());
+			label.setHighlight("UP", "skilled fighter");
 		} else if (curr == TutStage.LEAVE) {
 			info.addPara("Your health is in the top left of the screen.\n\n"
 					+ "Make a few practice moves, then press ESCAPE to continue.", 0f, h, "ESCAPE");

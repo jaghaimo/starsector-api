@@ -3037,7 +3037,7 @@ public class MarketCMD extends BaseCommandPlugin {
 			}
 			float elapsed = Misc.getMercDaysSinceHired(od.getPerson());
 			
-			if (elapsed > contractDur || debt) {
+			if (elapsed > contractDur || (debt && elapsed > 45f)) { // make sure the merc was hired long enough to have seen the debt
 				dialog.getInteractionTarget().setActivePerson(od.getPerson());
 				//dialog.getVisualPanel().showPersonInfo(getPerson(), true);
 				((RuleBasedInteractionDialogPluginImpl)dialog.getPlugin()).notifyActivePersonChanged();

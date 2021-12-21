@@ -38,6 +38,7 @@ public class SlipstreamScavengerEPEC extends BaseEPEncounterCreator {
 			Vector2f spawnLoc = Misc.getPointWithinRadius(point.loc, 1000f);
 			SectorEntityToken e = point.where.createToken(spawnLoc);
 			fleet.addAssignment(FleetAssignment.ORBIT_AGGRESSIVE, e, 30f * random.nextFloat(), "waiting");
+			fleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);
 			fleet.addScript(new MissionFleetAutoDespawn(null, fleet));
 			fleet.addScript(new ScavengerPiracyScript(fleet));
 		}

@@ -164,6 +164,8 @@ public class Stats {
 	public static final String COORDINATED_MANEUVERS_FLAT = "coord_maneuvers_flat";
 	public static final String ELECTRONIC_WARFARE_FLAT = "electronic_warfare_flat";
 	public static final String ELECTRONIC_WARFARE_PENALTY_MULT = "electronic_warfare_penalty_mult";
+	public static final String ELECTRONIC_WARFARE_PENALTY_MOD = "electronic_warfare_penalty_mod";
+	public static final String ELECTRONIC_WARFARE_PENALTY_MAX_FOR_SHIP_MOD = "electronic_warfare_penalty_max_for_ship_mod";
 	public static final String COMMAND_POINT_RATE_FLAT = "command_point_rate_flat";
 	public static final String INDIVIDUAL_SHIP_RECOVERY_MOD = "individual_ship_recovery_mod";
 	

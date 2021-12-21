@@ -883,12 +883,13 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 		//cargo.initMothballedShips(Factions.PLAYER);
 		CargoAPI cargo = data.getCargo("Heavy Industry - Custom Production");
 		
-		float quality = 0f;
+		float quality = -1f;
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (!market.isPlayerOwned()) continue;
 			//quality = Math.max(quality, ShipQuality.getShipQuality(market, Factions.PLAYER));
-			quality = market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).computeEffective(0f);
-			quality += market.getStats().getDynamic().getMod(Stats.FLEET_QUALITY_MOD).computeEffective(0f);
+			float currQuality = market.getStats().getDynamic().getMod(Stats.PRODUCTION_QUALITY_MOD).computeEffective(0f);
+			currQuality += market.getStats().getDynamic().getMod(Stats.FLEET_QUALITY_MOD).computeEffective(0f);
+			quality = Math.max(quality, currQuality);
 		}
 		quality -= Global.getSector().getFaction(Factions.PLAYER).getDoctrine().getShipQualityContribution();
 		quality += 4f * Global.getSettings().getFloat("doctrineFleetQualityPerPoint");

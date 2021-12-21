@@ -200,7 +200,7 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		
 		if (entity.getStarSystem() != null && 
 				entity.getStarSystem().hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) {
-			memory.set("$systemCutOffFromHyper", true);
+			memory.set("$systemCutOffFromHyper", true, 0);
 		}
 		
 		

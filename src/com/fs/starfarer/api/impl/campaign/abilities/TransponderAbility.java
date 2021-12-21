@@ -54,7 +54,7 @@ public class TransponderAbility extends BaseToggleAbility {
 		}
 		
 		entity.setTransponderOn(true);
-		
+		entity.getMemoryWithoutUpdate().set(MemFlags.JUST_TOGGLED_TRANSPONDER, true, 0.1f);
 		
 //		AbilityPlugin goDark = entity.getAbility(Abilities.GO_DARK);
 //		if (goDark != null && goDark.isActive()) {
@@ -81,7 +81,8 @@ public class TransponderAbility extends BaseToggleAbility {
 	public void deactivate() {
 		super.deactivate();
 		if (entity.isTransponderOn()) {
-			entity.setTransponderOn(false); // failsafe in case deactivation failed to actuall deactivate transponder
+			entity.setTransponderOn(false); // failsafe in case deactivation failed to actually deactivate transponder
+			entity.getMemoryWithoutUpdate().set(MemFlags.JUST_TOGGLED_TRANSPONDER, true, 0.1f);
 		}
 	}
 
@@ -90,7 +91,7 @@ public class TransponderAbility extends BaseToggleAbility {
 	@Override
 	protected void deactivateImpl() {
 		entity.setTransponderOn(false);
-		
+		entity.getMemoryWithoutUpdate().set(MemFlags.JUST_TOGGLED_TRANSPONDER, true, 0.1f);
 		//cleanupImpl();
 	}
 	

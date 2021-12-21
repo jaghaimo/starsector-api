@@ -6,12 +6,32 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.characters.CharacterStatsSkillEffect;
 import com.fs.starfarer.api.characters.DescriptionSkillEffect;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
+import com.fs.starfarer.api.characters.ShipSkillEffect;
+import com.fs.starfarer.api.characters.SkillSpecAPI;
+import com.fs.starfarer.api.combat.MutableShipStatsAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
+import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class CyberneticAugmentation {
 	
-	public static final float MAX_ELITE_SKILLS_BONUS = 2;
+	public static float MAX_ELITE_SKILLS_BONUS = 2;
+	public static float ECCM_BONUS = 5;
+	
+	public static boolean isOfficer(MutableShipStatsAPI stats) {
+		if (stats.getEntity() instanceof ShipAPI) {
+			ShipAPI ship = (ShipAPI) stats.getEntity();
+			return !ship.getCaptain().isDefault();
+		} else {
+			FleetMemberAPI member = stats.getFleetMember();
+			if (member == null) return false;
+			return !member.getCaptain().isDefault();
+		}
+	}
+	
 	
 	public static class Level0 implements DescriptionSkillEffect {
 		public String getString() {
@@ -51,6 +71,33 @@ public class CyberneticAugmentation {
 		
 		public ScopeDescription getScopeDescription() {
 			return ScopeDescription.NONE;
+		}
+	}
+	
+	public static class Level2 extends BaseSkillEffectDescription implements ShipSkillEffect {
+		public void createCustomDescription(MutableCharacterStatsAPI stats, SkillSpecAPI skill, 
+				TooltipMakerAPI info, float width) {
+			init(stats, skill);
+			float opad = 10f;
+			Color c = Misc.getBasePlayerColor();
+			//info.addPara("Affects: %s", opad + 5f, Misc.getGrayColor(), c, "fleet");
+			info.addPara("Affects: %s", opad + 5f, Misc.getGrayColor(), c, "all ships with officers, including flagship");
+			info.addSpacer(opad);
+			
+//			info.addPara("Negates up to %s of the weapon range penalty for superior enemy Electronic Warfare", 0f, hc, hc,
+//					"" + (int) ECCM_BONUS + "%");
+			info.addPara("Reduces the weapon range penalty due to superior enemy Electronic Warfare by up to %s percentage points", 0f, hc, hc,
+					"" + (int) ECCM_BONUS + "");
+		}
+
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			if (isOfficer(stats)) {
+				stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MOD).modifyFlat(id, -ECCM_BONUS);
+			}
+		}
+
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MOD).unmodifyFlat(id);
 		}
 	}
 }

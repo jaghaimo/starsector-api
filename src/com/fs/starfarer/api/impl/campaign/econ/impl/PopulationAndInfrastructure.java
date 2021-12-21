@@ -827,7 +827,8 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		for (SectorEntityToken entity : Global.getSector().getCustomEntitiesWithTag(Tags.CORONAL_TAP)) {
 			if (!usable || entity.getMemoryWithoutUpdate().contains("$usable")) {
 				float dist = Misc.getDistanceLY(locInHyper, entity.getLocationInHyperspace());
-				if (Math.round(dist * 10f) <= ItemEffectsRepo.CORONAL_TAP_LIGHT_YEARS * 10f) {
+				if (dist > ItemEffectsRepo.CORONAL_TAP_LIGHT_YEARS && 
+						Math.round(dist * 10f) <= ItemEffectsRepo.CORONAL_TAP_LIGHT_YEARS * 10f) {
 					dist = ItemEffectsRepo.CORONAL_TAP_LIGHT_YEARS;
 				}
 				if (dist < minDist) {

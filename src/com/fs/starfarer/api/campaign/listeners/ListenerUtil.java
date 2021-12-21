@@ -213,6 +213,12 @@ public class ListenerUtil {
 		}
 	}
 	
+	public static void reportSubmarketCargoAndShipsUpdated(SubmarketAPI submarket) {
+		for (SubmarketUpdateListener x : Global.getSector().getListenerManager().getListeners(SubmarketUpdateListener.class)) {
+			x.reportSubmarketCargoAndShipsUpdated(submarket);
+		}
+	}
+	
 	public static void reportPlayerLeftCargoPods(SectorEntityToken entity) {
 		for (CargoScreenListener x : Global.getSector().getListenerManager().getListeners(CargoScreenListener.class)) {
 			x.reportPlayerLeftCargoPods(entity);

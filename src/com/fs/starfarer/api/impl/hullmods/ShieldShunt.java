@@ -10,7 +10,7 @@ public class ShieldShunt extends BaseHullMod {
 
 	//public static float EMP_RESISTANCE = 50f;
 	//public static float VENT_RATE_BONUS = 50f;
-	public static float ARMOR_BONUS = 25f;
+	public static float ARMOR_BONUS = 15f;
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {

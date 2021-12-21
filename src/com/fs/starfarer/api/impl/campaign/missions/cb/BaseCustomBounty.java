@@ -500,12 +500,19 @@ public class BaseCustomBounty extends HubMissionWithBarEvent implements FleetEve
 		boolean playerInvolved = battle.isPlayerInvolved() || (fleet.isInCurrentLocation() && distToPlayer < 2000f);
 		
 		if (battle.isInvolved(fleet) && !playerInvolved) {
-			if (fleet.getFlagship() == null || fleet.getFlagship().getCaptain() != target) {
-				fleet.setCommander(fleet.getFaction().createRandomPerson());
-				//latestResult = new BountyResult(BountyResultType.END_OTHER, 0, null);
-				sendUpdateIfPlayerHasIntel(result, true);
+			boolean cancelBounty = (fleet.isStationMode() && fleet.getFlagship() == null) ||
+					(!fleet.isStationMode() && fleet.getFlagship() != null && fleet.getFlagship().getCaptain() != target);
+			if (cancelBounty) {
+				String id = getMissionId();
+				getPerson().getMemoryWithoutUpdate().set("$" + id + "_failed", true);
 				return;
 			}
+//			if (fleet.getFlagship() == null || fleet.getFlagship().getCaptain() != target) {
+//				fleet.setCommander(fleet.getFaction().createRandomPerson());
+//				//latestResult = new BountyResult(BountyResultType.END_OTHER, 0, null);
+//				sendUpdateIfPlayerHasIntel(result, true);
+//				return;
+//			}
 		}
 		
 		//CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
@@ -513,8 +520,11 @@ public class BaseCustomBounty extends HubMissionWithBarEvent implements FleetEve
 			return;
 		}
 		
-		 // didn't destroy the original flagship
-		if (fleet.getFlagship() != null && fleet.getFlagship().getCaptain() == target) return;
+		if (fleet.isStationMode()) {
+			if (fleet.getFlagship() != null) return;
+		} else {
+			if (fleet.getFlagship() != null && fleet.getFlagship().getCaptain() == target) return;
+		}
 		
 		String id = getMissionId();
 		getPerson().getMemoryWithoutUpdate().set("$" + id + "_completed", true);

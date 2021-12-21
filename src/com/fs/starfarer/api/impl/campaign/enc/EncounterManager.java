@@ -70,7 +70,7 @@ public class EncounterManager implements EveryFrameScript, EncounterPointProvide
 		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
 		if (pf == null) return;
 		float days = Global.getSector().getClock().convertToDays(amount);
-		
+		//days *= 1000f;
 		pointTimeout.advance(days);
 		creatorTimeout.advance(days);
 		

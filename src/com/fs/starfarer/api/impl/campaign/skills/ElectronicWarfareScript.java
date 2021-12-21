@@ -19,6 +19,7 @@ import com.fs.starfarer.api.input.InputEventAPI;
 
 public class ElectronicWarfareScript extends BaseEveryFrameCombatPlugin {
 	public static Object KEY_STATUS = new Object();
+	public static Object KEY_STATUS2 = new Object();
 	
 	public static float BASE_MAXIMUM = 10;
 	
@@ -90,7 +91,7 @@ public class ElectronicWarfareScript extends BaseEveryFrameCombatPlugin {
 		float penalty = Math.min(Math.abs(diff), max);
 		
 		cleanUpIfNeeded(winner);
-		applyPenalty(loser, penalty);
+		applyPenalty(loser, penalty, max);
 		
 		
 		boolean playerWon = winner.getOwner() == engine.getPlayerShip().getOwner(); 
@@ -102,16 +103,34 @@ public class ElectronicWarfareScript extends BaseEveryFrameCombatPlugin {
 		}
 		
 		String icon = Global.getSettings().getSpriteName("ui", "icon_tactical_electronic_warfare");
+		
+		if (engine.getPlayerShip() != null && !playerWon) {
+			int eccm = (int) Math.round(engine.getPlayerShip().getMutableStats().getDynamic().getValue(Stats.ELECTRONIC_WARFARE_PENALTY_MOD, 0f));
+			eccm = -eccm;
+			if (eccm != 0) {
+				engine.maintainStatusForPlayerShip(KEY_STATUS2, icon, "On-board ECCM", "up to " + eccm + "% ecm neutralized", false);
+			}
+		}
+		
 		engine.maintainStatusForPlayerShip(KEY_STATUS, icon, title, data, !playerWon);
 	}
 	
-	private void applyPenalty(CombatFleetManagerAPI manager, float penalty) {
+	private void applyPenalty(CombatFleetManagerAPI manager, float penalty, float maxPenalty) {
 		List<DeployedFleetMemberAPI> deployed = manager.getDeployedCopyDFM();
 		for (DeployedFleetMemberAPI member : deployed) {
 			if (member.isFighterWing()) continue;
 			if (member.getShip() == null) continue;
 			
 			float currPenalty = penalty * member.getShip().getMutableStats().getDynamic().getValue(Stats.ELECTRONIC_WARFARE_PENALTY_MULT);
+			currPenalty = member.getShip().getMutableStats().getDynamic().getValue(Stats.ELECTRONIC_WARFARE_PENALTY_MOD, penalty);
+			if (currPenalty < 0) currPenalty = 0;
+			
+			float maxMod = penalty * member.getShip().getMutableStats().getDynamic().getValue(Stats.ELECTRONIC_WARFARE_PENALTY_MAX_FOR_SHIP_MOD, 0);
+			float currMax = maxPenalty + maxMod;
+			if (currPenalty > currMax) {
+				currPenalty = currMax;
+			}
+			
 			member.getShip().getMutableStats().getBallisticWeaponRangeBonus().modifyMult(PENALTY_ID, 1f - currPenalty/100f);
 			member.getShip().getMutableStats().getEnergyWeaponRangeBonus().modifyMult(PENALTY_ID, 1f - currPenalty/100f);
 			member.getShip().getMutableStats().getMissileWeaponRangeBonus().modifyMult(PENALTY_ID, 1f - currPenalty/100f);
