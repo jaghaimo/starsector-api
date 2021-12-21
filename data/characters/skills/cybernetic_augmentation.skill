@@ -15,6 +15,7 @@
 			"effectBasedOnLevel":false,
 			"effects":[
 				{"type":"CHARACTER_STATS", "script":"com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation$Level1"},
+				#{"type":"ALL_SHIPS_IN_FLEET", "script":"com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation$Level2"},
 			]
 		},
 	],

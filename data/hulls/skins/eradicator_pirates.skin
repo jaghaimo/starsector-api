@@ -8,8 +8,8 @@
 	"tags":["rare_bp"],
 	"tech":"Pirate",
 	"systemId":"burndrive",
-	"suppliesToRecover":15,
-	"suppliesPerMonth":15,
+	"suppliesToRecover":17,
+	"suppliesPerMonth":17,
 	"baseValueMult":0.75,
 	"spriteName":"graphics/ships/eradicator/eradicator_pirate.png",
 	"removeWeaponSlots":[], 		# ids

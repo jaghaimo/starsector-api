@@ -33,12 +33,14 @@
 	"shipsWhenImporting":{
 		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp"],
 		"hulls":[
+			"apogee",
 		],
 	},
 	"knownShips":{
 		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "scavengers"],
 		"hulls":[
 			"atlas",
+			"apogee",
 			"kite_original",
 			"doom",
 			"afflictor",

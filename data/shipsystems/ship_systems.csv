@@ -52,4 +52,4 @@ Ravelin Drones,drone_station_mid,,,,,,,,3,,0,,0,0,,,,,,,,,,,,,graphics/icons/hul
 Gargoyle Drones,drone_station_high,,,,,,,,4,,0,,0,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
 Mine Strike,mine_strike_station,,,,,,0,,7,0.33,0.25,,0.25,0,,,,,,,,,,,,,graphics/icons/hullsys/interdictor_array.png
 Mote Attractor,mote_control,,,,,,0,,,,0.1,,0.4,,,,,,,,,,,,,restricted,graphics/icons/hullsys/reserve_deployment.png
-Termination Sequence,drone_strike,,,,1000,,,,,,0,0.05,0.2,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png
+Termination Sequence,drone_strike,,,,600,,,,,,0,0.05,0.2,0,,,,,,,,,,,,,graphics/icons/hullsys/drone_pd_high.png

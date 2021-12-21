@@ -5,11 +5,11 @@
     "goalVariant": true,
     "hullId": "vanguard",
     "hullMods": [
-        "insulatedengine",
         "armoredweapons",
         "heavyarmor",
         "missleracks",
-        "fluxbreakers"
+        "fluxbreakers",
+        "insulatedengine"
     ],
     "permaMods": [],
     "sMods": [],

@@ -4024,7 +4024,7 @@ gaKAReturnToAcademy5,DialogOptionSelected,$option == gaKA_return5,"HideSecondPer
 HideThirdPerson","""It appears that I have gained another valuable asset in addition to the Kallichore Archive,"" she says. ""By virtue of your initiative, of course, captain. I will not forget that when the time comes, but-"" she takes in her surroundings, and dismisses the guards and advisors with a wave.
 
 Baird holds up a hand to indicate an adjoining transport pod, ""Let us remove to a more suitable setting to complete our conversation.""",gaKA_return6:Continue,
-gaKAReturnToAcademy6,DialogOptionSelected,$option == gaKA_return6,FireAll GAKABairdHub,"Baird seems to study the passing conduits and vistas visible through the pod's bay windows, lost in thought. The silence grows, and you find that this may be an opportunity to ask something of the provost without interrupting one of her lectures",,
+gaKAReturnToAcademy6,DialogOptionSelected,$option == gaKA_return6,FireAll GAKABairdHub,"Baird seems to study the passing conduits and vistas visible through the pod's bay windows, lost in thought. The silence grows, and you find that this may be an opportunity to ask something of the provost without interrupting one of her lectures.",,
 GAKABairdHubA,GAKABairdHub,!$gaKA_returnWhatWillHegDo,,,"gaKA_returnWhatWillHegDo:""What will you do if the Hegemony suspects you're behind the hack?""",
 GAKABairdHubB,GAKABairdHub,!$gaKA_returnThinkOfGargoyle ,,,"gaKA_returnThinkOfGargoyle:""So what do you think of Gargoyle?""",
 GAKABairdHubC,GAKABairdHub,,,,gaKA_return7:Say nothing,
@@ -4033,7 +4033,7 @@ FireAll GAKABairdHub","Baird looks at you, then back at nothing. ""They suspect 
 
 ""The Galatia Academy will appeal the original data seizure and demand the return of basic scientific research material- which is not illegal under even old Domain law. 'This data breach only proves the danger of restricting basic research as this situation enables unsavory parties to exploit discoveries without oversight from the ecumenica'.""
 
-""I appreciate the irony of my objection, of course."" She says. ""But this is war by public relations; there is no room for scruples. I'll be exactly as cynical as they already believe me to be, and they'll believe the act because it is true."" As Baird speaks, you find a note of satisfaction in her description of plot and counter-plot. ""Behind that truth of course,"" she continues, ""Is what really happened. Which will be a fait accompli once they discover it."" ",,
+""I appreciate the irony of my objection, of course. But this is war by public relations; there is no room for scruples. I'll be exactly as cynical as they already believe me to be, and they'll believe the act because it is true."" As Baird speaks, you find a note of satisfaction in her description of plot and counter-plot. ""Behind that truth of course,"" she continues, ""Is what really happened. Which will be a fait accompli once they discover it."" ",,
 GAKABairdHubBSel,DialogOptionSelected,$option == gaKA_returnThinkOfGargoyle,"$gaKA_returnThinkOfGargoyle = true 0
 FireAll GAKABairdHub","Baird looks at you, raises an eyebrow, then looks back at nothing.
 
@@ -4178,7 +4178,7 @@ gaKA_coureuseBairdOptSel,DialogOptionSelected,$option == gaKA_courBaird,$askedAb
 ""Say what you will about the provost, she's... effective. It's better than the alternative.""","gaKA_courBaird2:""The alternative?""",
 gaKA_coureuseBairdOptSel2,DialogOptionSelected,$option == gaKA_courBaird2,FireAll PopulateOptions,"""I don't know,"" she says, ""Making weapons for the Hegemony? Sector collapse to pre-hyperdrive levels? Torturing AI shards for Tri-Tach? I couldn't do that. I don't even know what the Luddics would make of me.""
 
-Coureuse gives a laugh, ""Put me in nunnery, probably. Might not be so bad.""",,
+Coureuse gives a laugh, ""Put me in a nunnery, probably. Might not be so bad.""",,
 gaKA_coureuseGargoyleOptSel,DialogOptionSelected,$option == gaKA_courGarg,"$askedAboutGargoyle = true
 FireAll PopulateOptions","""Oh, very helpful,"" she says with a smile, ""You get a, just a really different perspective from Gargoyle. There are so many assumptions, invisible little things we do, um, as an institutional organization without realizing, and - well, and also the technical stuff, like code. It's been - hmm, a bit strange. And teamwork in the traditional sense is mostly out of the question. But if we find a little self-contained project for Gargoyle, it can work out great.""
 
@@ -4284,7 +4284,7 @@ gaKA_hegGoonsOpt2,GAKAHegAgentHub,"!$gaKA_hegGoons
 !$gaKA_goonsFirstVersion",,,"gaKA_hegGoons:""What's with the goon squad?""",
 gaKA_hegTriTachOpt,GAKAHegAgentHub,"!$gaKA_hegTriTach
 $gaKA_hegShowTTOpt",unset $gaKA_hegShowTTOpt,,"gaKA_hegTriTach:""Sounds like Tri-Tachyon beat you again.""",
-gaKA_hegArrestOpt,GAKAHegAgentHub,!$gaKA_hegArrest,,,"gaKA_hegArrest:""Am I under arrest, or can I go?",
+gaKA_hegArrestOpt,GAKAHegAgentHub,!$gaKA_hegArrest,,,"gaKA_hegArrest:""Am I under arrest, or can I go?""",
 gaKA_hegDidntSeeSel,DialogOptionSelected,$option == gaKA_hegDidntSee,"$gaKA_hegDidntSee = true 0
 FireAll GAKAHegAgentHub","""Indeed,"" $heOrShe frowns, eyes fixed on you. ""Perhaps if we examined your sensor logs we would find something that slipped your mind."" 
 
@@ -4479,10 +4479,9 @@ You nod agreeably. An agent named Finlay. Probably working for the Persean Leagu
 ",gaFC_fikenhildAdonyaLeave:Time to leave,
 gaFCFikenhildAdonyaB,DialogOptionSelected,$option == gaFC_fikenhildAdonyaB,,"You wait for a lull in the noise and ask your question a little louder than intended. Adonya gives you a corrective look before turning back to her holovid. The King of Westernesse is haranguing a panel of aquanomists.
 
-""It's political, isn't it?"" Adonya says after a moment. ""Scylla finally found real trouble. I always told her that Cavin boy was bad news, but she'd say it was 'just art stuff'. I may be her mother, but I'm not stupid"" she gestures intensely at the holovid, a splash of tea exiting her cup, ""That's a capering twit if ever there was one, but at least no one is dying in some fool street fight.""
+""It's political, isn't it?"" Adonya says after a moment. ""Scylla finally found real trouble. I always told her that Cavin boy was bad news, but she'd say it was 'just art stuff'. I may be her mother, but I'm not stupid."" She gestures intensely at the holovid, a splash of tea exiting her cup, ""That's a capering twit if ever there was one, but at least no one is dying in some fool street fight.""
 
-She sighs, ""If only Scylla had settled down with Elissa. You can be content making a ripple instead of a splash. I told her father that once, and he had the sense to listen.""
-","gaFC_fikenhildAdonyaB2:""Who is Elissa?""",
+She sighs, ""If only Scylla had settled down with Elissa. You can be content making a ripple instead of a splash. I told her father that once, and he had the sense to listen.""","gaFC_fikenhildAdonyaB2:""Who is Elissa?""",
 gaFCFikenhildAdonyaB2,DialogOptionSelected,$option == gaFC_fikenhildAdonyaB2,$global.gaFC_knowElissasName = true,"""Ah,"" Adonya looks rather pleased now, ""You fancy spies with your titles and gadgets didn't figure her out?"" She laughs, ""And now you've got to ask an old woman for help? Oh don't worry,"" she says, setting her tea down, ""I'll tell you, captain.""
  
 ""Elissa Zal. Such a nice girl. Could have been the best thing that ever happened to Scylla. But,"" she shakes her head, ""an offer from the Galatia Academy came first. Full scholarship from the office of the Provost. Sikar was thrilled; his little scientist got the chance he never had."" 
@@ -5678,7 +5677,7 @@ gaFCLaicailleVisit4b,DialogOptionSelected,$option == gaFC_laicailleVisit4b,ShowS
 gaFCLaicailleVisit5,DialogOptionSelected,$option == gaFC_laicailleVisit5,FireBest GAFCAlamangCheck2,"""Yes. That's me,"" she says cautiously. ""And... Archon $personLastName, um. To what do I owe the honor?""
 
 The archon nods toward you, ""Captain $playerName. Who has a way of poking around in other people's business. Now it's your turn.""",,
-gaFCLaicailleVisit5Alamang,GAFCAlamangCheck2,$global.gaFC_gotAlamangForScylla,,"Coureuse spots the package of krill paste under your arm ""Is that... Sub-Kay blue-bar? Where- how did you-""","gaFC_laicailleVisit5Alamang2:""A gift from Elissa.""",
+gaFCLaicailleVisit5Alamang,GAFCAlamangCheck2,$global.gaFC_gotAlamangForScylla,,"Coureuse spots the package of krill paste under your arm. ""Is that... Sub-Kay blue-bar? Where- how did you-""","gaFC_laicailleVisit5Alamang2:""A gift from Elissa.""",
 gaFCLaicailleVisit5Alamang2,DialogOptionSelected,$option == gaFC_laicailleVisit5Alamang2,AdjustRepPerson coureuse COOPERATIVE 3,"Coureuse breaks into a smile of genuine joy. ""Of course! We always talked about how bad it smelled, but nothing is as good."" She takes it, almost caressing the plastic while lost in some memory. She returns to herself with a start, ""Oh, I'm sorry, just. Old times."" She puts the package on a workbench, ""Please, go on. Why are you here?""","gaFC_laicailleVisit6:""I have a message for you.""",
 gaFCLaicailleVisit5AlamangNo,GAFCAlamangCheck2,!$global.gaFC_gotAlamangForScylla,,,"gaFC_laicailleVisit6:""I have a message for you.""",
 gaFCLaicailleVisit6,DialogOptionSelected,$option == gaFC_laicailleVisit6,,"Archon $personLastName eyes you, a nonverbal inquiry about whether $heOrShe is intruding. ""I'll let you two speak privately. Citizen Coureuse, I am informing you that you are now under the direct protection of the Laicaille Executive Council. We shall ensure your safety on this station, and,"" $heOrShe casts a glance back at the League agents, ""And ensure your right to freedom of movement as per the Persean League Charter."" 
@@ -7302,7 +7301,7 @@ unset $global.gaATG_goTalkToYaribay","""Yes, do I know you?"" Horus Yaribay asks
 gaATGcontactYaribay1,DialogOptionSelected,$option == gaATG_contactYaribay1,,"""Provost... ah. Oh."" His face falls, ""This must be about... I mean, tell me, whatever is this about?"" 
 
 You've got his attention now.","gaATG_contactYaribay2a:""I need diplomatic credentials from you. I need to talk to Hegemon Daud.""
-gaATG_contactYaribay2b:""The provost has a message, if you're ready to hear it.
+gaATG_contactYaribay2b:""The provost has a message, if you're ready to hear it.""
 ",
 gaATGcontactYaribay2a,DialogOptionSelected,$option == gaATG_contactYaribay2a,,"""What?"" he says, incredulous. ""The High Hegemon himself? Why should I- oh, the... situation. I see."" Ah, now there's that look of resignation you've come to expect from those being blackmailed by the provost. 
 
@@ -7597,7 +7596,7 @@ gaATGdaudMeeting13b,DialogOptionSelected,$option == gaATG_daudMeeting13b,,"""Don
 He nods at you, ""And you, captain, are no scientist.""
 
 ""Tell Baird I accept,"" he says.",gaATG_daudMeeting14:Continue,
-gaATGdaudMeeting13c,DialogOptionSelected,$option == gaATG_daudMeeting13c,AdjustRepActivePerson COOPERATIVE 1,"""Good,"" he says simply. ""I am of similar mind. Nonetheless,"" he puts a hand to his chest, ""Here too am I, entertaining her envory.""
+gaATGdaudMeeting13c,DialogOptionSelected,$option == gaATG_daudMeeting13c,AdjustRepActivePerson COOPERATIVE 1,"""Good,"" he says simply. ""I am of similar mind. Nonetheless,"" he puts a hand to his chest, ""Here too am I, entertaining her envoy.""
 
 ""Tell Baird I accept,"" he says.",gaATG_daudMeeting14:Continue,
 gaATGdaudMeeting14,DialogOptionSelected,$option == gaATG_daudMeeting14,"$global.gaATG_gotDaudDeal = true 
@@ -7780,7 +7779,7 @@ $global.canScanGates
 !$gateScanned
 $global.gaATG_inProgress",,"A silent ring of adamantine material, derelict of a former age.
 
-Your sensor's officer calls for your attention. ""Captain, there's some kind of hyperwave interference coming from the nearby Tri-Tachyon fleet. Our scanner can't make a lock while they're... doing whatever they're doing.""",100:defaultLeave:Leave,
+Your sensors officer calls for your attention. ""Captain, there's some kind of hyperwave interference coming from the nearby Tri-Tachyon fleet. Our scanner can't make a lock while they're... doing whatever they're doing.""",100:defaultLeave:Leave,
 gaATGttScanFleet,BeginFleetEncounter,"!$encounteredAlready
 $gaATG_ttScanFleet score:1000","$encounteredAlready = true
 FleetDesc
@@ -8115,7 +8114,7 @@ gaATGscanTripwireAlarm,OpenInteractionDialog,"$tag:gate
 $GAATGscanAlarm score:1000","unset $GAATGscanAlarm
 FireAll PopulateGateOptions","A silent ring of adamantine material, derelict of a former age.
 
-There's a chime. ""Wait,"" your sensor's officer says, ""There's a hypercomm pulse, uh, source near the Gate, some kind of microsat.""
+There's a chime. ""Wait,"" your sensors officer says, ""There's a hypercomm pulse, uh, source near the Gate, some kind of microsat.""
 
 Your bridge crew quickly identifies a bogey hidden on the opposite side of the Gate and center it in the primary display. Before you can give a follow-up order there's a small flash of light, leaving only a rapidly expanding cloud of debris.
 
@@ -8776,7 +8775,8 @@ gaATGEpiphanySearch1,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
 !$entity.askedForKidnapperCotton",,,"gaATG_epiphanyAskKidnap:""I need to find someone kidnapped by Brother Cotton.""",
 gaATGEpiphanySearch2,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
 !$entity.offeredBribeForCotton ",,,"gaATG_epiphanyAskCredits:""I'll pay you good credits to know where to find Brother Cotton.""",
-gaATGEpiphanySearch3,GAATGepiphanySearchOptions,!$entity.setUpCottonMeeting,,,"gaATG_epiphanyAskCotton:""I wish to speak with Brother Cotton. Can you help?""",
+gaATGEpiphanySearch3,GAATGepiphanySearchOptions,"!$entity.setUpCottonMeeting
+!$awkwardAskForCotton",,,"gaATG_epiphanyAskCotton:""I wish to speak with Brother Cotton. Can you help?""",
 gaATGEpiphanySearchLeave,GAATGepiphanySearchOptions,,,,100:cutCommLink:Cut the comm link,
 gaATGEpiphanyAskLoke,DialogOptionSelected,"$option == gaATG_epiphanyAskKidnap
 !$awkwardAskForCotton ","$entity.askedForKidnapperCotton = true
@@ -8794,8 +8794,7 @@ $awkwardAskForCotton = true 0","""Ah ha-ha,"" $heOrShe laughs nervously. ""Would
 ""I shall surely pray for you, captain, that the hammer, when it comes, falls softly,"" $heOrShe says. ""Would you look at the hour? I must adjourn to see to my prayers. Until our paths cross again, blessings upon you.""
 
 $HeOrShe cuts the comm link on you somewhat abruptly, leaving you with a staticky holding pattern.",cutCommLink:Cut the comm link,
-gaATGEpiphanyAskCotton,DialogOptionSelected,"$option == gaATG_epiphanyAskCotton
-!$awkwardAskForCotton",,"$Post $personLastName looks at you carefully before responding.
+gaATGEpiphanyAskCotton,DialogOptionSelected,$option == gaATG_epiphanyAskCotton,,"$Post $personLastName looks at you carefully before responding.
 
 ""I might recall hearing of a man by this name once. I would not know where he would be, or what he has done of late. And if I did, I would not tell. But if I were to leave a message with a friend who may have a friend who might be that man...""
 
@@ -10113,7 +10112,7 @@ Call $global.gaProbe_ref updateStage",,contact_pickAnotherGreeting:Continue,
 gaProbeMissionReturnHazard,PickGreeting,"$gaProbe_returnHere score:1000
 Call $global.gaProbe_ref updateData
 $gaProbe_variation == IT_BLEW_UP
-FireBest ASEBMissionReturn",,"Sebestyen lights up as the comms channel opens, ""Captain, hello! Logistics just received the instrument package, and even despite minor damage they've decided... um, is something the matter?""","gaProbe_returnHazard:Calmly explain the concept of a hazard bonus
+FireBest ASEBMissionReturn",ShowPersonVisual,"Sebestyen lights up as the comms channel opens, ""Captain, hello! Logistics just received the instrument package, and even despite minor damage they've decided... um, is something the matter?""","gaProbe_returnHazard:Calmly explain the concept of a hazard bonus
 gaProbe_itsNothing:""It's nothing. You were saying?""",
 gaProbeMissionReturnHazardNothing,DialogOptionSelected,$option == gaProbe_itsNothing,"$global.gaProbe_finished = true
 Call $global.gaProbe_ref updateStage","He clears his throat as you maintain a strictly professional expression, and continues ""I've confirmed with the finance office and your payment should be released now. Great work!""",contact_pickAnotherGreeting:Continue,
@@ -10131,7 +10130,7 @@ Call $global.gaProbe_ref updateStage","A few minutes later Sebestyen re-activate
 gaProbeMissionReturnMissing,PickGreeting,"$gaProbe_returnHere score:1000
 Call $global.gaProbe_ref updateData
 $gaProbe_variation == PACKAGE_MISSING
-FireBest ASEBMissionReturn",,"Sebestyen looks up from a datapad as the comms open. ""Captain! Back so soon? I thought you were, ah- "" He trails off at your look.
+FireBest ASEBMissionReturn",ShowPersonVisual,"Sebestyen looks up from a datapad as the comms open. ""Captain! Back so soon? I thought you were, ah- "" He trails off at your look.
 
 You explain the situation surrounding the probe's missing instrument package to the academician.
 
@@ -11410,7 +11409,7 @@ FireBest OtherPlanetInteractionText
 FireAll PopulateOptions
 FireBest PrintNearbySurveyHostilesTextIfSo
 AddText ""An instrument package orbiting this planet is sending a weak transmission promising a cash reward for its return to the Galatia Academy.""",,gaIntro2_retrieval2:Order the data core retrieved,# in case you want to immediately change your mind
-gaIntro2start2,DialogOptionSelected,$option == gaIntro2_start2,"Highlight ""18,000""","Your sensor's officer activates the audio output: a garbled loop, wailing in and out of coherence. A recorded voice? 
+gaIntro2start2,DialogOptionSelected,$option == gaIntro2_start2,"Highlight ""18,000""","Your sensors officer activates the audio output: a garbled loop, wailing in and out of coherence. A recorded voice? 
 
 ""The transmitter must be damaged. But with a little work,"" a hint of pride enters their voice, ""There.""
 
@@ -11421,7 +11420,7 @@ $rejectedRetrieval = true 0
 FireAll PopulateOptions",,,
 gaIntro2retrieval2,DialogOptionSelected,$option == gaIntro2_retrieval2,"$option = gaIntro2_retrieval 0
 FireBest DialogOptionSelected",,,
-gaIntro2retrieval,DialogOptionSelected,$option == gaIntro2_retrieval,"AddTextSmall ""acquired Galatia Academy data core"" highlight","Your ops chief oversees a retrieval mission by-the-book, staging approach-and-scan to maximize safety in the event of environmental or technological hazards. The salvor team is used to your chief's attention to detail and within the hour place the instrument package data core in an EM-sealed crate.","gaIntro2_inspect:Inspect the data
+gaIntro2retrieval,DialogOptionSelected,$option == gaIntro2_retrieval,"AddTextSmall ""Acquired Galatia Academy data core"" highlight","Your ops chief oversees a retrieval mission by-the-book, staging approach-and-scan to maximize safety in the event of environmental or technological hazards. The salvor team is used to your chief's attention to detail and within the hour place the instrument package data core in an EM-sealed crate.","gaIntro2_inspect:Inspect the data
 gaIntro2_leaveWithCore:Just take the core",
 gaIntro2inspect,DialogOptionSelected,$option == gaIntro2_inspect,,"Cursory inspection by your technology officer - to make sure this isn't some kind of bomb or rogue AI core - reveals a data core packed to its limit with compressed telemetry streams. 
 
@@ -11634,6 +11633,8 @@ soeArriveBallAgain,PopulateOptions,"$market.soe_invitedToBall
 $market.soe_sawInvite
 $menuState == main",,You have been invited to the grand seasonal ball to be held at the estate of House Rao. ,"3:soe_arriveAttendNow:Take a shuttle to the Rao estate
 4:soe_arriveAttendNever:Delete the invitation.",
+soeDeleteInviteNever,DialogOptionSelected,$option == soe_arriveAttendNever,"$option = soe_deleteInvite 0
+FireBest DialogOptionSelected",,,
 soeDeleteInvite,DialogOptionSelected,$option == soe_deleteInvite,"$global.soe_completed = true
 Call $global.soe_ref updateStage
 ShowDefaultVisual
@@ -13027,7 +13028,7 @@ $ssat_underworld","$missionId = ssat
 SetTextHighlights $ssat_reward
 Call $ssat_ref showMap ""Target: $ssat_marketName""                        ","Despite the anonymous work-suit, you note the fine tracery of unnatural scars and insolent swagger that suggest this $manOrWoman is connected to organized crime.
 
-$HeOrShe flicks some ash from smoldering stim-stick onto the table, then offers a seat with the same hand, the smoke tracing an arc in the air.
+$HeOrShe flicks some ash from a smoldering stim-stick onto the table, then offers a seat with the same hand, the smoke tracing an arc in the air.
 
 ""I need eyes on $ssat_marketName, in the $ssat_systemName. Word is you're quiet and can get jobs done."" A drag from the stim-stick. ""I can't afford being caught there, even in orbit. Got a bit of a record."" You see a smile by the glint off $hisOrHer teeth.
 

@@ -44,6 +44,7 @@
 	"knownShips":{
 		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "sindrian_diktat", "lions_guard"],
 		"hulls":[
+			"apogee",
 			"doom",
 			"harbinger",
 			"afflictor",

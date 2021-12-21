@@ -39,11 +39,13 @@
 	"shipsWhenImporting":{
 		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "independent"],
 		"hulls":[
+			"apogee",
 		],
 	},
 	"knownShips":{
 		"tags":["base_bp", "lowtech_bp", "midline_bp", "hightech_bp", "independent"],
 		"hulls":[
+			"apogee",
 			"atlas",
 			"kite_original",
 			"fury",

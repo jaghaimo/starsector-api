@@ -5,16 +5,16 @@
     "goalVariant": true,
     "hullId": "vanguard_pirates",
     "hullMods": [
-        "insulatedengine",
         "armoredweapons",
         "heavyarmor",
         "missleracks",
-        "fluxbreakers"
+        "fluxbreakers",
+        "insulatedengine"
     ],
     "permaMods": [],
     "sMods": [],
     "variantId": "vanguard_pirates_Strike",
-     "weaponGroups": [
+    "weaponGroups": [
         {
             "autofire": true,
             "mode": "ALTERNATING",

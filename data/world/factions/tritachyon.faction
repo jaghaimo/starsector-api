@@ -54,6 +54,7 @@
 	"shipsWhenImporting":{
 		"tags":["base_bp", "midline_bp", "hightech_bp"],
 		"hulls":[
+			"apogee",
 			"eagle",
 		],
 	},
@@ -61,6 +62,7 @@
 		"tags":["base_bp", "midline_bp", "hightech_bp", "tritachyon"],
 		"hulls":[
 			"aurora",
+			"apogee",
 			"fury",
 			"astral",
 			"atlas",

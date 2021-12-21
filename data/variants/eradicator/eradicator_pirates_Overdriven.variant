@@ -1,6 +1,6 @@
 {
     "displayName": "Overdriven",
-    "fluxCapacitors": 0,
+    "fluxCapacitors": 6,
     "fluxVents": 0,
     "goalVariant": true,
     "hullId": "eradicator_pirates",
@@ -8,8 +8,7 @@
         "safetyoverrides",
         "auxiliarythrusters",
         "shield_shunt",
-        "armoredweapons",
-        "turretgyros"
+        "armoredweapons"
     ],
     "permaMods": [],
     "sMods": [],
