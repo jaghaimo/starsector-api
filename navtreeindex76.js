@@ -1,5 +1,10 @@
 var NAVTREEINDEX76 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a22009adfc4aead59834449a10d1dadd8":[0,0,0,0,0,0,3,4,26],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a27524de3ac4f2fe886069059d2f33d14":[0,0,0,0,0,0,3,4,35],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a2bfebf08595b6d83fe9d65d075abd64e":[0,0,0,0,0,0,3,4,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a2c96346b4243a5b29b1f5c603cf5dc2b":[0,0,0,0,0,0,3,4,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a306fe7ab88ee3eaa89423f8213b83663":[0,0,0,0,0,0,3,4,8],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a346ffd3b142fe2011e746e983533701f":[0,0,0,0,0,0,3,4,32],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a37d951e6db6adbe77f121c499951f0c5":[0,0,0,0,0,0,3,4,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a3c3481b84456cfcdc0c1079c62a30a99":[0,0,0,0,0,0,3,4,51],
@@ -244,10 +249,5 @@ var NAVTREEINDEX76 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhost.html#a69881ab0c1d6894fdd516be331314355":[0,0,0,0,0,0,5,0,7,34,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhost.html#a6c667829d333ac3fcb7ae14b9b83e6d7":[0,0,0,0,0,0,5,0,7,34,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhost.html#a7132a1eb5d508c384b34e1922a0eb627":[0,0,0,0,0,0,5,0,7,34,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhost.html#a72c68ebf8124195351abf37c6dc17cf9":[0,0,0,0,0,0,5,0,7,34,9],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhost.html#aa08314d7ca05a50faada5b7c680e9fe8":[0,0,0,0,0,0,5,0,7,34,10],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhost.html#aac28bd51d4a659f6b8428af1a2bd7199":[0,0,0,0,0,0,5,0,7,34,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhost.html#ab1bdbcda896a392077f311b1761278bc":[0,0,0,0,0,0,5,0,7,34,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html":[0,0,0,0,0,0,5,0,7,35],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html#a11b47c9afcab4c064a16321e18cf1ef7":[0,0,0,0,0,0,5,0,7,35,0]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhost.html#a72c68ebf8124195351abf37c6dc17cf9":[0,0,0,0,0,0,5,0,7,34,9]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#adfa09fc974172d8db8bafa7c789e4b88":[0,0,0,0,0,0,2,18,8],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#af279bcc59e9729686572fd513a7f2e97":[0,0,0,0,0,0,2,18,19],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#afeb42569eecfdbeef02792792b4aa236":[0,0,0,0,0,0,2,18,16],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#aff279fd5e8eec66b30a1f4079e97900c":[0,0,0,0,0,0,2,18,13],
@@ -158,15 +159,15 @@ var NAVTREEINDEX54 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode.html#a7f715c097c84977e54b2815e7eb9bb5c":[0,0,0,0,0,0,10,18,4],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode.html#a9ba8064382880bfe24fad91ba8f920bd":[0,0,0,0,0,0,10,18,2],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode.html#adee55cfcc03cb22f66486927e8c5d316":[0,0,0,0,0,0,10,18,0],
-"functions.html":[0,3,0],
 "functions.html":[0,3,0,0],
+"functions.html":[0,3,0],
 "functions_b.html":[0,3,0,1],
 "functions_c.html":[0,3,0,2],
 "functions_d.html":[0,3,0,3],
 "functions_e.html":[0,3,0,4],
 "functions_f.html":[0,3,0,5],
-"functions_func.html":[0,3,1,0],
 "functions_func.html":[0,3,1],
+"functions_func.html":[0,3,1,0],
 "functions_func_b.html":[0,3,1,1],
 "functions_func_c.html":[0,3,1,2],
 "functions_func_d.html":[0,3,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX54 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModDependencyAPI.html#a249e4b02f8113554314d0e3031b173cb":[0,0,0,0,0,0,21,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModDependencyAPI.html#a2fd0030a9575b05c34aa71f9328a2386":[0,0,0,0,0,0,21,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModDependencyAPI.html#a721683679773adcc1217a7c38af97218":[0,0,0,0,0,0,21,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModDependencyAPI.html#a84e536d1aa61c2d71736773df2991449":[0,0,0,0,0,0,21,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModDependencyAPI.html#afc61b2aef5e8238aaf3a0ad1d45c3050":[0,0,0,0,0,0,21,1]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModDependencyAPI.html#a84e536d1aa61c2d71736773df2991449":[0,0,0,0,0,0,21,2]
 };

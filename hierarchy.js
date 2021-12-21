@@ -1861,6 +1861,7 @@ var hierarchy =
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Submarkets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Submarkets.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.SubmarketSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketSpecAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.listeners.SubmarketUpdateListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketUpdateListener.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.SupportDoctrine", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SupportDoctrine.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetIntelCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.SurveyPlanetListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SurveyPlanetListener.html", [

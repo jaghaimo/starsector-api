@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OfficerLevelupPluginImpl-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -124,12 +125,61 @@ List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pickL
 List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pickLevelupSkills</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html">PersonAPI</a> person, Random random)</td></tr>
 <tr class="separator:a9cdc6f188bb46974c357e0ffe3487ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aa95a4d37203f79603013997498e4845f"><td class="memItemLeft" align="right" valign="top"><a id="aa95a4d37203f79603013997498e4845f"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (String[] args)</td></tr>
+<tr class="separator:aa95a4d37203f79603013997498e4845f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a4e2714b35189dcc11daa76af8252e5ea"><td class="memItemLeft" align="right" valign="top"><a id="a4e2714b35189dcc11daa76af8252e5ea"></a>
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>XP_MULT</b> = Global.getSettings().getFloat(&quot;officerXPRequiredMult&quot;)</td></tr>
 <tr class="separator:a4e2714b35189dcc11daa76af8252e5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafdff0c9275698f693f14b33e0d1249f"><td class="memItemLeft" align="right" valign="top"><a id="aafdff0c9275698f693f14b33e0d1249f"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>EXPONENT_BEYOND_MAX_SPECIFIED_LEVEL</b> = 1.1f</td></tr>
+<tr class="separator:aafdff0c9275698f693f14b33e0d1249f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dcd4c29d30736894a36b1409b3e92f5"><td class="memItemLeft" align="right" valign="top">static long[]&#160;</td><td class="memItemRight" valign="bottom"><b>XP_PER_LEVEL</b></td></tr>
+<tr class="separator:a6dcd4c29d30736894a36b1409b3e92f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8086425ebac82f0a5c9c36500f364b4"><td class="memItemLeft" align="right" valign="top"><a id="ad8086425ebac82f0a5c9c36500f364b4"></a>
+static long[]&#160;</td><td class="memItemRight" valign="bottom"><b>TOTAL_XP_PER_LEVEL</b> = new long [XP_PER_LEVEL.length]</td></tr>
+<tr class="separator:ad8086425ebac82f0a5c9c36500f364b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6dcd4c29d30736894a36b1409b3e92f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dcd4c29d30736894a36b1409b3e92f5">&#9670;&nbsp;</a></span>XP_PER_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long [] com.fs.starfarer.api.impl.campaign.OfficerLevelupPluginImpl.XP_PER_LEVEL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> <span class="keywordtype">long</span> [] {</div>
+<div class="line">        0,      </div>
+<div class="line">        12000,</div>
+<div class="line">        20000,</div>
+<div class="line">        35000,</div>
+<div class="line">        45000,  </div>
+<div class="line">        50000,</div>
+<div class="line">        50000,</div>
+<div class="line">        50000,</div>
+<div class="line">        50000,</div>
+<div class="line">        50000,</div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/campaign/OfficerLevelupPluginImpl.java</li>
 </ul>

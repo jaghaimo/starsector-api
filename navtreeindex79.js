@@ -1,5 +1,10 @@
 var NAVTREEINDEX79 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af32dcf25c22ca6e515d1351444769be8":[0,0,0,0,0,0,7,15,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af61e03049f73827778be25c36ff431ef":[0,0,0,0,0,0,7,15,33],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af8c4d3d4eadc4e0a360677008bc00238":[0,0,0,0,0,0,7,15,64],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#afc7f448c595feec52058e9d103dac578":[0,0,0,0,0,0,7,15,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#affb8941d9ae9c2e7ecf798b3c85bab04":[0,0,0,0,0,0,7,15,30],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html":[0,0,0,0,0,0,7,16],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html#a6e38177acc5c7bbf8dca036b76cffd13":[0,0,0,0,0,0,7,16,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html#a7a221afadb5ff056d1f91573fc4412ba":[0,0,0,0,0,0,7,16,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX79 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#a730262619f7fe3ae0e78f0d133b34300":[0,0,0,0,0,0,9,10,10],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#a7fa6eccf2453f9ef1ffe80875d927deb":[0,0,0,0,0,0,9,10,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#a8e161f3e6dda304c30b64492a7e0a99a":[0,0,0,0,0,0,9,10,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#a9fc59b04eba304fd2d286dd5c06cd68e":[0,0,0,0,0,0,9,10,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae5206190e60093f724d8588071ae07df":[0,0,0,0,0,0,9,10,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae79e7d30f655e0e834173131ed57df5d":[0,0,0,0,0,0,9,10,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae98263881f5862b78b2a8a69197209e9":[0,0,0,0,0,0,9,10,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae9a03b1ebfacce5e27337f08fefb3144":[0,0,0,0,0,0,9,10,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html":[0,0,0,0,0,0,10,2]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#a9fc59b04eba304fd2d286dd5c06cd68e":[0,0,0,0,0,0,9,10,5]
 };

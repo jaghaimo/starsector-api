@@ -1,5 +1,10 @@
 var NAVTREEINDEX80 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae5206190e60093f724d8588071ae07df":[0,0,0,0,0,0,9,10,8],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae79e7d30f655e0e834173131ed57df5d":[0,0,0,0,0,0,9,10,6],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae98263881f5862b78b2a8a69197209e9":[0,0,0,0,0,0,9,10,7],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html#ae9a03b1ebfacce5e27337f08fefb3144":[0,0,0,0,0,0,9,10,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html":[0,0,0,0,0,0,10,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a20863b7dbcdf0ceae7520c81af3ccf21":[0,0,0,0,0,0,10,2,8],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a28b6acf2d41afe7500b82b851dc71d3c":[0,0,0,0,0,0,10,2,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a3d2857b566d7add437135a6706a67406":[0,0,0,0,0,0,10,2,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX80 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#afe724c4b739dc33eabc8f12985ce1060":[0,0,0,0,0,0,10,15,93],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1FleetMemberValueGetter.html":[0,0,0,0,0,0,10,15,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1FleetMemberValueGetter.html#a59cf90f879b885f4b9aa7326602fb3ac":[0,0,0,0,0,0,10,15,0,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1FleetMemberValueGetter.html#a8d8a8ec87f1bbb8ae9c4d01572090a84":[0,0,0,0,0,0,10,15,0,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1FleetMemberValueGetter.html#ad131a24c0292218d7447e334ee4162fb":[0,0,0,0,0,0,10,15,0,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1FleetMemberValueGetter.html#ad940345d0d1da90e79141632ff2880c3":[0,0,0,0,0,0,10,15,0,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1StatModValueGetter.html":[0,0,0,0,0,0,10,15,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1StatModValueGetter.html#a0080b4adbf5f4ea0fcee281633d2eee8":[0,0,0,0,0,0,10,15,1,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1StatModValueGetter.html#a2adb6a734dc9730264f032beb40e1389":[0,0,0,0,0,0,10,15,1,3]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1FleetMemberValueGetter.html#a8d8a8ec87f1bbb8ae9c4d01572090a84":[0,0,0,0,0,0,10,15,0,3]
 };

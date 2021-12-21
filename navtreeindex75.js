@@ -1,5 +1,10 @@
 var NAVTREEINDEX75 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a87182771229e14957535495ec302bc3e":[0,0,0,0,0,0,2,69,59],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a88fb55e65c74f293fc9098b2553bbe1c":[0,0,0,0,0,0,2,69,30],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a8e16e9767c4b86935a516f795496aec5":[0,0,0,0,0,0,2,69,19],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a8e96f2b7dbb8d6025624e4291c9ffdfd":[0,0,0,0,0,0,2,69,85],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a93e1fdde2831fa13fbab0ea7c0286837":[0,0,0,0,0,0,2,69,80],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a98499eb696a5ecc0bbc96ca780202579":[0,0,0,0,0,0,2,69,74],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a98d74112daae634e6a76d04f641047cf":[0,0,0,0,0,0,2,69,39],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a98e82a07eeee2063307b62db27f73fe9":[0,0,0,0,0,0,2,69,83],
@@ -244,10 +249,5 @@ var NAVTREEINDEX75 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a15d427f27cc94e8d054dad5d9e7dc576":[0,0,0,0,0,0,3,4,13],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a1bda1938a6487d3e4d1ffbe74ea10ab6":[0,0,0,0,0,0,3,4,50],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a1cbcfbb31c83c52ca7629c6a2699f77a":[0,0,0,0,0,0,3,4,36],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a1f8ebbd1000922f4bc7a96b961d23c11":[0,0,0,0,0,0,3,4,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a22009adfc4aead59834449a10d1dadd8":[0,0,0,0,0,0,3,4,26],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a27524de3ac4f2fe886069059d2f33d14":[0,0,0,0,0,0,3,4,35],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a2bfebf08595b6d83fe9d65d075abd64e":[0,0,0,0,0,0,3,4,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a2c96346b4243a5b29b1f5c603cf5dc2b":[0,0,0,0,0,0,3,4,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a306fe7ab88ee3eaa89423f8213b83663":[0,0,0,0,0,0,3,4,8]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a1f8ebbd1000922f4bc7a96b961d23c11":[0,0,0,0,0,0,3,4,0]
 };

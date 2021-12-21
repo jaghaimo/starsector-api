@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html":[0,0,0,0,0,0,11,25],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html":[0,0,0,0,0,0,11,26],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a0073d8e3ec0a58408e6768a639151ec4":[0,0,0,0,0,0,11,26,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a08e5b77b66b5d398610ea5f3ec1f1c3b":[0,0,0,0,0,0,11,26,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX53 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#abc048bd81f9af4cca0101fc2a1b419dc":[0,0,0,0,0,0,2,18,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#abf8aa8e91524afdde4d662ef778857e3":[0,0,0,0,0,0,2,18,3],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#acca9eb170ca6f7e1ac53a076aeb16597":[0,0,0,0,0,0,2,18,5],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#adf868f8b9c2d9ab4fcade9f3f7bd85f6":[0,0,0,0,0,0,2,18,7],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#adfa09fc974172d8db8bafa7c789e4b88":[0,0,0,0,0,0,2,18,8]
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#adf868f8b9c2d9ab4fcade9f3f7bd85f6":[0,0,0,0,0,0,2,18,7]
 };

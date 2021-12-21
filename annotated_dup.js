@@ -105,6 +105,7 @@ var annotated_dup =
                 [ "SlipstreamBlockerUpdater", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SlipstreamBlockerUpdater.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SlipstreamBlockerUpdater" ],
                 [ "SlipstreamConfigUpdater", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SlipstreamConfigUpdater.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SlipstreamConfigUpdater" ],
                 [ "SubmarketInteractionListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener" ],
+                [ "SubmarketUpdateListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketUpdateListener.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketUpdateListener" ],
                 [ "SurveyPlanetListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SurveyPlanetListener.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SurveyPlanetListener" ]
               ] ],
               [ "rules", null, [

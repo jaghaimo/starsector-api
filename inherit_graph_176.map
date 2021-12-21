@@ -1,3 +1,30 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI.html" title=" " alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node1" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,169,212,211"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="260,169,497,211"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html" title=" " alt="" coords="556,5,768,47"/>
+<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html" title=" " alt="" coords="558,201,766,243"/>
+<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html" title=" " alt="" coords="558,463,766,504"/>
+<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html" title=" " alt="" coords="558,528,766,569"/>
+<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVisual.html" title=" " alt="" coords="558,71,766,112"/>
+<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NeuralTransferVisual.html" title=" " alt="" coords="558,136,766,177"/>
+<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html" title=" " alt="" coords="827,5,1035,47"/>
+<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin.html" title=" " alt="" coords="275,691,482,732"/>
+<area shape="rect" id="node11" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPluginWithAdvanceAfter.html" title=" " alt="" coords="545,854,779,910"/>
+<area shape="rect" id="node12" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BlinkerEffect.html" title=" " alt="" coords="558,933,766,975"/>
+<area shape="rect" id="node13" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1LightsEffect.html" title=" " alt="" coords="558,999,766,1040"/>
+<area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorEffect.html" title=" " alt="" coords="558,724,766,765"/>
+<area shape="rect" id="node15" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamEffect.html" title=" " alt="" coords="558,593,766,635"/>
+<area shape="rect" id="node16" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorDishRotationEffect.html" title=" " alt="" coords="558,659,766,700"/>
+<area shape="rect" id="node17" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1VPDriverEffect.html" title=" " alt="" coords="558,397,766,439"/>
+<area shape="rect" id="node18" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html" title=" " alt="" coords="288,397,469,439"/>
+<area shape="rect" id="node19" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CanisterFlakPlugin.html" title=" " alt="" coords="558,332,766,373"/>
+<area shape="rect" id="node20" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftTorpedoEffect.html" title=" " alt="" coords="558,789,766,831"/>
+<area shape="rect" id="node21" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ShockRepeaterOnFireEffect.html" title=" " alt="" coords="558,267,766,308"/>
+<area shape="rect" id="node22" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html" title=" " alt="" coords="288,1064,469,1105"/>
+<area shape="rect" id="node23" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BreachOnHitEffect.html" title=" " alt="" coords="558,1064,766,1105"/>
+<area shape="rect" id="node24" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1IonCannonOnHitEffect.html" title=" " alt="" coords="558,1129,766,1171"/>
+<area shape="rect" id="node25" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteOnHitEffect.html" title=" " alt="" coords="558,1195,766,1236"/>
+<area shape="rect" id="node26" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PilumOnHitEffect.html" title=" " alt="" coords="558,1260,766,1301"/>
+<area shape="rect" id="node27" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SabotOnHitEffect.html" title=" " alt="" coords="558,1325,766,1367"/>
+<area shape="rect" id="node28" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TestOnHitEffect.html" title=" " alt="" coords="558,1391,766,1432"/>
 </map>

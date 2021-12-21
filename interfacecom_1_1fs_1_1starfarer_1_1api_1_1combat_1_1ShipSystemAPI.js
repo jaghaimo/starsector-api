@@ -3,6 +3,8 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI =
     [ "deactivate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a0c8218a0867144cd7e997919339487e2", null ],
     [ "forceState", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a30bde13201840c79e23c5dd303c652b1", null ],
     [ "getAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aee6152489c4ba0f88d40a9b6585bc621", null ],
+    [ "getAmmoPerSecond", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a1d98baee3a4964b8cc066a4dc186989a", null ],
+    [ "getAmmoReloadProgress", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ab63c231abcb27eabb2dfe831c2720d01", null ],
     [ "getChargeActiveDur", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ab014146d60f6751401ff1355ce12f505", null ],
     [ "getChargeDownDur", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a515afc22fb3e7982118ae59972a4e44d", null ],
     [ "getChargeUpDur", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a3fa746437c559bc9d3a20cfff8461a72", null ],

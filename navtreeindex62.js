@@ -1,5 +1,6 @@
 var NAVTREEINDEX62 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#aa289335494f4efbafd0828330d1d03aa":[0,0,0,0,0,0,0,91,68],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#aa73512ebc5d30bf5d4dd03586629b09f":[0,0,0,0,0,0,0,91,65],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#aaa2ae64c1dcd319122ebb33d15f9eca2":[0,0,0,0,0,0,0,91,84],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#aab0be5898eed9167c096ec98cba8c224":[0,0,0,0,0,0,0,91,50],
@@ -248,6 +249,5 @@ var NAVTREEINDEX62 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a58bb20081efddc27414f2fa8233c6618":[0,0,0,0,0,0,0,100,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a5a5938e8f344edf316a7416b4b6f0afe":[0,0,0,0,0,0,0,100,32],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a605bbec3339f09c3b9f8948219f38a18":[0,0,0,0,0,0,0,100,20],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a6b90a17ee544f6fc63af809513d5bde5":[0,0,0,0,0,0,0,100,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a6dd761b374431bbed467e6b0ce171fcf":[0,0,0,0,0,0,0,100,40]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a6b90a17ee544f6fc63af809513d5bde5":[0,0,0,0,0,0,0,100,1]
 };

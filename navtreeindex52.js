@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a6dcdbda947f21f3a6d13353a65d37a9b":[0,0,0,0,0,0,9,0,1,37],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a717f75b3de306ba0f764b6249143740d":[0,0,0,0,0,0,9,0,1,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a7511fb0a49e27d2df821fc1542283659":[0,0,0,0,0,0,9,0,1,38],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a783a573825293dd98974485a9209e42c":[0,0,0,0,0,0,9,0,1,25],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html#a228dd7aaedccd5c8805a0f127b9bc2a9":[0,0,0,0,0,0,11,24,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html#a75d8ea4fb42ce6cabb43fdf07d989e46":[0,0,0,0,0,0,11,24,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html#ad0374bac6bbcab3dc943ebe534993ca8":[0,0,0,0,0,0,11,24,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html#ad2dac85b90f6b23fbe6b3e98999ffd27":[0,0,0,0,0,0,11,24,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html":[0,0,0,0,0,0,11,25]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html#ad2dac85b90f6b23fbe6b3e98999ffd27":[0,0,0,0,0,0,11,24,1]
 };

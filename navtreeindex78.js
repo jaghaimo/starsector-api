@@ -1,5 +1,10 @@
 var NAVTREEINDEX78 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html":[0,0,0,0,0,0,7,6],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a4bb095558f8504660d9455e4ee10196a":[0,0,0,0,0,0,7,6,7],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a58a57b24c19f0ff70036332dc95c261a":[0,0,0,0,0,0,7,6,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a6835f440eb112d1367eddd77bd425aea":[0,0,0,0,0,0,7,6,6],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a72b62365ba70914b6e9f9732d3164237":[0,0,0,0,0,0,7,6,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#a796aa2a7a331cce148f1251702c287c7":[0,0,0,0,0,0,7,6,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#ab305e73419694c2dd0e8806cfd2e7cd7":[0,0,0,0,0,0,7,6,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1EventSpecAPI.html#ab38452e92735527c279e24dcdd12fe9f":[0,0,0,0,0,0,7,6,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX78 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#ae50e94760ba873f0db3b9def70481f08":[0,0,0,0,0,0,7,15,18],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#ae830466d4f5e22695451cb12bafc753f":[0,0,0,0,0,0,7,15,15],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af08e119e1cf5721712047edc7ad460df":[0,0,0,0,0,0,7,15,63],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af22ce3f2ff36a7dc8e9516aaea9a266b":[0,0,0,0,0,0,7,15,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af32dcf25c22ca6e515d1351444769be8":[0,0,0,0,0,0,7,15,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af61e03049f73827778be25c36ff431ef":[0,0,0,0,0,0,7,15,33],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af8c4d3d4eadc4e0a360677008bc00238":[0,0,0,0,0,0,7,15,64],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#afc7f448c595feec52058e9d103dac578":[0,0,0,0,0,0,7,15,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#affb8941d9ae9c2e7ecf798b3c85bab04":[0,0,0,0,0,0,7,15,30]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html#af22ce3f2ff36a7dc8e9516aaea9a266b":[0,0,0,0,0,0,7,15,14]
 };

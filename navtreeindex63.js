@@ -1,5 +1,6 @@
 var NAVTREEINDEX63 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a6dd761b374431bbed467e6b0ce171fcf":[0,0,0,0,0,0,0,100,40],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a759566c46d3d1a57757d6f4686284500":[0,0,0,0,0,0,0,100,41],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a79e2684825f65d2eccdccf1f7aa2d2f1":[0,0,0,0,0,0,0,100,28],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a8e6443f5a11fc3fb9af488a82cdad52e":[0,0,0,0,0,0,0,100,47],
@@ -248,6 +249,5 @@ var NAVTREEINDEX63 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1StrategicModulePlugin.html#a5e33202105e8968a46013301b2d22b9c":[0,0,0,0,0,0,0,0,8,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1StrategicModulePlugin.html#a94affa1b3aacb7a9fa304f64c08c70f1":[0,0,0,0,0,0,0,0,8,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html":[0,0,0,0,0,0,0,0,9],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a073b474e91475d449fed6e0826d7943a":[0,0,0,0,0,0,0,0,9,16],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a12ee5e4fef6d0ed81fe51afdba280b2e":[0,0,0,0,0,0,0,0,9,19]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html#a073b474e91475d449fed6e0826d7943a":[0,0,0,0,0,0,0,0,9,16]
 };

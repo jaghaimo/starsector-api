@@ -1,5 +1,8 @@
 var NAVTREEINDEX68 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a0dc8f7286648943aed0e035c57a0e328":[0,0,0,0,0,0,1,12,18],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a0f435abc711641909a1d10136b3ca1cd":[0,0,0,0,0,0,1,12,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a16462c80bc02e344b891b828852b776c":[0,0,0,0,0,0,1,12,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a29d2ae544886d6ecf16733a839de5407":[0,0,0,0,0,0,1,12,8],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a32f8e92be45eff3b39637e57355a243b":[0,0,0,0,0,0,1,12,20],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html#a39173e02bbc09174ef2f5243fe5162c3":[0,0,0,0,0,0,1,12,15],
@@ -246,8 +249,5 @@ var NAVTREEINDEX68 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#ae2bec22391b87ed0e0a56c23b57f4d41":[0,0,0,0,0,0,1,29,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#ae7b7c121a4aa5348da5d6c9ac32e8680":[0,0,0,0,0,0,1,29,37],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#ae7e4a936ebcefd9287bc9e0a6ea328f2":[0,0,0,0,0,0,1,29,38],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#ae850a454a3f35a3c8bd8feaffdfa6d47":[0,0,0,0,0,0,1,29,28],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#aef46300fd36f09db0b4688989223b152":[0,0,0,0,0,0,1,29,19],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#af440d1944e79fd1eccb58212be3c8c9f":[0,0,0,0,0,0,1,29,36],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#aff78cba3fae77bdeea3ff45396b24bf0":[0,0,0,0,0,0,1,29,32]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#ae850a454a3f35a3c8bd8feaffdfa6d47":[0,0,0,0,0,0,1,29,28]
 };

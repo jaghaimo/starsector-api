@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a80bdccbbdc568d727e33f268e6717ced":[0,0,0,0,0,0,7,1,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a86e79022f99b52b090de56fd4cf4a6d1":[0,0,0,0,0,0,7,1,34],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a8c5effefbf982bcf15c6230b6880ef7d":[0,0,0,0,0,0,7,1,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a8dd01b16c5753d385fea2ec9d879812f":[0,0,0,0,0,0,7,1,37],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a64e8d7b4b5186ba4f35a638c9a260d02":[0,0,0,0,0,0,9,0,1,55],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a66d1f589f56af495fa178778017de8db":[0,0,0,0,0,0,9,0,1,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a6c292022bfa0ce9f662c2a39e8dd42d9":[0,0,0,0,0,0,9,0,1,41],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a6d4d9eba62bdbeebeb95d20bac782714":[0,0,0,0,0,0,9,0,1,45],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a6dcdbda947f21f3a6d13353a65d37a9b":[0,0,0,0,0,0,9,0,1,37]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a6d4d9eba62bdbeebeb95d20bac782714":[0,0,0,0,0,0,9,0,1,45]
 };
