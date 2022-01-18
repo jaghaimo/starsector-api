@@ -19,5 +19,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGr
     [ "getStackForIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a33eedb1cce8e8943a71d46368a4e9466", null ],
     [ "getValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#ac75ec6e6e780b79c5633f991882210da", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa1773ccb185fa991f6421447aefb80bc", null ],
-    [ "performRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a6225f532aa3d5a567534bec40e2210b4", null ]
+    [ "performRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a6225f532aa3d5a567534bec40e2210b4", null ],
+    [ "CREDITS_PER_MARKET_SIZE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aff30a5d193e38c52927c5eb0756c2b79", null ],
+    [ "MAX_TOKENS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a2b6e510835138e1f4d1e3f2c2ce038bb", null ]
 ];

@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI =
 [
+    [ "OptionTooltipCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_1_1OptionTooltipCreator.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_1_1OptionTooltipCreator" ],
     [ "addOption", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a57f02433899c784a146848ca9955130a", null ],
     [ "addOption", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#ad6178acf15fbda34401a38bd2f1b85f0", null ],
     [ "addOption", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a0d699f500742566c2ec13a20432e5301", null ],

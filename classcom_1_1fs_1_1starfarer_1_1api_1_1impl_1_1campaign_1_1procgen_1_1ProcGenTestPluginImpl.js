@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl =
 [
+    [ "OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl_1_1OptionId.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl_1_1OptionId" ],
     [ "addText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html#a6d63cbdba702f915f3457b476675d7f3", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html#ae1140aadc479c9571697776e8fa302fe", null ],
     [ "appendText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html#a4b4abbf1c6f45d1fbda5b589682fb0b5", null ],
@@ -14,6 +15,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGen
     [ "print", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html#a7576b56badf26131a7b9abf8f119041f", null ],
     [ "printStats", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html#a80e10151cc614ec8384b054c6c3a24c2", null ],
     [ "dialog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html#a02b1c88621ab1533ecc37a712a7d1c54", null ],
+    [ "HIGHLIGHT_COLOR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html#a819a55f8f894c3fbbdbf22f683a46cbd", null ],
     [ "lastOptionMousedOver", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html#aa4b5a6463e87d2298b010050a24c7aa2", null ],
     [ "options", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html#acaaa45c53aedc87047ddea0a2224dba4", null ],
     [ "planet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html#ab61c6f5c0bc628389d23792c28f406c4", null ],

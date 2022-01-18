@@ -15,5 +15,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpd
     [ "isSignificant", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a7c2098ee2208a20736aa13eeb6225d6b", null ],
     [ "updatePrices", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#acad36e741baf83b1c4b3818d2ae12c72", null ],
     [ "updateType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a39fa24f653a040a4e4e1a68252a16d68", null ],
-    [ "updateType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a57ed4f0060e7e55e15a596bb9c2f1db4", null ]
+    [ "updateType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a57ed4f0060e7e55e15a596bb9c2f1db4", null ],
+    [ "commodityId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a611b636289f9853293ff5ce3e5abec8f", null ],
+    [ "demand", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#ac047ce39dfedad7b9c3ef8eea425799e", null ],
+    [ "demandPrice", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a127c48d9c527ce7b5dd3c17ef07ccfa9", null ],
+    [ "marketId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a3ade7aed2926c1526fa962437be18288", null ],
+    [ "supplyPrice", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a2d0b24a0c15320d588f154e826b48ccf", null ],
+    [ "timestamp", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a757c095e0721aca3940942fe870072ff", null ],
+    [ "type", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html#a4861890eb3ba343beb8da00343659add", null ]
 ];

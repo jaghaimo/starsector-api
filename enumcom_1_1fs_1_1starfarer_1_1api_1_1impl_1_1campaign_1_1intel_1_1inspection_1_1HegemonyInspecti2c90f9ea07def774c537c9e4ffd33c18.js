@@ -1,0 +1,8 @@
+var enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspecti2c90f9ea07def774c537c9e4ffd33c18 =
+[
+    [ "BRIBED", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspecti2c90f9ea07def774c537c9e4ffd33c18.html#a9d865ba0999f9ca2619c1dc760a299a7", null ],
+    [ "COLONY_NO_LONGER_EXISTS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspecti2c90f9ea07def774c537c9e4ffd33c18.html#a364b8d390e558ea9aac0424a3127ee73", null ],
+    [ "CONFISCATE_CORES", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspecti2c90f9ea07def774c537c9e4ffd33c18.html#a3bc7a6a3648035e9162232fa77f44110", null ],
+    [ "FOUND_EVIDENCE_NO_CORES", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspecti2c90f9ea07def774c537c9e4ffd33c18.html#ab1da365dfc3a82c9124ca00f703a809f", null ],
+    [ "TASK_FORCE_DESTROYED", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspecti2c90f9ea07def774c537c9e4ffd33c18.html#a44dc758e24c9221ef288463d410a2d77", null ]
+];

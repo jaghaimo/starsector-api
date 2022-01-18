@@ -53,8 +53,8 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="862.5,-544.28 862.5,-574.28 1065.5,-574.28 1065.5,-544.28 862.5,-544.28"/>
+<g id="a_node4"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="862.5,-544.28 862.5,-574.28 1065.5,-574.28 1065.5,-544.28 862.5,-544.28"/>
 <text text-anchor="start" x="870.5" y="-562.28" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="964" y="-551.28" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent.CallableEvent</text>
 </a>
@@ -85,8 +85,8 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="845,-446.28 845,-476.28 1083,-476.28 1083,-446.28 845,-446.28"/>
+<g id="a_node6"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="845,-446.28 845,-476.28 1083,-476.28 1083,-446.28 845,-446.28"/>
 <text text-anchor="start" x="853" y="-464.28" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="964" y="-453.28" font-family="Helvetica,sans-Serif" font-size="10.00">CommRelayEntityPlugin.CommSnifferReadableIntel</text>
 </a>
@@ -189,8 +189,8 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="1191,-294.28 1191,-324.28 1424,-324.28 1424,-294.28 1191,-294.28"/>
+<g id="a_node10"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_1_1PSIStage.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="1191,-294.28 1191,-324.28 1424,-324.28 1424,-294.28 1191,-294.28"/>
 <text text-anchor="start" x="1199" y="-312.28" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="1307.5" y="-301.28" font-family="Helvetica,sans-Serif" font-size="10.00">PlanetaryShieldIntel.PSIStage</text>
 </a>

@@ -88,6 +88,7 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3 Class Reference</div>  </div>
@@ -102,9 +103,9 @@ Collaboration diagram for com.fs.starfarer.api.impl.campaign.fleets.FleetFactory
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>FPRemaining</b></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1FPRemaining.html">FPRemaining</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>SizeFilterMode</b></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1SizeFilterMode.html">SizeFilterMode</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -131,7 +132,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>pruneFleet</b>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>addAll</b> (int[] ratio, List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> &gt; from, LinkedHashSet&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> &gt; to, int num, Random random)</td></tr>
 <tr class="separator:a97b0a9e45e4184b845f86ce4ff543819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd9aa02c0715c6f4d6a151ad604edbbf"><td class="memItemLeft" align="right" valign="top"><a id="abd9aa02c0715c6f4d6a151ad604edbbf"></a>
-static <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html">WeightedRandomPicker</a>&lt; HullSize &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>makePicker</b> (int[] ratio, Random random)</td></tr>
+static <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html">WeightedRandomPicker</a>&lt; <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html">HullSize</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>makePicker</b> (int[] ratio, Random random)</td></tr>
 <tr class="separator:abd9aa02c0715c6f4d6a151ad604edbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a256aef7cf73b00f33196c9f010e0aab3"><td class="memItemLeft" align="right" valign="top"><a id="a256aef7cf73b00f33196c9f010e0aab3"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>getFP</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet)</td></tr>
@@ -146,7 +147,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>addCommanderAn
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>addCommanderAndOfficersV2</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params, Random random)</td></tr>
 <tr class="separator:a190aa64a781ddbd54aa5e5b7b72285f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63a6a726806f02ec9f0a8d6542102a87"><td class="memItemLeft" align="right" valign="top"><a id="a63a6a726806f02ec9f0a8d6542102a87"></a>
-static SkillPickPreference&#160;</td><td class="memItemRight" valign="bottom"><b>getSkillPrefForShip</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member)</td></tr>
+static <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent_1_1SkillPickPreference.html">SkillPickPreference</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getSkillPrefForShip</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member)</td></tr>
 <tr class="separator:a63a6a726806f02ec9f0a8d6542102a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee1e07d3df71ecbd0cf6e147e955044b"><td class="memItemLeft" align="right" valign="top"><a id="aee1e07d3df71ecbd0cf6e147e955044b"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>addCommanderSkills</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html">PersonAPI</a> commander, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params, Random random)</td></tr>
@@ -167,7 +168,7 @@ static <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>addToFleet</b> (String role, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> market, Random random, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, int maxFP, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params)</td></tr>
 <tr class="separator:a17d9387852cf0d823f5f20f45de42a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff8f424b37532a65162ea7dce2d45b07"><td class="memItemLeft" align="right" valign="top"><a id="aff8f424b37532a65162ea7dce2d45b07"></a>
-static boolean&#160;</td><td class="memItemRight" valign="bottom"><b>addShips</b> (String role, int count, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> market, Random random, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, FPRemaining rem, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params)</td></tr>
+static boolean&#160;</td><td class="memItemRight" valign="bottom"><b>addShips</b> (String role, int count, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> market, Random random, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1FPRemaining.html">FPRemaining</a> rem, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params)</td></tr>
 <tr class="separator:aff8f424b37532a65162ea7dce2d45b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b3f84fa4c5e3965812dd3a4d7432fba"><td class="memItemLeft" align="right" valign="top"><a id="a8b3f84fa4c5e3965812dd3a4d7432fba"></a>
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>addPhaseFleetPoints</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Random random, float fp, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params)</td></tr>
@@ -176,7 +177,7 @@ static float&#160;</td><td class="memItemRight" valign="bottom"><b>addPhaseFleet
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>addCarrierFleetPoints</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Random random, float fp, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params)</td></tr>
 <tr class="separator:a107e6a25121fb702e35db5397fb35db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac35f87faa371f3f6e5882f170baf3ea4"><td class="memItemLeft" align="right" valign="top"><a id="ac35f87faa371f3f6e5882f170baf3ea4"></a>
-static float&#160;</td><td class="memItemRight" valign="bottom"><b>addPriorityOnlyThenAll</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Random random, float fp, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params, SizeFilterMode sizeFilterMode, String roleSmall, String roleMedium, String roleLarge)</td></tr>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>addPriorityOnlyThenAll</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Random random, float fp, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1SizeFilterMode.html">SizeFilterMode</a> sizeFilterMode, String roleSmall, String roleMedium, String roleLarge)</td></tr>
 <tr class="separator:ac35f87faa371f3f6e5882f170baf3ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2716115407c5ad765a125d3e214f0e3c"><td class="memItemLeft" align="right" valign="top"><a id="a2716115407c5ad765a125d3e214f0e3c"></a>
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>addTankerFleetPoints</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Random random, float fp, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params)</td></tr>
@@ -200,13 +201,13 @@ static float&#160;</td><td class="memItemRight" valign="bottom"><b>addUtilityFle
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>getAdjustedDoctrineSize</b> (int size, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleetSoFar)</td></tr>
 <tr class="separator:a893d44b3c6ab7e7ee09dc400e4f7135b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa56259da0ecddf4effe95efcf79026f1"><td class="memItemLeft" align="right" valign="top"><a id="aa56259da0ecddf4effe95efcf79026f1"></a>
-static float&#160;</td><td class="memItemRight" valign="bottom"><b>addFleetPoints</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Random random, float fp, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params, SizeFilterMode sizeFilterMode, String ... roles)</td></tr>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>addFleetPoints</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Random random, float fp, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1SizeFilterMode.html">SizeFilterMode</a> sizeFilterMode, String ... roles)</td></tr>
 <tr class="separator:aa56259da0ecddf4effe95efcf79026f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a271d49dcc68906b3cd1259d9e3d58c24"><td class="memItemLeft" align="right" valign="top"><a id="a271d49dcc68906b3cd1259d9e3d58c24"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>addCombatFleetPoints</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Random random, float warshipFP, float carrierFP, float phaseFP, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params)</td></tr>
 <tr class="separator:a271d49dcc68906b3cd1259d9e3d58c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab89fa8622f13ffd5d5d2f38e8ae7cb9f"><td class="memItemLeft" align="right" valign="top"><a id="ab89fa8622f13ffd5d5d2f38e8ae7cb9f"></a>
-static boolean&#160;</td><td class="memItemRight" valign="bottom"><b>addShips</b> (<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html">WeightedRandomPicker</a>&lt; String &gt; rolePicker, Set&lt; String &gt; usePriorityOnly, Map&lt; String, FPRemaining &gt; remaining, FPRemaining remOverride, int count, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Random random, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params)</td></tr>
+static boolean&#160;</td><td class="memItemRight" valign="bottom"><b>addShips</b> (<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html">WeightedRandomPicker</a>&lt; String &gt; rolePicker, Set&lt; String &gt; usePriorityOnly, Map&lt; String, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1FPRemaining.html">FPRemaining</a> &gt; remaining, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1FPRemaining.html">FPRemaining</a> remOverride, int count, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Random random, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params)</td></tr>
 <tr class="separator:ab89fa8622f13ffd5d5d2f38e8ae7cb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4500f7f3230a2ab1432471811787f88f"><td class="memItemLeft" align="right" valign="top"><a id="a4500f7f3230a2ab1432471811787f88f"></a>
 static float&#160;</td><td class="memItemRight" valign="bottom"><b>getShipDeficitFleetSizeMult</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> market)</td></tr>
@@ -250,7 +251,7 @@ static float&#160;</td><td class="memItemRight" valign="bottom"><b>addToFleet</b
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>addToPriorityOnlySet</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, Set&lt; String &gt; set, String small, String medium, String large)</td></tr>
 <tr class="separator:a8a525709bff851c458419e57b59ff87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e004231e09ddcd06a7b568a8c81f403"><td class="memItemLeft" align="right" valign="top"><a id="a2e004231e09ddcd06a7b568a8c81f403"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>redistributeFP</b> (FPRemaining one, FPRemaining two, FPRemaining three, int newTotal)</td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>redistributeFP</b> (<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1FPRemaining.html">FPRemaining</a> one, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1FPRemaining.html">FPRemaining</a> two, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1FPRemaining.html">FPRemaining</a> three, int newTotal)</td></tr>
 <tr class="separator:a2e004231e09ddcd06a7b568a8c81f403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
@@ -258,6 +259,12 @@ Static Protected Attributes</h2></td></tr>
 <tr class="memitem:ab37defa87e3adcb91eb5f6f5385873b6"><td class="memItemLeft" align="right" valign="top"><a id="ab37defa87e3adcb91eb5f6f5385873b6"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>sizeOverride</b> = 0</td></tr>
 <tr class="separator:ab37defa87e3adcb91eb5f6f5385873b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a121a292eeb2df12bcce9ab583c71079e"><td class="memItemLeft" align="right" valign="top"><a id="a121a292eeb2df12bcce9ab583c71079e"></a>
+static List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>startingAbilities</b> = null</td></tr>
+<tr class="separator:a121a292eeb2df12bcce9ab583c71079e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a9c9043b641f1840d23e801952c016a22"></a>

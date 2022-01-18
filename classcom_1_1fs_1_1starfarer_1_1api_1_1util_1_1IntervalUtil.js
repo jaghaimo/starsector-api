@@ -9,7 +9,13 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil =
     [ "getMaxInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#aed0bb930de870cb3a997917c0c4fae2d", null ],
     [ "getMinInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#aa1edae0bb66648dad3fd3e0023285b14", null ],
     [ "intervalElapsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a0f4157a9444ea393f4f95e0c0e657f44", null ],
+    [ "nextInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#ab418fa7985923c819a734c34da2d4037", null ],
     [ "randomize", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a75ccba48d67e55a3ff7ca835b952604d", null ],
     [ "setElapsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a6af5c0aef9f27121987fbded1573a801", null ],
-    [ "setInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a602873feb4614d386fd4a2e3969efad6", null ]
+    [ "setInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a602873feb4614d386fd4a2e3969efad6", null ],
+    [ "currInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#acd7df1e3f5e1ca0333a345e637d40d9d", null ],
+    [ "elapsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#aaf1e80e32125afcf523e7fc69c448dec", null ],
+    [ "intervalElapsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#af2f4337d02e8b70fd4ff74b9b5b183c2", null ],
+    [ "maxInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#ac7c7c4be6cd7a203a4f83bc72f6aeea0", null ],
+    [ "minInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html#a1dc8035e407398808120f42da4555515", null ]
 ];

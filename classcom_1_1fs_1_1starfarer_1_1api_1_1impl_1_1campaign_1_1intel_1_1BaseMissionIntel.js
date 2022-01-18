@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel =
 [
+    [ "MissionResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_1_1MissionResult.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_1_1MissionResult" ],
+    [ "MissionState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_1_1MissionState.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_1_1MissionState" ],
     [ "addAbandonButton", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ae0217166558aa918105bd83a4e614a40", null ],
     [ "addAbandonButton", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aec998cbbff68392d6fef975629ce1cc9", null ],
     [ "addAcceptButton", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ae5d46485983eb6b58f156b892f8c8703", null ],
@@ -42,6 +44,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissi
     [ "setMissionResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#afef476e462e498736caa49f12c468a52", null ],
     [ "setMissionState", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#aa3c80e0c7f1177d1e0cd8b7c9414ccf9", null ],
     [ "shouldRemoveIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a0bbca6beb428d6ccffedd8d64ed94879", null ],
+    [ "BUTTON_ABANDON", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a17501c27e2f380323c4c11476582a1aa", null ],
+    [ "BUTTON_ACCEPT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ab803be84c0f20cb5b420abfee63d3142", null ],
     [ "duration", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a03d53e5ab3cd1dc758bbcb92c1e7d94c", null ],
     [ "elapsedDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#a9f7699408996e4dd363a30a936a1b800", null ],
     [ "missionResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html#ac0fd326124c4942e03874eab01cdc589", null ],

@@ -10,8 +10,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1Popu
     [ "normalize", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a360e45e0725201ca3f4b6e7a69c8ae7b", null ],
     [ "normalizeToPositive", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a0c8e98a50172efbb366801fcec5a362e", null ],
     [ "normalizeToWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#aad43a36ba7eacd3e72b20a9ad3f30121", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a4c0611b04f432b77401b5212e440e5f2", null ],
     [ "set", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a7fa835a8d025087269d586d6de23ff70", null ],
     [ "setWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a2c3f46d4dd5e72dd9b39fd708f752a36", null ],
     [ "toString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#ab29201bf376e19482f3eff1a26277ca2", null ],
-    [ "updateWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a7f8ec35ac359e5979162bf60584b9f37", null ]
+    [ "updateWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a7f8ec35ac359e5979162bf60584b9f37", null ],
+    [ "comp", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#affa28f88d83fce07478b4926f9148a86", null ],
+    [ "SET_WEIGHT_ID", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a9ee348c3d6bfe67d985827a5eaaf9cc1", null ],
+    [ "weight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html#a8ac0e3b190781d7166601d85e0f1378d", null ]
 ];

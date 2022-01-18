@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin =
 [
+    [ "ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin_1_1ParticleData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin_1_1ParticleData" ],
+    [ "PointParticle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin_1_1PointParticle.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin_1_1PointParticle" ],
     [ "addTestParticle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html#a0655193bc585c2d2a6b28edf9c4268ab", null ],
     [ "addTexturedParticle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html#ac8218f26b27826b842eeee2a2d7dc5fe", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html#aa56455ad3af5618879b36168155ddce3", null ],
@@ -7,6 +9,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1Turbul
     [ "getRandomColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html#a00af5d71373cbaa895e7ace834f30043", null ],
     [ "getRenderRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html#a07449b9cbb4a79138b1a54e7ab399d63", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html#a1a66e0a95d1e426d680afebdb5cc9116", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html#a785327a7a170ebe9d27cea84dc5a07c9", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html#ac2759f6fc3e5c726db27d2b2619ebf22", null ],
     [ "renderTextureParticles", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html#a0f8e55656ee7216ce5e4b12ee107766c", null ],
     [ "setField", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html#ab7a003e4d9fe4d1430efedca1d2d2c21", null ],

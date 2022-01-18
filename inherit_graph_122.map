@@ -1,3 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1RulesAPI.html" title=" " alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node1" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BlueprintProviderItem.html" title=" " alt="" coords="248,136,504,177"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1FighterBlueprintItemPlugin.html" title=" " alt="" coords="552,5,808,47"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html" title=" " alt="" coords="552,71,808,112"/>
+<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html" title=" " alt="" coords="552,136,808,177"/>
+<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html" title=" " alt="" coords="552,201,808,243"/>
+<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WeaponBlueprintItemPlugin.html" title=" " alt="" coords="552,267,808,308"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html" title=" " alt="" coords="5,233,200,275"/>
+<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html" title=" " alt="" coords="248,233,504,275"/>
+<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1GenericSpecialItemPlugin.html" title=" " alt="" coords="552,332,808,373"/>
+<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1JanusDevicePlugin.html" title=" " alt="" coords="552,397,808,439"/>
+<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html" title=" " alt="" coords="552,463,808,504"/>
 </map>

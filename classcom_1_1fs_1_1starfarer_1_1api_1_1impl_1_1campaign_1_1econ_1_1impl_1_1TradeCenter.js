@@ -16,5 +16,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Tr
     [ "isAvailableToBuild", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TradeCenter.html#a9bf42ba273e077e193f267ba60bf68b7", null ],
     [ "modifyIncoming", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TradeCenter.html#ab6598368a06dd51ed56a403e9538630a", null ],
     [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TradeCenter.html#aeb2df0a3411dbabec486d23858f12e8b", null ],
-    [ "saved", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TradeCenter.html#aee94cc5c617fb915d47dbf862934edc7", null ]
+    [ "ALPHA_CORE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TradeCenter.html#aa0af88b82adb56841be00ca914420ed6", null ],
+    [ "BASE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TradeCenter.html#a89f1f33e16652457328658d0be6a384e", null ],
+    [ "IMPROVE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TradeCenter.html#ab9e72d7c7ad75f271a108736f0c332b0", null ],
+    [ "saved", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TradeCenter.html#aee94cc5c617fb915d47dbf862934edc7", null ],
+    [ "STABILITY_PELANTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TradeCenter.html#a5e3c8df92a9165639b5c8fe5c68ba121", null ]
 ];

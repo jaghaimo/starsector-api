@@ -9,5 +9,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec =
     [ "isAutofireOnByDefault", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec.html#aa56dd39d7087ffa24afe0d86d9e58fbb", null ],
     [ "removeSlot", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec.html#aceb54850d29cef1b5dfe14e59284eb69", null ],
     [ "setAutofireOnByDefault", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec.html#a56ca6906222828697e4429c29a55f2b4", null ],
-    [ "setType", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec.html#a431784c14eea00a975f77e3e97b53498", null ]
+    [ "setType", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec.html#a431784c14eea00a975f77e3e97b53498", null ],
+    [ "autofireOnByDefault", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec.html#afb41df812e63b0da6bf6bb6262f106a3", null ],
+    [ "slots", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec.html#ad39d3fdf9cb5725e13e8ce68e2b2b0e7", null ],
+    [ "type", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec.html#a0a45a4505567deeb5ceb532de22c60f6", null ]
 ];

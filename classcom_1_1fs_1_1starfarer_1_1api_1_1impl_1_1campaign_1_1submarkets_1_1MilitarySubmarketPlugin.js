@@ -7,6 +7,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1Mili
     [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a853b1ba8b797f403e32ea939285e4ff1", null ],
     [ "getOnClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a2367b5f73138dc4908b2605ac2a69885", null ],
     [ "getPlayerEconomyImpactMode", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#aae2eb8ad938b5e7c3db984863cef6bb1", null ],
+    [ "getRequiredLevelAssumingLegal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#acc04bf72ccd239fb1d465638b4f5351b", null ],
+    [ "getRequiredLevelAssumingLegal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#afefcdf3d786829aec9feadb140c84ba6", null ],
+    [ "getRequiredLevelAssumingLegal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a1021501b9aedf54747569ed398f446ea", null ],
     [ "getStockpileLimit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a67523207e9720ae9ba0200e9c66e0974", null ],
     [ "getTooltipAppendix", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a26c738c19c2169814937662c45c51317", null ],
     [ "getTooltipAppendixHighlights", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af0986a3f39a95fbe98befceaf040a2da", null ],
@@ -20,5 +23,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1Mili
     [ "requiresCommission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a8d69d48c033813abfe3d70ff330cf9a0", null ],
     [ "shouldHaveCommodity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#aa8d162b567a77bba1c06a81db5b6c51e", null ],
     [ "updateCargoPrePlayerInteraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af87fb4176c3e685a0da42f336bce49ec", null ],
-    [ "writeReplace", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a46ef2040cf70a85678ae4e3495020279", null ]
+    [ "writeReplace", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a46ef2040cf70a85678ae4e3495020279", null ],
+    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#a724075fddd3c43d98e93a8ffe7f3900c", null ],
+    [ "minStanding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#adea391ab553df4c5759cd1bda2fe5c34", null ]
 ];

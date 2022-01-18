@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI =
 [
+    [ "ResourceColorGetter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI_1_1ResourceColorGetter.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI_1_1ResourceColorGetter" ],
     [ "addCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html#a6e73a8f2a5c254a2376a8b6f68d3f903", null ],
     [ "addCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html#a6f3f745f74388796124d581eeb172a27", null ],
     [ "addCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html#ae68111801a79e91ac76c7cd57c7e4799", null ],

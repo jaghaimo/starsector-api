@@ -1,10 +1,15 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin =
 [
+    [ "MarketFilter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_1_1MarketFilter.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_1_1MarketFilter" ],
+    [ "addFactionNameTokens", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a21daa770edc2f6395c89bdd4b4a6cdc8", null ],
+    [ "addPersonTokens", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a266c202fb9f5002e4c596f421170e429", null ],
     [ "addTokensToList", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a975fca0b61107178b5d2918dc55458a7", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a892d9c8e77f8c51654d4399169a80540", null ],
     [ "allowMultipleOngoingForSameTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a0be9635fa2049ae34b5b97153a12ddc9", null ],
     [ "callEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a8d07c52ad6fa20fdd5dbf61b0bac5738", null ],
     [ "cleanup", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab15b57181b8a578286ed9db4428762a8", null ],
+    [ "findMatchingMarkets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a27ea0e9bd789ce37715e7e839bf71f31", null ],
+    [ "findNearestMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ab6b2f0624cafeb655db2c050d5b06281", null ],
     [ "getCurrentImage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a03c0bff1e962ff7ef9f547119e9683da", null ],
     [ "getCurrentMessageIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ae32a4da198ee3642f24b7581d1e18c36", null ],
     [ "getDefaultPriority", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a85cf224c2f3e37252bc98c9d367b1350", null ],
@@ -65,6 +70,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEven
     [ "eventTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#abe1c16c1836db2f6bacef1b8b0814872", null ],
     [ "eventType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aac2085bc3d01045862487bc6a8f01d06", null ],
     [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a5062e440ac3d3fb9a12bf3cac406e2c1", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a87de20910787ea25e249a6993fc88026", null ],
     [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a82135608621e80f71b991a0c839669e2", null ],
     [ "memory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a1e63b0b9f60a876a974da87de0ddad82", null ],
     [ "started", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a126ff3cb90aa6aa816b02ff33a9b5269", null ],

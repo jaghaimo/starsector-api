@@ -87,6 +87,7 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SourceBasedFleetManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.fleets.SourceBasedFleetManager Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -126,7 +127,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setDone</b> (boolean 
 <tr class="memitem:a3d15209210fbe3bd82a252838bce2cc7"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SourceBasedFleetManager.html#a3d15209210fbe3bd82a252838bce2cc7">runWhilePaused</a> ()</td></tr>
 <tr class="separator:a3d15209210fbe3bd82a252838bce2cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae1b533485e82b035b7477fbde74ce32"><td class="memItemLeft" align="right" valign="top"><a id="aae1b533485e82b035b7477fbde74ce32"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reportFleetDespawnedToListener</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, FleetDespawnReason reason, Object param)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reportFleetDespawnedToListener</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener_1_1FleetDespawnReason.html">FleetDespawnReason</a> reason, Object param)</td></tr>
 <tr class="separator:aae1b533485e82b035b7477fbde74ce32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd4b3fbbae0ff2fa3aed79f85c052c20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SourceBasedFleetManager.html#acd4b3fbbae0ff2fa3aed79f85c052c20">reportBattleOccurred</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> primaryWinner, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html">BattleAPI</a> battle)</td></tr>
 <tr class="separator:acd4b3fbbae0ff2fa3aed79f85c052c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +176,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>destroyed</b> = 0</t
 <tr class="memitem:a299b7c5142bd1496b7931d555c3594bd"><td class="memItemLeft" align="right" valign="top"><a id="a299b7c5142bd1496b7931d555c3594bd"></a>
 Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>sourceLocation</b> = new Vector2f()</td></tr>
 <tr class="separator:a299b7c5142bd1496b7931d555c3594bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac693dd090df1aa25af00c191ccbc1481"><td class="memItemLeft" align="right" valign="top"><a id="ac693dd090df1aa25af00c191ccbc1481"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>done</b> = false</td></tr>
+<tr class="separator:ac693dd090df1aa25af00c191ccbc1481"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Up to a configurable number of fleets. Instant despawn when player is far enough.</p>

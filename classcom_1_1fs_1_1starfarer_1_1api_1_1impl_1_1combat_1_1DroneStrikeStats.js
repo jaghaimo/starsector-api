@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStats =
 [
+    [ "DroneMissileScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStats_1_1DroneMissileScript.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStats_1_1DroneMissileScript" ],
     [ "apply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStats.html#a6889916fda15fee440309b6dbc47e7a4", null ],
     [ "convertDrones", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStats.html#ac048af25a11155749097ba8802e245ed", null ],
     [ "droneStrikeUsefulVsFighters", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStats.html#a3b9b951fd0eca8f7d9e4dbd44affcd89", null ],

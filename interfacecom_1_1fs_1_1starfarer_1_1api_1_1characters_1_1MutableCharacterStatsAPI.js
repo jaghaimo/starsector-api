@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI =
 [
+    [ "SkillLevelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI_1_1SkillLevelAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI_1_1SkillLevelAPI" ],
     [ "addBonusXP", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#aa85a5a1f39508da5039bec4766313458", null ],
     [ "addPoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#ae93c0146661b6b6ba5e8142fcd354fb0", null ],
     [ "addStoryPoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a37a59ad69b8231da9a6627fde137535e", null ],

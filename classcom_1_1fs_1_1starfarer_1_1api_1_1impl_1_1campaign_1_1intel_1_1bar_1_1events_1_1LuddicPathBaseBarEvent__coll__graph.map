@@ -16,20 +16,20 @@
 <area shape="rect" id="node11" title=" " alt="" coords="964,388,1035,415"/>
 <area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="875,801,1123,842"/>
 <area shape="rect" id="node15" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html" title=" " alt="" coords="322,878,555,919"/>
-<area shape="rect" id="node16" title=" " alt="" coords="303,943,574,985"/>
+<area shape="rect" id="node16" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" title=" " alt="" coords="303,943,574,985"/>
 <area shape="rect" id="node17" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="355,747,522,789"/>
-<area shape="rect" id="node18" title=" " alt="" coords="280,813,597,854"/>
+<area shape="rect" id="node18" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html" title=" " alt="" coords="280,813,597,854"/>
 <area shape="rect" id="node24" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="902,1178,1097,1219"/>
 <area shape="rect" id="node20" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="876,930,1123,971"/>
-<area shape="rect" id="node21" title=" " alt="" coords="878,995,1121,1037"/>
-<area shape="rect" id="node22" title=" " alt="" coords="863,1061,1135,1102"/>
+<area shape="rect" id="node21" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI_1_1EconomyUpdateListener.html" title=" " alt="" coords="878,995,1121,1037"/>
+<area shape="rect" id="node22" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidDelegate.html" title=" " alt="" coords="863,1061,1135,1102"/>
 <area shape="rect" id="node23" title=" " alt="" coords="968,1127,1031,1153"/>
 <area shape="rect" id="node25" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="341,1178,536,1219"/>
 <area shape="rect" id="node26" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="922,486,1077,527"/>
-<area shape="rect" id="node27" title=" " alt="" coords="875,551,1123,593"/>
-<area shape="rect" id="node28" title=" " alt="" coords="299,472,579,528"/>
-<area shape="rect" id="node29" title=" " alt="" coords="315,551,563,593"/>
+<area shape="rect" id="node27" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyIntel_1_1BountyResult.html" title=" " alt="" coords="875,551,1123,593"/>
+<area shape="rect" id="node28" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin_1_1ReputationAdjustmentResult.html" title=" " alt="" coords="299,472,579,528"/>
+<area shape="rect" id="node29" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyIntel_1_1BountyResultType.html" title=" " alt="" coords="315,551,563,593"/>
 <area shape="rect" id="node30" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html" title=" " alt="" coords="902,617,1097,658"/>
 <area shape="rect" id="node31" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html" title=" " alt="" coords="341,617,536,658"/>
-<area shape="rect" id="node32" title=" " alt="" coords="856,682,1143,723"/>
+<area shape="rect" id="node32" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel_1_1BaseBountyData.html" title=" " alt="" coords="856,682,1143,723"/>
 </map>

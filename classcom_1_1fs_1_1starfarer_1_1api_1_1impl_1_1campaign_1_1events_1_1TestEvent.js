@@ -15,5 +15,10 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEven
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#afdf556761274f1e3b9eefcf4e24d3227", null ],
     [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a7c0e09fffacd007ce4386b6c1a162898", null ],
     [ "setParam", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a90300d029bd0f3a5169c69bee37d1265", null ],
-    [ "startEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a7ae7ff4d80666721ba18c607649121cd", null ]
+    [ "startEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a7ae7ff4d80666721ba18c607649121cd", null ],
+    [ "elapsedDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#ac940f2d4940873850bff84c3984f65e8", null ],
+    [ "eventTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a9509f12a7f41632751632d6257d5cf1b", null ],
+    [ "stage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a7638d1680c750b59af8a9920c4c744b7", null ],
+    [ "started", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#a54cd1bcde01aea4ea9f02c29344b7152", null ],
+    [ "type", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#af5add63f117a1534bbbf15a91c9fade7", null ]
 ];

@@ -1,5 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI =
 [
+    [ "CargoItemQuantity", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_1_1CargoItemQuantity.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_1_1CargoItemQuantity" ],
+    [ "CargoItemType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_1_1CargoItemType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_1_1CargoItemType" ],
     [ "addAll", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a91e8ad74bfaa4756a700fcaf9d4bbfcc", null ],
     [ "addAll", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a1c2099cf11d964c4f00e9730bf528da5", null ],
     [ "addCommodity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#ae1dcc76b32d5391954b0e214fb19dfc8", null ],

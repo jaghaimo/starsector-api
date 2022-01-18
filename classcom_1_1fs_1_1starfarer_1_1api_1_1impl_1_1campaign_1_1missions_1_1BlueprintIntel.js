@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel =
 [
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel_1_1Stage" ],
     [ "acceptImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#ac69cdee30eb9e1f165618ae42fd2d39a", null ],
     [ "addDescriptionForNonEndStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a3c53e155323b0757529b667ee01d5ce1", null ],
     [ "addNextStepText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a202ab95ddc857772f747233bf5f3c6b9", null ],
@@ -17,7 +18,13 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1Bluepr
     [ "reportAboutToShowLootToPlayer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a9028305bb3df8afba7810f2d8dd26e5a", null ],
     [ "updateInteractionDataImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#ac6ea71720dbaaf87d6d45cf33d5fd3de", null ],
     [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#ad76f52293c5a27faf6473e8acf55da7d", null ],
+    [ "FREQ_FIGHTER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#abca39d5ee1029b8a6739274ef4a1b898", null ],
+    [ "FREQ_SHIP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a66a24467f3e0bd159cb5305d62e25176", null ],
+    [ "FREQ_WEAPON", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a9651d8501b7a3723be5895a1696128c9", null ],
     [ "item", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a149e5b6754be692830fa933a4f5d30f5", null ],
     [ "price", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#ac093370e2daef49eda77ce1d2c704b10", null ],
+    [ "PROB_MERC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a37153f709c2abc9a8bd9b5309c94f303", null ],
+    [ "PROB_PATHER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#aba7eb9841f2942bc905fc046ac22f0f3", null ],
+    [ "PROB_TRY_TO_FIND_RUINS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a04a4b256773904b71d56077f982d5508", null ],
     [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a769bf2fae10dbc644f967209f5bc70a5", null ]
 ];

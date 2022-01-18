@@ -6,5 +6,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEven
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#aea99696fee32b0dfc9308ea5c5e18ee4", null ],
     [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#af517817c8f33f79fe1e3cc91814655c9", null ],
     [ "eventManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a889c0314b164117c83f4b1f344326299", null ],
-    [ "firstFrame", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a0cfd7bd4602fffd5e8d15cb4fcb94caa", null ]
+    [ "firstFrame", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#a0cfd7bd4602fffd5e8d15cb4fcb94caa", null ],
+    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html#acb02989f5ff27f7c2714b14bc3b4974d", null ]
 ];

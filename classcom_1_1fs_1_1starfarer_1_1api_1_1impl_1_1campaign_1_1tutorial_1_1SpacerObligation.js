@@ -7,5 +7,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1Spacer
     [ "isTooltipExpandable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SpacerObligation.html#ac5bcee6295998f0529c090224c6acc23", null ],
     [ "reportEconomyMonthEnd", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SpacerObligation.html#aa8f92fb1d0ece6db3deffaf7bec898e8", null ],
     [ "reportEconomyTick", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SpacerObligation.html#a9a884d1da7c1e94195090d33f27a1ea3", null ],
+    [ "DEBT_BASE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SpacerObligation.html#a4f6a4a5262190fe9445191a1c71b148c", null ],
+    [ "DEBT_PER_LEVEL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SpacerObligation.html#a6c8a9bcce0ce17539fd44e8b8910dc72", null ],
     [ "startTime", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SpacerObligation.html#acec397de98f36e0a3a8db31969ae1274", null ]
 ];

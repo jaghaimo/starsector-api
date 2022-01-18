@@ -11,5 +11,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsResponse 
     [ "unrespond", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsResponse.html#ab6aecad14ac13d26db8292975d8c5f00", null ],
     [ "elapsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsResponse.html#ae2565e86d5a799b9707820bf4af534cc", null ],
     [ "pods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsResponse.html#ae5a7056bf636903515d8ab84d6afe14c", null ],
+    [ "PODS_BUSY_REASON", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsResponse.html#a08ae7cfc972d915eab71189c309e8d38", null ],
     [ "tracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsResponse.html#a63ee7809faf85522a9924f5fc180285f", null ]
 ];

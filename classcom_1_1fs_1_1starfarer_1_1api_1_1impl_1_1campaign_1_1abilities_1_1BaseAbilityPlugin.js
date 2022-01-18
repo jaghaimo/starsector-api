@@ -60,6 +60,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseA
     [ "showActiveIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#af9da54c76e6416287fda3a313f2c83f8", null ],
     [ "showCooldownIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#af8e51571a1c0c6f4a0f7e42dc141ba27", null ],
     [ "showProgressIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a04356644e34e985a592747da481a1e4a", null ],
+    [ "writeReplace", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#aedee099298f7b373d4b5f91ea24c93df", null ],
+    [ "defaultCooldownColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a720e55a6212f14d9d3d2fe8b741d3f8d", null ],
     [ "disableFrames", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0482cb5cb825c9dfa42e77d793062b6b", null ],
     [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a9d2408f6489b56d90a93b2a21ea0f340", null ],
     [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#ada12cfe94f3fa3b78c2471a6274a4fd9", null ],

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent =
 [
+    [ "FactionHostilityPairKey", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent_1_1FactionHostilityPairKey.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent_1_1FactionHostilityPairKey" ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a9cfa1a9bbbec56162f1838a472831c36", null ],
     [ "callEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a1e5e74f1645392d01e16d7ebf837b54c", null ],
     [ "endEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a6be977b13a4673927f241c1aeee77903", null ],
@@ -13,9 +14,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionH
     [ "duration", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a7f5d991fe057712c20c00f713aaf4d91", null ],
     [ "elapsedDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a55689a9bab560269ee70fee063cba2b5", null ],
     [ "ended", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a951c2ca29071967018aeb25730faf2ac", null ],
+    [ "HOSTILITY_PENALTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a4d14e0826140dffcff2a9ee115f403a8", null ],
+    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a937debe34863ea98cfd1649f14e05ca7", null ],
     [ "one", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a938e577f0fe0e6c17d1d31f01d1ca43a", null ],
     [ "prevRel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a022fc6193958a5208d1d9faa98d3abb0", null ],
     [ "prevRelOne", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a20268356677957c36ff25bce07ac55df", null ],
     [ "prevRelTwo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#ad3f172e4909d3b20e2a1d823e57905a8", null ],
-    [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#ac8fadfb3798301b7c35fe3f696f8e761", null ]
+    [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#ac8fadfb3798301b7c35fe3f696f8e761", null ],
+    [ "two", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html#a3468992bc9db57ac29205cb3e2f4dee0", null ]
 ];

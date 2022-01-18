@@ -18,5 +18,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb
     [ "notifyAccepted", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator.html#a9f476ae1607e35517a18ba0c68436589", null ],
     [ "notifyCompleted", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator.html#a9116608dea59785a1073f89cd5573572", null ],
     [ "notifyFailed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator.html#a18f2cc6f7ab78848f09d9489c5268363", null ],
-    [ "updateInteractionData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator.html#a1731dd5e53254435a9679e3ae3bcc64a", null ]
+    [ "updateInteractionData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator.html#a1731dd5e53254435a9679e3ae3bcc64a", null ],
+    [ "MAX_DIFFICULTY", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator.html#a575ce7d67dfe881f7a5c8267af863850", null ],
+    [ "MIN_DIFFICULTY", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator.html#afa544863fd3a73611c1eba3367516bd2", null ]
 ];

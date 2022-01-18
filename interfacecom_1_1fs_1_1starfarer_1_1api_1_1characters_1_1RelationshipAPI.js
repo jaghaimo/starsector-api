@@ -1,5 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI =
 [
+    [ "RelationshipTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI_1_1RelationshipTarget.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI_1_1RelationshipTarget" ],
+    [ "RelationshipTargetType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI_1_1RelationshipTargetType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI_1_1RelationshipTargetType" ],
     [ "adjustRelationship", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI.html#a294e4a4ab7c2aaba6b8a9d0ca593c195", null ],
     [ "ensureAtBest", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI.html#a8a241d160fcee2a29c0867bdc479c54d", null ],
     [ "ensureAtWorst", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI.html#a05206e9b245f740e5db1e76ff4349e53", null ],

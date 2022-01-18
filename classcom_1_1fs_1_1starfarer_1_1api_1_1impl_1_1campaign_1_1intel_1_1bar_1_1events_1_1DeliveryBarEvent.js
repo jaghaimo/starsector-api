@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent =
 [
+    [ "DestinationData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_1_1DestinationData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_1_1DestinationData" ],
     [ "DeliveryBarEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aa0ae74403747197564523a7c55ddaf6e", null ],
     [ "addStoryOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a67869543a031263d2913625ff7a3286c", null ],
     [ "adjustPerson", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aef2ae282e77ac2cd0eb4578303913273", null ],
@@ -32,11 +33,19 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "shouldShowAtMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#accef09c7d6f77bef014b8e003a145eda", null ],
     [ "showCargoCap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a935a253b3dea72d6aa2b36d76d4ccdcd", null ],
     [ "showTotalAndOptions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a194c7d2376b67f28b7ffce312e6d1ce2", null ],
+    [ "ACCEPTED_AT_THIS_MARKET_DURATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0f6658258b19a4a692c1ee47e7ee1b2b", null ],
     [ "data", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adff3b087c89f948e2ea3d652ffe69e62", null ],
     [ "destination", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#ac241b0f35ceb3dc1002cbe0853d093c7", null ],
     [ "duration", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a735dfbcb759416e4abf3aeebcdf30083", null ],
     [ "escrow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a0cdfe8766d7dfa0c9008c2cf5e5ef562", null ],
     [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af4cb427f6d545a6da98d30e21373bfe9", null ],
+    [ "FAILED_RECENTLY_DURATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#adb6f3c235c90bbed6b1cb5d64d508b06", null ],
+    [ "KEY_ACCEPTED_AT_THIS_MARKET_RECENTLY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a5acb783f1c7ea902a9d7617711fe782d", null ],
+    [ "KEY_FAILED_RECENTLY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a292f521e3b1f93cd99a05903b1f873d1", null ],
+    [ "KEY_SAW_DELIVERY_EVENT_RECENTLY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a85dd01adcea7b2293d59228a18f5fb9f", null ],
     [ "playerCargoCap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f8e4fb9245cea3b3d435a506347486d", null ],
-    [ "reward", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557", null ]
+    [ "PROB_HIGHER_CAPACITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af06656d1e2d9ab8dbfa3d0e5069ddae4", null ],
+    [ "PROB_TO_SHOW", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aeb6c7fcaf95bd85564efc6c17771c619", null ],
+    [ "reward", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557", null ],
+    [ "SAW_RECENTLY_DURATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aab3acab32bb9e5f1ac65149d879178cd", null ]
 ];

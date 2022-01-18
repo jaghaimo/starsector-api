@@ -69,8 +69,8 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="223.5,-247 223.5,-277 426.5,-277 426.5,-247 223.5,-247"/>
+<g id="a_node5"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="223.5,-247 223.5,-277 426.5,-277 426.5,-247 223.5,-247"/>
 <text text-anchor="start" x="231.5" y="-265" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="325" y="-254" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent.CallableEvent</text>
 </a>
@@ -101,8 +101,8 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="206,-149 206,-179 444,-179 444,-149 206,-149"/>
+<g id="a_node7"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="206,-149 206,-179 444,-179 444,-149 206,-149"/>
 <text text-anchor="start" x="214" y="-167" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="325" y="-156" font-family="Helvetica,sans-Serif" font-size="10.00">CommRelayEntityPlugin.CommSnifferReadableIntel</text>
 </a>
@@ -173,8 +173,8 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="936,-9 936,-39 1145,-39 1145,-9 936,-9"/>
+<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1ProductionReportIntel_1_1ProductionData.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="936,-9 936,-39 1145,-39 1145,-9 936,-9"/>
 <text text-anchor="start" x="944" y="-27" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.misc.</text>
 <text text-anchor="middle" x="1040.5" y="-16" font-family="Helvetica,sans-Serif" font-size="10.00">ProductionReportIntel.ProductionData</text>
 </a>

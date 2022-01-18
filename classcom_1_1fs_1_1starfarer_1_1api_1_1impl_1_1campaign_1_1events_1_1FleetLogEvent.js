@@ -9,6 +9,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLog
     [ "getTokenReplacements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a955846c937a28b61263f29563ca2cfbd", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#acb7b59c3f45b09a1b5f2a275890f0eba", null ],
     [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a19242c2d3bc032a036ae155f0bc5d380", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a5ca0d2238e7d0d3d27dd1a2700b33c58", null ],
     [ "showAllMessagesIfOngoing", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#aedaf5c4e26ccaeb4b6cc407ce6f85482", null ],
-    [ "startEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a36be7f48b88c2a96a84633363e672b8b", null ]
+    [ "startEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a36be7f48b88c2a96a84633363e672b8b", null ],
+    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#aab587e3620e67f05c45fa515362af1ad", null ],
+    [ "tempTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html#a4fa3e340c09baf9f17422f8fb71b3ca0", null ]
 ];

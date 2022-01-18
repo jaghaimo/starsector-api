@@ -39,5 +39,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage
     [ "playerCargo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a2a2535e1bf15b8ddd7025e89ded9417a", null ],
     [ "playerFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a77a617d942aef0e6bf58d6503bf14d18", null ],
     [ "playerFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a0b5c8029289f2737913153705928c79d", null ],
+    [ "SALVAGE_FRACTION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a8fd2f50ef2df43613bd3acae4f68c37a", null ],
     [ "text", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a7517fc90b87f8f1de8438d4d8cdbe1cf", null ]
 ];

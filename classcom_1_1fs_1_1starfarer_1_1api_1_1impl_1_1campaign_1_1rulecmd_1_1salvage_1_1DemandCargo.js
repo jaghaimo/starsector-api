@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo =
 [
+    [ "DemandData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo_1_1DemandData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo_1_1DemandData" ],
     [ "DemandCargo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a464e944f404b657a768e7bced3ad270a", null ],
     [ "computeAndPrintDemands", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a882cdaf47f06c81d051573215ec54cbb", null ],
     [ "execute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a15fdf8188b8c10a2fc8c40f91cb0773a", null ],

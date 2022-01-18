@@ -87,6 +87,8 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent Class Reference</div>  </div>
@@ -101,10 +103,15 @@ Inheritance diagram for com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdat
 <div class="dynheader">
 Collaboration diagram for com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent__coll__graph.svg" width="1283" height="444"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent__coll__graph.svg" width="2022" height="818"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent_1_1PickMode.html">PickMode</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ceedda10667f8253035c22823ee8c1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a1ceedda10667f8253035c22823ee8c1e">init</a> (String type, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html">CampaignEventTarget</a> eventTarget)</td></tr>
@@ -121,7 +128,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reportPlayerOpenedMar
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reportPlayerClosedMarket</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> market)</td></tr>
 <tr class="separator:a88d4c7e87b89c3db500696e244a5588a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82df705a98ebcb69826c7ea479f29355"><td class="memItemLeft" align="right" valign="top"><a id="a82df705a98ebcb69826c7ea479f29355"></a>
-List&lt; PriceUpdatePlugin &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getPriceUpdates</b> ()</td></tr>
+List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin.html">PriceUpdatePlugin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getPriceUpdates</b> ()</td></tr>
 <tr class="separator:a82df705a98ebcb69826c7ea479f29355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16f1bf2608cd149b86b96f5ef06789d3"><td class="memItemLeft" align="right" valign="top"><a id="a16f1bf2608cd149b86b96f5ef06789d3"></a>
 List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getRelatedCommodities</b> ()</td></tr>
@@ -142,7 +149,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isDone</b> ()</td>
 String&#160;</td><td class="memItemRight" valign="bottom"><b>getEventName</b> ()</td></tr>
 <tr class="separator:aa8776ed0b30489e4f422e0d2665d30b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4178ccb54da7a2c5e07ef6b54103ee4"><td class="memItemLeft" align="right" valign="top"><a id="aa4178ccb54da7a2c5e07ef6b54103ee4"></a>
-CampaignEventCategory&#160;</td><td class="memItemRight" valign="bottom"><b>getEventCategory</b> ()</td></tr>
+<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1CampaignEventCategory.html">CampaignEventCategory</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getEventCategory</b> ()</td></tr>
 <tr class="separator:aa4178ccb54da7a2c5e07ef6b54103ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ccea44f1153431f65463261491bdd8"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a08ccea44f1153431f65463261491bdd8">showAllMessagesIfOngoing</a> ()</td></tr>
 <tr class="separator:a08ccea44f1153431f65463261491bdd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,9 +187,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>increaseRecentUnrest<
 <tr class="memitem:a5b5d29ae3d29aecfefe97e3bff2e1815 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top"><a id="a5b5d29ae3d29aecfefe97e3bff2e1815"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reportPlayerMarketTransaction</b> (<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html">PlayerMarketTransaction</a> transaction)</td></tr>
 <tr class="separator:a5b5d29ae3d29aecfefe97e3bff2e1815 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf835c7c0fa6646864f95dfe16115ce7 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aaf835c7c0fa6646864f95dfe16115ce7">reportFleetDespawned</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, FleetDespawnReason reason, Object param)</td></tr>
+<tr class="memitem:aaf835c7c0fa6646864f95dfe16115ce7 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aaf835c7c0fa6646864f95dfe16115ce7">reportFleetDespawned</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener_1_1FleetDespawnReason.html">FleetDespawnReason</a> reason, Object param)</td></tr>
 <tr class="separator:aaf835c7c0fa6646864f95dfe16115ce7 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca93ee36b318bab0e2ca8cf062360ede inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aca93ee36b318bab0e2ca8cf062360ede">reportFleetJumped</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a> from, JumpDestination to)</td></tr>
+<tr class="memitem:aca93ee36b318bab0e2ca8cf062360ede inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#aca93ee36b318bab0e2ca8cf062360ede">reportFleetJumped</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a> from, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1JumpPointAPI_1_1JumpDestination.html">JumpDestination</a> to)</td></tr>
 <tr class="separator:aca93ee36b318bab0e2ca8cf062360ede inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7fd151c63de2561d5e81711d9571958 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#ae7fd151c63de2561d5e81711d9571958">reportFleetReachedEntity</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a> entity)</td></tr>
 <tr class="separator:ae7fd151c63de2561d5e81711d9571958 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,7 +221,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reportPlayerOpenedMar
 <tr class="memitem:a7dd2420e17a0c6f5b18347c69a6cb20b inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top"><a id="a7dd2420e17a0c6f5b18347c69a6cb20b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reportEncounterLootGenerated</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin.html">FleetEncounterContextPlugin</a> plugin, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html">CargoAPI</a> loot)</td></tr>
 <tr class="separator:a7dd2420e17a0c6f5b18347c69a6cb20b inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d07c52ad6fa20fdd5dbf61b0bac5738 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a8d07c52ad6fa20fdd5dbf61b0bac5738">callEvent</a> (String ruleId, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html">InteractionDialogAPI</a> dialog, List&lt; Token &gt; params, Map&lt; String, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html">MemoryAPI</a> &gt; memoryMap)</td></tr>
+<tr class="memitem:a8d07c52ad6fa20fdd5dbf61b0bac5738 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a8d07c52ad6fa20fdd5dbf61b0bac5738">callEvent</a> (String ruleId, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html">InteractionDialogAPI</a> dialog, List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html">Token</a> &gt; params, Map&lt; String, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html">MemoryAPI</a> &gt; memoryMap)</td></tr>
 <tr class="separator:a8d07c52ad6fa20fdd5dbf61b0bac5738 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab79535d56abc3c186d6629c4b9c73e5 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top"><a id="aab79535d56abc3c186d6629c4b9c73e5"></a>
 <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html">MemoryAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getMemory</b> ()</td></tr>
@@ -284,6 +291,62 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isEventStarted</b>
 <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority.html">MessagePriority</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getDefaultPriority</b> ()</td></tr>
 <tr class="separator:a85cf224c2f3e37252bc98c9d367b1350 inherit pro_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a022db3cd8365907dc68a6daa9d1b1b28"><td class="memItemLeft" align="right" valign="top"><a id="a022db3cd8365907dc68a6daa9d1b1b28"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>checkRemotePrices</b> ()</td></tr>
+<tr class="separator:a022db3cd8365907dc68a6daa9d1b1b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c01b5a14accc3581168ea0aa4083378"><td class="memItemLeft" align="right" valign="top"><a id="a9c01b5a14accc3581168ea0aa4083378"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>checkLocalPrices</b> ()</td></tr>
+<tr class="separator:a9c01b5a14accc3581168ea0aa4083378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc1b65f5aa566fe7ea4091cc371208b"><td class="memItemLeft" align="right" valign="top"><a id="a0fc1b65f5aa566fe7ea4091cc371208b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pickUpdatesFrom</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html">LocationAPI</a> system, List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html">PriceUpdate</a> &gt; updates, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent_1_1PickMode.html">PickMode</a> mode)</td></tr>
+<tr class="separator:a0fc1b65f5aa566fe7ea4091cc371208b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e804e8ede52e0d2372a99a77ee571c8"><td class="memItemLeft" align="right" valign="top"><a id="a7e804e8ede52e0d2372a99a77ee571c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pickAllRelevantFromMarket</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> market, List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html">PriceUpdate</a> &gt; updates)</td></tr>
+<tr class="separator:a7e804e8ede52e0d2372a99a77ee571c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cacdc5fbbeb545e9f158018742fd12d"><td class="memItemLeft" align="right" valign="top"><a id="a8cacdc5fbbeb545e9f158018742fd12d"></a>
+List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html">PriceUpdate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getPriceUpdatesFor</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html">LocationAPI</a> system)</td></tr>
+<tr class="separator:a8cacdc5fbbeb545e9f158018742fd12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bee27cd47b538211b72a633f5c2dd5f"><td class="memItemLeft" align="right" valign="top"><a id="a9bee27cd47b538211b72a633f5c2dd5f"></a>
+List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html">PriceUpdate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getUpdatesFor</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> market)</td></tr>
+<tr class="separator:a9bee27cd47b538211b72a633f5c2dd5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c20b18a05dd5d7a5256bf384ebe3329"><td class="memItemLeft" align="right" valign="top"><a id="a0c20b18a05dd5d7a5256bf384ebe3329"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getWeightFor</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin.html">PriceUpdatePlugin</a> update, List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin.html">PriceUpdatePlugin</a> &gt; known)</td></tr>
+<tr class="separator:a0c20b18a05dd5d7a5256bf384ebe3329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a256d4788b8d3ef18664bda6c1f0bd278"><td class="memItemLeft" align="right" valign="top"><a id="a256d4788b8d3ef18664bda6c1f0bd278"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>shouldUpdateLocally</b> (<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html">PriceUpdate</a> update, List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin.html">PriceUpdatePlugin</a> &gt; known)</td></tr>
+<tr class="separator:a256d4788b8d3ef18664bda6c1f0bd278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e32b4f9c22e29bf78b5539c2b0fe993"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin.html">PriceUpdatePlugin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html#a5e32b4f9c22e29bf78b5539c2b0fe993">getPlayerKnownUpdates</a> ()</td></tr>
+<tr class="separator:a5e32b4f9c22e29bf78b5539c2b0fe993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:afb3e25a9ff7985feb4d7a5d57bb779a7"><td class="memItemLeft" align="right" valign="top"><a id="afb3e25a9ff7985feb4d7a5d57bb779a7"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html">IntervalUtil</a>&#160;</td><td class="memItemRight" valign="bottom"><b>remoteTracker</b></td></tr>
+<tr class="separator:afb3e25a9ff7985feb4d7a5d57bb779a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855fc9fa01691148f4147bb7c40ba22d"><td class="memItemLeft" align="right" valign="top"><a id="a855fc9fa01691148f4147bb7c40ba22d"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html">IntervalUtil</a>&#160;</td><td class="memItemRight" valign="bottom"><b>localTracker</b></td></tr>
+<tr class="separator:a855fc9fa01691148f4147bb7c40ba22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865094619406558b2d9a407ef0c9b0ca"><td class="memItemLeft" align="right" valign="top"><a id="a865094619406558b2d9a407ef0c9b0ca"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html">TimeoutTracker</a>&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sinceLastLocalReport</b> = new <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html">TimeoutTracker</a>&lt;String&gt;()</td></tr>
+<tr class="separator:a865094619406558b2d9a407ef0c9b0ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af274a2c77e6fb4845ce53fecd8ca942c"><td class="memItemLeft" align="right" valign="top"><a id="af274a2c77e6fb4845ce53fecd8ca942c"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html">TimeoutTracker</a>&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sinceLastRemoteReport</b> = new <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html">TimeoutTracker</a>&lt;String&gt;()</td></tr>
+<tr class="separator:af274a2c77e6fb4845ce53fecd8ca942c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b10208d5c7371796b7cc834ae1e4c8"><td class="memItemLeft" align="right" valign="top"><a id="ac0b10208d5c7371796b7cc834ae1e4c8"></a>
+List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin.html">PriceUpdatePlugin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>updatesForNextReport</b> = new ArrayList&lt;<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin.html">PriceUpdatePlugin</a>&gt;()</td></tr>
+<tr class="separator:ac0b10208d5c7371796b7cc834ae1e4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd2cc7021d29a14e4872b1cd5d2eb852"><td class="memItemLeft" align="right" valign="top"><a id="abd2cc7021d29a14e4872b1cd5d2eb852"></a>
+<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a>&#160;</td><td class="memItemRight" valign="bottom"><b>commRelayForNextReport</b> = null</td></tr>
+<tr class="separator:abd2cc7021d29a14e4872b1cd5d2eb852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91e7f64c7abd535c214a999514530af4"><td class="memItemLeft" align="right" valign="top"><a id="a91e7f64c7abd535c214a999514530af4"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html">SaveableIterator</a>&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html">StarSystemAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>starSystemIter</b> = null</td></tr>
+<tr class="separator:a91e7f64c7abd535c214a999514530af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646421a4f23c918c1bfae97cb69caad4"><td class="memItemLeft" align="right" valign="top"><a id="a646421a4f23c918c1bfae97cb69caad4"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html">CampaignEventTarget</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tempTarget</b></td></tr>
+<tr class="separator:a646421a4f23c918c1bfae97cb69caad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a></td></tr>
@@ -294,10 +357,10 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>addFactionName
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>addPersonTokens</b> (Map&lt; String, String &gt; tokens, String prefix, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html">PersonAPI</a> person)</td></tr>
 <tr class="separator:a266c202fb9f5002e4c596f421170e429 inherit pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6b2f0624cafeb655db2c050d5b06281 inherit pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top"><a id="ab6b2f0624cafeb655db2c050d5b06281"></a>
-static <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>findNearestMarket</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> from, MarketFilter filter)</td></tr>
+static <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>findNearestMarket</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> from, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_1_1MarketFilter.html">MarketFilter</a> filter)</td></tr>
 <tr class="separator:ab6b2f0624cafeb655db2c050d5b06281 inherit pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27ea0e9bd789ce37715e7e839bf71f31 inherit pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top"><a id="a27ea0e9bd789ce37715e7e839bf71f31"></a>
-static List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>findMatchingMarkets</b> (MarketFilter filter)</td></tr>
+static List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>findMatchingMarkets</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_1_1MarketFilter.html">MarketFilter</a> filter)</td></tr>
 <tr class="separator:a27ea0e9bd789ce37715e7e839bf71f31 inherit pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a></td></tr>
 <tr class="memitem:aac2085bc3d01045862487bc6a8f01d06 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin"><td class="memItemLeft" align="right" valign="top"><a id="aac2085bc3d01045862487bc6a8f01d06"></a>
@@ -396,6 +459,32 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>startProbability</b>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Reimplemented from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a7948fb8999c823c67e6fd42bfcbcd7b3">com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin</a>.</p>
+
+</div>
+</div>
+<a id="a5e32b4f9c22e29bf78b5539c2b0fe993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e32b4f9c22e29bf78b5539c2b0fe993">&#9670;&nbsp;</a></span>getPlayerKnownUpdates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin.html">PriceUpdatePlugin</a>&gt; com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent.getPlayerKnownUpdates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Some of the updates may be contradictory, but since this is used for computing weights when picking which updates to send, it's probably good enough. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>

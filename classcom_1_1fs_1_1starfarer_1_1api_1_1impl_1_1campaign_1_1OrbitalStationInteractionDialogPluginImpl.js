@@ -1,11 +1,26 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl =
 [
+    [ "OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl_1_1OptionId.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl_1_1OptionId" ],
+    [ "addText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#aa0203568157a50e427e84ce8b972c16c", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a1316dec84f20e90cd7e4c70ca131b1fd", null ],
+    [ "appendText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a6f242c5df91e7fb9cd9d8ce98fb74f12", null ],
     [ "backFromEngagement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#adbd5b1eb774f804bb9f8d6a3779df0fc", null ],
     [ "coreUIDismissed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a7bbcbc0bf15740d95677fb2fc3d0a0c5", null ],
+    [ "createInitialOptions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#adb77867d608d5745136f01a99183376e", null ],
     [ "getContext", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a496ed7b4e0cbe225d1b38a1c166082a3", null ],
     [ "getMemoryMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a3a07c8daea1277a274b5c2c07cc9d9f6", null ],
+    [ "getString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#aec0c6e4bf704c5569cc85b5061ec4b2b", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#af48843cfc5750c3144e581cdd0bdf048", null ],
     [ "optionMousedOver", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a2fad3103f441162a9dd70e4f79c7a5e1", null ],
-    [ "optionSelected", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a490a2765c16c3ef2bf58e810a71bc40c", null ]
+    [ "optionSelected", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a490a2765c16c3ef2bf58e810a71bc40c", null ],
+    [ "performRepairs", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#af46b094597e0c75867bcfb90f6365843", null ],
+    [ "dialog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#ab3ecdf33e207aeca9b66a2ab5e603f23", null ],
+    [ "HIGHLIGHT_COLOR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#abcfcaaeb521528154a324f7c77c1684d", null ],
+    [ "lastOptionMousedOver", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#aff61dd093288352584d2f365639e1158", null ],
+    [ "lastResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#abc210c18ec6278d6bcbbab8ef807493c", null ],
+    [ "options", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a5997aa9dbcf5e804539b300403429316", null ],
+    [ "playerFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#abdb8df2faf4e3e1e84e41c0ead1b6b65", null ],
+    [ "station", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a582dc93dc4f07c6e86ab7431d2811f45", null ],
+    [ "textPanel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#ada22ee7f4e1f7c554f47ce39bd1f463f", null ],
+    [ "visual", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html#a7065ba1eb61e68b1e60aa46f09e39922", null ]
 ];

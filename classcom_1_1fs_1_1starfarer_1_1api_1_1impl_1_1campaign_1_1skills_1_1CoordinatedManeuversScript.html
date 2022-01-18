@@ -87,6 +87,8 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuversScript Class Reference</div>  </div>
@@ -101,7 +103,7 @@ Inheritance diagram for com.fs.starfarer.api.impl.campaign.skills.CoordinatedMan
 <div class="dynheader">
 Collaboration diagram for com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuversScript:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript__coll__graph.svg" width="1052" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript__coll__graph.svg" width="1078" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -156,6 +158,27 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a7dbf159e8def557848247a67376b2976"><td class="memItemLeft" align="right" valign="top"><a id="a7dbf159e8def557848247a67376b2976"></a>
 <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>undoDPMod</b> = null</td></tr>
 <tr class="separator:a7dbf159e8def557848247a67376b2976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ae915d640db7dec800b1eb16c2a3ec493"><td class="memItemLeft" align="right" valign="top"><a id="ae915d640db7dec800b1eb16c2a3ec493"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateForSide</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html">CombatFleetManagerAPI</a> manager)</td></tr>
+<tr class="separator:ae915d640db7dec800b1eb16c2a3ec493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a890fbf318e7dc93e2887bb04e5b45a09"><td class="memItemLeft" align="right" valign="top"><a id="a890fbf318e7dc93e2887bb04e5b45a09"></a>
+<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html">CombatEngineAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>engine</b></td></tr>
+<tr class="separator:a890fbf318e7dc93e2887bb04e5b45a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0826f784392e6f6d5bdf3f04e876b3"><td class="memItemLeft" align="right" valign="top"><a id="a4d0826f784392e6f6d5bdf3f04e876b3"></a>
+<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prevPlayerShip</b> = null</td></tr>
+<tr class="separator:a4d0826f784392e6f6d5bdf3f04e876b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4bfc8a5d08f0f28b7a44b4fb1b468ff"><td class="memItemLeft" align="right" valign="top"><a id="ac4bfc8a5d08f0f28b7a44b4fb1b468ff"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>skipFrames</b> = 0</td></tr>
+<tr class="separator:ac4bfc8a5d08f0f28b7a44b4fb1b468ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3bfb11a93a074ea2ef0b2f8c74a3c73"><td class="memItemLeft" align="right" valign="top"><a id="af3bfb11a93a074ea2ef0b2f8c74a3c73"></a>
+Set&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html">CombatFleetManagerAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>needsCleanup</b> = new HashSet&lt;<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html">CombatFleetManagerAPI</a>&gt;()</td></tr>
+<tr class="separator:af3bfb11a93a074ea2ef0b2f8c74a3c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/campaign/skills/CoordinatedManeuversScript.java</li>

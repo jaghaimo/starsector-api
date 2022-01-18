@@ -21,8 +21,8 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="389,-381.5 389,-411.5 628,-411.5 628,-381.5 389,-381.5"/>
+<g id="a_node2"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="389,-381.5 389,-411.5 628,-411.5 628,-381.5 389,-381.5"/>
 <text text-anchor="start" x="397" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="508.5" y="-388.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageSpecialInteraction.SalvageSpecialPlugin</text>
 </a>

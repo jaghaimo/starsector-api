@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript =
 [
+    [ "MilitaryResponseParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript_1_1MilitaryResponseParams.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript_1_1MilitaryResponseParams" ],
     [ "MilitaryResponseScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript.html#aed5cfe9d8834ed5c8fb7e67f41ede2a2", null ],
     [ "addToResponseTotal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript.html#a8be3231ab5336aea73bd07e69bf3405a", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript.html#a01c1d1c211796519b90e7abe487f5c68", null ],
@@ -21,5 +22,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseSc
     [ "unrespond", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript.html#ad2b55311b73ae95628f141b0725e8d07", null ],
     [ "elapsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript.html#a60ba56426e3c2d99dd34b9c28f45fdf8", null ],
     [ "params", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript.html#aa8fccbdc62426cb0a0fbb650cd68dece", null ],
+    [ "RESPONSE_ASSIGNMENT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript.html#a1d591955cfca45083fe09a3c50a9cae0", null ],
     [ "tracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript.html#ace48ce4a1234195d998f92d61aa9a3d5", null ]
 ];

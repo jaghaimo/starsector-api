@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI =
 [
+    [ "MessageClickAction", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI_1_1MessageClickAction.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI_1_1MessageClickAction" ],
     [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html#a8d693ffa18058d0f50bc5cef8e08dec9", null ],
     [ "clearTags", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html#a99bbf8095514c4c68c835dc8c28fc7dd", null ],
     [ "getAction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html#a4ec1de303c2164f10bdc315706775c97", null ],
@@ -63,5 +64,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI
     [ "setSubjectHighlights", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html#a3789bbf8369bb501e7afcf5ad7abefaf", null ],
     [ "setTimeReceived", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html#a64672483d8baf8d929566adabce336b7", null ],
     [ "setTimeSent", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html#ae59e2bda6a8dea9bc0fe66fb7c291130", null ],
-    [ "setType", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html#aa0675418131ce3b386ac9fd7034141c9", null ]
+    [ "setType", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html#aa0675418131ce3b386ac9fd7034141c9", null ],
+    [ "MESSAGE_FACTION_ID_KEY", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html#a4d79b16092ec79a131141cbf37c864cb", null ],
+    [ "MESSAGE_PERSON_ID_KEY", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html#a3efbfad42734569aa86dfa98ddb1540a", null ]
 ];

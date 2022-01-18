@@ -27,5 +27,18 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec =
     [ "setRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a8d09f9c3d545dce42cc701c3475b308f", null ],
     [ "setSounds", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#ad95c20973e6de40d89ddbc7000b741b1", null ],
     [ "setUseFactionColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a8f98360413e7f8d74c06b4b6b783aebd", null ],
-    [ "setWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#ad10468223e293da84e1f26ab425b64e0", null ]
+    [ "setWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#ad10468223e293da84e1f26ab425b64e0", null ],
+    [ "alphaMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#aaff07acd98df2ab3e9f19fda62080dbe", null ],
+    [ "color", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a35e313d0b71cf29a6bb3d5bad1526761", null ],
+    [ "delay", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a6ae9ee98c9cd245c3430e8fa5b681d0f", null ],
+    [ "duration", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a281a701bb1d162e75a19652780994104", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a526a7a1180dfce16536acb24cedb9c08", null ],
+    [ "inFraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a5e27d5b4b67c3083b247f9c90c46d665", null ],
+    [ "invert", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#ace40186d56fb161c807dec40de5852ab", null ],
+    [ "minRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#aed2bac84164b649d31d779c1eb66bb52", null ],
+    [ "num", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a819d48ef39ff65cdb9e8f9cb10c77983", null ],
+    [ "range", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a7299a2bc98958bd576ae30488b151590", null ],
+    [ "sounds", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a48b3a219b3bbf818b2aaacf89b9bf81c", null ],
+    [ "useFactionColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a598c514e3c60786093032ea838af7553", null ],
+    [ "width", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1CampaignPingSpec.html#a3d5536796fc24a501727ac43ab417662", null ]
 ];

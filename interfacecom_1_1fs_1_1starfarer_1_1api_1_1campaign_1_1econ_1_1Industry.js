@@ -1,5 +1,8 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry =
 [
+    [ "AICoreDescriptionMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_1_1AICoreDescriptionMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_1_1AICoreDescriptionMode" ],
+    [ "ImprovementDescriptionMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_1_1ImprovementDescriptionMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_1_1ImprovementDescriptionMode" ],
+    [ "IndustryTooltipMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_1_1IndustryTooltipMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_1_1IndustryTooltipMode" ],
     [ "addAICoreSection", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a7ffb8ca9793713bb7b36fb7bdf7df58a", null ],
     [ "addAICoreSection", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a28392555bf5a6a1dbeaea0b7148b1ec2", null ],
     [ "addImproveDesc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a2dae7c892e2ef28fdeddf2312facfeed", null ],

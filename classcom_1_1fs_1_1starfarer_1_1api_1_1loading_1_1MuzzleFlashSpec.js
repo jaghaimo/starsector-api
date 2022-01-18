@@ -15,5 +15,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec =
     [ "setParticleDuration", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#a4849a03ca68b79166c69316304edbf09", null ],
     [ "setParticleSizeMin", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#a690ab3752e010a94a20aef0701d6e2b8", null ],
     [ "setParticleSizeRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#ac751259f63bae340db947791a3678f93", null ],
-    [ "setSpread", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#a4d7ad44cee90d0ffbdde201a501bd747", null ]
+    [ "setSpread", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#a4d7ad44cee90d0ffbdde201a501bd747", null ],
+    [ "length", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#a3eb8e636124d52b1a1408964339d9873", null ],
+    [ "particleColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#a4a127710cc31634ae9fabd020da0bc42", null ],
+    [ "particleCount", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#ad30ebd5a7eaf0bc82705ad3fbdef0e8d", null ],
+    [ "particleDuration", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#a51b6d0b66060ff5c78ba319da51e46ab", null ],
+    [ "particleSizeMin", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#ae1db982fca203e26985532ff0e88b63b", null ],
+    [ "particleSizeRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#acbfd152e5eecb96b0ac044f98ef06809", null ],
+    [ "spread", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html#ad7ad296962411119b538b49be0c451e0", null ]
 ];

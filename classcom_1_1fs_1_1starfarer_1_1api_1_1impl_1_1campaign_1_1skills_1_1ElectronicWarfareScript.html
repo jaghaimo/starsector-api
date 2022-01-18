@@ -86,6 +86,8 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfareScript-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfareScript Class Reference</div>  </div>
@@ -100,7 +102,7 @@ Inheritance diagram for com.fs.starfarer.api.impl.campaign.skills.ElectronicWarf
 <div class="dynheader">
 Collaboration diagram for com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfareScript:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfareScript__coll__graph.svg" width="266" height="320"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfareScript__coll__graph.svg" width="1078" height="248"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -146,6 +148,30 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a27654cbbb8b830589ce2929a81a3c8e1"><td class="memItemLeft" align="right" valign="top"><a id="a27654cbbb8b830589ce2929a81a3c8e1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>cleanUpIfNeeded</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html">CombatFleetManagerAPI</a> manager)</td></tr>
 <tr class="separator:a27654cbbb8b830589ce2929a81a3c8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af417171340f073f1f282c2b36d2808bd"><td class="memItemLeft" align="right" valign="top"><a id="af417171340f073f1f282c2b36d2808bd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>applyPenalty</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html">CombatFleetManagerAPI</a> manager, float penalty, float maxPenalty)</td></tr>
+<tr class="separator:af417171340f073f1f282c2b36d2808bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d9f6a041355dd0a9800fafbc2b4c53"><td class="memItemLeft" align="right" valign="top"><a id="ae7d9f6a041355dd0a9800fafbc2b4c53"></a>
+int[]&#160;</td><td class="memItemRight" valign="bottom"><b>getTotalAndMaximum</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html">CombatFleetManagerAPI</a> manager)</td></tr>
+<tr class="separator:ae7d9f6a041355dd0a9800fafbc2b4c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af362b09f92999b4d8eeaec3ecba2d14a"><td class="memItemLeft" align="right" valign="top"><a id="af362b09f92999b4d8eeaec3ecba2d14a"></a>
+<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html">CombatEngineAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>engine</b></td></tr>
+<tr class="separator:af362b09f92999b4d8eeaec3ecba2d14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5dee4fba36d4a0cedec0515b526cd27"><td class="memItemLeft" align="right" valign="top"><a id="ad5dee4fba36d4a0cedec0515b526cd27"></a>
+<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>prevPlayerShip</b> = null</td></tr>
+<tr class="separator:ad5dee4fba36d4a0cedec0515b526cd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0274448699f06f736fe0b2f72cbeca65"><td class="memItemLeft" align="right" valign="top"><a id="a0274448699f06f736fe0b2f72cbeca65"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>skipFrames</b> = 0</td></tr>
+<tr class="separator:a0274448699f06f736fe0b2f72cbeca65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ad701aefe09eeb8b997a2ae35ff610"><td class="memItemLeft" align="right" valign="top"><a id="ad5ad701aefe09eeb8b997a2ae35ff610"></a>
+Set&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html">CombatFleetManagerAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>needsCleanup</b> = new HashSet&lt;<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html">CombatFleetManagerAPI</a>&gt;()</td></tr>
+<tr class="separator:ad5ad701aefe09eeb8b997a2ae35ff610"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/campaign/skills/ElectronicWarfareScript.java</li>

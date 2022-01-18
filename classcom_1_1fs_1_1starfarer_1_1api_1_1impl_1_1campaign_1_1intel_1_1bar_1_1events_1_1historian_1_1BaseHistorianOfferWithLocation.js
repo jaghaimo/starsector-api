@@ -11,5 +11,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferWithLocation.html#a48b9792a497b9237c48bff4d8e90f06d", null ],
     [ "getSmallDescriptionTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferWithLocation.html#accb8eb3cd25034b6ecefd6bcfbcdec63", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferWithLocation.html#aa012c566297a00adb27e899c9d961fc3", null ],
-    [ "reportExtraSalvageShown", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferWithLocation.html#aefe7727da182e3eca953dbf2003a43f9", null ]
+    [ "reportExtraSalvageShown", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferWithLocation.html#aefe7727da182e3eca953dbf2003a43f9", null ],
+    [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferWithLocation.html#a2e46efca7a11412aaa5a64a96a96654f", null ]
 ];

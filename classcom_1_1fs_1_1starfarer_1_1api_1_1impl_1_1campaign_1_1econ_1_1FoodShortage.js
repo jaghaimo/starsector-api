@@ -8,5 +8,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FoodShorta
     [ "getTokenReplacements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FoodShortage.html#a2756b0c73a0baf2360d50c80803d3599", null ],
     [ "isTransient", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FoodShortage.html#aee467c0c654a85dae2cd0290e205e7cf", null ],
     [ "setParam", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FoodShortage.html#aab31c68338ec83b5720769841f56f576", null ],
-    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FoodShortage.html#ac11fd34d8eacb941b8932bc84effe012", null ]
+    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FoodShortage.html#ac11fd34d8eacb941b8932bc84effe012", null ],
+    [ "event", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FoodShortage.html#ad59c4f1285890e8af8a608c9aa5d2cc7", null ]
 ];

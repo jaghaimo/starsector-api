@@ -38,6 +38,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseD
     [ "cooldownLeft", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a701e92e35fb4e4baf8fc60a5c56b4b01", null ],
     [ "fadingOut", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a40f36fffbf6367e80a51b13287add4b0", null ],
     [ "level", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a74548753f66b57cc2bcc46a8288c459f", null ],
+    [ "LOOP_FADE_TIME_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a2dd2307a05e6d2ab1e9e05ffc4bdceb6", null ],
     [ "loopFadeLeft", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a81c5849797031e4d99a0f8c66521ada8", null ],
     [ "turnedOn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseDurationAbility.html#a72854862a5a43db704b22f7ff1c9485c", null ]
 ];

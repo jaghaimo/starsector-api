@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel =
 [
+    [ "CommissionBountyResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel_1_1CommissionBountyResult.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel_1_1CommissionBountyResult" ],
+    [ "RepChangeData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel_1_1RepChangeData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel_1_1RepChangeData" ],
     [ "FactionCommissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#adc5855d6634eee9044ad787724f4f4b9", null ],
     [ "addBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#ad75b2df4f866c3fd02b9baa5a23ae19b", null ],
     [ "advanceMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a5cc9951641a1e96f583e8da298e3e81a", null ],
@@ -36,5 +38,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCo
     [ "baseBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a0fe060c9eaf775fc9ed598ad860cc96d", null ],
     [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#ab97c82b829d3edaf5d98b24644de27a5", null ],
     [ "latestResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#ab68210761ae9f58f96e657eb1e807426", null ],
-    [ "repChanges", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a55b324950769ed52e3119de26d6b7167", null ]
+    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a72193ad7999ff925e00aa7023f7d1b58", null ],
+    [ "repChanges", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a55b324950769ed52e3119de26d6b7167", null ],
+    [ "UPDATE_PARAM_ACCEPTED", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#af98f6c5b6f090e75d58ad85feb32d893", null ]
 ];

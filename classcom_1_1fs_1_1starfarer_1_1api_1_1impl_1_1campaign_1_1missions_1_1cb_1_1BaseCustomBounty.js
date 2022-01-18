@@ -1,5 +1,8 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty =
 [
+    [ "AggregateBountyData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1AggregateBountyData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1AggregateBountyData" ],
+    [ "DifficultyChoice", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1DifficultyChoice.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1DifficultyChoice" ],
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1Stage" ],
     [ "accept", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a50d899c0401dba4b6a164dd6ecbac6f4", null ],
     [ "acceptImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae5b2e2ff567bb1df02490cab758bdad7", null ],
     [ "addDescriptionForNonEndStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ad0821144ea6635bb326e07447eb13ba6", null ],
@@ -34,6 +37,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1
     [ "dataLow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#a903f0f2dac06107b06ab14e2ee396207", null ],
     [ "dataNormal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#af13fcad79e38d1d2520572d4de734d2b", null ],
     [ "difficultyOverride", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae5188180fb4819c9dddc5eaedbfd19d8", null ],
+    [ "NUM_TO_TRACK_FOR_DIFFICULTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ab31abb05b97684c48b71290e08429827", null ],
     [ "showCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#aeda41b70323c6c7fa0a8dc773b95802d", null ],
     [ "showData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#acb5fd240f055e48225a45776ab7981a4", null ],
     [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae2f6954d83496312d70eb4fe10e79e80", null ]

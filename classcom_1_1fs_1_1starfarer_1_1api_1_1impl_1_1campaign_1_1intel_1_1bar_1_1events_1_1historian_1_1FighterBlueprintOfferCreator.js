@@ -10,5 +10,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getProbabilityRuins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html#a6c5d0aeff48f3ebfbc1a91852819efe0", null ],
     [ "getRarityForSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html#a21005b69f3aba1997d03a842489a833b", null ],
     [ "getTagsForSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html#af4be43446df04affdc891a8ac825f1cc", null ],
-    [ "playerKnowsSpecAlready", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html#a9ddb4ef7599e4e93507196e30546d1f9", null ]
+    [ "playerKnowsSpecAlready", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html#a9ddb4ef7599e4e93507196e30546d1f9", null ],
+    [ "PREFIX", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html#aeeeb0f318087b5713b09ea16cf3e0eea", null ]
 ];

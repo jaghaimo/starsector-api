@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil =
 [
+    [ "State", "enumcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil_1_1State.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil_1_1State" ],
     [ "FaderUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#aad92329765222ce8a803bb4bc2bd2be4", null ],
     [ "FaderUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a27d4747e14e9a7ea12d9f5d3dbe85536", null ],
     [ "FaderUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#aaaca394c6e5491615fb18c88f7c81642", null ],
@@ -27,5 +28,11 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil =
     [ "setDurationIn", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#adcd5a70ea1ee97ece6248c5b0a5c3032", null ],
     [ "setDurationOut", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#abe76628386afa0d5432e46ada2ad59c1", null ],
     [ "setState", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a460cb47ced1d06aaa10ec130147d8fac", null ],
-    [ "toString", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#aadb5ae782faeb7125e4d5f9b595f5050", null ]
+    [ "toString", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#aadb5ae782faeb7125e4d5f9b595f5050", null ],
+    [ "bounceDown", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a97a3933f17fd67b82036a0bb8f705b16", null ],
+    [ "bounceUp", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#aedda1271d43de3ed2289ad646e1e8213", null ],
+    [ "currBrightness", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a4b80fef23c5ef3a627673ff6f915052b", null ],
+    [ "durationIn", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#aac0cc01da4c9066586b54ad0bcbd0ac1", null ],
+    [ "durationOut", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#aa018d281a1eab6a84bf14fe5c4c7c655", null ],
+    [ "state", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html#a1fb5fb351d8f67c844e203d1e9445d61", null ]
 ];

@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorArrayEffect-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.combat.SensorArrayEffect Class Reference</div>  </div>
@@ -99,7 +100,7 @@ Inheritance diagram for com.fs.starfarer.api.impl.combat.SensorArrayEffect:</div
 <div class="dynheader">
 Collaboration diagram for com.fs.starfarer.api.impl.combat.SensorArrayEffect:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorArrayEffect__coll__graph.svg" width="1038" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorArrayEffect__coll__graph.svg" width="1074" height="312"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -113,7 +114,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (<a class="e
 <tr class="memitem:a8d162c091b755079f7b6ba107de2dc40"><td class="memItemLeft" align="right" valign="top"><a id="a8d162c091b755079f7b6ba107de2dc40"></a>
 String&#160;</td><td class="memItemRight" valign="bottom"><b>getLongDescription</b> ()</td></tr>
 <tr class="separator:a8d162c091b755079f7b6ba107de2dc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f833292cd0c47409cd63106c2eeddb3"><td class="memItemLeft" align="right" valign="top">List&lt; ShipStatusItem &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorArrayEffect.html#a8f833292cd0c47409cd63106c2eeddb3">getStatusItemsFor</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship)</td></tr>
+<tr class="memitem:a8f833292cd0c47409cd63106c2eeddb3"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect_1_1ShipStatusItem.html">ShipStatusItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorArrayEffect.html#a8f833292cd0c47409cd63106c2eeddb3">getStatusItemsFor</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship)</td></tr>
 <tr class="separator:a8f833292cd0c47409cd63106c2eeddb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html">com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect</a></td></tr>
 <tr class="memitem:a0f38cbb986657cd044086698bc03df67 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect"><td class="memItemLeft" align="right" valign="top"><a id="a0f38cbb986657cd044086698bc03df67"></a>
@@ -132,6 +133,15 @@ Static Public Attributes</h2></td></tr>
 static final float&#160;</td><td class="memItemRight" valign="bottom"><b>SENSOR_ARRAY_FOG_LIFT_RADIUS</b> = 999f</td></tr>
 <tr class="separator:a5a2a06e653cc4b89ac61611127326055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ac17e12e307400e4efffe95f8a6264062"><td class="memItemLeft" align="right" valign="top"><a id="ac17e12e307400e4efffe95f8a6264062"></a>
+List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect_1_1ShipStatusItem.html">ShipStatusItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>items</b> = new ArrayList&lt;<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect_1_1ShipStatusItem.html">ShipStatusItem</a>&gt;()</td></tr>
+<tr class="separator:ac17e12e307400e4efffe95f8a6264062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd8de49dd0b832cce07cd6325d7ff84"><td class="memItemLeft" align="right" valign="top"><a id="a9cd8de49dd0b832cce07cd6325d7ff84"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+<tr class="separator:a9cd8de49dd0b832cce07cd6325d7ff84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html">com.fs.starfarer.api.impl.combat.BaseBattleObjectiveEffect</a></td></tr>
@@ -139,10 +149,10 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html">CombatEngineAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>engine</b></td></tr>
 <tr class="separator:adb4adda0a2a15e880180e7f1c8f9bc0c inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af46acc3f3175d8f6ac4e6c6f1f926c34 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect"><td class="memItemLeft" align="right" valign="top"><a id="af46acc3f3175d8f6ac4e6c6f1f926c34"></a>
-List&lt; ShipStatusItem &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>itemsNAFrigates</b> = new ArrayList&lt;ShipStatusItem&gt;()</td></tr>
+List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect_1_1ShipStatusItem.html">ShipStatusItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>itemsNAFrigates</b> = new ArrayList&lt;<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect_1_1ShipStatusItem.html">ShipStatusItem</a>&gt;()</td></tr>
 <tr class="separator:af46acc3f3175d8f6ac4e6c6f1f926c34 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6873ea00a6df1100fb65cbce1de6c7a8 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect"><td class="memItemLeft" align="right" valign="top"><a id="a6873ea00a6df1100fb65cbce1de6c7a8"></a>
-List&lt; ShipStatusItem &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>itemsNAFighters</b> = new ArrayList&lt;ShipStatusItem&gt;()</td></tr>
+List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect_1_1ShipStatusItem.html">ShipStatusItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>itemsNAFighters</b> = new ArrayList&lt;<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect_1_1ShipStatusItem.html">ShipStatusItem</a>&gt;()</td></tr>
 <tr class="separator:a6873ea00a6df1100fb65cbce1de6c7a8 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88f66f797da903c7cbf8b6291046b367 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect"><td class="memItemLeft" align="right" valign="top"><a id="a88f66f797da903c7cbf8b6291046b367"></a>
 <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveAPI.html">BattleObjectiveAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>objective</b></td></tr>
@@ -193,7 +203,7 @@ List&lt; ShipStatusItem &gt;&#160;</td><td class="memItemRight" valign="bottom">
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;ShipStatusItem&gt; com.fs.starfarer.api.impl.combat.SensorArrayEffect.getStatusItemsFor </td>
+          <td class="memname">List&lt;<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect_1_1ShipStatusItem.html">ShipStatusItem</a>&gt; com.fs.starfarer.api.impl.combat.SensorArrayEffect.getStatusItemsFor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a>&#160;</td>
           <td class="paramname"><em>ship</em></td><td>)</td>

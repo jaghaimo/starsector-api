@@ -25,5 +25,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "missionAccepted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aac1bbac597198846ae977cde6ef1e1ca", null ],
     [ "performDelivery", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aff53cd70438c58db811cf2022132164c", null ],
     [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#aaf58b23912a84e967643bc42e7d503a7", null ],
-    [ "event", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e", null ]
+    [ "event", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a61a047d5ba0be20bb85be1d2d67b956e", null ],
+    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a4ca683b8bcb3cf15442851dea2b0eecc", null ],
+    [ "PROB_CONSEQUENCES", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a3a3e1819597616cb0d9d089dd916e424", null ],
+    [ "PROB_CONSEQUENCES_ESCROW", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a44d9f149f00ed38a0a6cceaf1cb0492c", null ],
+    [ "PROB_PIRATE_ENCOUNTER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html#a71575ecd9d7b6b7f70d746c1d91f280a", null ]
 ];

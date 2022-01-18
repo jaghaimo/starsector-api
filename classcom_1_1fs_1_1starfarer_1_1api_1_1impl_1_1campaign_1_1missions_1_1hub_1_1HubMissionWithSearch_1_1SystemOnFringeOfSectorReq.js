@@ -1,0 +1,8 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemOnFringeOfSectorReq =
+[
+    [ "SystemOnFringeOfSectorReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemOnFringeOfSectorReq.html#a58e39c614946106de15c1b2c2df4030e", null ],
+    [ "SystemOnFringeOfSectorReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemOnFringeOfSectorReq.html#a1db9f62e713bff38648806d8e379e483", null ],
+    [ "systemMatchesRequirement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemOnFringeOfSectorReq.html#a277c134755d68a85cd0b9704e24a3c2a", null ],
+    [ "negate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemOnFringeOfSectorReq.html#ad60be801b57c3461e74c80ecfc28350c", null ],
+    [ "rangeLY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemOnFringeOfSectorReq.html#a94399c5275609ebdc923c604479897d9", null ]
+];

@@ -12,5 +12,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecIt
     [ "performRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#af26d941ec2d823f18fbda1c97214e57b", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#af143a19d54ebe7c3e40aa8aaf360a8cd", null ],
     [ "resolveDropParamsToSpecificItemData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a7b89a90f6b3eff7f661c700fdc445c74", null ],
-    [ "shouldRemoveOnRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a68ed4fad769dee0ed2ac873f47fd1279", null ]
+    [ "shouldRemoveOnRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a68ed4fad769dee0ed2ac873f47fd1279", null ],
+    [ "modId", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#ae19271614edb171eb7e9e56a5305a965", null ],
+    [ "modSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html#a370ba521b61fec7a81c119f066438bba", null ]
 ];

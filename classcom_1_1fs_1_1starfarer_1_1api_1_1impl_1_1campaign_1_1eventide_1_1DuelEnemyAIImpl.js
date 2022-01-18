@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl =
 [
+    [ "WaitThenAct", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl_1_1WaitThenAct.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl_1_1WaitThenAct" ],
     [ "DuelEnemyAIImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#af6ba0c59a7c2dc9e7bfd8538d57d5a6e", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a1028db6f60b1f8ea9f69ec859f8ce401", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl.html#a66b94680dc3fbdad824dc247bb8d4506", null ],

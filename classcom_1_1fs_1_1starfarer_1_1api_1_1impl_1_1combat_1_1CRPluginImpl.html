@@ -87,6 +87,7 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.combat.CRPluginImpl Class Reference</div>  </div>
@@ -111,10 +112,10 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>applyMaxCRCrewModifiers</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member)</td></tr>
 <tr class="separator:a78ab1eb4e5214294ddf86ef0915fa765"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0384926f8ec8d634a8da7b9c6b64b6a6"><td class="memItemLeft" align="right" valign="top"><a id="a0384926f8ec8d634a8da7b9c6b64b6a6"></a>
-List&lt; CRStatusItemData &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCRStatusDataForShip</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship)</td></tr>
+List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CRStatusItemData.html">CRStatusItemData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCRStatusDataForShip</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship)</td></tr>
 <tr class="separator:a0384926f8ec8d634a8da7b9c6b64b6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14dd37486a07b8e29e4718ca6f9ccaca"><td class="memItemLeft" align="right" valign="top"><a id="a14dd37486a07b8e29e4718ca6f9ccaca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>applyCRToStats</b> (float cr, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, HullSize hullSize)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>applyCRToStats</b> (float cr, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html">HullSize</a> hullSize)</td></tr>
 <tr class="separator:a14dd37486a07b8e29e4718ca6f9ccaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41e7bacf237be2cec61fb89845da1d6f"><td class="memItemLeft" align="right" valign="top"><a id="a41e7bacf237be2cec61fb89845da1d6f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>applyCRToShip</b> (float cr, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship)</td></tr>
@@ -140,10 +141,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getDegradeThreshold<
 <tr class="memitem:aa3ecb27dccf9f598397ef215beba25b6"><td class="memItemLeft" align="right" valign="top"><a id="aa3ecb27dccf9f598397ef215beba25b6"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getImproveThreshold</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats)</td></tr>
 <tr class="separator:aa3ecb27dccf9f598397ef215beba25b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fdf3c00e9aea8bcefe7f26b5b7557dc"><td class="memItemLeft" align="right" valign="top">CREffectDescriptionForTooltip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a0fdf3c00e9aea8bcefe7f26b5b7557dc">getCREffectDescription</a> (float cr, String shipOrWing, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member)</td></tr>
+<tr class="memitem:a0fdf3c00e9aea8bcefe7f26b5b7557dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDescriptionForTooltip.html">CREffectDescriptionForTooltip</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a0fdf3c00e9aea8bcefe7f26b5b7557dc">getCREffectDescription</a> (float cr, String shipOrWing, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member)</td></tr>
 <tr class="separator:a0fdf3c00e9aea8bcefe7f26b5b7557dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab7e9174107884b5b10613f8f8fed222"><td class="memItemLeft" align="right" valign="top"><a id="aab7e9174107884b5b10613f8f8fed222"></a>
-List&lt; CREffectDetail &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCREffectDetails</b> (float cr, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member)</td></tr>
+List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDetail.html">CREffectDetail</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCREffectDetails</b> (float cr, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member)</td></tr>
 <tr class="separator:aab7e9174107884b5b10613f8f8fed222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91b92436f0ae05da28df0668d9984c3e"><td class="memItemLeft" align="right" valign="top"><a id="a91b92436f0ae05da28df0668d9984c3e"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isOkToPermanentlyDisable</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, Object module)</td></tr>
@@ -207,8 +208,76 @@ static final float&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_WEA
 Static Protected Attributes</h2></td></tr>
 <tr class="memitem:a5e85255c5b7c019b77f6939575263ec0"><td class="memItemLeft" align="right" valign="top">static Object[]&#160;</td><td class="memItemRight" valign="bottom"><b>statusKeys</b></td></tr>
 <tr class="separator:a5e85255c5b7c019b77f6939575263ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a9c0fdb8942b17b32823ea00c0092c782"><td class="memItemLeft" align="right" valign="top"><a id="a9c0fdb8942b17b32823ea00c0092c782"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getWeaponMalfuctionPercent</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, float cr)</td></tr>
+<tr class="separator:a9c0fdb8942b17b32823ea00c0092c782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add343d812312501c789a2b5ce3af550c"><td class="memItemLeft" align="right" valign="top"><a id="add343d812312501c789a2b5ce3af550c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getEngineMalfuctionPercent</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, float cr)</td></tr>
+<tr class="separator:add343d812312501c789a2b5ce3af550c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa41f09e44e90fab07100e89ec93d3ffa"><td class="memItemLeft" align="right" valign="top"><a id="aa41f09e44e90fab07100e89ec93d3ffa"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getCriticalMalfuctionPercent</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, float cr)</td></tr>
+<tr class="separator:aa41f09e44e90fab07100e89ec93d3ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc586dee82368fc2e429bb9c8f374ad"><td class="memItemLeft" align="right" valign="top"><a id="abfc586dee82368fc2e429bb9c8f374ad"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getShieldMalfuctionPercent</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, float cr)</td></tr>
+<tr class="separator:abfc586dee82368fc2e429bb9c8f374ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2dcdcdbe9b688933ed7ad03987766a5"><td class="memItemLeft" align="right" valign="top"><a id="ae2dcdcdbe9b688933ed7ad03987766a5"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getMovementChangePercent</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, float cr)</td></tr>
+<tr class="separator:ae2dcdcdbe9b688933ed7ad03987766a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad63f59c282bc41af65a103d7bde6841"><td class="memItemLeft" align="right" valign="top"><a id="aad63f59c282bc41af65a103d7bde6841"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getDamageTakenChangePercent</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, float cr)</td></tr>
+<tr class="separator:aad63f59c282bc41af65a103d7bde6841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea140dc4d222216ad4c58d2732cf65a"><td class="memItemLeft" align="right" valign="top"><a id="a6ea140dc4d222216ad4c58d2732cf65a"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getRefitTimeChangePercent</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, float cr)</td></tr>
+<tr class="separator:a6ea140dc4d222216ad4c58d2732cf65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96fb4ce76fe3d3d38c3894d8ab144701"><td class="memItemLeft" align="right" valign="top"><a id="a96fb4ce76fe3d3d38c3894d8ab144701"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getDamageChangePercent</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, float cr)</td></tr>
+<tr class="separator:a96fb4ce76fe3d3d38c3894d8ab144701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cfd9a040be9058b7c911f48cf3eb751"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CRPluginImpl.html#a7cfd9a040be9058b7c911f48cf3eb751">getAimAccuracy</a> (float cr)</td></tr>
+<tr class="separator:a7cfd9a040be9058b7c911f48cf3eb751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa743878b87b9d28f710503f60d46b587"><td class="memItemLeft" align="right" valign="top"><a id="aa743878b87b9d28f710503f60d46b587"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>getMalfunctionString</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, float cr)</td></tr>
+<tr class="separator:aa743878b87b9d28f710503f60d46b587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2535cbe9a83e7be56f72d033ed3e84"><td class="memItemLeft" align="right" valign="top"><a id="aad2535cbe9a83e7be56f72d033ed3e84"></a>
+<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDetailType.html">CREffectDetailType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getTypeFor</b> (int val, boolean invert)</td></tr>
+<tr class="separator:aad2535cbe9a83e7be56f72d033ed3e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7cfd9a040be9058b7c911f48cf3eb751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cfd9a040be9058b7c911f48cf3eb751">&#9670;&nbsp;</a></span>getAimAccuracy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float com.fs.starfarer.api.impl.combat.CRPluginImpl.getAimAccuracy </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>From negative whatever to best accuracy of 1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <a id="a0fdf3c00e9aea8bcefe7f26b5b7557dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0fdf3c00e9aea8bcefe7f26b5b7557dc">&#9670;&nbsp;</a></span>getCREffectDescription()</h2>
 
@@ -219,7 +288,7 @@ Static Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">CREffectDescriptionForTooltip com.fs.starfarer.api.impl.combat.CRPluginImpl.getCREffectDescription </td>
+          <td class="memname"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDescriptionForTooltip.html">CREffectDescriptionForTooltip</a> com.fs.starfarer.api.impl.combat.CRPluginImpl.getCREffectDescription </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>cr</em>, </td>

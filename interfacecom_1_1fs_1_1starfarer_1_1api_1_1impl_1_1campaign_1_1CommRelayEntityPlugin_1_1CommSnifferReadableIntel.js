@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel =
+[
+    [ "canMakeVisibleToCommSniffer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html#ae3c4d33abb12b1e4966038ed4db7f364", null ]
+];

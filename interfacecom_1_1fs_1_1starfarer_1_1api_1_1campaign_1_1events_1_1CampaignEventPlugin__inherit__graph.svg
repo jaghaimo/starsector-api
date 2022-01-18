@@ -37,8 +37,8 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="0,-318.5 0,-348.5 203,-348.5 203,-318.5 0,-318.5"/>
+<g id="a_node2"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="0,-318.5 0,-348.5 203,-348.5 203,-318.5 0,-318.5"/>
 <text text-anchor="start" x="8" y="-336.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="101.5" y="-325.5" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent.CallableEvent</text>
 </a>

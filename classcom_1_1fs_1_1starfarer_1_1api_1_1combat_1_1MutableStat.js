@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat =
 [
+    [ "StatMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_1_1StatMod.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_1_1StatMod" ],
+    [ "StatModType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_1_1StatModType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_1_1StatModType" ],
     [ "MutableStat", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#abcbd561999a76325e609b47b594c6413", null ],
     [ "applyMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a4d01b606aa17adca652dbb286744f23d", null ],
     [ "applyMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a8ebc8c7ec68189bbc65f919c49872b93", null ],
@@ -30,6 +32,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat =
     [ "modifyPercent", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a0f138e0aa638f52befe237b214f92101", null ],
     [ "modifyPercentAlways", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#ac0e3d55dc32375a6347216e18691ac00", null ],
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a081612d09c0c531e592322e564e8e3ff", null ],
+    [ "recompute", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#ac5b495af4e2b59ea4f1656957c451a98", null ],
     [ "setBaseValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a26e4c5e394d01fbbc80d3e703272d124", null ],
     [ "unmodify", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a5d33c34a2d1323adc638f9bf9560a4b4", null ],
     [ "unmodify", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#abe26ec8aabe0aeb6e7409575af45df97", null ],
@@ -38,5 +41,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat =
     [ "unmodifyPercent", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a905a8961827e024dd41d46f7b8f9ed64", null ],
     [ "writeReplace", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a622ac5645772b3d87381a7c50e9e97ea", null ],
     [ "base", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a13b973b54c8d10d9939454679abb7a2a", null ],
-    [ "modified", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#ac51e11f12af3a90b757262c358c2e894", null ]
+    [ "flatMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#af0361392e746a4bd2d0a87cabab865ee", null ],
+    [ "flatMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a5977b96d84aa5859b90b457681fa736e", null ],
+    [ "modified", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#ac51e11f12af3a90b757262c358c2e894", null ],
+    [ "mult", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#ac86c550b3c13e4b8877f3fd043f1b3d0", null ],
+    [ "multMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a6a8e0c4b6d57f336a0bcd93ee8b50a03", null ],
+    [ "needsRecompute", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a3568f830bc2bfe8b374d8b66131bead6", null ],
+    [ "percentMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#acea1f1832f337b8223c9f2f9dc4be336", null ],
+    [ "percentMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat.html#a102470862b89cf6a4b424118e98418e9", null ]
 ];

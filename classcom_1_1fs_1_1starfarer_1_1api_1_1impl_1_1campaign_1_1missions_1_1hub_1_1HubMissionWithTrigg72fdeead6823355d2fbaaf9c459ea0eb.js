@@ -1,0 +1,8 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg72fdeead6823355d2fbaaf9c459ea0eb =
+[
+    [ "SetFleetFlagsWithReasonAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg72fdeead6823355d2fbaaf9c459ea0eb.html#a0801c946f58805bd19572f55e89617fb", null ],
+    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg72fdeead6823355d2fbaaf9c459ea0eb.html#a81d26fa921c6162374bbbb565a182479", null ],
+    [ "flags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg72fdeead6823355d2fbaaf9c459ea0eb.html#a28ca90f08b9c4d301b12d8ad2c24e43c", null ],
+    [ "permanent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg72fdeead6823355d2fbaaf9c459ea0eb.html#a877f08304b477aecf43aad74e345395d", null ],
+    [ "reason", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg72fdeead6823355d2fbaaf9c459ea0eb.html#a20ba962a2d42cbe0b874ff27c62cd6bd", null ]
+];

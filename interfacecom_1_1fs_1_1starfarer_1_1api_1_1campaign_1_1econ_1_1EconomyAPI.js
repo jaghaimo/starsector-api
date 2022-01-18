@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI =
 [
+    [ "EconomyUpdateListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI_1_1EconomyUpdateListener.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI_1_1EconomyUpdateListener" ],
     [ "addMarket", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI.html#a9391a826f5c8bfe56e6920b4f79a0747", null ],
     [ "addUpdateListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI.html#a0e1f0d47c107a467d1c4f870b9fada49", null ],
     [ "advance", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI.html#aadafaf7d313c8ea45522ec571ad20259", null ],

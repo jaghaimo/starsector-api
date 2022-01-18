@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission =
 [
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission_1_1Stage" ],
+    [ "Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission_1_1Variation.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission_1_1Variation" ],
     [ "accept", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a0c7e4d82c27e5bbf48756cb305a2f77a", null ],
     [ "addDescriptionForNonEndStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a180e136594d606ad3504fe91c06034de", null ],
     [ "addNextStepText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#aba1f53dbd1296d48526bbb4efd8ae639", null ],
@@ -8,11 +10,20 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapC
     [ "getBlurbText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#aaf5fd1e8ef8d4e2871fd27cd7de0c1aa", null ],
     [ "getSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#aa69770877e99f6811d2fb8d21c46e269", null ],
     [ "updateInteractionDataImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a18d6c80ba945b1d19f28fad0b28b1f50", null ],
+    [ "BASE_PRICE_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a8f9e958f31f42227c0162a93d7697f53", null ],
     [ "commodityId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#af26168bc8c6695d38b98eeb9618b82dd", null ],
+    [ "ILLEGAL_QUANTITY_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#adeeef552c5f098e03b150f97babf0d14", null ],
+    [ "MAX_BASE_VALUE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a8259cc16598fd0b7ebc23a6ba47ec854", null ],
+    [ "MIN_BASE_VALUE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a223c65fce1c80686ae8e8efeda2509ab", null ],
+    [ "MISSION_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a9fa1b43318838a2a90a2daf49f4220c9", null ],
     [ "pricePerUnit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#aeea01517e2e03fe24d7e0a498d84f0d9", null ],
+    [ "PROB_BAR_UNDERWORLD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#aad9df833af86eafa5e7e171de0a7294b", null ],
+    [ "PROB_ILLEGAL_IF_UNDERWORLD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a427706dc66d82b8dc8af3a035c8c52cb", null ],
+    [ "PROB_REMOTE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a162bf2399f9bd312199c3efcbc1f8210", null ],
     [ "quantity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#aa83f9f22f4d8ac64675574affbba7502", null ],
     [ "remoteContact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#ab09793ad73e924a996f8f6bcc539e58b", null ],
     [ "remoteMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#ad69cc315529447a163f08c695fa1bf90", null ],
+    [ "SAME_CONTACT_DEBUG", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#ae05fa04e43159ff4d9c44ed14e2d6315", null ],
     [ "spec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a0aa0cbec273a7e2d94de682ef921e9e5", null ],
     [ "variation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html#a968e9b33744b77ae8a7238bb597a0120", null ]
 ];

@@ -13,6 +13,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1F
     [ "setRemoveTrigger", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a8bcbe8569fa1178bc8657ad01762631d", null ],
     [ "setSound", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a448762c59b6d59de9c3784850d803c9e", null ],
     [ "shouldRemoveIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#aaa83e4688caeec2be55047396a307e50", null ],
+    [ "DEFAULT_DURATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#ae2bf0cb715c17cbee4112b7f168feb01", null ],
     [ "duration", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a52231e4f8fcff4b8feaea4b3f3e804c5", null ],
     [ "icon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#aea252bdaa6b60730bc719759f2571b73", null ],
     [ "removeTrigger", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html#a21be086d5bf71c0eca40e09fc49c2779", null ],

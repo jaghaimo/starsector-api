@@ -107,8 +107,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab88ff357ab1fb2c40e7013e1e5098e7c"><td class="memItemLeft" align="right" valign="top"><a id="ab88ff357ab1fb2c40e7013e1e5098e7c"></a>
 <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarEvent.html">PortsideBarEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><b>createBarEvent</b> ()</td></tr>
 <tr class="separator:ab88ff357ab1fb2c40e7013e1e5098e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cbe08176e098ccadd0a179c5aa1a7bf"><td class="memItemLeft" align="right" valign="top"><a id="a6cbe08176e098ccadd0a179c5aa1a7bf"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isPriority</b> ()</td></tr>
+<tr class="memitem:a6cbe08176e098ccadd0a179c5aa1a7bf"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html#a6cbe08176e098ccadd0a179c5aa1a7bf">isPriority</a> ()</td></tr>
 <tr class="separator:a6cbe08176e098ccadd0a179c5aa1a7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60dfcf8d20a7eef252bd96ffa23848b5"><td class="memItemLeft" align="right" valign="top"><a id="a60dfcf8d20a7eef252bd96ffa23848b5"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getBarEventActiveDuration</b> ()</td></tr>
@@ -130,6 +129,35 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>getBarEventId</b> (
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>wasAutoAdded</b> ()</td></tr>
 <tr class="separator:aa52bb96f4402fecc1ec4fc19f0bc465b inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6cbe08176e098ccadd0a179c5aa1a7bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cbe08176e098ccadd0a179c5aa1a7bf">&#9670;&nbsp;</a></span>isPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBarEventCreator.isPriority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Priority events get created before non-priority. Should be used sparingly, for gameplay-essential events. Having too many priority events could crowd out all other events entirely. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Reimplemented from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html#a8c28df449ad5ab74509a30a274b79e9a">com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventCreator</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/campaign/intel/bar/events/historian/HistorianBarEventCreator.java</li>
 </ul>

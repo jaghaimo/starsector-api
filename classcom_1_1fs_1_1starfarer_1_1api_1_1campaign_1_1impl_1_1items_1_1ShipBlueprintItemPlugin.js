@@ -12,6 +12,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBluep
     [ "hasRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#a2f5967f90a51f9ae3281fa1ddcf73e76", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#a34cfef79349ea0245b9c70a768c0b5ef", null ],
     [ "performRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#a24dd7002beda005fe1bf56fc8dd796fc", null ],
+    [ "pickShip", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#a5cd0fb46ba2c88a6287d90e4327486af", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#af148f3f7ba839548ee9ea43ed22d22e7", null ],
     [ "resolveDropParamsToSpecificItemData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#a84d97eb23d26a000f157ecab3b137868", null ],
     [ "shouldRemoveOnRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html#a7b161ca7b445c881b847a9641265e682", null ],

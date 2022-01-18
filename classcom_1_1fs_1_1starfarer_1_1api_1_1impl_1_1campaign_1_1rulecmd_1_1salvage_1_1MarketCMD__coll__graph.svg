@@ -87,8 +87,8 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="650,-476.5 650,-506.5 889,-506.5 889,-476.5 650,-476.5"/>
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1TempData.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="650,-476.5 650,-506.5 889,-506.5 889,-476.5 650,-476.5"/>
 <text text-anchor="start" x="658" y="-494.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="769.5" y="-483.5" font-family="Helvetica,sans-Serif" font-size="10.00">MarketCMD.TempData</text>
 </a>
@@ -275,8 +275,8 @@
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="206,-549.5 206,-579.5 445,-579.5 445,-549.5 206,-549.5"/>
+<g id="a_node15"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1RaidType.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="206,-549.5 206,-579.5 445,-579.5 445,-549.5 206,-549.5"/>
 <text text-anchor="start" x="214" y="-567.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="325.5" y="-556.5" font-family="Helvetica,sans-Serif" font-size="10.00">MarketCMD.RaidType</text>
 </a>
@@ -326,8 +326,8 @@
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="206,-402.5 206,-432.5 445,-432.5 445,-402.5 206,-402.5"/>
+<g id="a_node18"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1BombardType.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="206,-402.5 206,-432.5 445,-432.5 445,-402.5 206,-402.5"/>
 <text text-anchor="start" x="214" y="-420.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="325.5" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00">MarketCMD.BombardType</text>
 </a>

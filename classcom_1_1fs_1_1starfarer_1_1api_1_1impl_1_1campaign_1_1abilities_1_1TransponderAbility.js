@@ -15,6 +15,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1Trans
     [ "getDeactivationText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a13937e32e9d5e96f764cf8ea55afbdbd", null ],
     [ "getFactionList", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a97e5b013905f96047e9d358a4e389619", null ],
     [ "getFactionsThatWouldBecomeHostile", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a25affe580497bcd6743d013e9553649a", null ],
+    [ "getFactionsThatWouldBecomeHostile", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a5e8863acc8c85da7d91b2891160bb0ff", null ],
     [ "getProgressColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#adb95dd34b9027fbfd0fc2794d7d80afd", null ],
     [ "getProgressFraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a95b736d1772c5e3a8fd7dcfbb76e6936", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a8b8bc166a28f358ce3f990b22aa3c63f", null ],
@@ -23,5 +24,10 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1Trans
     [ "pressButton", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#aa9f4865b51b3dd7fafaa2e2586a48ae2", null ],
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#abca8886764e08477a2a185128faf7cab", null ],
     [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a3e78fb350363a1cb6415bcce38fb42cc", null ],
-    [ "showProgressIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4cfa6023b8355cabf30de6d5ca69f6f9", null ]
+    [ "showProgressIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a4cfa6023b8355cabf30de6d5ca69f6f9", null ],
+    [ "CONFIRM_DURATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a86cc34270a1996f8b3b08924dc8c40b1", null ],
+    [ "DETECTABILITY_FLAT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a400afb657b11bcdc74ce5ab9770e403c", null ],
+    [ "DETECTABILITY_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a38fbde3ca5e32917af286f905bd03a79", null ],
+    [ "showAlarm", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#acc87fdb6b7fbfa9cd00713001f98a6c5", null ],
+    [ "sinceWarning", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1TransponderAbility.html#a49024e32393a1c2689c06374d7638184", null ]
 ];

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin =
 [
+    [ "AsteroidBeltParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin_1_1AsteroidBeltParams.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin_1_1AsteroidBeltParams" ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a9d56b9707afede73b5c869287372731e", null ],
     [ "applyEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a39886d312df425f381981b1edafe6c5a", null ],
     [ "createAsteroids", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#aa8c0648d1cd080e01849c50dba2aa79c", null ],
@@ -18,5 +19,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1Asteroi
     [ "renderOnMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a2fb55ee740d683e66c3be5b733b327a0", null ],
     [ "reportAsteroidPersisted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a8d602b5b8cdb3564afd13271fd918d1b", null ],
     [ "needToCreateAsteroids", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#ae56495dfb8aa02fdb67395eeddccf264", null ],
-    [ "params", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a1e54aab048e4e281bc6e3ec7ab2bb62d", null ]
+    [ "params", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#a1e54aab048e4e281bc6e3ec7ab2bb62d", null ],
+    [ "rr", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#ad4a3802adcaaf1793ba1f75bd0d8b09f", null ]
 ];

@@ -23,6 +23,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1Fract
     [ "isUsable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a4e7e4ac01a607fc1fb3c5f514fd49c6f", null ],
     [ "showAlarm", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a6edd57c81b481c85c33f2cf1f38dedae", null ],
     [ "showCooldownIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a20dc63004fba4813e4124c8ba6ea60fb", null ],
+    [ "CR_COST_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7fe0b1533d754e20df9d4b4f9062aa58", null ],
+    [ "FUEL_USE_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#aba1e96b9779786ab880034be884d2015", null ],
+    [ "NASCENT_JUMP_DIST", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#afec227524d279b2fca9a684eb18207f6", null ],
     [ "ping", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a3f00fa9fdee23c312546363e8b2531a2", null ],
     [ "primed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a1f716f49b3c0215ec6f32a939762d379", null ],
     [ "well", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a7ef90584dbac8675e3debb3bddbfd0f1", null ]

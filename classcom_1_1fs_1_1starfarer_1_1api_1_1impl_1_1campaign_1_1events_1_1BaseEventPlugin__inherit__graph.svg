@@ -261,8 +261,8 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="0,-343.5 0,-373.5 203,-373.5 203,-343.5 0,-343.5"/>
+<g id="a_node3"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="0,-343.5 0,-373.5 203,-373.5 203,-343.5 0,-343.5"/>
 <text text-anchor="start" x="8" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="101.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent.CallableEvent</text>
 </a>

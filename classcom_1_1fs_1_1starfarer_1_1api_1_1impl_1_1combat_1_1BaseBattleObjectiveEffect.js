@@ -7,5 +7,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveE
     [ "engine", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#adb4adda0a2a15e880180e7f1c8f9bc0c", null ],
     [ "itemsNAFighters", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a6873ea00a6df1100fb65cbce1de6c7a8", null ],
     [ "itemsNAFrigates", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#af46acc3f3175d8f6ac4e6c6f1f926c34", null ],
-    [ "objective", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a88f66f797da903c7cbf8b6291046b367", null ]
+    [ "objective", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#a88f66f797da903c7cbf8b6291046b367", null ],
+    [ "prevOwners", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html#ae8a82045012610fc73297f70741c7b30", null ]
 ];

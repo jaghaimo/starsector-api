@@ -69,8 +69,8 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="223.5,-174.5 223.5,-204.5 426.5,-204.5 426.5,-174.5 223.5,-174.5"/>
+<g id="a_node5"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="223.5,-174.5 223.5,-204.5 426.5,-204.5 426.5,-174.5 223.5,-174.5"/>
 <text text-anchor="start" x="231.5" y="-192.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="325" y="-181.5" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent.CallableEvent</text>
 </a>
@@ -101,8 +101,8 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="206,-76.5 206,-106.5 444,-106.5 444,-76.5 206,-76.5"/>
+<g id="a_node7"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="206,-76.5 206,-106.5 444,-106.5 444,-76.5 206,-76.5"/>
 <text text-anchor="start" x="214" y="-94.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="325" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">CommRelayEntityPlugin.CommSnifferReadableIntel</text>
 </a>

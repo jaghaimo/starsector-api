@@ -69,8 +69,8 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="223.5,-158 223.5,-188 426.5,-188 426.5,-158 223.5,-158"/>
+<g id="a_node5"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="223.5,-158 223.5,-188 426.5,-188 426.5,-158 223.5,-158"/>
 <text text-anchor="start" x="231.5" y="-176" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="325" y="-165" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent.CallableEvent</text>
 </a>
@@ -101,8 +101,8 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="206,-60 206,-90 444,-90 444,-60 206,-60"/>
+<g id="a_node7"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="206,-60 206,-90 444,-90 444,-60 206,-60"/>
 <text text-anchor="start" x="214" y="-78" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="325" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">CommRelayEntityPlugin.CommSnifferReadableIntel</text>
 </a>
@@ -215,8 +215,8 @@
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="652.5,-11 652.5,-41 838.5,-41 838.5,-11 652.5,-11"/>
+<g id="a_node11"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_1_1MissionState.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="652.5,-11 652.5,-41 838.5,-41 838.5,-11 652.5,-11"/>
 <text text-anchor="start" x="660.5" y="-29" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.</text>
 <text text-anchor="middle" x="745.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">BaseMissionIntel.MissionState</text>
 </a>
@@ -232,8 +232,8 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="652.5,-109 652.5,-139 838.5,-139 838.5,-109 652.5,-109"/>
+<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_1_1MissionResult.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="652.5,-109 652.5,-139 838.5,-139 838.5,-109 652.5,-109"/>
 <text text-anchor="start" x="660.5" y="-127" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.</text>
 <text text-anchor="middle" x="745.5" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00">BaseMissionIntel.MissionResult</text>
 </a>
@@ -249,8 +249,8 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="220,-0.5 220,-41.5 430,-41.5 430,-0.5 220,-0.5"/>
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin_1_1ReputationAdjustmentResult.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="220,-0.5 220,-41.5 430,-41.5 430,-0.5 220,-0.5"/>
 <text text-anchor="start" x="228" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="start" x="228" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ReputationActionResponsePlugin.Reputation</text>
 <text text-anchor="middle" x="325" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustmentResult</text>
@@ -421,8 +421,8 @@
 <!-- Node26 -->
 <g id="node26" class="node">
 <title>Node26</title>
-<g id="a_node26"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="629,-634 629,-664 862,-664 862,-634 629,-634"/>
+<g id="a_node26"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_1_1DestinationData.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="629,-634 629,-664 862,-664 862,-634 629,-634"/>
 <text text-anchor="start" x="637" y="-652" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="745.5" y="-641" font-family="Helvetica,sans-Serif" font-size="10.00">DeliveryBarEvent.DestinationData</text>
 </a>

@@ -30,6 +30,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "loanRepaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIntel.html#aeefdf5b3c9fe3e5b12d30412ec98642e", null ],
     [ "majorLoan", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIntel.html#af68f549a289fb39488a4f9048fe8d416", null ],
     [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIntel.html#a63a06bacf44248c231a271ea426b12fd", null ],
+    [ "NUM_REPAID_LOANS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIntel.html#a9a3072285cc5c68e10b8294cca8c4db6", null ],
     [ "repResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIntel.html#a49533e6d7f259e4f9949a166adaa7884", null ],
     [ "sentReminder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIntel.html#a7a7a23debb6fabcb860fc7de7f303ad0", null ],
     [ "wasExtended", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIntel.html#ae0ddd4c5b16b6587147905fe5c7468f7", null ]

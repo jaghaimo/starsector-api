@@ -85,11 +85,18 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.combat.BattleCreationContext Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for com.fs.starfarer.api.combat.BattleCreationContext:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext__coll__graph.svg" width="1018" height="158"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -183,6 +190,51 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>enemyDeployAll</b>
 <tr class="memitem:a88e26ef21206ee1d24957403fb876a52"><td class="memItemLeft" align="right" valign="top"><a id="a88e26ef21206ee1d24957403fb876a52"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>fightToTheLast</b> = false</td></tr>
 <tr class="separator:a88e26ef21206ee1d24957403fb876a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a257b96abb8716e405697791a35676e93"><td class="memItemLeft" align="right" valign="top"><a id="a257b96abb8716e405697791a35676e93"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>initialStepSize</b> = 1f</td></tr>
+<tr class="separator:a257b96abb8716e405697791a35676e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c65ba2842fd84459d871268cc9be4e4"><td class="memItemLeft" align="right" valign="top"><a id="a9c65ba2842fd84459d871268cc9be4e4"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>initialNumSteps</b> = 0f</td></tr>
+<tr class="separator:a9c65ba2842fd84459d871268cc9be4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0814a7602ce8341aa28a38b024f94d57"><td class="memItemLeft" align="right" valign="top"><a id="a0814a7602ce8341aa28a38b024f94d57"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>initialDeploymentBurnDuration</b> = 1f</td></tr>
+<tr class="separator:a0814a7602ce8341aa28a38b024f94d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb250967c0d732329f3cd294802f024"><td class="memItemLeft" align="right" valign="top"><a id="a7bb250967c0d732329f3cd294802f024"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>normalDeploymentBurnDuration</b> = 6f</td></tr>
+<tr class="separator:a7bb250967c0d732329f3cd294802f024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af07c10a352ab6a626f5743c63d150396"><td class="memItemLeft" align="right" valign="top"><a id="af07c10a352ab6a626f5743c63d150396"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>escapeDeploymentBurnDuration</b> = 1.5f</td></tr>
+<tr class="separator:af07c10a352ab6a626f5743c63d150396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b139e14e5e3700f201e8e4f22603b9"><td class="memItemLeft" align="right" valign="top"><a id="af2b139e14e5e3700f201e8e4f22603b9"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>standoffRange</b> = 6000f</td></tr>
+<tr class="separator:af2b139e14e5e3700f201e8e4f22603b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2b7fc25ba0146433d6bff84af1374d"><td class="memItemLeft" align="right" valign="top"><a id="a1d2b7fc25ba0146433d6bff84af1374d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>initialEscapeRange</b> = Global.getSettings().getFloat(&quot;escapeStartDistance&quot;)</td></tr>
+<tr class="separator:a1d2b7fc25ba0146433d6bff84af1374d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0647796315b76966ff1c363a5360e2"><td class="memItemLeft" align="right" valign="top"><a id="a8a0647796315b76966ff1c363a5360e2"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>flankDeploymentDistance</b> = Global.getSettings().getFloat(&quot;escapeFlankDistance&quot;)</td></tr>
+<tr class="separator:a8a0647796315b76966ff1c363a5360e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9240bb511ac9ac0b94472806e6e71d60"><td class="memItemLeft" align="right" valign="top"><a id="a9240bb511ac9ac0b94472806e6e71d60"></a>
+<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>playerFleet</b></td></tr>
+<tr class="separator:a9240bb511ac9ac0b94472806e6e71d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad726a583e7a52ce276db00b572db8e98"><td class="memItemLeft" align="right" valign="top"><a id="ad726a583e7a52ce276db00b572db8e98"></a>
+<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetGoal.html">FleetGoal</a>&#160;</td><td class="memItemRight" valign="bottom"><b>playerGoal</b></td></tr>
+<tr class="separator:ad726a583e7a52ce276db00b572db8e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade54f250ccec40f373b8345854c778a1"><td class="memItemLeft" align="right" valign="top"><a id="ade54f250ccec40f373b8345854c778a1"></a>
+<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>otherFleet</b></td></tr>
+<tr class="separator:ade54f250ccec40f373b8345854c778a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d4d674c665024562b9048335af74de8"><td class="memItemLeft" align="right" valign="top"><a id="a5d4d674c665024562b9048335af74de8"></a>
+<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetGoal.html">FleetGoal</a>&#160;</td><td class="memItemRight" valign="bottom"><b>otherGoal</b></td></tr>
+<tr class="separator:a5d4d674c665024562b9048335af74de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af493265dfbbe864081b599ab0ba59ceb"><td class="memItemLeft" align="right" valign="top"><a id="af493265dfbbe864081b599ab0ba59ceb"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>pursuitRangeModifier</b> = 0f</td></tr>
+<tr class="separator:af493265dfbbe864081b599ab0ba59ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8f05fd6601a847dae55972c0f97446"><td class="memItemLeft" align="right" valign="top"><a id="a7d8f05fd6601a847dae55972c0f97446"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>playerCommandPoints</b> = 0</td></tr>
+<tr class="separator:a7d8f05fd6601a847dae55972c0f97446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/combat/BattleCreationContext.java</li>

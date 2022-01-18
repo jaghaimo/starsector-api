@@ -21,5 +21,22 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetG
     [ "getProbOrbits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a3ff2fde48c6aefb9d0c6887f0d7ad1f6", null ],
     [ "getTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#aa7f93ea6423dd7666761e7df68c1c7a6", null ],
     [ "hasTag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a1a3d44e72476fe3ce772d4640fabe0d7", null ],
-    [ "toString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#ad0fe23b36ad01d03071c1c42d4577ea1", null ]
+    [ "toString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#ad0fe23b36ad01d03071c1c42d4577ea1", null ],
+    [ "category", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a27481611d870784f3f535ec73905e219", null ],
+    [ "frequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a514cc157429d20f1b2797345757a74e4", null ],
+    [ "habOffsetAVERAGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a0ecde75ad3cc5695f747c62a5877231d", null ],
+    [ "habOffsetMax", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a231bb5cd44fbf378bc8a51d2a679a07f", null ],
+    [ "habOffsetMin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#ae31843e3006d906660a82c28a3a00c23", null ],
+    [ "habOffsetOLD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#ac90cb9a1160147476ccc3c30916410a4", null ],
+    [ "habOffsetYOUNG", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a4b3132b81e5ca589fef794c1965ba3c7", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a7b3f675a769d2e025bd169b9f5519764", null ],
+    [ "maxColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a53dbb7fdc0fd7884dcaa2c6ecce3d13a", null ],
+    [ "maxOrbits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a05f61af75b8aa09a8180eb133aedf209", null ],
+    [ "maxRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a91e515a2fa2e3a5b9fea48b2a07dec0e", null ],
+    [ "minColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#afd79f73d6539057c2707287763b447f9", null ],
+    [ "minOrbits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a0466754a6295741135a00e6349872fa2", null ],
+    [ "minRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a20ea3cde6e720bbc1e3c4aabfa15bff5", null ],
+    [ "multipliers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#ad529d4585c96f999bbdd2638481979b8", null ],
+    [ "probOrbits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#a9da25b2bcad9f6e334c121692cd20c44", null ],
+    [ "tags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html#aa8d3644bf225676dffc5276264025a61", null ]
 ];

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect =
 [
+    [ "ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect_1_1ParticleData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect_1_1ParticleData" ],
     [ "CryoblasterEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#a22e393341dc83476a83a5db27af36b42", null ],
     [ "CryoblasterEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#acb6181def3ce5d6ae1a69f7e17ceb80e", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html#acea8d67d2cc619d755440876b55782ff", null ],

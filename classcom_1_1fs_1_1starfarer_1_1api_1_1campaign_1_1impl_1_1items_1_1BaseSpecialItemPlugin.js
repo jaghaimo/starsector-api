@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin =
 [
+    [ "BlueprintLister", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_1_1BlueprintLister.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_1_1BlueprintLister" ],
+    [ "ItemCostLabelData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_1_1ItemCostLabelData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_1_1ItemCostLabelData" ],
     [ "addBlueprintList", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a4c764d3e5e542972baaea9bc774b26bd", null ],
     [ "addCostLabel", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#a0c6d39d358eaa8f491426907c2995d61", null ],
     [ "addFighterList", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html#ad7a81ab803b57dd0df66949e1aac2c50", null ],

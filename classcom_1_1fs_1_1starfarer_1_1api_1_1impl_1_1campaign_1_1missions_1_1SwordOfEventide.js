@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide =
 [
+    [ "SOEMusicPlayer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide_1_1SOEMusicPlayer.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide_1_1SOEMusicPlayer" ],
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide_1_1Stage" ],
     [ "addDescriptionForNonEndStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a41466080618a80562cff3976a483d127", null ],
     [ "addNextStepText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a6a44df17f62646741c999ebcd3109e8c", null ],
     [ "callAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a0af7a209f59724ddda904be7ca04fa75", null ],
@@ -8,8 +10,17 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordO
     [ "getPostfixForState", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#ac042297700b0d0fe8d6319ecf9db1a3b", null ],
     [ "updateInteractionDataImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a12781a274c06a7e9d2ca7a984f83b3ce", null ],
     [ "caspian_sang", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#abb2986e88b257ce69b73414ae5b6d202", null ],
+    [ "DUEL_MUSIC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a27fd9518162fb0f92aa56dc20639b8bd", null ],
     [ "eventide", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a495c0729ca09a4b3c54594aa75d4c081", null ],
+    [ "MISSION_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#afdbba5cf71cde76361f4a31f0190dadc", null ],
     [ "neriene_rao", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#ab57afa16308d21157bf181462177c518", null ],
     [ "orcus_rao", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#ad544324d88198d0b046640ca066b96e5", null ],
-    [ "player", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#adf82aaa4ace7415a8ae9ddd55d44ef68", null ]
+    [ "PARTY_CHATTER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#acae68fd2395ac2c3326c47b255d11dea", null ],
+    [ "PARTY_MUSIC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a0ee1ac81892c3897da01c449de598a0d", null ],
+    [ "player", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#adf82aaa4ace7415a8ae9ddd55d44ef68", null ],
+    [ "SOE_MUSIC_STATE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a0c257e5cfda1b25eb682cebce5925e90", null ],
+    [ "SOE_STATE_DUEL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a14b0241b2bf7c3884660a03bd417998b", null ],
+    [ "SOE_STATE_PARTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a64fe3258a517b0cb8c611c5b17f80c7a", null ],
+    [ "SOE_STATE_POST_DUEL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#a4122bb217bc5d46134308816ff137a41", null ],
+    [ "SOE_STATE_PRE_DUEL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html#ae8a974e044508ee54a122dd7eb77f063", null ]
 ];

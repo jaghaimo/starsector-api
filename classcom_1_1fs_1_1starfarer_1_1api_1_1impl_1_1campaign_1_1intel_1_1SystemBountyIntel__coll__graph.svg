@@ -53,8 +53,8 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="587.5,-416 587.5,-446 790.5,-446 790.5,-416 587.5,-416"/>
+<g id="a_node4"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="587.5,-416 587.5,-446 790.5,-446 790.5,-416 587.5,-416"/>
 <text text-anchor="start" x="595.5" y="-434" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="689" y="-423" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent.CallableEvent</text>
 </a>
@@ -107,8 +107,8 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="570,-514 570,-544 808,-544 808,-514 570,-514"/>
+<g id="a_node6"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="570,-514 570,-544 808,-544 808,-514 570,-514"/>
 <text text-anchor="start" x="578" y="-532" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="689" y="-521" font-family="Helvetica,sans-Serif" font-size="10.00">CommRelayEntityPlugin.CommSnifferReadableIntel</text>
 </a>
@@ -140,8 +140,8 @@
 <!-- Node18 -->
 <g id="node18" class="node">
 <title>Node18</title>
-<g id="a_node18"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="575.5,-318 575.5,-348 802.5,-348 802.5,-318 575.5,-318"/>
+<g id="a_node18"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript_1_1MilitaryResponseParams.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="575.5,-318 575.5,-348 802.5,-348 802.5,-318 575.5,-318"/>
 <text text-anchor="start" x="583.5" y="-336" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="689" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00">MilitaryResponseScript.MilitaryResponseParams</text>
 </a>
@@ -270,8 +270,8 @@
 <!-- Node13 -->
 <g id="node13" class="node">
 <title>Node13</title>
-<g id="a_node13"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="908,-6 908,-36 1099,-36 1099,-6 908,-6"/>
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel_1_1SystemBountyResult.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="908,-6 908,-36 1099,-36 1099,-6 908,-6"/>
 <text text-anchor="start" x="916" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.</text>
 <text text-anchor="middle" x="1003.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">SystemBountyIntel.SystemBountyResult</text>
 </a>
@@ -287,8 +287,8 @@
 <!-- Node14 -->
 <g id="node14" class="node">
 <title>Node14</title>
-<g id="a_node14"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="584,-0.5 584,-41.5 794,-41.5 794,-0.5 584,-0.5"/>
+<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin_1_1ReputationAdjustmentResult.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="584,-0.5 584,-41.5 794,-41.5 794,-0.5 584,-0.5"/>
 <text text-anchor="start" x="592" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="start" x="592" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ReputationActionResponsePlugin.Reputation</text>
 <text text-anchor="middle" x="689" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustmentResult</text>
@@ -343,8 +343,8 @@
 <!-- Node19 -->
 <g id="node19" class="node">
 <title>Node19</title>
-<g id="a_node19"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="206,-313 206,-343 365,-343 365,-313 206,-313"/>
+<g id="a_node19"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1ActionType.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="206,-313 206,-343 365,-343 365,-313 206,-313"/>
 <text text-anchor="start" x="214" y="-331" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.ai.</text>
 <text text-anchor="middle" x="285.5" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00">CampaignFleetAIAPI.ActionType</text>
 </a>

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl =
 [
+    [ "OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl_1_1OptionId.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl_1_1OptionId" ],
     [ "TutorialTransponderDialogPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl.html#a49077ace3bc03bcfd6a6a59ee5c19166", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl.html#adef72a0cce112e46decdf72036d8f667", null ],
     [ "backFromEngagement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl.html#a8cf31afcfa50d1a284094ebb622f057d", null ],

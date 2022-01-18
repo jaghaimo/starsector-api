@@ -21,5 +21,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaT
     [ "preRender", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a185131370ca97542044bfd08624ce4a5", null ],
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#ae9369a129f7768e89c6c32fb9f808f8d", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a58723b7dd68114c1ba056d5167310dd6", null ],
-    [ "renderSubArea", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#ae249b789131e1194066d6c976d9dc9d3", null ]
+    [ "renderSubArea", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#ae249b789131e1194066d6c976d9dc9d3", null ],
+    [ "currLayer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#af44ae67435b3f062207232fceaeadfe0", null ],
+    [ "layers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a5aa536b5995597936bfa67a459e109a8", null ],
+    [ "TILE_SIZE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a5a7919005f5b273a3669b81acd8991a0", null ],
+    [ "VISIBLITY_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html#a817bbc9724159246fd8f47c1bcbe2e9e", null ]
 ];

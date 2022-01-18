@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel =
 [
+    [ "TutorialMissionStage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel_1_1TutorialMissionStage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel_1_1TutorialMissionStage" ],
     [ "TutorialMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a706b39458d6840246918b27cfaeee41e", null ],
     [ "addBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a1fbc412401dd63321baaf962277a6ff6", null ],
     [ "addWeaponsToStorage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#af4ba44b7204b0a4e215ccf7a21f62ab8", null ],
@@ -7,12 +8,15 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1Tutori
     [ "callEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#ae62f69018e0b8b539b557448a3335484", null ],
     [ "canTurnImportantOff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#af84534808edb3a2e7ec219b866fd26dc", null ],
     [ "createIntelInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#afff3e33ebb8fa9a565f490dbbc5b4934", null ],
+    [ "createMainContact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#acae3935dcaef7dfc1b041864298c9345", null ],
     [ "createSmallDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a74ea3c3cf1da75a3c3d136e5a9352566", null ],
     [ "endEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#aa9bb011ba83d1959a5b057accce7c2c0", null ],
+    [ "endGalatiaPortionOfMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a752a53d60718ed868f0bf3e4632f2549", null ],
     [ "getCommMessageSound", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a460943a4fcf18993092f5bb1977c7e26", null ],
     [ "getFactionForUIColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#aff9edad6acb0b9a1ebccd2d9f12d9fc0", null ],
     [ "getIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a956b682be17da7576464afb6e98fd0d6", null ],
     [ "getIntelTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#aee355cc21c6f33cd39717f90b076da86", null ],
+    [ "getJangalaContact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a9eda794141bd265c052bea1e3f33f85d", null ],
     [ "getJangalaContactPostName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a2689370fc237daaeee4e8df1e5dbec67", null ],
     [ "getMainContact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a4b293607d3cd9ceaaacb7b3014387e0f", null ],
     [ "getMainContactPostName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a25e22ea996e196700e8f3f6a6070473f", null ],
@@ -23,6 +27,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1Tutori
     [ "getSortTier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a7c5ebab2bd498419ea2d0c5d9848016e", null ],
     [ "getWeaponForSlot", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#aec45dbe6bb42a2497fa8be0baefa2529", null ],
     [ "isHidden", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a5dccabc7fd8c882e7b0e28c4a18cea86", null ],
+    [ "isTutorialInProgress", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a181a77bcaeba7ac9cd6c7793526bf0cd", null ],
     [ "notifyEnded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a2c4d6f20f71510fed1c8b3407c71e8c0", null ],
     [ "pick", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a7a885926256677e6bce9fe39f21ba28c", null ],
     [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a162bcc658bde9529c47df301d1117034", null ],
@@ -42,8 +47,10 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1Tutori
     [ "pontus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a4b678e948916b07be72bbdcca37c7919", null ],
     [ "preRecoverFleetSize", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a424fa3cca34abeaaca4f53b9e7a78435", null ],
     [ "probe", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#ac1613408171604bd8ff71f6e26be6d1a", null ],
+    [ "REASON", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a0276b7615d4845acbdbdafb22089fa36", null ],
     [ "relay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a0f8360500e0930a1691a8ebcf74a7cf8", null ],
     [ "stage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#ad4901289fcf4b3d88aa8b2b20c093229", null ],
     [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a3b3bd2620487b923ae13d4f894aafc5d", null ],
-    [ "tetra", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a4e7c129f68555588b02b1d501fe45289", null ]
+    [ "tetra", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a4e7c129f68555588b02b1d501fe45289", null ],
+    [ "TUT_STAGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a60808a7e30c4233859a284b901eb5e06", null ]
 ];

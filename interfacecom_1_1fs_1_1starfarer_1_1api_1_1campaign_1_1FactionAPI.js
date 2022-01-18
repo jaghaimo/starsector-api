@@ -1,5 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI =
 [
+    [ "ShipPickMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_1_1ShipPickMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_1_1ShipPickMode" ],
+    [ "ShipPickParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_1_1ShipPickParams.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_1_1ShipPickParams" ],
     [ "addKnownFighter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a323b9667ded355290704a2c5b0cd9f9d", null ],
     [ "addKnownHullMod", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#aca8217f5667d0e48b9e1e90e3595896b", null ],
     [ "addKnownIndustry", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html#a70cf5828cbfbcc09c5b349a077df3412", null ],

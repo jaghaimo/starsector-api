@@ -1,6 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI =
 [
     [ "ItemInProductionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI_1_1ItemInProductionAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI_1_1ItemInProductionAPI" ],
+    [ "ProductionItemType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI_1_1ProductionItemType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI_1_1ProductionItemType" ],
     [ "addItem", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#aefc98045a986ba16529e722e824441fe", null ],
     [ "addItem", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a53b9dfb21af5b8e92b034b8f9ceb8525", null ],
     [ "clear", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a2a7568ff0d969425f94b3a6c4bf59deb", null ],

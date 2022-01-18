@@ -1,5 +1,9 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin =
 [
+    [ "DialogOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1DialogOption.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1DialogOption" ],
+    [ "OnClickAction", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1OnClickAction.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1OnClickAction" ],
+    [ "PlayerEconomyImpactMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1PlayerEconomyImpactMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1PlayerEconomyImpactMode" ],
+    [ "TransferAction", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction" ],
     [ "addAllCargo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a48164c8d7677edac113f16c157b5180a", null ],
     [ "advance", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a90b4b91c71cfd270867827d6271e19ad", null ],
     [ "createTooltip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a3443ab30e738f9577a01e58c47f4b811", null ],

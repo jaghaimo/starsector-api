@@ -19,6 +19,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil =
     [ "destVel", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a5f4fb55112bf0c0dc7b395116d8da0cf", null ],
     [ "hardSpeedLimit", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a1a108b3e42f124779fa351f24976c200", null ],
     [ "loc", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a6b19862b67b2cd2df332d39d5aa3eb03", null ],
+    [ "maxSpeed", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#aea635975b7afa4b250b2bed5c4bf2bfe", null ],
     [ "smoothCap", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a2eae45545ad8bfbf17cdcb8dab843d4d", null ],
     [ "vel", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html#a4661d63512343e032900db0088a6ac78", null ]
 ];

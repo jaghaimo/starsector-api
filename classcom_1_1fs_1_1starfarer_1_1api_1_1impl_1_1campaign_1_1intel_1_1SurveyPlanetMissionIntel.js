@@ -20,6 +20,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPla
     [ "missionAccepted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html#aabf50eba4f221f0f4bb08e6ee8660f4f", null ],
     [ "reportPlayerSurveyedPlanet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html#ad6785e4af1d5018458fe47ab948a6970", null ],
     [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html#ab732d305a210aff120335ba18a8a1eda", null ],
+    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html#ac28afedc5c20a0dc2bdf042d3150494c", null ],
     [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html#a7158e57d61b5a84e012d1a6578961a60", null ],
     [ "planet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html#a01657d088331ce3df6179db99cb9987e", null ],
     [ "reward", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html#a328e5c49acd52b513a0524cb816353b7", null ]

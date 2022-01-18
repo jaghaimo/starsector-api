@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI =
 [
+    [ "BattleSide", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI_1_1BattleSide.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI_1_1BattleSide" ],
     [ "applyVisibilityMod", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#ad34bdcb349937bfcd202ff417563d4f2", null ],
     [ "canJoin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a8407cb76b3d837b8932015f95fe5f6d8", null ],
     [ "computeCenterOfMass", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#adc8ea19fe1b90fd8157bbb994486c9b2", null ],

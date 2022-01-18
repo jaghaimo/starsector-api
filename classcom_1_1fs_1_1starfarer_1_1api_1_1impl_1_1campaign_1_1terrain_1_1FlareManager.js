@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager =
 [
+    [ "Flare", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager_1_1Flare.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager_1_1Flare" ],
+    [ "FlareManagerDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager_1_1FlareManagerDelegate.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager_1_1FlareManagerDelegate" ],
     [ "FlareManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#a8326a9d106400ed52879c6fc8afa56d0", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#a8314a92e3509d5c44d7d4644fadfa6bf", null ],
     [ "genLargeFlare", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#a648a1173f9388e773068182a862f5952", null ],
@@ -15,5 +17,10 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareMa
     [ "isInActiveFlareArc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#a860a54d3fd8359d9f254c38512121ebe", null ],
     [ "isInActiveFlareArc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#a17521063370fb564a28b95e7fc16eb87", null ],
     [ "isInActiveFlareArc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#afafbae1252b3228ab4b9c9ca120486a6", null ],
-    [ "setColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#a52d47b1787d5815dd5518afcda0b65ef", null ]
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#ab15cf61ba9dfeb1dac00ec9b638c33c5", null ],
+    [ "setColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#a52d47b1787d5815dd5518afcda0b65ef", null ],
+    [ "writeReplace", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#a94f4f1ec9d6bfcb676939bcf447386d3", null ],
+    [ "delegate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#ab1a4bb8f64a10e6594efc94c43ae8d73", null ],
+    [ "flares", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#ab8b5419c5956365b6ada0f40c86fd24a", null ],
+    [ "flareTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html#a17581617d40ffaedb21d75211a176226", null ]
 ];

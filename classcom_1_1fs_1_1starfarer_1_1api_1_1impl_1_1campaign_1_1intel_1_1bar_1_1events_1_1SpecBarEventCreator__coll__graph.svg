@@ -37,8 +37,8 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="0,-49.5 0,-79.5 233,-79.5 233,-49.5 0,-49.5"/>
+<g id="a_node3"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventb7443876afc9cc66909b145cad76cf4d.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="0,-49.5 0,-79.5 233,-79.5 233,-49.5 0,-49.5"/>
 <text text-anchor="start" x="8" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="116.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">BarEventManager.GenericBarEventCreator</text>
 </a>

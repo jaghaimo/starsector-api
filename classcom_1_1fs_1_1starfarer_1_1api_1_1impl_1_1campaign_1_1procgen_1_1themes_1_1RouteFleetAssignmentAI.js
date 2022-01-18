@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI =
 [
+    [ "TravelState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI_1_1TravelState.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI_1_1TravelState" ],
     [ "RouteFleetAssignmentAI", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a041589fc8df718b227335fdd3fbd54af", null ],
     [ "RouteFleetAssignmentAI", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#ada0fc24dfd32c25562ef877ad862f6a2", null ],
     [ "addEndingAssignment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#a8edc456c080ff2ebda9f3871f115af66", null ],

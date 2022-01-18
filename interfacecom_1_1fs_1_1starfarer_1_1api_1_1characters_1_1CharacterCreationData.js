@@ -28,5 +28,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterCreationDat
     [ "setSeed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterCreationData.html#a6218a7cc80e1bab1a54bed9f207284b1", null ],
     [ "setSeedString", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterCreationData.html#a4720366521a24a44340e9c7e60f03950", null ],
     [ "setStartingLocationName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterCreationData.html#a19e443206bc6a972620cfad1bb98fb10", null ],
-    [ "setWithTimePass", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterCreationData.html#a238bebeaeda4dced74cd9fb509681226", null ]
+    [ "setWithTimePass", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterCreationData.html#a238bebeaeda4dced74cd9fb509681226", null ],
+    [ "HYPERSPACE_NAME_TOKEN", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterCreationData.html#a3f2ebae3e7c5a45e061c6367d7be9207", null ]
 ];

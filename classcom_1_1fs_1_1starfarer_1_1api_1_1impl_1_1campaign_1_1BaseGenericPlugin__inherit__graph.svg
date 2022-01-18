@@ -37,8 +37,8 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="432,-0.5 432,-30.5 721,-30.5 721,-0.5 432,-0.5"/>
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSe153cb471dc7087f7726aa24a04df0947.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="432,-0.5 432,-30.5 721,-30.5 721,-0.5 432,-0.5"/>
 <text text-anchor="start" x="440" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="576.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageGenFromSeed.SalvageDefenderModificationPluginImpl</text>
 </a>
@@ -53,8 +53,8 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="0,-24.5 0,-54.5 194,-54.5 194,-24.5 0,-24.5"/>
+<g id="a_node2"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GenericPluginManagerAPI_1_1GenericPlugin.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="0,-24.5 0,-54.5 194,-54.5 194,-24.5 0,-24.5"/>
 <text text-anchor="start" x="8" y="-42.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="97" y="-31.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenericPluginManagerAPI.GenericPlugin</text>
 </a>

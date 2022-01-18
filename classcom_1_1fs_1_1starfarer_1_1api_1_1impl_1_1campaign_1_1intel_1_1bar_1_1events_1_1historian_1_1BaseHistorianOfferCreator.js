@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator =
 [
+    [ "createEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html#a888ad5f41a48dd85541f315048d80056", null ],
     [ "createOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html#a2ead302d321a3eb33a8c5c7c425bfffe", null ],
     [ "getFrequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html#a0843dcf40bc72e276e01dae369c0b3e3", null ],
     [ "getOfferId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html#ab4908566f2578e7380b4c268a90d577b", null ],

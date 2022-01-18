@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl =
 [
+    [ "OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl_1_1OptionId.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl_1_1OptionId" ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html#aba51b19720aff219e43ed985d9bdc2d2", null ],
     [ "backFromEngagement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html#ace242f5856eee7db9f4b63ea47bcf5ec", null ],
     [ "createInitialOptions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html#a1370ceee9715ebf8e5eee857a4fa4caa", null ],
@@ -12,6 +13,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTe
     [ "optionSelected", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html#a7cf3e504d325587e6728a87786d3666b", null ],
     [ "print", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html#a50276e02fd32561788aeb5cbed4e1c0f", null ],
     [ "dialog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html#a07edfb3e716f5500766cd973359752cb", null ],
+    [ "HIGHLIGHT_COLOR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html#a5b23100b5161f9a2fbb616a6ff3a5ac5", null ],
     [ "lastOptionMousedOver", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html#a208d3a1c9cd3a31f76f0f01288220704", null ],
     [ "options", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html#a822cb19cde61371772d7a003744d2e5f", null ],
     [ "planet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html#a3e5a842a83b6252d4f4a0e3f418d2b61", null ],

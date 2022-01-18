@@ -53,8 +53,8 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="223.5,-542.11 223.5,-572.11 426.5,-572.11 426.5,-542.11 223.5,-542.11"/>
+<g id="a_node4"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="223.5,-542.11 223.5,-572.11 426.5,-572.11 426.5,-542.11 223.5,-542.11"/>
 <text text-anchor="start" x="231.5" y="-560.11" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="325" y="-549.11" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent.CallableEvent</text>
 </a>
@@ -85,8 +85,8 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="206,-444.11 206,-474.11 444,-474.11 444,-444.11 206,-444.11"/>
+<g id="a_node6"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="206,-444.11 206,-474.11 444,-474.11 444,-444.11 206,-444.11"/>
 <text text-anchor="start" x="214" y="-462.11" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="325" y="-451.11" font-family="Helvetica,sans-Serif" font-size="10.00">CommRelayEntityPlugin.CommSnifferReadableIntel</text>
 </a>
@@ -166,8 +166,8 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="1214.5,-228.61 1214.5,-269.61 1424.5,-269.61 1424.5,-228.61 1214.5,-228.61"/>
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin_1_1ReputationAdjustmentResult.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="1214.5,-228.61 1214.5,-269.61 1424.5,-269.61 1424.5,-228.61 1214.5,-228.61"/>
 <text text-anchor="start" x="1222.5" y="-257.61" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="start" x="1222.5" y="-246.61" font-family="Helvetica,sans-Serif" font-size="10.00">ReputationActionResponsePlugin.Reputation</text>
 <text text-anchor="middle" x="1319.5" y="-235.61" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustmentResult</text>

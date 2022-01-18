@@ -1,8 +1,6 @@
 var hierarchy =
 [
-    [ "com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html", [
-      [ "com.fs.starfarer.api.impl.campaign.AbandonMarketPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html", null ]
-    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.Abandon", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1Abandon.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Abilities", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Abilities.html", null ],
     [ "com.fs.starfarer.api.campaign.ai.AbilityAIPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AbilityAIPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.abilities.ai.BaseAbilityAI", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html", [
@@ -33,31 +31,57 @@ var hierarchy =
         ] ]
       ] ]
     ] ],
+    [ "com.fs.starfarer.api.campaign.PersistentUIDataAPI.AbilitySlotAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI_1_1AbilitySlotAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.PersistentUIDataAPI.AbilitySlotsAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI_1_1AbilitySlotsAPI.html", null ],
     [ "com.fs.starfarer.api.loading.AbilitySpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility.AbilityUseData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility_1_1AbilityUseData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.Abortable", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1Abortable.html", [
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.DefeatTriggerAdded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1DefeatTriggerAdded.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.EntityAdded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1EntityAdded.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.MadeImportant", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1MadeImportant.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.PersonAdded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1PersonAdded.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.PersonMadeRequired", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1PersonMadeRequired.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.VariableSet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1VariableSet.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.eventide.Actions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1Actions.html", null ],
+    [ "com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.ActionType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1ActionType.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.eventide.Actor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1Actor.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.AddedEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_1_1AddedEntity.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamBuilder.AddedSegment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamBuilder_1_1AddedSegment.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager.AddedStream", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1AddedStream.html", null ],
     [ "com.fs.starfarer.api.characters.AdminData", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AdminData.html", null ],
     [ "com.fs.starfarer.api.combat.AdmiralAIConfig", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AdmiralAIConfig.html", null ],
-    [ "com.fs.starfarer.api.combat.listeners.AdvanceableListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1AdvanceableListener.html", null ],
+    [ "com.fs.starfarer.api.combat.listeners.AdvanceableListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1AdvanceableListener.html", [
+      [ "com.fs.starfarer.api.impl.campaign.skills.CombatEndurance.CombatEnduranceRegen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1CombatEnduranceRegen.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.DamageControl.DamageControlDamageTakenMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1DamageControlDamageTakenMod.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery.EWMDamageDealtMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EnergyWeaponMastery_1_1EWMDamageDealtMod.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor.PolarizedArmorEffectMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1PolarizedArmorEffectMod.html", null ],
+      [ "com.fs.starfarer.api.impl.hullmods.PhaseAnchor.PhaseAnchorScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor_1_1PhaseAnchorScript.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.AdvancedCountermeasures", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AdvancedCountermeasures.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.AgeGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AgeGenDataSpec.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty.AggregateBountyData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1AggregateBountyData.html", null ],
     [ "com.fs.starfarer.api.campaign.AICoreAdminPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreAdminPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.AICoreAdminPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreAdminPluginImpl.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.campaign.econ.Industry.AICoreDescriptionMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_1_1AICoreDescriptionMode.html", null ],
     [ "com.fs.starfarer.api.campaign.AICoreOfficerPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.BaseAICoreOfficerPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseAICoreOfficerPluginImpl.html", [
         [ "com.fs.starfarer.api.impl.campaign.AICoreOfficerPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html", null ]
       ] ]
     ] ],
+    [ "com.fs.starfarer.api.combat.ShipwideAIFlags.AIFlags", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipwideAIFlags_1_1AIFlags.html", null ],
+    [ "com.fs.starfarer.api.combat.WeaponAPI.AIHints", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1AIHints.html", null ],
     [ "com.fs.starfarer.api.ui.Alignment", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1Alignment.html", null ],
     [ "com.fs.starfarer.api.combat.AmmoTrackerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AmmoTrackerAPI.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityIntelCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.eventide.AnimAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1AnimAction.html", null ],
     [ "com.fs.starfarer.api.AnimationAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1AnimationAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.AntiInspectionOrders", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel_1_1AntiInspectionOrders.html", null ],
     [ "com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1ApplyDamageResultAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.AptitudeDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AptitudeDesc.html", null ],
     [ "com.fs.starfarer.api.combat.ArmorGridAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ArmorGridAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.comm.IntelInfoPlugin.ArrowData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1ArrowData.html", null ],
     [ "com.fs.starfarer.api.combat.CombatFleetManagerAPI.AssignmentInfo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI_1_1AssignmentInfo.html", null ],
     [ "com.fs.starfarer.api.campaign.ai.AssignmentModulePlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AssignmentModulePlugin.html", null ],
     [ "com.fs.starfarer.api.combat.AssignmentTargetAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AssignmentTargetAPI.html", [
@@ -69,8 +93,20 @@ var hierarchy =
         [ "com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html", null ]
       ] ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.eventide.DuelPanel.AttackResult", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelPanel_1_1AttackResult.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.terrain.AuroraRenderer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AuroraRenderer.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.AuroraRenderer.AuroraRendererDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AuroraRenderer_1_1AuroraRendererDelegate.html", [
+      [ "com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html", [
+        [ "com.fs.starfarer.api.impl.campaign.terrain.EventHorizonPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1EventHorizonPlugin.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.terrain.StarCoronaAkaMainyuTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaAkaMainyuTerrainPlugin.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.terrain.StarCoronaJetTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaJetTerrainPlugin.html", null ]
+      ] ]
+    ] ],
+    [ "com.fs.starfarer.api.plugins.impl.CoreAutofitPlugin.AutoAssignScore", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin_1_1AutoAssignScore.html", null ],
     [ "com.fs.starfarer.api.combat.AutofireAIPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AutofireAIPlugin.html", null ],
+    [ "com.fs.starfarer.api.plugins.AutofitPlugin.AutofitOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AutofitOption.html", null ],
     [ "com.fs.starfarer.api.plugins.AutofitPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin.html", [
       [ "com.fs.starfarer.api.plugins.impl.BaseAutofitPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1BaseAutofitPlugin.html", [
         [ "com.fs.starfarer.api.plugins.impl.CoreAutofitPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html", null ]
@@ -83,71 +119,17 @@ var hierarchy =
     [ "com.fs.starfarer.api.impl.campaign.skills.AutomatedShips", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips.html", null ],
     [ "com.fs.starfarer.api.util.AutoReducingValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1AutoReducingValue.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.AuxiliarySupport", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AuxiliarySupport.html", null ],
-    [ "com.fs.starfarer.api.plugins.AutofitPlugin.AvailableFighter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableFighter.html", null ],
-    [ "com.fs.starfarer.api.plugins.AutofitPlugin.AvailableWeapon", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableWeapon.html", null ],
+    [ "com.fs.starfarer.api.plugins.AutofitPlugin.AvailableFighter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableFighter.html", [
+      [ "com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater.AvailableFighterImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater_1_1AvailableFighterImpl.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent.AvailableOfficer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent_1_1AvailableOfficer.html", null ],
+    [ "com.fs.starfarer.api.plugins.AutofitPlugin.AvailableWeapon", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableWeapon.html", [
+      [ "com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater.AvailableWeaponImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater_1_1AvailableWeaponImpl.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.BallisticMastery", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BallisticMastery.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AddBarEvent.BarEventData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent_1_1BarEventData.html", null ],
     [ "com.fs.starfarer.api.loading.BarEventSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html", [
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.CorruptPLClerkSuppliesBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1CorruptPLClerkSuppliesBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.DiktatLobsterBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DiktatLobsterBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicCraftBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicFarmerBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.MercsOnTheRunBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.QuartermasterCargoSwapBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.SpecBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1SpecBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html", null ]
-    ] ],
-    [ "com.fs.starfarer.api.impl.campaign.BaseGenericPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseGenericPlugin.html", [
-      [ "com.fs.starfarer.api.impl.campaign.AbandonMarketPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html", null ]
-    ] ],
-    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BaseHistorianOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html", [
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BlueprintOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BlueprintOfferCreator.html", [
-        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.FighterBlueprintOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.ShipBlueprintOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.SpecialItemOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.WeaponBlueprintOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOfferCreator.html", null ]
-      ] ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.DonationOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html", null ]
-    ] ],
-    [ "com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html", [
-      [ "com.fs.starfarer.api.impl.campaign.intel.raid.ActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html", [
-        [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HIActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PEActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEActionStage.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html", null ]
-      ] ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.raid.AssembleStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html", [
-        [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HIAssembleStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIAssembleStage.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PEAssembleStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAssembleStage.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidAssembleStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage.html", null ]
-      ] ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.raid.OrganizeStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html", [
-        [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HIOrganizeStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIOrganizeStage.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PEOrganizeStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html", null ]
-      ] ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.raid.ReturnStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ReturnStage.html", [
-        [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HIReturnStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIReturnStage.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PEReturnStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEReturnStage.html", null ]
-      ] ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.raid.TravelStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1TravelStage.html", [
-        [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HITravelStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HITravelStage.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PETravelStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PETravelStage.html", null ]
-      ] ]
-    ] ],
-    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html", [
-      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BlueprintSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BreadcrumbSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BreadcrumbSpecial.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.CargoManifestSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1ShipRecoverySpecial.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SleeperPodsSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SleeperPodsSpecial.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SurveyDataSpecial.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1TransmitterTrapSpecial.html", null ]
-    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.BaseBountyData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel_1_1BaseBountyData.html", null ],
     [ "com.fs.starfarer.api.campaign.BattleAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.BattleAutoresolverPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAutoresolverPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.BattleAutoresolverPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BattleAutoresolverPluginImpl.html", null ]
@@ -164,6 +146,7 @@ var hierarchy =
       ] ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.ids.BattleObjectives", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1BattleObjectives.html", null ],
+    [ "com.fs.starfarer.api.campaign.BattleAPI.BattleSide", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI_1_1BattleSide.html", null ],
     [ "com.fs.starfarer.api.combat.BeamAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BeamAPI.html", null ],
     [ "com.fs.starfarer.api.combat.BeamEffectPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BeamEffectPlugin.html", [
       [ "com.fs.starfarer.api.combat.BeamEffectPluginWithReset", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BeamEffectPluginWithReset.html", [
@@ -176,6 +159,7 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.combat.TachyonLanceEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TachyonLanceEffect.html", null ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BestOfTheBest.html", null ],
+    [ "com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin.BlueprintLister", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_1_1BlueprintLister.html", null ],
     [ "com.fs.starfarer.api.campaign.impl.items.BlueprintProviderItem", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BlueprintProviderItem.html", [
       [ "com.fs.starfarer.api.campaign.impl.items.FighterBlueprintItemPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1FighterBlueprintItemPlugin.html", null ],
       [ "com.fs.starfarer.api.campaign.impl.items.IndustryBlueprintItemPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html", null ],
@@ -183,17 +167,170 @@ var hierarchy =
       [ "com.fs.starfarer.api.campaign.impl.items.ShipBlueprintItemPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html", null ],
       [ "com.fs.starfarer.api.campaign.impl.items.WeaponBlueprintItemPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WeaponBlueprintItemPlugin.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.BoardingActionDecision", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1BoardingActionDecision.html", null ],
+    [ "com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.BoardingActionType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1BoardingActionType.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetEncounterContext.BoardingAttackType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext_1_1BoardingAttackType.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetEncounterContext.BoardingOutcome", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext_1_1BoardingOutcome.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetEncounterContext.BoardingResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext_1_1BoardingResult.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.BombardType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1BombardType.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.velfield.BoundingBox", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html", null ],
     [ "com.fs.starfarer.api.combat.BoundsAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BoundsAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.PersonBountyIntel.BountyResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyIntel_1_1BountyResult.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.PirateSystemBounty.BountyResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1PirateSystemBounty_1_1BountyResult.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.PersonBountyIntel.BountyResultType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyIntel_1_1BountyResultType.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.PersonBountyIntel.BountyType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyIntel_1_1BountyType.html", null ],
+    [ "com.fs.starfarer.api.campaign.BuffManagerAPI.Buff", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BuffManagerAPI_1_1Buff.html", [
+      [ "com.fs.starfarer.api.campaign.BuffManagerAPI.TempBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BuffManagerAPI_1_1TempBuff.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.TowCable.TowCableBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable_1_1TowCableBuff.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.CRLossPerSecondBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1CRLossPerSecondBuff.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.CRRecoveryBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1CRRecoveryBuff.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.MaxBurnBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.PeakPerformanceBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.campaign.BuffManagerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BuffManagerAPI.html", null ],
+    [ "com.fs.starfarer.api.plugins.BuildObjectiveTypePicker.BuildObjectiveParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1BuildObjectiveTypePicker_1_1BuildObjectiveParams.html", null ],
     [ "com.fs.starfarer.api.plugins.BuildObjectiveTypePicker", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1BuildObjectiveTypePicker.html", [
       [ "com.fs.starfarer.api.plugins.impl.CoreBuildObjectiveTypePicker", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreBuildObjectiveTypePicker.html", null ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.BulkTransport", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BulkTransport.html", null ],
     [ "com.fs.starfarer.api.ui.ButtonDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonDelegate.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.CallEvent.CallableEvent", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html", [
+      [ "com.fs.starfarer.api.campaign.events.CampaignEventPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html", [
+        [ "com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html", [
+          [ "com.fs.starfarer.api.impl.campaign.events.CivilDisorder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.FleetLogEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html", [
+            [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEventCommSniffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventCommSniffer.html", null ]
+          ] ],
+          [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.RecentUnrestEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.TestEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html", null ]
+        ] ]
+      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html", [
+        [ "com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.ProcurementMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.FactionHostilityIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.MessageIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1MessageIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.NewMessagesIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1NewMessagesIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.PersonBountyIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.PromoteOfficerIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PromoteOfficerIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.SystemBountyIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BaseHistorianOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOffer.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BaseHistorianOfferWithLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferWithLocation.html", [
+            [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.FighterBlueprintOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOffer.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.ShipBlueprintOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOffer.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.SpecialItemOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOffer.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.WeaponBlueprintOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html", null ]
+          ] ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.DonationOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOffer.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivityIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.deciv.DecivIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.misc.FleetLogIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.misc.BreadcrumbIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntel.html", [
+            [ "com.fs.starfarer.api.impl.campaign.intel.misc.DistressCallIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1DistressCallIntel.html", null ]
+          ] ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.misc.CargoPodsIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CargoPodsIntel.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.misc.ProductionReportIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1ProductionReportIntel.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.misc.GateIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.misc.TradeFleetDepartureIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html", [
+          [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html", [
+            [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1FleetCreatorMission.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html", [
+              [ "com.fs.starfarer.api.impl.campaign.missions.SwordOfEventide", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html", null ],
+              [ "com.fs.starfarer.api.impl.campaign.missions.academy.GABaseMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABaseMission.html", [
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.BasicExampleGADataFromRuins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1BasicExampleGADataFromRuins.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAAtTheGates", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GABuyArtifact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GACelestialObject", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADataFromRuins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADataFromRuins.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADeliverVIP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADeliverVIP.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADerelictArtifact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAFindingCoureuse", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFindingCoureuse.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAIntro", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAIntro.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAIntro2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAIntro2.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAKallichore", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAOutpost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAOutpost.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAProbePackage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAProjectZiggurat", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GARansomResearcher", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GARansomResearcher.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAReturnHamatsu", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAReturnHamatsu.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GATalkToBaird", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GATalkToBaird.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GATalkToSebestyen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GATalkToSebestyen.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GATransverseJump", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GATransverseJump.html", null ]
+              ] ],
+              [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithBarEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithBarEvent.html", [
+                [ "com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html", [
+                  [ "com.fs.starfarer.api.impl.campaign.missions.DisruptHeavyIndustry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptHeavyIndustry.html", null ],
+                  [ "com.fs.starfarer.api.impl.campaign.missions.DisruptSpaceport", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptSpaceport.html", null ]
+                ] ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.BlueprintIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.CheapCommodityMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.CommodityProductionMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.CustomProductionContract", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CustomProductionContract.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.DeadDropMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DeadDropMission.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.DisruptCompetitorMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptCompetitorMission.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.ExtractionMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ExtractionMission.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.HandMeDownFreighter", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1HandMeDownFreighter.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.HijackingMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1HijackingMission.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.JailbreakMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1JailbreakMission.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.PirateSystemBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1PirateSystemBounty.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.ProcurementMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.SecurityCodes", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.SmugglingMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.SpySatDeployment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SpySatDeployment.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.SurplusShipHull", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SurplusShipHull.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.TacticallyBombardColony", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1TacticallyBombardColony.html", null ],
+                [ "com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html", [
+                  [ "com.fs.starfarer.api.impl.campaign.missions.cb.MilitaryCustomBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html", null ],
+                  [ "com.fs.starfarer.api.impl.campaign.missions.cb.UnderworldCustomBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1UnderworldCustomBounty.html", null ]
+                ] ]
+              ] ]
+            ] ]
+          ] ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.IntelMarkerIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1IntelMarkerIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.plog.PLIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseMissionHub", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.campaign.CampaignClockAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignClockAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.CampaignEngineLayers", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html", null ],
     [ "com.fs.starfarer.api.campaign.CampaignEntityPickerListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEntityPickerListener.html", null ],
+    [ "com.fs.starfarer.api.campaign.events.CampaignEventPlugin.CampaignEventCategory", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1CampaignEventCategory.html", null ],
     [ "com.fs.starfarer.api.campaign.CampaignEventListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html", [
       [ "com.fs.starfarer.api.campaign.BaseCampaignEventListener", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html", [
         [ "com.fs.starfarer.api.campaign.BaseCampaignEventListenerAndScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListenerAndScript.html", null ],
@@ -203,29 +340,9 @@ var hierarchy =
         [ "com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManagerV2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2.html", null ],
         [ "com.fs.starfarer.api.impl.campaign.shared.StarSystemActivityTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker.html", null ]
       ] ],
-      [ "com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html", [
-        [ "com.fs.starfarer.api.impl.campaign.events.CivilDisorder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.FleetLogEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html", [
-          [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEventCommSniffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventCommSniffer.html", null ]
-        ] ],
-        [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.RecentUnrestEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.TestEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html", null ]
-      ] ]
-    ] ],
-    [ "com.fs.starfarer.api.campaign.events.CampaignEventManagerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html", null ],
-    [ "com.fs.starfarer.api.campaign.events.CampaignEventPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.campaign.events.CampaignEventManagerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.events.CampaignEventTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html", null ],
     [ "com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html", [
       [ "com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1ModularFleetAIAPI.html", null ]
@@ -255,11 +372,7 @@ var hierarchy =
           [ "com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html", null ],
           [ "com.fs.starfarer.api.impl.campaign.terrain.RingSystemTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html", null ],
           [ "com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html", null ],
-          [ "com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html", [
-            [ "com.fs.starfarer.api.impl.campaign.terrain.EventHorizonPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1EventHorizonPlugin.html", null ],
-            [ "com.fs.starfarer.api.impl.campaign.terrain.StarCoronaAkaMainyuTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaAkaMainyuTerrainPlugin.html", null ],
-            [ "com.fs.starfarer.api.impl.campaign.terrain.StarCoronaJetTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaJetTerrainPlugin.html", null ]
-          ] ]
+          [ "com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html", null ]
         ] ],
         [ "com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html", [
           [ "com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html", null ],
@@ -270,9 +383,16 @@ var hierarchy =
         [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html", null ]
       ] ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.CampaignTutorialScript.CampaignTutorialStage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript_1_1CampaignTutorialStage.html", null ],
     [ "com.fs.starfarer.api.campaign.CampaignUIAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.CargoAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.CustomsInspectionGenerateResult.CargoInspectionResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult_1_1CargoInspectionResult.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.CustomsInspectionGenerateResult.CargoInspectionResultType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateRes0f35c6ca8fc33e7fed7054abe6904ba4.html", null ],
+    [ "com.fs.starfarer.api.campaign.CargoAPI.CargoItemQuantity< T >", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_1_1CargoItemQuantity.html", null ],
+    [ "com.fs.starfarer.api.campaign.CargoAPI.CargoItemType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI_1_1CargoItemType.html", null ],
     [ "com.fs.starfarer.api.campaign.CargoPickerListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoPickerListener.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.CargoQuantityData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI_1_1CargoQuantityData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.CargoScan.CargoScanResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CargoScan_1_1CargoScanResult.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.CargoScreenListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CargoScreenListener.html", [
       [ "com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html", null ]
     ] ],
@@ -280,12 +400,18 @@ var hierarchy =
     [ "com.fs.starfarer.api.campaign.CargoTransferHandlerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoTransferHandlerAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.CarrierCommand", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CarrierCommand.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.CarrierGroup", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CarrierGroup.html", null ],
+    [ "com.fs.starfarer.api.plugins.impl.CoreAutofitPlugin.Category", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin_1_1Category.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.CategoryGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1CategoryGenDataSpec.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBStats", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBStats.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin.CellState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin_1_1CellState.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin.CellStateTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin_1_1CellStateTracker.html", null ],
     [ "com.fs.starfarer.api.characters.CharacterCreationData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterCreationData.html", null ],
     [ "com.fs.starfarer.api.campaign.CharacterDataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CharacterDataAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.CircularOrbitWithSpinAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CircularOrbitWithSpinAPI.html", null ],
     [ "Cloneable", null, [
+      [ "com.fs.starfarer.api.campaign.FactionAPI.ShipPickParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_1_1ShipPickParams.html", null ],
+      [ "com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.PersonnelAtEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1PersonnelAtEntity.html", null ],
+      [ "com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.PersonnelData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1PersonnelData.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.econ.impl.BaseIndustry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html", [
         [ "com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html", null ],
         [ "com.fs.starfarer.api.impl.campaign.econ.impl.Cryosanctum", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryosanctum.html", null ],
@@ -310,12 +436,16 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.eventide.CharAnimFrame", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnimFrame.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.eventide.HitArea", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DropGroupRow.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec_1_1DropData.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.CustomConstellationParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator_1_1CustomConstellationParams.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.PerShipData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1ShipRecoverySpecial_1_1PerShipData.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.shared.PlayerActivityTracker.FleetStatsSnapshot", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerActivityTracker_1_1FleetStatsSnapshot.html", null ],
+      [ "com.fs.starfarer.api.impl.combat.NegativeExplosionVisual.NEParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVisual_1_1NEParams.html", null ],
       [ "com.fs.starfarer.api.loading.DamagingExplosionSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1DamagingExplosionSpec.html", null ],
       [ "com.fs.starfarer.api.loading.MuzzleFlashSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MuzzleFlashSpec.html", null ],
       [ "com.fs.starfarer.api.loading.WeaponGroupSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupSpec.html", null ],
       [ "com.fs.starfarer.api.util.WeightedRandomPicker< T >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html", null ]
     ] ],
-    [ "com.fs.starfarer.api.impl.campaign.procgen.ColdConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ColdConditionGenerator.html", null ],
     [ "com.fs.starfarer.api.combat.CollisionClass", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html", null ],
     [ "com.fs.starfarer.api.combat.CollisionGridAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionGridAPI.html", [
       [ "com.fs.starfarer.api.util.CollisionGridUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html", null ]
@@ -327,12 +457,12 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html", null ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.ColonyManagement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ColonyManagement.html", null ],
-    [ "com.fs.starfarer.api.campaign.listeners.ColonyOtherFactorsListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyOtherFactorsListener.html", null ],
+    [ "com.fs.starfarer.api.campaign.listeners.ColonyOtherFactorsListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyOtherFactorsListener.html", [
+      [ "com.fs.starfarer.api.impl.campaign.econ.impl.Cryorevival.CryosleeperFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival_1_1CryosleeperFactor.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.econ.impl.PopulationAndInfrastructure.CoronalTapFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PopulationAndInfrastructure_1_1CoronalTapFactor.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.campaign.listeners.ColonyPlayerHostileActListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyPlayerHostileActListener.html", [
-      [ "com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html", [
-        [ "com.fs.starfarer.api.impl.campaign.missions.DisruptHeavyIndustry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptHeavyIndustry.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.DisruptSpaceport", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptSpaceport.html", null ]
-      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.missions.SecurityCodes", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.missions.TacticallyBombardColony", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1TacticallyBombardColony.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html", null ]
@@ -351,11 +481,13 @@ var hierarchy =
           [ "com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuversScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html", null ],
           [ "com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfareScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfareScript.html", null ],
           [ "com.fs.starfarer.api.impl.campaign.skills.NeuralLinkScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html", null ],
+          [ "com.fs.starfarer.api.impl.combat.ChiralFigmentStats.FigmentPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats_1_1FigmentPlugin.html", null ],
           [ "com.fs.starfarer.api.impl.combat.EscapeRevealPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html", null ],
           [ "com.fs.starfarer.api.impl.combat.GenericCombatPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GenericCombatPlugin.html", null ],
           [ "com.fs.starfarer.api.impl.combat.GravityPullEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GravityPullEffect.html", null ],
           [ "com.fs.starfarer.api.impl.combat.LowCRShipDamageSequence", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1LowCRShipDamageSequence.html", null ],
-          [ "com.fs.starfarer.api.impl.combat.RiftTrailEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftTrailEffect.html", null ]
+          [ "com.fs.starfarer.api.impl.combat.RiftTrailEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftTrailEffect.html", null ],
+          [ "com.fs.starfarer.api.impl.hullmods.ShardSpawner.ShardFadeInPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_1_1ShardFadeInPlugin.html", null ]
         ] ]
       ] ]
     ] ],
@@ -371,13 +503,16 @@ var hierarchy =
     [ "com.fs.starfarer.api.combat.CombatLayeredRenderingPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html", [
       [ "com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html", [
         [ "com.fs.starfarer.api.impl.combat.CombatEntityPluginWithParticles", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html", [
-          [ "com.fs.starfarer.api.impl.combat.RealityDisruptorChargeGlow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html", null ]
+          [ "com.fs.starfarer.api.impl.combat.RealityDisruptorChargeGlow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html", null ],
+          [ "com.fs.starfarer.api.impl.combat.TriadShieldStats.TriadShieldVisuals", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats_1_1TriadShieldVisuals.html", null ]
         ] ],
         [ "com.fs.starfarer.api.impl.combat.CryoblasterEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html", null ],
         [ "com.fs.starfarer.api.impl.combat.CryofluxTransducerEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html", null ],
         [ "com.fs.starfarer.api.impl.combat.DisintegratorEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html", null ],
+        [ "com.fs.starfarer.api.impl.combat.DroneStrikeStats.DroneMissileScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStats_1_1DroneMissileScript.html", null ],
         [ "com.fs.starfarer.api.impl.combat.NegativeExplosionVisual", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVisual.html", null ],
-        [ "com.fs.starfarer.api.impl.combat.NeuralTransferVisual", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NeuralTransferVisual.html", null ]
+        [ "com.fs.starfarer.api.impl.combat.NeuralTransferVisual", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NeuralTransferVisual.html", null ],
+        [ "com.fs.starfarer.api.impl.combat.TriadShieldStatsBackup.TriadShieldVisuals", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStatsBackup_1_1TriadShieldVisuals.html", null ]
       ] ]
     ] ],
     [ "com.fs.starfarer.api.combat.listeners.CombatListenerManagerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerManagerAPI.html", null ],
@@ -591,30 +726,59 @@ var hierarchy =
     [ "com.fs.starfarer.api.campaign.CommDirectoryEntryAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryEntryAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.comm.CommMessageAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Commodities", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Commodities.html", null ],
-    [ "com.fs.starfarer.api.campaign.listeners.CommodityDescriptionProvider", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommodityDescriptionProvider.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.shared.PlayerTradeProfitabilityData.CommodityData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData_1_1CommodityData.html", null ],
+    [ "com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.CommodityDescriptionProviderWrapper", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1CommodityDescriptionProviderWrapper.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.CommodityFlowAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityFlowAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.econ.CommodityIconCounts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1CommodityIconCounts.html", null ],
-    [ "com.fs.starfarer.api.campaign.listeners.CommodityIconProvider", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommodityIconProvider.html", [
-      [ "com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html", null ]
-    ] ],
+    [ "com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.CommodityIconProviderWrapper", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1CommodityIconProviderWrapper.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.CommodityMarketDataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.CommoditySourceType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySourceType.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.CommoditySpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.shared.CommodityStatTracker.CommodityStats", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker_1_1CommodityStats.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.shared.CommodityStatTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.CommodityTooltipModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommodityTooltipModifier.html", [
       [ "com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.CommRelayEntityPlugin.CommSnifferReadableIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html", [
+      [ "com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.ComplicationRepImpact", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1ComplicationRepImpact.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.ComplicationSpawn", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1ComplicationSpawn.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.ConditionChecker", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1ConditionChecker.html", [
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.AlwaysTrueChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1AlwaysTrueChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.DaysElapsedChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1DaysElapsedChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.EnteredLocationChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1EnteredLocationChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.EntityNotAliveChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1EntityNotAliveChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.GlobalBooleanChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1GlobalBooleanChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.HostilitiesEndedChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1HostilitiesEndedChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.HostilitiesStartedChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1HostilitiesStartedChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.InCommRelayRangeChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1InCommRelayRangeChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.InHyperRangeOfEntityChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1InHyperRangeOfEntityChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.InRangeOfEntityChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1InRangeOfEntityChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.MarketDecivChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1MarketDecivChecker.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.MemoryBooleanChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1MemoryBooleanChecker.html", null ]
+    ] ],
     [ "ConditionChecker", null, [
+      [ "com.fs.starfarer.api.impl.campaign.missions.CommodityProductionMission.CheckPlayerProduction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission_1_1CheckPlayerProduction.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter.CanSpawnFleetConditionChecker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1CanSpawnFleetConditionChecker.html", null ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.econ.ConditionData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ConditionData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.ConditionGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.econ.impl.ConditionManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConditionManager.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.PlanetConditionGenerator.ConditionGenerator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetConditionGenerator_1_1ConditionGenerator.html", [
+      [ "com.fs.starfarer.api.impl.campaign.procgen.ColdConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ColdConditionGenerator.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.GravityConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1GravityConditionGenerator.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.HotConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1HotConditionGenerator.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.LightConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LightConditionGenerator.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.RadiationConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RadiationConditionGenerator.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Conditions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Conditions.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.Constellation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.ConstellationGen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConstellationGen.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.Constellation.ConstellationType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Constellation_1_1ConstellationType.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.econ.impl.ConstructionQueue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConstructionQueue.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.econ.impl.ConstructionQueue.ConstructionQueueItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConstructionQueue_1_1ConstructionQueueItem.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel.ContactState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel_1_1ContactState.html", null ],
     [ "com.fs.starfarer.api.loading.ContactTagSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ContactTagSpec.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ContainmentProcedures.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuvers.html", null ],
@@ -624,30 +788,17 @@ var hierarchy =
     ] ],
     [ "com.fs.starfarer.api.campaign.CoreUIAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUIAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.CoreUITabId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html", null ],
-    [ "com.fs.starfarer.api.plugins.CreateFleetPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1CreateFleetPlugin.html", null ],
+    [ "com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI_1_1CoreUITradeMode.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.CreditReward", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1CreditReward.html", null ],
+    [ "com.fs.starfarer.api.combat.CombatReadinessPlugin.CREffectDescriptionForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDescriptionForTooltip.html", null ],
+    [ "com.fs.starfarer.api.combat.CombatReadinessPlugin.CREffectDetail", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDetail.html", null ],
+    [ "com.fs.starfarer.api.combat.CombatReadinessPlugin.CREffectDetailType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDetailType.html", null ],
+    [ "com.fs.starfarer.api.fleet.RepairTrackerAPI.CREvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI_1_1CREvent.html", null ],
     [ "com.fs.starfarer.api.fleet.CrewCompositionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1CrewCompositionAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.CrewTraining", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CrewTraining.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.terrain.CRLossPerSecondBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1CRLossPerSecondBuff.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.terrain.CRRecoveryBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1CRRecoveryBuff.html", null ],
+    [ "com.fs.starfarer.api.combat.CombatReadinessPlugin.CRStatusItemData", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CRStatusItemData.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.CurrentLocationChangedListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CurrentLocationChangedListener.html", [
       [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAAtTheGates", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html", null ]
-    ] ],
-    [ "com.fs.starfarer.api.impl.campaign.missions.cb.CustomBountyCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator.html", [
-      [ "com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html", [
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBDerelict", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBDerelict.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBDeserter", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBDeserter.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBEnemyStation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBEnemyStation.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBMerc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html", [
-          [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBMercUW", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMercUW.html", null ]
-        ] ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBPather", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBPather.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBPatrol", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBPatrol.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBPirate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBPirate.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBRemnant", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnant.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBRemnantPlus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnantPlus.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBRemnantStation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnantStation.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBTrader", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBTrader.html", null ]
-      ] ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.missions.cb.CustomBountyCreator.CustomBountyData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator_1_1CustomBountyData.html", null ],
     [ "com.fs.starfarer.api.campaign.CustomCampaignEntityPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html", [
@@ -673,6 +824,10 @@ var hierarchy =
     [ "com.fs.starfarer.api.campaign.CustomProductionPickerDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomProductionPickerDelegate.html", [
       [ "com.fs.starfarer.api.campaign.BaseCustomProductionPickerDelegateImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCustomProductionPickerDelegateImpl.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreReputationPlugin_1_1CustomRepImpact.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager.CustomStreamBlocker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1CustomStreamBlocker.html", [
+      [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager.CustomStreamRevealer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1CustomStreamRevealer.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.campaign.CustomUIPanelPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomUIPanelPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.ExampleCustomUIPanel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomUIPanel.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.eventide.DuelPanel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelPanel.html", null ],
@@ -685,33 +840,76 @@ var hierarchy =
     [ "com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CyberneticAugmentation.html", null ],
     [ "com.fs.starfarer.api.combat.DamageAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.DamageControl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl.html", null ],
-    [ "com.fs.starfarer.api.combat.listeners.DamageDealtModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageDealtModifier.html", null ],
-    [ "com.fs.starfarer.api.combat.listeners.DamageListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageListener.html", null ],
+    [ "com.fs.starfarer.api.combat.listeners.DamageDealtModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageDealtModifier.html", [
+      [ "com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery.EWMDamageDealtMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EnergyWeaponMastery_1_1EWMDamageDealtMod.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.RangedSpecialization.RangedSpecDamageDealtMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RangedSpecialization_1_1RangedSpecDamageDealtMod.html", null ],
+      [ "com.fs.starfarer.api.impl.hullmods.HighScatterAmp.HighScatterAmpDamageDealtMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_1_1HighScatterAmpDamageDealtMod.html", null ],
+      [ "com.fs.starfarer.api.impl.hullmods.PDIntegration.PDIDamageDealtMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PDIntegration_1_1PDIDamageDealtMod.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.combat.listeners.DamageListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageListener.html", [
+      [ "com.fs.starfarer.api.impl.combat.ChiralFigmentStats.FigmentDamageListener", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats_1_1FigmentDamageListener.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.combat.listeners.DamageTakenModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageTakenModifier.html", [
+      [ "com.fs.starfarer.api.impl.campaign.skills.CombatEndurance.CombatEnduranceRegen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1CombatEnduranceRegen.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.DamageControl.DamageControlDamageTakenMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1DamageControlDamageTakenMod.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor.PolarizedArmorEffectMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1PolarizedArmorEffectMod.html", null ],
       [ "com.fs.starfarer.api.impl.combat.TriadShieldStats", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html", null ],
       [ "com.fs.starfarer.api.impl.combat.TriadShieldStatsBackup", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStatsBackup.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.campaign.CombatDamageData.DamageToFleetMember", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CombatDamageData_1_1DamageToFleetMember.html", null ],
     [ "com.fs.starfarer.api.combat.DamageType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html", null ],
     [ "com.fs.starfarer.api.DataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1DataAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DataForEncounterSide", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide.html", null ],
+    [ "com.fs.starfarer.api.campaign.CombatDamageData.DealtByFleetMember", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CombatDamageData_1_1DealtByFleetMember.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldSource", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin_1_1DebrisFieldSource.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.terrain.DebrisPiece", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.DebugFlags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DebugFlags.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflaterParams.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1DefenderDataOverride.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DefensiveSystems.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.TurbulenceCalc2.DeltaData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc2_1_1DeltaData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.DemandCargo.DemandData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo_1_1DemandData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADepartments.Department", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADepartments_1_1Department.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.DerelictContingent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DerelictContingent.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin.DerelictShipData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DerelictShipEntityPlugin_1_1DerelictShipData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin.DerelictType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DerelictShipEntityPlugin_1_1DerelictType.html", null ],
+    [ "com.fs.starfarer.api.combat.WeaponAPI.DerivedWeaponStatsAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1DerivedWeaponStatsAPI.html", null ],
     [ "com.fs.starfarer.api.loading.Description", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html", null ],
-    [ "com.fs.starfarer.api.characters.DescriptionSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1DescriptionSkillEffect.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.DevMenuOptions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter.DFEPlaceFleetAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html", null ],
-    [ "com.fs.starfarer.api.campaign.CustomVisualDialogDelegate.DialogCallbacks", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate_1_1DialogCallbacks.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.ids.Difficulties", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Difficulties.html", null ],
-    [ "com.fs.starfarer.api.campaign.listeners.DiscoverEntityListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1DiscoverEntityListener.html", null ],
-    [ "com.fs.starfarer.api.campaign.listeners.DiscoverEntityPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1DiscoverEntityPlugin.html", [
-      [ "com.fs.starfarer.api.campaign.listeners.CoreDiscoverEntityPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CoreDiscoverEntityPlugin.html", null ]
+    [ "com.fs.starfarer.api.characters.DescriptionSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1DescriptionSkillEffect.html", [
+      [ "com.fs.starfarer.api.impl.campaign.skills.AptitudeDesc.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AptitudeDesc_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.AutomatedShips.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BestOfTheBest_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.ColonyManagement.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ColonyManagement_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuvers_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CyberneticAugmentation_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.DerelictContingent.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DerelictContingent_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfare.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfare_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.NeuralLink.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLink_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.OfficerManagement.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OfficerManagement_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.OfficerTraining.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OfficerTraining_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.PhaseCorps.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PhaseCorps_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.Sensors.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Sensors_1_1Level0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.SpecialModifications.Level0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SpecialModifications_1_1Level0.html", null ]
     ] ],
-    [ "com.fs.starfarer.api.plugins.DModAdderPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1DModAdderPlugin.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhost.DespawnReason", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost_1_1DespawnReason.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEvent.DestinationData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent_1_1DestinationData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.DevMenuOptions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DevMenuOptions.html", null ],
+    [ "com.fs.starfarer.api.campaign.CustomVisualDialogDelegate.DialogCallbacks", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate_1_1DialogCallbacks.html", null ],
+    [ "com.fs.starfarer.api.campaign.SubmarketPlugin.DialogOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1DialogOption.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.ids.Difficulties", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Difficulties.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty.DifficultyChoice", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1DifficultyChoice.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DiscoverabilityType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec_1_1DiscoverabilityType.html", null ],
+    [ "com.fs.starfarer.api.campaign.listeners.DiscoverEntityListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1DiscoverEntityListener.html", null ],
+    [ "com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DisengageHarryAvailability", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DisengageHarryAvailability.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility.DistressCallOutcome", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility_1_1DistressCallOutcome.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent.DistressEventType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent_1_1DistressEventType.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility.DistressResponseData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility_1_1DistressResponseData.html", null ],
+    [ "com.fs.starfarer.api.plugins.DModAdderPlugin.DModAdderParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1DModAdderPlugin_1_1DModAdderParams.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.DModManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html", null ],
     [ "com.fs.starfarer.api.combat.DroneLauncherShipSystemAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html", null ],
+    [ "com.fs.starfarer.api.combat.DroneLauncherShipSystemAPI.DroneOrders", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI_1_1DroneOrders.html", null ],
     [ "com.fs.starfarer.api.impl.combat.DroneStrikeStatsAIInfoProvider", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStatsAIInfoProvider.html", [
       [ "com.fs.starfarer.api.impl.combat.DroneStrikeStats", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStats.html", null ]
     ] ],
@@ -726,6 +924,7 @@ var hierarchy =
     ] ],
     [ "com.fs.starfarer.api.util.DynamicStatsAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DynamicStatsAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.EconomyAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetAssignmentAI.EconomyRouteData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI_1_1EconomyRouteData.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.EconomyTickListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1EconomyTickListener.html", [
       [ "com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.missions.CommodityProductionMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html", null ],
@@ -734,16 +933,34 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.tutorial.GalatianAcademyStipend", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.tutorial.SpacerObligation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SpacerObligation.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.campaign.econ.EconomyAPI.EconomyUpdateListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI_1_1EconomyUpdateListener.html", [
+      [ "com.fs.starfarer.api.impl.campaign.econ.impl.ConditionManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConditionManager.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.submarkets.LocalResourcesSubmarketPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.Effects", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Effects.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfare", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfare.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.RealityDisruptorChargeGlow.EMPArcHitType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow_1_1EMPArcHitType.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter.EncounterLocation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1EncounterLocation.html", null ],
+    [ "com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.EncounterOption", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1EncounterOption.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.enc.EncounterPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterPoint.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.enc.EncounterPointProvider", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterPointProvider.html", [
       [ "com.fs.starfarer.api.impl.campaign.enc.EncounterManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantStationFleetManager.RemnantSystemEPGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantStationFleb50e0f19d17c939fd288d2e6ebd345d6.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter.EncounterType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1EncounterType.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.Ending", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_1_1Ending.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EnergyWeaponMastery.html", null ],
-    [ "com.fs.starfarer.api.combat.EngagementResultAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EngagementResultAPI.html", null ],
-    [ "com.fs.starfarer.api.campaign.EngagementResultForFleetAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1EngagementResultForFleetAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetEncounterContext.EngageBoardableOutcome", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext_1_1EngageBoardableOutcome.html", null ],
+    [ "com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.EngagementOutcome", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1EngagementOutcome.html", null ],
+    [ "com.fs.starfarer.api.combat.EngagementResultAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EngagementResultAPI.html", [
+      [ "com.fs.starfarer.api.impl.campaign.BattleAutoresolverPluginImpl.EngagementResultImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BattleAutoresolverPluginImpl_1_1EngagementResultImpl.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.campaign.EngagementResultForFleetAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1EngagementResultForFleetAPI.html", [
+      [ "com.fs.starfarer.api.impl.campaign.BattleAutoresolverPluginImpl.EngagementResultForFleetImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BattleAutoresolverPluginImpl_1_1EngagementResultForFleetImpl.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.combat.EngineSlotAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EngineSlotAPI.html", null ],
     [ "com.fs.starfarer.api.combat.ShipHullSpecAPI.EngineSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1EngineSpecAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Entities", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Entities.html", null ],
@@ -751,6 +968,9 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.procgen.PlanetGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetGenDataSpec.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.procgen.TerrainGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.EntityLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_1_1EntityLocation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.EntityLocationType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1EntityLocationType.html", null ],
+    [ "com.fs.starfarer.api.campaign.CommDirectoryEntryAPI.EntryType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryEntryAPI_1_1EntryType.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.enc.EPEncounterCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html", [
       [ "com.fs.starfarer.api.impl.campaign.enc.BaseEPEncounterCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html", [
         [ "com.fs.starfarer.api.impl.campaign.enc.OutsideSystemNoEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemNoEPEC.html", null ],
@@ -773,13 +993,16 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.CoreScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.CoronalTapParticleScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoronalTapParticleScript.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.GateExplosionScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GateExplosionScript.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.GateExplosionScript.SystemCutOffRemoverScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GateExplosionScript_1_1SystemCutOffRemoverScript.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.LeashScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1LeashScript.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.MilitaryResponseScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.SmugglingFactionChangeScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SmugglingFactionChangeScript.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.SmugglingScanScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SmugglingScanScript.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.TOffAlarm", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TOffAlarm.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.abilities.BaseAbilityPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility.IPReactionScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1InterdictionPulseAbility_1_1IPReactionScript.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.command.WarSimScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1command_1_1WarSimScript.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.econ.impl.PopulationAndInfrastructure.LampRemover", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PopulationAndInfrastructure_1_1LampRemover.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.enc.EncounterManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.events.CoreEventProbabilityManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html", null ],
@@ -842,112 +1065,7 @@ var hierarchy =
         [ "com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseManager.html", null ],
         [ "com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseManager.html", null ]
       ] ],
-      [ "com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html", [
-        [ "com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel.html", [
-          [ "com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html", null ],
-          [ "com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html", null ],
-          [ "com.fs.starfarer.api.impl.campaign.intel.ProcurementMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html", null ],
-          [ "com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html", null ],
-          [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryMissionIntel.html", null ]
-        ] ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.FactionHostilityIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.MessageIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1MessageIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.NewMessagesIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1NewMessagesIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.PersonBountyIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.PromoteOfficerIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PromoteOfficerIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.SystemBountyIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BaseHistorianOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOffer.html", [
-          [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BaseHistorianOfferWithLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferWithLocation.html", [
-            [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.FighterBlueprintOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOffer.html", null ],
-            [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.ShipBlueprintOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOffer.html", null ],
-            [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.SpecialItemOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOffer.html", null ],
-            [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.WeaponBlueprintOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html", null ]
-          ] ],
-          [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.DonationOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOffer.html", null ]
-        ] ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivityIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateActivityIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.deciv.DecivIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.misc.FleetLogIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html", [
-          [ "com.fs.starfarer.api.impl.campaign.intel.misc.BreadcrumbIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntel.html", [
-            [ "com.fs.starfarer.api.impl.campaign.intel.misc.DistressCallIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1DistressCallIntel.html", null ]
-          ] ],
-          [ "com.fs.starfarer.api.impl.campaign.intel.misc.CargoPodsIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CargoPodsIntel.html", null ],
-          [ "com.fs.starfarer.api.impl.campaign.intel.misc.ProductionReportIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1ProductionReportIntel.html", null ]
-        ] ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.misc.GateIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.misc.TradeFleetDepartureIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1WarningBeaconIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html", [
-          [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html", null ],
-          [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html", null ]
-        ] ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html", [
-          [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html", [
-            [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html", null ],
-            [ "com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1FleetCreatorMission.html", null ],
-            [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html", [
-              [ "com.fs.starfarer.api.impl.campaign.missions.SwordOfEventide", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide.html", null ],
-              [ "com.fs.starfarer.api.impl.campaign.missions.academy.GABaseMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABaseMission.html", [
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.BasicExampleGADataFromRuins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1BasicExampleGADataFromRuins.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAAtTheGates", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GABuyArtifact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GACelestialObject", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADataFromRuins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADataFromRuins.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADeliverVIP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADeliverVIP.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADerelictArtifact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAFindingCoureuse", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFindingCoureuse.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAIntro", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAIntro.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAIntro2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAIntro2.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAKallichore", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAOutpost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAOutpost.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAProbePackage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAProjectZiggurat", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GARansomResearcher", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GARansomResearcher.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAReturnHamatsu", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAReturnHamatsu.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GATalkToBaird", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GATalkToBaird.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GATalkToSebestyen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GATalkToSebestyen.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.academy.GATransverseJump", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GATransverseJump.html", null ]
-              ] ],
-              [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithBarEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithBarEvent.html", [
-                [ "com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.BlueprintIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.CheapCommodityMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.CommodityProductionMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.CustomProductionContract", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CustomProductionContract.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.DeadDropMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DeadDropMission.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.DisruptCompetitorMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptCompetitorMission.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.ExtractionMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ExtractionMission.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.HandMeDownFreighter", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1HandMeDownFreighter.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.HijackingMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1HijackingMission.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.JailbreakMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1JailbreakMission.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.PirateSystemBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1PirateSystemBounty.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.ProcurementMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.SecurityCodes", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.SmugglingMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.SpySatDeployment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SpySatDeployment.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.SurplusShipHull", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SurplusShipHull.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.TacticallyBombardColony", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1TacticallyBombardColony.html", null ],
-                [ "com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html", [
-                  [ "com.fs.starfarer.api.impl.campaign.missions.cb.MilitaryCustomBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1MilitaryCustomBounty.html", null ],
-                  [ "com.fs.starfarer.api.impl.campaign.missions.cb.UnderworldCustomBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1UnderworldCustomBounty.html", null ]
-                ] ]
-              ] ]
-            ] ]
-          ] ]
-        ] ],
-        [ "com.fs.starfarer.api.impl.campaign.missions.hub.IntelMarkerIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1IntelMarkerIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.plog.PLIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLIntel.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html", null ]
-      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.intel.PersonBountyIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyIntel.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.intel.SystemBountyIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html", null ],
@@ -961,7 +1079,11 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivTracker.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionManager.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.SwordOfEventide.SOEMusicPlayer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide_1_1SOEMusicPlayer.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAPZPostEncounters", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAPZPostEncounters.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddTagAfterDelay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddTagAfterDelay.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.RunScriptAfterDelay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1RunScriptAfterDelay.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetMemoryValueAfterDelay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAfterDelay.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetAutoDespawn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetAutoDespawn.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetInterceptPlayerIfNearby", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetStopPursuingPlayer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetStopPursuingPlayer.html", null ],
@@ -983,9 +1105,13 @@ var hierarchy =
         [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialLeashAssignmentAI", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLeashAssignmentAI.html", null ],
         [ "com.fs.starfarer.api.impl.campaign.world.ZigLeashAssignmentAI", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1ZigLeashAssignmentAI.html", null ]
       ] ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.MiscellaneousThemeGenerator.MakeCoronalTapFaceNearestStar", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1MiscellaneousThemc26c26a40b9c6a5041221fc860690ee5.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantAssignmentAI", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantAssignmentAI.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.procgen.themes.ScavengerPiracyScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerPiracyScript.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD.BarAmbiencePlayer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD_1_1BarAmbiencePlayer.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AddRaidObjective.CustomRaidObjectiveAdder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective_1_1CustomRaidObjectiveAdder.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.FleetAdvanceScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1FleetAdvanceScript.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.BombardmentAnimation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1BombardmentAnimation.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.skills.FieldRepairsScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairsScript.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.terrain.AsteroidImpact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidImpact.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.terrain.HyperStormBoost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html", null ],
@@ -1010,18 +1136,35 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.combat.SensorDishRotationEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorDishRotationEffect.html", null ],
       [ "com.fs.starfarer.api.impl.combat.VPDriverEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1VPDriverEffect.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.ExplosionEntityPlugin.ExplosionFleetDamage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExplosionEntityPlugin_1_1ExplosionFleetDamage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.ExplosionEntityPlugin.ExplosionParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExplosionEntityPlugin_1_1ExplosionParams.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.CoreScript.ExportCommodityGroupData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript_1_1ExportCommodityGroupData.html", null ],
     [ "com.fs.starfarer.api.campaign.rules.ExpressionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1ExpressionAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial.ExtraSalvage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial_1_1ExtraSalvage.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.ExtraSalvageShownListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ExtraSalvageShownListener.html", [
       [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BaseHistorianOfferWithLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferWithLocation.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADeliverVIP.FactionData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADeliverVIP_1_1FactionData.html", null ],
     [ "com.fs.starfarer.api.campaign.FactionDoctrineAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent.FactionHostilityPairKey", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent_1_1FactionHostilityPairKey.html", null ],
     [ "com.fs.starfarer.api.plugins.FactionPersonalityPickerPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1FactionPersonalityPickerPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.FactionPersonalityPickerPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FactionPersonalityPickerPluginImpl.html", null ]
     ] ],
     [ "com.fs.starfarer.api.campaign.FactionProductionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Factions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Factions.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent.FactionTradeRepData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent_1_1FactionTradeRepData.html", null ],
     [ "com.fs.starfarer.api.FactoryAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1FactoryAPI.html", null ],
     [ "com.fs.starfarer.api.util.FaderUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html", null ],
+    [ "com.fs.starfarer.api.campaign.econ.MonthlyReport.FDNode", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport_1_1FDNode.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.FIDConfig", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl_1_1FIDConfig.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.FIDConfigGen", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl_1_1FIDConfigGen.html", [
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantSeededFleetManager.RemnantFleetInteractionConfigGen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantSeededFlee192fbdcef65e157e58e3cade3f7153da.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantThemeGenerator.RemnantStationInteractionConfigGen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantThemeGenercb307795232e0a428fdebffc64e0ea18.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.world.TTBlackSite.ZigFIDConfig", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1TTBlackSite_1_1ZigFIDConfig.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.FIDDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl_1_1FIDDelegate.html", [
+      [ "com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.BaseFIDDelegate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl_1_1BaseFIDDelegate.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.FieldModulation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldModulation.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.FieldRepairs", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.FighterDoctrine", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterDoctrine.html", null ],
@@ -1030,7 +1173,15 @@ var hierarchy =
     [ "com.fs.starfarer.api.impl.campaign.skills.FighterUplink", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterUplink.html", null ],
     [ "com.fs.starfarer.api.combat.FighterWingAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html", null ],
     [ "com.fs.starfarer.api.loading.FighterWingSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html", null ],
+    [ "com.fs.starfarer.api.util.Misc.FindShipFilter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1FindShipFilter.html", null ],
+    [ "com.fs.starfarer.api.combat.ShipwideAIFlags.FlagData", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipwideAIFlags_1_1FlagData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.FlagData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1FlagData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.FlareManager.Flare", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager_1_1Flare.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.terrain.FlareManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.FlareManager.FlareManagerDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager_1_1FlareManagerDelegate.html", [
+      [ "com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.themes.BaseAssignmentAI.FleetActionDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI_1_1FleetActionDelegate.html", [
       [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HIActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PEActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEActionStage.html", null ],
@@ -1044,7 +1195,9 @@ var hierarchy =
     [ "com.fs.starfarer.api.fleet.FleetAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.FleetAssignment", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html", null ],
     [ "com.fs.starfarer.api.campaign.ai.FleetAssignmentDataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.BattleAutoresolverPluginImpl.FleetAutoresolveData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BattleAutoresolverPluginImpl_1_1FleetAutoresolveData.html", null ],
     [ "com.fs.starfarer.api.campaign.FleetDataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener_1_1FleetDespawnReason.html", null ],
     [ "com.fs.starfarer.api.campaign.FleetEncounterContextPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.FleetEncounterContext", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html", null ]
     ] ],
@@ -1071,6 +1224,7 @@ var hierarchy =
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.fleets.FleetFactory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3.html", null ],
+    [ "com.fs.starfarer.api.util.Misc.FleetFilter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1FleetFilter.html", null ],
     [ "com.fs.starfarer.api.fleet.FleetGoal", "enumcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetGoal.html", null ],
     [ "com.fs.starfarer.api.campaign.FleetInflater", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetInflater.html", [
       [ "com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html", null ]
@@ -1079,7 +1233,12 @@ var hierarchy =
     [ "com.fs.starfarer.api.impl.campaign.skills.FleetLogistics", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FleetLogistics.html", null ],
     [ "com.fs.starfarer.api.fleet.FleetLogisticsAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetLogisticsAPI.html", null ],
     [ "com.fs.starfarer.api.fleet.FleetMemberAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.BattleAutoresolverPluginImpl.FleetMemberAutoresolveData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BattleAutoresolverPluginImpl_1_1FleetMemberAutoresolveData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.BattleAutoresolverPluginImpl.FleetMemberBattleOutcome", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BattleAutoresolverPluginImpl_1_1FleetMemberBattleOutcome.html", null ],
+    [ "com.fs.starfarer.api.util.Misc.FleetMemberDamageLevel", "enumcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1FleetMemberDamageLevel.html", null ],
+    [ "com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.FleetMemberData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1FleetMemberData.html", null ],
     [ "com.fs.starfarer.api.campaign.FleetMemberPickerListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetMemberPickerListener.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription.FleetMemberPointContrib", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription_1_1FleetMemberPointContrib.html", null ],
     [ "com.fs.starfarer.api.fleet.FleetMemberStatusAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberStatusAPI.html", null ],
     [ "com.fs.starfarer.api.fleet.FleetMemberType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberType.html", null ],
     [ "com.fs.starfarer.api.ui.TooltipMakerAPI.FleetMemberValueGetter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1FleetMemberValueGetter.html", null ],
@@ -1090,39 +1249,199 @@ var hierarchy =
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.fleets.FleetParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParams.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetQuality", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetQuality.html", null ],
     [ "com.fs.starfarer.api.mission.FleetSide", "enumcom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1FleetSide.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetSize", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetSize.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.FleetSpawnListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetSpawnListener.html", null ],
     [ "com.fs.starfarer.api.campaign.ai.FleetStubAI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetStubAI.html", null ],
     [ "com.fs.starfarer.api.campaign.FleetStubConverterPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubConverterPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.FleetStubConverterPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetStubConverterPluginImpl.html", null ]
     ] ],
     [ "com.fs.starfarer.api.characters.FleetTotalItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FleetTotalItem.html", null ],
-    [ "com.fs.starfarer.api.characters.FleetTotalSource", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FleetTotalSource.html", null ],
+    [ "com.fs.starfarer.api.characters.FleetTotalSource", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FleetTotalSource.html", [
+      [ "com.fs.starfarer.api.impl.campaign.skills.AutomatedShips.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level1.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.AuxiliarySupport.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AuxiliarySupport_1_1Level1.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.CarrierGroup.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CarrierGroup_1_1Level1.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ContainmentProcedures_1_1Level1.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.CrewTraining.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CrewTraining_1_1Level1.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.CrewTraining.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CrewTraining_1_1Level2.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.FieldRepairs.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level1.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.FieldRepairs.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level2.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.FighterUplink.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterUplink_1_1Level2.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.FluxRegulation.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FluxRegulation_1_1Level1.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.PhaseCorps.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PhaseCorps_1_1Level3.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.TacticalDrills.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TacticalDrills_1_1Level1.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.skills.WeaponDrills.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WeaponDrills_1_1Level1.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.ids.FleetTypes", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html", null ],
     [ "com.fs.starfarer.api.util.FlickerUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FlickerUtil.html", null ],
     [ "com.fs.starfarer.api.util.FlickerUtilV2", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FlickerUtilV2.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.FluxRegulation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FluxRegulation.html", null ],
+    [ "com.fs.starfarer.api.impl.hullmods.SharedFluxSink.FluxSinkData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1SharedFluxSink_1_1FluxSinkData.html", null ],
     [ "com.fs.starfarer.api.combat.FluxTrackerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html", null ],
     [ "com.fs.starfarer.api.combat.FogOfWarAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FogOfWarAPI.html", null ],
     [ "com.fs.starfarer.api.ui.Fonts", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1Fonts.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.ForceConcentration", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ForceConcentration.html", null ],
     [ "com.fs.starfarer.api.loading.FormationType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3.FPRemaining", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1FPRemaining.html", null ],
     [ "com.fs.starfarer.api.characters.FullName", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FullName.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADepartments", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADepartments.html", null ],
     [ "com.fs.starfarer.api.GameState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1GameState.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.GateEntityPlugin.GateData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GateEntityPlugin_1_1GateData.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.GateTransitListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GateTransitListener.html", [
       [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html", null ]
     ] ],
-    [ "com.fs.starfarer.api.impl.campaign.fleets.GenerateFleetOfficersPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin.html", [
-      [ "com.fs.starfarer.api.impl.campaign.fleets.BaseGenerateFleetOfficersPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseGenerateFleetOfficersPlugin.html", [
-        [ "com.fs.starfarer.api.impl.campaign.procgen.themes.OmegaOfficerGeneratorPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1OmegaOfficerGeneratorPlugin.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html", null ]
+    [ "com.fs.starfarer.api.impl.campaign.ghosts.GBEchoMovement.GBEchoSnapshot", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBEchoMovement_1_1GBEchoSnapshot.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.GenContext", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator_1_1GenContext.html", null ],
+    [ "com.fs.starfarer.api.characters.FullName.Gender", "enumcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FullName_1_1Gender.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.GeneratedPlanet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator_1_1GeneratedPlanet.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.GenerateFleetOfficersPlugin.GenerateFleetOfficersPickData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin_bf16432171fd33b7f3c165ca4abc376b.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.GenericBarEventCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventb7443876afc9cc66909b145cad76cf4d.html", [
+      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html", [
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.CorruptPLClerkSuppliesBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1CorruptPLClerkSuppliesBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.DiktatLobsterBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DiktatLobsterBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicCraftBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicFarmerBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.MercsOnTheRunBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.QuartermasterCargoSwapBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.SpecBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1SpecBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachMajorLoanBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBarEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html", null ]
       ] ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.GenericCampaignEntitySprite", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericCampaignEntitySprite.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.GenericFieldItemManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemManager.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.GenericFieldItemSprite", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericFieldItemSprite.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.GenericMissionManager.GenericMissionCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1GenericMissionManager_1_1GenericMissionCreator.html", [
+      [ "com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityIntelCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.ProcurementMissionCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionCreator.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetIntelCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.campaign.GenericPluginManagerAPI.GenericPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GenericPluginManagerAPI_1_1GenericPlugin.html", [
+      [ "com.fs.starfarer.api.campaign.econ.AbandonMarketPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html", [
+        [ "com.fs.starfarer.api.impl.campaign.AbandonMarketPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.campaign.econ.StabilizeMarketPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1StabilizeMarketPlugin.html", [
+        [ "com.fs.starfarer.api.impl.campaign.StabilizeMarketPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StabilizeMarketPluginImpl.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.campaign.listeners.CommodityDescriptionProvider", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommodityDescriptionProvider.html", null ],
+      [ "com.fs.starfarer.api.campaign.listeners.CommodityIconProvider", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CommodityIconProvider.html", [
+        [ "com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.campaign.listeners.DiscoverEntityPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1DiscoverEntityPlugin.html", [
+        [ "com.fs.starfarer.api.campaign.listeners.CoreDiscoverEntityPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CoreDiscoverEntityPlugin.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.BaseGenericPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseGenericPlugin.html", [
+        [ "com.fs.starfarer.api.impl.campaign.AbandonMarketPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageGenFromSeed.SalvageDefenderModificationPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSe153cb471dc7087f7726aa24a04df0947.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.fleets.GenerateFleetOfficersPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin.html", [
+        [ "com.fs.starfarer.api.impl.campaign.fleets.BaseGenerateFleetOfficersPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseGenerateFleetOfficersPlugin.html", [
+          [ "com.fs.starfarer.api.impl.campaign.procgen.themes.OmegaOfficerGeneratorPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1OmegaOfficerGeneratorPlugin.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html", null ]
+        ] ]
+      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageGenFromSeed.SalvageDefenderModificationPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFr0fbcd416ff1be4659031e9afd4edb469.html", [
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageGenFromSeed.SalvageDefenderModificationPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSe153cb471dc7087f7726aa24a04df0947.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.plugins.CreateFleetPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1CreateFleetPlugin.html", null ],
+      [ "com.fs.starfarer.api.plugins.DModAdderPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1DModAdderPlugin.html", null ],
+      [ "com.fs.starfarer.api.plugins.impl.CoreBuildObjectiveTypePicker", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreBuildObjectiveTypePicker.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.campaign.GenericPluginManagerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GenericPluginManagerAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.GenericRequirement", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1GenericRequirement.html", [
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.CommodityRequirement", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1CommodityRequirement.html", [
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MultipleCommodityRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc22b138d5d92129063d63c76f18bede2d.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredCommodityTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredCommodityTags.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.EntityRequirement", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1EntityRequirement.html", [
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.EntityInDirectionOfOtherMissionsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearca0f5c7a86cc8e7fa8ae6db383e5eaa6f.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.EntityMemoryReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1EntityMemoryReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.EntityTypeReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1EntityTypeReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.EntityUndiscoveredReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1EntityUndiscoveredReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MultipleEntityRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MultipleEntityRequirements.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredEntityTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredEntityTags.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketRequirement", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketRequirement.html", [
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketFactionCustomReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionCustomReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketFactionHostileReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionHostileReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketFactionReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketHiddenReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketHiddenReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketInDirectionOfOtherMissionsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc41c337cdfcbaa7dbcbc4eebe3a5a8c2a.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketIsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketIsReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketLocationReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketLocationReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketMemoryFlagReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketMemoryFlagReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketMilitaryReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketMilitaryReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketNotHiddenReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketNotHiddenReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketNotInHyperReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketNotInHyperReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketNotMilitaryReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketNotMilitaryReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketTacticalBombardableReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc7c7f7fecf38c397cbc3f4b96850ab106.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MultipleMarketRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MultipleMarketRequirements.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredMarketConditions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredMarketConditions.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredMarketIndustries", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredMarketIndustries.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.PlanetRequirement", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetRequirement.html", [
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MultiplePlanetRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MultiplePlanetRequirements.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.PlanetFullySurveyedReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetFullySurveyedReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.PlanetInDirectionOfOtherMissionsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc7b7268c35ea9041286808048decd6ebd.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.PlanetIsGasGiantReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetIsGasGiantReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.PlanetIsPopulatedReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetIsPopulatedReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.PlanetOrbitIsNotNearJumpPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearcd5ca3cb37cc5611165a68af216d7f12a.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.PlanetUnexploredRuinsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnexploredRuinsReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.PlanetUnsurveyedReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnsurveyedReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredPlanetConditions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredPlanetConditions.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredPlanetTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredPlanetTags.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.StarSystemRequirement", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemRequirement.html", [
+        [ "com.fs.starfarer.api.impl.campaign.missions.cb.CustomBountyCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator.html", [
+          [ "com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBountyCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html", [
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBDerelict", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBDerelict.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBDeserter", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBDeserter.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBEnemyStation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBEnemyStation.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBMerc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMerc.html", [
+              [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBMercUW", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBMercUW.html", null ]
+            ] ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBPather", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBPather.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBPatrol", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBPatrol.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBPirate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBPirate.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBRemnant", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnant.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBRemnantPlus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnantPlus.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBRemnantStation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnantStation.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.missions.cb.CBTrader", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBTrader.html", null ]
+          ] ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MultipleStarSystemRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearcc8cd835fdd629f3f00242e665e85a57b.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredSystemTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredSystemTags.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.StarSystemDaysSincePlayerVisitReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearcd8dc2ab3492331b278471875aa470ae5.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.StarSystemHasNumPlanetsAndTerrainReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc42855a395b23fd97699e5ead0c8ac66f.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.StarSystemHasNumPlanetsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemHasNumPlanetsReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.StarSystemHasNumTerrainReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemHasNumTerrainReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.StarSystemUnexploredReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemUnexploredReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemHasAtLeastJumpPointsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearcae9e59cdf5a122a6cf156b5a31a5cb22.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemHasBaseReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemHasBaseReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemHasColonyReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemHasColonyReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemHasPulsarReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemHasPulsarReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemInDirection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemInDirection.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemInDirectionFrom", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemInDirectionFrom.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemInDirectionOfOtherMissionsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc7a190d0292b9ae0d6d46e9aabc23b49b.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemInInnerSectorReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemInInnerSectorReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemIsBlackHoleReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemIsBlackHoleReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemIsNebulaReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemIsNebulaReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemOnFringeOfSectorReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemOnFringeOfSectorReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SystemWithinRangeReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemWithinRangeReq.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.TerrainRequirement", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1TerrainRequirement.html", [
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredTerrainTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredTerrainTags.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.TerrainHasSpecialNameReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1TerrainHasSpecialNameReq.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.TerrainInDirectionOfOtherMissionsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc9edba33d8c7126970409aa38806b15ad.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.TerrainTypeReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1TerrainTypeReq.html", null ]
+      ] ]
+    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.GenResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator_1_1GenResult.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ghosts.GhostBehavior", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostBehavior.html", [
       [ "com.fs.starfarer.api.impl.campaign.ghosts.BaseGhostBehavior", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html", [
         [ "com.fs.starfarer.api.impl.campaign.ghosts.GBCircle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBCircle.html", null ],
@@ -1157,10 +1476,12 @@ var hierarchy =
         [ "com.fs.starfarer.api.impl.campaign.ghosts.GBITowardsEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBITowardsEntity.html", null ]
       ] ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.ghosts.GBIGenerateSlipstream.GhostBehaviorWithSlipstream", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream_1_1GhostBehaviorWithSlipstream.html", [
+      [ "com.fs.starfarer.api.impl.campaign.ghosts.GBLeviathanCalfRun", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.ghosts.GhostFrequencies", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostFrequencies.html", null ],
     [ "com.fs.starfarer.api.Global", "classcom_1_1fs_1_1starfarer_1_1api_1_1Global.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.abilities.GraviticScanData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanData.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.procgen.GravityConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1GravityConditionGenerator.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.graid.BaseGroundRaidObjectivePluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html", [
         [ "com.fs.starfarer.api.impl.campaign.graid.AICoreGroundRaidObjectivePluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AICoreGroundRaidObjectivePluginImpl.html", null ],
@@ -1172,16 +1493,20 @@ var hierarchy =
         [ "com.fs.starfarer.api.impl.campaign.graid.CreditsGroundRaidObjectivePluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html", null ],
         [ "com.fs.starfarer.api.impl.campaign.graid.DisruptIndustryRaidObjectivePluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html", null ],
         [ "com.fs.starfarer.api.impl.campaign.graid.ShipWeaponsGroundRaidObjectivePluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html", null ],
-        [ "com.fs.starfarer.api.impl.campaign.graid.SpecialItemRaidObjectivePluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SpecialItemRaidObjectivePluginImpl.html", null ]
+        [ "com.fs.starfarer.api.impl.campaign.graid.SpecialItemRaidObjectivePluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SpecialItemRaidObjectivePluginImpl.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AddRaidObjective.CustomRaidObjective", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective_1_1CustomRaidObjective.html", null ]
       ] ]
     ] ],
     [ "com.fs.starfarer.api.campaign.listeners.GroundRaidObjectivesListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GroundRaidObjectivesListener.html", [
       [ "com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html", null ],
-      [ "com.fs.starfarer.api.impl.campaign.graid.StandardGroundRaidObjectivesCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1StandardGroundRaidObjectivesCreator.html", null ]
+      [ "com.fs.starfarer.api.impl.campaign.graid.StandardGroundRaidObjectivesCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1StandardGroundRaidObjectivesCreator.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AddRaidObjective.CustomRaidObjectiveAdder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective_1_1CustomRaidObjectiveAdder.html", null ]
     ] ],
     [ "com.fs.starfarer.api.campaign.GroundRaidTargetPickerDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.abilities.GraviticScanData.GSPing", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanData_1_1GSPing.html", null ],
     [ "com.fs.starfarer.api.combat.GuidedMissileAI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1GuidedMissileAI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.GunneryImplants", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1GunneryImplants.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.HabitationLevel", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_1_1HabitationLevel.html", null ],
     [ "com.fs.starfarer.api.campaign.rules.HasMemory", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html", [
       [ "com.fs.starfarer.api.campaign.FactionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html", null ],
       [ "com.fs.starfarer.api.campaign.SectorEntityToken", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html", [
@@ -1199,19 +1524,39 @@ var hierarchy =
       [ "com.fs.starfarer.api.campaign.econ.MarketAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html", null ],
       [ "com.fs.starfarer.api.characters.PersonAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.HegemonyInspectionOutcome", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspecti2c90f9ea07def774c537c9e4ffd33c18.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.Helmsmanship", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Helmsmanship.html", null ],
     [ "com.fs.starfarer.api.util.Highlights", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Highlights.html", null ],
     [ "com.fs.starfarer.api.ui.HintPanelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1HintPanelAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBackstory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBackstory.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBackstory.HistorianBackstoryInfo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historiabc24949840d03ccd3f1da79a95c3699e.html", [
+      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBackstory.BaseBackstory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_0e02415f047869cd8e5944c18c5018ea.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.procgen.HotConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1HotConditionGenerator.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.HistorianOffer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia737e60c4808d3e5d9412abd0120ed627.html", [
+      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BaseHistorianOffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOffer.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.HistorianOfferCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f.html", [
+      [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BaseHistorianOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html", [
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BlueprintOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BlueprintOfferCreator.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.FighterBlueprintOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.ShipBlueprintOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.SpecialItemOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.WeaponBlueprintOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOfferCreator.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.DonationOfferCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html", null ]
+      ] ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMission", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html", [
       [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html", null ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html", [
       [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMissionCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMissionCreator.html", null ]
     ] ],
-    [ "com.fs.starfarer.api.combat.listeners.HullDamageAboutToBeTakenListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1HullDamageAboutToBeTakenListener.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.HubMissionResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1HubMissionResult.html", null ],
+    [ "com.fs.starfarer.api.combat.listeners.HullDamageAboutToBeTakenListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1HullDamageAboutToBeTakenListener.html", [
+      [ "com.fs.starfarer.api.impl.hullmods.PhaseAnchor.PhaseAnchorScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor_1_1PhaseAnchorScript.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.combat.HullModEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html", [
       [ "com.fs.starfarer.api.combat.BaseHullMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html", [
         [ "com.fs.starfarer.api.impl.campaign.RepairGantry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RepairGantry.html", null ],
@@ -1281,6 +1626,7 @@ var hierarchy =
     [ "com.fs.starfarer.api.impl.campaign.ids.HullMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1HullMods.html", null ],
     [ "com.fs.starfarer.api.loading.HullModSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.HullRestoration", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration.html", null ],
+    [ "com.fs.starfarer.api.combat.ShipAPI.HullSize", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.Hypercognition", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Hypercognition.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.terrain.HyperspaceAutomaton", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAutomaton.html", null ],
     [ "com.fs.starfarer.api.ui.IconGroupAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IconGroupAPI.html", null ],
@@ -1289,7 +1635,12 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1CoreImmigrationPluginImpl.html", null ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ImpactMitigation.html", null ],
+    [ "com.fs.starfarer.api.combat.BattleObjectiveAPI.Importance", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveAPI_1_1Importance.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.ImportanceData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1ImportanceData.html", null ],
     [ "com.fs.starfarer.api.characters.ImportantPeopleAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.econ.Industry.ImprovementDescriptionMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_1_1ImprovementDescriptionMode.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel.IncidentType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel_1_1IncidentType.html", null ],
+    [ "com.fs.starfarer.api.impl.hullmods.StealthMinefield.IncomingMine", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield_1_1IncomingMine.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.IndustrialPlanning", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1IndustrialPlanning.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Industries", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Industries.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.Industry", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html", [
@@ -1297,6 +1648,8 @@ var hierarchy =
     ] ],
     [ "com.fs.starfarer.api.campaign.IndustryPickerListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1IndustryPickerListener.html", null ],
     [ "com.fs.starfarer.api.loading.IndustrySpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.econ.Industry.IndustryTooltipMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry_1_1IndustryTooltipMode.html", null ],
+    [ "com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.InitialBoardingResponse", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1InitialBoardingResponse.html", null ],
     [ "com.fs.starfarer.api.input.InputEventAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html", null ],
     [ "com.fs.starfarer.api.input.InputEventClass", "enumcom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventClass.html", null ],
     [ "com.fs.starfarer.api.input.InputEventMouseButton", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventMouseButton.html", null ],
@@ -1306,6 +1659,7 @@ var hierarchy =
         [ "com.fs.starfarer.api.impl.campaign.econ.impl.GenericInstallableItemPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GenericInstallableItemPlugin.html", null ]
       ] ]
     ] ],
+    [ "com.fs.starfarer.api.campaign.econ.InstallableIndustryItemPlugin.InstallableItemDescriptionMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin_1_1InstallableItemDescriptionMode.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.econ.impl.InstallableItemEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1InstallableItemEffect.html", [
       [ "com.fs.starfarer.api.impl.campaign.econ.impl.BaseInstallableItemEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html", [
         [ "com.fs.starfarer.api.impl.campaign.econ.impl.BoostIndustryInstallableItemEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BoostIndustryInstallableItemEffect.html", null ]
@@ -1316,6 +1670,7 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html", null ]
     ] ],
     [ "com.fs.starfarer.api.campaign.comm.IntelManagerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.comm.IntelInfoPlugin.IntelSortTier", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1IntelSortTier.html", null ],
     [ "com.fs.starfarer.api.ui.IntelUIAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.InteractionDialogAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html", null ],
     [ "com.fs.starfarer.api.InteractionDialogImageVisual", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html", null ],
@@ -1334,6 +1689,7 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.procgen.ProcGenTestPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.rulecmd.PaginatedOptions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.rulecmd.missions.BarCMD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialDialogPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpecialIn64ce7877516a57b28ab5499acfd2171f.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialGoSlowDialogPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialLayInCourseDialogPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialLevelUpDialogPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLevelUpDialogPluginImpl.html", null ],
@@ -1343,32 +1699,313 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialTransponderDialogPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialWelcomeDialogPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialWelcomeDialogPluginImpl.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.RouteLocationCalculator.IntervalType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteLocationCalculator_1_1IntervalType.html", null ],
     [ "com.fs.starfarer.api.util.IntervalUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEvent.InvestigationEventParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent_1_1InvestigationEventParams.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEventGoodRepWithOther.InvestigationGoodRepData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWite71b1276c7972a88d9323000d9224ff2.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEvent.InvestigationResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent_1_1InvestigationResult.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.InvestigationEventSmugglingV2.InvSmugglingParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2_1_1InvSmugglingParams.html", null ],
+    [ "com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin.ItemCostLabelData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin_1_1ItemCostLabelData.html", null ],
+    [ "com.fs.starfarer.api.util.TimeoutTracker< T >.ItemData< T >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker_1_1ItemData.html", null ],
+    [ "com.fs.starfarer.api.util.TimeoutTrackerMap< K, V >.ItemData< K, V >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap_1_1ItemData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.econ.impl.ItemEffectsRepo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ItemEffectsRepo.html", null ],
     [ "com.fs.starfarer.api.campaign.FactionProductionAPI.ItemInProductionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI_1_1ItemInProductionAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Items", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Items.html", null ],
     [ "com.fs.starfarer.api.util.JitterUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1JitterUtil.html", null ],
+    [ "com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1JumpPointAPI_1_1JumpDestination.html", null ],
     [ "com.fs.starfarer.api.ui.LabelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.LagrangePoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator_1_1LagrangePoint.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.LagrangePointType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator_1_1LagrangePointType.html", null ],
     [ "com.fs.starfarer.api.characters.LevelBasedEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html", [
-      [ "com.fs.starfarer.api.characters.CharacterStatsSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterStatsSkillEffect.html", null ],
-      [ "com.fs.starfarer.api.characters.CustomSkillDescription", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CustomSkillDescription.html", [
-        [ "com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html", null ]
+      [ "com.fs.starfarer.api.characters.CharacterStatsSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterStatsSkillEffect.html", [
+        [ "com.fs.starfarer.api.impl.campaign.skills.AutomatedShips.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.AuxiliarySupport.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AuxiliarySupport_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BestOfTheBest_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ColonyManagement.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ColonyManagement_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ColonyManagement.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ColonyManagement_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CommandAndControl.Level1A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CommandAndControl_1_1Level1A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CommandAndControl.Level1B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CommandAndControl_1_1Level1B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CommandAndControl.Level3A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CommandAndControl_1_1Level3A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CommandAndControl.Level3B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CommandAndControl_1_1Level3B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures.Level5", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ContainmentProcedures_1_1Level5.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers.Level1B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuvers_1_1Level1B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CyberneticAugmentation_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FieldRepairs.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FluxRegulation.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FluxRegulation_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FluxRegulation.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FluxRegulation_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ForceConcentration.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ForceConcentration_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ForceConcentration.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ForceConcentration_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ForceConcentration.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ForceConcentration_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.IndustrialPlanning.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1IndustrialPlanning_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.IndustrialPlanning.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1IndustrialPlanning_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Navigation.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Navigation_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.NeuralLink.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLink_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.OfficerManagement.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OfficerManagement_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.OfficerManagement.Level1B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OfficerManagement_1_1Level1B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.OfficerTraining.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OfficerTraining_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.OfficerTraining.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OfficerTraining_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.OfficerTraining.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OfficerTraining_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ShipDesign.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ShipDesign_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ShipDesign.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ShipDesign_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ShipDesign.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ShipDesign_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SpecialModifications.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SpecialModifications_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SpecialModifications.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SpecialModifications_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SpecialModifications.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SpecialModifications_1_1Level3.html", null ]
       ] ],
-      [ "com.fs.starfarer.api.characters.FleetStatsSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FleetStatsSkillEffect.html", null ],
-      [ "com.fs.starfarer.api.characters.MarketSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MarketSkillEffect.html", null ],
+      [ "com.fs.starfarer.api.characters.CustomSkillDescription", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CustomSkillDescription.html", [
+        [ "com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription.html", [
+          [ "com.fs.starfarer.api.impl.campaign.skills.AutomatedShips.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.AutomatedShips.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level2.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.AuxiliarySupport.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AuxiliarySupport_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.BulkTransport.BaseCapacityModifierEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BulkTransport_1_1BaseCapacityModifierEffect.html", [
+            [ "com.fs.starfarer.api.impl.campaign.skills.BulkTransport.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BulkTransport_1_1Level1.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.skills.BulkTransport.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BulkTransport_1_1Level2.html", null ],
+            [ "com.fs.starfarer.api.impl.campaign.skills.BulkTransport.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BulkTransport_1_1Level3.html", null ]
+          ] ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.BulkTransport.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BulkTransport_1_1Level4.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.CarrierGroup.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CarrierGroup_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.CombatEndurance.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1Level4.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ContainmentProcedures_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ContainmentProcedures_1_1Level4.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures.Level5", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ContainmentProcedures_1_1Level5.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers.Level1A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuvers_1_1Level1A.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers.Level1B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuvers_1_1Level1B.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers.Level1C", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuvers_1_1Level1C.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.CrewTraining.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CrewTraining_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.CrewTraining.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CrewTraining_1_1Level2.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CyberneticAugmentation_1_1Level2.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.DamageControl.Level6", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1Level6.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.DerelictContingent.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DerelictContingent_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EnergyWeaponMastery_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.FieldRepairs.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.FieldRepairs.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level2.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.FighterUplink.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterUplink_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.FighterUplink.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterUplink_1_1Level2.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.FluxRegulation.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FluxRegulation_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.ForceConcentration.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ForceConcentration_1_1Level4.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.IndustrialPlanning.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1IndustrialPlanning_1_1Level2.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.MakeshiftEquipment.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MakeshiftEquipment_1_1Level3.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.Navigation.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Navigation_1_1Level4.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.NeuralLink.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLink_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.PhaseCorps.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PhaseCorps_1_1Level3.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.PlanetaryOperations.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PlanetaryOperations_1_1Level3.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.RangedSpecialization.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RangedSpecialization_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.Salvaging.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Salvaging_1_1Level4.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.SupportDoctrine.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SupportDoctrine_1_1Level3.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.TacticalDrills.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TacticalDrills_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.TacticalDrills.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TacticalDrills_1_1Level2.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.WeaponDrills.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WeaponDrills_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.WolfpackTactics.Level1C", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WolfpackTactics_1_1Level1C.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FighterDoctrine.Test", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterDoctrine_1_1Test.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.characters.FleetStatsSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FleetStatsSkillEffect.html", [
+        [ "com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ContainmentProcedures_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ContainmentProcedures_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FieldRepairs.Level5A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level5A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FieldRepairs.Level5B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level5B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FleetLogistics.Level1B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FleetLogistics_1_1Level1B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.HullRestoration.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.HullRestoration.Level4A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration_1_1Level4A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.HullRestoration.Level4B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration_1_1Level4B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.MakeshiftEquipment.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MakeshiftEquipment_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.MakeshiftEquipment.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MakeshiftEquipment_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Navigation.Level1B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Navigation_1_1Level1B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Navigation.Level3A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Navigation_1_1Level3A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Navigation.Level3B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Navigation_1_1Level3B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PlanetaryOperations.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PlanetaryOperations_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PlanetaryOperations.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PlanetaryOperations_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations.Level1B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level1B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations.Level2B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level2B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations.Level3B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level3B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Salvaging.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Salvaging_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Salvaging.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Salvaging_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Salvaging.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Salvaging_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Salvaging.Level5", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Salvaging_1_1Level5.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Sensors.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Sensors_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Sensors.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Sensors_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Sensors.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Sensors_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.TacticalDrills.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TacticalDrills_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.TacticalDrills.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TacticalDrills_1_1Level3.html", null ]
+      ] ],
+      [ "com.fs.starfarer.api.characters.MarketSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MarketSkillEffect.html", [
+        [ "com.fs.starfarer.api.impl.campaign.skills.FleetLogistics.Market1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FleetLogistics_1_1Market1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FleetLogistics.Market2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FleetLogistics_1_1Market2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FleetLogistics.Market3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FleetLogistics_1_1Market3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Hypercognition.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Hypercognition_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Hypercognition.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Hypercognition_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Hypercognition.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Hypercognition_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Hypercognition.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Hypercognition_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PlanetaryOperations.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PlanetaryOperations_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PlanetaryOperations.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PlanetaryOperations_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SpaceOperations.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SpaceOperations_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SpaceOperations.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SpaceOperations_1_1Level2.html", null ]
+      ] ],
       [ "com.fs.starfarer.api.characters.ShipSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ShipSkillEffect.html", [
-        [ "com.fs.starfarer.api.characters.AfterShipCreationSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AfterShipCreationSkillEffect.html", null ]
+        [ "com.fs.starfarer.api.characters.AfterShipCreationSkillEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AfterShipCreationSkillEffect.html", [
+          [ "com.fs.starfarer.api.impl.campaign.skills.CombatEndurance.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1Level4.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.DamageControl.Level6", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1Level6.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EnergyWeaponMastery_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1Level2.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.RangedSpecialization.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RangedSpecialization_1_1Level1.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.skills.WolfpackTactics.Level1C", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WolfpackTactics_1_1Level1C.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.AdvancedCountermeasures.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AdvancedCountermeasures_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.AdvancedCountermeasures.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AdvancedCountermeasures_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.AdvancedCountermeasures.Level3A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AdvancedCountermeasures_1_1Level3A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.AdvancedCountermeasures.Level3B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AdvancedCountermeasures_1_1Level3B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.AutomatedShips.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.BallisticMastery.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BallisticMastery_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.BallisticMastery.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BallisticMastery_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.BallisticMastery.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BallisticMastery_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.BestOfTheBest.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BestOfTheBest_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.BulkTransport.BaseCapacityModifierEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BulkTransport_1_1BaseCapacityModifierEffect.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.BulkTransport.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BulkTransport_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CarrierCommand.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CarrierCommand_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CarrierCommand.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CarrierCommand_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CarrierCommand.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CarrierCommand_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CarrierGroup.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CarrierGroup_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CombatEndurance.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CombatEndurance.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CombatEndurance.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CombatEndurance.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ContainmentProcedures_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ContainmentProcedures.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ContainmentProcedures_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers.Level1A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuvers_1_1Level1A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuvers.Level1C", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuvers_1_1Level1C.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CrewTraining.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CrewTraining_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CrewTraining.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CrewTraining_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.CyberneticAugmentation.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CyberneticAugmentation_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DamageControl.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DamageControl.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DamageControl.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DamageControl.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DamageControl.Level5", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1Level5.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DefensiveSystems_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems.Level2A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DefensiveSystems_1_1Level2A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems.Level2B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DefensiveSystems_1_1Level2B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems.Level3A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DefensiveSystems_1_1Level3A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DefensiveSystems.Level3B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DefensiveSystems_1_1Level3B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.DerelictContingent.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DerelictContingent_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ElectronicWarfare.Level1A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfare_1_1Level1A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.EnergyWeaponMastery.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EnergyWeaponMastery_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.EvasiveAction.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EvasiveAction_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.EvasiveAction.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EvasiveAction_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.EvasiveAction.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EvasiveAction_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FieldModulation.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldModulation_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FieldModulation.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldModulation_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FieldModulation.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldModulation_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FieldModulation.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldModulation_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FieldRepairs.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FighterDoctrine.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterDoctrine_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FighterDoctrine.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterDoctrine_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FighterDoctrine.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterDoctrine_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FighterDoctrine.Test", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterDoctrine_1_1Test.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FighterUplink.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterUplink_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FighterUplink.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FighterUplink_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FleetLogistics.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FleetLogistics_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FleetLogistics.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FleetLogistics_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FleetLogistics.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FleetLogistics_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.FluxRegulation.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FluxRegulation_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.GunneryImplants.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1GunneryImplants_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.GunneryImplants.Level1A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1GunneryImplants_1_1Level1A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.GunneryImplants.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1GunneryImplants_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.GunneryImplants.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1GunneryImplants_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Helmsmanship.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Helmsmanship_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Helmsmanship.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Helmsmanship_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Helmsmanship.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Helmsmanship_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Helmsmanship.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Helmsmanship_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.HullRestoration.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.HullRestoration.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ImpactMitigation_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ImpactMitigation_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ImpactMitigation_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation.Level5", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ImpactMitigation_1_1Level5.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ImpactMitigation.Level6", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ImpactMitigation_1_1Level6.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.MakeshiftEquipment.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MakeshiftEquipment_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Navigation.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Navigation_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Navigation.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Navigation_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.OmegaECM.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OmegaECM_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.OrdnanceExpertise.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OrdnanceExpertise_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.OrdnanceExpertise.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OrdnanceExpertise_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.OrdnanceExpertise.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OrdnanceExpertise_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PhaseCorps.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PhaseCorps_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PhaseMastery.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PhaseMastery_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PhaseMastery.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PhaseMastery_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PhaseMastery.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PhaseMastery_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PointDefense.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PointDefense_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PointDefense.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PointDefense_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PointDefense.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PointDefense_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PowerGridModulation.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PowerGridModulation_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PowerGridModulation.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PowerGridModulation_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.PowerGridModulation.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PowerGridModulation_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.RangedSpecialization.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RangedSpecialization_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations.Level2A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level2A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ReliabilityEngineering.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ReliabilityEngineering.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ReliabilityEngineering.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ReliabilityEngineering.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ReliabilityEngineering.Level5", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level5.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.Salvaging.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Salvaging_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ShieldModulation.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ShieldModulation_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ShieldModulation.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ShieldModulation_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ShieldModulation.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ShieldModulation_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.ShieldModulation.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ShieldModulation_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SpecialModifications.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SpecialModifications_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.StrikeCommander.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1StrikeCommander_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.StrikeCommander.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1StrikeCommander_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.StrikeCommander.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1StrikeCommander_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SupportDoctrine.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SupportDoctrine_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SupportDoctrine.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SupportDoctrine_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SupportDoctrine.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SupportDoctrine_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SystemsExpertise_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SystemsExpertise_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SystemsExpertise_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SystemsExpertise_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise.Level5", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SystemsExpertise_1_1Level5.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise.Level6", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SystemsExpertise_1_1Level6.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise.Level7", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SystemsExpertise_1_1Level7.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.TacticalDrills.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TacticalDrills_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TargetAnalysis_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis.Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TargetAnalysis_1_1Level2.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TargetAnalysis_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis.Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TargetAnalysis_1_1Level4.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.WeaponDrills.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WeaponDrills_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.WingCommander.Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WingCommander_1_1Level1.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.WingCommander.Level2A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WingCommander_1_1Level2A.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.WingCommander.Level2B", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WingCommander_1_1Level2B.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.WingCommander.Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WingCommander_1_1Level3.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.skills.WolfpackTactics.Level1A", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WolfpackTactics_1_1Level1A.html", null ]
       ] ]
     ] ],
     [ "com.fs.starfarer.api.plugins.LevelupPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1LevelupPlugin.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.procgen.LightConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LightConditionGenerator.html", null ],
+    [ "com.fs.starfarer.api.campaign.PlayerMarketTransaction.LineItemType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1LineItemType.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.ListenerManagerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ListenerManagerAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.ListenerUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ListenerUtil.html", null ],
+    [ "com.fs.starfarer.api.campaign.comm.IntelInfoPlugin.ListInfoMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1ListInfoMode.html", null ],
     [ "com.fs.starfarer.api.campaign.LocationAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html", [
       [ "com.fs.starfarer.api.campaign.StarSystemAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.command.WarSimScript.LocationDanger", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1command_1_1WarSimScript_1_1LocationDanger.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.LocationGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin.LocationState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin_1_1LocationState.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.LocationType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_1_1LocationType.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.LocData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1LocData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetEncounterContext.LootableCargoStack", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext_1_1LootableCargoStack.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetEncounterContext.LossFraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext_1_1LossFraction.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.MakeshiftEquipment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MakeshiftEquipment.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.BaseLimitedFleetManager.ManagedFleetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager_1_1ManagedFleetData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.MapLocationType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1MapLocationType.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.MarineLossesStatModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1MarineLossesStatModifier.html", [
       [ "com.fs.starfarer.api.impl.campaign.missions.SecurityCodes", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html", null ]
     ] ],
@@ -1444,8 +2081,10 @@ var hierarchy =
     [ "com.fs.starfarer.api.characters.MarketConditionSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MarketConditionSpecAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.shared.MarketConnectionActivityDataOld", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1MarketConnectionActivityDataOld.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.MarketConnectionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConnectionAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker.MarketDecivData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivTracker_1_1MarketDecivData.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.MarketDemandAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketDemandAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.MarketDemandDataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketDemandDataAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin.MarketFilter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin_1_1MarketFilter.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketImmigrationModifier.html", [
       [ "com.fs.starfarer.api.impl.campaign.econ.ClosedImmigration", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ClosedImmigration.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.econ.DecivilizedSubpop", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1DecivilizedSubpop.html", null ],
@@ -1466,16 +2105,23 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.econ.impl.TechMining", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TechMining.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.econ.impl.TradeCenter", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1TradeCenter.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.campaign.econ.MarketAPI.MarketInteractionMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_1_1MarketInteractionMode.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.MarketShareDataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketShareDataAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.RepTrackerEvent.MarketTradeInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent_1_1MarketTradeInfo.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.MarkovNames.MarkovNameResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MarkovNames_1_1MarkovNameResult.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.MarkovNames", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MarkovNames.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.terrain.MaxBurnBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.MemFlags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1MemFlags.html", null ],
     [ "com.fs.starfarer.api.campaign.rules.MemKeys", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemKeys.html", null ],
     [ "com.fs.starfarer.api.campaign.rules.MemoryAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.MercType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory_1_1MercType.html", null ],
+    [ "com.fs.starfarer.api.campaign.comm.CommMessageAPI.MessageClickAction", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1CommMessageAPI_1_1MessageClickAction.html", null ],
     [ "com.fs.starfarer.api.campaign.MessageDisplayAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1MessageDisplayAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.MessageIntel.MessageLineData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1MessageIntel_1_1MessageLineData.html", null ],
     [ "com.fs.starfarer.api.campaign.comm.MessageParaAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageParaAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.comm.MessagePriority", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessagePriority.html", null ],
     [ "com.fs.starfarer.api.campaign.comm.MessageSectionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1MessageSectionAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.MilitaryResponseScript.MilitaryResponseParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MilitaryResponseScript_1_1MilitaryResponseParams.html", null ],
+    [ "com.fs.starfarer.api.impl.hullmods.StealthMinefield.MinefieldData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1StealthMinefield_1_1MinefieldData.html", null ],
     [ "com.fs.starfarer.api.impl.combat.MineStrikeStatsAIInfoProvider", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStatsAIInfoProvider.html", [
       [ "com.fs.starfarer.api.impl.combat.MineStrikeStats", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html", [
         [ "com.fs.starfarer.api.impl.combat.MineStrikeStationStats", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStationStats.html", null ]
@@ -1488,13 +2134,19 @@ var hierarchy =
     [ "com.fs.starfarer.api.combat.MissileRenderDataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileRenderDataAPI.html", null ],
     [ "com.fs.starfarer.api.loading.MissileSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1MissileSpecAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.MissileSpecialization", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization.html", null ],
+    [ "com.fs.starfarer.api.campaign.MissionBoardAPI.MissionAvailabilityAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1MissionBoardAPI_1_1MissionAvailabilityAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.MissionBoardAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1MissionBoardAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.MissionCompletionRep", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreReputationPlugin_1_1MissionCompletionRep.html", null ],
     [ "com.fs.starfarer.api.mission.MissionDefinitionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1MissionDefinitionAPI.html", null ],
     [ "com.fs.starfarer.api.mission.MissionDefinitionPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1mission_1_1MissionDefinitionPlugin.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.missions.hub.MissionHub", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionHub.html", [
       [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseMissionHub", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.MissionResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_1_1MissionResult.html", [
+      [ "com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel.CommissionBountyResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel_1_1CommissionBountyResult.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Missions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Missions.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.MissionState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseMissionIntel_1_1MissionState.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.missions.hub.MissionTrigger", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionTrigger.html", null ],
     [ "com.fs.starfarer.api.ModDependencyAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModDependencyAPI.html", null ],
     [ "com.fs.starfarer.api.ModManagerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModManagerAPI.html", null ],
@@ -1505,6 +2157,7 @@ var hierarchy =
     ] ],
     [ "com.fs.starfarer.api.ModSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.MonthlyReport", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MonthlyReport.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.MoteControlScript.MoteData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_1_1MoteData.html", null ],
     [ "com.fs.starfarer.api.MusicPlayerPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1MusicPlayerPlugin.html", [
       [ "com.fs.starfarer.api.impl.MusicPlayerPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html", null ]
     ] ],
@@ -1517,16 +2170,21 @@ var hierarchy =
       [ "com.fs.starfarer.api.combat.MutableStatWithTempMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStatWithTempMods.html", null ]
     ] ],
     [ "com.fs.starfarer.api.util.MutableValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html", null ],
+    [ "com.fs.starfarer.api.util.WarpingSpriteRendererUtil.MutatingValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WarpingSpriteRendererUtil_1_1MutatingValue.html", null ],
     [ "com.fs.starfarer.api.util.MutatingValueUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html", null ],
     [ "com.fs.starfarer.api.util.MutatingVertexUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingVertexUtil.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.NameAssigner", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.NameGenData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames.NamePick", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames_1_1NamePick.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.NameAssigner.NamingTreeNode", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner_1_1NamingTreeNode.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.Navigation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Navigation.html", null ],
     [ "com.fs.starfarer.api.campaign.ai.NavigationModulePlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1NavigationModulePlugin.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.BattleCreationPluginImpl.NearbyPlanetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl_1_1NearbyPlanetData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NebulaEditor.html", null ],
     [ "com.fs.starfarer.api.impl.combat.BattleCreationPluginImpl.NebulaTextureProvider", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl_1_1NebulaTextureProvider.html", [
       [ "com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent.NESpawnData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent_1_1NESpawnData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.NeuralLink", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLink.html", null ],
     [ "com.fs.starfarer.api.util.Noise", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Noise.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.ObjectiveEventListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ObjectiveEventListener.html", [
@@ -1534,13 +2192,19 @@ var hierarchy =
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.ObjectiveGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html", null ],
     [ "com.fs.starfarer.api.characters.OfficerDataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1OfficerDataAPI.html", null ],
+    [ "com.fs.starfarer.api.characters.SkillsChangeOfficerEffect.OfficerDataMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_1_1OfficerDataMap.html", null ],
+    [ "com.fs.starfarer.api.characters.SkillsChangeOfficerEffect.OfficerEffectData", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_1_1OfficerEffectData.html", null ],
+    [ "com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DataForEncounterSide.OfficerEngagementData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide_1_1OfficerEngagementData.html", null ],
     [ "com.fs.starfarer.api.plugins.OfficerLevelupPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1OfficerLevelupPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.OfficerLevelupPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OfficerLevelupPluginImpl.html", null ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.OfficerManagement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OfficerManagement.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OfficerNum", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1OfficerNum.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OfficerQuality", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1OfficerQuality.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.plog.OfficerSkillGainRecord", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1OfficerSkillGainRecord.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.OfficerTraining", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OfficerTraining.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.OmegaECM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OmegaECM.html", null ],
+    [ "com.fs.starfarer.api.campaign.SubmarketPlugin.OnClickAction", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1OnClickAction.html", null ],
     [ "com.fs.starfarer.api.combat.OnFireEffectPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html", [
       [ "com.fs.starfarer.api.impl.combat.CanisterFlakPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CanisterFlakPlugin.html", null ],
       [ "com.fs.starfarer.api.impl.combat.CryoblasterEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html", null ],
@@ -1566,15 +2230,56 @@ var hierarchy =
     [ "com.fs.starfarer.api.campaign.OnMessageDeliveryScript", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OnMessageDeliveryScript.html", [
       [ "com.fs.starfarer.api.campaign.BaseOnMessageDeliveryScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseOnMessageDeliveryScript.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.characters.SkillsChangeRemoveExcessOPEffect.OPDataMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect_1_1OPDataMap.html", null ],
+    [ "com.fs.starfarer.api.characters.SkillsChangeRemoveExcessOPEffect.OPEffectData", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect_1_1OPEffectData.html", null ],
     [ "com.fs.starfarer.api.campaign.rules.Option", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1Option.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.FireAll.OptionAdder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireAll_1_1OptionAdder.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.RouteManager.OptionalFleetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager_1_1OptionalFleetData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.DonationOffer.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOffer_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBarEvent.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEvent_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicPathBaseBarEvent.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEvent.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEvent_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HIOrdersInteractionDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIOrdersInteractionDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PEAvertInteractionDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAvertInteractionDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.JumpPointInteractionDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1JumpPointInteractionDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.NewGameDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NewGameDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.OrbitalStationInteractionDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.PlanetInteractionDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.EventTestPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.ProcGenTestPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.StandardRespawnDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialGoSlowDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialLayInCourseDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialLevelUpDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLevelUpDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialPirateApproachesDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialPirateApproachesDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialRespawnDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialSustainedBurnDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialTransponderDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl_1_1OptionId.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialWelcomeDialogPluginImpl.OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialWelcomeDialogPluginImpl_1_1OptionId.html", null ],
     [ "com.fs.starfarer.api.campaign.OptionPanelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.OptionPanelAPI.OptionTooltipCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_1_1OptionTooltipCreator.html", null ],
     [ "com.fs.starfarer.api.campaign.OrbitAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.OrbitGap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_1_1OrbitGap.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.OrbitItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_1_1OrbitItem.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.OrdnanceExpertise", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OrdnanceExpertise.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.ghosts.types.EncounterTricksterGhostCreator.OtherFleetType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhostCreator_1_1OtherFleetType.html", null ],
     [ "com.fs.starfarer.api.util.OutpostStats", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1OutpostStats.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.PaginatedOptions.PaginatedOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions_1_1PaginatedOption.html", null ],
     [ "com.fs.starfarer.api.util.Pair< A, B >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Pair.html", null ],
     [ "com.fs.starfarer.api.campaign.ParticleControllerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.terrain.PeakPerformanceBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.ExplosionEntityPlugin.ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExplosionEntityPlugin_1_1ParticleData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.TurbulenceEntityPlugin.ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin_1_1ParticleData.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.CombatEntityPluginWithParticles.ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles_1_1ParticleData.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.CryoblasterEffect.ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect_1_1ParticleData.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.CryofluxTransducerEffect.ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect_1_1ParticleData.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.DisintegratorEffect.ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect_1_1ParticleData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.PatrolFleetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_1_1PatrolFleetData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManager.PatrolFleetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManager_1_1PatrolFleetData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManagerV2.PatrolFleetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2_1_1PatrolFleetData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.PatrolType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory_1_1PatrolType.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.People", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1People.html", null ],
+    [ "com.fs.starfarer.api.impl.hullmods.PeriodicMissileReload.PeriodicMissileReloadData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PeriodicMissileReload_1_1PeriodicMissileReloadData.html", null ],
     [ "com.fs.starfarer.api.campaign.PersistentUIDataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Personalities", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Personalities.html", null ],
     [ "com.fs.starfarer.api.characters.PersonalityAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonalityAPI.html", null ],
@@ -1586,10 +2291,14 @@ var hierarchy =
     [ "com.fs.starfarer.api.campaign.PersonImportance", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersonImportance.html", null ],
     [ "com.fs.starfarer.api.characters.ImportantPeopleAPI.PersonLocationAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI_1_1PersonLocationAPI.html", null ],
     [ "com.fs.starfarer.api.loading.PersonMissionSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html", null ],
+    [ "com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker.PersonnelRank", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1PersonnelRank.html", null ],
     [ "com.fs.starfarer.api.combat.PhaseCloakSystemAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1PhaseCloakSystemAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.PhaseCorps", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PhaseCorps.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.PhaseMastery", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PhaseMastery.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.TradeInfoUpdateEvent.PickMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent_1_1PickMode.html", null ],
+    [ "com.fs.starfarer.api.campaign.CampaignPlugin.PickPriority", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin_1_1PickPriority.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Pings", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Pings.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.PirateBaseTier", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel_1_1PirateBaseTier.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.PlanetaryOperations", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PlanetaryOperations.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.PlanetConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetConditionGenerator.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Planets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html", null ],
@@ -1598,6 +2307,8 @@ var hierarchy =
     [ "com.fs.starfarer.api.campaign.listeners.PlayerColonizationListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1PlayerColonizationListener.html", [
       [ "com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.campaign.SubmarketPlugin.PlayerEconomyImpactMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1PlayerEconomyImpactMode.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.FoodShortageEvent.PlayerFoodTransaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_1_1PlayerFoodTransaction.html", null ],
     [ "com.fs.starfarer.api.campaign.PlayerMarketTransaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.shared.PlayerTradeProfitabilityData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html", null ],
@@ -1606,6 +2317,7 @@ var hierarchy =
         [ "com.fs.starfarer.api.impl.campaign.plog.PLTextEntry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLTextEntry.html", null ]
       ] ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog.PLIntelUIData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog_1_1PLIntelUIData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.plog.PLSnapshot", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLSnapshot.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.plog.PLStat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStat.html", [
       [ "com.fs.starfarer.api.impl.campaign.plog.BasePLStat", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html", [
@@ -1623,6 +2335,7 @@ var hierarchy =
     [ "com.fs.starfarer.api.PluginPick< T >", "classcom_1_1fs_1_1starfarer_1_1api_1_1PluginPick.html", null ],
     [ "com.fs.starfarer.api.campaign.PluginPickerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PluginPickerAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.PointDefense", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PointDefense.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.TurbulenceEntityPlugin.PointParticle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin_1_1PointParticle.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.PolarizedArmor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.population.PopulationComposition", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1population_1_1PopulationComposition.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarEvent", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1PortsideBarEvent.html", [
@@ -1651,11 +2364,16 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html", null ]
     ] ],
     [ "com.fs.starfarer.api.ui.PositionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.PotentialContactData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1PotentialContactData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.PowerGridModulation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PowerGridModulation.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.events.PriceUpdate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html", null ],
+    [ "com.fs.starfarer.api.campaign.events.CampaignEventPlugin.PriceUpdatePlugin.PriceType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin_1_1PriceType.html", null ],
+    [ "com.fs.starfarer.api.campaign.events.CampaignEventPlugin.PriceUpdatePlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin.html", [
+      [ "com.fs.starfarer.api.impl.campaign.events.PriceUpdate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.campaign.econ.PriceVariability", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.intel.ProcurementMissionCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionCreator.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.misc.ProductionReportIntel.ProductionData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1ProductionReportIntel_1_1ProductionData.html", null ],
+    [ "com.fs.starfarer.api.campaign.FactionProductionAPI.ProductionItemType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI_1_1ProductionItemType.html", null ],
     [ "com.fs.starfarer.api.loading.ProjectileSpawnType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpawnType.html", null ],
     [ "com.fs.starfarer.api.loading.ProjectileSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpecAPI.html", null ],
     [ "com.fs.starfarer.api.combat.ProximityExplosionEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ProximityExplosionEffect.html", [
@@ -1664,29 +2382,112 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.combat.RiftLanceMineExplosion", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftLanceMineExplosion.html", null ]
     ] ],
     [ "com.fs.starfarer.api.combat.ProximityFuseAIAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ProximityFuseAIAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldIntel.PSIStage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_1_1PSIStage.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.terrain.PulsarRenderer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarRenderer.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.PulsarRenderer.PulsarRendererDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarRenderer_1_1PulsarRendererDelegate.html", [
+      [ "com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager.PunExData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager_1_1PunExData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager.PunExGoal", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager_1_1PunExGoal.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionIntel.PunExOutcome", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel_1_1PunExOutcome.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager.PunExReason", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager_1_1PunExReason.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager.PunExType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionManager_1_1PunExType.html", null ],
+    [ "com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.PursueAvailability", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1PursueAvailability.html", null ],
+    [ "com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.PursuitOption", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1PursuitOption.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.eventide.QuadParticles.QuadParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1QuadParticles_1_1QuadParticleData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.eventide.QuadParticles", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1QuadParticles.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality.QualityData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality_1_1QualityData.html", null ],
     [ "com.fs.starfarer.api.util.RadialLattice", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.procgen.RadiationConditionGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RadiationConditionGenerator.html", null ],
+    [ "com.fs.starfarer.api.util.RadialLattice.RadialLatticeBucket", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice_1_1RadialLatticeBucket.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidActionStage.RaidActionSubStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage_1_1RaidActionSubStage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1RaidDangerLevel.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.RaidDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidDelegate.html", [
+      [ "com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathBaseIntel.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.campaign.listeners.GroundRaidObjectivesListener.RaidResultData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GroundRaidObjectivesListener_1_1RaidResultData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.RaidStage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidStage.html", [
+      [ "com.fs.starfarer.api.impl.campaign.intel.raid.BaseRaidStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html", [
+        [ "com.fs.starfarer.api.impl.campaign.intel.raid.ActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HIActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PEActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEActionStage.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.raid.AssembleStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HIAssembleStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIAssembleStage.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PEAssembleStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAssembleStage.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidAssembleStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.raid.OrganizeStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HIOrganizeStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIOrganizeStage.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PEOrganizeStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.raid.ReturnStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ReturnStage.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HIReturnStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIReturnStage.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PEReturnStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEReturnStage.html", null ]
+        ] ],
+        [ "com.fs.starfarer.api.impl.campaign.intel.raid.TravelStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1TravelStage.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.inspection.HITravelStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HITravelStage.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.punitive.PETravelStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PETravelStage.html", null ]
+        ] ]
+      ] ]
+    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.RaidStageStatus", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidStageStatus.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1RaidType.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.terrain.RangeBlockerUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.RangedSpecialization", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RangedSpecialization.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Ranks", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Ranks.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.RecoveryOperations", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations.html", null ],
     [ "com.fs.starfarer.api.characters.RelationshipAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI.html", null ],
+    [ "com.fs.starfarer.api.characters.RelationshipAPI.RelationshipTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI_1_1RelationshipTarget.html", null ],
+    [ "com.fs.starfarer.api.characters.RelationshipAPI.RelationshipTargetType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1RelationshipAPI_1_1RelationshipTargetType.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.ReliabilityEngineering", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantThemeGenerator.RemnantSystemType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantThemeGenerator_1_1RemnantSystemType.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreReputationPlugin_1_1RepActionEnvelope.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreReputationPlugin_1_1RepActions.html", null ],
     [ "com.fs.starfarer.api.fleet.RepairTrackerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel.RepChangeData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel_1_1RepChangeData.html", null ],
     [ "com.fs.starfarer.api.campaign.RepLevel", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html", null ],
     [ "com.fs.starfarer.api.campaign.events.ReportAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1ReportAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreReputationPlugin_1_1RepRewards.html", null ],
     [ "com.fs.starfarer.api.campaign.ReputationActionResponsePlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.CoreReputationPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreReputationPlugin.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin_1_1ReputationAdjustmentResult.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.shared.ReputationChangeTracker.ReputationChangeData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker_1_1ReputationChangeData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.shared.ReputationChangeTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.missions.hub.ReqMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1ReqMode.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.ShowResCost.ResData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowResCost_1_1ResData.html", null ],
+    [ "com.fs.starfarer.api.campaign.ResourceCostPanelAPI.ResourceColorGetter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI_1_1ResourceColorGetter.html", null ],
     [ "com.fs.starfarer.api.campaign.ResourceCostPanelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ResourceCostPanelAPI.html", null ],
+    [ "com.fs.starfarer.api.combat.FighterWingAPI.ReturningFighter", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI_1_1ReturningFighter.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.RingGenPlugin.RingGenData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin_1_1RingGenData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain.RingParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain_1_1RingParams.html", [
+      [ "com.fs.starfarer.api.impl.campaign.terrain.AsteroidBeltTerrainPlugin.AsteroidBeltParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin_1_1AsteroidBeltParams.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin_1_1AsteroidFieldParams.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin_1_1DebrisFieldParams.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin.MagneticFieldParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin_1_1MagneticFieldParams.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.RadioChatterTerrainPlugin.RadioChatterParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin_1_1RadioChatterParams.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.SpatialAnomalyTerrainPlugin.SpatialAnomalyParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin_1_1SpatialAnomalyParams.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin.CoronaParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin_1_1CoronaParams.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.terrain.RingRenderer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingRenderer.html", null ],
     [ "com.fs.starfarer.api.loading.RoleEntryAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1RoleEntryAPI.html", null ],
     [ "com.fs.starfarer.api.util.RollingAverageTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager_1_1RouteData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteFleetSpawner", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager_1_1RouteFleetSpawner.html", [
+      [ "com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1DistressCallAbility.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.econ.impl.LionsGuardHQ", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1LionsGuardHQ.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.fleets.BaseRouteFleetManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.fleets.RouteLocationCalculator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteLocationCalculator.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteSegment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager_1_1RouteSegment.html", null ],
     [ "com.fs.starfarer.api.campaign.rules.RuleAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1RuleAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.RuleBasedDialog", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RuleBasedDialog.html", [
       [ "com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html", null ],
@@ -1702,14 +2503,41 @@ var hierarchy =
     [ "com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageEntityGeneratorOld", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageEntityGeneratorOld.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci94e51af396b9f0721ebe1b0e0552adfe.html", [
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BlueprintSpecial.BlueprintSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluep4b7f02dfb0d0b5ca225476841ed8b0aa.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BreadcrumbSpecial.BreadcrumbSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bread371eb15eb6671e17969a554b3d16ec39.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.CargoManifestSpecial.CargoManifestSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Cargoa6bbff239f80e8bbba119cc18d36c7bb.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial.DomainSurveyDerelictSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domaic0ede09a91e009d308822dc91c83213a.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.ShipRecoverySpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1ShipRa0b1694e007ff7e2c9aaf4b11000c540.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SleeperPodsSpecial.SleeperPodsSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Sleepa38c8e7ab9fc0b7c6bae4bc719ca64fa.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Surve90c56f6d04b7f8f8e50cd43b44c17cc5.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial.TransmitterTrapSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Trans842a2d9cb55d70d2bec9c0dcd12c1019.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html", [
+      [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BaseSalvageSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html", [
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BlueprintSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BreadcrumbSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BreadcrumbSpecial.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.CargoManifestSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1ShipRecoverySpecial.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SleeperPodsSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SleeperPodsSpecial.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SurveyDataSpecial.html", null ],
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1TransmitterTrapSpecial.html", null ]
+      ] ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.Salvaging", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Salvaging.html", null ],
     [ "com.fs.starfarer.api.util.SaveableIterator< com.fs.starfarer.api.campaign.StarSystemAPI >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html", null ],
     [ "com.fs.starfarer.api.util.SaveableIterator< String >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.skills.NeuralLinkScript.SavedShipControlState", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript_1_1SavedShipControlState.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAAtTheGates.ScanEncounterVariation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates_1_1ScanEncounterVariation.html", null ],
+    [ "com.fs.starfarer.api.characters.LevelBasedEffect.ScopeDescription", "enumcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect_1_1ScopeDescription.html", null ],
     [ "com.fs.starfarer.api.Script", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html", [
       [ "com.fs.starfarer.api.impl.campaign.ghosts.types.RemnantGhost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RemnantGhost.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.ghosts.types.ShipGhost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ShipGhost.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAFCReplaceArchon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFCReplaceArchon.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageGenFromSeed.SDMParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed_1_1SDMParams.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.SearchData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SearchData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.shared.SectorActivityTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SectorActivityTracker.html", null ],
     [ "com.fs.starfarer.api.campaign.SectorAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.SectorGeneratorPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorGeneratorPlugin.html", null ],
@@ -1719,6 +2547,7 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.procgen.SectorProcGen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SectorProcGen.html", null ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SectorThemeGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SectorThemeGenerator.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager.SeededFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SeededFleetManager_1_1SeededFleet.html", null ],
     [ "com.fs.starfarer.api.combat.BoundsAPI.SegmentAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BoundsAPI_1_1SegmentAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ghosts.SensorGhostCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html", [
       [ "com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html", [
@@ -1742,23 +2571,34 @@ var hierarchy =
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.Sensors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Sensors.html", null ],
     [ "com.fs.starfarer.api.SettingsAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.hullmods.ShardSpawner.ShardSpawnerData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_1_1ShardSpawnerData.html", null ],
+    [ "com.fs.starfarer.api.impl.hullmods.ShardSpawner.ShardType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_1_1ShardType.html", null ],
+    [ "com.fs.starfarer.api.impl.hullmods.ShardSpawner.ShardTypeVariants", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ShardSpawner_1_1ShardTypeVariants.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.shared.SharedData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.MoteControlScript.SharedMoteAIData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript_1_1SharedMoteAIData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ghosts.SharedTrigger", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SharedTrigger.html", null ],
     [ "com.fs.starfarer.api.combat.ShieldAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.ShieldModulation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ShieldModulation.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.TriadShieldStatsBackup.ShieldPiece", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStatsBackup_1_1ShieldPiece.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.TriadShieldStatsBackup.ShieldPieceConnection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStatsBackup_1_1ShieldPieceConnection.html", null ],
     [ "com.fs.starfarer.api.combat.ShipHullSpecAPI.ShieldSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html", null ],
+    [ "com.fs.starfarer.api.combat.ShieldAPI.ShieldType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI_1_1ShieldType.html", null ],
     [ "com.fs.starfarer.api.combat.ShipAIConfig", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIConfig.html", null ],
     [ "com.fs.starfarer.api.combat.ShipAIPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIPlugin.html", null ],
     [ "com.fs.starfarer.api.combat.ShipCommand", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipCommand.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.ShipCondition", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1ShipRecoverySpecial_1_1ShipCondition.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.ShipDesign", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ShipDesign.html", null ],
     [ "com.fs.starfarer.api.combat.ShipEngineControllerAPI.ShipEngineAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI_1_1ShipEngineAPI.html", null ],
     [ "com.fs.starfarer.api.combat.ShipEngineControllerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html", null ],
     [ "com.fs.starfarer.api.fleet.ShipFilter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1ShipFilter.html", null ],
     [ "com.fs.starfarer.api.combat.ShipHullSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.econ.impl.ShipQuality", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html", null ],
+    [ "com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_1_1ShipPickMode.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.ShipRecoveryListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ShipRecoveryListener.html", null ],
     [ "com.fs.starfarer.api.fleet.ShipRolePick", "classcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1ShipRolePick.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.ShipRoles", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1ShipRoles.html", null ],
+    [ "com.fs.starfarer.api.campaign.PlayerMarketTransaction.ShipSaleInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1ShipSaleInfo.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin.ShipSalesData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_1_1ShipSalesData.html", null ],
+    [ "com.fs.starfarer.api.combat.BattleObjectiveEffect.ShipStatusItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect_1_1ShipStatusItem.html", null ],
     [ "com.fs.starfarer.api.combat.ShipSystemAIScript", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAIScript.html", null ],
     [ "com.fs.starfarer.api.combat.ShipSystemAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html", null ],
     [ "com.fs.starfarer.api.combat.ShipSystemSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemSpecAPI.html", null ],
@@ -1786,13 +2626,17 @@ var hierarchy =
         ] ]
       ] ]
     ] ],
+    [ "com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints.html", null ],
     [ "com.fs.starfarer.api.combat.ShipVariantAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html", null ],
     [ "com.fs.starfarer.api.combat.ShipwideAIFlags", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipwideAIFlags.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.ShowLootListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ShowLootListener.html", [
       [ "com.fs.starfarer.api.impl.campaign.missions.BlueprintIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3.SizeFilterMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1SizeFilterMode.html", null ],
     [ "com.fs.starfarer.api.util.SkillData", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData.html", null ],
     [ "com.fs.starfarer.api.characters.SkillEffectType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillEffectType.html", null ],
+    [ "com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI_1_1SkillLevelAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent.SkillPickPreference", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent_1_1SkillPickPreference.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Skills", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Skills.html", null ],
     [ "com.fs.starfarer.api.characters.SkillsChangeEffect", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html", [
       [ "com.fs.starfarer.api.characters.BaseSkillsChangeEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html", [
@@ -1802,17 +2646,43 @@ var hierarchy =
         [ "com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html", null ]
       ] ]
     ] ],
+    [ "com.fs.starfarer.api.util.SkillData.SkillsForAptitude", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData_1_1SkillsForAptitude.html", null ],
     [ "com.fs.starfarer.api.characters.SkillSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html", null ],
+    [ "com.fs.starfarer.api.util.SkillData.SkillTier", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SkillData_1_1SkillTier.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SleeperPodsSpecial.SleeperSpecialType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Sleepeda3b230931a92445ccb96dc9c928387b.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.SlipstreamBlockerUpdater", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SlipstreamBlockerUpdater.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamBuilder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamBuilder.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.SlipstreamConfigUpdater", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SlipstreamConfigUpdater.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamEntityPlugin.SlipstreamParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParams.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamEntityPlugin2.SlipstreamParams2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamParams2.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamParams2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2_1_1SlipstreamParams2.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamEntityPlugin2.SlipstreamParticle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamParticle.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamEntityPlugin.SlipstreamParticle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParticle.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamParticle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2_1_1SlipstreamParticle.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamBuilder.SlipstreamSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamBuilder_1_1SlipstreamSection.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamEntityPlugin2.SlipstreamSegment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamSegment.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamSegment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2_1_1SlipstreamSegment.html", null ],
+    [ "com.fs.starfarer.api.characters.SkillsChangeRemoveSmodsEffect.SmodDataMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect_1_1SmodDataMap.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.plog.SModRecord", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1SModRecord.html", null ],
+    [ "com.fs.starfarer.api.characters.SkillsChangeRemoveSmodsEffect.SmodRemovalEffectData", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect_1_1SmodRemovalEffectData.html", null ],
     [ "com.fs.starfarer.api.util.SmoothMovementUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SmoothMovementUtil.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater.SortedWeapons", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater_1_1SortedWeapons.html", null ],
     [ "com.fs.starfarer.api.SoundAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundAPI.html", null ],
     [ "com.fs.starfarer.api.SoundPlayerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SoundPlayerAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Sounds", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Sounds.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.SpaceOperations", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SpaceOperations.html", null ],
     [ "com.fs.starfarer.api.campaign.SpawnPointPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpawnPointPlugin.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.SpecialCreationContext", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_1_1SpecialCreationContext.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.SpecialCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_1_1SpecialCreator.html", [
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.BlueprintSpecialCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAss1e88cb126a99405e10096a33b0c34f57.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.BreadcrumbSpecialCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssfb2fa9b30c73697aba2eb4a03b46204d.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.CargoManifestSpecialCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssa121abdb63eeefd8a50060d39ad888cc.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.NothingSpecialCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_1_1NothingSpecialCreator.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.ShipRecoverySpecialCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAss045282595e610e49703c0594678f0146.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.SleeperPodsSpecialCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssb563d58354b77fdc37d63f75a12312b0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.SurveyDataSpecialCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAsscca646965ef900933a72d5d778b42d4d.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.TransmitterTrapSpecialCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAss4da10bfe440209670d30297696e5f510.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.campaign.SpecialItemData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemData.html", null ],
     [ "com.fs.starfarer.api.campaign.SpecialItemPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html", [
       [ "com.fs.starfarer.api.campaign.impl.items.BaseSpecialItemPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html", [
@@ -1829,27 +2699,98 @@ var hierarchy =
     [ "com.fs.starfarer.api.campaign.SpecialItemPlugin.SpecialItemRendererAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin_1_1SpecialItemRendererAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.SpecialItemSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.SpecialModifications", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SpecialModifications.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial.SpecialType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domain30d5a8557cd7c99d3bda9f8850793a09.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.ConstellationGen.SpringConnection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConstellationGen_1_1SpringConnection.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.ConstellationGen.SpringNode", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConstellationGen_1_1SpringNode.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.ConstellationGen.SpringSystem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConstellationGen_1_1SpringSystem.html", null ],
     [ "com.fs.starfarer.api.graphics.SpriteAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html", null ],
     [ "com.fs.starfarer.api.SpriteId", "classcom_1_1fs_1_1starfarer_1_1api_1_1SpriteId.html", null ],
-    [ "com.fs.starfarer.api.campaign.econ.StabilizeMarketPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1StabilizeMarketPlugin.html", [
-      [ "com.fs.starfarer.api.impl.campaign.StabilizeMarketPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StabilizeMarketPluginImpl.html", null ]
-    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.BasicExampleGADataFromRuins.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1BasicExampleGADataFromRuins_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAAtTheGates.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GABuyArtifact.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GACelestialObject.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADataFromRuins.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADataFromRuins_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADeliverVIP.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADeliverVIP_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADerelictArtifact.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAFindingCoureuse.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFindingCoureuse_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAIntro2.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAIntro2_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAIntro.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAIntro_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAKallichore.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAOutpost.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAOutpost_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAProbePackage.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAProjectZiggurat.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GARansomResearcher.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GARansomResearcher_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAReturnHamatsu.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAReturnHamatsu_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GATalkToBaird.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GATalkToBaird_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GATalkToSebestyen.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GATalkToSebestyen_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GATransverseJump.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GATransverseJump_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.BaseDisruptIndustry.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.BlueprintIntel.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.CheapCommodityMission.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.CommodityProductionMission.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.CustomProductionContract.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CustomProductionContract_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.DeadDropMission.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DeadDropMission_1_1Stage.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.DisruptCompetitorMission.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptCompetitorMission_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.ExtractionMission.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ExtractionMission_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.JailbreakMission.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1JailbreakMission_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.PirateSystemBounty.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1PirateSystemBounty_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.ProcurementMission.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.SecurityCodes.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.SmugglingMission.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.SpySatDeployment.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SpySatDeployment_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.SwordOfEventide.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SwordOfEventide_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.TacticallyBombardColony.Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1TacticallyBombardColony_1_1Stage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.StageConnection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1StageConnection.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.StageData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1StageData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.StarAge", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarAge.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.StarGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarGenDataSpec.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.ConstellationGen.StarNode", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConstellationGen_1_1StarNode.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.StarSystemData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseThemeGenerator_1_1StarSystemData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.StarSystemType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator_1_1StarSystemType.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.StarTypes", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1StarTypes.html", null ],
     [ "com.fs.starfarer.api.combat.StatBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.NewGameDialogPluginImpl.State", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NewGameDialogPluginImpl_1_1State.html", null ],
+    [ "com.fs.starfarer.api.plugins.ShipSystemStatsScript.State", "enumcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript_1_1State.html", null ],
+    [ "com.fs.starfarer.api.util.FaderUtil.State", "enumcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil_1_1State.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.StationState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1StationState.html", null ],
+    [ "com.fs.starfarer.api.combat.MutableStat.StatMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_1_1StatMod.html", null ],
+    [ "com.fs.starfarer.api.combat.MutableStat.StatModType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStat_1_1StatModType.html", null ],
     [ "com.fs.starfarer.api.ui.TooltipMakerAPI.StatModValueGetter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1StatModValueGetter.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Stats", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Stats.html", null ],
+    [ "com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.Status", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1Status.html", null ],
+    [ "com.fs.starfarer.api.plugins.ShipSystemStatsScript.StatusData", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript_1_1StatusData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.StoryOptionParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetStoryOption_1_1StoryOptionParams.html", null ],
     [ "com.fs.starfarer.api.campaign.StoryPointActionDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StoryPointActionDelegate.html", [
-      [ "com.fs.starfarer.api.campaign.BaseStoryPointActionDelegate", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseStoryPointActionDelegate.html", null ]
+      [ "com.fs.starfarer.api.campaign.BaseStoryPointActionDelegate", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseStoryPointActionDelegate.html", [
+        [ "com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.BaseOptionStoryPointActionDelegate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetStoryOption_1_1BaseOptionStoryPointActionDelegate.html", null ]
+      ] ]
     ] ],
     [ "com.fs.starfarer.api.campaign.ai.StrategicModulePlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1StrategicModulePlugin.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin.Stream", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin_1_1Stream.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager.StreamConfig", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamConfig.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager.StreamData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin.StreamPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin_1_1StreamPoint.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.SlipstreamBuilder.StreamType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamBuilder_1_1StreamType.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.StrikeCommander", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1StrikeCommander.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.StringCollectionReqs", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StringCollectionReqs.html", [
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.MarketFactionCustomReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionCustomReq.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredCommodityTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredCommodityTags.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredEntityTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredEntityTags.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredMarketConditions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredMarketConditions.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredMarketIndustries", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredMarketIndustries.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredPlanetConditions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredPlanetConditions.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredPlanetTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredPlanetTags.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredSystemTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredSystemTags.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.RequiredTerrainTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredTerrainTags.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch.TerrainTypeReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1TerrainTypeReq.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Strings", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Strings.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.SubmarketAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.SubmarketInteractionListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener.html", null ],
+    [ "com.fs.starfarer.api.campaign.listeners.SubmarketInteractionListener.SubmarketInteractionType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener_1_1SubmarketInteractionType.html", null ],
     [ "com.fs.starfarer.api.campaign.SubmarketPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html", [
         [ "com.fs.starfarer.api.impl.campaign.submarkets.BlackMarketPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin.html", null ],
@@ -1863,18 +2804,31 @@ var hierarchy =
     [ "com.fs.starfarer.api.campaign.econ.SubmarketSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketSpecAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.SubmarketUpdateListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketUpdateListener.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.SupportDoctrine", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SupportDoctrine.html", null ],
-    [ "com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetIntelCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetIntelCreator.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BlueprintSpecial.SurveyDataSpecialType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluepr25186ea622ad2a4b09fd22cd877fcc20.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Survey21f3f50b83ad6aef0fdc03cb49d43922.html", null ],
+    [ "com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_1_1SurveyLevel.html", null ],
     [ "com.fs.starfarer.api.campaign.listeners.SurveyPlanetListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SurveyPlanetListener.html", [
       [ "com.fs.starfarer.api.impl.campaign.intel.SurveyPlanetMissionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SurveyPlanetMissionIntel.html", null ]
     ] ],
     [ "com.fs.starfarer.api.plugins.SurveyPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SurveyPlugin.html", [
       [ "com.fs.starfarer.api.impl.campaign.SurveyPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SurveyPluginImpl.html", null ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.intel.SystemBountyIntel.SystemBountyResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel_1_1SystemBountyResult.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.DerelictThemeGenerator.SystemGenData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1DerelictThemeGenerator_1_1SystemGenData.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.SystemsExpertise", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1SystemsExpertise.html", null ],
+    [ "com.fs.starfarer.api.combat.ShipSystemAPI.SystemState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI_1_1SystemState.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.TacticalDrills", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TacticalDrills.html", null ],
     [ "com.fs.starfarer.api.campaign.ai.TacticalModulePlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1TacticalModulePlugin.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Tags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Tags.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.TargetAnalysis", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1TargetAnalysis.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.CryofluxTransducerStats.TargetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats_1_1TargetData.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.DamperFieldOmegaStats.TargetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldOmegaStats_1_1TargetData.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.EntropyAmplifierStats.TargetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EntropyAmplifierStats_1_1TargetData.html", null ],
+    [ "com.fs.starfarer.api.impl.combat.InterdictorArrayStats.TargetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1InterdictorArrayStats_1_1TargetData.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.RouteLocationCalculator.TaskInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteLocationCalculator_1_1TaskInterval.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.AddBarEvent.TempBarEvents", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent_1_1TempBarEvents.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.TempData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1TempData.html", null ],
+    [ "com.fs.starfarer.api.combat.MutableStatWithTempMods.TemporaryStatMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableStatWithTempMods_1_1TemporaryStatMod.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Terrain", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Terrain.html", null ],
     [ "com.fs.starfarer.api.campaign.TerrainAIFlags", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TerrainAIFlags.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.TerrainGenPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html", [
@@ -1886,6 +2840,8 @@ var hierarchy =
       [ "com.fs.starfarer.api.impl.campaign.procgen.RingGenPlugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html", null ]
     ] ],
     [ "com.fs.starfarer.api.loading.TerrainSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1TerrainSpecAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.AccretionDiskGenPlugin.TexAndIndex", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AccretionDiskGenPlugin_1_1TexAndIndex.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.RingGenPlugin.TexAndIndex", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin_1_1TexAndIndex.html", null ],
     [ "com.fs.starfarer.api.ui.TextFieldAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TextFieldAPI.html", null ],
     [ "com.fs.starfarer.api.campaign.TextPanelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html", null ],
     [ "com.fs.starfarer.api.TextTokenAndHighlightSource", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1TextTokenAndHighlightSource.html", null ],
@@ -1899,13 +2855,18 @@ var hierarchy =
       ] ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.procgen.themes.Themes", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1Themes.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription.ThresholdBonusType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription_1_1ThresholdBonusType.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain.TileParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain_1_1TileParams.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.TimeLimitData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1TimeLimitData.html", null ],
     [ "com.fs.starfarer.api.util.TimeoutTracker< T >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
-    [ "com.fs.starfarer.api.util.TimeoutTracker< AbilityUseData >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
     [ "com.fs.starfarer.api.util.TimeoutTracker< com.fs.starfarer.api.campaign.SectorEntityToken >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
+    [ "com.fs.starfarer.api.util.TimeoutTracker< com.fs.starfarer.api.impl.campaign.abilities.DistressCallAbility.AbilityUseData >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
+    [ "com.fs.starfarer.api.util.TimeoutTracker< com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.GenericBarEventCreator >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
     [ "com.fs.starfarer.api.util.TimeoutTracker< com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarEvent >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
-    [ "com.fs.starfarer.api.util.TimeoutTracker< GenericBarEventCreator >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
     [ "com.fs.starfarer.api.util.TimeoutTracker< String >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html", null ],
     [ "com.fs.starfarer.api.util.TimeoutTrackerMap< K, V >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html", null ],
+    [ "com.fs.starfarer.api.util.Misc.Token", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html", null ],
+    [ "com.fs.starfarer.api.util.Misc.TokenType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1TokenType.html", null ],
     [ "com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html", [
       [ "com.fs.starfarer.api.impl.campaign.MonthlyReportNodeTooltipCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MonthlyReportNodeTooltipCreator.html", null ],
       [ "com.fs.starfarer.api.impl.campaign.OverheadTooltipCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OverheadTooltipCreator.html", null ],
@@ -1915,12 +2876,99 @@ var hierarchy =
       [ "com.fs.starfarer.api.ui.BaseTooltipCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1BaseTooltipCreator.html", null ]
     ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription.TooltipCreatorSkillEffectPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescripti6008d72df827abb618e06912c10500d9.html", null ],
+    [ "com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipLocation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipLocation.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.TransactionDataAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1TransactionDataAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.PlayerMarketTransaction.TransactionLineItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1TransactionLineItem.html", null ],
+    [ "com.fs.starfarer.api.campaign.SubmarketPlugin.TransferAction", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html", null ],
     [ "com.fs.starfarer.api.campaign.econ.TransferTotalAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1TransferTotalAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI.TravelState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI_1_1TravelState.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.MissionTrigger.TriggerAction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionTrigger_1_1TriggerAction.html", [
+      [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter.DFEPlaceFleetAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddAbilitiesAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddAbilitiesAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddCommanderSkillAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddCommanderSkillAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddCommodityDropAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddCommodityDropAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddCommodityFractionDropAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg8b651de8c0cdd6991a4929fd6111fb9e.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddCustomDropAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddCustomDropAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddFighterLPCDropAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddFighterLPCDropAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddFleetDefeatTriggerAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggb0ab8c344ae31d5e4a94010fc1a21261.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddHullmodDropAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddHullmodDropAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddSpecialItemDropAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddSpecialItemDropAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddTagAfterDelay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddTagAfterDelay.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddTagsAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddTagsAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.AddWeaponDropAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddWeaponDropAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.CreateFleetAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1CreateFleetAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.DespawnEntityAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1DespawnEntityAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.EntityMakeImportantAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3696a50b60f861049103cf6d2dc8429b.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetAddTugs", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetAddTugs.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetMakeImportantAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetMakeImportantAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetNoAutoDespawnAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetNoAutoDespawnAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetSetPatrolActionText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetSetPatrolActionText.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetSetTravelActionText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetSetTravelActionText.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.GenericAddTagsAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1GenericAddTagsAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.GenericRemoveTagsAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1GenericRemoveTagsAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.HideCommListing", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1HideCommListing.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.IncreaseMarketHostileTimeout", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg0a93d972a78766ad9954515250231f23.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.MakeDiscoverableAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1MakeDiscoverableAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.MakeFleetFlagsPermanentAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg5df810a786dabf5491cd6aea7962e86a.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.MakeNonStoryCriticalAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggd5dd0c6cb24266f427f3f0eccd90ba27.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.MovePersonToMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1MovePersonToMarket.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OrderFleetEBurn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1OrderFleetEBurn.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OrderFleetInterceptNearbyPlayerInStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg70256b9eb2d76a89652dbddaf2792dae.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OrderFleetInterceptPlayerAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg21add73a58479ba1da8bc56cdd91331d.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OrderFleetPatrolPointsAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg584f5078dd56fa392b85ea8c34ce64cf.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OrderFleetPatrolSpawnedEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg5b2de3d71da34b48825ef427bd20e518.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OrderFleetPatrolSystemAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggbd73cfe6b637ea5b1df8913b9b528bf3.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OrderFleetPatrolTagsAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggf6fbb8c6bd6a51d4bb4d4eaabab2d25f.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OrderFleetStopPursuingPlayerUnlessInStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg4a794daa8547afd29835585efb2a8f78.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickLocationAroundEntityAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggfe1767fb1cc885aacaabb04af81fd303.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickLocationAroundPlayerAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg1c1ce0f4653dab5c1722b05a922fbf65.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickLocationAtClosestToEntityJumpPointAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg774870f59142c79147454b1297741081.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickLocationAtClosestToPlayerJumpPointAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg384c73a3e7e18f75c0da43c57ff566d0.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickLocationAtInSystemJumpPointAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg133eb36445c0d8ffaf2c7b9205233482.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickLocationAwayFromPlayerAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg51b8ab2b11b342daf44f86ac7c117e9b.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickLocationInHyperspaceAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg331f52f855df5c606473bb082660933d.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickLocationTowardsEntityAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg001bf0b27fdce1bb3d870c10d17d164a.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickLocationTowardsPlayerAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg1a69b3d521fe72a2f4d11a75475172b7.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickLocationWithinArcAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg4865ff622f9ba61f948cb4e82680c4b5.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.PickSetLocationAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1PickSetLocationAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.RemoveAbilitiesAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1RemoveAbilitiesAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.RunScriptAfterDelay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1RunScriptAfterDelay.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SaveEntityReferenceAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3d897ce97dde91be39143da8a7cdb3a2.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SaveFleetReferenceAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SaveFleetReferenceAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetEntityFlagAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetEntityFlagAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetEntityToPickedJumpPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg73fd693273cee105b6989bd72e71e804.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetFleetFactionAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetFleetFactionAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetFleetFlagAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetFleetFlagAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetFleetFlagsWithReasonAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg72fdeead6823355d2fbaaf9c459ea0eb.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetFleetMemoryValueAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggfdf9f3da2fe56c7d978c136ae2942034.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetFleetMissionRefAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetFleetMissionRefAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetInflaterAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetInflaterAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetMemoryValueAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetMemoryValueAfterDelay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAfterDelay.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetPersonMissionRefAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggdf8dedaf8bcf1e6fb9f228c2d05a3060.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetRemnantConfigAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetRemnantConfigAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SpawnDebrisFieldAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SpawnDebrisFieldAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SpawnDerelictAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SpawnDerelictAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SpawnEntityAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SpawnEntityAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SpawnFleetAtPickedLocationAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg953983b50964a552d87055326a93b610.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SpawnFleetNearAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SpawnFleetNearAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SpawnShipGraveyardAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SpawnShipGraveyardAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.UnhideCommListing", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1UnhideCommListing.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.UnsetEntityFlagsAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1UnsetEntityFlagsAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.UnsetFleetFlagsAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1UnsetFleetFlagsAction.html", null ],
+      [ "com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.UnsetFleetFlagsWithReasonAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg1617441c0612fe285187dd1334fd888a.html", null ]
+    ] ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.hub.MissionTrigger.TriggerActionContext", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionTrigger_1_1TriggerActionContext.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.world.TTBlackSite", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1TTBlackSite.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.Tuning", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1Tuning.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.velfield.TurbulenceCalc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.velfield.TurbulenceCalc2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc2.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.velfield.TurbulenceCalc2.TurbulenceParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceCalc2_1_1TurbulenceParams.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent.TutorialMissionStage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent_1_1TutorialMissionStage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel.TutorialMissionStage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel_1_1TutorialMissionStage.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.eventide.DuelTutorialPanel.TutStage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel_1_1TutStage.html", null ],
+    [ "com.fs.starfarer.api.loading.Description.Type", "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description_1_1Type.html", null ],
+    [ "com.fs.starfarer.api.ui.ButtonAPI.UICheckboxSize", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI_1_1UICheckboxSize.html", null ],
     [ "com.fs.starfarer.api.ui.UIComponentAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIComponentAPI.html", [
       [ "com.fs.starfarer.api.ui.ButtonAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html", null ],
       [ "com.fs.starfarer.api.ui.UIPanelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIPanelAPI.html", [
@@ -1928,26 +2976,54 @@ var hierarchy =
         [ "com.fs.starfarer.api.ui.TooltipMakerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html", null ]
       ] ]
     ] ],
+    [ "com.fs.starfarer.api.impl.campaign.abilities.ai.EmergencyBurnAbilityAI.UseCost", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1EmergencyBurnAbilityAI_1_1UseCost.html", null ],
+    [ "com.fs.starfarer.api.util.AutoReducingValue.ValueChangedListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1AutoReducingValue_1_1ValueChangedListener.html", null ],
     [ "com.fs.starfarer.api.ui.ValueDisplayMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode.html", null ],
     [ "com.fs.starfarer.api.util.ValueShifterAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterAPI.html", null ],
+    [ "com.fs.starfarer.api.util.Misc.VarAndMemory", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1VarAndMemory.html", null ],
     [ "com.fs.starfarer.api.loading.VariantSource", "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1VariantSource.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GABuyArtifact.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GACelestialObject.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADataFromRuins.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADataFromRuins_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADeliverVIP.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADeliverVIP_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GADerelictArtifact.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAOutpost.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAOutpost_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GAProbePackage.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProbePackage_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.academy.GARansomResearcher.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GARansomResearcher_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.CheapCommodityMission.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CheapCommodityMission_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.CommodityProductionMission.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.ExtractionMission.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ExtractionMission_1_1Variation.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.missions.ProcurementMission.Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission_1_1Variation.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.velfield.VelocityField", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html", null ],
+    [ "com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect.VentsCapsDataMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect_1_1VentsCapsDataMap.html", null ],
+    [ "com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect.VentsCapsEffectData", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect_1_1VentsCapsEffectData.html", null ],
     [ "com.fs.starfarer.api.VersionInfoAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1VersionInfoAPI.html", null ],
     [ "com.fs.starfarer.api.combat.ViewportAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html", null ],
+    [ "com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_1_1VisibilityLevel.html", null ],
     [ "com.fs.starfarer.api.campaign.VisualPanelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.FleetInteractionDialogPluginImpl.VisualType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl_1_1VisualType.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.ids.Voices", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Voices.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.eventide.DuelEnemyAIImpl.WaitThenAct", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelEnemyAIImpl_1_1WaitThenAct.html", null ],
     [ "com.fs.starfarer.api.util.WarpingSpriteRendererUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WarpingSpriteRendererUtil.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.terrain.WavefrontTerrainPlugin.WavefrontParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin_1_1WavefrontParams.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.econ.WaystationBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1WaystationBonus.html", null ],
     [ "com.fs.starfarer.api.combat.WeaponAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html", null ],
-    [ "com.fs.starfarer.api.combat.listeners.WeaponBaseRangeModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponBaseRangeModifier.html", null ],
+    [ "com.fs.starfarer.api.combat.listeners.WeaponBaseRangeModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponBaseRangeModifier.html", [
+      [ "com.fs.starfarer.api.impl.hullmods.BallisticRangefinder.RangefinderRangeModifier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1BallisticRangefinder_1_1RangefinderRangeModifier.html", null ],
+      [ "com.fs.starfarer.api.impl.hullmods.HighScatterAmp.HighScatterAmpRangeMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_1_1HighScatterAmpRangeMod.html", null ]
+    ] ],
     [ "com.fs.starfarer.api.impl.campaign.skills.WeaponDrills", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WeaponDrills.html", null ],
     [ "com.fs.starfarer.api.combat.WeaponEffectPluginWithInit", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponEffectPluginWithInit.html", null ],
     [ "com.fs.starfarer.api.combat.WeaponGroupAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html", null ],
     [ "com.fs.starfarer.api.loading.WeaponGroupType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponGroupType.html", null ],
     [ "com.fs.starfarer.api.combat.listeners.WeaponOPCostModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponOPCostModifier.html", null ],
     [ "com.fs.starfarer.api.combat.listeners.WeaponRangeModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponRangeModifier.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater.WeaponsForSize", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater_1_1WeaponsForSize.html", null ],
+    [ "com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater.WeaponsForTier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater_1_1WeaponsForTier.html", null ],
+    [ "com.fs.starfarer.api.combat.WeaponAPI.WeaponSize", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1WeaponSize.html", null ],
     [ "com.fs.starfarer.api.loading.WeaponSlotAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html", null ],
     [ "com.fs.starfarer.api.loading.WeaponSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSpecAPI.html", null ],
+    [ "com.fs.starfarer.api.combat.WeaponAPI.WeaponType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1WeaponType.html", null ],
     [ "com.fs.starfarer.api.util.WeightedRandomPicker< com.fs.starfarer.api.campaign.PlanetAPI >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html", null ],
     [ "com.fs.starfarer.api.util.WeightedRandomPicker< com.fs.starfarer.api.campaign.SectorEntityToken >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html", null ],
     [ "com.fs.starfarer.api.util.WeightedRandomPicker< com.fs.starfarer.api.impl.campaign.procgen.DropGroupRow >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html", null ],
@@ -1957,6 +3033,7 @@ var hierarchy =
     [ "com.fs.starfarer.api.impl.campaign.skills.WingCommander", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WingCommander.html", null ],
     [ "com.fs.starfarer.api.loading.WingRole", "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WingRole.html", null ],
     [ "com.fs.starfarer.api.impl.campaign.skills.WolfpackTactics", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1WolfpackTactics.html", null ],
+    [ "com.fs.starfarer.api.util.WarpingSpriteRendererUtil.WSVertex", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WarpingSpriteRendererUtil_1_1WSVertex.html", null ],
     [ "Iterator", null, [
       [ "com.fs.starfarer.api.util.CollisionGridUtil.BucketIterator", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html", null ],
       [ "com.fs.starfarer.api.util.SaveableIterator< T >", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html", null ]

@@ -30,5 +30,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage
     [ "playerCargo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DistressResponse.html#af60fb62cc348e095d7b9404b1fdfd71b", null ],
     [ "playerFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DistressResponse.html#af31a38864521b8b38939eddf34342d89", null ],
     [ "playerFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DistressResponse.html#a7271d091098d8cf7e6992893b35c7b84", null ],
+    [ "REP_PER_USE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DistressResponse.html#ad2d47ab4d3ec9cf396b5ab28ede95bf3", null ],
+    [ "REP_SCAM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DistressResponse.html#a0887c8acafb8c7d2c8ee4ab081fc6a15", null ],
     [ "text", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DistressResponse.html#ab25c8d3524452d66c62879d05acb4114", null ]
 ];

@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject =
 [
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject_1_1Stage" ],
+    [ "Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject_1_1Variation.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject_1_1Variation" ],
     [ "addDescriptionForNonEndStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a4ee7496fc84089748a76d4dcf942220f", null ],
     [ "addNextStepText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#ac8ac5d48627bff74d52e313a052474cc", null ],
     [ "create", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a7025c4d01a82f23045b231d2ab7017a3", null ],
@@ -8,8 +10,15 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academ
     [ "getObjectNameWithTypeShort", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#aba05f868cea5ee6d68034721d81112f2", null ],
     [ "updateInteractionDataImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a8e073d0359cf03f596e6896b54f3f9f2", null ],
     [ "holoarts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#ad704dcb916ae3c32c8e92cd4a54fc9dd", null ],
+    [ "MISSION_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a503969c3ae6f63488b5e1823851ea2ce", null ],
     [ "object", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a8aafd32af6362e3046f000088476c3e7", null ],
     [ "patherTithe", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#ade9c4fb2fff22038daa4bf4a54a57269", null ],
+    [ "PROB_BLACK_HOLE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a4ba51248eaa1a8d51fcb172432c5568a", null ],
+    [ "PROB_HOLOARTS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a92a524ef56c20eb4ee3b21c52e655cb8", null ],
+    [ "PROB_NOT_ASTEROIDS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a4e495e8246a2ec247051d0c875dae55a", null ],
+    [ "PROB_PATHERS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a6878954843bc13b64ccab948e883443d", null ],
+    [ "PROB_PULSAR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a1dcc46a0bf28423a3b371947d9610229", null ],
+    [ "PROB_SLIPUP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#ab37aedde98367f2b783cacdcbeadf6b9", null ],
     [ "slipUp", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a4acdb38794ba8ad3ec9cbe5155603274", null ],
     [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#aafe42ccaceb9dce4216fed01060ddb01", null ],
     [ "variation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GACelestialObject.html#a98fa86a0a97a3bee2c02674a8a44473f", null ]

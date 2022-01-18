@@ -1,3 +1,21 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1CategoryGenDataSpec.html" title=" " alt="" coords="5,5,276,47"/>
+<area shape="rect" id="node1" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html" title=" " alt="" coords="248,71,469,112"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html" title=" " alt="" coords="539,71,760,112"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html" title=" " alt="" coords="829,5,1051,47"/>
+<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NavBuoyEntityPlugin.html" title=" " alt="" coords="829,71,1051,112"/>
+<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html" title=" " alt="" coords="829,136,1051,177"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="5,463,200,504"/>
+<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="248,463,469,504"/>
+<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html" title=" " alt="" coords="539,136,760,177"/>
+<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CryosleeperEntityPlugin.html" title=" " alt="" coords="539,201,760,243"/>
+<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DerelictShipEntityPlugin.html" title=" " alt="" coords="539,267,760,308"/>
+<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomEntityPlugin.html" title=" " alt="" coords="539,332,760,373"/>
+<area shape="rect" id="node12" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExplosionEntityPlugin.html" title=" " alt="" coords="539,397,760,439"/>
+<area shape="rect" id="node13" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html" title=" " alt="" coords="539,463,760,504"/>
+<area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GateEntityPlugin.html" title=" " alt="" coords="539,528,760,569"/>
+<area shape="rect" id="node15" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SupplyCacheEntityPlugin.html" title=" " alt="" coords="539,593,760,635"/>
+<area shape="rect" id="node16" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1WarningBeaconEntityPlugin.html" title=" " alt="" coords="539,659,760,700"/>
+<area shape="rect" id="node17" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html" title=" " alt="" coords="517,724,781,765"/>
+<area shape="rect" id="node18" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2.html" title=" " alt="" coords="517,789,781,831"/>
+<area shape="rect" id="node19" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html" title=" " alt="" coords="517,855,781,896"/>
 </map>

@@ -18,11 +18,16 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1A
     [ "showStageInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a09c2ac09e15cfa1f782493a3796d793a", null ],
     [ "updateStatus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#adfeecb8c1a1382efd1184d8cd22d1f87", null ],
     [ "currSource", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a9a19b2b90d61a78cded4bb4c4345c205", null ],
+    [ "FP_LARGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#ab79a5069a67a55165a514e7571c0b215", null ],
+    [ "FP_MEDIUM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a812e88139d61002248dee304fe2bed47", null ],
+    [ "FP_SMALL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a557026430ac84bd334b1153583b0b15a", null ],
     [ "gatheringPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#afb5410a62ac97de69f2dc3c004aac83d", null ],
     [ "interval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a0b2b028b3be8214c93ce657c6d29a407", null ],
     [ "minDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a4bfdd7d5b2f1bfb5ff184410945baa8f", null ],
     [ "origSpawnFP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a36e83ec75a3baec997d361ec11c413b3", null ],
+    [ "PREP_STAGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a82ec02df7ed205b9ea7338e5992e1c7a", null ],
     [ "prevType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#ac7d06dd2ba6a3625e9ccbe4caceb6df8", null ],
     [ "sources", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a87d19a549684917c82a7e5aaaa9dc430", null ],
-    [ "spawnFP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a58008fbfeef2ba2df69711377bcd81cb", null ]
+    [ "spawnFP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#a58008fbfeef2ba2df69711377bcd81cb", null ],
+    [ "WAIT_STAGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html#ab7b231611b022c47774179db189271dc", null ]
 ];

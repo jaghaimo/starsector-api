@@ -16,7 +16,11 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1Gravi
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a8afacbdce6dd10288b83dcf101e9be78", null ],
     [ "showActiveIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#acd692346fa000207a1bb40611ae4d311", null ],
     [ "showProgressIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a78f8d798261f2f9cf1723c04a3569803", null ],
+    [ "COMMODITY_ID", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a24e20c90cf1e390726c99a38c381ce6d", null ],
+    [ "COMMODITY_PER_DAY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#aa9c630fc6c3041726f88acab9ffe171c", null ],
     [ "data", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#ae7b5d2f1f5b0883aa55416f1146498b1", null ],
+    [ "DETECTABILITY_PERCENT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a8d1eefe6eba83402f8a35a9aa67bd122", null ],
     [ "phaseAngle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a1b651638b075d7364af15722f0f915c5", null ],
+    [ "SLIPSTREAM_DETECTION_RANGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#aa9a7cf07bb96dbf1632ec2b1e604e6fd", null ],
     [ "texture", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GraviticScanAbility.html#a7b92388b2e1c8c25ce650c412bf36af8", null ]
 ];

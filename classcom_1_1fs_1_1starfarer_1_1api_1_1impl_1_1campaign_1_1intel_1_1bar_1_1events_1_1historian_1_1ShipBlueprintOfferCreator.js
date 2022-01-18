@@ -10,5 +10,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getProbabilityRuins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html#a19537fa4b3156913ffba06d0d569f3fd", null ],
     [ "getRarityForSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html#ac52de1686315473efa57cbbba3c410c0", null ],
     [ "getTagsForSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html#a852d75239ec2f6ceb83dc7a88c93da09", null ],
-    [ "playerKnowsSpecAlready", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html#aa41b130da3308bd3268d1e2ee7e3f0a0", null ]
+    [ "playerKnowsSpecAlready", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html#aa41b130da3308bd3268d1e2ee7e3f0a0", null ],
+    [ "PREFIX", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html#ab5b04ef3de5c4d2f021e218cc82512fa", null ]
 ];

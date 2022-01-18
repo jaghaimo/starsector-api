@@ -1,5 +1,10 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker =
 [
+    [ "CommodityDescriptionProviderWrapper", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1CommodityDescriptionProviderWrapper.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1CommodityDescriptionProviderWrapper" ],
+    [ "CommodityIconProviderWrapper", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1CommodityIconProviderWrapper.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1CommodityIconProviderWrapper" ],
+    [ "PersonnelAtEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1PersonnelAtEntity.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1PersonnelAtEntity" ],
+    [ "PersonnelData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1PersonnelData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1PersonnelData" ],
+    [ "PersonnelRank", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1PersonnelRank.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker_1_1PersonnelRank" ],
     [ "PlayerFleetPersonnelTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a3844344f12ae020befb6fe54316cc839", null ],
     [ "addSectionAfterPrice", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a2dab372e1a2614ee92d8fff33585499e", null ],
     [ "doCleanup", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac308233b1d823405914b7596640de7f7", null ],
@@ -8,6 +13,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker =
     [ "getHandlingPriority", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aa5ae20fd334fcdfe7eacd17f70d5ce76", null ],
     [ "getIconName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a92050d6898cb940e6acc550793267b1c", null ],
     [ "getIconName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a8b3b7e322f7426e576394a918afbc84c", null ],
+    [ "getInstance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ad1b3f9e732448b621df287f12f87d749", null ],
     [ "getInteractionEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a08b488f7c8636addc04d8052793d86fd", null ],
     [ "getMarineData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ace5d5d103385c679be7d0f7b19bb48e8", null ],
     [ "getMarineEffectBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5fdee7e7633074c1eb000b34ac9acf2d", null ],
@@ -28,12 +34,18 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker =
     [ "reportSubmarketOpened", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a078f85df0acde8d65e8d04082a6414c5", null ],
     [ "restoreData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5944ac4745a9e979dc0d8b445f833f3b", null ],
     [ "saveData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a1f038fbdeb79c067ffcc3ff6ec7c720e", null ],
+    [ "transferPersonnel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac60ce7612f6b69f46cca76e4995a8f18", null ],
     [ "update", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a581db730d1f9b0dde327b62a1edb998d", null ],
     [ "update", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#abf2f3a7d0ce35934310fb0449ebecedb", null ],
     [ "currSubmarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a489376f69ce2a989c08f097d1cb6fe88", null ],
     [ "droppedOff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aebb0f831c51862f5350dc51241717b0c", null ],
+    [ "KEEP_XP_DURING_TRANSFERS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a088c1dd0ec13536d5328487d4bbd932b", null ],
+    [ "KEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ac80524ddb7dc610959c633d9a01ad27d", null ],
     [ "marineData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a030914f04b57734d93009e447c525aa3", null ],
+    [ "MAX_EFFECTIVENESS_PERCENT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a65ee7a068929af0d65caf1d4d92b9212", null ],
+    [ "MAX_LOSS_REDUCTION_PERCENT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a50fa3eabe64264e54e1084806fc8d69a", null ],
     [ "pods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4f5de05c3af17edcc7215e734dc08fc5", null ],
     [ "savedMarineData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a062a745171324f13defce864aa9fcbc5", null ],
-    [ "savedPersonnelData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aaaf5b38bc0767c84d070a3c2eceaca6b", null ]
+    [ "savedPersonnelData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aaaf5b38bc0767c84d070a3c2eceaca6b", null ],
+    [ "XP_PER_RAID_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a1a63e2d08dad1401ab1bd86a4d18466e", null ]
 ];

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript =
 [
+    [ "CampaignTutorialStage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript_1_1CampaignTutorialStage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript_1_1CampaignTutorialStage" ],
     [ "CampaignTutorialScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript.html#a6195784d7cadc6622b5cf7cbc772dd0c", null ],
     [ "addFleets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript.html#acbdccfb461f7a606f40ab1fd22f378a9", null ],
     [ "addPirateFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript.html#a74ac1bf614c66f6f76851ed465953357", null ],
@@ -26,5 +27,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1Campai
     [ "playerSaved", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript.html#af95ca049c3a6368b380e7233b9c7d412", null ],
     [ "quickSaveFrom", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript.html#a1865e95ee759725bc9fbe3a4e1455715", null ],
     [ "stage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript.html#a8eb91afaa4e55347c693f50ec3f72aca", null ],
-    [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript.html#afdff139acb7a56bd996e3e157082e99a", null ]
+    [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript.html#afdff139acb7a56bd996e3e157082e99a", null ],
+    [ "USE_TUTORIAL_RESPAWN", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1CampaignTutorialScript.html#ac5c4062444d790173885093a848eea90", null ]
 ];

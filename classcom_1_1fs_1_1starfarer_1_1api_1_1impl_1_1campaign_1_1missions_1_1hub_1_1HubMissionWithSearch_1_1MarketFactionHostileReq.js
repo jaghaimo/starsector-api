@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionHostileReq =
+[
+    [ "MarketFactionHostileReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionHostileReq.html#a30b9d3d82ceb53edc3b70074def2c76e", null ],
+    [ "marketMatchesRequirement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionHostileReq.html#a84426af9babaec34ab01b7712cdc72ed", null ],
+    [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionHostileReq.html#a45b2f7a2f5f7f8252ddc6c874fbc7b15", null ],
+    [ "negate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionHostileReq.html#a8adb7e15a219942fcc2e9816657ec71e", null ]
+];

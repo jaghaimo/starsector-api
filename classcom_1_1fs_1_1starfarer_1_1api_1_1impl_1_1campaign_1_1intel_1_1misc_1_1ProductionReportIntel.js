@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1ProductionReportIntel =
 [
+    [ "ProductionData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1ProductionReportIntel_1_1ProductionData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1ProductionReportIntel_1_1ProductionData" ],
     [ "ProductionReportIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1ProductionReportIntel.html#a9bc3d5eeca4c263b646271a878d76ef1", null ],
     [ "addBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1ProductionReportIntel.html#ae9ed3b694b5511686cd653320492335b", null ],
     [ "createIntelInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1ProductionReportIntel.html#a1d8a21f9d1269ed8675043e06efa3b34", null ],

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConstructionQueue =
 [
+    [ "ConstructionQueueItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConstructionQueue_1_1ConstructionQueueItem.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConstructionQueue_1_1ConstructionQueueItem" ],
     [ "addToEnd", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConstructionQueue.html#a554a095833d81dabd41be45ce5ff8467", null ],
     [ "getItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConstructionQueue.html#ae39c72fa08e99a2467417c81fe9c2c43", null ],
     [ "getItems", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ConstructionQueue.html#a2ae142d8e7a1f16626a1f5cd25043f9d", null ],

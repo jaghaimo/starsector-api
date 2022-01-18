@@ -1,11 +1,13 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager =
 [
+    [ "GenericBarEventCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventb7443876afc9cc66909b145cad76cf4d.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventb7443876afc9cc66909b145cad76cf4d" ],
     [ "BarEventManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#acb6bad4f6ddff4612e46979c8a379180", null ],
     [ "addEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#a406388675cb1e2a796e7cc9c1a7e28a8", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#a09ba1a203ef1f682408686d4fdc7ccfa", null ],
     [ "getActive", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#a97f477bd431fa7e3e975c90b17506000", null ],
     [ "getCreatorFor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#aa1f56b922cd32f094511743269b484bb", null ],
     [ "getCreators", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#ab53d538405c5d958b66a3c872c788718", null ],
+    [ "getInstance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#a82a603311a293ea6a3fd36e2957cafda", null ],
     [ "getSeed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#ab37a0244a01699ebb5c909ae25c6de8e", null ],
     [ "getTimeout", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#ac162c578a07632ad0bdd5e8de1784047", null ],
     [ "hasEventCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#ad8c18267ea8c77cbc597ed8f3ad10f72", null ],
@@ -19,6 +21,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "active", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#a654f325d79a64b30936faea4551fc8b2", null ],
     [ "barEventCreators", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#a4f9628dd509f483a5a3938e832a3b4e0", null ],
     [ "creators", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#a2c2bf57b98f86b2414ad7c8430d45b82", null ],
+    [ "KEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#a7c506ba4acf4d3dfb60531109c617e59", null ],
     [ "seed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#aceb7ffe2f4e54dc027c9ec2f109980f3", null ],
     [ "timeout", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#aeac1ce0a24600bb29d393d8d93abc76f", null ],
     [ "tracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventManager.html#a180832e501aa9a7f6c172108dd6f6dfb", null ],

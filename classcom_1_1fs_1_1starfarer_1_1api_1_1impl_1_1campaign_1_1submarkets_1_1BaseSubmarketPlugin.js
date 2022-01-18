@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin =
 [
+    [ "ShipSalesData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_1_1ShipSalesData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin_1_1ShipSalesData" ],
     [ "addAllCargo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#af2b428a354eee209e265521ed85654b8", null ],
     [ "addAndRemoveStockpiledResources", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a8947a2e8c6f983629f40cec419058c17", null ],
     [ "addAndRemoveStockpiledResources", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#adbc0480363e547e267b089a2f34158e5", null ],
@@ -80,5 +81,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1Base
     [ "minSWUpdateInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a1b4f356643c5557098ba63900f03a991", null ],
     [ "sinceLastCargoUpdate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a302e3ac05c2128f0f543f94eadef2720", null ],
     [ "sinceSWUpdate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a0a96ee0c82aac2af866bae6f7083a750", null ],
-    [ "submarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6", null ]
+    [ "submarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a7cfc4316a62889640e1f1dc1cc157ad6", null ],
+    [ "TRADE_IMPACT_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a8a5d28f151e8c0c9f45a60feb305af51", null ]
 ];

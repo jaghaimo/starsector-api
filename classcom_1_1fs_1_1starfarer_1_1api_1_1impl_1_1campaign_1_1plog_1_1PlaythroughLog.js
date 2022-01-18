@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog =
 [
+    [ "PLIntelUIData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog_1_1PLIntelUIData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog_1_1PLIntelUIData" ],
     [ "PlaythroughLog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#ada1ea269bf9c98725145fec6cdb01f27", null ],
     [ "addEntry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#ac84340b43e9d784ce4edc712296e4e89", null ],
     [ "addEntry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#ad6a60bce8f7ad63c87804da27ffa920b", null ],
@@ -10,6 +11,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1Playthroug
     [ "getData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a37797a7d3cca00ff68b933632b02567e", null ],
     [ "getDateForIndex", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a115075799c6edcd9181433c4f047efc0", null ],
     [ "getEntries", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a9fa162c7ba168b3cc7b4e381600e9091", null ],
+    [ "getInstance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a418ef1e8631536f57f9242bfc7a0cf1c", null ],
     [ "getOfficerSkillsLearned", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#ad6b81bc7b4588fcfd8b098186c7b9b2f", null ],
     [ "getPrevValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a05a2d571f896267955e96496f5d6bd44", null ],
     [ "getSModsInstalled", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a3bb89dcec47e5524dabbac775b4e212f", null ],
@@ -35,6 +37,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1Playthroug
     [ "biggestBought", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a26533f964c87488ae0b32c7d9ff2adba", null ],
     [ "data", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#abbf111416b9d0a79ace2aef3a320c391", null ],
     [ "entries", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a50b56757412a5e4c88cb07895e63aafe", null ],
+    [ "KEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#ae2ade7df71ba618ce42d6001e17f8575", null ],
     [ "officerSkillsLearned", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a21beb26a8702a46771137e0b21bf5873", null ],
     [ "saved", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#ae75f073fd0ebb8780b16dbf9471fafbe", null ],
     [ "smodsInstalled", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a1af4338c50386f62363bcc63aa531667", null ],

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin =
 [
+    [ "CoronaParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin_1_1CoronaParams.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin_1_1CoronaParams" ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a7eb5568b5a92c1cdf2fe05ea18abc7b9", null ],
     [ "applyEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a5499eccc543782c417d67944b9ce9078", null ],
     [ "canPlayerHoldStationIn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a0542aecf5ad47e8e6e337f5e1c497d26", null ],
@@ -72,9 +73,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCor
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a31ac53442e1048fc871c87f85dd3c808", null ],
     [ "shouldPlayLoopOne", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#aa03136ff9715f8ccc66beea1bdbf99b4", null ],
     [ "shouldPlayLoopTwo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#aca2d726a0fdce58a1fc402e14afe228a", null ],
+    [ "writeReplace", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a61f232ed9cad6f19e22e8c78d7fab198", null ],
     [ "blocker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#aaaa170d45882b8e02d033409196e54d3", null ],
     [ "color", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a78735a7b2125668990fe730b7debf2fe", null ],
+    [ "CR_LOSS_MULT_GLOBAL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a8675b6fe8529fdc7bd1f6acb5264a00e", null ],
     [ "flareManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a645b989d3d7cc2abbe09905cc6f63d4a", null ],
+    [ "layers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#accd3a33c7a9124431c220cd56ddeba2b", null ],
     [ "params", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a782a1a74f62510b7760e5183d33f24b6", null ],
     [ "renderer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#ac000f9438a01d3b513e03af6a55439db", null ],
     [ "texture", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#aa14643b89b5f2a1da381ef5f4a47e883", null ]

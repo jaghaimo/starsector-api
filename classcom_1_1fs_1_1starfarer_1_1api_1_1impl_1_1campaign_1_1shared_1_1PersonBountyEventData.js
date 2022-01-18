@@ -9,5 +9,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBo
     [ "removeParticipatingFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBountyEventData.html#a3de2778d1d8cddc528f5fd929286eff8", null ],
     [ "reportSuccess", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBountyEventData.html#ac4c75027a3a27577292cf894ab17114f", null ],
     [ "setLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBountyEventData.html#ab1fb81563ae612a4733411e830d86aaf", null ],
-    [ "setSuccessesThisLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBountyEventData.html#a502788ddd49e8213c79ecff13b20f971", null ]
+    [ "setSuccessesThisLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBountyEventData.html#a502788ddd49e8213c79ecff13b20f971", null ],
+    [ "level", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBountyEventData.html#aea226ff869a04289acac6d2ff2296925", null ],
+    [ "participatingFactions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBountyEventData.html#ac2fcf0e56b1000a57a23a9b4e775b224", null ],
+    [ "successesThisLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBountyEventData.html#a1021e574343ddfa38dfb35daf2e164bc", null ]
 ];

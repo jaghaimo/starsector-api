@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect =
 [
+    [ "OfficerDataMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_1_1OfficerDataMap.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_1_1OfficerDataMap" ],
+    [ "OfficerEffectData", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_1_1OfficerEffectData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect_1_1OfficerEffectData" ],
     [ "applyEffects", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a67ed2a6f4aa456ab574c3ae14272993b", null ],
     [ "getEffects", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a2456c1fdd234a8e105f2a1f9cceeb8d8", null ],
     [ "getMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html#a39a7a6f48c697560a54d5b143cf9d295", null ],

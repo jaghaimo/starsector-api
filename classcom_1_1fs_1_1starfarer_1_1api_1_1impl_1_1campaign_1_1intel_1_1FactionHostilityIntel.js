@@ -16,9 +16,13 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHo
     [ "getSmallDescriptionTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#a38920e90c0b43d3e038d20f5ed18a225", null ],
     [ "getSortString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#af5222a671bfe4b2a427829654caad227", null ],
     [ "getTwo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#add232a3671bcef1f9ba6ae8efce6f12c", null ],
+    [ "CHECK_INTERVAL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#ad681f53103ee1730e61f1f682d1425f0", null ],
     [ "daysUntilCheck", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#a2ca89469b7bcfee768b0af84ed730258", null ],
+    [ "END_PROB", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#a5e0555e425cfb6c8b307b0682f8d92bf", null ],
     [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#a07be0fe73158a31315b415ccce878033", null ],
     [ "initialRelationship", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#a52c0fe51e2d9af3bf7e831da21b6d433", null ],
+    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#a3b6a115a286160c1026a7686628e60ed", null ],
+    [ "MIN_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#a379c0217793c94477e66b760d139a1cc", null ],
     [ "one", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#af8f9e5590b68965711a0652f29c57057", null ],
     [ "random", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#af524df80993a6fb20a3855e73cdb48d7", null ],
     [ "two", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionHostilityIntel.html#ade8a9bc8958309db4d626e70e08ea3e5", null ]

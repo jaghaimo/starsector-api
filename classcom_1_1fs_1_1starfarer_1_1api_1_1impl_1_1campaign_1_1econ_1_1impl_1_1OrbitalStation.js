@@ -14,6 +14,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Or
     [ "applyNoAICoreModifiers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a0bcd4de7ecefef313ec6f9210c970144", null ],
     [ "buildingFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#ae16633d70fa536c5bf36f41c00c1424b", null ],
     [ "canImprove", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#ac8ee1bf40ce2f5d7f004f3c6d0d6941d", null ],
+    [ "disrupt", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#ad6b9c1423c1931f76211857c1b38e336", null ],
     [ "disruptionFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a2271ae46fd786d71e3e1c5f1e98aa4ba", null ],
     [ "ensureStationEntityIsSetOrCreated", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#aa4275fdeecfa684bee4687f5c93ce2b2", null ],
     [ "getBaseStabilityMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#ae9ea5c6b153dc546a8955f1f3da98fca", null ],
@@ -36,6 +37,10 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Or
     [ "spawnStation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#ab44686e4d4d7f740cd2ba65ab607e6c6", null ],
     [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#ad23c550275324809eb8a298158493442", null ],
     [ "upgradeFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#abe150184c8b959b5e998190e1d3b2108", null ],
+    [ "DEFENSE_BONUS_BASE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a90ecc16b1b8f895a2e3bbafffa881f76", null ],
+    [ "DEFENSE_BONUS_BATTLESTATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#af9c135e8c5e64518cd862b3506e27bfd", null ],
+    [ "DEFENSE_BONUS_FORTRESS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a51e183b47abafd54bce21810fe6a707d", null ],
+    [ "IMPROVE_STABILITY_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a45b6cdff9fb07001be1f0c611856e90b", null ],
     [ "stationEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#aa43ceaf94a484688a1eed3260babac15", null ],
     [ "stationFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a9aaa015438a7bf2a221950f86077cde2", null ],
     [ "usingExistingStation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a36e13c50575e88aac966cc6f83acadb9", null ]

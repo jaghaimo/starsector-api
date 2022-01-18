@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI =
 [
+    [ "CREvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI_1_1CREvent.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI_1_1CREvent" ],
     [ "applyCREvent", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a2e5fc52f1201722b757a0301f8bd0a76", null ],
     [ "applyCREvent", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#ad61e9ffec3110481412d986566210afe", null ],
     [ "computeRepairednessFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#ad5ac338d6f6735dc332216bcf83cd65c", null ],

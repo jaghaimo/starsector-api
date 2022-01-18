@@ -20,5 +20,14 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual =
     [ "setSubImageHeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a6187ddd49dd8876201faf07124eaab7b", null ],
     [ "setSubImageWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a067bf1a6c4e8dff89c8c92ada809b2c0", null ],
     [ "setSubImageX", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a1f23bcb3d81a4798e6c3306367f69078", null ],
-    [ "setSubImageY", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a82749129cff018ca726cbb56b3c0b4e4", null ]
+    [ "setSubImageY", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a82749129cff018ca726cbb56b3c0b4e4", null ],
+    [ "showRandomSubImage", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a7214a59535bd590fc5fc9f8294aeab01", null ],
+    [ "spriteId", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a9bc440b6a85626fa92f2b303ec0ce132", null ],
+    [ "spriteName", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#ad5a61ba81009dfbbfdecbc8b88e23498", null ],
+    [ "subImageDisplayHeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a852bf9185da5c9443b4b1291b52c26d5", null ],
+    [ "subImageDisplayWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#abde0913c75cc364da4858ffea8b4e272", null ],
+    [ "subImageHeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#afd6776e264a6f1790222223e711b769c", null ],
+    [ "subImageWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a210cf7a9c9d02b66b71e3957f2cdf775", null ],
+    [ "subImageX", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#af079abb6b74dbd703bff41856d20f3c0", null ],
+    [ "subImageY", "classcom_1_1fs_1_1starfarer_1_1api_1_1InteractionDialogImageVisual.html#a23662838b969633010db6e1e61544227", null ]
 ];

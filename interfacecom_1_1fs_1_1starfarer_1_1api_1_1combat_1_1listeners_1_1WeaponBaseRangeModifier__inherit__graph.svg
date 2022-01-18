@@ -21,8 +21,8 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="224,-49 224,-90 407,-90 407,-49 224,-49"/>
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1BallisticRangefinder_1_1RangefinderRangeModifier.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="224,-49 224,-90 407,-90 407,-49 224,-49"/>
 <text text-anchor="start" x="232" y="-78" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.hullmods.</text>
 <text text-anchor="start" x="232" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">BallisticRangefinder.RangefinderRange</text>
 <text text-anchor="middle" x="315.5" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00">Modifier</text>
@@ -38,8 +38,8 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="211,-0.5 211,-30.5 420,-30.5 420,-0.5 211,-0.5"/>
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_1_1HighScatterAmpRangeMod.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="211,-0.5 211,-30.5 420,-30.5 420,-0.5 211,-0.5"/>
 <text text-anchor="start" x="219" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.hullmods.</text>
 <text text-anchor="middle" x="315.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">HighScatterAmp.HighScatterAmpRangeMod</text>
 </a>

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost =
 [
+    [ "DespawnReason", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost_1_1DespawnReason.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost_1_1DespawnReason" ],
     [ "BaseSensorGhost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html#a7e05d1a482a6144f4d9fa8f386ec0455", null ],
     [ "addBehavior", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html#a04689e1f08918c57e53a4092db36ce01", null ],
     [ "addInterrupt", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html#ace4299c6b893e6f7a90a14a7b45346be", null ],

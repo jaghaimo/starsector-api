@@ -1,5 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin =
 [
+    [ "CampaignEventCategory", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1CampaignEventCategory.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1CampaignEventCategory" ],
+    [ "PriceUpdatePlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin_1_1PriceUpdatePlugin" ],
     [ "advance", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html#ae8d3de2be1e04a716ab15acc28b95187", null ],
     [ "allowMultipleOngoingForSameTarget", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html#a564cf34533ec680a23b1e8db26d76aa1", null ],
     [ "callEvent", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html#a878c82c8b2883f679957edf4496a94ce", null ],

@@ -28,12 +28,18 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus =
     [ "modifyPercent", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a7cbdd1c44071517616fa6c6101a38ea0", null ],
     [ "modifyPercent", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a78cf8b7fda6f57d863471ccfc7d62f7a", null ],
     [ "modifyPercentAlways", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a790a804c8086c39431c028d37a2a557a", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a737f44345b008ae0f55bfbf4a8386a19", null ],
+    [ "recompute", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a2049dce9e44e0f2502d3619f144d52f5", null ],
     [ "unmodify", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a842b1c12ad63fe608e449acb687a27cb", null ],
     [ "unmodify", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a59aceb63050fb47ce69b0bd0ab89fe02", null ],
     [ "unmodifyFlat", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#afb8cbd56006de48758f0081fc6b95bea", null ],
     [ "unmodifyMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a9bf42690fee3b977ec4836ddf3da7388", null ],
     [ "unmodifyPercent", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#acfbbd2945e98666c4426c17b8ef7519b", null ],
     [ "flatBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a5bfdf2fded925b80898404141f1517b8", null ],
+    [ "flatBonuses", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a0629c266ae6c18ec5aa062f7e4373a42", null ],
     [ "mult", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#abe88b1985fce5dd01221fbefe3f1e41b", null ],
+    [ "multBonuses", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#ad2022f5b6896e5f8e5bb2251b5d00742", null ],
+    [ "needsRecompute", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a72870fd667dd952577210e60cbc8a282", null ],
+    [ "percentBonuses", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a0eca6a028097d95df23cbaa8a7f2c28e", null ],
     [ "percentMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1StatBonus.html#a7c7f6cf360dc6a049421c6486b7ecb38", null ]
 ];

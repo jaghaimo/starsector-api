@@ -17,5 +17,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Gr
     [ "hasPostDemandSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GroundDefenses.html#a690e82f70deef821a5386cf67fbef97f", null ],
     [ "isDemandLegal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GroundDefenses.html#ae2faeec38c1c98e620604280d345ed62", null ],
     [ "isSupplyLegal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GroundDefenses.html#af1322c70aa0e7e706b577529584d2b7b", null ],
-    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GroundDefenses.html#af42c7902c1d6813b5ab2574dc900ee6c", null ]
+    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GroundDefenses.html#af42c7902c1d6813b5ab2574dc900ee6c", null ],
+    [ "ALPHA_CORE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GroundDefenses.html#a2910cbdb8e6cfd292e5e6f42afca08f1", null ],
+    [ "DEFENSE_BONUS_BASE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GroundDefenses.html#af7a9324d7cd4f4444b971ad375a6481b", null ],
+    [ "DEFENSE_BONUS_BATTERIES", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GroundDefenses.html#a4c27520e1c1788e89416beb6d2a8442e", null ],
+    [ "IMPROVE_DEFENSE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1GroundDefenses.html#a21b15a19881a49811e244d98c00f9a3e", null ]
 ];

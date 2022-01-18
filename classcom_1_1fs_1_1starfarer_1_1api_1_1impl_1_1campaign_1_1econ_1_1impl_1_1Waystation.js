@@ -15,5 +15,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Wa
     [ "getUpkeepPenalty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#abf674b5042d5ea8530977acc05ed6720", null ],
     [ "hasPostDemandSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#ad29fefdd81af61eb54c8dd533834cedd", null ],
     [ "isAvailableToBuild", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a834bcb4bc52acc2d6a6c9884031efcc2", null ],
-    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#ac45a6de769fc060aef2ef2ce34f20b91", null ]
+    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#ac45a6de769fc060aef2ef2ce34f20b91", null ],
+    [ "ALPHA_CORE_ACCESSIBILITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a8fd1cbb302c0972ab1585444e13ebd52", null ],
+    [ "BASE_ACCESSIBILITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a18bdf706c1c4f338931305f2675cd49b", null ],
+    [ "IMPROVE_ACCESSIBILITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#aba6ea8492b7f6234be47636a782e8a48", null ],
+    [ "UPKEEP_MULT_PER_DEFICIT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Waystation.html#a0d6b01fc3e0a3427fe65f4db7aad0b95", null ]
 ];

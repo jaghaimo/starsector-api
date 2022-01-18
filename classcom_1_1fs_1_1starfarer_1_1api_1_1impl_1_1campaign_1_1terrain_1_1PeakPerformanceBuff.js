@@ -8,5 +8,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPer
     [ "getMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html#a11a3e78822e439483442bd89d1456c0b", null ],
     [ "isExpired", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html#a0ef9d1d58f9d5b6cc6517b5df128e0fe", null ],
     [ "setDur", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html#abe381e289bbdac69f6afaf554c7a18f5", null ],
-    [ "setMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html#ae74ce2b171769d16add1aee62dea5251", null ]
+    [ "setMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html#ae74ce2b171769d16add1aee62dea5251", null ],
+    [ "dur", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html#a26966a553680bce635c949b5823e98e3", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html#ac62da76b777a068e3eb46ea0f210c49c", null ],
+    [ "mult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html#a189dfcf25f336076c39e43531daff9fd", null ]
 ];

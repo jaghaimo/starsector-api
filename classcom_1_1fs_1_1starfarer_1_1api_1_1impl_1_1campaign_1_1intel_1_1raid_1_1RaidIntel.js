@@ -1,5 +1,8 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel =
 [
+    [ "RaidDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidDelegate.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidDelegate" ],
+    [ "RaidStage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidStage.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidStage" ],
+    [ "RaidStageStatus", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidStageStatus.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidStageStatus" ],
     [ "RaidIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a3d1acbc58b41a3054376704d7cd16e44", null ],
     [ "addBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aaab4c0cb169cf7800d002888cbc8d780", null ],
     [ "addStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a43e2a66fd4acec284313e56e1e30a955", null ],
@@ -60,5 +63,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1R
     [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a21cb51650bf6190316709cf6d75e9cab", null ],
     [ "sid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a41c105caee954fae44b5c091e3ed5031", null ],
     [ "stages", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#aecd14961de8d8eae103a4248a3b1f50b", null ],
-    [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a5af9adc682a142510f8040d02efa95eb", null ]
+    [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a5af9adc682a142510f8040d02efa95eb", null ],
+    [ "UPDATE_FAILED", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a89050f374e593ddc402f2d4ca0ce83f2", null ],
+    [ "UPDATE_RETURNING", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html#a363e0757549986f29b3bcda1fe7a8f95", null ]
 ];

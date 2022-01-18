@@ -8,5 +8,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPlugi
     [ "getAbandonCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a03db3f2fa43472b62aa9d44155543b35", null ],
     [ "getConfirmationPromptWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#ab86b9ae2098281509b2f308b0e2dd445", null ],
     [ "isAbandonButtonTooltipExpandable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a098dd5029df3e94ee12f10fafb019d60", null ],
-    [ "isConfirmEnabled", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a973edad89f30b265df0a8bfc3abef74a", null ]
+    [ "isConfirmEnabled", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a973edad89f30b265df0a8bfc3abef74a", null ],
+    [ "COST_PER_SIZE_MINUS_2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#a5d66c6b9e7f937d238536c43c64de160", null ],
+    [ "MAX_SIZE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html#ae0cf8e57ed4222cd41684756b496bab3", null ]
 ];

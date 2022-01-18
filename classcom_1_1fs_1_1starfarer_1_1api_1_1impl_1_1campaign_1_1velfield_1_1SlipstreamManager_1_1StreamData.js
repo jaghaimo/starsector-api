@@ -1,0 +1,27 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData =
+[
+    [ "StreamData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a05396613476a7939302ace5ee8724bde", null ],
+    [ "generate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#af9ba8c11e7f32ed54b6d5fd1fa62ee5b", null ],
+    [ "generateControl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a1163b5ee51029c4035c728ab33509a1d", null ],
+    [ "generateControl2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a4069c9b238a0044e22474bb06b54e544", null ],
+    [ "generateP0", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a5a4d7aa2addf289b90c15b440644af24", null ],
+    [ "generateP1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a17659b8205afb7f4b1d9cfb6c66f5ab8", null ],
+    [ "burnMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#ae5754214f7d5f5b3eefb86778f6eeefd", null ],
+    [ "control2X", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#aa6af18bc2864cba6af6acfb3b5cf380b", null ],
+    [ "control2Y", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a4069402afc6459f7e361c9c9dada006c", null ],
+    [ "controlX", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a36358731d3952977c0fa4b6c184e162b", null ],
+    [ "controlY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a99a0e9f11211799b02cf9a2998f46ac0", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a46cdd3740be3d8fcdc1f92396d64c645", null ],
+    [ "minorRandomize", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a4b9c29ba654ee6fc8a66eecdf56a4899", null ],
+    [ "onlyKeepLongestSegment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a977441f6884bedf2c73c4499a16e87e3", null ],
+    [ "p0x", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a50521988c14be074ece3a085c776820f", null ],
+    [ "p0y", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#aa9f1db874d3a26853f56cf63ea1fa786", null ],
+    [ "p1x", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#ac76a1e55f5e116e0d603ca98c0b13a1c", null ],
+    [ "p1y", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a3e6c4ec6b4f62f7bd52c5c03027ec749", null ],
+    [ "priority", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a3b4428ece243b0ab6434ee21b3a35a90", null ],
+    [ "randomize", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a40cb4b036653e3f492b4340949502c17", null ],
+    [ "reverse", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#aabd7f7eb0944b01d42b2f50fa805a548", null ],
+    [ "straight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#a9e528aa10d4f273258f8d733cfdb5a40", null ],
+    [ "type", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#ae8ce93323e4774c274886a5277638b72", null ],
+    [ "wasUsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1StreamData.html#af11a27fd5832f14b50554c7588a153f7", null ]
+];

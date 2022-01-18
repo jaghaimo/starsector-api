@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl =
 [
+    [ "OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl_1_1OptionId.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl_1_1OptionId" ],
     [ "TutorialLayInCourseDialogPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl.html#a06bf5898f2d5f1641f713e81782e59db", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl.html#a959ba2504b691bccb5f78b767501689c", null ],
     [ "backFromEngagement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl.html#acebf9d8f7ae0fcbfaefe4356e1ca7068", null ],

@@ -7,5 +7,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1Galati
     [ "isTooltipExpandable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a05019b6ed63c40bf46b932524321ff97", null ],
     [ "reportEconomyMonthEnd", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a996fb7a39780739ceab1ef1aff443ead", null ],
     [ "reportEconomyTick", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a3bf1a6b877a52d127b2d240fb98ca2cf", null ],
-    [ "startTime", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a63ab036067f17ccb7b9758ccc8f553aa", null ]
+    [ "DURATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a4eb9e8a5192a94d149000cb451480e2b", null ],
+    [ "startTime", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a63ab036067f17ccb7b9758ccc8f553aa", null ],
+    [ "STIPEND", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#af4e3ab346f91b26aeaff59617cb1928a", null ]
 ];

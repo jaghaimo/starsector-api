@@ -153,8 +153,8 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="287,-98.5 287,-128.5 423,-128.5 423,-98.5 287,-98.5"/>
+<g id="a_node10"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="287,-98.5 287,-128.5 423,-128.5 423,-98.5 287,-98.5"/>
 <text text-anchor="start" x="295" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.</text>
 <text text-anchor="middle" x="355" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShipAPI.HullSize</text>
 </a>
@@ -187,8 +187,8 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="262,-0.5 262,-30.5 448,-30.5 448,-0.5 262,-0.5"/>
+<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog_1_1PLIntelUIData.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="262,-0.5 262,-30.5 448,-30.5 448,-0.5 262,-0.5"/>
 <text text-anchor="start" x="270" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="355" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PlaythroughLog.PLIntelUIData</text>
 </a>

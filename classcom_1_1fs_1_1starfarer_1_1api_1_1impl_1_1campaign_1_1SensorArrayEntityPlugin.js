@@ -7,6 +7,10 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityP
     [ "isMakeshift", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#aab779ef57164cf07d13245268325364f", null ],
     [ "printEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a080ed3a6e2decedcff26434112a1a0fd", null ],
     [ "printNonFunctionalAndHackDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a255d76e30f3f5aec02f4fa4aa8ba10ee", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a5af13f45c8fb0b6369548a9d36c54064", null ],
     [ "respondToFalseSensorReadings", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a2d21a0c5c64c64ee6fa17f5cf0729041", null ],
-    [ "spawnPlayerSensorReading", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a5659bf40020e61aeb335ddb7017a67a5", null ]
+    [ "spawnPlayerSensorReading", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a5659bf40020e61aeb335ddb7017a67a5", null ],
+    [ "GHOST_RESPONSE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a77e22cce3319631f48031de82682dfed", null ],
+    [ "SENSOR_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a69a14c141470e1b8ff9969cea7f71a31", null ],
+    [ "SENSOR_BONUS_MAKESHIFT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#ab53ae9c1a73b619f87ecec6b6491b736", null ]
 ];

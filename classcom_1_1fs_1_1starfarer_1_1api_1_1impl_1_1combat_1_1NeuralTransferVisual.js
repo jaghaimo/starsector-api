@@ -9,6 +9,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NeuralTransferVisual
     [ "fader", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NeuralTransferVisual.html#a166cbc19920a788c740ddd1e7df7c10c", null ],
     [ "from", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NeuralTransferVisual.html#a5a378775299e24e78a08502b988122b6", null ],
     [ "sprite", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NeuralTransferVisual.html#aadceb3aa55ed3a838aa5ab624b997d60", null ],
+    [ "TEX_SCROLL_SPEED", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NeuralTransferVisual.html#a4e0e47eeb08bc304ff488eb27a2523fa", null ],
     [ "texProgress", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NeuralTransferVisual.html#ac60c8f1b1a8a08b3782b46c8e579f1ff", null ],
     [ "to", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NeuralTransferVisual.html#ac40d157633f740609b428bc17af00854", null ]
 ];

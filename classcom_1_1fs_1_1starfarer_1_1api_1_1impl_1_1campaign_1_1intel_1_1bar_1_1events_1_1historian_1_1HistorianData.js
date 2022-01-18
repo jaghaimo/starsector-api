@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData =
 [
+    [ "HistorianOffer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia737e60c4808d3e5d9412abd0120ed627.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia737e60c4808d3e5d9412abd0120ed627" ],
+    [ "HistorianOfferCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f" ],
     [ "HistorianData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a8aa7cb9b64ae249449e79697aef0144d", null ],
     [ "getBackstory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#ae24fab07941f930ccef776c0d8abca1d", null ],
     [ "getCreators", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#adab53027f7978b2c67088603cf7b294f", null ],
@@ -8,6 +10,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getHimOrHer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#aff965720a19eaa677f2b056a260a3b63", null ],
     [ "getHimOrHerself", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a46bb94d73fa3f1865d0c5e4402e33537", null ],
     [ "getHisOrHer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#ac94953c19c7f1c1cef03330917628c29", null ],
+    [ "getInstance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#ab686ebe480905b290b826192c8261207", null ],
     [ "getManOrWoman", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a678ce349df3b5b19e17f5846a7ea17a9", null ],
     [ "getOffers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#af93abfef29f1b595492911f3a846122d", null ],
     [ "getPerson", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#af4a08f7d1b011f1cc43e03a4e6c5fd5a", null ],
@@ -29,7 +32,11 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "creators", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a16d1eda23413a77162c696461dc08357", null ],
     [ "givenOffers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a11d58213e7d390f8e9df4a9e296510bd", null ],
     [ "introduced", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#aa792c6c35ca3aa3d9a69efe95a72229c", null ],
+    [ "KEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#ae824ee396c9b7c755c64722d88e63afe", null ],
     [ "person", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5f4d3d45339a75e0baa7b4cf045a4e51", null ],
     [ "shownBackstory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a4e97305d553bd9f6d241d7f5fb7e3338", null ],
-    [ "tier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a74906819d6099f6097503204bf892228", null ]
+    [ "tier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a74906819d6099f6097503204bf892228", null ],
+    [ "TIER1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#aa721fe5f5645c42578ff6d6bb85841c3", null ],
+    [ "TIER2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#af40babafc88a371b4ba77ce2071b8c33", null ],
+    [ "TIER3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianData.html#a5ef28393182df38534ab183bf868b70c", null ]
 ];

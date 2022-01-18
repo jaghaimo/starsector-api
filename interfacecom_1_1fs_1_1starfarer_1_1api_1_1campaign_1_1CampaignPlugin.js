@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin =
 [
+    [ "PickPriority", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin_1_1PickPriority.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin_1_1PickPriority" ],
     [ "getId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin.html#a6f2406723e70336ab32fbcf63d77b40a", null ],
     [ "isTransient", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin.html#adf3c2d90d0ff143d9eaa407502a2ab2c", null ],
     [ "pickAbilityAI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignPlugin.html#a3250d8ea7e2f072506ff1c2cf7a60d06", null ],

@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI =
 [
+    [ "CoreUITradeMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI_1_1CoreUITradeMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI_1_1CoreUITradeMode" ],
     [ "addMessage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#aeee66f0be542a03020cfd1408aeb6eef", null ],
     [ "addMessage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#a6a0403d4bcdcc977b38bd04dcc2934f1", null ],
     [ "addMessage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#ae21f502656c0695afe4b190b93315d9d", null ],

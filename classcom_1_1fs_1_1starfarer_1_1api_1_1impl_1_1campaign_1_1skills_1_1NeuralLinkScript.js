@@ -1,8 +1,10 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript =
 [
+    [ "SavedShipControlState", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript_1_1SavedShipControlState.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript_1_1SavedShipControlState" ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#aa323f0dff1a745a4ab67ac0732a88f06", null ],
     [ "canLink", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#aff68902024fa694b2609e6992891f010", null ],
     [ "doTransfer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a7bf42320af541d740e2feaabda9ee6e3", null ],
+    [ "getFloatySize", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a4a5d553d50bc760742f66f15d7a58cf2", null ],
     [ "getTransferTime", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a54bc0352dc8d92dcfc051a988c07a2fe", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a69bbbbc2a71e7bbd13dd6d68db3dbe97", null ],
     [ "processInputPreCoreControls", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a499ae8551b1452886ddd5865d6ec041a", null ],
@@ -13,12 +15,21 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLi
     [ "showTranferFloatyIfNeeded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#abcc946f5e75f9a33933ddac4cb5c908f", null ],
     [ "suppressControlsDuringTransfer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a0b998a4a30d61d96bae0db682bec273e", null ],
     [ "updateLinkState", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a4da9a796d4d647d98a5f6e41466c6ab9", null ],
+    [ "ALLOW_ENGINE_CONTROL_DURING_TRANSFER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a2bd84bebead1a78ef77049caf7117ac2", null ],
     [ "engine", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#ad1996381d1d5f554d2cf1e3469b7824e", null ],
+    [ "INSTANT_TRANSFER_DP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a9b9ceac5dca089bc1792da5f741c1993", null ],
+    [ "KEY_STATUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#abcc08e3fa87726c6b374358c78ada049", null ],
+    [ "KEY_STATUS2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#abbba705c3dac0f37f7e4baa75001ec14", null ],
     [ "lastShownTime", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a3197df5509094104ca004a4ae2ca50db", null ],
     [ "linked", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a8b4b562d6248ceceebf99a421752a1cd", null ],
     [ "prevPlayerShip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a118f472716fce6ae2691ee67c52f052e", null ],
     [ "prevState", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a46452d07acc53a6c82e82386eb430fcf", null ],
     [ "savedState", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#abf039b2572fd5afdd5869a183ff62f49", null ],
     [ "skipFrames", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a9705d3cd7d296f35b7f12c0a8a3b5a36", null ],
+    [ "TRANSFER_COMPLETE_KEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a1e0da58e6a8f65f6c46f47d3fe15cbcb", null ],
+    [ "TRANSFER_CONTROL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a35496a8e2fe17c500313e36674dcc88e", null ],
+    [ "TRANSFER_MAX_SECONDS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a97047e670c8d4df617010a7a0ab2891e", null ],
+    [ "TRANSFER_MIN_SECONDS_IF_NOT_INSTANT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a1194ce4abab6085093c2f54460b9fb3e", null ],
+    [ "TRANSFER_SECONDS_PER_DP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#af0857fcfbcba5210dae72e49a5a4c440", null ],
     [ "untilTransfer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#ad2b208e317fe967f9f167a3a57e962d3", null ]
 ];

@@ -119,8 +119,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getBarEventTimeoutDu
 <tr class="memitem:a4cb22c5e6e6ea66221bbaa8f46fdd2eb"><td class="memItemLeft" align="right" valign="top"><a id="a4cb22c5e6e6ea66221bbaa8f46fdd2eb"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getBarEventAcceptedTimeoutDuration</b> ()</td></tr>
 <tr class="separator:a4cb22c5e6e6ea66221bbaa8f46fdd2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c28df449ad5ab74509a30a274b79e9a"><td class="memItemLeft" align="right" valign="top"><a id="a8c28df449ad5ab74509a30a274b79e9a"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isPriority</b> ()</td></tr>
+<tr class="memitem:a8c28df449ad5ab74509a30a274b79e9a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html#a8c28df449ad5ab74509a30a274b79e9a">isPriority</a> ()</td></tr>
 <tr class="separator:a8c28df449ad5ab74509a30a274b79e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e447323e259e0a0d5eca85899590408"><td class="memItemLeft" align="right" valign="top"><a id="a6e447323e259e0a0d5eca85899590408"></a>
 String&#160;</td><td class="memItemRight" valign="bottom"><b>getBarEventId</b> ()</td></tr>
@@ -129,6 +128,37 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>getBarEventId</b> (
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>wasAutoAdded</b> ()</td></tr>
 <tr class="separator:aa52bb96f4402fecc1ec4fc19f0bc465b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8c28df449ad5ab74509a30a274b79e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c28df449ad5ab74509a30a274b79e9a">&#9670;&nbsp;</a></span>isPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEventCreator.isPriority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Priority events get created before non-priority. Should be used sparingly, for gameplay-essential events. Having too many priority events could crowd out all other events entirely. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventb7443876afc9cc66909b145cad76cf4d.html#a8329c869907060f19eba49f38c71e8d8">com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager.GenericBarEventCreator</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1SpecBarEventCreator.html#ab759d15a36ef6ca1a9701cbc6df2f372">com.fs.starfarer.api.impl.campaign.intel.bar.events.SpecBarEventCreator</a>, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html#a6cbe08176e098ccadd0a179c5aa1a7bf">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBarEventCreator</a>, and <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEventCreator.html#ac73021df3c9cb2e88a93dfc90f81af70">com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryBarEventCreator</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/campaign/intel/bar/events/BaseBarEventCreator.java</li>
 </ul>

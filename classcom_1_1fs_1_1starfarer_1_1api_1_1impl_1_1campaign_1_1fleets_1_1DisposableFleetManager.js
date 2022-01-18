@@ -22,6 +22,11 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1Disposab
     [ "spawnFleetImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a89adaf4e006c80588a1b93c98cfeb6e4", null ],
     [ "updateSpawnRateMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#adf2933501278a424a5bd0cd7058c57fe", null ],
     [ "currSpawnLoc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#abc4e6a27321ced47078fc491e44e05c2", null ],
+    [ "DEBUG", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a5fc6e1bea5d435215350fe766bcba27a", null ],
+    [ "DESPAWN_RANGE_LY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a0fcc63ad84b2c621c114e4d664ef3f35", null ],
+    [ "KEY_SPAWN_FP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a75577a8a865147b4e5500cdc9bcc32c9", null ],
+    [ "KEY_SYSTEM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a3e93eb20265c1c5784f5db9292709b8b", null ],
+    [ "MAX_RANGE_FROM_PLAYER_LY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#afae7d14744c7fb3da6ce3689145a26ad", null ],
     [ "recentSpawns", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#ac4aadf440ad171a2b10ff846957c6018", null ],
     [ "spawnRateMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a4250e3a8334c454e50ebdca74596c34a", null ],
     [ "tracker2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html#a76f9c28445b55b826fff008d610d3e4c", null ]

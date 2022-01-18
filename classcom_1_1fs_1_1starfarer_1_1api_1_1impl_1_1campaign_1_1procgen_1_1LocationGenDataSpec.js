@@ -12,5 +12,10 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Locatio
     [ "setFreqOLD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a58e269f7fde5e6d17fc05319c9bf212a", null ],
     [ "setFreqYOUNG", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#ac420c67ff4526bfc49ebfe53137c2b4a", null ],
     [ "setId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#ab363928731ec1dfa9a575bb5e6e9af3f", null ],
-    [ "setTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a5514041f6817f2ab0eedf680620d67d3", null ]
+    [ "setTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a5514041f6817f2ab0eedf680620d67d3", null ],
+    [ "freqAVERAGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a5535f4fd9de1c04e3bb90f8527334b21", null ],
+    [ "freqOLD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a7d35da5affb6f6a1690510d1df34d392", null ],
+    [ "freqYOUNG", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#aa1132fac7122ae7508b67c4c440d567b", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a07882d5d4cb1d575bc4423f3d9b0e1db", null ],
+    [ "tags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#aa8757c66e51bcedb4722d97278ca956b", null ]
 ];

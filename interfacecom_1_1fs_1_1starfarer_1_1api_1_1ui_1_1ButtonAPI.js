@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI =
 [
+    [ "UICheckboxSize", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI_1_1UICheckboxSize.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI_1_1UICheckboxSize" ],
     [ "getHighlightBrightness", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a28b6acf2d41afe7500b82b851dc71d3c", null ],
     [ "highlight", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#af9d183ed789a104ec684c19c353f37fc", null ],
     [ "isChecked", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a79bb736bdbd08e69fb6306b992dd3a29", null ],

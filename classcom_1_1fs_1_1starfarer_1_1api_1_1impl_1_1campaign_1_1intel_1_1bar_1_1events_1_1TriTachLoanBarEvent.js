@@ -30,6 +30,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "shouldShowAtMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a5c8929f711184c805565b40b09bc3186", null ],
     [ "showCargoCap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a7ddcfe44bdb8a4f3656f8bab940a1d07", null ],
     [ "loanAmount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a4e71b1ee77a985c7e5db164eb0bcfdf4", null ],
+    [ "REPAYMENT_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ac5d70ece09b11a08b1a7511b00955df0", null ],
     [ "repaymentAmount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#a08cf5f6b3c27f1a1e7c0226a03594a10", null ],
     [ "repaymentDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ace343bf27ddffc7b988bb4eb48fdb5b6", null ]
 ];

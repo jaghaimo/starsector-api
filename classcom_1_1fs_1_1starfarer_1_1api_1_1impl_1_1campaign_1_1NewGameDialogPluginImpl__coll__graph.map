@@ -1,4 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.NewGameDialogPluginImpl" name="com.fs.starfarer.api.impl.campaign.NewGameDialogPluginImpl">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,227,136"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html" title=" " alt="" coords="19,5,213,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="799,332,1020,373"/>
+<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html" title=" " alt="" coords="349,5,544,47"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="349,71,544,112"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,231,112"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html" title=" " alt="" coords="349,136,544,177"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html" title=" " alt="" coords="334,201,559,243"/>
+<area shape="rect" id="node7" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NewGameDialogPluginImpl_1_1State.html" title=" " alt="" coords="336,267,557,308"/>
+<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html" title=" " alt="" coords="349,332,544,373"/>
+<area shape="rect" id="node9" title=" " alt="" coords="280,397,613,439"/>
+<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CharacterCreationData.html" title=" " alt="" coords="347,463,546,504"/>
+<area shape="rect" id="node11" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html" title=" " alt="" coords="349,528,544,569"/>
+<area shape="rect" id="node12" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html" title=" " alt="" coords="349,593,544,635"/>
+<area shape="rect" id="node13" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NewGameDialogPluginImpl_1_1OptionId.html" title=" " alt="" coords="330,659,563,700"/>
 </map>

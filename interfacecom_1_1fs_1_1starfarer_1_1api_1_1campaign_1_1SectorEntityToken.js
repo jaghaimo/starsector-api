@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken =
 [
+    [ "VisibilityLevel", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_1_1VisibilityLevel.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken_1_1VisibilityLevel" ],
     [ "addAbility", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#afd856445f85c8e491bf690a2f0380d0c", null ],
     [ "addDropRandom", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a8573932f4fed0c958500686dc475c6de", null ],
     [ "addDropRandom", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a0ca287554082350bc9fb7d13340b392b", null ],

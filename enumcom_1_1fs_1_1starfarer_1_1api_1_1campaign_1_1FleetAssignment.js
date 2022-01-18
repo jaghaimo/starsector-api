@@ -1,5 +1,6 @@
 var enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment =
 [
+    [ "FleetAssignment", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html#a3638ad4eb1459720e68120b30f866cfd", null ],
     [ "getDescription", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html#abe559d2b895ad47504fb5f1ada1f1c1c", null ],
     [ "isAddTargetName", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html#a7bffb204785e2fe51e845eba0148ae55", null ],
     [ "addTargetName", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetAssignment.html#a909c32f769d05ec030101a03c23595c4", null ],

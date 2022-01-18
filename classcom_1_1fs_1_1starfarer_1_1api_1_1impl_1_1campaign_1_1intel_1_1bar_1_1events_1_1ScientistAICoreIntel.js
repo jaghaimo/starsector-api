@@ -16,6 +16,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getSortString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreIntel.html#a3e9dc6f6148774757a164a30261f70c7", null ],
     [ "notifyEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreIntel.html#a0daed97407256c07e369aa2287b45c14", null ],
     [ "shouldRemoveIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreIntel.html#a3f1e91fab7c70386f40b0b57c057b61e", null ],
+    [ "spawnPiratesToInvestigate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreIntel.html#a1480f1c033f80cc103ccc02339ecbaf5", null ],
     [ "cache", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreIntel.html#a3b74a3a6f7356f8d972b9c5058ddae57", null ],
     [ "cacheSystem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreIntel.html#aa70a75d2c0df42d43e3e2d680523386e", null ],
     [ "event", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreIntel.html#a0b3295b605d185117102036bbae5225d", null ],

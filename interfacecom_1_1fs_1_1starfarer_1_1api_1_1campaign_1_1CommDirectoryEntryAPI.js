@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryEntryAPI =
 [
+    [ "EntryType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryEntryAPI_1_1EntryType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryEntryAPI_1_1EntryType" ],
     [ "getEntryData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryEntryAPI.html#a8caefbe94531935da9fc8e7ca8add3fe", null ],
     [ "getId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryEntryAPI.html#a38e92443982f1f07359148a4aa752017", null ],
     [ "getText", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryEntryAPI.html#a679d30a861952cc5443df11e6f0effe7", null ],

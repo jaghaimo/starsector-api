@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description =
 [
+    [ "Type", "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description_1_1Type.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description_1_1Type" ],
     [ "Description", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a189aec5de878f10fcec3eacee1cf9ee2", null ],
     [ "getText1", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab5b58b295e427a65cc701fe723717faf", null ],
     [ "getText1FirstPara", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a92d30cc3cf6fe63879f61c119558008e", null ],
@@ -15,5 +16,11 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description =
     [ "setText1", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a9b231319c156e0b2e13acd54187e470b", null ],
     [ "setText2", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ad5940a0d41e2ce6b68c180fba58177c5", null ],
     [ "setText3", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a72e51896619c47593293a4da85246500", null ],
-    [ "setText4", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#adb6caf3b7fa4b66401bd8612411a7b03", null ]
+    [ "setText4", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#adb6caf3b7fa4b66401bd8612411a7b03", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a9d74b80db034c9f5d70037242170aa10", null ],
+    [ "text1", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a2fd20e62c35029042e3d696486da8fc0", null ],
+    [ "text2", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a5baaf1532209f689a9d43abb7695fa1f", null ],
+    [ "text3", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a348a3d973591babe8b858ca827a08c9c", null ],
+    [ "text4", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a636711daef200f30a8b9cb21db7fb7e7", null ],
+    [ "type", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a943631dcce570f930eb681e4ce89581d", null ]
 ];

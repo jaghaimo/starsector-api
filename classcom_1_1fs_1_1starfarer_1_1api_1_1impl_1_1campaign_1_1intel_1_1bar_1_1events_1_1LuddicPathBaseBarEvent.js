@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent =
 [
+    [ "OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent_1_1OptionId.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent_1_1OptionId" ],
     [ "LuddicPathBaseBarEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#acf3c10f28ed6849de008ad21928bb419", null ],
     [ "addPromptAndOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a6c8294f72fc8f8c450f42aedfa8cad0b", null ],
     [ "addStoryOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a199ae93a9ff9f5ff2cdf26bee816de2d", null ],
@@ -15,5 +16,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "regen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a3d9371f9523549ffed824954bf63850c", null ],
     [ "shouldRemoveEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a082669c3ab36ea8a02556413df9c964d", null ],
     [ "shouldShowAtMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#aeadb1e5dd0c723436c0635955d489b9c", null ],
+    [ "COST", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#a5915fa3d19644a445963a7b3c97e6021", null ],
     [ "intel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicPathBaseBarEvent.html#aa2badf54284522c76a8ff8397904c4ac", null ]
 ];

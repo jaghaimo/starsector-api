@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialPirateApproachesDialogPluginImpl =
 [
+    [ "OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialPirateApproachesDialogPluginImpl_1_1OptionId.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialPirateApproachesDialogPluginImpl_1_1OptionId" ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialPirateApproachesDialogPluginImpl.html#a5e98b5a2047f08692b1fe5eb755dda33", null ],
     [ "backFromEngagement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialPirateApproachesDialogPluginImpl.html#ada2aee7540088e06ced4ad5bc2481712", null ],
     [ "getContext", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialPirateApproachesDialogPluginImpl.html#abcc7c0766aafb4b273b0f5346d7fceef", null ],

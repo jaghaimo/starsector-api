@@ -21,5 +21,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIn
     [ "performRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html#a07782088ad4707f4fabae3e76c0300c0", null ],
     [ "setAddedDisruptionDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html#a9430f70b153eafdd4ad10cecf5687db9", null ],
     [ "setSource", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html#ad107f7cc20d426ca3ad79952065dd9db", null ],
-    [ "addedDisruptionDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html#a76f3a7d75cc3d891aa3420d1566209f9", null ]
+    [ "addedDisruptionDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html#a76f3a7d75cc3d891aa3420d1566209f9", null ],
+    [ "DISRUPTION_DAYS_XP_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html#afd981000679b0dbe19d9517269e42241", null ]
 ];

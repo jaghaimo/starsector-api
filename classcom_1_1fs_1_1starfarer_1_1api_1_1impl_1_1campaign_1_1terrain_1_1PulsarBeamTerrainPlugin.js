@@ -37,10 +37,15 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarB
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a4022c04896bcaa00697ef177b8de3835", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a35a2a194eadb2d1c05a03783b3d8247c", null ],
     [ "shouldPlayLoopOne", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ac835cf12b2d50d6a4a9b8179d4b1bcb2", null ],
+    [ "writeReplace", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a703f63201b1189888f82cd11c248e9d0", null ],
     [ "blocker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a6781428c66135071831dcf0f5b5e6c96", null ],
+    [ "color", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a6d26f346f9b6415338d06f3e192a7bf3", null ],
     [ "flare1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a6989848fcbf8b2e8ea66ca8ef71e6540", null ],
+    [ "flare2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ad2bba42a6e122cabdda380bac44dffc8", null ],
     [ "flareTexture", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a933b55d6f85c50ba46497a339a5872c1", null ],
+    [ "layers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a518b076da57d065583fa5afbf5b4c145", null ],
     [ "params", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a9a2d116457d01f76f2a7ca171ba3517e", null ],
+    [ "PULSAR_ARC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a771ae318f65a60f95329ee27eb8a8c0a", null ],
     [ "pulsarAngle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a8f41efe33e9a5fd7203d33401d9605c4", null ],
     [ "pulsarRotation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ac8457579f128c67774f5d2749d3b39c5", null ]
 ];

@@ -86,6 +86,8 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin Class Reference</div>  </div>
@@ -100,7 +102,7 @@ Inheritance diagram for com.fs.starfarer.api.impl.campaign.submarkets.MilitarySu
 <div class="dynheader">
 Collaboration diagram for com.fs.starfarer.api.impl.campaign.submarkets.MilitarySubmarketPlugin:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin__coll__graph.svg" width="1314" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin__coll__graph.svg" width="1368" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -122,31 +124,31 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>shouldHaveCommodit
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getStockpileLimit</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html">CommodityOnMarketAPI</a> com)</td></tr>
 <tr class="separator:a67523207e9720ae9ba0200e9c66e0974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae33d0b1977716dc6b23573582f4a6564"><td class="memItemLeft" align="right" valign="top"><a id="ae33d0b1977716dc6b23573582f4a6564"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isIllegalOnSubmarket</b> (String commodityId, TransferAction action)</td></tr>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isIllegalOnSubmarket</b> (String commodityId, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html">TransferAction</a> action)</td></tr>
 <tr class="separator:ae33d0b1977716dc6b23573582f4a6564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b14da31bff8b2531dd3554d8a921504"><td class="memItemLeft" align="right" valign="top"><a id="a7b14da31bff8b2531dd3554d8a921504"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isIllegalOnSubmarket</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html">CargoStackAPI</a> stack, TransferAction action)</td></tr>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isIllegalOnSubmarket</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html">CargoStackAPI</a> stack, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html">TransferAction</a> action)</td></tr>
 <tr class="separator:a7b14da31bff8b2531dd3554d8a921504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed5dee93ccdca708cbb4cd3ec437100"><td class="memItemLeft" align="right" valign="top"><a id="abed5dee93ccdca708cbb4cd3ec437100"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>getIllegalTransferText</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html">CargoStackAPI</a> stack, TransferAction action)</td></tr>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>getIllegalTransferText</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html">CargoStackAPI</a> stack, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html">TransferAction</a> action)</td></tr>
 <tr class="separator:abed5dee93ccdca708cbb4cd3ec437100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c37bf0d14b6a160c423ed8c7c8698e"><td class="memItemLeft" align="right" valign="top"><a id="ad1c37bf0d14b6a160c423ed8c7c8698e"></a>
-<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Highlights.html">Highlights</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getIllegalTransferTextHighlights</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html">CargoStackAPI</a> stack, TransferAction action)</td></tr>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Highlights.html">Highlights</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getIllegalTransferTextHighlights</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html">CargoStackAPI</a> stack, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html">TransferAction</a> action)</td></tr>
 <tr class="separator:ad1c37bf0d14b6a160c423ed8c7c8698e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a1098cce1bd871ed43316b587aec40f"><td class="memItemLeft" align="right" valign="top"><a id="a5a1098cce1bd871ed43316b587aec40f"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isIllegalOnSubmarket</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member, TransferAction action)</td></tr>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isIllegalOnSubmarket</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html">TransferAction</a> action)</td></tr>
 <tr class="separator:a5a1098cce1bd871ed43316b587aec40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab77eda88de5f57859a07fc89b2889a09"><td class="memItemLeft" align="right" valign="top"><a id="ab77eda88de5f57859a07fc89b2889a09"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>getIllegalTransferText</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member, TransferAction action)</td></tr>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>getIllegalTransferText</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html">TransferAction</a> action)</td></tr>
 <tr class="separator:ab77eda88de5f57859a07fc89b2889a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8556d0a8be518b1556cb2adc66211448"><td class="memItemLeft" align="right" valign="top"><a id="a8556d0a8be518b1556cb2adc66211448"></a>
-<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Highlights.html">Highlights</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getIllegalTransferTextHighlights</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member, TransferAction action)</td></tr>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Highlights.html">Highlights</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getIllegalTransferTextHighlights</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html">TransferAction</a> action)</td></tr>
 <tr class="separator:a8556d0a8be518b1556cb2adc66211448"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff8169ec1834a4f6e905426f2c9fda87"><td class="memItemLeft" align="right" valign="top"><a id="aff8169ec1834a4f6e905426f2c9fda87"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isEnabled</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUIAPI.html">CoreUIAPI</a> ui)</td></tr>
 <tr class="separator:aff8169ec1834a4f6e905426f2c9fda87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2367b5f73138dc4908b2605ac2a69885"><td class="memItemLeft" align="right" valign="top"><a id="a2367b5f73138dc4908b2605ac2a69885"></a>
-OnClickAction&#160;</td><td class="memItemRight" valign="bottom"><b>getOnClickAction</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUIAPI.html">CoreUIAPI</a> ui)</td></tr>
+<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1OnClickAction.html">OnClickAction</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getOnClickAction</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUIAPI.html">CoreUIAPI</a> ui)</td></tr>
 <tr class="separator:a2367b5f73138dc4908b2605ac2a69885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26c738c19c2169814937662c45c51317"><td class="memItemLeft" align="right" valign="top"><a id="a26c738c19c2169814937662c45c51317"></a>
 String&#160;</td><td class="memItemRight" valign="bottom"><b>getTooltipAppendix</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUIAPI.html">CoreUIAPI</a> ui)</td></tr>
@@ -155,7 +157,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>getTooltipAppendix<
 <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Highlights.html">Highlights</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getTooltipAppendixHighlights</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUIAPI.html">CoreUIAPI</a> ui)</td></tr>
 <tr class="separator:af0986a3f39a95fbe98befceaf040a2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae2eb8ad938b5e7c3db984863cef6bb1"><td class="memItemLeft" align="right" valign="top"><a id="aae2eb8ad938b5e7c3db984863cef6bb1"></a>
-PlayerEconomyImpactMode&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayerEconomyImpactMode</b> ()</td></tr>
+<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1PlayerEconomyImpactMode.html">PlayerEconomyImpactMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayerEconomyImpactMode</b> ()</td></tr>
 <tr class="separator:aae2eb8ad938b5e7c3db984863cef6bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4defba2847dc34fc38665f153299f425"><td class="memItemLeft" align="right" valign="top"><a id="a4defba2847dc34fc38665f153299f425"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isMilitaryMarket</b> ()</td></tr>
@@ -197,7 +199,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>getDialogText</b> (
 <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Highlights.html">Highlights</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getDialogTextHighlights</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUIAPI.html">CoreUIAPI</a> ui)</td></tr>
 <tr class="separator:a5e47caa991e5453d9810862f7ca1806a inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03ac6d511e7a7d83e5190a965feca101 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memItemLeft" align="right" valign="top"><a id="a03ac6d511e7a7d83e5190a965feca101"></a>
-DialogOption[]&#160;</td><td class="memItemRight" valign="bottom"><b>getDialogOptions</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUIAPI.html">CoreUIAPI</a> ui)</td></tr>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1DialogOption.html">DialogOption</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>getDialogOptions</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUIAPI.html">CoreUIAPI</a> ui)</td></tr>
 <tr class="separator:a03ac6d511e7a7d83e5190a965feca101 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2d039ebc282a0ad270094ac4066ac39 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memItemLeft" align="right" valign="top"><a id="ac2d039ebc282a0ad270094ac4066ac39"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getPlayerTradeImpactMult</b> ()</td></tr>
@@ -214,10 +216,10 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isOpenMarket</b> (
 <tr class="memitem:a82ef57f3d78c5fcf29dedb10bafb7e87 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a82ef57f3d78c5fcf29dedb10bafb7e87">isParticipatesInEconomy</a> ()</td></tr>
 <tr class="separator:a82ef57f3d78c5fcf29dedb10bafb7e87 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18f835ec56ab37375fdbd57cc85229a3 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memItemLeft" align="right" valign="top"><a id="a18f835ec56ab37375fdbd57cc85229a3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addShips</b> (String factionId, float combat, float freighter, float tanker, float transport, float liner, float utility, Float qualityOverride, float qualityMod, ShipPickMode modeOverride, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html">FactionDoctrineAPI</a> doctrineOverride)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addShips</b> (String factionId, float combat, float freighter, float tanker, float transport, float liner, float utility, Float qualityOverride, float qualityMod, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_1_1ShipPickMode.html">ShipPickMode</a> modeOverride, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html">FactionDoctrineAPI</a> doctrineOverride)</td></tr>
 <tr class="separator:a18f835ec56ab37375fdbd57cc85229a3 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad220b9da9960b4d431cbfcca805695e inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memItemLeft" align="right" valign="top"><a id="aad220b9da9960b4d431cbfcca805695e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addShips</b> (String factionId, float combat, float freighter, float tanker, float transport, float liner, float utility, Float qualityOverride, float qualityMod, ShipPickMode modeOverride, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html">FactionDoctrineAPI</a> doctrineOverride, int maxShipSize)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addShips</b> (String factionId, float combat, float freighter, float tanker, float transport, float liner, float utility, Float qualityOverride, float qualityMod, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_1_1ShipPickMode.html">ShipPickMode</a> modeOverride, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html">FactionDoctrineAPI</a> doctrineOverride, int maxShipSize)</td></tr>
 <tr class="separator:aad220b9da9960b4d431cbfcca805695e inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb8d7391e70973ad09f19d6bca06096c inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memItemLeft" align="right" valign="top"><a id="adb8d7391e70973ad09f19d6bca06096c"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getMinSWUpdateInterval</b> ()</td></tr>
@@ -350,6 +352,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>createTooltipAfterDes
 <tr class="memitem:a48cf7b673952a7b18530f29b4714cf1d inherit pro_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memItemLeft" align="right" valign="top"><a id="a48cf7b673952a7b18530f29b4714cf1d"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>doShortageCountering</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html">CommodityOnMarketAPI</a> com, float amount, boolean withShortageCountering)</td></tr>
 <tr class="separator:a48cf7b673952a7b18530f29b4714cf1d inherit pro_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:acc04bf72ccd239fb1d465638b4f5351b"><td class="memItemLeft" align="right" valign="top"><a id="acc04bf72ccd239fb1d465638b4f5351b"></a>
+<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html">RepLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getRequiredLevelAssumingLegal</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html">CargoStackAPI</a> stack, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html">TransferAction</a> action)</td></tr>
+<tr class="separator:acc04bf72ccd239fb1d465638b4f5351b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1021501b9aedf54747569ed398f446ea"><td class="memItemLeft" align="right" valign="top"><a id="a1021501b9aedf54747569ed398f446ea"></a>
+<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html">RepLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getRequiredLevelAssumingLegal</b> (String commodityId, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html">TransferAction</a> action)</td></tr>
+<tr class="separator:a1021501b9aedf54747569ed398f446ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afefcdf3d786829aec9feadb140c84ba6"><td class="memItemLeft" align="right" valign="top"><a id="afefcdf3d786829aec9feadb140c84ba6"></a>
+<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html">RepLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getRequiredLevelAssumingLegal</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin_1_1TransferAction.html">TransferAction</a> action)</td></tr>
+<tr class="separator:afefcdf3d786829aec9feadb140c84ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adea391ab553df4c5759cd1bda2fe5c34"><td class="memItemLeft" align="right" valign="top"><a id="adea391ab553df4c5759cd1bda2fe5c34"></a>
+<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html">RepLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>minStanding</b> = RepLevel.FAVORABLE</td></tr>
+<tr class="separator:adea391ab553df4c5759cd1bda2fe5c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

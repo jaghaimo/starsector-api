@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec =
 [
+    [ "DiscoverabilityType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec_1_1DiscoverabilityType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec_1_1DiscoverabilityType" ],
+    [ "DropData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec_1_1DropData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec_1_1DropData" ],
     [ "SalvageEntityGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a391c64a87781925fb5102b9a66731179", null ],
     [ "addTag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#adee2e23cb712028e9c0506d93126d2b9", null ],
     [ "getDefFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a230fe826f31fb8bf3a3ef5d46f2e9a29", null ],
@@ -39,5 +41,25 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Salvage
     [ "setStationRole", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a68dc04cc02c08f7ffbe67e745b38c550", null ],
     [ "setType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#afed12c298ca2cc20d25e18a27a288613", null ],
     [ "setXpDiscover", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#ab2640b6041029b1a9a3385078cc9b681", null ],
-    [ "setXpSalvage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#aa3a3c154aa987d7683a8a290363c5747", null ]
+    [ "setXpSalvage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#aa3a3c154aa987d7683a8a290363c5747", null ],
+    [ "defFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a7ab6c20b7ef03a2c3f7c36cd8d6e3586", null ],
+    [ "defQuality", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a3f3d8cf10fb4e18964b78d3b5959f6be", null ],
+    [ "detectionRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#ad3fda27eade4f2e078e6bdb7e85b163a", null ],
+    [ "dropRandom", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a304e458f7e97167381c16f44d2ac5468", null ],
+    [ "dropValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a043455578b639baf55b74252b86f05c3", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a139446e1a2acc16798ad99dd5b52ccb1", null ],
+    [ "maxDefenderSize", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#aca2bd36f1b63b986fa286da53ac1a6b3", null ],
+    [ "maxStr", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a122840261261cd04f3882b6794936d11", null ],
+    [ "minDefenderSize", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a400028392b4883826edc9e2611c707f2", null ],
+    [ "minStr", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#aa9f44435a5b6ae553992efc59efab18a", null ],
+    [ "nameOverride", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a9829cc9a6d1ab0f03748fab98cb90dfd", null ],
+    [ "probDefenders", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a4719d71ed79693fdb77e7ad585a8e294", null ],
+    [ "probStation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a174ef73f03bc6d60052ce862f7eb5c47", null ],
+    [ "radiusOverride", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a94a918dcaf08e70c94f2aa7a3a71a317", null ],
+    [ "salvageRating", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a29df19543c00c3d5a476e572ad2ce71b", null ],
+    [ "stationRole", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a29355dff3250ef18f6804b1db0fb0d7f", null ],
+    [ "tags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#ae704f2d397b1fb4a539098fb3fdf93ed", null ],
+    [ "type", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#a0434ffa37a4b41062064d9773886efec", null ],
+    [ "xpDiscover", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#ad4d79a3ce1f5a22c5a4c30297d80c499", null ],
+    [ "xpSalvage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1SalvageEntityGenDataSpec.html#aeaae199ae42deaf9228377cf2cd17508", null ]
 ];

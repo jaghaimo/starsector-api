@@ -1,5 +1,8 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction =
 [
+    [ "LineItemType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1LineItemType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1LineItemType" ],
+    [ "ShipSaleInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1ShipSaleInfo.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1ShipSaleInfo" ],
+    [ "TransactionLineItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1TransactionLineItem.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction_1_1TransactionLineItem" ],
     [ "PlayerMarketTransaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#ae25ed5355dab34c7e3c8a23e5d793e18", null ],
     [ "getBaseTradeValueImpact", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#ae10932f8678f68589805e59428a43a4f", null ],
     [ "getBought", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#accdcc9c26636216431bd2e5551e4c608", null ],
@@ -15,5 +18,14 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction =
     [ "getTradeMode", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#a282f0b2037290148e18f1f25ac45fe02", null ],
     [ "setBought", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#aa215dbab41433431e71846d9d1b2cd72", null ],
     [ "setCreditValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#aff69baa770d8ed7dc8056b754561fc36", null ],
-    [ "setSold", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#a26774827f1fd75f699c1febbbd17b4b9", null ]
+    [ "setSold", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#a26774827f1fd75f699c1febbbd17b4b9", null ],
+    [ "bought", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#a7debcaedd3038c7aceb03fba535394ec", null ],
+    [ "creditValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#aedb95daa71b7575728d010b419b4d7c5", null ],
+    [ "lineItems", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#a789ad0ae239958fdb0e0e2fbe17a0648", null ],
+    [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#acaf0cc6aa3c2a9a78a0a0f781252672f", null ],
+    [ "shipsBought", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#a99df875d9b5a0eedc373feebfbee7454", null ],
+    [ "shipsSold", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#a170165a45459e47ebf7201a4c2634530", null ],
+    [ "sold", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#a579075700b97cb798121933d7822fd2e", null ],
+    [ "submarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#a5e4a041ceaa00f59e51c24730ce4609e", null ],
+    [ "tradeMode", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html#adbcff6ee1452b4e97699ff64d36621a0", null ]
 ];

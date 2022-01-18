@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI =
 [
+    [ "SystemState", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI_1_1SystemState.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI_1_1SystemState" ],
     [ "deactivate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a0c8218a0867144cd7e997919339487e2", null ],
     [ "forceState", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a30bde13201840c79e23c5dd303c652b1", null ],
     [ "getAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aee6152489c4ba0f88d40a9b6585bc621", null ],

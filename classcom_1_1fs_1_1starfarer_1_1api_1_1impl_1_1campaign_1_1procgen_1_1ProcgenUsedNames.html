@@ -86,15 +86,22 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames__coll__graph.svg" width="282" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>NamePick</b></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames_1_1NamePick.html">NamePick</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -109,10 +116,10 @@ static boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isUsed</b> 
 static <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames.html">ProcgenUsedNames</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getUsed</b> ()</td></tr>
 <tr class="separator:a71f1efee4549ebd950a88bd42dd2a7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e6cb5bc1907aa557d33da14030d122a"><td class="memItemLeft" align="right" valign="top"><a id="a2e6cb5bc1907aa557d33da14030d122a"></a>
-static NamePick&#160;</td><td class="memItemRight" valign="bottom"><b>pickName</b> (String tag, String parent, LagrangePointType lagrangePoint)</td></tr>
+static <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcgenUsedNames_1_1NamePick.html">NamePick</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pickName</b> (String tag, String parent, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator_1_1LagrangePointType.html">LagrangePointType</a> lagrangePoint)</td></tr>
 <tr class="separator:a2e6cb5bc1907aa557d33da14030d122a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22b4e8b09c51bb44197cae2c7ead8daf"><td class="memItemLeft" align="right" valign="top"><a id="a22b4e8b09c51bb44197cae2c7ead8daf"></a>
-static String&#160;</td><td class="memItemRight" valign="bottom"><b>doTokenReplacement</b> (String name, String parent, LagrangePointType lagrange)</td></tr>
+static String&#160;</td><td class="memItemRight" valign="bottom"><b>doTokenReplacement</b> (String name, String parent, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator_1_1LagrangePointType.html">LagrangePointType</a> lagrange)</td></tr>
 <tr class="separator:a22b4e8b09c51bb44197cae2c7ead8daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -120,6 +127,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a6f0f0d5794ea700d776f6a37f0a4d81a"><td class="memItemLeft" align="right" valign="top"><a id="a6f0f0d5794ea700d776f6a37f0a4d81a"></a>
 static final String&#160;</td><td class="memItemRight" valign="bottom"><b>KEY</b> = &quot;ProcgenUsedNames_key&quot;</td></tr>
 <tr class="separator:a6f0f0d5794ea700d776f6a37f0a4d81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a22b8b1786df532300c0f13641b856d42"><td class="memItemLeft" align="right" valign="top"><a id="a22b8b1786df532300c0f13641b856d42"></a>
+Set&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>names</b> = new HashSet&lt;String&gt;()</td></tr>
+<tr class="separator:a22b8b1786df532300c0f13641b856d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/campaign/procgen/ProcgenUsedNames.java</li>

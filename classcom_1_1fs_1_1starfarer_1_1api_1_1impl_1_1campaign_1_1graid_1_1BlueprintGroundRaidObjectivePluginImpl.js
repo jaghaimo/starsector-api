@@ -20,5 +20,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1Blueprint
     [ "performRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BlueprintGroundRaidObjectivePluginImpl.html#a8b306642d63faf2361b24736007a05ec", null ],
     [ "setSource", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BlueprintGroundRaidObjectivePluginImpl.html#aee424fbf247465225286ff6ddd41a6c9", null ],
     [ "bpUseScale", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BlueprintGroundRaidObjectivePluginImpl.html#ab621c1b7f3ddd0bb4ffaca3e82513ba0", null ],
-    [ "looted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BlueprintGroundRaidObjectivePluginImpl.html#ab67b4914f9c36706a9ccfe742a88649c", null ]
+    [ "looted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BlueprintGroundRaidObjectivePluginImpl.html#ab67b4914f9c36706a9ccfe742a88649c", null ],
+    [ "PROBABILITY_TO_DROP_BP_NOT_DROPPED_BEFORE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BlueprintGroundRaidObjectivePluginImpl.html#a8cd6879c4e2e786b9e4639650cca1003", null ]
 ];

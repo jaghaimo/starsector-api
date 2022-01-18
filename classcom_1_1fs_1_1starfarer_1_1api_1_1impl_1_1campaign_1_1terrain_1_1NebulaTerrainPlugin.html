@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin Class Reference</div>  </div>
@@ -100,7 +101,7 @@ Inheritance diagram for com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrain
 <div class="dynheader">
 Collaboration diagram for com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin__coll__graph.svg" width="1512" height="222"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin__coll__graph.svg" width="1568" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -170,7 +171,7 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>hasAIFlag</b> (Obj
 int[][]&#160;</td><td class="memItemRight" valign="bottom"><b>getTiles</b> ()</td></tr>
 <tr class="separator:ac4205a6ceedee6efd2a2413e04bbdc2e inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8131edd3a3d5891de9c2c252ded989f9 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td class="memItemLeft" align="right" valign="top"><a id="a8131edd3a3d5891de9c2c252ded989f9"></a>
-TileParams&#160;</td><td class="memItemRight" valign="bottom"><b>getParams</b> ()</td></tr>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain_1_1TileParams.html">TileParams</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getParams</b> ()</td></tr>
 <tr class="separator:a8131edd3a3d5891de9c2c252ded989f9 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f6059ed2b560d16d053d1c967bd1976 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td class="memItemLeft" align="right" valign="top"><a id="a3f6059ed2b560d16d053d1c967bd1976"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>containsEntity</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a> other)</td></tr>
@@ -342,6 +343,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>preventOtherTerrainFr
 void&#160;</td><td class="memItemRight" valign="bottom"><b>preventOtherTerrainFromAffecting</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a> other, float dur)</td></tr>
 <tr class="separator:a62ccc668f1bca2e7f3ffc5ed0ab9ec39 inherit pro_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5aa536b5995597936bfa67a459e109a8"><td class="memItemLeft" align="right" valign="top"><a id="a5aa536b5995597936bfa67a459e109a8"></a>
+transient EnumSet&lt; <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html">CampaignEngineLayers</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>layers</b> = EnumSet.of(CampaignEngineLayers.TERRAIN_2, CampaignEngineLayers.TERRAIN_8)</td></tr>
+<tr class="separator:a5aa536b5995597936bfa67a459e109a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af44ae67435b3f062207232fceaeadfe0"><td class="memItemLeft" align="right" valign="top"><a id="af44ae67435b3f062207232fceaeadfe0"></a>
+transient <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html">CampaignEngineLayers</a>&#160;</td><td class="memItemRight" valign="bottom"><b>currLayer</b> = null</td></tr>
+<tr class="separator:af44ae67435b3f062207232fceaeadfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a></td></tr>
@@ -362,7 +372,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (Stri
 <tr class="separator:a04bb236da4067fa7111f6ea0895b623a inherit pub_static_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a></td></tr>
 <tr class="memitem:ac9f1cfa83c01af4ec462962b256638a6 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td class="memItemLeft" align="right" valign="top"><a id="ac9f1cfa83c01af4ec462962b256638a6"></a>
-TileParams&#160;</td><td class="memItemRight" valign="bottom"><b>params</b></td></tr>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain_1_1TileParams.html">TileParams</a>&#160;</td><td class="memItemRight" valign="bottom"><b>params</b></td></tr>
 <tr class="separator:ac9f1cfa83c01af4ec462962b256638a6 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a48ce2e6714823d60c32cff2c2f81d6 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td class="memItemLeft" align="right" valign="top"><a id="a6a48ce2e6714823d60c32cff2c2f81d6"></a>
 transient <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html">SpriteAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>texture</b></td></tr>
@@ -392,6 +402,10 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>terrainId</b></td><
 <tr class="memitem:a6e7b52077a0f438b0dc442ef0084a222 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain"><td class="memItemLeft" align="right" valign="top"><a id="a6e7b52077a0f438b0dc442ef0084a222"></a>
 String&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = &quot;Unknown&quot;</td></tr>
 <tr class="separator:a6e7b52077a0f438b0dc442ef0084a222 inherit pro_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pac_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td colspan="2" onclick="javascript:toggleInherit('pac_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain')"><img src="closed.png" alt="-"/>&#160;Package Functions inherited from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html">com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain</a></td></tr>
+<tr class="memitem:afe378248651df006024383907c278489 inherit pac_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td class="memItemLeft" align="right" valign="top"><a id="afe378248651df006024383907c278489"></a>
+Object&#160;</td><td class="memItemRight" valign="bottom"><b>writeReplace</b> ()</td></tr>
+<tr class="separator:afe378248651df006024383907c278489 inherit pac_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac41de5ce70dfa6c1f897d4c1921e26c9"></a>

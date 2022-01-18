@@ -85,15 +85,23 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.shared.CommodityStatTracker Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for com.fs.starfarer.api.impl.campaign.shared.CommodityStatTracker:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker__coll__graph.svg" width="770" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>CommodityStats</b></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker_1_1CommodityStats.html">CommodityStats</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -123,8 +131,29 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isDemandPriceSigni
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateCommodityStats</b> (String commodityId)</td></tr>
 <tr class="separator:ac26a096ef05dd42c1573ae489f2ccdfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a661798acfa83623f270e0f641d7a37ef"><td class="memItemLeft" align="right" valign="top"><a id="a661798acfa83623f270e0f641d7a37ef"></a>
-CommodityStats&#160;</td><td class="memItemRight" valign="bottom"><b>getStats</b> (String commodityId)</td></tr>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker_1_1CommodityStats.html">CommodityStats</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getStats</b> (String commodityId)</td></tr>
 <tr class="separator:a661798acfa83623f270e0f641d7a37ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:afc02fd2821c7b521ad00599353720dc1"><td class="memItemLeft" align="right" valign="top"><a id="afc02fd2821c7b521ad00599353720dc1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateStatsNextStep</b> ()</td></tr>
+<tr class="separator:afc02fd2821c7b521ad00599353720dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9b188c1aff73fc88463cef73252515c2"><td class="memItemLeft" align="right" valign="top"><a id="a9b188c1aff73fc88463cef73252515c2"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html">IntervalUtil</a>&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b> = new <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html">IntervalUtil</a>(0.25f, 0.75f)</td></tr>
+<tr class="separator:a9b188c1aff73fc88463cef73252515c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad34d13811e1bd7d2672ab1ba4bb716b9"><td class="memItemLeft" align="right" valign="top"><a id="ad34d13811e1bd7d2672ab1ba4bb716b9"></a>
+Map&lt; String, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker_1_1CommodityStats.html">CommodityStats</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>priceData</b> = new HashMap&lt;String, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker_1_1CommodityStats.html">CommodityStats</a>&gt;()</td></tr>
+<tr class="separator:ad34d13811e1bd7d2672ab1ba4bb716b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850bbae35da90175021b2b6ec00abc9e"><td class="memItemLeft" align="right" valign="top"><a id="a850bbae35da90175021b2b6ec00abc9e"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>firstFrame</b> = true</td></tr>
+<tr class="separator:a850bbae35da90175021b2b6ec00abc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42020d97eb0634578d22c273427c58c"><td class="memItemLeft" align="right" valign="top"><a id="ad42020d97eb0634578d22c273427c58c"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html">SaveableIterator</a>&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>commodityIterator</b> = null</td></tr>
+<tr class="separator:ad42020d97eb0634578d22c273427c58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/campaign/shared/CommodityStatTracker.java</li>

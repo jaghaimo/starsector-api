@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1MessageIntel =
 [
+    [ "MessageLineData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1MessageIntel_1_1MessageLineData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1MessageIntel_1_1MessageLineData" ],
     [ "MessageIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1MessageIntel.html#a8ad69725b84592c128a2d465cccfecb9", null ],
     [ "MessageIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1MessageIntel.html#a726374da9d4cfd24857ed31e43fec639", null ],
     [ "MessageIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1MessageIntel.html#a6cb9581b625d9d0fdef15d4a5f489acf", null ],

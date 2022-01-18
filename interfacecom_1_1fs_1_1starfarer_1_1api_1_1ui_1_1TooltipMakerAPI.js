@@ -3,6 +3,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI =
     [ "FleetMemberValueGetter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1FleetMemberValueGetter.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1FleetMemberValueGetter" ],
     [ "StatModValueGetter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1StatModValueGetter.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1StatModValueGetter" ],
     [ "TooltipCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator" ],
+    [ "TooltipLocation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipLocation.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipLocation" ],
     [ "addAreaCheckbox", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a5f6c197cf51ac09c4727483f7386cbb0", null ],
     [ "addAreaCheckbox", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a645114dea4f2aef61bb1490a3702be51", null ],
     [ "addButton", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a6bd1dda973a4957726d120f585825140", null ],

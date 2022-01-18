@@ -1,5 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI =
 [
+    [ "MarketInteractionMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_1_1MarketInteractionMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_1_1MarketInteractionMode" ],
+    [ "SurveyLevel", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_1_1SurveyLevel.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI_1_1SurveyLevel" ],
     [ "addCondition", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a998b10d8b8d043749c0460cf3d0f019d", null ],
     [ "addCondition", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ab83e76a338104a130f716183d8896b1f", null ],
     [ "addCondition", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a340ebee4bfceed1a91e7bec5fbd3f370", null ],

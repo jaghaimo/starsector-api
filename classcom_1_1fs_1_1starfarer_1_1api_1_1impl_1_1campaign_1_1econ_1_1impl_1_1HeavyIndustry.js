@@ -11,6 +11,10 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1He
     [ "updatePollutionStatus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1HeavyIndustry.html#ac3efe4832197d360f4474a7e42e07204", null ],
     [ "wantsToUseSpecialItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1HeavyIndustry.html#a0d32721acea48abf7da0b4e08ec24484", null ],
     [ "addedPollution", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1HeavyIndustry.html#afbee9cda2bfcf31fd1cd4966beaeeb05", null ],
+    [ "DAYS_BEFORE_POLLUTION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1HeavyIndustry.html#aa5dd3a149182c57d16c761ab8e608b4f", null ],
+    [ "DAYS_BEFORE_POLLUTION_PERMANENT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1HeavyIndustry.html#a3c2ea888b7cbaec8f747b8519d2e4bc3", null ],
     [ "daysWithNanoforge", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1HeavyIndustry.html#a55d521c19b26bf5531afddf827cb1542", null ],
-    [ "permaPollution", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1HeavyIndustry.html#a73f1aa483ce49f39a3f81fa403e09045", null ]
+    [ "ORBITAL_WORKS_QUALITY_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1HeavyIndustry.html#ac8963f5925bda5e48f30d9af65ce2600", null ],
+    [ "permaPollution", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1HeavyIndustry.html#a73f1aa483ce49f39a3f81fa403e09045", null ],
+    [ "POLLUTION_ID", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1HeavyIndustry.html#afb4128a0b50543b075cbf5936d70d65b", null ]
 ];

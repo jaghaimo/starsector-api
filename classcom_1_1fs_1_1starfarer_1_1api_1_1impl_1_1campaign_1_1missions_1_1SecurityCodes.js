@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes =
 [
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes_1_1Stage" ],
     [ "acceptImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a0a0f5a18ad809e82e91be3cfca7c7b46", null ],
     [ "addDescriptionForCurrentStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a2593b3dc9afaa4e51478be3e12c21f7d", null ],
     [ "addNextStepText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a92351cd74e793864155836e1f48e60af", null ],
@@ -16,7 +17,13 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1Securi
     [ "reportSaturationBombardmentFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a0b4c04c7c572a405b87d962ee4432ffd", null ],
     [ "reportTacticalBombardmentFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a383c5c8ab50868289bbd86a547459df0", null ],
     [ "updateInteractionDataImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a52c3550c3fbc7c6994a80fc7c652e9ae", null ],
+    [ "BASE_PRICE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#ac6578312b4f7946c0f1e5d5b3d9600c9", null ],
     [ "days", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a5a25c44be67a88010085f5675bc42541", null ],
     [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#aa50cb378bd85cbe0c1939988fedb38a7", null ],
-    [ "price", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a1d6fbe4500a7ff4c50fcc09035a46ce2", null ]
+    [ "MARINE_LOSSES_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a6019d01e26fe8ad03ef3337ff640748f", null ],
+    [ "MAX_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a229bc4b151507eff8b01bdabbdbcf939", null ],
+    [ "MIN_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a8045c48cae25afac270d7dcd5894601d", null ],
+    [ "price", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a1d6fbe4500a7ff4c50fcc09035a46ce2", null ],
+    [ "PROB_COMPLICATIONS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a3a611b481796b1e32d6ad9578800e8b6", null ],
+    [ "PROB_PATROL_ENCOUNTER_AFTER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a4e8aba0973238ff44198e90a414fbcb3", null ]
 ];

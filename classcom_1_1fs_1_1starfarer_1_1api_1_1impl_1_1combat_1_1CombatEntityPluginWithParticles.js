@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles =
 [
+    [ "ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles_1_1ParticleData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles_1_1ParticleData" ],
     [ "CombatEntityPluginWithParticles", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#a37b27e69c0a1abed6f6c3969803d1178", null ],
     [ "CombatEntityPluginWithParticles", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#a565d6321a2b8966ea325bb1585950155", null ],
     [ "addDarkParticle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#a6ee6c78dc7dcd30e8540eb46fc45613f", null ],

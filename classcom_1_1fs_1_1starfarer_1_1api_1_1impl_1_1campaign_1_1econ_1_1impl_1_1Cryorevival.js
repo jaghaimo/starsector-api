@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival =
 [
+    [ "CryosleeperFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival_1_1CryosleeperFactor.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival_1_1CryosleeperFactor" ],
     [ "addAlphaCoreDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a661a532a9dbf35b73c349e4ff7923554", null ],
     [ "addImproveDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#aece0d31786f1d8bdd572a8ee073f5075", null ],
     [ "addPostDemandSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a3c3edfd111408799e8006fb42e02acb0", null ],
@@ -9,12 +10,19 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cr
     [ "applyNoAICoreModifiers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a365d2aa873d33474cb16129140c5592c", null ],
     [ "canImprove", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a75bb8174afeb8547846a3a25b4f45f2a", null ],
     [ "getDemandMetPopulationMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#ab647b12c1b54ec96c3020835c5d2280b", null ],
+    [ "getDistancePopulationMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#ae28a5886d71f48610c09cf7a626c3988", null ],
     [ "getImmigrationBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#aff2f10af285b0bc4994e584e7b4eee3e", null ],
     [ "getMaxImmigrationBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a222801775839081e1647acbdb79e806e", null ],
+    [ "getNearestCryosleeper", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#af9da6bec261a606b688992ff70e84855", null ],
     [ "getUnavailableReason", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a453935e7458253eec99087ebbfa82e6c", null ],
     [ "hasPostDemandSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a29feb3c44a448a05dc61d62ee5940272", null ],
     [ "isAvailableToBuild", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a2662b63a51b4414debb26d9a6120e0d1", null ],
     [ "modifyIncoming", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a8aab6578776c0289a74af5a4f0e8ee51", null ],
     [ "showWhenUnavailable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#aba00af9ecead214e7a822fb68818017c", null ],
-    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a535bd0952537aa7d0f32f05ece50cf05", null ]
+    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a535bd0952537aa7d0f32f05ece50cf05", null ],
+    [ "ALPHA_CORE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a8113b01b7609eda9035a69002ecd0261", null ],
+    [ "IMPROVE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a7d179d0d5859c8dfb805880fa59e383e", null ],
+    [ "MAX_BONUS_DIST_LY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a49753d96d09508401ac1252e1a2ba7ce", null ],
+    [ "MAX_BONUS_WHEN_UNMET_DEMAND", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a859322221c23008cf93ef968a98c4816", null ],
+    [ "MIN_BONUS_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#adbcea077898bc7248870d8e8bdef4325", null ]
 ];

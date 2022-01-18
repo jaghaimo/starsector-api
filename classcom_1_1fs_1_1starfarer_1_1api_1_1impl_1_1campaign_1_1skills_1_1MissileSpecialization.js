@@ -1,0 +1,11 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization =
+[
+    [ "Level1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level1.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level1" ],
+    [ "Level2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level2.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level2" ],
+    [ "Level3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level3.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level3" ],
+    [ "Level4", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level4.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization_1_1Level4" ],
+    [ "MISSILE_AMMO_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization.html#a682c061d02b508efe679b3a057e4e414", null ],
+    [ "MISSILE_SPEC_DAMAGE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization.html#a2a91dbd4ad464da9200ab073848411d0", null ],
+    [ "MISSILE_SPEC_PERK_HEALTH_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization.html#add784bbafb4fad6af386254181200b8d", null ],
+    [ "MISSILE_SPEC_ROF_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1MissileSpecialization.html#a8f09dfacbb9236161536cc1464d288dd", null ]
+];

@@ -9,5 +9,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1C
     [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CargoPodsIntel.html#a7ce28ab53c88cb9a7d0f25f50fa3e786", null ],
     [ "getPods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CargoPodsIntel.html#a2711eb1ae7d484c596053ede911e0d32", null ],
     [ "getSortString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CargoPodsIntel.html#adbc72320292da6a7317da0bf1aa3631c", null ],
-    [ "pods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CargoPodsIntel.html#aa139eab6f7410bb69c48a38faafc080e", null ]
+    [ "pods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CargoPodsIntel.html#aa139eab6f7410bb69c48a38faafc080e", null ],
+    [ "PODS_UPDATE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CargoPodsIntel.html#a820e804145e5a603ce7e044d145fd1b6", null ]
 ];

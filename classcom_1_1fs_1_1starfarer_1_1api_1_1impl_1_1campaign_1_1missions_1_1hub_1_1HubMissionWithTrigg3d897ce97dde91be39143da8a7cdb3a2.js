@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3d897ce97dde91be39143da8a7cdb3a2 =
+[
+    [ "SaveEntityReferenceAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3d897ce97dde91be39143da8a7cdb3a2.html#a4caf6436fa6c8258df612bd7c9570a1f", null ],
+    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3d897ce97dde91be39143da8a7cdb3a2.html#a7b03c0a3dd8af45e005b1388bcf90f32", null ],
+    [ "key", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3d897ce97dde91be39143da8a7cdb3a2.html#a706e84f69047f27b355dbd5a8a86295f", null ],
+    [ "memory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3d897ce97dde91be39143da8a7cdb3a2.html#a0baa65116141a353416832aafcc98bdb", null ]
+];

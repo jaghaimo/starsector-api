@@ -146,8 +146,8 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="505.5,-98.5 505.5,-128.5 687.5,-128.5 687.5,-98.5 505.5,-98.5"/>
+<g id="a_node9"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI_1_1EconomyUpdateListener.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="505.5,-98.5 505.5,-128.5 687.5,-128.5 687.5,-98.5 505.5,-98.5"/>
 <text text-anchor="start" x="513.5" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.econ.</text>
 <text text-anchor="middle" x="596.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">EconomyAPI.EconomyUpdateListener</text>
 </a>

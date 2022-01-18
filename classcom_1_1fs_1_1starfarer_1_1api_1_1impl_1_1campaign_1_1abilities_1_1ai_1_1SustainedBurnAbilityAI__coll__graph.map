@@ -1,5 +1,5 @@
 <map id="com.fs.starfarer.api.impl.campaign.abilities.ai.SustainedBurnAbilityAI" name="com.fs.starfarer.api.impl.campaign.abilities.ai.SustainedBurnAbilityAI">
-<area shape="rect" id="node1" title=" " alt="" coords="1147,71,1428,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1191,119,1472,160"/>
 <area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html" title=" " alt="" coords="816,71,1097,112"/>
 <area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AbilityAIPlugin.html" title=" " alt="" coords="524,5,731,47"/>
 <area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="530,71,725,112"/>
@@ -7,4 +7,5 @@
 <area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,31,231,72"/>
 <area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="280,96,475,137"/>
 <area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1AbilityPlugin.html" title=" " alt="" coords="528,136,727,177"/>
+<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="879,136,1034,177"/>
 </map>

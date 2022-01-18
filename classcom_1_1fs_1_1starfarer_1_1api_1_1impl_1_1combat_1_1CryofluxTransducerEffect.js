@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect =
 [
+    [ "ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect_1_1ParticleData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect_1_1ParticleData" ],
     [ "CryofluxTransducerEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a3466e40d5415c7747913ae708296e20e", null ],
     [ "CryofluxTransducerEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#ad8807b06748e468b72c7843dc516748f", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a41ceb60031534548dbf11defae544e8d", null ],

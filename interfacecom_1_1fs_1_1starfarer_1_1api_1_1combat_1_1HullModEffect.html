@@ -102,15 +102,15 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html">HullModSpecAPI</a> spec)</td></tr>
 <tr class="separator:a01094bdb6524eb4829df5d944adb79ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a4c136bed42c8f29252fa224aa9645c"><td class="memItemLeft" align="right" valign="top"><a id="a4a4c136bed42c8f29252fa224aa9645c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>applyEffectsBeforeShipCreation</b> (HullSize hullSize, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, String id)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>applyEffectsBeforeShipCreation</b> (<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html">HullSize</a> hullSize, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html">MutableShipStatsAPI</a> stats, String id)</td></tr>
 <tr class="separator:a4a4c136bed42c8f29252fa224aa9645c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae85fa7e67fd719cfbbff746aff1ae9c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#ae85fa7e67fd719cfbbff746aff1ae9c2">applyEffectsAfterShipCreation</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, String id)</td></tr>
 <tr class="separator:ae85fa7e67fd719cfbbff746aff1ae9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e80a6fdbe93ea9edf4cfa058d1196ae"><td class="memItemLeft" align="right" valign="top"><a id="a4e80a6fdbe93ea9edf4cfa058d1196ae"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptionParam</b> (int index, HullSize hullSize)</td></tr>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptionParam</b> (int index, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html">HullSize</a> hullSize)</td></tr>
 <tr class="separator:a4e80a6fdbe93ea9edf4cfa058d1196ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0dd70d7885f2c337a56582dc1baf56d"><td class="memItemLeft" align="right" valign="top"><a id="ab0dd70d7885f2c337a56582dc1baf56d"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptionParam</b> (int index, HullSize hullSize, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship)</td></tr>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptionParam</b> (int index, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html">HullSize</a> hullSize, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship)</td></tr>
 <tr class="separator:ab0dd70d7885f2c337a56582dc1baf56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b8143eee407ea7d5c5b17290d8420ec"><td class="memItemLeft" align="right" valign="top"><a id="a5b8143eee407ea7d5c5b17290d8420ec"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>applyEffectsToFighterSpawnedByShip</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> fighter, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, String id)</td></tr>
@@ -121,10 +121,10 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isApplicableToShip
 <tr class="memitem:a58bcb2bb8899b936b16997d01d91bb2f"><td class="memItemLeft" align="right" valign="top"><a id="a58bcb2bb8899b936b16997d01d91bb2f"></a>
 String&#160;</td><td class="memItemRight" valign="bottom"><b>getUnapplicableReason</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship)</td></tr>
 <tr class="separator:a58bcb2bb8899b936b16997d01d91bb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21e74199602f7ed8da00ed1052a403d5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a21e74199602f7ed8da00ed1052a403d5">canBeAddedOrRemovedNow</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> marketOrNull, CoreUITradeMode mode)</td></tr>
+<tr class="memitem:a21e74199602f7ed8da00ed1052a403d5"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a21e74199602f7ed8da00ed1052a403d5">canBeAddedOrRemovedNow</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> marketOrNull, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI_1_1CoreUITradeMode.html">CoreUITradeMode</a> mode)</td></tr>
 <tr class="separator:a21e74199602f7ed8da00ed1052a403d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c29d006f41fc3dbce2d146044c4e306"><td class="memItemLeft" align="right" valign="top"><a id="a6c29d006f41fc3dbce2d146044c4e306"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>getCanNotBeInstalledNowReason</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> marketOrNull, CoreUITradeMode mode)</td></tr>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>getCanNotBeInstalledNowReason</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a> marketOrNull, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI_1_1CoreUITradeMode.html">CoreUITradeMode</a> mode)</td></tr>
 <tr class="separator:a6c29d006f41fc3dbce2d146044c4e306"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff2c91d806f5763c7ddb5661348ca269"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#aff2c91d806f5763c7ddb5661348ca269">advanceInCampaign</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> member, float amount)</td></tr>
 <tr class="separator:aff2c91d806f5763c7ddb5661348ca269"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,9 +132,9 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>getCanNotBeInstalle
 <tr class="separator:acce25f43c276d1d5f7c948554bb73123"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b2617dc482a0695b9b40debe1c5bab2"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a4b2617dc482a0695b9b40debe1c5bab2">affectsOPCosts</a> ()</td></tr>
 <tr class="separator:a4b2617dc482a0695b9b40debe1c5bab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab16f237af808d4a670e23088dbda2c40"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#ab16f237af808d4a670e23088dbda2c40">shouldAddDescriptionToTooltip</a> (HullSize hullSize, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, boolean isForModSpec)</td></tr>
+<tr class="memitem:ab16f237af808d4a670e23088dbda2c40"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#ab16f237af808d4a670e23088dbda2c40">shouldAddDescriptionToTooltip</a> (<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html">HullSize</a> hullSize, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, boolean isForModSpec)</td></tr>
 <tr class="separator:ab16f237af808d4a670e23088dbda2c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac10bc5f3762f7dc8a2f037dea4178566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#ac10bc5f3762f7dc8a2f037dea4178566">addPostDescriptionSection</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html">TooltipMakerAPI</a> tooltip, HullSize hullSize, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, float width, boolean isForModSpec)</td></tr>
+<tr class="memitem:ac10bc5f3762f7dc8a2f037dea4178566"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#ac10bc5f3762f7dc8a2f037dea4178566">addPostDescriptionSection</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html">TooltipMakerAPI</a> tooltip, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html">HullSize</a> hullSize, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship, float width, boolean isForModSpec)</td></tr>
 <tr class="separator:ac10bc5f3762f7dc8a2f037dea4178566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a8ad7ba91fc3c7af7b966d2b91227d5"><td class="memItemLeft" align="right" valign="top"><a id="a1a8ad7ba91fc3c7af7b966d2b91227d5"></a>
 Color&#160;</td><td class="memItemRight" valign="bottom"><b>getBorderColor</b> ()</td></tr>
@@ -166,7 +166,7 @@ Color&#160;</td><td class="memItemRight" valign="bottom"><b>getNameColor</b> ()<
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">HullSize&#160;</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html">HullSize</a>&#160;</td>
           <td class="paramname"><em>hullSize</em>, </td>
         </tr>
         <tr>
@@ -361,7 +361,7 @@ Color&#160;</td><td class="memItemRight" valign="bottom"><b>getNameColor</b> ()<
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">CoreUITradeMode&#160;</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI_1_1CoreUITradeMode.html">CoreUITradeMode</a>&#160;</td>
           <td class="paramname"><em>mode</em>&#160;</td>
         </tr>
         <tr>
@@ -435,7 +435,7 @@ Color&#160;</td><td class="memItemRight" valign="bottom"><b>getNameColor</b> ()<
         <tr>
           <td class="memname">boolean com.fs.starfarer.api.combat.HullModEffect.shouldAddDescriptionToTooltip </td>
           <td>(</td>
-          <td class="paramtype">HullSize&#160;</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html">HullSize</a>&#160;</td>
           <td class="paramname"><em>hullSize</em>, </td>
         </tr>
         <tr>

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase =
 [
+    [ "PatrolFleetData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_1_1PatrolFleetData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase_1_1PatrolFleetData" ],
     [ "addAlphaCoreDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#abcc197734476792966181716145dcfbf", null ],
     [ "addImproveDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a1d7d4a46d14297f22072b4fc8c4df08c", null ],
     [ "addPostDemandSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ab40d147c24470cf2b75d08d875f700b4", null ],
@@ -13,11 +14,13 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mi
     [ "applyNoAICoreModifiers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ad5d75c8a3590e7143a18bdcb913a6bd9", null ],
     [ "buildingFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aac5704fdc90b8b1ba8f68629254f15f8", null ],
     [ "canImprove", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aeba0afa214306569ee32ea214130e478", null ],
+    [ "createPatrol", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a3565c9b3eab8a32b0f0de9e223d45f1e", null ],
     [ "getBaseStabilityMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a8f5f5368e152bc88cd26b10ecf4eb93b", null ],
     [ "getCount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a3d34cc91e0a4ef0a2ae7242b6960b950", null ],
     [ "getCurrentImage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a785a660a3b48fb6ae2c23951e5458b94", null ],
     [ "getMaxPatrols", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ab6ba1ed9637d05b7b149169bc8d5ea9b", null ],
     [ "getNameForModifier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a5360f4276a2ee456eca213a665067b81", null ],
+    [ "getPatrolCombatFP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ac189e6f7f303db6c0859d013397fc079", null ],
     [ "getRouteSourceId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a4ba06ca0aaf6380859374b831fdb45c5", null ],
     [ "getStabilityAffectingDeficit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a35aea08af809e847e260335f265e60c7", null ],
     [ "getUnavailableReason", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a6432662333834ae7744c168958f48831", null ],
@@ -33,6 +36,14 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mi
     [ "spawnFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ae6ff9a680cc56486d441e4f1b8ca72af", null ],
     [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a576e51838086aa315f26e891e0a7b189", null ],
     [ "upgradeFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a78bc57516fbd9898595938b79ef7b17f", null ],
+    [ "ALPHA_CORE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aaec609759fa72aaf3bd65b120bb9ac81", null ],
+    [ "DEFENSE_BONUS_COMMAND", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a4fb5026c4e7ac0fb103fd1729fbd3dc9", null ],
+    [ "DEFENSE_BONUS_MILITARY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a12dcc22adaf2573045ac20dad7f61e57", null ],
+    [ "DEFENSE_BONUS_PATROL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a191532b63f795fac14dce48da42dadcd", null ],
+    [ "IMPROVE_NUM_PATROLS_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aca402364a00bd2b1f1db5d07fe6eeba7", null ],
+    [ "OFFICER_PROB_MOD_HIGH_COMMAND", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#af66946f3b6599f8377a57bab10c2c9ab", null ],
+    [ "OFFICER_PROB_MOD_MILITARY_BASE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#ae6bfa210f71a7d5fb65e2f8cad7486b7", null ],
+    [ "OFFICER_PROB_MOD_PATROL_HQ", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a96b6521ed420df52daa16ed8806fdeaf", null ],
     [ "returningPatrolValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a790b1fdeff9d77bb014d07af66e7ef08", null ],
     [ "tracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#aea6bf9dd362bce8747d10f96f370fcfb", null ]
 ];

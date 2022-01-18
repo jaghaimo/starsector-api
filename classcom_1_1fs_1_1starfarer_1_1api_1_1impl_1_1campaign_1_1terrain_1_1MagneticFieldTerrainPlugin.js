@@ -1,8 +1,10 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin =
 [
+    [ "MagneticFieldParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin_1_1MagneticFieldParams.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin_1_1MagneticFieldParams" ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#acde058310f71271e1f9261540d59844c", null ],
     [ "applyEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#aff739aad1069a7ada6bf52b06867f4fe", null ],
     [ "canPlayerHoldStationIn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#ad9f6d63558299e9aef46a66cf5e0689a", null ],
+    [ "computeRadiusWithFlare", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#ae004fca5b198e4ac3442076566fd17dc", null ],
     [ "containsPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a2df8e75dbf1a58ce9303ac7b92195ac8", null ],
     [ "createTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#ab44b28f4b1369e05f6220ebc4f42a43f", null ],
     [ "getActiveLayers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a9c04d48dc7807a8d14f8ddc421c4cd33", null ],
@@ -66,9 +68,14 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1Magneti
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a269b9a9b5df3e206304591b0a163df45", null ],
     [ "shouldPlayLoopOne", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a8838a564d4a3be5ed498cb5a3ad353fd", null ],
     [ "shouldPlayLoopTwo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a53914303485be05e6160ec59c4d79196", null ],
+    [ "writeReplace", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a89362a9517a18f13bdeb57376f4e6d0c", null ],
     [ "color", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#ada14d722630fa61a05bdd37985b47272", null ],
+    [ "DETECTED_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#ab872f44a6b063d70f9cee272ddc9f519", null ],
+    [ "DETECTED_MULT_AURORA", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#aeeba0bc03a6bba2c7aa52492aced51b5", null ],
     [ "flareManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#aa2d94985b4455f968396bbfc144c9fb6", null ],
+    [ "layers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a2c9167e25a29a29e6ee3869398bebb56", null ],
     [ "params", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a74a2ec347c9ee035bbef3545a7dab864", null ],
     [ "renderer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a6e07b91ae4f815d72be6abb98ff243ba", null ],
+    [ "SENSOR_MULT_AURORA", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a3f46c76ad3e31ae7e310d4da7fe3bbee", null ],
     [ "texture", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html#a785ff93a1d31191b607079ac73fe59e2", null ]
 ];

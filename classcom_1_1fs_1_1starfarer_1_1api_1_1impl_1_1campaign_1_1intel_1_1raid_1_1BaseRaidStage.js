@@ -25,5 +25,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1B
     [ "intel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a8d021ad6fd424b9c4549d1a7f8895ed3", null ],
     [ "maxDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#af6b635586d2406f64b74df8053fc6ec2", null ],
     [ "status", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a0ba2fa58fbf6ee437ce78bf461393b2d", null ],
-    [ "statusInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a54d6f49c299fa51110cfb34318d91f9b", null ]
+    [ "statusInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a54d6f49c299fa51110cfb34318d91f9b", null ],
+    [ "STRAGGLER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#a07b48d1e697cf97e53580080b6aa996f", null ]
 ];

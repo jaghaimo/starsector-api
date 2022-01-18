@@ -1,5 +1,11 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI =
 [
+    [ "ActionType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1ActionType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1ActionType" ],
+    [ "BoardingActionDecision", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1BoardingActionDecision.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1BoardingActionDecision" ],
+    [ "BoardingActionType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1BoardingActionType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1BoardingActionType" ],
+    [ "EncounterOption", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1EncounterOption.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1EncounterOption" ],
+    [ "InitialBoardingResponse", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1InitialBoardingResponse.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1InitialBoardingResponse" ],
+    [ "PursuitOption", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1PursuitOption.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI_1_1PursuitOption" ],
     [ "addAssignment", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html#a6b88123f6b5a43681e1196f6fadd5726", null ],
     [ "addAssignment", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html#ab91af6675f61a87e4ddf7cf6a01a3f7b", null ],
     [ "addAssignment", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1CampaignFleetAIAPI.html#a02ffed0beea7c82ef16b55963f95e3a6", null ],

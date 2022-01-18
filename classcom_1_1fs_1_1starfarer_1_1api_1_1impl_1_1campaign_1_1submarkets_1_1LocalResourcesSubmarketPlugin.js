@@ -7,6 +7,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1Loca
     [ "doShortageCountering", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a44dde17fe6a012bf6869d07a942def29", null ],
     [ "economyUpdated", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#ad8b1377da9abd4e0f7ce37af54942537", null ],
     [ "getBuyVerb", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a73077cb6114382fc1f32eef3358353c3", null ],
+    [ "getDeficitMonthlyCommodityUnits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a29e529543bfb800b62ec95629eae7485", null ],
     [ "getEstimatedShortageCounteringCostPerMonth", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a955484cc46f7165a97f0f0c60aa9093f", null ],
     [ "getIllegalTransferText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#ad2a5b8da3b7f3236b28e440c31f37f43", null ],
     [ "getLeft", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#acf1e38abcf91bca32e4cf69c168e9d4d", null ],
@@ -14,6 +15,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1Loca
     [ "getStockpileLimit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a2e91d21d602fe298428b84fafbb79a33", null ],
     [ "getStockpilingAddRateMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a0f1accb4eb020a35bff45b4eeca52397", null ],
     [ "getStockpilingBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a6886e137e9971bcd5499674957a3262d", null ],
+    [ "getStockpilingUnitPrice", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#ac04488178fe7d78dcd9dcf3de810d5eb", null ],
     [ "getTariff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#aa8258478a12d898153b1138a07fe657e", null ],
     [ "getTariffTextOverride", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a88f6c49f30c2f3bfacb437318a4c972b", null ],
     [ "getTariffValueOverride", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#ad8b81f7df2462e3d5a70b3a20070c2d7", null ],
@@ -38,6 +40,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1Loca
     [ "updateCargoPrePlayerInteraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a0a76b1401b8e9e4b976af4b1a667ab1f", null ],
     [ "left", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a98c57092b72051b6e548c9e08135ce35", null ],
     [ "preTransactionCargoCopy", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a30173ec3bc87251d34ce22a179a53a49", null ],
+    [ "STOCKPILE_COST_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a71cb1c9267d9c3f89040f8f1d91616e4", null ],
+    [ "STOCKPILE_MAX_MONTHS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a6f5a9642c68602718d76751f570894e4", null ],
+    [ "STOCKPILE_MULT_EXCESS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a9db37f2b396766ccff547cf3722764ad", null ],
+    [ "STOCKPILE_MULT_IMPORTS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#aa18ab155341710be066253da48d066dc", null ],
+    [ "STOCKPILE_MULT_PRODUCTION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#aa587c9d64161d4c93fbafc8eb7fd8c28", null ],
+    [ "STOCKPILE_SHORTAGE_COST_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#ab7189b26bcae1cac36276baab52b7fc8", null ],
     [ "stockpilingBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a664432c7e765f948e1358c3fb3e8d75c", null ],
     [ "taken", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html#a54f5302b44dc6c9ba521f52e4b56c745", null ]
 ];

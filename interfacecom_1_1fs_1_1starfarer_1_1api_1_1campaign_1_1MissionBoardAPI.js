@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1MissionBoardAPI =
 [
+    [ "MissionAvailabilityAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1MissionBoardAPI_1_1MissionAvailabilityAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1MissionBoardAPI_1_1MissionAvailabilityAPI" ],
     [ "getAvailabilityForMission", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1MissionBoardAPI.html#a3dcb3168e8a520998b1c0019ca5796fc", null ],
     [ "getMissionsCopy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1MissionBoardAPI.html#af247ed21f6c45c92e224388e23a67402", null ],
     [ "getNumMissions", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1MissionBoardAPI.html#addcf4aeb1a28f8f35d1b660cc5f7ba80", null ],

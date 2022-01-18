@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable =
 [
+    [ "TowCableBuff", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable_1_1TowCableBuff.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable_1_1TowCableBuff" ],
     [ "TowCable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a805a8e84f58985e835e4a119408659e5", null ],
     [ "addPostDescriptionSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#ac018a0d79f3cc58aa5e9ece7386263f9", null ],
     [ "advanceInCampaign", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a7f63146aa2ad6da72271b48306218a58", null ],
@@ -9,15 +10,23 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable =
     [ "applyEffectsBeforeShipCreation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a5312a40db900849893d1e8945aa8051b", null ],
     [ "applyEffectsToFighterSpawnedByShip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#af3b43c0579817dc11dd09cc5483bd1bf", null ],
     [ "canBeAddedOrRemovedNow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a1c2d6e9780e3281a00635e1e244d95ec", null ],
+    [ "cleanUpTowCableBuffBy", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a30269266e6c89a217c714a4ba7af263b", null ],
     [ "getBorderColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#aa14a1f5bcea8fda38c4a9e98837bf31c", null ],
     [ "getCanNotBeInstalledNowReason", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a430d366e7a8bf342b7e5cdf18c34cc02", null ],
     [ "getDescriptionParam", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#afc54a5254c87907b311401c8395bab15", null ],
     [ "getDescriptionParam", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a3a39f8ac647d399397e8b3e23cbf0172", null ],
     [ "getDisplayCategoryIndex", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a8ab757a01778086c2293e4fd0bf4b3b3", null ],
     [ "getDisplaySortOrder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#aa02fd94aa69564f15c80cc56fa631a7e", null ],
+    [ "getMaxBurnWithoutCables", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#af688bff84064b3049e996e2c9b3a1ac3", null ],
+    [ "getMaxCablesFor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a77abe3c7bf228cce14ed3b15be155cef", null ],
     [ "getNameColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a6a64b8a285bab4893077c3d0cfa6a153", null ],
+    [ "getSlowest", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a32f678682cb1cbd5cdabfb66b5893852", null ],
+    [ "getTowCableBuffBy", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a8fa8b3310180351b50597f575b4d4c06", null ],
     [ "getUnapplicableReason", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a17b48c879fe7cef0d82984c08502a5d7", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#aa8ea9996cadd2f9f07124a5ccc5db697", null ],
     [ "isApplicableToShip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a41d7763da9286c80c692bab0cd910f69", null ],
-    [ "shouldAddDescriptionToTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#af7350906fb0c51ce50a4e84924a8439c", null ]
+    [ "isSuitable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#af7f185504cf39734f10d0576449f63d2", null ],
+    [ "shouldAddDescriptionToTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#af7350906fb0c51ce50a4e84924a8439c", null ],
+    [ "HULLMOD_ID", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a90aaf4740d7737e6b3b7a732bdb70ae9", null ],
+    [ "TOW_CABLE_KEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#ac0c2c3b66082037a0074d6de33d977a6", null ]
 ];

@@ -9,6 +9,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisP
     [ "renderIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a23bf6397ef3dfb58fb9b26cf28cec0bf", null ],
     [ "showIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a05dfa54183a0891fccc29ccb68e57873", null ],
     [ "angVel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#aaca7a86fafd10647fe973e3bb651bff7", null ],
+    [ "CELL_SIZE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a6478be3f6767e42a6452075a5354a874", null ],
     [ "facing", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#a3635fc9ee88a15162735dea2565bc288", null ],
     [ "fader", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#acba8d9cafd7362083b16e6ae30122667", null ],
     [ "field", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisPiece.html#aed203c365f84bf54f0ffc4ab69de8786", null ],

@@ -1,5 +1,9 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI =
 [
+    [ "AIHints", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1AIHints.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1AIHints" ],
+    [ "DerivedWeaponStatsAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1DerivedWeaponStatsAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1DerivedWeaponStatsAPI" ],
+    [ "WeaponSize", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1WeaponSize.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1WeaponSize" ],
+    [ "WeaponType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1WeaponType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1WeaponType" ],
     [ "beginSelectionFlash", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#a5366b45037f83f6fb8a645e8966d7396", null ],
     [ "disable", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#a318841057925a6ad607033e799e22c34", null ],
     [ "disable", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#aa3e4ab8f2ac1e365f5acad58d59a0b1d", null ],

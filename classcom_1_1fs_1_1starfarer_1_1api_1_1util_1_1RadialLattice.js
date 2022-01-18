@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice =
 [
+    [ "RadialLatticeBucket", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice_1_1RadialLatticeBucket.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice_1_1RadialLatticeBucket" ],
     [ "getBucket", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#a2e149ff4a6e3e9439f9c2869f0006fb4", null ],
     [ "update", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#a06a98722b69af0cee46ed3c7a8502297", null ],
     [ "arc", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RadialLattice.html#a24f25ef68c4e99a066fb23818a444aaa", null ],

@@ -12,5 +12,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBl
     [ "sync", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#a13c0fbb9b76d73eeb7ffe637539e7636", null ],
     [ "updateAndSync", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#af6c1ef8dfc9e512517bf70cd6cf1bad4", null ],
     [ "updateLimits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#a8e9716d2f2b40521d5849bc211146df5", null ],
-    [ "wasEverUpdated", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#a9cf02facb7d0b6722f4935e3e952f008", null ]
+    [ "wasEverUpdated", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#a9cf02facb7d0b6722f4935e3e952f008", null ],
+    [ "curr", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#ae78cc46dd662ec21a51bdb9da422dae9", null ],
+    [ "degreesPerUnit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#afa0b42b912d1a1e4218a343e0d2ee53f", null ],
+    [ "isAnythingShortened", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#aa305378bf16cf81a348266b8a17d4217", null ],
+    [ "limits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#ac9fb74c90c97d6f014db502f8aafd065", null ],
+    [ "maxRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#ab04484bcb1eca43db4bafd4baf7105a9", null ],
+    [ "resolution", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#aab4c81fa006b00f7f37354fc312db64d", null ],
+    [ "wasUpdated", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RangeBlockerUtil.html#a2967b2819fd5236882302ab75bcc74f7", null ]
 ];

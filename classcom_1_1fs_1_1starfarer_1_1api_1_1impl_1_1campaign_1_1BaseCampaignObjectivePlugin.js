@@ -8,5 +8,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObject
     [ "setHacked", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a0aba63140c7e7b72332c56300a4c3deb", null ],
     [ "setHacked", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a9819f2d6789198e8554343bc4514d77a", null ],
     [ "setReset", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#afe2956bc548e47d68baa3a187c06ffd2", null ],
-    [ "setReset", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a94d9b2b9afba5a3b5277d4ca7f4cfcc4", null ]
+    [ "setReset", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a94d9b2b9afba5a3b5277d4ca7f4cfcc4", null ],
+    [ "HACK_DURATION_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a3fab9a5b68009a576db6ad5b2a71edc7", null ],
+    [ "HACKED", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a564a5c410e6624b5057b39be334d5c3e", null ],
+    [ "RESET", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a4c29a460a728f18fdb131633ba1a1c1f", null ],
+    [ "RESET_DURATION_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html#a1ee36f7bd55133e0e5bbeb74f0882197", null ]
 ];

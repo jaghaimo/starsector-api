@@ -41,5 +41,12 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1Groun
     [ "setMarket", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a178301195d47417d3c4d49390862d316", null ],
     [ "setNameOverride", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#ac33b6811531694e77565007a87ebecf6", null ],
     [ "setSource", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#ae3e8044ddd4d4af1d62e0867cd7326ef", null ],
-    [ "withContinueBeforeResult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a78f9605985817760af82aa17cdfd24fe", null ]
+    [ "withContinueBeforeResult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a78f9605985817760af82aa17cdfd24fe", null ],
+    [ "QUANTITY_SORT_TIER_0", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a891faffd161f68a714523d8908d0d1de", null ],
+    [ "QUANTITY_SORT_TIER_1", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a41db77174dd30cd807aa62a9b895b0fe", null ],
+    [ "QUANTITY_SORT_TIER_2", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#ab65aca23701382f5ab741c37a836e2bd", null ],
+    [ "QUANTITY_SORT_TIER_3", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a79148626ebdfd33c592649372edb34cd", null ],
+    [ "QUANTITY_SORT_TIER_4", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a61a74859b411dcc6a9368faa657e68ec", null ],
+    [ "QUANTITY_SORT_TIER_5", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#ae042e338f0580778810f10a20e0f4c0e", null ],
+    [ "XP_GAIN_VALUE_MULT", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a010f0a6eb4ef50586eb17e241e5638e7", null ]
 ];

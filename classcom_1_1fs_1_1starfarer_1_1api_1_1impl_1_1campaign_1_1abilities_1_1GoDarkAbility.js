@@ -9,5 +9,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDar
     [ "getDeactivationText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a7bcdd8e8431d68afb8eb3ffed882d59a", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#aaeaefd45ff6be61ba0ae9cd70876ef52", null ],
     [ "showActiveIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a3900bdc72d61aa48a315c6ca05ea6475", null ],
-    [ "showProgressIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#ab7a30abf57908d30fe67b32c184310e0", null ]
+    [ "showProgressIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#ab7a30abf57908d30fe67b32c184310e0", null ],
+    [ "DETECTABILITY_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1GoDarkAbility.html#a731cc367929ef925760087b63864fcf7", null ]
 ];

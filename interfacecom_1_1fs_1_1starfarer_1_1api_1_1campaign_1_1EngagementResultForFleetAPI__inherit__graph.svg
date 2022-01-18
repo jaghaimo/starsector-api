@@ -21,8 +21,8 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="187,-0.5 187,-41.5 386,-41.5 386,-0.5 187,-0.5"/>
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BattleAutoresolverPluginImpl_1_1EngagementResultForFleetImpl.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="187,-0.5 187,-41.5 386,-41.5 386,-0.5 187,-0.5"/>
 <text text-anchor="start" x="195" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="start" x="195" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">BattleAutoresolverPluginImpl.Engagement</text>
 <text text-anchor="middle" x="286.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ResultForFleetImpl</text>

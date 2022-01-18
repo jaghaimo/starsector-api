@@ -2,6 +2,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI =
 [
     [ "EngineSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1EngineSpecAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1EngineSpecAPI" ],
     [ "ShieldSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI" ],
+    [ "ShipTypeHints", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints" ],
     [ "addBuiltInMod", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#a2f5fc6b06e4ab6d99bc920b1c0113b4b", null ],
     [ "addBuiltInWeapon", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#adb2cb79554d775928f3f016f47916cc9", null ],
     [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html#ad41bb1af314242039bcb39c66821d60b", null ],

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl =
 [
+    [ "OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl_1_1OptionId.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl_1_1OptionId" ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#a22d110d90f346ce887f4a462c473126c", null ],
     [ "backFromEngagement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#af6a1c70d7e330a9f5e84c4b58cb3426f", null ],
     [ "createPlayerFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html#ac59fa02783f92ee40dcbd5bd717d1807", null ],

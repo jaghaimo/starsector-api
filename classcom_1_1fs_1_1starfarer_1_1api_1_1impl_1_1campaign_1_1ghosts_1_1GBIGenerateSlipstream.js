@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream =
 [
+    [ "GhostBehaviorWithSlipstream", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream_1_1GhostBehaviorWithSlipstream.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream_1_1GhostBehaviorWithSlipstream" ],
     [ "GBIGenerateSlipstream", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream.html#a59350ee131d1edf8c80b8f0ad0238de4", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream.html#ad2dc9ba651fd96ab33fb13fce105273c", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream.html#a4e1417132039840aff2c984ee886cb02", null ],

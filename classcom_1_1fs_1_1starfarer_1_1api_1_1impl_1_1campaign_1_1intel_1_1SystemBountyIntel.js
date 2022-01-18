@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel =
 [
+    [ "SystemBountyResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel_1_1SystemBountyResult.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel_1_1SystemBountyResult" ],
     [ "SystemBountyIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#ac10ff53dd51f584334353cf3197fd2d8", null ],
     [ "addBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#ae089a487285e35f7c20e6df705d99891", null ],
     [ "advanceImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#a4b52db58642fc5c6f5d86309ec736424", null ],
@@ -23,6 +24,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBou
     [ "reset", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#a3d1ae3550ead12e61fb4935c19130bec", null ],
     [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#aeeaf4347fec0928e41f15395bd6b7500", null ],
     [ "setElapsedDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#a599efeb548d708512dc2565ff0271e06", null ],
+    [ "updateLikelyCauseFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#a77999f04fa1b99333ab49673cd077af0", null ],
     [ "baseBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#aea71e107761a7bcb5dabdefc0b1575ba", null ],
     [ "duration", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#a0f5d2f982c70188056d2a6e37da60203", null ],
     [ "elapsedDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#afaa3fec04583ee0251186d82ca441b04", null ],
@@ -30,6 +32,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBou
     [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#a6c0c007e9bede773736b92887436a4f6", null ],
     [ "latestResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#a32871404b80e14e46f1639362711fb38", null ],
     [ "location", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#af026a968c3be353be6622f2837ad0d16", null ],
+    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#a40002050b0cd24c3ae1576ed143d4a53", null ],
     [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#aadc5b66e06ea1dfcd71289a769a18ad8", null ],
+    [ "MAX_DURATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#afa70483c96deac85f96aa569c6c06e24", null ],
     [ "script", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyIntel.html#a31ea1929eb8372780d40c767c221da49", null ]
 ];

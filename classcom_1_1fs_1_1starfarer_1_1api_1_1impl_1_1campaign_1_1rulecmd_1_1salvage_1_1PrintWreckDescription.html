@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.PrintWreckDescription Class Reference</div>  </div>
@@ -100,14 +101,14 @@ Inheritance diagram for com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Print
 <div class="dynheader">
 Collaboration diagram for com.fs.starfarer.api.impl.campaign.rulecmd.salvage.PrintWreckDescription:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription__coll__graph.svg" width="1458" height="586"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription__coll__graph.svg" width="2212" height="759"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adaf6436083be4b4028fc98262a79c5f1"><td class="memItemLeft" align="right" valign="top"><a id="adaf6436083be4b4028fc98262a79c5f1"></a>
-boolean&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> (String ruleId, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html">InteractionDialogAPI</a> dialog, List&lt; Token &gt; params, Map&lt; String, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html">MemoryAPI</a> &gt; memoryMap)</td></tr>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> (String ruleId, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html">InteractionDialogAPI</a> dialog, List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html">Token</a> &gt; params, Map&lt; String, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html">MemoryAPI</a> &gt; memoryMap)</td></tr>
 <tr class="separator:adaf6436083be4b4028fc98262a79c5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54e46cd09b6a42409efe6cac9a794e8a"><td class="memItemLeft" align="right" valign="top"><a id="a54e46cd09b6a42409efe6cac9a794e8a"></a>
 String&#160;</td><td class="memItemRight" valign="bottom"><b>getString</b> (String format)</td></tr>
@@ -117,7 +118,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>getString</b> (Stri
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>doesCommandAddOptions</b> ()</td></tr>
 <tr class="separator:ae859f2f32964a8a7bf504be999e3f7fe inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e1c8624b65d26f63dbd53bf2e35016b inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin"><td class="memItemLeft" align="right" valign="top"><a id="a5e1c8624b65d26f63dbd53bf2e35016b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getOptionOrder</b> (List&lt; Token &gt; params, Map&lt; String, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html">MemoryAPI</a> &gt; memoryMap)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getOptionOrder</b> (List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html">Token</a> &gt; params, Map&lt; String, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html">MemoryAPI</a> &gt; memoryMap)</td></tr>
 <tr class="separator:a5e1c8624b65d26f63dbd53bf2e35016b inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -164,6 +165,15 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aeb9162440160e1aa57fdb141933c745d"><td class="memItemLeft" align="right" valign="top"><a id="aeb9162440160e1aa57fdb141933c745d"></a>
 <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html">InteractionDialogAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dialog</b></td></tr>
 <tr class="separator:aeb9162440160e1aa57fdb141933c745d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aaefd227f4dc06b6990b4094882f4831a"><td class="memItemLeft" align="right" valign="top"><a id="aaefd227f4dc06b6990b4094882f4831a"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DerelictShipEntityPlugin.html">DerelictShipEntityPlugin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>plugin</b></td></tr>
+<tr class="separator:aaefd227f4dc06b6990b4094882f4831a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb271dbee90ee19dd388081e472bb84"><td class="memItemLeft" align="right" valign="top"><a id="acfb271dbee90ee19dd388081e472bb84"></a>
+Map&lt; String, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html">MemoryAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>memoryMap</b></td></tr>
+<tr class="separator:acfb271dbee90ee19dd388081e472bb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>

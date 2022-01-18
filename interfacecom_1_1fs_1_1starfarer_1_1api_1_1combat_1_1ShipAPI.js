@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI =
 [
+    [ "HullSize", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI_1_1HullSize" ],
     [ "abortLanding", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#af21ba47f41b79416697323122ed9f752", null ],
     [ "addAfterimage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a0c4b95d301e349f93e5dd348b1e27dd5", null ],
     [ "addListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a4372ac141bd7ff38ca48350bd60baa1f", null ],

@@ -85,11 +85,18 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1JitterUtil-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.util.JitterUtil Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for com.fs.starfarer.api.util.JitterUtil:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1JitterUtil__coll__graph.svg" width="166" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -120,6 +127,21 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a5367dcda660215bda883bf8774e752e3"><td class="memItemLeft" align="right" valign="top"><a id="a5367dcda660215bda883bf8774e752e3"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>renderWithJitter</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html">SpriteAPI</a> s, float x, float y, float maxJitter, int numCopies)</td></tr>
 <tr class="separator:a5367dcda660215bda883bf8774e752e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4e40a0ecd688a339b9f09169dcf21a6d"><td class="memItemLeft" align="right" valign="top"><a id="a4e40a0ecd688a339b9f09169dcf21a6d"></a>
+long&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> = <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc.html#a84bad28a03a6d76acd38de5c79e12122">Misc.genRandomSeed</a>()</td></tr>
+<tr class="separator:a4e40a0ecd688a339b9f09169dcf21a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c90542e2afce64fea9182f7b3c62fc"><td class="memItemLeft" align="right" valign="top"><a id="a66c90542e2afce64fea9182f7b3c62fc"></a>
+Random&#160;</td><td class="memItemRight" valign="bottom"><b>random</b> = new Random(seed)</td></tr>
+<tr class="separator:a66c90542e2afce64fea9182f7b3c62fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e2c2b26303e169e862c147c52ce9c4"><td class="memItemLeft" align="right" valign="top"><a id="a53e2c2b26303e169e862c147c52ce9c4"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>setSeedOnRender</b> = true</td></tr>
+<tr class="separator:a53e2c2b26303e169e862c147c52ce9c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de8752a1f177ed2151c277641aec6aa"><td class="memItemLeft" align="right" valign="top"><a id="a1de8752a1f177ed2151c277641aec6aa"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>circular</b></td></tr>
+<tr class="separator:a1de8752a1f177ed2151c277641aec6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/util/JitterUtil.java</li>

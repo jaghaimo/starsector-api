@@ -1,5 +1,6 @@
 var enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType =
 [
+    [ "DamageType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a9e6d5c333222a2e71640938f25aca9be", null ],
     [ "getArmorMult", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#ad4b305c23ec59bf0c13f9cf9dc0115bf", null ],
     [ "getDescription", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a07ac3a6e10b4a0088db21282f546a24c", null ],
     [ "getDisplayName", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#ac5a0c4bf9da1859a60f2a77c083f4ec8", null ],
@@ -10,9 +11,14 @@ var enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType =
     [ "setDisplayName", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a6d22aed40e4c3df1ea6fbab5ea9f8b77", null ],
     [ "setHullMult", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a4d9e0e80f688514c14153fa6d1d458d6", null ],
     [ "setShieldMult", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a9fbe7dae1ad4d453e09ad00553dabd84", null ],
+    [ "armorMult", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a10ac39e75cf36c9fce1b2c991936a005", null ],
+    [ "description", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#aa690b95062e27cf816e21106fead7986", null ],
+    [ "displayName", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#aaad63c66580481d4e528f8950cda20a3", null ],
     [ "ENERGY", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a3d787ae1a9de4fb4cc6a1d419cf6029f", null ],
     [ "FRAGMENTATION", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a172342ff675520176a5c5d6fafd7c1df", null ],
     [ "HIGH_EXPLOSIVE", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a32cb396f3aee23eed17474845140836b", null ],
+    [ "hullMult", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a4b70ea0a68ca60774b3aa6436c5db865", null ],
     [ "KINETIC", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a7a2669056beca3129e7166fef57fccbc", null ],
-    [ "OTHER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a977c7bbc2affa982c0ab4fe666b987a4", null ]
+    [ "OTHER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#a977c7bbc2affa982c0ab4fe666b987a4", null ],
+    [ "shieldMult", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html#ad3547f789a67b046674c0ad843efee06", null ]
 ];

@@ -1,12 +1,14 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin =
 [
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a422f12b1ad6eb7deb1374575d32953a9", null ],
+    [ "computeDetectionRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#ac0644ce0c610b85e1d5844a489a7f92a", null ],
     [ "getDaysLeft", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a406f2bd6e8db7b5077ad657574f95c0f", null ],
     [ "getElapsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#ae844208afe9619a9db7bc33c30b1fed1", null ],
     [ "getExtraDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#ac2314b4b2a092be74bf05f95dde597ad", null ],
     [ "getRenderRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#ab1442722240f881d252e7351a6dd6e13", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#ab13e7f5d9140ba4f3b9c0d75904c5ec9", null ],
     [ "isNeverExpire", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#aee204ff45e3c5f82a5e6f44b1998450f", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a2ae2ef765ca64aefdf9a2549c8c0cd27", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a2adc6f547f72bef4fd8b118232d50934", null ],
     [ "setElapsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#a4591d0bff6b9e486119b4996af1c0265", null ],
     [ "setExtraDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html#ae193576a7548edd021c33c9bc922385f", null ],

@@ -1,0 +1,5 @@
+var enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener_1_1SubmarketInteractionType =
+[
+    [ "CARGO", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener_1_1SubmarketInteractionType.html#ab719e4c9c68c9d4b3ad58beba3b73f10", null ],
+    [ "SHIPS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener_1_1SubmarketInteractionType.html#ad65ae68428f260c0407da35cba2f04a6", null ]
+];

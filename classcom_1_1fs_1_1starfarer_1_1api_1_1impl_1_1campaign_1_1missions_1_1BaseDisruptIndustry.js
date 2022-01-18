@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry =
 [
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry_1_1Stage" ],
     [ "acceptImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a57e93ded09040abeb832f9d401a9a4ae", null ],
     [ "addDescriptionForNonEndStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a1ed494785c5641d4158f6427ae8183e6", null ],
     [ "addExtraTriggers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a77f7347ac1458612752b0c1164d7239f", null ],
@@ -20,5 +21,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDi
     [ "updateInteractionDataImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a70f6741eaf1ba7061895b0d8df6f6bdc", null ],
     [ "disruptDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a961a33de1991fa5498b3da121d956b3e", null ],
     [ "industry", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#aa8c29f87f440670fd03723ff956861a3", null ],
-    [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a035f231647f65e77db63e365548c7ca2", null ]
+    [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a035f231647f65e77db63e365548c7ca2", null ],
+    [ "MISSION_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html#a66e1e1d626a2a8c7d5f318868186307c", null ]
 ];

@@ -8,5 +8,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurn
     [ "getId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#aa0e367c30a95fe710a798b1d772dc524", null ],
     [ "isExpired", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#ae4e651c538ac8d458ec2a7f0c6820a51", null ],
     [ "setDelta", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#a7724dfadd533130729bfc41bde55c934", null ],
-    [ "setDur", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#aea7b510df83204a9d68f0151ab1302f7", null ]
+    [ "setDur", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#aea7b510df83204a9d68f0151ab1302f7", null ],
+    [ "delta", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#a82bb357a5b25ce0305abe9fcb4a08b02", null ],
+    [ "dur", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#a71cbc4456a1bef60c4afb912e564338f", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#a25e71274d3da3d9d4b80df00659520ef", null ]
 ];

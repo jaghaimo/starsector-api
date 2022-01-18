@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreCampaignPluginImpl =
 [
+    [ "computeSmugglingSuspicionLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreCampaignPluginImpl.html#abdc16aa6433c6a4752613bb03690e26a", null ],
     [ "getId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreCampaignPluginImpl.html#a49a5d03de64f3e0ff2d42645cea27843", null ],
     [ "isTransient", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreCampaignPluginImpl.html#a19520b523130b0e16d8d14880b49fffa", null ],
     [ "pickAbilityAI", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreCampaignPluginImpl.html#a4ea3fff3f412a9f7f1538a56072d25cf", null ],

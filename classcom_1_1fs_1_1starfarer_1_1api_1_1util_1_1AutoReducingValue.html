@@ -85,21 +85,28 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1AutoReducingValue-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.util.AutoReducingValue Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Collaboration diagram for com.fs.starfarer.api.util.AutoReducingValue:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1AutoReducingValue__coll__graph.svg" width="234" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><b>ValueChangedListener</b></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1AutoReducingValue_1_1ValueChangedListener.html">ValueChangedListener</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b68b827f276a373b1a4f5ef01335f9c"><td class="memItemLeft" align="right" valign="top"><a id="a3b68b827f276a373b1a4f5ef01335f9c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AutoReducingValue</b> (int value, float elapsedPerPoint, ValueChangedListener listener)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AutoReducingValue</b> (int value, float elapsedPerPoint, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1AutoReducingValue_1_1ValueChangedListener.html">ValueChangedListener</a> listener)</td></tr>
 <tr class="separator:a3b68b827f276a373b1a4f5ef01335f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cebab1846c4254a0c5e26e2e056b6fa"><td class="memItemLeft" align="right" valign="top"><a id="a4cebab1846c4254a0c5e26e2e056b6fa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>advance</b> (float amount)</td></tr>
@@ -116,6 +123,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>increaseValue</b> (in
 <tr class="memitem:a2a19b6f2daaaa2398645281433be215b"><td class="memItemLeft" align="right" valign="top"><a id="a2a19b6f2daaaa2398645281433be215b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reduceValue</b> (int amt)</td></tr>
 <tr class="separator:a2a19b6f2daaaa2398645281433be215b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2ae1cf3abd32535b595b4665cefeedfc"><td class="memItemLeft" align="right" valign="top"><a id="a2ae1cf3abd32535b595b4665cefeedfc"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>elapsed</b> = 0f</td></tr>
+<tr class="separator:a2ae1cf3abd32535b595b4665cefeedfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab284f3817ad2d6c4413702372a28bf85"><td class="memItemLeft" align="right" valign="top"><a id="ab284f3817ad2d6c4413702372a28bf85"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> = 0</td></tr>
+<tr class="separator:ab284f3817ad2d6c4413702372a28bf85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17b06db042df56b1aa9c09ea930b26f"><td class="memItemLeft" align="right" valign="top"><a id="aa17b06db042df56b1aa9c09ea930b26f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>elapsedPerPoint</b></td></tr>
+<tr class="separator:aa17b06db042df56b1aa9c09ea930b26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6b900cb496bbc8621173a1db3a49fec"><td class="memItemLeft" align="right" valign="top"><a id="ab6b900cb496bbc8621173a1db3a49fec"></a>
+final <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1AutoReducingValue_1_1ValueChangedListener.html">ValueChangedListener</a>&#160;</td><td class="memItemRight" valign="bottom"><b>listener</b></td></tr>
+<tr class="separator:ab6b900cb496bbc8621173a1db3a49fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/util/AutoReducingValue.java</li>

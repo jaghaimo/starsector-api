@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg1c1ce0f4653dab5c1722b05a922fbf65 =
+[
+    [ "PickLocationAroundPlayerAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg1c1ce0f4653dab5c1722b05a922fbf65.html#a65e21988710463d55310eeb08695fa01", null ],
+    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg1c1ce0f4653dab5c1722b05a922fbf65.html#a0283c14fc5e6cf80d4a3ab414b679798", null ],
+    [ "maxDist", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg1c1ce0f4653dab5c1722b05a922fbf65.html#a2d95ffe74716709a47aafa5e2863bdc0", null ],
+    [ "minDist", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg1c1ce0f4653dab5c1722b05a922fbf65.html#a1a742f4a2e1635f23309214ea027c9be", null ]
+];

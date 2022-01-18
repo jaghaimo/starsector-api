@@ -219,8 +219,8 @@
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="1033,-723.5 1033,-753.5 1182,-753.5 1182,-723.5 1033,-723.5"/>
+<g id="a_node10"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FullName_1_1Gender.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="1033,-723.5 1033,-753.5 1182,-753.5 1182,-723.5 1033,-723.5"/>
 <text text-anchor="start" x="1041" y="-741.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.characters.</text>
 <text text-anchor="middle" x="1107.5" y="-730.5" font-family="Helvetica,sans-Serif" font-size="10.00">FullName.Gender</text>
 </a>
@@ -282,8 +282,8 @@
 <!-- Node15 -->
 <g id="node15" class="node">
 <title>Node15</title>
-<g id="a_node15"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="223.5,-448.5 223.5,-478.5 426.5,-478.5 426.5,-448.5 223.5,-448.5"/>
+<g id="a_node15"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="223.5,-448.5 223.5,-478.5 426.5,-478.5 426.5,-448.5 223.5,-448.5"/>
 <text text-anchor="start" x="231.5" y="-466.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="325" y="-455.5" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent.CallableEvent</text>
 </a>
@@ -320,8 +320,8 @@
 <!-- Node17 -->
 <g id="node17" class="node">
 <title>Node17</title>
-<g id="a_node17"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="206,-595.5 206,-625.5 444,-625.5 444,-595.5 206,-595.5"/>
+<g id="a_node17"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="206,-595.5 206,-625.5 444,-625.5 444,-595.5 206,-595.5"/>
 <text text-anchor="start" x="214" y="-613.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="325" y="-602.5" font-family="Helvetica,sans-Serif" font-size="10.00">CommRelayEntityPlugin.CommSnifferReadableIntel</text>
 </a>
@@ -382,8 +382,8 @@
 <!-- Node20 -->
 <g id="node20" class="node">
 <title>Node20</title>
-<g id="a_node20"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="651.5,-196.5 651.5,-226.5 833.5,-226.5 833.5,-196.5 651.5,-196.5"/>
+<g id="a_node20"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1EconomyAPI_1_1EconomyUpdateListener.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="651.5,-196.5 651.5,-226.5 833.5,-226.5 833.5,-196.5 651.5,-196.5"/>
 <text text-anchor="start" x="659.5" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.econ.</text>
 <text text-anchor="middle" x="742.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">EconomyAPI.EconomyUpdateListener</text>
 </a>
@@ -398,8 +398,8 @@
 <!-- Node21 -->
 <g id="node21" class="node">
 <title>Node21</title>
-<g id="a_node21"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="640.5,-284.5 640.5,-314.5 844.5,-314.5 844.5,-284.5 640.5,-284.5"/>
+<g id="a_node21"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidDelegate.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="640.5,-284.5 640.5,-314.5 844.5,-314.5 844.5,-284.5 640.5,-284.5"/>
 <text text-anchor="start" x="648.5" y="-302.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.raid.</text>
 <text text-anchor="middle" x="742.5" y="-291.5" font-family="Helvetica,sans-Serif" font-size="10.00">RaidIntel.RaidDelegate</text>
 </a>
@@ -470,8 +470,8 @@
 <!-- Node26 -->
 <g id="node26" class="node">
 <title>Node26</title>
-<g id="a_node26"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="649.5,-147.5 649.5,-177.5 835.5,-177.5 835.5,-147.5 649.5,-147.5"/>
+<g id="a_node26"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyIntel_1_1BountyResult.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="649.5,-147.5 649.5,-177.5 835.5,-177.5 835.5,-147.5 649.5,-147.5"/>
 <text text-anchor="start" x="657.5" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.</text>
 <text text-anchor="middle" x="742.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">PersonBountyIntel.BountyResult</text>
 </a>
@@ -487,8 +487,8 @@
 <!-- Node27 -->
 <g id="node27" class="node">
 <title>Node27</title>
-<g id="a_node27"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="220,-171 220,-212 430,-212 430,-171 220,-171"/>
+<g id="a_node27"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin_1_1ReputationAdjustmentResult.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="220,-171 220,-212 430,-212 430,-171 220,-171"/>
 <text text-anchor="start" x="228" y="-200" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="start" x="228" y="-189" font-family="Helvetica,sans-Serif" font-size="10.00">ReputationActionResponsePlugin.Reputation</text>
 <text text-anchor="middle" x="325" y="-178" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustmentResult</text>
@@ -505,8 +505,8 @@
 <!-- Node28 -->
 <g id="node28" class="node">
 <title>Node28</title>
-<g id="a_node28"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="232,-122.5 232,-152.5 418,-152.5 418,-122.5 232,-122.5"/>
+<g id="a_node28"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PersonBountyIntel_1_1BountyResultType.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="232,-122.5 232,-152.5 418,-152.5 418,-122.5 232,-122.5"/>
 <text text-anchor="start" x="240" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.</text>
 <text text-anchor="middle" x="325" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">PersonBountyIntel.BountyResultType</text>
 </a>
@@ -557,8 +557,8 @@
 <!-- Node31 -->
 <g id="node31" class="node">
 <title>Node31</title>
-<g id="a_node31"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="635,-0.5 635,-30.5 850,-30.5 850,-0.5 635,-0.5"/>
+<g id="a_node31"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel_1_1BaseBountyData.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="635,-0.5 635,-30.5 850,-30.5 850,-0.5 635,-0.5"/>
 <text text-anchor="start" x="643" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bases.</text>
 <text text-anchor="middle" x="742.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PirateBaseIntel.BaseBountyData</text>
 </a>
@@ -581,8 +581,8 @@
 <!-- Node33 -->
 <g id="node33" class="node">
 <title>Node33</title>
-<g id="a_node33"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="635,-586.5 635,-616.5 850,-616.5 850,-586.5 635,-586.5"/>
+<g id="a_node33"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel_1_1PirateBaseTier.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="635,-586.5 635,-616.5 850,-616.5 850,-586.5 635,-586.5"/>
 <text text-anchor="start" x="643" y="-604.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bases.</text>
 <text text-anchor="middle" x="742.5" y="-593.5" font-family="Helvetica,sans-Serif" font-size="10.00">PirateBaseIntel.PirateBaseTier</text>
 </a>

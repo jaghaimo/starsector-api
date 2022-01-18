@@ -13,5 +13,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1
     [ "isTransient", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCells.html#a992eda94dc933540432632801c79ecb5", null ],
     [ "setParam", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCells.html#abfbd218a5c7ee336d94679c2d741190a", null ],
     [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCells.html#afc430642c1003bc67f12b1070fb2c547", null ],
-    [ "intel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCells.html#a69d24a8c5606fc3768996d4e17a664c7", null ]
+    [ "intel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCells.html#a69d24a8c5606fc3768996d4e17a664c7", null ],
+    [ "STABLITY_PENALTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCells.html#a5f8303885fc7c05f998998a3476abe21", null ]
 ];

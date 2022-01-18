@@ -9,5 +9,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat
     [ "getId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#a03075ac34ea55c9a79bd468b029470d2", null ],
     [ "getSharedCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#a291df759b7f7c65918f2214692042dd2", null ],
     [ "getValueForAllAccrued", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#a84a0c8e44c9c4dffad44e38d48d26836", null ],
-    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#a81a2bae9f2afdf3ad0c38c194ea22989", null ]
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#a81a2bae9f2afdf3ad0c38c194ea22989", null ],
+    [ "accrued", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html#ab198ee2343ed30e9989c3e46759d1eb5", null ]
 ];

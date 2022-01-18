@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin =
 [
+    [ "AutofitOption", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AutofitOption.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AutofitOption" ],
     [ "AutofitPluginDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AutofitPluginDelegate.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AutofitPluginDelegate" ],
     [ "AvailableFighter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableFighter.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableFighter" ],
     [ "AvailableWeapon", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableWeapon.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableWeapon" ],

@@ -14,5 +14,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getOptionText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a427e89374aebf359c4a9ba1b867d92d9", null ],
     [ "getPersonPost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a3d3ef390b3aff2770db60516843bda95", null ],
     [ "getPrompt", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a4c1f765878695e5db9d60dc19f6358b3", null ],
-    [ "regen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a32ec4c0566aba84deffbe5d8d58249a2", null ]
+    [ "regen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#a32ec4c0566aba84deffbe5d8d58249a2", null ],
+    [ "REPAYMENT_DAYS_MAJOR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEvent.html#ad36d8540e462093625666c08d891c848", null ]
 ];

@@ -27,6 +27,20 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext =
     [ "setStandoffRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a9d39837aca3e0db7b38eb4c715be9799", null ],
     [ "aiRetreatAllowed", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a3154d19b2e0037138608bbde407d4816", null ],
     [ "enemyDeployAll", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#aba642cc3adfd0bdd5f19d6ec93301c66", null ],
+    [ "escapeDeploymentBurnDuration", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#af07c10a352ab6a626f5743c63d150396", null ],
     [ "fightToTheLast", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a88e26ef21206ee1d24957403fb876a52", null ],
-    [ "objectivesAllowed", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a5aae5fc8b699c95c9a2c5f34b3e84fda", null ]
+    [ "flankDeploymentDistance", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a8a0647796315b76966ff1c363a5360e2", null ],
+    [ "initialDeploymentBurnDuration", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a0814a7602ce8341aa28a38b024f94d57", null ],
+    [ "initialEscapeRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a1d2b7fc25ba0146433d6bff84af1374d", null ],
+    [ "initialNumSteps", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a9c65ba2842fd84459d871268cc9be4e4", null ],
+    [ "initialStepSize", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a257b96abb8716e405697791a35676e93", null ],
+    [ "normalDeploymentBurnDuration", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a7bb250967c0d732329f3cd294802f024", null ],
+    [ "objectivesAllowed", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a5aae5fc8b699c95c9a2c5f34b3e84fda", null ],
+    [ "otherFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#ade54f250ccec40f373b8345854c778a1", null ],
+    [ "otherGoal", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a5d4d674c665024562b9048335af74de8", null ],
+    [ "playerCommandPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a7d8f05fd6601a847dae55972c0f97446", null ],
+    [ "playerFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a9240bb511ac9ac0b94472806e6e71d60", null ],
+    [ "playerGoal", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#ad726a583e7a52ce276db00b572db8e98", null ],
+    [ "pursuitRangeModifier", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#af493265dfbbe864081b599ab0ba59ceb", null ],
+    [ "standoffRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#af2b139e14e5e3700f201e8e4f22603b9", null ]
 ];

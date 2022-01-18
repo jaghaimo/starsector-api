@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel =
 [
+    [ "PSIStage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_1_1PSIStage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel_1_1PSIStage" ],
     [ "PlanetaryShieldIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#af7c425359118525c0e60f6e8db4e7c96", null ],
     [ "addBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#aee028dd98375683aa44305c3a94ffa17", null ],
     [ "callEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a30a5072d985ce159bf6b513ef7809797", null ],
@@ -19,6 +20,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "notifyEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#aeeb59d49e60e942709ab8e7a3e752327", null ],
     [ "shouldRemoveIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a7e1bb9927ffede1c562c34c851383f3e", null ],
     [ "event", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a20998fba05f793da294bc854d45a79ba", null ],
+    [ "FINISHED_XP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a39711b4d5fd5fad792483f1c3a9617e0", null ],
+    [ "PAY_PILOT_XP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a45697ee3025a0a755787be295c96e193", null ],
     [ "pilotCredits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#ac90c9eed460c7da2abdbbfa96f6694bf", null ],
     [ "planet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a310334745765e39bbbc81709b95d2869", null ],
     [ "stage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldIntel.html#a1009f5365dfc1f38551c44a3f1d15b7d", null ]

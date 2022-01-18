@@ -57,6 +57,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTer
     [ "shouldPlayLoopTwo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#ad56adf5c47335fd5b5f95b099caff0e8", null ],
     [ "stacksWithSelf", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a14be381a865264eb8ad95b2475b08038", null ],
     [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a98ba084e2722ae038b3961e580dbc821", null ],
+    [ "EXTRA_SOUND_RADIUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a0b3a67ccf780629ea7924a334b20c629", null ],
     [ "name", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a6e7b52077a0f438b0dc442ef0084a222", null ],
+    [ "spec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a1dce3b0c4b1e4103880d99aa710c2f0c", null ],
+    [ "TERRAIN_LOCK_KEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a7abc3124de9ac49f8b82c26d5ae1a36d", null ],
     [ "terrainId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a075ff680d11a0f394d9f399d13129c2d", null ]
 ];

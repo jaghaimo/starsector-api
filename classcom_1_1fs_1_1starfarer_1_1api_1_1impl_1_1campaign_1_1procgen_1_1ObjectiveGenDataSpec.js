@@ -10,5 +10,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Objecti
     [ "setCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#a69bb31598f6a57bec5e7ea19cf4a42fe", null ],
     [ "setFrequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#afbb90655cdad7a22bab5955265ea6ee8", null ],
     [ "setId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#a481c3bb5a95395d1f093eeb8aeb8b15b", null ],
-    [ "setTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#ac494bb332e2f16fbdccabb21e41e4c2b", null ]
+    [ "setTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#ac494bb332e2f16fbdccabb21e41e4c2b", null ],
+    [ "category", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#a53e8e38d393c8a1c58031698ca130926", null ],
+    [ "frequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#a40ee56712df97bc6d72defcd21f12e3a", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#ad43276cf99e71f38c1d52804e9d32acb", null ],
+    [ "tags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ObjectiveGenDataSpec.html#ad59db45606899687c51e6ad779903566", null ]
 ];

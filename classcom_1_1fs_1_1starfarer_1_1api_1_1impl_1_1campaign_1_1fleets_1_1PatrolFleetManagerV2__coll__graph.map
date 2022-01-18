@@ -1,8 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManagerV2" name="com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManagerV2">
-<area shape="rect" id="node1" title=" " alt="" coords="565,104,820,145"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html" title=" " alt="" coords="275,5,470,47"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="5,5,200,47"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="289,71,456,112"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="249,136,496,177"/>
-<area shape="rect" id="node6" title=" " alt="" coords="341,202,404,229"/>
+<area shape="rect" id="node1" title=" " alt="" coords="751,213,1005,255"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html" title=" " alt="" coords="359,5,553,47"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="21,5,215,47"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="373,71,539,112"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="333,136,579,177"/>
+<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html" title=" " alt="" coords="379,265,533,307"/>
+<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="41,231,195,272"/>
+<area shape="rect" id="node8" title=" " alt="" coords="425,331,487,358"/>
+<area shape="rect" id="node9" title=" " alt="" coords="312,383,600,424"/>
+<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="343,448,569,489"/>
+<area shape="rect" id="node11" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,448,231,489"/>
 </map>

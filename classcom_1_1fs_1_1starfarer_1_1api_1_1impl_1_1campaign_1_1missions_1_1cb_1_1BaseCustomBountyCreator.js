@@ -30,5 +30,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1
     [ "notifyFailed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#aee4976fdcf0ef7b5311cf104c5bd7436", null ],
     [ "setRepChangesBasedOnDifficulty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a46b26283774f9810f92ab40ea58ca02a", null ],
     [ "systemMatchesRequirement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ad2f73f0cc1a4b57ce6e89ab7026b32d3", null ],
-    [ "updateInteractionData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ab23df1b23f5383b52a836929d698f516", null ]
+    [ "updateInteractionData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#ab23df1b23f5383b52a836929d698f516", null ],
+    [ "DEFAULT_FREQUENCY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a19a1ed5bf141a821f8ffafdda92161e9", null ],
+    [ "STAGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBountyCreator.html#a13728446ffd7250f39a3280b90dcb3aa", null ]
 ];

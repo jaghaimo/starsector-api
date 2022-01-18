@@ -1,0 +1,8 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg774870f59142c79147454b1297741081 =
+[
+    [ "PickLocationAtClosestToEntityJumpPointAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg774870f59142c79147454b1297741081.html#a4abfd381543f4f64fc05509b032b0cf8", null ],
+    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg774870f59142c79147454b1297741081.html#ab81c0f8e93de9f59b746e034eed09d7a", null ],
+    [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg774870f59142c79147454b1297741081.html#ac29e55e481058c5dfa2bdad7cb463bd1", null ],
+    [ "minDistFromEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg774870f59142c79147454b1297741081.html#a63ac98d0d5dda8936c17c06718dbd7fa", null ],
+    [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg774870f59142c79147454b1297741081.html#ad55f876e4194ada4dafd3e74021869fd", null ]
+];

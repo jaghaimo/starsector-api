@@ -87,6 +87,8 @@ $(document).ready(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManagerV2 Class Reference</div>  </div>
@@ -101,13 +103,13 @@ Inheritance diagram for com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetMan
 <div class="dynheader">
 Collaboration diagram for com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManagerV2:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2__coll__graph.svg" width="826" height="235"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2__coll__graph.svg" width="1011" height="495"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>PatrolFleetData</b></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2_1_1PatrolFleetData.html">PatrolFleetData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -122,7 +124,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea36710c1f881853561a886e7459f0a4"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2.html#aea36710c1f881853561a886e7459f0a4">runWhilePaused</a> ()</td></tr>
 <tr class="separator:aea36710c1f881853561a886e7459f0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a165db387a28f8068e573b24757f879e7"><td class="memItemLeft" align="right" valign="top"><a id="a165db387a28f8068e573b24757f879e7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reportFleetDespawnedToListener</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, FleetDespawnReason reason, Object param)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reportFleetDespawnedToListener</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener_1_1FleetDespawnReason.html">FleetDespawnReason</a> reason, Object param)</td></tr>
 <tr class="separator:a165db387a28f8068e573b24757f879e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8a42d6fc59d34a865158350f2918cfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2.html#ae8a42d6fc59d34a865158350f2918cfd">reportBattleOccurred</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> primaryWinner, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html">BattleAPI</a> battle)</td></tr>
 <tr class="separator:ae8a42d6fc59d34a865158350f2918cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,9 +140,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>reRegister</b> (float
 <tr class="memitem:a2017b7de6e8a99a7a35e6aa2c82ddfbe inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener"><td class="memItemLeft" align="right" valign="top"><a id="a2017b7de6e8a99a7a35e6aa2c82ddfbe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reportBattleFinished</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> primaryWinner, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html">BattleAPI</a> battle)</td></tr>
 <tr class="separator:a2017b7de6e8a99a7a35e6aa2c82ddfbe inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68138633aa1fa30cebaf18271f565c03 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#a68138633aa1fa30cebaf18271f565c03">reportFleetDespawned</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, FleetDespawnReason reason, Object param)</td></tr>
+<tr class="memitem:a68138633aa1fa30cebaf18271f565c03 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#a68138633aa1fa30cebaf18271f565c03">reportFleetDespawned</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener_1_1FleetDespawnReason.html">FleetDespawnReason</a> reason, Object param)</td></tr>
 <tr class="separator:a68138633aa1fa30cebaf18271f565c03 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9d450e100ae16c148556ee0509b44dc inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#ad9d450e100ae16c148556ee0509b44dc">reportFleetJumped</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a> from, JumpDestination to)</td></tr>
+<tr class="memitem:ad9d450e100ae16c148556ee0509b44dc inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#ad9d450e100ae16c148556ee0509b44dc">reportFleetJumped</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a> from, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1JumpPointAPI_1_1JumpDestination.html">JumpDestination</a> to)</td></tr>
 <tr class="separator:ad9d450e100ae16c148556ee0509b44dc inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f9c22ef95164f54eac5c64af5c1aa12 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html#a0f9c22ef95164f54eac5c64af5c1aa12">reportFleetReachedEntity</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a> entity)</td></tr>
 <tr class="separator:a0f9c22ef95164f54eac5c64af5c1aa12 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,6 +205,30 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae27b030592fd2dcdda70887581c53433"><td class="memItemLeft" align="right" valign="top"><a id="ae27b030592fd2dcdda70887581c53433"></a>
 Object&#160;</td><td class="memItemRight" valign="bottom"><b>readResolve</b> ()</td></tr>
 <tr class="separator:ae27b030592fd2dcdda70887581c53433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ad2939813ba8d99d45fdd4d07ac08ea19"><td class="memItemLeft" align="right" valign="top"><a id="ad2939813ba8d99d45fdd4d07ac08ea19"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getCount</b> (<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory_1_1PatrolType.html">PatrolType</a> ... types)</td></tr>
+<tr class="separator:ad2939813ba8d99d45fdd4d07ac08ea19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1c57c5d39ee85ba823e52691b218150f"><td class="memItemLeft" align="right" valign="top"><a id="a1c57c5d39ee85ba823e52691b218150f"></a>
+<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html">MarketAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>market</b></td></tr>
+<tr class="separator:a1c57c5d39ee85ba823e52691b218150f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a335765ee091122097a59606837a29eb1"><td class="memItemLeft" align="right" valign="top"><a id="a335765ee091122097a59606837a29eb1"></a>
+List&lt; <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2_1_1PatrolFleetData.html">PatrolFleetData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>activePatrols</b> = new ArrayList&lt;<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2_1_1PatrolFleetData.html">PatrolFleetData</a>&gt;()</td></tr>
+<tr class="separator:a335765ee091122097a59606837a29eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029867393a0eefbaf4dd0a0e7f5f7c8c"><td class="memItemLeft" align="right" valign="top"><a id="a029867393a0eefbaf4dd0a0e7f5f7c8c"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html">IntervalUtil</a>&#160;</td><td class="memItemRight" valign="bottom"><b>tracker</b></td></tr>
+<tr class="separator:a029867393a0eefbaf4dd0a0e7f5f7c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c720129cf9a2bd04e3d7d0b0d36772"><td class="memItemLeft" align="right" valign="top"><a id="a98c720129cf9a2bd04e3d7d0b0d36772"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>maxPatrols</b></td></tr>
+<tr class="separator:a98c720129cf9a2bd04e3d7d0b0d36772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a813d51117fd49c04189a3825fa936318"><td class="memItemLeft" align="right" valign="top"><a id="a813d51117fd49c04189a3825fa936318"></a>
+<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1RollingAverageTracker.html">RollingAverageTracker</a>&#160;</td><td class="memItemRight" valign="bottom"><b>patrolBattlesLost</b></td></tr>
+<tr class="separator:a813d51117fd49c04189a3825fa936318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aaecafac11c36d69c781958021f476d72"></a>

@@ -9,5 +9,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1Scave
     [ "getActivationText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#a452595d6aafb341c5e132171172c06df", null ],
     [ "getDebrisField", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#a0c6353471d8156003def665900c4c38b", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#ae90a95070c03af616e71c277753a3e2f", null ],
-    [ "isUsable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#a61a3a5de454399371671ac9cf14ac68f", null ]
+    [ "isUsable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#a61a3a5de454399371671ac9cf14ac68f", null ],
+    [ "ACCELERATION_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#a130b4e41c3fb50775a0410701353e176", null ],
+    [ "DETECTABILITY_RANGE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#ae0f3686954a66fa0c4371c0b652ba32a", null ],
+    [ "interval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#aea0c31896e56b89f7264a72b7ac9c07d", null ],
+    [ "SENSOR_RANGE_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ScavengeAbility.html#ac4a54a2b52e1c71dd465908dc5d9c2c5", null ]
 ];

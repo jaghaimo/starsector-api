@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact =
 [
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact_1_1Stage" ],
+    [ "Variation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact_1_1Variation.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact_1_1Variation" ],
     [ "addDescriptionForNonEndStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#a0d1b248134be130d2892c14988deeb6c", null ],
     [ "addNextStepText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#a00cde33c318f5ebecb99764844965b65", null ],
     [ "callAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#a20a4b5e1b9628a00226d002c821d7f0f", null ],
@@ -12,5 +14,11 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academ
     [ "costVeryLow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#a14905014fabc7d81a274d1349c7a4b5e", null ],
     [ "item", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#ad94ede069a946bb102b24cc82f57b739", null ],
     [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#ae9dd03d0dd9b425b637c567306fac75e", null ],
+    [ "MISSION_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#a5a5fc436a0bd5dbb7d2c5dd0031c6118", null ],
+    [ "PROB_PATHER_FLEET", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#a21f7bfb16bdf2eaa1d1a9b8e80ed5253", null ],
+    [ "PROB_PIRATE_FLEET", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#a6b9bbadb8623c9809ceb69176211f825", null ],
+    [ "PROB_PIRATE_VARIATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#ad1116a9ffaea9db41a5c27e969d7bc7f", null ],
+    [ "PROB_TRITACH_FLEET", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#a62b45b7a27e7a47ed2288c0218939dfa", null ],
+    [ "RAID_DIFFICULTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#a7c5f21eae360826fb1a8acd01ef71ae8", null ],
     [ "variation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABuyArtifact.html#ac617f08cedf1a162637db40b86c4b7f3", null ]
 ];

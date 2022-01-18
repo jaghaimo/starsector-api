@@ -12,5 +12,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "getTagsForSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html#a7862daf116bf3ce182179fda04bccfe0", null ],
     [ "notifyAccepted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html#a708922b606e2fe598bad51c41144199e", null ],
     [ "playerKnowsSpecAlready", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html#a7f3a9764a620b121a6c283f582593366", null ],
-    [ "numAccepted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html#a31b81df020a3a719bd4e4a42d48d24d8", null ]
+    [ "BASE_POINTS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html#a99535319e7fae5bb23119adbd08d7388", null ],
+    [ "numAccepted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html#a31b81df020a3a719bd4e4a42d48d24d8", null ],
+    [ "PREFIX", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html#a1e59e41863a194c1f74b43354d69e874", null ]
 ];

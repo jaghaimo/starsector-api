@@ -21,6 +21,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspectio
     [ "coresRemoved", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#ae1d8cb291e40432600e82a1913938570", null ],
     [ "gaveOrders", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#a3655528c54680c1a32a1a33ea1c7256c", null ],
     [ "playerTargeted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#a30750c6dd2bc25519aecd6074e3e846f", null ],
+    [ "REP_PENALTY_HID_STUFF", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#a34adf704a070c3398caacbe2a9fcd386", null ],
+    [ "REP_PENALTY_NORMAL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#adf76b79a0368bb7efed9f8c292f0f946", null ],
     [ "scripts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#aa1f332318e26a5bb29163d2dca0d2bc4", null ],
     [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#a31654cbe9f2678d4d5550675fb0f5438", null ],
     [ "untilAutoresolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html#a061b618419b1e757a57ecf9671fbdd0e", null ]

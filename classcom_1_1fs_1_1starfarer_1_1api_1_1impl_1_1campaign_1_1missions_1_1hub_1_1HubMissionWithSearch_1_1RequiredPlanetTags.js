@@ -1,0 +1,5 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredPlanetTags =
+[
+    [ "RequiredPlanetTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredPlanetTags.html#aac410ccebbaef1c591e9190414cc7c8c", null ],
+    [ "planetMatchesRequirement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredPlanetTags.html#aae854f5c328cc7ad181a50be9e20a367", null ]
+];

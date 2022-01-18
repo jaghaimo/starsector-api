@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1JumpPointAPI =
 [
+    [ "JumpDestination", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1JumpPointAPI_1_1JumpDestination.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1JumpPointAPI_1_1JumpDestination" ],
     [ "addDestination", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1JumpPointAPI.html#ae90a0046f615838b79a936b67b81f56f", null ],
     [ "autoUpdateHyperJumpPointLocationBasedOnInSystemEntityAtRadius", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1JumpPointAPI.html#af47fc1cdc3f569cb29579db7bbce2d11", null ],
     [ "clearDestinations", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1JumpPointAPI.html#acd6dfd2b7a3e1137cff79c121531644a", null ],

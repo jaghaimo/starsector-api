@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel =
 [
+    [ "PunExOutcome", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel_1_1PunExOutcome.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel_1_1PunExOutcome" ],
     [ "PunitiveExpeditionIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a3f0014e1280607a3dd1d2ae08a73c9ea", null ],
     [ "addBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a6e03d61d295709160a6caae1fff11756", null ],
     [ "addInitialDescSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a506fef730d215bb16c4852fa25127890", null ],
@@ -32,10 +33,14 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_
     [ "spawnFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#ab6d0036ed4a12875f7c245689806f3ae", null ],
     [ "action", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a6a7b0d2edb6c989866b379e4091e4e83", null ],
     [ "bestReason", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#af517fa88b325ac308f34f09ffc7ae23a", null ],
+    [ "BUTTON_AVERT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a4be4b46a543272d4a3ccea42bcb5848b", null ],
+    [ "ENTERED_SYSTEM_UPDATE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a8ef473d946ba4a8f4217fc72180a6c6e", null ],
     [ "from", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a7ef4701b91b15fa7904d5903b216267f", null ],
     [ "goal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a42940bd241fef5066cd1116a8c3a8d47", null ],
     [ "outcome", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a13278ae3cc13c1950250066f87ec1453", null ],
+    [ "OUTCOME_UPDATE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a7d4ee76e22cb7455096e9d7bd021a536", null ],
     [ "random", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#ac0ba547a3294229364490b4a37bf6681", null ],
+    [ "REP_PENALTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a143f6a3c171ba29e8557c06a85ca154a", null ],
     [ "repResult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#ab086381e2d9ec16ecac6c43820ee8b21", null ],
     [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#ac6e11360eeb68f450b24b2bac422e01d", null ],
     [ "targetFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PunitiveExpeditionIntel.html#a978107eb60c133afdb4f99aa0fd80e55", null ],

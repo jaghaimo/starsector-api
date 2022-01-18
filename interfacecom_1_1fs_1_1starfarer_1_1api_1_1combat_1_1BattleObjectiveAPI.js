@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveAPI =
 [
+    [ "Importance", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveAPI_1_1Importance.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveAPI_1_1Importance" ],
     [ "getBattleSizeFractionBonus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveAPI.html#a3810a3584dfe5c066b7b24e2b5d15de6", null ],
     [ "getDisplayName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveAPI.html#a691d48277c126061257453d24424cc5a", null ],
     [ "getImportance", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveAPI.html#acb156b1d7850906ad4f4f6232792cd1c", null ],

@@ -1,5 +1,11 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin =
 [
+    [ "DataForEncounterSide", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide" ],
+    [ "DisengageHarryAvailability", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DisengageHarryAvailability.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DisengageHarryAvailability" ],
+    [ "EngagementOutcome", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1EngagementOutcome.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1EngagementOutcome" ],
+    [ "FleetMemberData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1FleetMemberData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1FleetMemberData" ],
+    [ "PursueAvailability", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1PursueAvailability.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1PursueAvailability" ],
+    [ "Status", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1Status.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1Status" ],
     [ "adjustPlayerReputation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin.html#ac24e62b0ba373dad4acbe44eee7f5776", null ],
     [ "computePlayerContribFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin.html#a874d49f9efae65eca87505d9623bf2cc", null ],
     [ "getBattle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin.html#a603e3b397f34106e1fd9c1f08d0b7ead", null ],

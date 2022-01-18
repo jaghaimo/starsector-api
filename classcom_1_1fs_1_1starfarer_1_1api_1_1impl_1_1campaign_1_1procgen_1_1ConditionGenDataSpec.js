@@ -26,5 +26,17 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1Conditi
     [ "setOrder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a0edcd422fa7e4cbf9a5b20ae8ffadb48", null ],
     [ "setRank", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#ad52cfb975aafdc574053fa87bc6d4327", null ],
     [ "setRequiresSurvey", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a3f4c8860733f4a9b2f995641288e1da7", null ],
-    [ "setXpMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#afed80af195b0ea0d08d09530382f00a7", null ]
+    [ "setXpMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#afed80af195b0ea0d08d09530382f00a7", null ],
+    [ "group", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a67c0f1f54a038194ade1af8c71dc17d5", null ],
+    [ "hazard", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#acbcd40cef3638df2932b8e52282ceec8", null ],
+    [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#aec0b6c654415b217318431243241f9f6", null ],
+    [ "multipliers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#abae836ba65125593e62db2b5253a968d", null ],
+    [ "NO_PICK_SUFFIX", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#ae5bee99efd3a8660c974937a692d1733", null ],
+    [ "order", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a739157df0382259c5575df1a86d2e35f", null ],
+    [ "rank", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#afb9b5760cfa754d162ce32257bd999e9", null ],
+    [ "requiresAll", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#ae599621661633d18a36cb0780079a5a2", null ],
+    [ "requiresAny", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#af35050e931f8a44c8555286559c15ea0", null ],
+    [ "requiresNotAny", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a8186ea1bb325618cd80ca80975ae7dbd", null ],
+    [ "requiresSurvey", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#aca0500cbea258a58a071b9905e622194", null ],
+    [ "xpMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a3ca616602426aead02f31bd39ee519ae", null ]
 ];

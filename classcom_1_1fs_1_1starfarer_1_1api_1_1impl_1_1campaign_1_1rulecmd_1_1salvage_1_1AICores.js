@@ -3,6 +3,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage
     [ "computeCoreCreditValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a0b1209bf572ec89a80d68184a4973ae9", null ],
     [ "computeCoreReputationValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a774f4c0a9ffdff6623f913b10fcbe869", null ],
     [ "execute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a33020b57e29fd46e3dcdcb396bd44b4b", null ],
+    [ "getBaseRepValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a54cf9755aca12777e27e10a3a19be625", null ],
     [ "personCanAcceptCores", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a356f7fa28b5649308710c0891a3134d8", null ],
     [ "playerHasCores", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a17311519dd4a1b7a9461ce33f84d58dd", null ],
     [ "selectCores", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a5e7b5836c850968f44c8e951eb30ae69", null ],

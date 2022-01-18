@@ -16,5 +16,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTar
     [ "setCustom", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#aa8e16d3d119434d71225fb2fdc30ea9e", null ],
     [ "setEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a8a4bd969ab19a4970ab7c3ba50b1ca1e", null ],
     [ "setExtra", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a90a5285ed3b2e400a331b9f5e14a55ea", null ],
-    [ "setLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#aeba97e0eaffd2257d6292fe535ae8d05", null ]
+    [ "setLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#aeba97e0eaffd2257d6292fe535ae8d05", null ],
+    [ "custom", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#afa6a0f81a4f786bfe2cab36a2088d0be", null ],
+    [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a24d6706d59d97775d8e967769631ba93", null ],
+    [ "extra", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a601f787a9f9d32fc20711c496b568fb9", null ],
+    [ "location", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventTarget.html#a75bd2cfa727d4866573959f11a1eea36", null ]
 ];

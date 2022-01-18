@@ -102,8 +102,8 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="465,-49.5 465,-79.5 665,-79.5 665,-49.5 465,-49.5"/>
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin_1_1CellStateTracker.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="465,-49.5 465,-79.5 665,-79.5 665,-49.5 465,-49.5"/>
 <text text-anchor="start" x="473" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="565" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">HyperspaceTerrainPlugin.CellStateTracker</text>
 </a>
@@ -136,8 +136,8 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="206,-0.5 206,-30.5 401,-30.5 401,-0.5 206,-0.5"/>
+<g id="a_node9"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin_1_1CellState.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="206,-0.5 206,-30.5 401,-30.5 401,-0.5 206,-0.5"/>
 <text text-anchor="start" x="214" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="303.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">HyperspaceTerrainPlugin.CellState</text>
 </a>

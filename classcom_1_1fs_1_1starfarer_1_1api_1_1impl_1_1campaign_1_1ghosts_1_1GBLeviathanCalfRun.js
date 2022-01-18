@@ -15,5 +15,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviat
     [ "origPluginBurn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html#a252f478ee3d3c70c6d9e5e99ce48dccc", null ],
     [ "phase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html#a1c2dc7e87177cb6bb6839a8a75e5495c", null ],
     [ "plugin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html#ad04a7fd27c6f17db24e2e471a1dec8c6", null ],
+    [ "PULSE_BURN_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html#a90baeecf0f0626afaa79dc48f1cc2161", null ],
+    [ "PULSE_BURN_BONUS_DECAY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html#acc0b8744e775090692a376df7ae68150", null ],
+    [ "SENSOR_BURST_TURN_RATE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html#ac85cf7dc438a34477e889730a6851efc", null ],
     [ "wobbleRate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html#a963988c5ce624262d5e7bf5b72ea353c", null ]
 ];

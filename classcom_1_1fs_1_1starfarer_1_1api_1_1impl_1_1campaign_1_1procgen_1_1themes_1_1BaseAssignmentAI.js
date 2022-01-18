@@ -27,5 +27,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_
     [ "done", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#aeab466cdfe6267db0162119b29aa6c2e", null ],
     [ "fleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a96fc86996c04db66a9691482293ce2d7", null ],
     [ "giveInitial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#aa594499d5e13008326515a0173c61921", null ],
-    [ "raidTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a39a572b12853fe05798cf924486a6b1d", null ]
+    [ "raidTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a39a572b12853fe05798cf924486a6b1d", null ],
+    [ "TEMP_ASSIGNMENT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#ad4ea337b4cc0554af711ad235da3e031", null ],
+    [ "TEMP_BUSY_REASON", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html#a3c15b84504e461ada91ac0a75fd14d62", null ]
 ];

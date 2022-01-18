@@ -11,6 +11,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericCampaignEnt
     [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericCampaignEntitySprite.html#a11c2a725ca4fa76deb736c7b9cc7f62a", null ],
     [ "glow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericCampaignEntitySprite.html#a059beefc9c8d7e63ebe83f06b8b13b05", null ],
     [ "overlay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericCampaignEntitySprite.html#ab859a9b16d0aaac1c1b7f55da0228708", null ],
+    [ "overlayAngleOffset", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericCampaignEntitySprite.html#ae67ee35fd4217fa720f9f2ed92bad48e", null ],
+    [ "scale", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericCampaignEntitySprite.html#ad2264d28fc22358c0a1c037cc32ceb47", null ],
     [ "shadowMask", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericCampaignEntitySprite.html#af6d7eed750be2e62f5e0c6a1ddaf1ea8", null ],
     [ "sprite", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GenericCampaignEntitySprite.html#a247ea61c55b2cc1c889ba6398b770679", null ]
 ];

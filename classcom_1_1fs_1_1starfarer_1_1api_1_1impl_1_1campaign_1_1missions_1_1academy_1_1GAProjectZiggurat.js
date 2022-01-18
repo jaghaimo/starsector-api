@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat =
 [
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat_1_1Stage" ],
     [ "addDescriptionForNonEndStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#ac34ae8ab33590774bbfd44b4fe81b25f", null ],
     [ "addNextStepText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#af5cad49926f3f15caeb89b64d0c379bd", null ],
     [ "callAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#ad26426fb79517aebd623f3f87ed420ca", null ],
@@ -19,6 +20,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academ
     [ "culannBribe", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a7c192e91e77065509df48905f9662f2a", null ],
     [ "donn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a96c2f46e26342a1f75ac58f70486ac23", null ],
     [ "gargoyle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a66802a376ae780ad2f48bb848395b277", null ],
+    [ "hamatsu", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a73bbe5e1c0cdbfddb34feef3a3f83fb0", null ],
     [ "paymentForCommFakes", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a803e65e30ac454d39d602d0eb030703b", null ],
     [ "paymentForCommFakesHigh", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a73dcfff0660268bd19378a01295f87f0", null ],
     [ "pointAtArroyo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a5b0cd90bb5192bc8af2b6a28c92410ce", null ],
@@ -26,6 +28,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academ
     [ "relay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a6db89148c7c179a87b26158c64973a28", null ],
     [ "relaySystem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a9280e8a4094a6218c5db96625f558676", null ],
     [ "rkTithe", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a64d6198acb212d33fc23a941b6c17406", null ],
+    [ "SCANNED_ZIGGURAT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a6a48272756ad19c7f9e691e5df321c3b", null ],
     [ "well", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a4eecbe6c3e15323dfb82adc8d5d4b680", null ],
     [ "zigFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a15f1cc00aa03d71111b256e66088a1e8", null ]
 ];

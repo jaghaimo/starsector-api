@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel =
 [
+    [ "TutStage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel_1_1TutStage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel_1_1TutStage" ],
     [ "DuelTutorialPanel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel.html#ab83c67374fdf33b6b5d0312ee51507fb", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel.html#a55e8eb61e3e667cfedca1e160a9b6f22", null ],
     [ "getPanel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel.html#a3cee217aed855f176fb747b5568d51b2", null ],

@@ -17,5 +17,21 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGen
     [ "setParents", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a3054e7abbf021b6b3cef52bb4198e733", null ],
     [ "setReusable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a48590ed1fabdee541fdd849a45303d1a", null ],
     [ "setSecondary", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a36884e09e0cbec0970017b883b2829e2", null ],
-    [ "setTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a433a844df2235c1be8d0771dc1fd2c8f", null ]
+    [ "setTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a433a844df2235c1be8d0771dc1fd2c8f", null ],
+    [ "frequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a6e906e2706a530ab23e9174ebd991d5c", null ],
+    [ "name", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a2a027b0b5e34243ffcf3cc9352b27f50", null ],
+    [ "parents", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a579976acb7601faf32197304385363c3", null ],
+    [ "reusable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a756c33838b5ce8a1b43ae6a986b2fbbf", null ],
+    [ "secondary", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#ad500dc781a98c8a527b86ff69b4c3944", null ],
+    [ "TAG_ACCRETION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a60e9881c4eca6a93f1a1791213517f53", null ],
+    [ "TAG_ASTEROID_BELT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a56bd6a140bbb194fa53498dd9c56ab59", null ],
+    [ "TAG_ASTEROID_FIELD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a1195f79f3361694193ef217aa2803611", null ],
+    [ "TAG_CONSTELLATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a8a22a4536a02d8078396df224ecea5e4", null ],
+    [ "TAG_MAGNETIC_FIELD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a222e94b37956f578c9ee1a76f2ece05a", null ],
+    [ "TAG_MOON", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#ac556d7586f17493787ad204c3d656a80", null ],
+    [ "TAG_NEBULA", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#ac61c25027b73117758e011a05275fbdd", null ],
+    [ "TAG_PLANET", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a04fdedf924849f781cde0a08a8e0c2a0", null ],
+    [ "TAG_RING", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#af8504c90b7d98cd8a1995b7d5fa28bfe", null ],
+    [ "TAG_STAR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a31bcf440ee14089dc08b1bb9d2520ccc", null ],
+    [ "tags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html#a7ffef5bad6530fb8a7141c96e19c74df", null ]
 ];

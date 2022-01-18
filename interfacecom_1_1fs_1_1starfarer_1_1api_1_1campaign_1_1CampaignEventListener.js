@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener =
 [
+    [ "FleetDespawnReason", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener_1_1FleetDespawnReason.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener_1_1FleetDespawnReason" ],
     [ "reportBattleFinished", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#ac270f4938db3e245e93cdd27196e4490", null ],
     [ "reportBattleOccurred", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a145e94715a3430c16bb27d3d2c691f5a", null ],
     [ "reportEconomyMonthEnd", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html#a560b555e5b3385c51a42dea51eb4f73d", null ],

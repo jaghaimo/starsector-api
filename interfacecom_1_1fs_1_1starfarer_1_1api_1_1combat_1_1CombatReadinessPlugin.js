@@ -1,5 +1,9 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin =
 [
+    [ "CREffectDescriptionForTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDescriptionForTooltip.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDescriptionForTooltip" ],
+    [ "CREffectDetail", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDetail.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDetail" ],
+    [ "CREffectDetailType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDetailType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CREffectDetailType" ],
+    [ "CRStatusItemData", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CRStatusItemData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin_1_1CRStatusItemData" ],
     [ "applyCRToShip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a55b695d3505364d9e8e22055bc77038f", null ],
     [ "applyCRToStats", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a41e1e54af6e8542047cbc8da9f728711", null ],
     [ "applyMaxCRCrewModifiers", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#ab6dabc7da38ad8d7454e05dabfe290e9", null ],

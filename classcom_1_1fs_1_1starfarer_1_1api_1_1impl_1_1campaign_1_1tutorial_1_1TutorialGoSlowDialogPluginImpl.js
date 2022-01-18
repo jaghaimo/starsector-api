@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl =
 [
+    [ "OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl_1_1OptionId.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl_1_1OptionId" ],
     [ "TutorialGoSlowDialogPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl.html#a6fafd00b4ef499f0773ea33d4bd46984", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl.html#a1caf43bc22534bfe003f618b89f41630", null ],
     [ "backFromEngagement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl.html#ab9af6254413bc9a6c6fc6b62e4fc4e5e", null ],

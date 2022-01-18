@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI =
 [
+    [ "ReturningFighter", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI_1_1ReturningFighter.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI_1_1ReturningFighter" ],
     [ "getFormation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#ab56cf7a57db6d05a72d0c19595398a4c", null ],
     [ "getLeader", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a463f5a50827be3a5aa7512ba59b95635", null ],
     [ "getRange", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a05c3e5b8a315ef8a4fe0a7540f0a60c4", null ],

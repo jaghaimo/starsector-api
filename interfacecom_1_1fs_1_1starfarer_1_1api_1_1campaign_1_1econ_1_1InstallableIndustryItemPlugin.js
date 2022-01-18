@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin =
 [
+    [ "InstallableItemDescriptionMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin_1_1InstallableItemDescriptionMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin_1_1InstallableItemDescriptionMode" ],
     [ "addItemDescription", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#a3752c065c206c32d7d6500ba28288c10", null ],
     [ "canBeInstalled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#ad650700074bd99292394324dcdef9acf", null ],
     [ "createMenuItemTooltip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html#ae2fa6d87ad24871f6c83dbeffeb2d2c5", null ],

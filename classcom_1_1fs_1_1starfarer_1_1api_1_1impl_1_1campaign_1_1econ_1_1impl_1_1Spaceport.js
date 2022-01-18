@@ -14,5 +14,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Sp
     [ "getUpkeepPenalty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a562e5c7cf7e9e3cf04a1b0979c2fbb32", null ],
     [ "hasPostDemandSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a5d954241fe8e2084d8a5b8ba9d5ff6f2", null ],
     [ "modifyIncoming", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a2e35a817a49158a72aa98ae52c116dae", null ],
-    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a80e9e082583722c798b54c2f639e4b2a", null ]
+    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a80e9e082583722c798b54c2f639e4b2a", null ],
+    [ "ALPHA_CORE_ACCESSIBILITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a739fb442e28a186fb969c43b8490b7d9", null ],
+    [ "BASE_ACCESSIBILITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a4fe8a419abe12d82dfc30d08db51fd52", null ],
+    [ "IMPROVE_ACCESSIBILITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a5a4fd0f9ec6d6de08945d36caab8ab06", null ],
+    [ "MEGAPORT_ACCESSIBILITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a2ab3de862770665944e6b87558806290", null ],
+    [ "OFFICER_PROB_MOD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a243b4ed75207e2163aad40c5fa7431c0", null ],
+    [ "OFFICER_PROB_MOD_MEGA", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a2b6bcbaab95c394fa1cfb5744f6566df", null ],
+    [ "UPKEEP_MULT_PER_DEFICIT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a9e5db133b151cd931a5fdafa6ac4147b", null ]
 ];

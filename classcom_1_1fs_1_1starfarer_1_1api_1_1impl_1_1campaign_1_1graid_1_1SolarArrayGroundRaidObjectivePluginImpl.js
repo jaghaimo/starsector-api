@@ -6,5 +6,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArra
     [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArrayGroundRaidObjectivePluginImpl.html#ae02e87c9adb819f0c62e9c67bef6d9b8", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArrayGroundRaidObjectivePluginImpl.html#a86c577901f1dd6a501e4d6bf11a4dbf1", null ],
     [ "performRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArrayGroundRaidObjectivePluginImpl.html#a48dc0f508b853bb061e8da7a414f76ea", null ],
-    [ "condition", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArrayGroundRaidObjectivePluginImpl.html#a50960a2fa17d33c051743359adf9a8c6", null ]
+    [ "condition", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArrayGroundRaidObjectivePluginImpl.html#a50960a2fa17d33c051743359adf9a8c6", null ],
+    [ "XP_GAIN", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArrayGroundRaidObjectivePluginImpl.html#a3e4401aa951c7d2e566b0c97cacb2125", null ]
 ];

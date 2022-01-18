@@ -11,11 +11,19 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1Emerg
     [ "fleetOpenedMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a087308db1de69ca6e3cb2d2de73421dd", null ],
     [ "getCooldownColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#aad4908d08dea44ea1eb18e1ee89e7d48", null ],
     [ "getCooldownFraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a7b0f95d28cd52d04b77eeb25103d6b78", null ],
+    [ "getCRCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#aede657f1862ca9e23ca19372c13b16db", null ],
     [ "getNonReadyShips", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a06715affd89250b15e04e50ef7dd7ec7", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a014941dc585cd783372c8e81592ce33e", null ],
     [ "isCooldownRenderingAdditive", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#adce121816bda723eca27af04e9fe9d40", null ],
     [ "isOnCooldown", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a915cfc0ff37f5953ed3b56a3daf759c5", null ],
     [ "isUsable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a5d4fb59e45df824ef548b31fcc20261d", null ],
     [ "showAlarm", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a1dac0fd7d96b099d40112ee660551f45", null ],
-    [ "showCooldownIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a5195d4aed3eeb696c108b12a1c9c1c55", null ]
+    [ "showCooldownIndicator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a5195d4aed3eeb696c108b12a1c9c1c55", null ],
+    [ "ACCELERATION_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a9465678ab2c72356f11a856670f6e52c", null ],
+    [ "ACTIVATION_DAMAGE_PROB", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#ae030fa877838906911ea86db7ee167f0", null ],
+    [ "CR_COST_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a821f5e0de006b43e139bba2b6548edcd", null ],
+    [ "DETECTABILITY_PERCENT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a22447ba40bdf4a1b6cef8a0899d2e034", null ],
+    [ "FUEL_USE_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a4169e754fac00170563106a1e35e3a22", null ],
+    [ "MAX_BURN_MOD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a20d938437f0b7bfb15c4999c5cb9eee2", null ],
+    [ "SENSOR_RANGE_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1EmergencyBurnAbility.html#a0c43e5be3d49daec0a99d5c8299e6568", null ]
 ];

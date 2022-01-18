@@ -19,6 +19,14 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeapo
     [ "getWeaponsCommoditySpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#ab71225265a95711405fd9f6c065a36de", null ],
     [ "hasTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#a1cb9db0a8ca32095644c1c85331bb0e5", null ],
     [ "performRaid", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#ae95c3df2d34d24091afbc5670c56f4f1", null ],
+    [ "CARGO_SPACE_PER_LARGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#a1e4fe47443d93db0936c2bbdfb2ae0e1", null ],
+    [ "CARGO_SPACE_PER_MEDIUM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#a6cf8b644389080429eeb26434f472192", null ],
+    [ "CARGO_SPACE_PER_SMALL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#a7effcd775f0ac55cba191613327c494d", null ],
     [ "com", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#ac718f7c42432daca868f83e2f8392b76", null ],
-    [ "looted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#aef6e5cee056ad8e194811cf2f37f7923", null ]
+    [ "looted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#aef6e5cee056ad8e194811cf2f37f7923", null ],
+    [ "SELL_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#add1099d844980ddaafd43d3caff77cdb", null ],
+    [ "VALUE_DEFICIT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#ac98688ada1111bdac2400ef0a14f306b", null ],
+    [ "VALUE_EXCESS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#ab4110fb273284341d27e83856c40c199", null ],
+    [ "VALUE_NORMAL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#af2d07d4a6b7c2c681f0436785c417df4", null ],
+    [ "VALUE_OVERALL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html#a881c7561d43d1d8468c0bc4c4ae19782", null ]
 ];

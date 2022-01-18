@@ -11,6 +11,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1C
     [ "getBaseLoseProb", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a8a5310df86c898170c93e48bfd03f589", null ],
     [ "getCommMessageSound", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#aaa704547a273367880a9bc6a0964c740", null ],
     [ "getCurrLoseProb", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a135c38fc269b0fcbc65454527e0c0dac", null ],
+    [ "getExistingSnifferIntelForRelay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a2c5d91f68981050868e81c9b9eff2bed", null ],
     [ "getFactionForUIColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a553dc4c87ef9c49edf51c57678321097", null ],
     [ "getIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a0fce3bcaa1a7b81852f659db009c5764", null ],
     [ "getIntelTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a21e9d173c3c7fe340a683be5e4c0d8b6", null ],
@@ -25,5 +26,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1C
     [ "uninstall", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ae6d1f831107b67e4cf986fc473fc971e", null ],
     [ "check", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a7c4b168dad1d3e054b22d0fce3d660c6", null ],
     [ "relay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a9802e79d4983e6bd0dce0319b0b2b63b", null ],
+    [ "UNINSTALL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ad4381fd132ff641822b2dfe686c0c219", null ],
     [ "uninstalled", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#ac5bb6acacad99a90b06b0e8f0c277480", null ]
 ];

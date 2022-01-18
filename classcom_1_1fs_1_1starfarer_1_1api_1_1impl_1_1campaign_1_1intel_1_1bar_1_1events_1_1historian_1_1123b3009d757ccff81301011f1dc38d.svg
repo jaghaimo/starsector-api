@@ -101,8 +101,8 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="0,-73.5 0,-103.5 272,-103.5 272,-73.5 0,-73.5"/>
+<g id="a_node3"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="0,-73.5 0,-103.5 272,-103.5 272,-73.5 0,-73.5"/>
 <text text-anchor="start" x="8" y="-91.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.</text>
 <text text-anchor="middle" x="136" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">HistorianData.HistorianOfferCreator</text>
 </a>

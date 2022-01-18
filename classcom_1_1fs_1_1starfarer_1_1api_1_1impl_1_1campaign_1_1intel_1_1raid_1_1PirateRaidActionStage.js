@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage =
 [
+    [ "RaidActionSubStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage_1_1RaidActionSubStage.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage_1_1RaidActionSubStage" ],
     [ "PirateRaidActionStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html#a12366ac87b22d0bdc5f6b987c54d3578", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html#ab91abd0d158426a09ec3fb9216d68668", null ],
     [ "autoresolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html#a9137fe527ed2704715c2d4093e95f827", null ],

@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl =
 [
+    [ "OptionId", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl_1_1OptionId.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl_1_1OptionId" ],
     [ "TutorialSustainedBurnDialogPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a460abc0fd1a9afdb2de59cacca71a3b6", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#adc6d826b1fd7ce64f68c74d7d0a879e0", null ],
     [ "backFromEngagement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a4ef61068758da30501b54fdb9e86b6f1", null ],

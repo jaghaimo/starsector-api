@@ -16,5 +16,11 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil =
     [ "setRate", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#ace719a57e8d5c6df3900ddc4289685e4", null ],
     [ "setRateSign", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a1cc8b88474d43d89bf61298055e167ce", null ],
     [ "setSign", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#abb981e9054d501c392c04da339168632", null ],
-    [ "setValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a51543556436c0c8903392e9167126b6f", null ]
+    [ "setValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a51543556436c0c8903392e9167126b6f", null ],
+    [ "max", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a06d0d34c538b151db1ab2fa2a765f338", null ],
+    [ "min", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a7567ada52f1c4cf039a440834c5e594b", null ],
+    [ "rate", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a30c5a12ce2355b7aa360bea1a0dbb6ec", null ],
+    [ "rateSign", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a33b9785a839535c3b5db19ffae36c77f", null ],
+    [ "sign", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#affcf8c90a22a41953925d1a373c43bb8", null ],
+    [ "value", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a68cf6c2a6f2a80c9ea5f0d744de0314b", null ]
 ];

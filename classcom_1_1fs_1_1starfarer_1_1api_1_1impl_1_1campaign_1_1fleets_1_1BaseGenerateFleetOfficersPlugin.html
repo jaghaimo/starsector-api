@@ -107,10 +107,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a101931395dfc56c7d49f2ae63f6209a8"><td class="memItemLeft" align="right" valign="top"><a id="a101931395dfc56c7d49f2ae63f6209a8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addCommanderAndOfficers</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html">CampaignFleetAPI</a> fleet, <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html">FleetParamsV3</a> params, Random random)</td></tr>
 <tr class="separator:a101931395dfc56c7d49f2ae63f6209a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae161b03fa4026cd8567610dd7cc5b513"><td class="memItemLeft" align="right" valign="top"><a id="ae161b03fa4026cd8567610dd7cc5b513"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getHandlingPriority</b> (Object params)</td></tr>
+<tr class="memitem:ae161b03fa4026cd8567610dd7cc5b513"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseGenerateFleetOfficersPlugin.html#ae161b03fa4026cd8567610dd7cc5b513">getHandlingPriority</a> (Object params)</td></tr>
 <tr class="separator:ae161b03fa4026cd8567610dd7cc5b513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae161b03fa4026cd8567610dd7cc5b513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae161b03fa4026cd8567610dd7cc5b513">&#9670;&nbsp;</a></span>getHandlingPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.fs.starfarer.api.impl.campaign.fleets.BaseGenerateFleetOfficersPlugin.getHandlingPriority </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Negative priority means plugin doesn't want to handle whatever the parameters indicate the action is. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">params</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GenericPluginManagerAPI_1_1GenericPlugin.html#afb806deb15c58c2d53e313de9c120bef">com.fs.starfarer.api.campaign.GenericPluginManagerAPI.GenericPlugin</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html#a49b1ee0e69c4a8b43e2df5ce4455339f">com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin</a>, and <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1OmegaOfficerGeneratorPlugin.html#a800e9557896aec76880ad6fddbb03ae6">com.fs.starfarer.api.impl.campaign.procgen.themes.OmegaOfficerGeneratorPlugin</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/campaign/fleets/BaseGenerateFleetOfficersPlugin.java</li>
 </ul>

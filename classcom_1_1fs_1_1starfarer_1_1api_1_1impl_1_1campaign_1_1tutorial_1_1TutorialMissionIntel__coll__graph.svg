@@ -53,8 +53,8 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="223.5,-410.94 223.5,-440.94 426.5,-440.94 426.5,-410.94 223.5,-410.94"/>
+<g id="a_node4"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent_1_1CallableEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="223.5,-410.94 223.5,-440.94 426.5,-440.94 426.5,-410.94 223.5,-410.94"/>
 <text text-anchor="start" x="231.5" y="-428.94" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="325" y="-417.94" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent.CallableEvent</text>
 </a>
@@ -91,8 +91,8 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="206,-312.94 206,-342.94 444,-342.94 444,-312.94 206,-312.94"/>
+<g id="a_node6"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin_1_1CommSnifferReadableIntel.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="206,-312.94 206,-342.94 444,-342.94 444,-312.94 206,-312.94"/>
 <text text-anchor="start" x="214" y="-330.94" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="325" y="-319.94" font-family="Helvetica,sans-Serif" font-size="10.00">CommRelayEntityPlugin.CommSnifferReadableIntel</text>
 </a>
@@ -217,8 +217,8 @@
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
-<g id="a_node11"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="629,-115.94 629,-145.94 826,-145.94 826,-115.94 629,-115.94"/>
+<g id="a_node11"><a xlink:href="enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel_1_1TutorialMissionStage.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="629,-115.94 629,-145.94 826,-145.94 826,-115.94 629,-115.94"/>
 <text text-anchor="start" x="637" y="-133.94" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.tutorial.</text>
 <text text-anchor="middle" x="727.5" y="-122.94" font-family="Helvetica,sans-Serif" font-size="10.00">TutorialMissionIntel.TutorialMissionStage</text>
 </a>

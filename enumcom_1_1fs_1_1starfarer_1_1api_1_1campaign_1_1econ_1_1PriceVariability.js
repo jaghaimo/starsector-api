@@ -1,5 +1,6 @@
 var enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability =
 [
+    [ "PriceVariability", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#aec80c7860a6fd1b9ed24eb2dd04aad05", null ],
     [ "v", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#aea1f496837ead4ddb979c29351ee6607", null ],
     [ "V0", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#ad6597bf5c0550dd60c103bfbde377a8c", null ],
     [ "V1", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#a89520ab05438ddd6eb776c448f3e0406", null ],

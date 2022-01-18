@@ -5,5 +5,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue =
     [ "add", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#a4ed4c3deba57decb2077120ab730d4f4", null ],
     [ "get", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#a93f64ad5f3ce9fb9b47e0cdc17938677", null ],
     [ "set", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#a866dd8ca2379ea052f2bdf140d65b69d", null ],
-    [ "subtract", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#abc1b3f85c61b352cf5ed261b8e0e2007", null ]
+    [ "subtract", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#abc1b3f85c61b352cf5ed261b8e0e2007", null ],
+    [ "value", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#abbe3f61313a9ad4163ae60fcf60fd76b", null ]
 ];

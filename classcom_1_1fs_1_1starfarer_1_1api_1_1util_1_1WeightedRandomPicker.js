@@ -19,7 +19,15 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker =
     [ "pick", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a272ec6eb3c16a66abbf5203dfd34f7d6", null ],
     [ "pickAndRemove", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#ad9935bcbf0c43b6f22d54cb59697eb1c", null ],
     [ "print", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#aeba3f14b936b6d0278823061898bd820", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a7794f53bf714f23722feeba4213dfde2", null ],
     [ "remove", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#ac7249a7ca153428c2628a07e75676985", null ],
     [ "setRandom", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a651b35915528fef3e09650c6c359fd61", null ],
-    [ "setWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a64bed57552dd1ecb76fe2c8800478b02", null ]
+    [ "setWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a64bed57552dd1ecb76fe2c8800478b02", null ],
+    [ "writeReplace", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#ab3eaca8bfa3a02ba201277874ec5a19c", null ],
+    [ "ignoreWeights", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a812a42143e181aa05835ae6992c26e9d", null ],
+    [ "items", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a1d765274b9afa50233be2d8c4d1a0267", null ],
+    [ "random", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a0e4dbb86eff27160de9a1c9fe6e5e8e4", null ],
+    [ "total", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a256b5c2f4f135fd90fa6d2aa12d76a0c", null ],
+    [ "w", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#aaff7debc34a10f2eb31e6b4192ce2306", null ],
+    [ "weights", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a8d553ffb03b925fb2a0e7052bb271b55", null ]
 ];

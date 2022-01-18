@@ -1,5 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates =
 [
+    [ "ScanEncounterVariation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates_1_1ScanEncounterVariation.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates_1_1ScanEncounterVariation" ],
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates_1_1Stage" ],
     [ "acceptImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a3e4a29fe5c4bb3ea27de16c49d12e570", null ],
     [ "addDescriptionForNonEndStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#acbc08a603c49306c81c617bc8547bfcc", null ],
     [ "addNextStepText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a2f64eab4fc40e11042d523f3ccb1d372", null ],
@@ -16,8 +18,10 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academ
     [ "spawnKantaVengeanceFleetPirateScout", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#aea08b754d96e0e8fd6ce19893d5062d9", null ],
     [ "updateInteractionDataImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a125cf789fa57ccea02e176ff74aaacd7", null ],
     [ "baird", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a693f17e3d4227b328722e05950fed4c6", null ],
+    [ "CHECKED_FOR_ENCOUNTER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#ab2fdf1b3d124d1c8fa105f76036be2f1", null ],
     [ "chicomoztoc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a081cc4696edb7a7b9ed1bc64f05e3d40", null ],
     [ "cotton", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a9547859bfcb3eccdc6ddcf3efdb5271a", null ],
+    [ "COTTON_RAID_DIFFICULTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a75bcf44b36964c23edda2d4763cea9d1", null ],
     [ "coureuse", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a1fe344397849cdc06b6495b9425ed072", null ],
     [ "coureuseCredits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#ac54584d466af7f8a1f4d436a7aac127e", null ],
     [ "daud", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#ab0431999a6571d2ec1c6742333c6d8a8", null ],
@@ -30,10 +34,12 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academ
     [ "encounterPirateFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#af39afe2f1f01a5c90354ae2968692a90", null ],
     [ "encounterTTFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#abf7900d0dac2fa03353600a1e6160d2b", null ],
     [ "epiphany", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#aa587b711e478e176ddfaede9e88dff8c", null ],
+    [ "FACTION_GATE_ENCOUNTER_CHANCE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#acf79771b5033f1834684cc44429c0d7b", null ],
     [ "galatiaGate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#af9365c078d22748491c4cd16f1a6c2b6", null ],
     [ "gargoyle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a024ead598af1d766e92dc2bd6090f632", null ],
     [ "horus_yaribay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#adbf0b6595e6e5be62c25451869df127c", null ],
     [ "kanta", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a34668c71cf2cbd4af7e0462bf26fc2a9", null ],
+    [ "KANTA_RAID_DIFFICULTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#ae4d7925619e98936aa502825caf5833b", null ],
     [ "kantasDen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a15c1e59fe4fbc01df3d4816bb01815bf", null ],
     [ "kantasDenStationcommander", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a8645ed12d04741bd8a54746ae9ae0643", null ],
     [ "kantasDenStationCommander", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a82855ce4bfa831a977364db0b8606987", null ],
@@ -42,7 +48,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academ
     [ "magecGate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#af232aee62ce9adeb81c47e2de038afef", null ],
     [ "pirateScanCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#ae27ae6bc2859dc16c67a0ebd09ce9f37", null ],
     [ "scanEncounterVariations", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#acdf2a790e2e07f468ed9268a0fd1dbfe", null ],
+    [ "SHOW_GATE_SCAN_COUNT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a8693fcade121373df433578a7dfb96a6", null ],
     [ "siyavong", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#adc36196b260556998b2c1d6ff25aeb40", null ],
+    [ "SYSTEM_NO_GATE_ENCOUNTER_CHANCE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#a667b27cdbd494ed91970d81a603ac993", null ],
     [ "ttScanCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#ad95d0150c5fcedc58bdcd8e47a1120a3", null ],
     [ "zal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAAtTheGates.html#af8f2c3507464eb3c7fabd86cd3d73baa", null ]
 ];

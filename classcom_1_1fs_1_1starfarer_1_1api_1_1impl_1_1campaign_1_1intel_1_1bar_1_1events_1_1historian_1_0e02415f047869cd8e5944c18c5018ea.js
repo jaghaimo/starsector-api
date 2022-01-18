@@ -1,0 +1,6 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_0e02415f047869cd8e5944c18c5018ea =
+[
+    [ "getId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_0e02415f047869cd8e5944c18c5018ea.html#acf82b515d41be3ad3f3c97c83ae58e50", null ],
+    [ "getText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_0e02415f047869cd8e5944c18c5018ea.html#af7c9911ba3cdf3b8c09db03242236231", null ],
+    [ "getWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_0e02415f047869cd8e5944c18c5018ea.html#a48289c239bbb7d7a84cb5e72b7843f9a", null ]
+];

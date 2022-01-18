@@ -85,8 +85,8 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:title=" ">
-<polygon fill="none" stroke="#bfbfbf" points="427,-0.5 427,-30.5 618,-30.5 618,-0.5 427,-0.5"/>
+<g id="a_node6"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteManager_1_1RouteFleetSpawner.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="427,-0.5 427,-30.5 618,-30.5 618,-0.5 427,-0.5"/>
 <text text-anchor="start" x="435" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.fleets.</text>
 <text text-anchor="middle" x="522.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">RouteManager.RouteFleetSpawner</text>
 </a>

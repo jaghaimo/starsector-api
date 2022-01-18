@@ -15,5 +15,10 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDis
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a5c91c942c21c3dcfbf88212312ee8b39", null ],
     [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a5e474e358277aa6868dc1f54434188d4", null ],
     [ "setParam", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a7d6ad3fc91a69814413e49b462078973", null ],
-    [ "startEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#ae4427233deece2adec8468858babaea9", null ]
+    [ "startEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#ae4427233deece2adec8468858babaea9", null ],
+    [ "elapsedDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#ae5d261333d671152c6e068b2b3ca863d", null ],
+    [ "eventTarget", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#aef2ff9a6ca4b49a06a9057d3c247257b", null ],
+    [ "stage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a4998579bb565245900d81949a0ace7f5", null ],
+    [ "started", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a928ff741e0824d98f41d192b3df3dc3b", null ],
+    [ "type", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a4e4357e49a20ac78437f1da44a4ae8c2", null ]
 ];

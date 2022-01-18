@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin =
 [
+    [ "SpatialAnomalyParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin_1_1SpatialAnomalyParams.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin_1_1SpatialAnomalyParams" ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a4b0ab5ab56a88b3302d7957057661c7a", null ],
     [ "applyEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#aeab2e5f03850cbcbb55b2dcbbd662a25", null ],
     [ "canPlayerHoldStationIn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a7cd84df51d711d7cfc34eb34f12230f8", null ],
@@ -25,7 +26,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1Spatial
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a6936eba22e8c991725c077bf5ce7fe26", null ],
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#ac77e6ac53a77d5e4d568d9ed65d73502", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#aa1fb5d32019f260146fbb96823bee422", null ],
+    [ "writeReplace", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#ae28a12addc6dc01d9d223d42dcef912f", null ],
     [ "elapsed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a0039713998e45642ff937490b1fc9b00", null ],
+    [ "layers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a3b903129f2d743a0db2982c8c514c696", null ],
     [ "params", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#ab89eabafc0d4d583e5587da60dfedaef", null ],
     [ "phase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a1263c9e7b50222a7a1f2f9d9bde7a8ea", null ],
     [ "renderer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html#a1b4be733c6ccc7922120851417747962", null ],

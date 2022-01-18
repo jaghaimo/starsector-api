@@ -21,6 +21,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEn
     [ "notifyPlayerAboutToOpenIntelScreen", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html#a635790ac1d0fe6f282977b3305373d36", null ],
     [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html#ad6d610ef389ef3909ea538c347077194", null ],
     [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html#a6fd387073b07ed04b6b7c1ea5ee271d8", null ],
+    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html#a2b56ed09185e6251de13b79cfca79f6d", null ],
     [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html#afc717a3db1b0fbc6e8aa45fc248c2d41", null ],
     [ "reward", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html#a0051907c0a4ecd784f80e100354546e2", null ]
 ];
