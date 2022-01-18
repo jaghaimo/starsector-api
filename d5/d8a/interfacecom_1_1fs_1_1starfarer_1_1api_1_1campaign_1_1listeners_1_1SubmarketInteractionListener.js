@@ -1,5 +1,0 @@
-var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener =
-[
-    [ "SubmarketInteractionType", "dc/d0b/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener_1_1SubmarketInteractionType.html", "dc/d0b/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener_1_1SubmarketInteractionType" ],
-    [ "reportPlayerOpenedSubmarket", "d5/d8a/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketInteractionListener.html#a4f4b617a8c5f1388c1cfffaa9ee3c56b", null ]
-];

@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator =
-[
-    [ "createBarEvent", "d8/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator.html#a1a4c2c33db99e00c7f127260f4208bd5", null ],
-    [ "getBarEventAcceptedTimeoutDuration", "d8/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator.html#a9ef2e7e0a72db35ebb1fc84ed75cb38e", null ],
-    [ "getBarEventFrequencyWeight", "d8/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator.html#a600b28d3c30ac9956634f976f0329182", null ]
-];

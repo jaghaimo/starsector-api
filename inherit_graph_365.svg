@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d4/d0e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-147.5 0,-177.5 184,-177.5 184,-147.5 0,-147.5"/>
 <text text-anchor="start" x="8" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.enc.</text>
 <text text-anchor="middle" x="92" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">EPEncounterCreator</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="db/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="220,-147.5 220,-177.5 404,-177.5 404,-147.5 220,-147.5"/>
 <text text-anchor="start" x="228" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.enc.</text>
 <text text-anchor="middle" x="312" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseEPEncounterCreator</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="dc/d3a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemNoEPEC.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemNoEPEC.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="440,-294.5 440,-324.5 624,-324.5 624,-294.5 440,-294.5"/>
 <text text-anchor="start" x="448" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.enc.</text>
 <text text-anchor="middle" x="532" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">OutsideSystemNoEPEC</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="db/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemRemnantEPEC.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemRemnantEPEC.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="440,-245.5 440,-275.5 624,-275.5 624,-245.5 440,-245.5"/>
 <text text-anchor="start" x="448" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.enc.</text>
 <text text-anchor="middle" x="532" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">OutsideSystemRemnantEPEC</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d7/ddd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamLuddicPathEPEC.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamLuddicPathEPEC.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="440,-196.5 440,-226.5 624,-226.5 624,-196.5 440,-196.5"/>
 <text text-anchor="start" x="448" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.enc.</text>
 <text text-anchor="middle" x="532" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">SlipstreamLuddicPathEPEC</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="df/d86/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamMercenaryEPEC.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamMercenaryEPEC.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="440,-147.5 440,-177.5 624,-177.5 624,-147.5 440,-147.5"/>
 <text text-anchor="start" x="448" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.enc.</text>
 <text text-anchor="middle" x="532" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">SlipstreamMercenaryEPEC</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="d3/df7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamNoEPEC.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamNoEPEC.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="440,-98.5 440,-128.5 624,-128.5 624,-98.5 440,-98.5"/>
 <text text-anchor="start" x="448" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.enc.</text>
 <text text-anchor="middle" x="532" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">SlipstreamNoEPEC</text>
@@ -117,7 +117,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="d6/d18/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamPirateEPEC.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamPirateEPEC.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="440,-49.5 440,-79.5 624,-79.5 624,-49.5 440,-49.5"/>
 <text text-anchor="start" x="448" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.enc.</text>
 <text text-anchor="middle" x="532" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">SlipstreamPirateEPEC</text>
@@ -133,7 +133,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="df/dab/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamScavengerEPEC.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamScavengerEPEC.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="440,-0.5 440,-30.5 624,-30.5 624,-0.5 440,-0.5"/>
 <text text-anchor="start" x="448" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.enc.</text>
 <text text-anchor="middle" x="532" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SlipstreamScavengerEPEC</text>

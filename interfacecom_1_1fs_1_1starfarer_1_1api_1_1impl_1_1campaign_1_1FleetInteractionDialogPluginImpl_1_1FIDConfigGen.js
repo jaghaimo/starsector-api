@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl_1_1FIDConfigGen =
+[
+    [ "createConfig", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl_1_1FIDConfigGen.html#acb629156b0921a05ac2ba88a08dd6fa6", null ]
+];

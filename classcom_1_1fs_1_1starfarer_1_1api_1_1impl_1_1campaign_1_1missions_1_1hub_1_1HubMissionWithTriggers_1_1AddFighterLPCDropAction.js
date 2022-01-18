@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddFighterLPCDropAction =
+[
+    [ "AddFighterLPCDropAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddFighterLPCDropAction.html#ae7ec01234c8e46abe86b6c0aca0ca311", null ],
+    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddFighterLPCDropAction.html#ab7e42adf59a2c573d68ec5293c3ec2bd", null ],
+    [ "quantity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddFighterLPCDropAction.html#a8260e523ab6c9ef16c0083d2669eaa69", null ],
+    [ "wingId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddFighterLPCDropAction.html#aea6ac935c48fc906c2eba1ac224dec84", null ]
+];

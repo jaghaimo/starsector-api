@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="db/df6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyOtherFactorsListener.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyOtherFactorsListener.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-24.5 0,-54.5 185,-54.5 185,-24.5 0,-24.5"/>
 <text text-anchor="start" x="8" y="-42.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.listeners.</text>
 <text text-anchor="middle" x="92.5" y="-31.5" font-family="Helvetica,sans-Serif" font-size="10.00">ColonyOtherFactorsListener</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d4/d3b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival_1_1CryosleeperFactor.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival_1_1CryosleeperFactor.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="225,-49.5 225,-79.5 434,-79.5 434,-49.5 225,-49.5"/>
 <text text-anchor="start" x="233" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.econ.impl.</text>
 <text text-anchor="middle" x="329.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">Cryorevival.CryosleeperFactor</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d0/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PopulationAndInfrastructure_1_1CoronalTapFactor.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1PopulationAndInfrastructure_1_1CoronalTapFactor.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="221,-0.5 221,-30.5 438,-30.5 438,-0.5 221,-0.5"/>
 <text text-anchor="start" x="229" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.econ.impl.</text>
 <text text-anchor="middle" x="329.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PopulationAndInfrastructure.CoronalTapFactor</text>

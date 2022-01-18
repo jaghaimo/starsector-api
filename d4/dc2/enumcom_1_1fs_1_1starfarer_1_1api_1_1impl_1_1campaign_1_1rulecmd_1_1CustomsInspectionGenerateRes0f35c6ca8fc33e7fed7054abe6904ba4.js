@@ -1,5 +1,0 @@
-var enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateRes0f35c6ca8fc33e7fed7054abe6904ba4 =
-[
-    [ "TOLL", "d4/dc2/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateRes0f35c6ca8fc33e7fed7054abe6904ba4.html#aa6401f7155b5148f35a60fe6accbf659", null ],
-    [ "TOLL_AND_FINE", "d4/dc2/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateRes0f35c6ca8fc33e7fed7054abe6904ba4.html#a7ee4dfd6a32cafca24e88bbd5701a7d2", null ]
-];

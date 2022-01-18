@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_1_1NothingSpecialCreator =
-[
-    [ "createSpecial", "d6/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_1_1NothingSpecialCreator.html#a201f1fc8eb280118d360819c8d3e27ea", null ]
-];

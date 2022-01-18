@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="da/d1f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1Abortable.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1Abortable.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-122.5 0,-152.5 225,-152.5 225,-122.5 0,-122.5"/>
 <text text-anchor="start" x="8" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="112.5" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.Abortable</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="dc/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1DefeatTriggerAdded.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1DefeatTriggerAdded.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-245.5 261,-275.5 486,-275.5 486,-245.5 261,-245.5"/>
 <text text-anchor="start" x="269" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.DefeatTriggerAdded</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d9/d1c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1EntityAdded.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1EntityAdded.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-196.5 261,-226.5 486,-226.5 486,-196.5 261,-196.5"/>
 <text text-anchor="start" x="269" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.EntityAdded</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="db/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1MadeImportant.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1MadeImportant.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-147.5 261,-177.5 486,-177.5 486,-147.5 261,-147.5"/>
 <text text-anchor="start" x="269" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.MadeImportant</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="df/d68/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1PersonAdded.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1PersonAdded.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-98.5 261,-128.5 486,-128.5 486,-98.5 261,-98.5"/>
 <text text-anchor="start" x="269" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.PersonAdded</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="df/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1PersonMadeRequired.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1PersonMadeRequired.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-49.5 261,-79.5 486,-79.5 486,-49.5 261,-49.5"/>
 <text text-anchor="start" x="269" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.PersonMadeRequired</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="d2/d5f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1VariableSet.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1VariableSet.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-0.5 261,-30.5 486,-30.5 486,-0.5 261,-0.5"/>
 <text text-anchor="start" x="269" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.VariableSet</text>

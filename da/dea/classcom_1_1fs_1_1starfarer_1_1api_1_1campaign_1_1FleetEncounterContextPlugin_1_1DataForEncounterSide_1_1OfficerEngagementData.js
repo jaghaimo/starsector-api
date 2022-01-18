@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide_1_1OfficerEngagementData =
-[
-    [ "OfficerEngagementData", "da/dea/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide_1_1OfficerEngagementData.html#a41171c3f3ea069619c27568278a4cf87", null ],
-    [ "person", "da/dea/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide_1_1OfficerEngagementData.html#a4f082bb2db274eeaf02cd28421ff56d1", null ],
-    [ "sourceFleet", "da/dea/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide_1_1OfficerEngagementData.html#a525e45fcc686e860335e11edc2b80e92", null ],
-    [ "timeDeployed", "da/dea/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1DataForEncounterSide_1_1OfficerEngagementData.html#a8ac0c29feee8357fd60594a162505da1", null ]
-];

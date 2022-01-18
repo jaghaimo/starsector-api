@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent_1_1FactionTradeRepData =
-[
-    [ "getRepPointsAndVolumeUsedFor", "d5/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent_1_1FactionTradeRepData.html#a6ae654a9bda3a2678808ed39fa5988c5", null ],
-    [ "currVolumePerPoint", "d5/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent_1_1FactionTradeRepData.html#a7c6d56a9d1b63afbe5ee523fff689994", null ]
-];

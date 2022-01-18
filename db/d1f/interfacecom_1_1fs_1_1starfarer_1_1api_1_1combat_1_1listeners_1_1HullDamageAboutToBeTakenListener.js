@@ -1,4 +1,0 @@
-var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1HullDamageAboutToBeTakenListener =
-[
-    [ "notifyAboutToTakeHullDamage", "db/d1f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1HullDamageAboutToBeTakenListener.html#abe6bc3c617ed7713393e63e08d248295", null ]
-];

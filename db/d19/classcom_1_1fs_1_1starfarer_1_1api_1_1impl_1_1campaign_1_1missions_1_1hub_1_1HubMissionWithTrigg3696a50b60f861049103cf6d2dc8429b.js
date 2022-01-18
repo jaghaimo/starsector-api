@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3696a50b60f861049103cf6d2dc8429b =
-[
-    [ "EntityMakeImportantAction", "db/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3696a50b60f861049103cf6d2dc8429b.html#a7b3702120a20250ad1d7cd01049112d6", null ],
-    [ "doAction", "db/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3696a50b60f861049103cf6d2dc8429b.html#a8f06fdaa5eaa384c4f08a7d93dcffdf0", null ],
-    [ "flag", "db/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3696a50b60f861049103cf6d2dc8429b.html#a22276703d4bf4408feb066a8ca63b775", null ],
-    [ "stages", "db/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg3696a50b60f861049103cf6d2dc8429b.html#a88a44a56106687f64ca3e2c58b0e54de", null ]
-];

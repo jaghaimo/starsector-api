@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc7c7f7fecf38c397cbc3f4b96850ab106 =
-[
-    [ "MarketTacticalBombardableReq", "d2/d6f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc7c7f7fecf38c397cbc3f4b96850ab106.html#a4e057b175e48d26d4f3847a154c1041c", null ],
-    [ "marketMatchesRequirement", "d2/d6f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc7c7f7fecf38c397cbc3f4b96850ab106.html#a275ce9c72e03ddd0542812fd78df072b", null ],
-    [ "negate", "d2/d6f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc7c7f7fecf38c397cbc3f4b96850ab106.html#adc41ad934582ae853e391c1ca052df55", null ]
-];

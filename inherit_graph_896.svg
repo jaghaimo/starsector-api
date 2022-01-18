@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d0/d84/interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AutofitPluginDelegate.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AutofitPluginDelegate.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-49.5 0,-79.5 167,-79.5 167,-49.5 0,-49.5"/>
 <text text-anchor="start" x="8" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.plugins.</text>
 <text text-anchor="middle" x="83.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">AutofitPlugin.AutofitPluginDelegate</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d3/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="203,-24.5 203,-54.5 394,-54.5 394,-24.5 203,-24.5"/>
 <text text-anchor="start" x="211" y="-42.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.fleets.</text>
 <text text-anchor="middle" x="298.5" y="-31.5" font-family="Helvetica,sans-Serif" font-size="10.00">DefaultFleetInflater</text>
@@ -37,7 +37,7 @@
 <!-- Node1025 -->
 <g id="node3" class="node">
 <title>Node1025</title>
-<g id="a_node3"><a xlink:href="d7/daa/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetInflater.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetInflater.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="10.5,-0.5 10.5,-30.5 156.5,-30.5 156.5,-0.5 10.5,-0.5"/>
 <text text-anchor="start" x="18.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="83.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">FleetInflater</text>

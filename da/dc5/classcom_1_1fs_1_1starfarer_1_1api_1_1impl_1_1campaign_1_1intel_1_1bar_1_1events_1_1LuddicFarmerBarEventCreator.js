@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEventCreator =
-[
-    [ "createBarEvent", "da/dc5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEventCreator.html#a4b06885d3a42ae17f548814332c767c3", null ]
-];

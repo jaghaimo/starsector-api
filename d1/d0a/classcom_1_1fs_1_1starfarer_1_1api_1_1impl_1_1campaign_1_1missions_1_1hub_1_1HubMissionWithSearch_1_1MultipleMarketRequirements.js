@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MultipleMarketRequirements =
-[
-    [ "MultipleMarketRequirements", "d1/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MultipleMarketRequirements.html#ab7e9933713a999356671497a3b660e5b", null ],
-    [ "marketMatchesRequirement", "d1/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MultipleMarketRequirements.html#a566dbd76b98fe2427b3923e4c53decde", null ],
-    [ "mode", "d1/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MultipleMarketRequirements.html#a8dcfc3bd055d23f1f83a240f435cd4a8", null ],
-    [ "reqs", "d1/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MultipleMarketRequirements.html#acea40e1af0111f4e82bc76fc53211141", null ]
-];

@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredCommodityTags =
-[
-    [ "RequiredCommodityTags", "d7/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredCommodityTags.html#afa031440f6551dbbd54165138b6283ab", null ],
-    [ "commodityMatchesRequirement", "d7/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredCommodityTags.html#a81cd25b4a2e47b192206a101ab4ef7ed", null ]
-];

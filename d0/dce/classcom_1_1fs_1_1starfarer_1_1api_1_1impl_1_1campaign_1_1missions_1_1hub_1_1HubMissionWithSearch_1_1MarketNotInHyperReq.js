@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketNotInHyperReq =
-[
-    [ "marketMatchesRequirement", "d0/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketNotInHyperReq.html#a06fe7ee6b486bdb5405e9c3df9517309", null ]
-];

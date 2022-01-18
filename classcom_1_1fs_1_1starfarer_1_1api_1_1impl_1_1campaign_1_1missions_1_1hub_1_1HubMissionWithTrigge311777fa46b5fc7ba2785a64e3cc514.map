@@ -1,0 +1,10 @@
+<map id="com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SpawnDerelictAction" name="com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SpawnDerelictAction">
+<area shape="rect" id="node1" title=" " alt="" coords="1313,71,1613,112"/>
+<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionTrigger_1_1TriggerAction.html" title=" " alt="" coords="911,5,1211,47"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DerelictShipEntityPlugin_1_1DerelictShipData.html" title=" " alt="" coords="931,71,1191,112"/>
+<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1ShipRecoverySpecial_1_1PerShipData.html" title=" " alt="" coords="472,71,835,112"/>
+<area shape="rect" id="node5" title=" " alt="" coords="147,19,226,46"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html" title=" " alt="" coords="96,71,277,112"/>
+<area shape="rect" id="node7" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1ShipRecoverySpecial_1_1ShipCondition.html" title=" " alt="" coords="5,136,368,177"/>
+<area shape="rect" id="node8" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DerelictShipEntityPlugin_1_1DerelictType.html" title=" " alt="" coords="943,136,1178,177"/>
+</map>

@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAss1e88cb126a99405e10096a33b0c34f57 =
-[
-    [ "BlueprintSpecialCreator", "da/d43/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAss1e88cb126a99405e10096a33b0c34f57.html#ac2fa1078b67787ed4e43858edc41b004", null ],
-    [ "createSpecial", "da/d43/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAss1e88cb126a99405e10096a33b0c34f57.html#a2cb2359576762afa1a5608c2a892e3fe", null ],
-    [ "random", "da/d43/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAss1e88cb126a99405e10096a33b0c34f57.html#afa2732a6f08772693bef8b6c03cb7a0c", null ]
-];

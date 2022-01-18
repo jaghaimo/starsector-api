@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAsscca646965ef900933a72d5d778b42d4d =
-[
-    [ "SurveyDataSpecialCreator", "de/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAsscca646965ef900933a72d5d778b42d4d.html#aa0cd6e7cacd91e9290aea6224007cfb0", null ],
-    [ "createSpecial", "de/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAsscca646965ef900933a72d5d778b42d4d.html#a249628ed2008a8162638e31958b91b42", null ],
-    [ "random", "de/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAsscca646965ef900933a72d5d778b42d4d.html#a950017e829e6a5a3ee70c70df14b6f37", null ],
-    [ "type", "de/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAsscca646965ef900933a72d5d778b42d4d.html#ae7fca88e1b939a7ff93dc4ea1630c656", null ]
-];

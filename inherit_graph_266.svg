@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="df/d85/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1AdvanceableListener.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1AdvanceableListener.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="370,-1102.5 370,-1132.5 545,-1132.5 545,-1102.5 370,-1102.5"/>
 <text text-anchor="start" x="378" y="-1120.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.listeners.</text>
 <text text-anchor="middle" x="457.5" y="-1109.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdvanceableListener</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d9/d6c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1CombatEnduranceRegen.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CombatEndurance_1_1CombatEnduranceRegen.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="603.5,-1225.5 603.5,-1255.5 809.5,-1255.5 809.5,-1225.5 603.5,-1225.5"/>
 <text text-anchor="start" x="611.5" y="-1243.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
 <text text-anchor="middle" x="706.5" y="-1232.5" font-family="Helvetica,sans-Serif" font-size="10.00">CombatEndurance.CombatEnduranceRegen</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d8/d14/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1DamageControlDamageTakenMod.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DamageControl_1_1DamageControlDamageTakenMod.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="589.5,-1176.5 589.5,-1206.5 823.5,-1206.5 823.5,-1176.5 589.5,-1176.5"/>
 <text text-anchor="start" x="597.5" y="-1194.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
 <text text-anchor="middle" x="706.5" y="-1183.5" font-family="Helvetica,sans-Serif" font-size="10.00">DamageControl.DamageControlDamageTakenMod</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="dc/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EnergyWeaponMastery_1_1EWMDamageDealtMod.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1EnergyWeaponMastery_1_1EWMDamageDealtMod.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="597.5,-833.5 597.5,-863.5 815.5,-863.5 815.5,-833.5 597.5,-833.5"/>
 <text text-anchor="start" x="605.5" y="-851.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
 <text text-anchor="middle" x="706.5" y="-840.5" font-family="Helvetica,sans-Serif" font-size="10.00">EnergyWeaponMastery.EWMDamageDealtMod</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="dc/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1PolarizedArmorEffectMod.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor_1_1PolarizedArmorEffectMod.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="609.5,-1127.5 609.5,-1157.5 803.5,-1157.5 803.5,-1127.5 609.5,-1127.5"/>
 <text text-anchor="start" x="617.5" y="-1145.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
 <text text-anchor="middle" x="706.5" y="-1134.5" font-family="Helvetica,sans-Serif" font-size="10.00">PolarizedArmor.PolarizedArmorEffectMod</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="d3/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor_1_1PhaseAnchorScript.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PhaseAnchor_1_1PhaseAnchorScript.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="625,-980.5 625,-1010.5 788,-1010.5 788,-980.5 625,-980.5"/>
 <text text-anchor="start" x="633" y="-998.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.hullmods.</text>
 <text text-anchor="middle" x="706.5" y="-987.5" font-family="Helvetica,sans-Serif" font-size="10.00">PhaseAnchor.PhaseAnchorScript</text>
@@ -101,7 +101,7 @@
 <!-- Node726 -->
 <g id="node7" class="node">
 <title>Node726</title>
-<g id="a_node7"><a xlink:href="d5/dd3/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageDealtModifier.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageDealtModifier.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="370,-73.5 370,-103.5 545,-103.5 545,-73.5 370,-73.5"/>
 <text text-anchor="start" x="378" y="-91.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.listeners.</text>
 <text text-anchor="middle" x="457.5" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">DamageDealtModifier</text>
@@ -117,7 +117,7 @@
 <!-- Node727 -->
 <g id="node8" class="node">
 <title>Node727</title>
-<g id="a_node8"><a xlink:href="d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RangedSpecialization_1_1RangedSpecDamageDealtMod.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RangedSpecialization_1_1RangedSpecDamageDealtMod.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="584,-0.5 584,-30.5 829,-30.5 829,-0.5 584,-0.5"/>
 <text text-anchor="start" x="592" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
 <text text-anchor="middle" x="706.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">RangedSpecialization.RangedSpecDamageDealtMod</text>
@@ -133,7 +133,7 @@
 <!-- Node728 -->
 <g id="node9" class="node">
 <title>Node728</title>
-<g id="a_node9"><a xlink:href="d7/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_1_1HighScatterAmpDamageDealtMod.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1HighScatterAmp_1_1HighScatterAmpDamageDealtMod.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="586.5,-98.5 586.5,-128.5 826.5,-128.5 826.5,-98.5 586.5,-98.5"/>
 <text text-anchor="start" x="594.5" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.hullmods.</text>
 <text text-anchor="middle" x="706.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">HighScatterAmp.HighScatterAmpDamageDealtMod</text>
@@ -149,7 +149,7 @@
 <!-- Node729 -->
 <g id="node10" class="node">
 <title>Node729</title>
-<g id="a_node10"><a xlink:href="d9/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PDIntegration_1_1PDIDamageDealtMod.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1PDIntegration_1_1PDIDamageDealtMod.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="620.5,-49.5 620.5,-79.5 792.5,-79.5 792.5,-49.5 620.5,-49.5"/>
 <text text-anchor="start" x="628.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.hullmods.</text>
 <text text-anchor="middle" x="706.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">PDIntegration.PDIDamageDealtMod</text>
@@ -165,7 +165,7 @@
 <!-- Node732 -->
 <g id="node11" class="node">
 <title>Node732</title>
-<g id="a_node11"><a xlink:href="db/df0/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageTakenModifier.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageTakenModifier.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="370,-1151.5 370,-1181.5 545,-1181.5 545,-1151.5 370,-1151.5"/>
 <text text-anchor="start" x="378" y="-1169.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.listeners.</text>
 <text text-anchor="middle" x="457.5" y="-1158.5" font-family="Helvetica,sans-Serif" font-size="10.00">DamageTakenModifier</text>
@@ -193,7 +193,7 @@
 <!-- Node733 -->
 <g id="node12" class="node">
 <title>Node733</title>
-<g id="a_node12"><a xlink:href="dd/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-1078.5 628.5,-1108.5 784.5,-1108.5 784.5,-1078.5 628.5,-1078.5"/>
 <text text-anchor="start" x="636.5" y="-1096.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-1085.5" font-family="Helvetica,sans-Serif" font-size="10.00">TriadShieldStats</text>
@@ -209,7 +209,7 @@
 <!-- Node734 -->
 <g id="node13" class="node">
 <title>Node734</title>
-<g id="a_node13"><a xlink:href="de/dde/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStatsBackup.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStatsBackup.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-1029.5 628.5,-1059.5 784.5,-1059.5 784.5,-1029.5 628.5,-1029.5"/>
 <text text-anchor="start" x="636.5" y="-1047.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-1036.5" font-family="Helvetica,sans-Serif" font-size="10.00">TriadShieldStatsBackup</text>
@@ -225,7 +225,7 @@
 <!-- Node788 -->
 <g id="node14" class="node">
 <title>Node788</title>
-<g id="a_node14"><a xlink:href="d6/de5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStatsAIInfoProvider.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStatsAIInfoProvider.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="379.5,-931.5 379.5,-961.5 535.5,-961.5 535.5,-931.5 379.5,-931.5"/>
 <text text-anchor="start" x="387.5" y="-949.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="457.5" y="-938.5" font-family="Helvetica,sans-Serif" font-size="10.00">DroneStrikeStatsAIInfoProvider</text>
@@ -235,7 +235,7 @@
 <!-- Node789 -->
 <g id="node15" class="node">
 <title>Node789</title>
-<g id="a_node15"><a xlink:href="d2/d3b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStats.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DroneStrikeStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-931.5 628.5,-961.5 784.5,-961.5 784.5,-931.5 628.5,-931.5"/>
 <text text-anchor="start" x="636.5" y="-949.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-938.5" font-family="Helvetica,sans-Serif" font-size="10.00">DroneStrikeStats</text>
@@ -251,7 +251,7 @@
 <!-- Node1295 -->
 <g id="node16" class="node">
 <title>Node1295</title>
-<g id="a_node16"><a xlink:href="db/d1f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1HullDamageAboutToBeTakenListener.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1HullDamageAboutToBeTakenListener.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="367,-980.5 367,-1010.5 548,-1010.5 548,-980.5 367,-980.5"/>
 <text text-anchor="start" x="375" y="-998.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.listeners.</text>
 <text text-anchor="middle" x="457.5" y="-987.5" font-family="Helvetica,sans-Serif" font-size="10.00">HullDamageAboutToBeTakenListener</text>
@@ -267,7 +267,7 @@
 <!-- Node1749 -->
 <g id="node17" class="node">
 <title>Node1749</title>
-<g id="a_node17"><a xlink:href="d0/db5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStatsAIInfoProvider.html" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStatsAIInfoProvider.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="379.5,-882.5 379.5,-912.5 535.5,-912.5 535.5,-882.5 379.5,-882.5"/>
 <text text-anchor="start" x="387.5" y="-900.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="457.5" y="-889.5" font-family="Helvetica,sans-Serif" font-size="10.00">MineStrikeStatsAIInfoProvider</text>
@@ -277,7 +277,7 @@
 <!-- Node1750 -->
 <g id="node18" class="node">
 <title>Node1750</title>
-<g id="a_node18"><a xlink:href="d6/daf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-882.5 628.5,-912.5 784.5,-912.5 784.5,-882.5 628.5,-882.5"/>
 <text text-anchor="start" x="636.5" y="-900.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-889.5" font-family="Helvetica,sans-Serif" font-size="10.00">MineStrikeStats</text>
@@ -293,7 +293,7 @@
 <!-- Node1751 -->
 <g id="node19" class="node">
 <title>Node1751</title>
-<g id="a_node19"><a xlink:href="d3/d18/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStationStats.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MineStrikeStationStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="865,-882.5 865,-912.5 1021,-912.5 1021,-882.5 865,-882.5"/>
 <text text-anchor="start" x="873" y="-900.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="943" y="-889.5" font-family="Helvetica,sans-Serif" font-size="10.00">MineStrikeStationStats</text>
@@ -309,7 +309,7 @@
 <!-- Node2146 -->
 <g id="node20" class="node">
 <title>Node2146</title>
-<g id="a_node20"><a xlink:href="d3/d3b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript.html" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-563.5 0,-593.5 134,-593.5 134,-563.5 0,-563.5"/>
 <text text-anchor="start" x="8" y="-581.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.plugins.</text>
 <text text-anchor="middle" x="67" y="-570.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShipSystemStatsScript</text>
@@ -319,7 +319,7 @@
 <!-- Node2147 -->
 <g id="node21" class="node">
 <title>Node2147</title>
-<g id="a_node21"><a xlink:href="db/d18/interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScriptAdvanced.html" target="_top" xlink:title=" ">
+<g id="a_node21"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScriptAdvanced.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="170,-563.5 170,-593.5 331,-593.5 331,-563.5 170,-563.5"/>
 <text text-anchor="start" x="178" y="-581.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.plugins.</text>
 <text text-anchor="middle" x="250.5" y="-570.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShipSystemStatsScriptAdvanced</text>
@@ -335,7 +335,7 @@
 <!-- Node2148 -->
 <g id="node22" class="node">
 <title>Node2148</title>
-<g id="a_node22"><a xlink:href="d7/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html" target="_top" xlink:title=" ">
+<g id="a_node22"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="379.5,-563.5 379.5,-593.5 535.5,-593.5 535.5,-563.5 379.5,-563.5"/>
 <text text-anchor="start" x="387.5" y="-581.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="457.5" y="-570.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseShipSystemScript</text>
@@ -375,7 +375,7 @@
 <!-- Node2149 -->
 <g id="node23" class="node">
 <title>Node2149</title>
-<g id="a_node23"><a xlink:href="d1/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1AcausalDisruptorStats.html" target="_top" xlink:title=" ">
+<g id="a_node23"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1AcausalDisruptorStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-490.5 628.5,-520.5 784.5,-520.5 784.5,-490.5 628.5,-490.5"/>
 <text text-anchor="start" x="636.5" y="-508.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcausalDisruptorStats</text>
@@ -391,7 +391,7 @@
 <!-- Node2150 -->
 <g id="node24" class="node">
 <title>Node2150</title>
-<g id="a_node24"><a xlink:href="db/d76/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html" target="_top" xlink:title=" ">
+<g id="a_node24"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ChiralFigmentStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-441.5 628.5,-471.5 784.5,-471.5 784.5,-441.5 628.5,-441.5"/>
 <text text-anchor="start" x="636.5" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">ChiralFigmentStats</text>
@@ -407,7 +407,7 @@
 <!-- Node2151 -->
 <g id="node25" class="node">
 <title>Node2151</title>
-<g id="a_node25"><a xlink:href="d1/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html" target="_top" xlink:title=" ">
+<g id="a_node25"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-392.5 628.5,-422.5 784.5,-422.5 784.5,-392.5 628.5,-392.5"/>
 <text text-anchor="start" x="636.5" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">CryofluxTransducerStats</text>
@@ -423,7 +423,7 @@
 <!-- Node2152 -->
 <g id="node26" class="node">
 <title>Node2152</title>
-<g id="a_node26"><a xlink:href="da/d66/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldOmegaStats.html" target="_top" xlink:title=" ">
+<g id="a_node26"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldOmegaStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-343.5 628.5,-373.5 784.5,-373.5 784.5,-343.5 628.5,-343.5"/>
 <text text-anchor="start" x="636.5" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">DamperFieldOmegaStats</text>
@@ -439,7 +439,7 @@
 <!-- Node2153 -->
 <g id="node27" class="node">
 <title>Node2153</title>
-<g id="a_node27"><a xlink:href="dd/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldStats.html" target="_top" xlink:title=" ">
+<g id="a_node27"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-294.5 628.5,-324.5 784.5,-324.5 784.5,-294.5 628.5,-294.5"/>
 <text text-anchor="start" x="636.5" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">DamperFieldStats</text>
@@ -455,7 +455,7 @@
 <!-- Node2154 -->
 <g id="node28" class="node">
 <title>Node2154</title>
-<g id="a_node28"><a xlink:href="d7/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EntropyAmplifierStats.html" target="_top" xlink:title=" ">
+<g id="a_node28"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EntropyAmplifierStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-245.5 628.5,-275.5 784.5,-275.5 784.5,-245.5 628.5,-245.5"/>
 <text text-anchor="start" x="636.5" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">EntropyAmplifierStats</text>
@@ -471,7 +471,7 @@
 <!-- Node2155 -->
 <g id="node29" class="node">
 <title>Node2155</title>
-<g id="a_node29"><a xlink:href="d7/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1InterdictorArrayStats.html" target="_top" xlink:title=" ">
+<g id="a_node29"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1InterdictorArrayStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-196.5 628.5,-226.5 784.5,-226.5 784.5,-196.5 628.5,-196.5"/>
 <text text-anchor="start" x="636.5" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">InterdictorArrayStats</text>
@@ -487,7 +487,7 @@
 <!-- Node2156 -->
 <g id="node30" class="node">
 <title>Node2156</title>
-<g id="a_node30"><a xlink:href="d5/d4a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html" target="_top" xlink:title=" ">
+<g id="a_node30"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteControlScript.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-147.5 628.5,-177.5 784.5,-177.5 784.5,-147.5 628.5,-147.5"/>
 <text text-anchor="start" x="636.5" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">MoteControlScript</text>
@@ -503,7 +503,7 @@
 <!-- Node2157 -->
 <g id="node31" class="node">
 <title>Node2157</title>
-<g id="a_node31"><a xlink:href="d8/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PhaseCloakStats.html" target="_top" xlink:title=" ">
+<g id="a_node31"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PhaseCloakStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-784.5 628.5,-814.5 784.5,-814.5 784.5,-784.5 628.5,-784.5"/>
 <text text-anchor="start" x="636.5" y="-802.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-791.5" font-family="Helvetica,sans-Serif" font-size="10.00">PhaseCloakStats</text>
@@ -519,7 +519,7 @@
 <!-- Node2158 -->
 <g id="node32" class="node">
 <title>Node2158</title>
-<g id="a_node32"><a xlink:href="da/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PlasmaJetsStats.html" target="_top" xlink:title=" ">
+<g id="a_node32"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PlasmaJetsStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-735.5 628.5,-765.5 784.5,-765.5 784.5,-735.5 628.5,-735.5"/>
 <text text-anchor="start" x="636.5" y="-753.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-742.5" font-family="Helvetica,sans-Serif" font-size="10.00">PlasmaJetsStats</text>
@@ -535,7 +535,7 @@
 <!-- Node2159 -->
 <g id="node33" class="node">
 <title>Node2159</title>
-<g id="a_node33"><a xlink:href="dc/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats.html" target="_top" xlink:title=" ">
+<g id="a_node33"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RecallDeviceStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-686.5 628.5,-716.5 784.5,-716.5 784.5,-686.5 628.5,-686.5"/>
 <text text-anchor="start" x="636.5" y="-704.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-693.5" font-family="Helvetica,sans-Serif" font-size="10.00">RecallDeviceStats</text>
@@ -551,7 +551,7 @@
 <!-- Node2160 -->
 <g id="node34" class="node">
 <title>Node2160</title>
-<g id="a_node34"><a xlink:href="d6/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html" target="_top" xlink:title=" ">
+<g id="a_node34"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1ReserveWingStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-637.5 628.5,-667.5 784.5,-667.5 784.5,-637.5 628.5,-637.5"/>
 <text text-anchor="start" x="636.5" y="-655.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-644.5" font-family="Helvetica,sans-Serif" font-size="10.00">ReserveWingStats</text>
@@ -567,7 +567,7 @@
 <!-- Node2161 -->
 <g id="node35" class="node">
 <title>Node2161</title>
-<g id="a_node35"><a xlink:href="d8/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html" target="_top" xlink:title=" ">
+<g id="a_node35"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TargetingFeedStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-588.5 628.5,-618.5 784.5,-618.5 784.5,-588.5 628.5,-588.5"/>
 <text text-anchor="start" x="636.5" y="-606.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-595.5" font-family="Helvetica,sans-Serif" font-size="10.00">TargetingFeedStats</text>
@@ -583,7 +583,7 @@
 <!-- Node2162 -->
 <g id="node36" class="node">
 <title>Node2162</title>
-<g id="a_node36"><a xlink:href="d6/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TemporalShellStats.html" target="_top" xlink:title=" ">
+<g id="a_node36"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TemporalShellStats.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="628.5,-539.5 628.5,-569.5 784.5,-569.5 784.5,-539.5 628.5,-539.5"/>
 <text text-anchor="start" x="636.5" y="-557.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="706.5" y="-546.5" font-family="Helvetica,sans-Serif" font-size="10.00">TemporalShellStats</text>

@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddSpecialItemDropAction =
-[
-    [ "AddSpecialItemDropAction", "d8/d95/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddSpecialItemDropAction.html#a4f49804f524b2ae4e60d2a07fdc2e641", null ],
-    [ "doAction", "d8/d95/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddSpecialItemDropAction.html#aa0693cd39824f41a4eff699d74d35a10", null ],
-    [ "data", "d8/d95/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddSpecialItemDropAction.html#adbe3998a0c0364645c90173896ce5ccc", null ],
-    [ "itemId", "d8/d95/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddSpecialItemDropAction.html#a6921245e708c094eed5a35b4696e1a4b", null ]
-];

@@ -1,0 +1,5 @@
+var enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOffer_1_1OptionId =
+[
+    [ "DONATE", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOffer_1_1OptionId.html#ab53fa2376b52cdbd0f81a702e7951b94", null ],
+    [ "NEVER_MIND", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOffer_1_1OptionId.html#a607f89f34e4c22d1f4de52a50b87e1e7", null ]
+];

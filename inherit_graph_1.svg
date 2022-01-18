@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d9/d14/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AbilityAIPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AbilityAIPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-122.5 0,-152.5 155,-152.5 155,-122.5 0,-122.5"/>
 <text text-anchor="start" x="8" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.ai.</text>
 <text text-anchor="middle" x="77.5" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbilityAIPlugin</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="de/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="191,-122.5 191,-152.5 402,-152.5 402,-122.5 191,-122.5"/>
 <text text-anchor="start" x="199" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.abilities.ai.</text>
 <text text-anchor="middle" x="296.5" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseAbilityAI</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d1/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1EmergencyBurnAbilityAI.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1EmergencyBurnAbilityAI.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="438,-245.5 438,-275.5 649,-275.5 649,-245.5 438,-245.5"/>
 <text text-anchor="start" x="446" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.abilities.ai.</text>
 <text text-anchor="middle" x="543.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">EmergencyBurnAbilityAI</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d0/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1GoDarkAbilityAI.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1GoDarkAbilityAI.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="438,-196.5 438,-226.5 649,-226.5 649,-196.5 438,-196.5"/>
 <text text-anchor="start" x="446" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.abilities.ai.</text>
 <text text-anchor="middle" x="543.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">GoDarkAbilityAI</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="438,-147.5 438,-177.5 649,-177.5 649,-147.5 438,-147.5"/>
 <text text-anchor="start" x="446" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.abilities.ai.</text>
 <text text-anchor="middle" x="543.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">InterdictionPulseAbilityAI</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="dd/d75/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SensorBurstAbilityAI.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SensorBurstAbilityAI.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="438,-98.5 438,-128.5 649,-128.5 649,-98.5 438,-98.5"/>
 <text text-anchor="start" x="446" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.abilities.ai.</text>
 <text text-anchor="middle" x="543.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">SensorBurstAbilityAI</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="dd/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SustainedBurnAbilityAI.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SustainedBurnAbilityAI.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="438,-49.5 438,-79.5 649,-79.5 649,-49.5 438,-49.5"/>
 <text text-anchor="start" x="446" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.abilities.ai.</text>
 <text text-anchor="middle" x="543.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">SustainedBurnAbilityAI</text>
@@ -117,7 +117,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="d2/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1TransponderAbilityAI.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1TransponderAbilityAI.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="438,-0.5 438,-30.5 649,-30.5 649,-0.5 438,-0.5"/>
 <text text-anchor="start" x="446" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.abilities.ai.</text>
 <text text-anchor="middle" x="543.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">TransponderAbilityAI</text>

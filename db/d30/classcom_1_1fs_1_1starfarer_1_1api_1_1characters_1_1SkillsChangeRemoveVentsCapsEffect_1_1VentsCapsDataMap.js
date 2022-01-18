@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect_1_1VentsCapsDataMap =
-[
-    [ "map", "db/d30/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect_1_1VentsCapsDataMap.html#a8ff24869fc8d2deffdae8509cf6d533d", null ]
-];

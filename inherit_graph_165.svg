@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d0/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-5453.5 0,-5483.5 169,-5483.5 169,-5453.5 0,-5453.5"/>
 <text text-anchor="start" x="8" y="-5471.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.rules.</text>
 <text text-anchor="middle" x="84.5" y="-5460.5" font-family="Helvetica,sans-Serif" font-size="10.00">CommandPlugin</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="205,-5453.5 205,-5483.5 408,-5483.5 408,-5453.5 205,-5453.5"/>
 <text text-anchor="start" x="213" y="-5471.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="306.5" y="-5460.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseCommandPlugin</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="df/dc6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AbortWait.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AbortWait.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-6360.5 477,-6390.5 680,-6390.5 680,-6360.5 477,-6360.5"/>
 <text text-anchor="start" x="485" y="-6378.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-6367.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbortWait</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d6/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ActivateAbility.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ActivateAbility.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-6311.5 477,-6341.5 680,-6341.5 680,-6311.5 477,-6311.5"/>
 <text text-anchor="start" x="485" y="-6329.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-6318.5" font-family="Helvetica,sans-Serif" font-size="10.00">ActivateAbility</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d9/d73/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddAbility.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddAbility.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-6262.5 477,-6292.5 680,-6292.5 680,-6262.5 477,-6262.5"/>
 <text text-anchor="start" x="485" y="-6280.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-6269.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddAbility</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="d4/d7a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddCredits.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddCredits.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-6213.5 477,-6243.5 680,-6243.5 680,-6213.5 477,-6213.5"/>
 <text text-anchor="start" x="485" y="-6231.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-6220.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddCredits</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="dd/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddOption.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddOption.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-6164.5 477,-6194.5 680,-6194.5 680,-6164.5 477,-6164.5"/>
 <text text-anchor="start" x="485" y="-6182.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-6171.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddOption</text>
@@ -117,7 +117,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="d5/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddPotentialContact.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddPotentialContact.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-6115.5 477,-6145.5 680,-6145.5 680,-6115.5 477,-6115.5"/>
 <text text-anchor="start" x="485" y="-6133.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-6122.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddPotentialContact</text>
@@ -133,7 +133,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="d0/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-6066.5 477,-6096.5 680,-6096.5 680,-6066.5 477,-6066.5"/>
 <text text-anchor="start" x="485" y="-6084.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-6073.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddRemoveCommodity</text>
@@ -149,7 +149,7 @@
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="d2/dd5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddSelector.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddSelector.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-6017.5 477,-6047.5 680,-6047.5 680,-6017.5 477,-6017.5"/>
 <text text-anchor="start" x="485" y="-6035.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-6024.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddSelector</text>
@@ -165,7 +165,7 @@
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="de/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddShip.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddShip.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5968.5 477,-5998.5 680,-5998.5 680,-5968.5 477,-5968.5"/>
 <text text-anchor="start" x="485" y="-5986.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5975.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddShip</text>
@@ -181,7 +181,7 @@
 <!-- Node12 -->
 <g id="node13" class="node">
 <title>Node12</title>
-<g id="a_node13"><a xlink:href="dc/d51/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddShipToOtherFleet.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddShipToOtherFleet.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5919.5 477,-5949.5 680,-5949.5 680,-5919.5 477,-5919.5"/>
 <text text-anchor="start" x="485" y="-5937.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5926.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddShipToOtherFleet</text>
@@ -197,7 +197,7 @@
 <!-- Node13 -->
 <g id="node14" class="node">
 <title>Node13</title>
-<g id="a_node14"><a xlink:href="d4/daa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddStoryPoints.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddStoryPoints.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5870.5 477,-5900.5 680,-5900.5 680,-5870.5 477,-5870.5"/>
 <text text-anchor="start" x="485" y="-5888.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5877.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddStoryPoints</text>
@@ -213,7 +213,7 @@
 <!-- Node14 -->
 <g id="node15" class="node">
 <title>Node14</title>
-<g id="a_node15"><a xlink:href="d3/d3c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddText.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddText.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5821.5 477,-5851.5 680,-5851.5 680,-5821.5 477,-5821.5"/>
 <text text-anchor="start" x="485" y="-5839.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5828.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddText</text>
@@ -229,7 +229,7 @@
 <!-- Node15 -->
 <g id="node16" class="node">
 <title>Node15</title>
-<g id="a_node16"><a xlink:href="da/d36/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddTextSmall.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddTextSmall.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5772.5 477,-5802.5 680,-5802.5 680,-5772.5 477,-5772.5"/>
 <text text-anchor="start" x="485" y="-5790.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5779.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddTextSmall</text>
@@ -245,7 +245,7 @@
 <!-- Node16 -->
 <g id="node17" class="node">
 <title>Node16</title>
-<g id="a_node17"><a xlink:href="d3/df2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddXP.html" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddXP.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5723.5 477,-5753.5 680,-5753.5 680,-5723.5 477,-5723.5"/>
 <text text-anchor="start" x="485" y="-5741.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5730.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddXP</text>
@@ -261,7 +261,7 @@
 <!-- Node17 -->
 <g id="node18" class="node">
 <title>Node17</title>
-<g id="a_node18"><a xlink:href="d2/d23/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRep.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRep.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5674.5 477,-5704.5 680,-5704.5 680,-5674.5 477,-5674.5"/>
 <text text-anchor="start" x="485" y="-5692.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5681.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustRep</text>
@@ -277,7 +277,7 @@
 <!-- Node18 -->
 <g id="node19" class="node">
 <title>Node18</title>
-<g id="a_node19"><a xlink:href="de/da4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRepActivePerson.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRepActivePerson.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5625.5 477,-5655.5 680,-5655.5 680,-5625.5 477,-5625.5"/>
 <text text-anchor="start" x="485" y="-5643.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5632.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustRepActivePerson</text>
@@ -293,7 +293,7 @@
 <!-- Node19 -->
 <g id="node20" class="node">
 <title>Node19</title>
-<g id="a_node20"><a xlink:href="d9/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRepPerson.html" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRepPerson.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5576.5 477,-5606.5 680,-5606.5 680,-5576.5 477,-5576.5"/>
 <text text-anchor="start" x="485" y="-5594.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5583.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustRepPerson</text>
@@ -309,7 +309,7 @@
 <!-- Node20 -->
 <g id="node21" class="node">
 <title>Node20</title>
-<g id="a_node21"><a xlink:href="d0/d90/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AnyNearbyFleetsHostileAndAware.html" target="_top" xlink:title=" ">
+<g id="a_node21"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AnyNearbyFleetsHostileAndAware.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5527.5 477,-5557.5 680,-5557.5 680,-5527.5 477,-5527.5"/>
 <text text-anchor="start" x="485" y="-5545.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5534.5" font-family="Helvetica,sans-Serif" font-size="10.00">AnyNearbyFleetsHostileAndAware</text>
@@ -325,7 +325,7 @@
 <!-- Node21 -->
 <g id="node22" class="node">
 <title>Node21</title>
-<g id="a_node22"><a xlink:href="da/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ArePatrolsNearby.html" target="_top" xlink:title=" ">
+<g id="a_node22"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ArePatrolsNearby.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5478.5 477,-5508.5 680,-5508.5 680,-5478.5 477,-5478.5"/>
 <text text-anchor="start" x="485" y="-5496.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5485.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArePatrolsNearby</text>
@@ -341,7 +341,7 @@
 <!-- Node22 -->
 <g id="node23" class="node">
 <title>Node22</title>
-<g id="a_node23"><a xlink:href="d2/d98/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginConversation.html" target="_top" xlink:title=" ">
+<g id="a_node23"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginConversation.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5429.5 477,-5459.5 680,-5459.5 680,-5429.5 477,-5429.5"/>
 <text text-anchor="start" x="485" y="-5447.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5436.5" font-family="Helvetica,sans-Serif" font-size="10.00">BeginConversation</text>
@@ -357,7 +357,7 @@
 <!-- Node23 -->
 <g id="node24" class="node">
 <title>Node23</title>
-<g id="a_node24"><a xlink:href="da/d70/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginMission.html" target="_top" xlink:title=" ">
+<g id="a_node24"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginMission.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5380.5 477,-5410.5 680,-5410.5 680,-5380.5 477,-5380.5"/>
 <text text-anchor="start" x="485" y="-5398.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5387.5" font-family="Helvetica,sans-Serif" font-size="10.00">BeginMission</text>
@@ -373,7 +373,7 @@
 <!-- Node24 -->
 <g id="node25" class="node">
 <title>Node24</title>
-<g id="a_node25"><a xlink:href="d1/d2b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastCancelPlayerAction.html" target="_top" xlink:title=" ">
+<g id="a_node25"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastCancelPlayerAction.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5331.5 477,-5361.5 680,-5361.5 680,-5331.5 477,-5331.5"/>
 <text text-anchor="start" x="485" y="-5349.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5338.5" font-family="Helvetica,sans-Serif" font-size="10.00">BroadcastCancelPlayerAction</text>
@@ -389,7 +389,7 @@
 <!-- Node25 -->
 <g id="node26" class="node">
 <title>Node25</title>
-<g id="a_node26"><a xlink:href="d3/dad/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastPlayerAction.html" target="_top" xlink:title=" ">
+<g id="a_node26"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastPlayerAction.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5282.5 477,-5312.5 680,-5312.5 680,-5282.5 477,-5282.5"/>
 <text text-anchor="start" x="485" y="-5300.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5289.5" font-family="Helvetica,sans-Serif" font-size="10.00">BroadcastPlayerAction</text>
@@ -405,7 +405,7 @@
 <!-- Node26 -->
 <g id="node27" class="node">
 <title>Node26</title>
-<g id="a_node27"><a xlink:href="d3/d40/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastPlayerWaitAction.html" target="_top" xlink:title=" ">
+<g id="a_node27"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastPlayerWaitAction.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5233.5 477,-5263.5 680,-5263.5 680,-5233.5 477,-5233.5"/>
 <text text-anchor="start" x="485" y="-5251.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5240.5" font-family="Helvetica,sans-Serif" font-size="10.00">BroadcastPlayerWaitAction</text>
@@ -421,7 +421,7 @@
 <!-- Node27 -->
 <g id="node28" class="node">
 <title>Node27</title>
-<g id="a_node28"><a xlink:href="df/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent.html" target="_top" xlink:title=" ">
+<g id="a_node28"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5184.5 477,-5214.5 680,-5214.5 680,-5184.5 477,-5184.5"/>
 <text text-anchor="start" x="485" y="-5202.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5191.5" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent</text>
@@ -437,7 +437,7 @@
 <!-- Node29 -->
 <g id="node30" class="node">
 <title>Node29</title>
-<g id="a_node30"><a xlink:href="d2/de8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CaresAboutTransponder.html" target="_top" xlink:title=" ">
+<g id="a_node30"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CaresAboutTransponder.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5135.5 477,-5165.5 680,-5165.5 680,-5135.5 477,-5135.5"/>
 <text text-anchor="start" x="485" y="-5153.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5142.5" font-family="Helvetica,sans-Serif" font-size="10.00">CaresAboutTransponder</text>
@@ -453,7 +453,7 @@
 <!-- Node30 -->
 <g id="node31" class="node">
 <title>Node30</title>
-<g id="a_node31"><a xlink:href="d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CargoScan.html" target="_top" xlink:title=" ">
+<g id="a_node31"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CargoScan.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5086.5 477,-5116.5 680,-5116.5 680,-5086.5 477,-5086.5"/>
 <text text-anchor="start" x="485" y="-5104.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5093.5" font-family="Helvetica,sans-Serif" font-size="10.00">CargoScan</text>
@@ -469,7 +469,7 @@
 <!-- Node31 -->
 <g id="node32" class="node">
 <title>Node31</title>
-<g id="a_node32"><a xlink:href="d9/df1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CargoScanApplyResult.html" target="_top" xlink:title=" ">
+<g id="a_node32"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CargoScanApplyResult.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-5037.5 477,-5067.5 680,-5067.5 680,-5037.5 477,-5037.5"/>
 <text text-anchor="start" x="485" y="-5055.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-5044.5" font-family="Helvetica,sans-Serif" font-size="10.00">CargoScanApplyResult</text>
@@ -485,7 +485,7 @@
 <!-- Node32 -->
 <g id="node33" class="node">
 <title>Node32</title>
-<g id="a_node33"><a xlink:href="d6/da7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CheckSetting.html" target="_top" xlink:title=" ">
+<g id="a_node33"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CheckSetting.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4988.5 477,-5018.5 680,-5018.5 680,-4988.5 477,-4988.5"/>
 <text text-anchor="start" x="485" y="-5006.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4995.5" font-family="Helvetica,sans-Serif" font-size="10.00">CheckSetting</text>
@@ -501,7 +501,7 @@
 <!-- Node33 -->
 <g id="node34" class="node">
 <title>Node33</title>
-<g id="a_node34"><a xlink:href="d9/d0e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ClearActiveMission.html" target="_top" xlink:title=" ">
+<g id="a_node34"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ClearActiveMission.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4939.5 477,-4969.5 680,-4969.5 680,-4939.5 477,-4939.5"/>
 <text text-anchor="start" x="485" y="-4957.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4946.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClearActiveMission</text>
@@ -517,7 +517,7 @@
 <!-- Node34 -->
 <g id="node35" class="node">
 <title>Node34</title>
-<g id="a_node35"><a xlink:href="d0/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionApplyRepLoss.html" target="_top" xlink:title=" ">
+<g id="a_node35"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionApplyRepLoss.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4890.5 477,-4920.5 680,-4920.5 680,-4890.5 477,-4890.5"/>
 <text text-anchor="start" x="485" y="-4908.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4897.5" font-family="Helvetica,sans-Serif" font-size="10.00">CustomsInspectionApplyRepLoss</text>
@@ -533,7 +533,7 @@
 <!-- Node35 -->
 <g id="node36" class="node">
 <title>Node35</title>
-<g id="a_node36"><a xlink:href="d2/d3f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionApplyResult.html" target="_top" xlink:title=" ">
+<g id="a_node36"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionApplyResult.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4841.5 477,-4871.5 680,-4871.5 680,-4841.5 477,-4841.5"/>
 <text text-anchor="start" x="485" y="-4859.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4848.5" font-family="Helvetica,sans-Serif" font-size="10.00">CustomsInspectionApplyResult</text>
@@ -549,7 +549,7 @@
 <!-- Node36 -->
 <g id="node37" class="node">
 <title>Node36</title>
-<g id="a_node37"><a xlink:href="dd/d69/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult.html" target="_top" xlink:title=" ">
+<g id="a_node37"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4792.5 477,-4822.5 680,-4822.5 680,-4792.5 477,-4792.5"/>
 <text text-anchor="start" x="485" y="-4810.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4799.5" font-family="Helvetica,sans-Serif" font-size="10.00">CustomsInspectionGenerateResult</text>
@@ -565,7 +565,7 @@
 <!-- Node37 -->
 <g id="node38" class="node">
 <title>Node37</title>
-<g id="a_node38"><a xlink:href="d4/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DeactivateAbility.html" target="_top" xlink:title=" ">
+<g id="a_node38"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DeactivateAbility.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4743.5 477,-4773.5 680,-4773.5 680,-4743.5 477,-4743.5"/>
 <text text-anchor="start" x="485" y="-4761.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4750.5" font-family="Helvetica,sans-Serif" font-size="10.00">DeactivateAbility</text>
@@ -581,7 +581,7 @@
 <!-- Node38 -->
 <g id="node39" class="node">
 <title>Node38</title>
-<g id="a_node39"><a xlink:href="d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DespawnEntity.html" target="_top" xlink:title=" ">
+<g id="a_node39"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DespawnEntity.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4694.5 477,-4724.5 680,-4724.5 680,-4694.5 477,-4694.5"/>
 <text text-anchor="start" x="485" y="-4712.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4701.5" font-family="Helvetica,sans-Serif" font-size="10.00">DespawnEntity</text>
@@ -597,7 +597,7 @@
 <!-- Node39 -->
 <g id="node40" class="node">
 <title>Node39</title>
-<g id="a_node40"><a xlink:href="de/d74/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DismissDialog.html" target="_top" xlink:title=" ">
+<g id="a_node40"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DismissDialog.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4645.5 477,-4675.5 680,-4675.5 680,-4645.5 477,-4645.5"/>
 <text text-anchor="start" x="485" y="-4663.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4652.5" font-family="Helvetica,sans-Serif" font-size="10.00">DismissDialog</text>
@@ -613,7 +613,7 @@
 <!-- Node40 -->
 <g id="node41" class="node">
 <title>Node40</title>
-<g id="a_node41"><a xlink:href="db/d67/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DoCanAffordCheck.html" target="_top" xlink:title=" ">
+<g id="a_node41"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DoCanAffordCheck.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4596.5 477,-4626.5 680,-4626.5 680,-4596.5 477,-4596.5"/>
 <text text-anchor="start" x="485" y="-4614.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4603.5" font-family="Helvetica,sans-Serif" font-size="10.00">DoCanAffordCheck</text>
@@ -629,7 +629,7 @@
 <!-- Node41 -->
 <g id="node42" class="node">
 <title>Node41</title>
-<g id="a_node42"><a xlink:href="db/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DumpMemory.html" target="_top" xlink:title=" ">
+<g id="a_node42"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DumpMemory.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4547.5 477,-4577.5 680,-4577.5 680,-4547.5 477,-4547.5"/>
 <text text-anchor="start" x="485" y="-4565.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4554.5" font-family="Helvetica,sans-Serif" font-size="10.00">DumpMemory</text>
@@ -645,7 +645,7 @@
 <!-- Node42 -->
 <g id="node43" class="node">
 <title>Node42</title>
-<g id="a_node43"><a xlink:href="d7/db0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1EndConversation.html" target="_top" xlink:title=" ">
+<g id="a_node43"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1EndConversation.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4498.5 477,-4528.5 680,-4528.5 680,-4498.5 477,-4498.5"/>
 <text text-anchor="start" x="485" y="-4516.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4505.5" font-family="Helvetica,sans-Serif" font-size="10.00">EndConversation</text>
@@ -661,7 +661,7 @@
 <!-- Node43 -->
 <g id="node44" class="node">
 <title>Node43</title>
-<g id="a_node44"><a xlink:href="d6/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireAll.html" target="_top" xlink:title=" ">
+<g id="a_node44"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireAll.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4449.5 477,-4479.5 680,-4479.5 680,-4449.5 477,-4449.5"/>
 <text text-anchor="start" x="485" y="-4467.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4456.5" font-family="Helvetica,sans-Serif" font-size="10.00">FireAll</text>
@@ -677,7 +677,7 @@
 <!-- Node44 -->
 <g id="node45" class="node">
 <title>Node44</title>
-<g id="a_node45"><a xlink:href="d6/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html" target="_top" xlink:title=" ">
+<g id="a_node45"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4400.5 477,-4430.5 680,-4430.5 680,-4400.5 477,-4400.5"/>
 <text text-anchor="start" x="485" y="-4418.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4407.5" font-family="Helvetica,sans-Serif" font-size="10.00">FireBest</text>
@@ -693,7 +693,7 @@
 <!-- Node45 -->
 <g id="node46" class="node">
 <title>Node45</title>
-<g id="a_node46"><a xlink:href="d6/d3e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FleetDesc.html" target="_top" xlink:title=" ">
+<g id="a_node46"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FleetDesc.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4351.5 477,-4381.5 680,-4381.5 680,-4351.5 477,-4351.5"/>
 <text text-anchor="start" x="485" y="-4369.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4358.5" font-family="Helvetica,sans-Serif" font-size="10.00">FleetDesc</text>
@@ -709,7 +709,7 @@
 <!-- Node46 -->
 <g id="node47" class="node">
 <title>Node46</title>
-<g id="a_node47"><a xlink:href="df/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1GiveOtherFleetAssignment.html" target="_top" xlink:title=" ">
+<g id="a_node47"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1GiveOtherFleetAssignment.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4302.5 477,-4332.5 680,-4332.5 680,-4302.5 477,-4302.5"/>
 <text text-anchor="start" x="485" y="-4320.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4309.5" font-family="Helvetica,sans-Serif" font-size="10.00">GiveOtherFleetAssignment</text>
@@ -725,7 +725,7 @@
 <!-- Node47 -->
 <g id="node48" class="node">
 <title>Node47</title>
-<g id="a_node48"><a xlink:href="da/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HailPlayer.html" target="_top" xlink:title=" ">
+<g id="a_node48"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HailPlayer.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4253.5 477,-4283.5 680,-4283.5 680,-4253.5 477,-4253.5"/>
 <text text-anchor="start" x="485" y="-4271.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4260.5" font-family="Helvetica,sans-Serif" font-size="10.00">HailPlayer</text>
@@ -741,7 +741,7 @@
 <!-- Node48 -->
 <g id="node49" class="node">
 <title>Node48</title>
-<g id="a_node49"><a xlink:href="d8/db4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HasAttentionOfAuthorities.html" target="_top" xlink:title=" ">
+<g id="a_node49"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HasAttentionOfAuthorities.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4204.5 477,-4234.5 680,-4234.5 680,-4204.5 477,-4204.5"/>
 <text text-anchor="start" x="485" y="-4222.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4211.5" font-family="Helvetica,sans-Serif" font-size="10.00">HasAttentionOfAuthorities</text>
@@ -757,7 +757,7 @@
 <!-- Node49 -->
 <g id="node50" class="node">
 <title>Node49</title>
-<g id="a_node50"><a xlink:href="da/dc6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HideSecondPerson.html" target="_top" xlink:title=" ">
+<g id="a_node50"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HideSecondPerson.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4155.5 477,-4185.5 680,-4185.5 680,-4155.5 477,-4155.5"/>
 <text text-anchor="start" x="485" y="-4173.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4162.5" font-family="Helvetica,sans-Serif" font-size="10.00">HideSecondPerson</text>
@@ -773,7 +773,7 @@
 <!-- Node50 -->
 <g id="node51" class="node">
 <title>Node50</title>
-<g id="a_node51"><a xlink:href="d8/dc4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HideThirdPerson.html" target="_top" xlink:title=" ">
+<g id="a_node51"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HideThirdPerson.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4106.5 477,-4136.5 680,-4136.5 680,-4106.5 477,-4106.5"/>
 <text text-anchor="start" x="485" y="-4124.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4113.5" font-family="Helvetica,sans-Serif" font-size="10.00">HideThirdPerson</text>
@@ -789,7 +789,7 @@
 <!-- Node51 -->
 <g id="node52" class="node">
 <title>Node51</title>
-<g id="a_node52"><a xlink:href="d4/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HighlightComms.html" target="_top" xlink:title=" ">
+<g id="a_node52"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HighlightComms.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4057.5 477,-4087.5 680,-4087.5 680,-4057.5 477,-4057.5"/>
 <text text-anchor="start" x="485" y="-4075.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4064.5" font-family="Helvetica,sans-Serif" font-size="10.00">HighlightComms</text>
@@ -805,7 +805,7 @@
 <!-- Node52 -->
 <g id="node53" class="node">
 <title>Node52</title>
-<g id="a_node53"><a xlink:href="d3/d49/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1InstallCommSniffer.html" target="_top" xlink:title=" ">
+<g id="a_node53"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1InstallCommSniffer.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-4008.5 477,-4038.5 680,-4038.5 680,-4008.5 477,-4008.5"/>
 <text text-anchor="start" x="485" y="-4026.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-4015.5" font-family="Helvetica,sans-Serif" font-size="10.00">InstallCommSniffer</text>
@@ -821,7 +821,7 @@
 <!-- Node53 -->
 <g id="node54" class="node">
 <title>Node53</title>
-<g id="a_node54"><a xlink:href="db/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSeenByAnyFleet.html" target="_top" xlink:title=" ">
+<g id="a_node54"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSeenByAnyFleet.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3959.5 477,-3989.5 680,-3989.5 680,-3959.5 477,-3959.5"/>
 <text text-anchor="start" x="485" y="-3977.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3966.5" font-family="Helvetica,sans-Serif" font-size="10.00">IsSeenByAnyFleet</text>
@@ -837,7 +837,7 @@
 <!-- Node54 -->
 <g id="node55" class="node">
 <title>Node54</title>
-<g id="a_node55"><a xlink:href="db/d27/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSeenByPatrols.html" target="_top" xlink:title=" ">
+<g id="a_node55"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSeenByPatrols.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3910.5 477,-3940.5 680,-3940.5 680,-3910.5 477,-3910.5"/>
 <text text-anchor="start" x="485" y="-3928.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3917.5" font-family="Helvetica,sans-Serif" font-size="10.00">IsSeenByPatrols</text>
@@ -853,7 +853,7 @@
 <!-- Node55 -->
 <g id="node56" class="node">
 <title>Node55</title>
-<g id="a_node56"><a xlink:href="d8/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSoughtByPatrols.html" target="_top" xlink:title=" ">
+<g id="a_node56"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSoughtByPatrols.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3861.5 477,-3891.5 680,-3891.5 680,-3861.5 477,-3861.5"/>
 <text text-anchor="start" x="485" y="-3879.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3868.5" font-family="Helvetica,sans-Serif" font-size="10.00">IsSoughtByPatrols</text>
@@ -869,7 +869,7 @@
 <!-- Node56 -->
 <g id="node57" class="node">
 <title>Node56</title>
-<g id="a_node57"><a xlink:href="d2/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1LPTitheCalc.html" target="_top" xlink:title=" ">
+<g id="a_node57"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1LPTitheCalc.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3812.5 477,-3842.5 680,-3842.5 680,-3812.5 477,-3812.5"/>
 <text text-anchor="start" x="485" y="-3830.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3819.5" font-family="Helvetica,sans-Serif" font-size="10.00">LPTitheCalc</text>
@@ -885,7 +885,7 @@
 <!-- Node57 -->
 <g id="node58" class="node">
 <title>Node57</title>
-<g id="a_node58"><a xlink:href="d1/d81/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeFullySurveyed.html" target="_top" xlink:title=" ">
+<g id="a_node58"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeFullySurveyed.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3763.5 477,-3793.5 680,-3793.5 680,-3763.5 477,-3763.5"/>
 <text text-anchor="start" x="485" y="-3781.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3770.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeFullySurveyed</text>
@@ -901,7 +901,7 @@
 <!-- Node58 -->
 <g id="node59" class="node">
 <title>Node58</title>
-<g id="a_node59"><a xlink:href="d4/d70/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeHostileWhileTOff.html" target="_top" xlink:title=" ">
+<g id="a_node59"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeHostileWhileTOff.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3714.5 477,-3744.5 680,-3744.5 680,-3714.5 477,-3714.5"/>
 <text text-anchor="start" x="485" y="-3732.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3721.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeHostileWhileTOff</text>
@@ -917,7 +917,7 @@
 <!-- Node59 -->
 <g id="node60" class="node">
 <title>Node59</title>
-<g id="a_node60"><a xlink:href="d0/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeNearbyFleetsHostile.html" target="_top" xlink:title=" ">
+<g id="a_node60"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeNearbyFleetsHostile.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3665.5 477,-3695.5 680,-3695.5 680,-3665.5 477,-3665.5"/>
 <text text-anchor="start" x="485" y="-3683.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3672.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeNearbyFleetsHostile</text>
@@ -933,7 +933,7 @@
 <!-- Node60 -->
 <g id="node61" class="node">
 <title>Node60</title>
-<g id="a_node61"><a xlink:href="d1/d21/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeNearbyFleetsNonHostile.html" target="_top" xlink:title=" ">
+<g id="a_node61"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeNearbyFleetsNonHostile.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3616.5 477,-3646.5 680,-3646.5 680,-3616.5 477,-3616.5"/>
 <text text-anchor="start" x="485" y="-3634.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3623.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeNearbyFleetsNonHostile</text>
@@ -949,7 +949,7 @@
 <!-- Node61 -->
 <g id="node62" class="node">
 <title>Node61</title>
-<g id="a_node62"><a xlink:href="de/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOptionOpenCore.html" target="_top" xlink:title=" ">
+<g id="a_node62"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOptionOpenCore.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3567.5 477,-3597.5 680,-3597.5 680,-3567.5 477,-3567.5"/>
 <text text-anchor="start" x="485" y="-3585.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3574.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOptionOpenCore</text>
@@ -965,7 +965,7 @@
 <!-- Node62 -->
 <g id="node63" class="node">
 <title>Node62</title>
-<g id="a_node63"><a xlink:href="d6/d21/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetAggressive.html" target="_top" xlink:title=" ">
+<g id="a_node63"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetAggressive.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3518.5 477,-3548.5 680,-3548.5 680,-3518.5 477,-3518.5"/>
 <text text-anchor="start" x="485" y="-3536.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3525.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetAggressive</text>
@@ -981,7 +981,7 @@
 <!-- Node63 -->
 <g id="node64" class="node">
 <title>Node63</title>
-<g id="a_node64"><a xlink:href="da/d77/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetAggressiveOnce.html" target="_top" xlink:title=" ">
+<g id="a_node64"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetAggressiveOnce.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3469.5 477,-3499.5 680,-3499.5 680,-3469.5 477,-3469.5"/>
 <text text-anchor="start" x="485" y="-3487.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3476.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetAggressiveOnce</text>
@@ -997,7 +997,7 @@
 <!-- Node64 -->
 <g id="node65" class="node">
 <title>Node64</title>
-<g id="a_node65"><a xlink:href="da/d1a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetAllowDisengage.html" target="_top" xlink:title=" ">
+<g id="a_node65"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetAllowDisengage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3420.5 477,-3450.5 680,-3450.5 680,-3420.5 477,-3420.5"/>
 <text text-anchor="start" x="485" y="-3438.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3427.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetAllowDisengage</text>
@@ -1013,7 +1013,7 @@
 <!-- Node65 -->
 <g id="node66" class="node">
 <title>Node65</title>
-<g id="a_node66"><a xlink:href="d3/de8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetAvoidContact.html" target="_top" xlink:title=" ">
+<g id="a_node66"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetAvoidContact.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3371.5 477,-3401.5 680,-3401.5 680,-3371.5 477,-3371.5"/>
 <text text-anchor="start" x="485" y="-3389.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3378.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetAvoidContact</text>
@@ -1029,7 +1029,7 @@
 <!-- Node66 -->
 <g id="node67" class="node">
 <title>Node66</title>
-<g id="a_node67"><a xlink:href="d1/da3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetDoThing.html" target="_top" xlink:title=" ">
+<g id="a_node67"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetDoThing.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3322.5 477,-3352.5 680,-3352.5 680,-3322.5 477,-3322.5"/>
 <text text-anchor="start" x="485" y="-3340.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3329.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetDoThing</text>
@@ -1045,7 +1045,7 @@
 <!-- Node67 -->
 <g id="node68" class="node">
 <title>Node67</title>
-<g id="a_node68"><a xlink:href="db/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetGoAway.html" target="_top" xlink:title=" ">
+<g id="a_node68"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetGoAway.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3273.5 477,-3303.5 680,-3303.5 680,-3273.5 477,-3273.5"/>
 <text text-anchor="start" x="485" y="-3291.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3280.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetGoAway</text>
@@ -1061,7 +1061,7 @@
 <!-- Node68 -->
 <g id="node69" class="node">
 <title>Node68</title>
-<g id="a_node69"><a xlink:href="dc/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetHostile.html" target="_top" xlink:title=" ">
+<g id="a_node69"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetHostile.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3224.5 477,-3254.5 680,-3254.5 680,-3224.5 477,-3224.5"/>
 <text text-anchor="start" x="485" y="-3242.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3231.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetHostile</text>
@@ -1077,7 +1077,7 @@
 <!-- Node69 -->
 <g id="node70" class="node">
 <title>Node69</title>
-<g id="a_node70"><a xlink:href="d0/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetImportant.html" target="_top" xlink:title=" ">
+<g id="a_node70"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetImportant.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3175.5 477,-3205.5 680,-3205.5 680,-3175.5 477,-3175.5"/>
 <text text-anchor="start" x="485" y="-3193.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3182.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetImportant</text>
@@ -1093,7 +1093,7 @@
 <!-- Node70 -->
 <g id="node71" class="node">
 <title>Node70</title>
-<g id="a_node71"><a xlink:href="da/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetLowRepImpact.html" target="_top" xlink:title=" ">
+<g id="a_node71"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetLowRepImpact.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3126.5 477,-3156.5 680,-3156.5 680,-3126.5 477,-3126.5"/>
 <text text-anchor="start" x="485" y="-3144.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3133.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetLowRepImpact</text>
@@ -1109,7 +1109,7 @@
 <!-- Node71 -->
 <g id="node72" class="node">
 <title>Node71</title>
-<g id="a_node72"><a xlink:href="dc/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetNoRepImpact.html" target="_top" xlink:title=" ">
+<g id="a_node72"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetNoRepImpact.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3077.5 477,-3107.5 680,-3107.5 680,-3077.5 477,-3077.5"/>
 <text text-anchor="start" x="485" y="-3095.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3084.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetNoRepImpact</text>
@@ -1125,7 +1125,7 @@
 <!-- Node72 -->
 <g id="node73" class="node">
 <title>Node72</title>
-<g id="a_node73"><a xlink:href="db/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetNonAggressive.html" target="_top" xlink:title=" ">
+<g id="a_node73"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetNonAggressive.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-3028.5 477,-3058.5 680,-3058.5 680,-3028.5 477,-3028.5"/>
 <text text-anchor="start" x="485" y="-3046.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-3035.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetNonAggressive</text>
@@ -1141,7 +1141,7 @@
 <!-- Node73 -->
 <g id="node74" class="node">
 <title>Node73</title>
-<g id="a_node74"><a xlink:href="d4/dbe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetNonHostile.html" target="_top" xlink:title=" ">
+<g id="a_node74"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetNonHostile.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2979.5 477,-3009.5 680,-3009.5 680,-2979.5 477,-2979.5"/>
 <text text-anchor="start" x="485" y="-2997.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2986.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetNonHostile</text>
@@ -1157,7 +1157,7 @@
 <!-- Node74 -->
 <g id="node75" class="node">
 <title>Node74</title>
-<g id="a_node75"><a xlink:href="d1/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetPreventDisengage.html" target="_top" xlink:title=" ">
+<g id="a_node75"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakeOtherFleetPreventDisengage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2930.5 477,-2960.5 680,-2960.5 680,-2930.5 477,-2930.5"/>
 <text text-anchor="start" x="485" y="-2948.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2937.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakeOtherFleetPreventDisengage</text>
@@ -1173,7 +1173,7 @@
 <!-- Node75 -->
 <g id="node76" class="node">
 <title>Node75</title>
-<g id="a_node76"><a xlink:href="d2/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakePlayerImmediatelyAttackable.html" target="_top" xlink:title=" ">
+<g id="a_node76"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MakePlayerImmediatelyAttackable.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2881.5 477,-2911.5 680,-2911.5 680,-2881.5 477,-2881.5"/>
 <text text-anchor="start" x="485" y="-2899.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2888.5" font-family="Helvetica,sans-Serif" font-size="10.00">MakePlayerImmediatelyAttackable</text>
@@ -1189,7 +1189,7 @@
 <!-- Node76 -->
 <g id="node77" class="node">
 <title>Node76</title>
-<g id="a_node77"><a xlink:href="d3/d9a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MarketReduceRandomRep.html" target="_top" xlink:title=" ">
+<g id="a_node77"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MarketReduceRandomRep.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2832.5 477,-2862.5 680,-2862.5 680,-2832.5 477,-2832.5"/>
 <text text-anchor="start" x="485" y="-2850.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2839.5" font-family="Helvetica,sans-Serif" font-size="10.00">MarketReduceRandomRep</text>
@@ -1205,7 +1205,7 @@
 <!-- Node77 -->
 <g id="node78" class="node">
 <title>Node77</title>
-<g id="a_node78"><a xlink:href="d3/d4e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MovePersonToMarket.html" target="_top" xlink:title=" ">
+<g id="a_node78"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1MovePersonToMarket.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2783.5 477,-2813.5 680,-2813.5 680,-2783.5 477,-2783.5"/>
 <text text-anchor="start" x="485" y="-2801.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2790.5" font-family="Helvetica,sans-Serif" font-size="10.00">MovePersonToMarket</text>
@@ -1221,7 +1221,7 @@
 <!-- Node78 -->
 <g id="node79" class="node">
 <title>Node78</title>
-<g id="a_node79"><a xlink:href="dd/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCargo.html" target="_top" xlink:title=" ">
+<g id="a_node79"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCargo.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2734.5 477,-2764.5 680,-2764.5 680,-2734.5 477,-2734.5"/>
 <text text-anchor="start" x="485" y="-2752.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2741.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCAddCargo</text>
@@ -1237,7 +1237,7 @@
 <!-- Node79 -->
 <g id="node80" class="node">
 <title>Node79</title>
-<g id="a_node80"><a xlink:href="d3/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCharacterPoints.html" target="_top" xlink:title=" ">
+<g id="a_node80"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCharacterPoints.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2685.5 477,-2715.5 680,-2715.5 680,-2685.5 477,-2685.5"/>
 <text text-anchor="start" x="485" y="-2703.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2692.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCAddCharacterPoints</text>
@@ -1253,7 +1253,7 @@
 <!-- Node80 -->
 <g id="node81" class="node">
 <title>Node80</title>
-<g id="a_node81"><a xlink:href="d5/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCredits.html" target="_top" xlink:title=" ">
+<g id="a_node81"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCredits.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2636.5 477,-2666.5 680,-2666.5 680,-2636.5 477,-2636.5"/>
 <text text-anchor="start" x="485" y="-2654.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2643.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCAddCredits</text>
@@ -1269,7 +1269,7 @@
 <!-- Node81 -->
 <g id="node82" class="node">
 <title>Node81</title>
-<g id="a_node82"><a xlink:href="d7/df9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddDevStartingScript.html" target="_top" xlink:title=" ">
+<g id="a_node82"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddDevStartingScript.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2587.5 477,-2617.5 680,-2617.5 680,-2587.5 477,-2587.5"/>
 <text text-anchor="start" x="485" y="-2605.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2594.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCAddDevStartingScript</text>
@@ -1285,7 +1285,7 @@
 <!-- Node82 -->
 <g id="node83" class="node">
 <title>Node82</title>
-<g id="a_node83"><a xlink:href="d8/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddShip.html" target="_top" xlink:title=" ">
+<g id="a_node83"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddShip.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2538.5 477,-2568.5 680,-2568.5 680,-2538.5 477,-2538.5"/>
 <text text-anchor="start" x="485" y="-2556.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2545.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCAddShip</text>
@@ -1301,7 +1301,7 @@
 <!-- Node83 -->
 <g id="node84" class="node">
 <title>Node83</title>
-<g id="a_node84"><a xlink:href="d9/d7a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddShipSilent.html" target="_top" xlink:title=" ">
+<g id="a_node84"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddShipSilent.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2489.5 477,-2519.5 680,-2519.5 680,-2489.5 477,-2489.5"/>
 <text text-anchor="start" x="485" y="-2507.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2496.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCAddShipSilent</text>
@@ -1317,7 +1317,7 @@
 <!-- Node84 -->
 <g id="node85" class="node">
 <title>Node84</title>
-<g id="a_node85"><a xlink:href="d8/d6c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddStandardStartingScript.html" target="_top" xlink:title=" ">
+<g id="a_node85"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddStandardStartingScript.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2440.5 477,-2470.5 680,-2470.5 680,-2440.5 477,-2440.5"/>
 <text text-anchor="start" x="485" y="-2458.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2447.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCAddStandardStartingScript</text>
@@ -1333,7 +1333,7 @@
 <!-- Node85 -->
 <g id="node86" class="node">
 <title>Node85</title>
-<g id="a_node86"><a xlink:href="d6/d6a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCCanSkipTutorial.html" target="_top" xlink:title=" ">
+<g id="a_node86"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCCanSkipTutorial.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2391.5 477,-2421.5 680,-2421.5 680,-2391.5 477,-2391.5"/>
 <text text-anchor="start" x="485" y="-2409.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2398.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCCanSkipTutorial</text>
@@ -1349,7 +1349,7 @@
 <!-- Node86 -->
 <g id="node87" class="node">
 <title>Node86</title>
-<g id="a_node87"><a xlink:href="d4/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCDone.html" target="_top" xlink:title=" ">
+<g id="a_node87"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCDone.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2342.5 477,-2372.5 680,-2372.5 680,-2342.5 477,-2342.5"/>
 <text text-anchor="start" x="485" y="-2360.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2349.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCDone</text>
@@ -1365,7 +1365,7 @@
 <!-- Node87 -->
 <g id="node88" class="node">
 <title>Node87</title>
-<g id="a_node88"><a xlink:href="dc/d32/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCRemoveCargo.html" target="_top" xlink:title=" ">
+<g id="a_node88"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCRemoveCargo.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2293.5 477,-2323.5 680,-2323.5 680,-2293.5 477,-2293.5"/>
 <text text-anchor="start" x="485" y="-2311.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2300.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCRemoveCargo</text>
@@ -1381,7 +1381,7 @@
 <!-- Node88 -->
 <g id="node89" class="node">
 <title>Node88</title>
-<g id="a_node89"><a xlink:href="dc/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCRemoveShip.html" target="_top" xlink:title=" ">
+<g id="a_node89"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCRemoveShip.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2244.5 477,-2274.5 680,-2274.5 680,-2244.5 477,-2244.5"/>
 <text text-anchor="start" x="485" y="-2262.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2251.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCRemoveShip</text>
@@ -1397,7 +1397,7 @@
 <!-- Node89 -->
 <g id="node90" class="node">
 <title>Node89</title>
-<g id="a_node90"><a xlink:href="d5/de3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetAptitude.html" target="_top" xlink:title=" ">
+<g id="a_node90"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetAptitude.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2195.5 477,-2225.5 680,-2225.5 680,-2195.5 477,-2195.5"/>
 <text text-anchor="start" x="485" y="-2213.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2202.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCSetAptitude</text>
@@ -1413,7 +1413,7 @@
 <!-- Node90 -->
 <g id="node91" class="node">
 <title>Node90</title>
-<g id="a_node91"><a xlink:href="dc/db7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetCustom.html" target="_top" xlink:title=" ">
+<g id="a_node91"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetCustom.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2146.5 477,-2176.5 680,-2176.5 680,-2146.5 477,-2146.5"/>
 <text text-anchor="start" x="485" y="-2164.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2153.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCSetCustom</text>
@@ -1429,7 +1429,7 @@
 <!-- Node91 -->
 <g id="node92" class="node">
 <title>Node91</title>
-<g id="a_node92"><a xlink:href="d7/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetDifficulty.html" target="_top" xlink:title=" ">
+<g id="a_node92"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetDifficulty.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2097.5 477,-2127.5 680,-2127.5 680,-2097.5 477,-2097.5"/>
 <text text-anchor="start" x="485" y="-2115.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2104.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCSetDifficulty</text>
@@ -1445,7 +1445,7 @@
 <!-- Node92 -->
 <g id="node93" class="node">
 <title>Node92</title>
-<g id="a_node93"><a xlink:href="db/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetSkill.html" target="_top" xlink:title=" ">
+<g id="a_node93"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetSkill.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-2048.5 477,-2078.5 680,-2078.5 680,-2048.5 477,-2048.5"/>
 <text text-anchor="start" x="485" y="-2066.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2055.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCSetSkill</text>
@@ -1461,7 +1461,7 @@
 <!-- Node93 -->
 <g id="node94" class="node">
 <title>Node93</title>
-<g id="a_node94"><a xlink:href="d9/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetStartingLocation.html" target="_top" xlink:title=" ">
+<g id="a_node94"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetStartingLocation.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1999.5 477,-2029.5 680,-2029.5 680,-1999.5 477,-1999.5"/>
 <text text-anchor="start" x="485" y="-2017.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-2006.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCSetStartingLocation</text>
@@ -1477,7 +1477,7 @@
 <!-- Node94 -->
 <g id="node95" class="node">
 <title>Node94</title>
-<g id="a_node95"><a xlink:href="d2/d9f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetWithTimePass.html" target="_top" xlink:title=" ">
+<g id="a_node95"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCSetWithTimePass.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1950.5 477,-1980.5 680,-1980.5 680,-1950.5 477,-1950.5"/>
 <text text-anchor="start" x="485" y="-1968.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1957.5" font-family="Helvetica,sans-Serif" font-size="10.00">NGCSetWithTimePass</text>
@@ -1493,7 +1493,7 @@
 <!-- Node95 -->
 <g id="node96" class="node">
 <title>Node95</title>
-<g id="a_node96"><a xlink:href="de/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NPCWantsComms.html" target="_top" xlink:title=" ">
+<g id="a_node96"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NPCWantsComms.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1901.5 477,-1931.5 680,-1931.5 680,-1901.5 477,-1901.5"/>
 <text text-anchor="start" x="485" y="-1919.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1908.5" font-family="Helvetica,sans-Serif" font-size="10.00">NPCWantsComms</text>
@@ -1509,7 +1509,7 @@
 <!-- Node96 -->
 <g id="node97" class="node">
 <title>Node96</title>
-<g id="a_node97"><a xlink:href="da/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1OpenCommDirectory.html" target="_top" xlink:title=" ">
+<g id="a_node97"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1OpenCommDirectory.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1852.5 477,-1882.5 680,-1882.5 680,-1852.5 477,-1852.5"/>
 <text text-anchor="start" x="485" y="-1870.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1859.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpenCommDirectory</text>
@@ -1525,7 +1525,7 @@
 <!-- Node97 -->
 <g id="node98" class="node">
 <title>Node97</title>
-<g id="a_node98"><a xlink:href="d9/d54/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1OpenComms.html" target="_top" xlink:title=" ">
+<g id="a_node98"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1OpenComms.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1803.5 477,-1833.5 680,-1833.5 680,-1803.5 477,-1803.5"/>
 <text text-anchor="start" x="485" y="-1821.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1810.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpenComms</text>
@@ -1541,7 +1541,7 @@
 <!-- Node98 -->
 <g id="node99" class="node">
 <title>Node98</title>
-<g id="a_node99"><a xlink:href="d6/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1OpenCoreTab.html" target="_top" xlink:title=" ">
+<g id="a_node99"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1OpenCoreTab.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1127.5 477,-1157.5 680,-1157.5 680,-1127.5 477,-1127.5"/>
 <text text-anchor="start" x="485" y="-1145.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1134.5" font-family="Helvetica,sans-Serif" font-size="10.00">OpenCoreTab</text>
@@ -1557,7 +1557,7 @@
 <!-- Node99 -->
 <g id="node100" class="node">
 <title>Node99</title>
-<g id="a_node100"><a xlink:href="dc/db7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PLAddEntry.html" target="_top" xlink:title=" ">
+<g id="a_node100"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PLAddEntry.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1754.5 477,-1784.5 680,-1784.5 680,-1754.5 477,-1754.5"/>
 <text text-anchor="start" x="485" y="-1772.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1761.5" font-family="Helvetica,sans-Serif" font-size="10.00">PLAddEntry</text>
@@ -1573,7 +1573,7 @@
 <!-- Node100 -->
 <g id="node101" class="node">
 <title>Node100</title>
-<g id="a_node101"><a xlink:href="dc/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html" target="_top" xlink:title=" ">
+<g id="a_node101"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptions.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1078.5 477,-1108.5 680,-1108.5 680,-1078.5 477,-1078.5"/>
 <text text-anchor="start" x="485" y="-1096.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1085.5" font-family="Helvetica,sans-Serif" font-size="10.00">PaginatedOptions</text>
@@ -1589,7 +1589,7 @@
 <!-- Node102 -->
 <g id="node103" class="node">
 <title>Node102</title>
-<g id="a_node103"><a xlink:href="dd/d74/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PickCommsNPC.html" target="_top" xlink:title=" ">
+<g id="a_node103"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PickCommsNPC.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1705.5 477,-1735.5 680,-1735.5 680,-1705.5 477,-1705.5"/>
 <text text-anchor="start" x="485" y="-1723.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1712.5" font-family="Helvetica,sans-Serif" font-size="10.00">PickCommsNPC</text>
@@ -1605,7 +1605,7 @@
 <!-- Node103 -->
 <g id="node104" class="node">
 <title>Node103</title>
-<g id="a_node104"><a xlink:href="da/d6a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1Ping.html" target="_top" xlink:title=" ">
+<g id="a_node104"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1Ping.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="467.5,-1667 467.5,-1686 689.5,-1686 689.5,-1667 467.5,-1667"/>
 <text text-anchor="middle" x="578.5" y="-1674" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.Ping</text>
 </a>
@@ -1620,7 +1620,7 @@
 <!-- Node104 -->
 <g id="node105" class="node">
 <title>Node104</title>
-<g id="a_node105"><a xlink:href="df/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PlayerFleetHasShipWithBaseHull.html" target="_top" xlink:title=" ">
+<g id="a_node105"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PlayerFleetHasShipWithBaseHull.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1617.5 477,-1647.5 680,-1647.5 680,-1617.5 477,-1617.5"/>
 <text text-anchor="start" x="485" y="-1635.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1624.5" font-family="Helvetica,sans-Serif" font-size="10.00">PlayerFleetHasShipWithBaseHull</text>
@@ -1636,7 +1636,7 @@
 <!-- Node105 -->
 <g id="node106" class="node">
 <title>Node105</title>
-<g id="a_node106"><a xlink:href="d8/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PlayerFleetHasShipWithId.html" target="_top" xlink:title=" ">
+<g id="a_node106"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PlayerFleetHasShipWithId.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1568.5 477,-1598.5 680,-1598.5 680,-1568.5 477,-1568.5"/>
 <text text-anchor="start" x="485" y="-1586.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1575.5" font-family="Helvetica,sans-Serif" font-size="10.00">PlayerFleetHasShipWithId</text>
@@ -1652,7 +1652,7 @@
 <!-- Node106 -->
 <g id="node107" class="node">
 <title>Node106</title>
-<g id="a_node107"><a xlink:href="df/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PlayerHasCargo.html" target="_top" xlink:title=" ">
+<g id="a_node107"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PlayerHasCargo.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1519.5 477,-1549.5 680,-1549.5 680,-1519.5 477,-1519.5"/>
 <text text-anchor="start" x="485" y="-1537.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1526.5" font-family="Helvetica,sans-Serif" font-size="10.00">PlayerHasCargo</text>
@@ -1668,7 +1668,7 @@
 <!-- Node107 -->
 <g id="node108" class="node">
 <title>Node107</title>
-<g id="a_node108"><a xlink:href="de/d6e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PrintDescription.html" target="_top" xlink:title=" ">
+<g id="a_node108"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PrintDescription.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1470.5 477,-1500.5 680,-1500.5 680,-1470.5 477,-1470.5"/>
 <text text-anchor="start" x="485" y="-1488.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1477.5" font-family="Helvetica,sans-Serif" font-size="10.00">PrintDescription</text>
@@ -1684,7 +1684,7 @@
 <!-- Node108 -->
 <g id="node109" class="node">
 <title>Node108</title>
-<g id="a_node109"><a xlink:href="d4/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ReinitDialog.html" target="_top" xlink:title=" ">
+<g id="a_node109"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ReinitDialog.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1421.5 477,-1451.5 680,-1451.5 680,-1421.5 477,-1421.5"/>
 <text text-anchor="start" x="485" y="-1439.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00">ReinitDialog</text>
@@ -1700,7 +1700,7 @@
 <!-- Node109 -->
 <g id="node110" class="node">
 <title>Node109</title>
-<g id="a_node110"><a xlink:href="d4/db8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RemoveCommodity.html" target="_top" xlink:title=" ">
+<g id="a_node110"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RemoveCommodity.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1372.5 477,-1402.5 680,-1402.5 680,-1372.5 477,-1372.5"/>
 <text text-anchor="start" x="485" y="-1390.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1379.5" font-family="Helvetica,sans-Serif" font-size="10.00">RemoveCommodity</text>
@@ -1716,7 +1716,7 @@
 <!-- Node110 -->
 <g id="node111" class="node">
 <title>Node110</title>
-<g id="a_node111"><a xlink:href="d9/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RemoveShip.html" target="_top" xlink:title=" ">
+<g id="a_node111"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RemoveShip.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1323.5 477,-1353.5 680,-1353.5 680,-1323.5 477,-1323.5"/>
 <text text-anchor="start" x="485" y="-1341.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1330.5" font-family="Helvetica,sans-Serif" font-size="10.00">RemoveShip</text>
@@ -1732,7 +1732,7 @@
 <!-- Node111 -->
 <g id="node112" class="node">
 <title>Node111</title>
-<g id="a_node112"><a xlink:href="d2/dda/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepIsAtBest.html" target="_top" xlink:title=" ">
+<g id="a_node112"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepIsAtBest.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1274.5 477,-1304.5 680,-1304.5 680,-1274.5 477,-1274.5"/>
 <text text-anchor="start" x="485" y="-1292.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1281.5" font-family="Helvetica,sans-Serif" font-size="10.00">RepIsAtBest</text>
@@ -1748,7 +1748,7 @@
 <!-- Node113 -->
 <g id="node114" class="node">
 <title>Node113</title>
-<g id="a_node114"><a xlink:href="dd/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepIsAtWorst.html" target="_top" xlink:title=" ">
+<g id="a_node114"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepIsAtWorst.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1225.5 477,-1255.5 680,-1255.5 680,-1225.5 477,-1225.5"/>
 <text text-anchor="start" x="485" y="-1243.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1232.5" font-family="Helvetica,sans-Serif" font-size="10.00">RepIsAtWorst</text>
@@ -1764,7 +1764,7 @@
 <!-- Node115 -->
 <g id="node116" class="node">
 <title>Node115</title>
-<g id="a_node116"><a xlink:href="d0/d9f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAll.html" target="_top" xlink:title=" ">
+<g id="a_node116"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAll.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-1176.5 477,-1206.5 680,-1206.5 680,-1176.5 477,-1176.5"/>
 <text text-anchor="start" x="485" y="-1194.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-1183.5" font-family="Helvetica,sans-Serif" font-size="10.00">RepairAll</text>
@@ -1780,7 +1780,7 @@
 <!-- Node116 -->
 <g id="node117" class="node">
 <title>Node116</title>
-<g id="a_node117"><a xlink:href="d7/d32/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAvailable.html" target="_top" xlink:title=" ">
+<g id="a_node117"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAvailable.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9837.5 477,-9867.5 680,-9867.5 680,-9837.5 477,-9837.5"/>
 <text text-anchor="start" x="485" y="-9855.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9844.5" font-family="Helvetica,sans-Serif" font-size="10.00">RepairAvailable</text>
@@ -1796,7 +1796,7 @@
 <!-- Node117 -->
 <g id="node118" class="node">
 <title>Node117</title>
-<g id="a_node118"><a xlink:href="df/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairEnoughSupplies.html" target="_top" xlink:title=" ">
+<g id="a_node118"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairEnoughSupplies.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9788.5 477,-9818.5 680,-9818.5 680,-9788.5 477,-9788.5"/>
 <text text-anchor="start" x="485" y="-9806.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9795.5" font-family="Helvetica,sans-Serif" font-size="10.00">RepairEnoughSupplies</text>
@@ -1812,7 +1812,7 @@
 <!-- Node118 -->
 <g id="node119" class="node">
 <title>Node118</title>
-<g id="a_node119"><a xlink:href="d1/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairNeeded.html" target="_top" xlink:title=" ">
+<g id="a_node119"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairNeeded.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9739.5 477,-9769.5 680,-9769.5 680,-9739.5 477,-9739.5"/>
 <text text-anchor="start" x="485" y="-9757.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9746.5" font-family="Helvetica,sans-Serif" font-size="10.00">RepairNeeded</text>
@@ -1828,7 +1828,7 @@
 <!-- Node119 -->
 <g id="node120" class="node">
 <title>Node119</title>
-<g id="a_node120"><a xlink:href="d6/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ResetActivePerson.html" target="_top" xlink:title=" ">
+<g id="a_node120"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ResetActivePerson.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9690.5 477,-9720.5 680,-9720.5 680,-9690.5 477,-9690.5"/>
 <text text-anchor="start" x="485" y="-9708.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9697.5" font-family="Helvetica,sans-Serif" font-size="10.00">ResetActivePerson</text>
@@ -1844,7 +1844,7 @@
 <!-- Node120 -->
 <g id="node121" class="node">
 <title>Node120</title>
-<g id="a_node121"><a xlink:href="dd/d37/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RestoreSavedVisual.html" target="_top" xlink:title=" ">
+<g id="a_node121"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RestoreSavedVisual.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9641.5 477,-9671.5 680,-9671.5 680,-9641.5 477,-9641.5"/>
 <text text-anchor="start" x="485" y="-9659.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9648.5" font-family="Helvetica,sans-Serif" font-size="10.00">RestoreSavedVisual</text>
@@ -1860,7 +1860,7 @@
 <!-- Node121 -->
 <g id="node122" class="node">
 <title>Node121</title>
-<g id="a_node122"><a xlink:href="de/d30/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RollProbability.html" target="_top" xlink:title=" ">
+<g id="a_node122"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RollProbability.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9592.5 477,-9622.5 680,-9622.5 680,-9592.5 477,-9592.5"/>
 <text text-anchor="start" x="485" y="-9610.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9599.5" font-family="Helvetica,sans-Serif" font-size="10.00">RollProbability</text>
@@ -1876,7 +1876,7 @@
 <!-- Node122 -->
 <g id="node123" class="node">
 <title>Node122</title>
-<g id="a_node123"><a xlink:href="de/d74/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SaveCurrentVisual.html" target="_top" xlink:title=" ">
+<g id="a_node123"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SaveCurrentVisual.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9543.5 477,-9573.5 680,-9573.5 680,-9543.5 477,-9543.5"/>
 <text text-anchor="start" x="485" y="-9561.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9550.5" font-family="Helvetica,sans-Serif" font-size="10.00">SaveCurrentVisual</text>
@@ -1892,7 +1892,7 @@
 <!-- Node123 -->
 <g id="node124" class="node">
 <title>Node123</title>
-<g id="a_node124"><a xlink:href="d1/db1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetActiveMission.html" target="_top" xlink:title=" ">
+<g id="a_node124"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetActiveMission.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9494.5 477,-9524.5 680,-9524.5 680,-9494.5 477,-9494.5"/>
 <text text-anchor="start" x="485" y="-9512.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9501.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetActiveMission</text>
@@ -1908,7 +1908,7 @@
 <!-- Node124 -->
 <g id="node125" class="node">
 <title>Node124</title>
-<g id="a_node125"><a xlink:href="d8/d0b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetColor.html" target="_top" xlink:title=" ">
+<g id="a_node125"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetColor.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9445.5 477,-9475.5 680,-9475.5 680,-9445.5 477,-9445.5"/>
 <text text-anchor="start" x="485" y="-9463.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9452.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetColor</text>
@@ -1924,7 +1924,7 @@
 <!-- Node125 -->
 <g id="node126" class="node">
 <title>Node125</title>
-<g id="a_node126"><a xlink:href="d0/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetEnabled.html" target="_top" xlink:title=" ">
+<g id="a_node126"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetEnabled.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9396.5 477,-9426.5 680,-9426.5 680,-9396.5 477,-9396.5"/>
 <text text-anchor="start" x="485" y="-9414.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9403.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetEnabled</text>
@@ -1940,7 +1940,7 @@
 <!-- Node126 -->
 <g id="node127" class="node">
 <title>Node126</title>
-<g id="a_node127"><a xlink:href="d3/d09/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetFlagship.html" target="_top" xlink:title=" ">
+<g id="a_node127"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetFlagship.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9347.5 477,-9377.5 680,-9377.5 680,-9347.5 477,-9347.5"/>
 <text text-anchor="start" x="485" y="-9365.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9354.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetFlagship</text>
@@ -1956,7 +1956,7 @@
 <!-- Node127 -->
 <g id="node128" class="node">
 <title>Node127</title>
-<g id="a_node128"><a xlink:href="dc/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetNearbyFleetsVariable.html" target="_top" xlink:title=" ">
+<g id="a_node128"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetNearbyFleetsVariable.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9298.5 477,-9328.5 680,-9328.5 680,-9298.5 477,-9298.5"/>
 <text text-anchor="start" x="485" y="-9316.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9305.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetNearbyFleetsVariable</text>
@@ -1972,7 +1972,7 @@
 <!-- Node128 -->
 <g id="node129" class="node">
 <title>Node128</title>
-<g id="a_node129"><a xlink:href="df/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetOptionColor.html" target="_top" xlink:title=" ">
+<g id="a_node129"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetOptionColor.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9249.5 477,-9279.5 680,-9279.5 680,-9249.5 477,-9249.5"/>
 <text text-anchor="start" x="485" y="-9267.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9256.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetOptionColor</text>
@@ -1988,7 +1988,7 @@
 <!-- Node129 -->
 <g id="node130" class="node">
 <title>Node129</title>
-<g id="a_node130"><a xlink:href="d1/dad/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetOptionText.html" target="_top" xlink:title=" ">
+<g id="a_node130"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetOptionText.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9200.5 477,-9230.5 680,-9230.5 680,-9200.5 477,-9200.5"/>
 <text text-anchor="start" x="485" y="-9218.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9207.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetOptionText</text>
@@ -2004,7 +2004,7 @@
 <!-- Node130 -->
 <g id="node131" class="node">
 <title>Node130</title>
-<g id="a_node131"><a xlink:href="d2/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetOtherFleetAllowJump.html" target="_top" xlink:title=" ">
+<g id="a_node131"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetOtherFleetAllowJump.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9151.5 477,-9181.5 680,-9181.5 680,-9151.5 477,-9151.5"/>
 <text text-anchor="start" x="485" y="-9169.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9158.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetOtherFleetAllowJump</text>
@@ -2020,7 +2020,7 @@
 <!-- Node131 -->
 <g id="node132" class="node">
 <title>Node131</title>
-<g id="a_node132"><a xlink:href="dc/dcd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetPersonHidden.html" target="_top" xlink:title=" ">
+<g id="a_node132"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetPersonHidden.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9102.5 477,-9132.5 680,-9132.5 680,-9102.5 477,-9102.5"/>
 <text text-anchor="start" x="485" y="-9120.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9109.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetPersonHidden</text>
@@ -2036,7 +2036,7 @@
 <!-- Node132 -->
 <g id="node133" class="node">
 <title>Node132</title>
-<g id="a_node133"><a xlink:href="dd/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetPersonPortrait.html" target="_top" xlink:title=" ">
+<g id="a_node133"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetPersonPortrait.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9053.5 477,-9083.5 680,-9083.5 680,-9053.5 477,-9053.5"/>
 <text text-anchor="start" x="485" y="-9071.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9060.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetPersonPortrait</text>
@@ -2052,7 +2052,7 @@
 <!-- Node133 -->
 <g id="node134" class="node">
 <title>Node133</title>
-<g id="a_node134"><a xlink:href="d7/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetPromptText.html" target="_top" xlink:title=" ">
+<g id="a_node134"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetPromptText.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-9004.5 477,-9034.5 680,-9034.5 680,-9004.5 477,-9004.5"/>
 <text text-anchor="start" x="485" y="-9022.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-9011.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetPromptText</text>
@@ -2068,7 +2068,7 @@
 <!-- Node134 -->
 <g id="node135" class="node">
 <title>Node134</title>
-<g id="a_node135"><a xlink:href="d0/de2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetShortcut.html" target="_top" xlink:title=" ">
+<g id="a_node135"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetShortcut.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8955.5 477,-8985.5 680,-8985.5 680,-8955.5 477,-8955.5"/>
 <text text-anchor="start" x="485" y="-8973.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8962.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetShortcut</text>
@@ -2084,7 +2084,7 @@
 <!-- Node135 -->
 <g id="node136" class="node">
 <title>Node135</title>
-<g id="a_node136"><a xlink:href="da/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetStoryColor.html" target="_top" xlink:title=" ">
+<g id="a_node136"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetStoryColor.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8906.5 477,-8936.5 680,-8936.5 680,-8906.5 477,-8906.5"/>
 <text text-anchor="start" x="485" y="-8924.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8913.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetStoryColor</text>
@@ -2100,7 +2100,7 @@
 <!-- Node136 -->
 <g id="node137" class="node">
 <title>Node136</title>
-<g id="a_node137"><a xlink:href="dd/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetStoryOption.html" target="_top" xlink:title=" ">
+<g id="a_node137"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetStoryOption.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8857.5 477,-8887.5 680,-8887.5 680,-8857.5 477,-8857.5"/>
 <text text-anchor="start" x="485" y="-8875.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8864.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetStoryOption</text>
@@ -2116,7 +2116,7 @@
 <!-- Node137 -->
 <g id="node138" class="node">
 <title>Node137</title>
-<g id="a_node138"><a xlink:href="d9/dca/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetTextHighlightColors.html" target="_top" xlink:title=" ">
+<g id="a_node138"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetTextHighlightColors.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8808.5 477,-8838.5 680,-8838.5 680,-8808.5 477,-8808.5"/>
 <text text-anchor="start" x="485" y="-8826.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8815.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetTextHighlightColors</text>
@@ -2132,7 +2132,7 @@
 <!-- Node138 -->
 <g id="node139" class="node">
 <title>Node138</title>
-<g id="a_node139"><a xlink:href="d0/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetTextHighlights.html" target="_top" xlink:title=" ">
+<g id="a_node139"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetTextHighlights.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8759.5 477,-8789.5 680,-8789.5 680,-8759.5 477,-8759.5"/>
 <text text-anchor="start" x="485" y="-8777.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8766.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetTextHighlights</text>
@@ -2148,7 +2148,7 @@
 <!-- Node140 -->
 <g id="node141" class="node">
 <title>Node140</title>
-<g id="a_node141"><a xlink:href="d9/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetTooltip.html" target="_top" xlink:title=" ">
+<g id="a_node141"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetTooltip.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8710.5 477,-8740.5 680,-8740.5 680,-8710.5 477,-8710.5"/>
 <text text-anchor="start" x="485" y="-8728.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8717.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetTooltip</text>
@@ -2164,7 +2164,7 @@
 <!-- Node141 -->
 <g id="node142" class="node">
 <title>Node141</title>
-<g id="a_node142"><a xlink:href="d1/dbe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetTooltipHighlightColors.html" target="_top" xlink:title=" ">
+<g id="a_node142"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetTooltipHighlightColors.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8661.5 477,-8691.5 680,-8691.5 680,-8661.5 477,-8661.5"/>
 <text text-anchor="start" x="485" y="-8679.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8668.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetTooltipHighlightColors</text>
@@ -2180,7 +2180,7 @@
 <!-- Node142 -->
 <g id="node143" class="node">
 <title>Node142</title>
-<g id="a_node143"><a xlink:href="d3/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetTooltipHighlights.html" target="_top" xlink:title=" ">
+<g id="a_node143"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SetTooltipHighlights.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8612.5 477,-8642.5 680,-8642.5 680,-8612.5 477,-8612.5"/>
 <text text-anchor="start" x="485" y="-8630.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8619.5" font-family="Helvetica,sans-Serif" font-size="10.00">SetTooltipHighlights</text>
@@ -2196,7 +2196,7 @@
 <!-- Node143 -->
 <g id="node144" class="node">
 <title>Node143</title>
-<g id="a_node144"><a xlink:href="df/df9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowDefaultVisual.html" target="_top" xlink:title=" ">
+<g id="a_node144"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowDefaultVisual.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8563.5 477,-8593.5 680,-8593.5 680,-8563.5 477,-8563.5"/>
 <text text-anchor="start" x="485" y="-8581.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8570.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShowDefaultVisual</text>
@@ -2212,7 +2212,7 @@
 <!-- Node144 -->
 <g id="node145" class="node">
 <title>Node144</title>
-<g id="a_node145"><a xlink:href="df/d86/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowImageVisual.html" target="_top" xlink:title=" ">
+<g id="a_node145"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowImageVisual.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8514.5 477,-8544.5 680,-8544.5 680,-8514.5 477,-8514.5"/>
 <text text-anchor="start" x="485" y="-8532.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8521.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShowImageVisual</text>
@@ -2228,7 +2228,7 @@
 <!-- Node145 -->
 <g id="node146" class="node">
 <title>Node145</title>
-<g id="a_node146"><a xlink:href="df/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowPersonVisual.html" target="_top" xlink:title=" ">
+<g id="a_node146"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowPersonVisual.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8465.5 477,-8495.5 680,-8495.5 680,-8465.5 477,-8465.5"/>
 <text text-anchor="start" x="485" y="-8483.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8472.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShowPersonVisual</text>
@@ -2244,7 +2244,7 @@
 <!-- Node146 -->
 <g id="node147" class="node">
 <title>Node146</title>
-<g id="a_node147"><a xlink:href="d0/d07/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowPic.html" target="_top" xlink:title=" ">
+<g id="a_node147"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowPic.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8416.5 477,-8446.5 680,-8446.5 680,-8416.5 477,-8416.5"/>
 <text text-anchor="start" x="485" y="-8434.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8423.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShowPic</text>
@@ -2260,7 +2260,7 @@
 <!-- Node147 -->
 <g id="node148" class="node">
 <title>Node147</title>
-<g id="a_node148"><a xlink:href="db/dfb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowRemainingCapacity.html" target="_top" xlink:title=" ">
+<g id="a_node148"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowRemainingCapacity.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8367.5 477,-8397.5 680,-8397.5 680,-8367.5 477,-8367.5"/>
 <text text-anchor="start" x="485" y="-8385.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8374.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShowRemainingCapacity</text>
@@ -2276,7 +2276,7 @@
 <!-- Node148 -->
 <g id="node149" class="node">
 <title>Node148</title>
-<g id="a_node149"><a xlink:href="df/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowResCost.html" target="_top" xlink:title=" ">
+<g id="a_node149"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowResCost.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8318.5 477,-8348.5 680,-8348.5 680,-8318.5 477,-8318.5"/>
 <text text-anchor="start" x="485" y="-8336.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8325.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShowResCost</text>
@@ -2292,7 +2292,7 @@
 <!-- Node149 -->
 <g id="node150" class="node">
 <title>Node149</title>
-<g id="a_node150"><a xlink:href="d0/de0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowSecondPerson.html" target="_top" xlink:title=" ">
+<g id="a_node150"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowSecondPerson.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8269.5 477,-8299.5 680,-8299.5 680,-8269.5 477,-8269.5"/>
 <text text-anchor="start" x="485" y="-8287.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8276.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShowSecondPerson</text>
@@ -2308,7 +2308,7 @@
 <!-- Node150 -->
 <g id="node151" class="node">
 <title>Node150</title>
-<g id="a_node151"><a xlink:href="d3/ddc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowThirdPerson.html" target="_top" xlink:title=" ">
+<g id="a_node151"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ShowThirdPerson.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8220.5 477,-8250.5 680,-8250.5 680,-8220.5 477,-8220.5"/>
 <text text-anchor="start" x="485" y="-8238.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8227.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShowThirdPerson</text>
@@ -2324,7 +2324,7 @@
 <!-- Node151 -->
 <g id="node152" class="node">
 <title>Node151</title>
-<g id="a_node152"><a xlink:href="da/def/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SubCredits.html" target="_top" xlink:title=" ">
+<g id="a_node152"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1SubCredits.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8171.5 477,-8201.5 680,-8201.5 680,-8171.5 477,-8171.5"/>
 <text text-anchor="start" x="485" y="-8189.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8178.5" font-family="Helvetica,sans-Serif" font-size="10.00">SubCredits</text>
@@ -2340,7 +2340,7 @@
 <!-- Node152 -->
 <g id="node153" class="node">
 <title>Node152</title>
-<g id="a_node153"><a xlink:href="de/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1TakeRepCheck.html" target="_top" xlink:title=" ">
+<g id="a_node153"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1TakeRepCheck.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8122.5 477,-8152.5 680,-8152.5 680,-8122.5 477,-8122.5"/>
 <text text-anchor="start" x="485" y="-8140.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8129.5" font-family="Helvetica,sans-Serif" font-size="10.00">TakeRepCheck</text>
@@ -2356,7 +2356,7 @@
 <!-- Node153 -->
 <g id="node154" class="node">
 <title>Node153</title>
-<g id="a_node154"><a xlink:href="dc/db7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UnhidePerson.html" target="_top" xlink:title=" ">
+<g id="a_node154"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UnhidePerson.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8073.5 477,-8103.5 680,-8103.5 680,-8073.5 477,-8073.5"/>
 <text text-anchor="start" x="485" y="-8091.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8080.5" font-family="Helvetica,sans-Serif" font-size="10.00">UnhidePerson</text>
@@ -2372,7 +2372,7 @@
 <!-- Node154 -->
 <g id="node155" class="node">
 <title>Node154</title>
-<g id="a_node155"><a xlink:href="d5/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UninstallCommSniffer.html" target="_top" xlink:title=" ">
+<g id="a_node155"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UninstallCommSniffer.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-8024.5 477,-8054.5 680,-8054.5 680,-8024.5 477,-8024.5"/>
 <text text-anchor="start" x="485" y="-8042.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-8031.5" font-family="Helvetica,sans-Serif" font-size="10.00">UninstallCommSniffer</text>
@@ -2388,7 +2388,7 @@
 <!-- Node155 -->
 <g id="node156" class="node">
 <title>Node155</title>
-<g id="a_node156"><a xlink:href="de/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UpdateMemory.html" target="_top" xlink:title=" ">
+<g id="a_node156"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UpdateMemory.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-7975.5 477,-8005.5 680,-8005.5 680,-7975.5 477,-7975.5"/>
 <text text-anchor="start" x="485" y="-7993.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="578.5" y="-7982.5" font-family="Helvetica,sans-Serif" font-size="10.00">UpdateMemory</text>
@@ -2404,7 +2404,7 @@
 <!-- Node156 -->
 <g id="node157" class="node">
 <title>Node156</title>
-<g id="a_node157"><a xlink:href="d2/d98/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1Wait.html" target="_top" xlink:title=" ">
+<g id="a_node157"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1Wait.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="467.5,-7937 467.5,-7956 689.5,-7956 689.5,-7937 467.5,-7937"/>
 <text text-anchor="middle" x="578.5" y="-7944" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.Wait</text>
 </a>
@@ -2419,7 +2419,7 @@
 <!-- Node157 -->
 <g id="node158" class="node">
 <title>Node157</title>
-<g id="a_node158"><a xlink:href="d0/dd0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1AddGAOfficerToCoatl.html" target="_top" xlink:title=" ">
+<g id="a_node158"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1AddGAOfficerToCoatl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-7887.5 456.5,-7917.5 700.5,-7917.5 700.5,-7887.5 456.5,-7887.5"/>
 <text text-anchor="start" x="464.5" y="-7905.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.academy.</text>
 <text text-anchor="middle" x="578.5" y="-7894.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddGAOfficerToCoatl</text>
@@ -2435,7 +2435,7 @@
 <!-- Node158 -->
 <g id="node159" class="node">
 <title>Node158</title>
-<g id="a_node159"><a xlink:href="dd/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1CESetHidden.html" target="_top" xlink:title=" ">
+<g id="a_node159"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1CESetHidden.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-7838.5 456.5,-7868.5 700.5,-7868.5 700.5,-7838.5 456.5,-7838.5"/>
 <text text-anchor="start" x="464.5" y="-7856.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.academy.</text>
 <text text-anchor="middle" x="578.5" y="-7845.5" font-family="Helvetica,sans-Serif" font-size="10.00">CESetHidden</text>
@@ -2451,7 +2451,7 @@
 <!-- Node159 -->
 <g id="node160" class="node">
 <title>Node159</title>
-<g id="a_node160"><a xlink:href="de/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GAReduceRandomRep.html" target="_top" xlink:title=" ">
+<g id="a_node160"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GAReduceRandomRep.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-7789.5 456.5,-7819.5 700.5,-7819.5 700.5,-7789.5 456.5,-7789.5"/>
 <text text-anchor="start" x="464.5" y="-7807.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.academy.</text>
 <text text-anchor="middle" x="578.5" y="-7796.5" font-family="Helvetica,sans-Serif" font-size="10.00">GAReduceRandomRep</text>
@@ -2467,7 +2467,7 @@
 <!-- Node160 -->
 <g id="node161" class="node">
 <title>Node160</title>
-<g id="a_node161"><a xlink:href="d4/d2b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GenGAIntroAcademician.html" target="_top" xlink:title=" ">
+<g id="a_node161"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GenGAIntroAcademician.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-7740.5 456.5,-7770.5 700.5,-7770.5 700.5,-7740.5 456.5,-7740.5"/>
 <text text-anchor="start" x="464.5" y="-7758.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.academy.</text>
 <text text-anchor="middle" x="578.5" y="-7747.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenGAIntroAcademician</text>
@@ -2483,7 +2483,7 @@
 <!-- Node161 -->
 <g id="node162" class="node">
 <title>Node161</title>
-<g id="a_node162"><a xlink:href="dd/db3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1ShowGAOfficer.html" target="_top" xlink:title=" ">
+<g id="a_node162"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1ShowGAOfficer.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-7691.5 456.5,-7721.5 700.5,-7721.5 700.5,-7691.5 456.5,-7691.5"/>
 <text text-anchor="start" x="464.5" y="-7709.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.academy.</text>
 <text text-anchor="middle" x="578.5" y="-7698.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShowGAOfficer</text>
@@ -2499,7 +2499,7 @@
 <!-- Node162 -->
 <g id="node163" class="node">
 <title>Node162</title>
-<g id="a_node163"><a xlink:href="d5/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1UnhideGACharacters.html" target="_top" xlink:title=" ">
+<g id="a_node163"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1UnhideGACharacters.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-7642.5 456.5,-7672.5 700.5,-7672.5 700.5,-7642.5 456.5,-7642.5"/>
 <text text-anchor="start" x="464.5" y="-7660.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.academy.</text>
 <text text-anchor="middle" x="578.5" y="-7649.5" font-family="Helvetica,sans-Serif" font-size="10.00">UnhideGACharacters</text>
@@ -2515,7 +2515,7 @@
 <!-- Node163 -->
 <g id="node164" class="node">
 <title>Node163</title>
-<g id="a_node164"><a xlink:href="d6/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1expire.html" target="_top" xlink:title=" ">
+<g id="a_node164"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1expire.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="464.5,-7604 464.5,-7623 692.5,-7623 692.5,-7604 464.5,-7604"/>
 <text text-anchor="middle" x="578.5" y="-7611" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.expire</text>
 </a>
@@ -2530,7 +2530,7 @@
 <!-- Node164 -->
 <g id="node165" class="node">
 <title>Node164</title>
-<g id="a_node165"><a xlink:href="dc/d2c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html" target="_top" xlink:title=" ">
+<g id="a_node165"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1BarCMD.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-1029.5 456.5,-1059.5 700.5,-1059.5 700.5,-1029.5 456.5,-1029.5"/>
 <text text-anchor="start" x="464.5" y="-1047.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.missions.</text>
 <text text-anchor="middle" x="578.5" y="-1036.5" font-family="Helvetica,sans-Serif" font-size="10.00">BarCMD</text>
@@ -2546,7 +2546,7 @@
 <!-- Node165 -->
 <g id="node166" class="node">
 <title>Node165</title>
-<g id="a_node166"><a xlink:href="d6/dd4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1Commission.html" target="_top" xlink:title=" ">
+<g id="a_node166"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1Commission.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-7554.5 456.5,-7584.5 700.5,-7584.5 700.5,-7554.5 456.5,-7554.5"/>
 <text text-anchor="start" x="464.5" y="-7572.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.missions.</text>
 <text text-anchor="middle" x="578.5" y="-7561.5" font-family="Helvetica,sans-Serif" font-size="10.00">Commission</text>
@@ -2562,7 +2562,7 @@
 <!-- Node166 -->
 <g id="node167" class="node">
 <title>Node166</title>
-<g id="a_node167"><a xlink:href="d9/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1DeliveryMission.html" target="_top" xlink:title=" ">
+<g id="a_node167"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1DeliveryMission.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-7505.5 456.5,-7535.5 700.5,-7535.5 700.5,-7505.5 456.5,-7505.5"/>
 <text text-anchor="start" x="464.5" y="-7523.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.missions.</text>
 <text text-anchor="middle" x="578.5" y="-7512.5" font-family="Helvetica,sans-Serif" font-size="10.00">DeliveryMission</text>
@@ -2578,7 +2578,7 @@
 <!-- Node167 -->
 <g id="node168" class="node">
 <title>Node167</title>
-<g id="a_node168"><a xlink:href="d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html" target="_top" xlink:title=" ">
+<g id="a_node168"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1GateCMD.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-7456.5 456.5,-7486.5 700.5,-7486.5 700.5,-7456.5 456.5,-7456.5"/>
 <text text-anchor="start" x="464.5" y="-7474.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.missions.</text>
 <text text-anchor="middle" x="578.5" y="-7463.5" font-family="Helvetica,sans-Serif" font-size="10.00">GateCMD</text>
@@ -2594,7 +2594,7 @@
 <!-- Node168 -->
 <g id="node169" class="node">
 <title>Node168</title>
-<g id="a_node169"><a xlink:href="df/df8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1MissionHubCMD.html" target="_top" xlink:title=" ">
+<g id="a_node169"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1missions_1_1MissionHubCMD.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="456.5,-7407.5 456.5,-7437.5 700.5,-7437.5 700.5,-7407.5 456.5,-7407.5"/>
 <text text-anchor="start" x="464.5" y="-7425.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.missions.</text>
 <text text-anchor="middle" x="578.5" y="-7414.5" font-family="Helvetica,sans-Serif" font-size="10.00">MissionHubCMD</text>
@@ -2610,7 +2610,7 @@
 <!-- Node169 -->
 <g id="node170" class="node">
 <title>Node169</title>
-<g id="a_node170"><a xlink:href="d4/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1newgame_1_1NGC.html" target="_top" xlink:title=" ">
+<g id="a_node170"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1newgame_1_1NGC.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-7369 444,-7388 713,-7388 713,-7369 444,-7369"/>
 <text text-anchor="middle" x="578.5" y="-7376" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.newgame.NGC</text>
 </a>
@@ -2625,7 +2625,7 @@
 <!-- Node170 -->
 <g id="node171" class="node">
 <title>Node170</title>
-<g id="a_node171"><a xlink:href="d8/d09/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html" target="_top" xlink:title=" ">
+<g id="a_node171"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-7319.5 459,-7349.5 698,-7349.5 698,-7319.5 459,-7319.5"/>
 <text text-anchor="start" x="467" y="-7337.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-7326.5" font-family="Helvetica,sans-Serif" font-size="10.00">AICores</text>
@@ -2641,7 +2641,7 @@
 <!-- Node171 -->
 <g id="node172" class="node">
 <title>Node171</title>
-<g id="a_node172"><a xlink:href="df/df7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent.html" target="_top" xlink:title=" ">
+<g id="a_node172"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-7270.5 459,-7300.5 698,-7300.5 698,-7270.5 459,-7270.5"/>
 <text text-anchor="start" x="467" y="-7288.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-7277.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddBarEvent</text>
@@ -2657,7 +2657,7 @@
 <!-- Node172 -->
 <g id="node173" class="node">
 <title>Node172</title>
-<g id="a_node173"><a xlink:href="d8/de9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective.html" target="_top" xlink:title=" ">
+<g id="a_node173"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-7221.5 459,-7251.5 698,-7251.5 698,-7221.5 459,-7221.5"/>
 <text text-anchor="start" x="467" y="-7239.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-7228.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddRaidObjective</text>
@@ -2673,7 +2673,7 @@
 <!-- Node173 -->
 <g id="node174" class="node">
 <title>Node173</title>
-<g id="a_node174"><a xlink:href="df/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html" target="_top" xlink:title=" ">
+<g id="a_node174"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1CargoPods.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-7172.5 459,-7202.5 698,-7202.5 698,-7172.5 459,-7172.5"/>
 <text text-anchor="start" x="467" y="-7190.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-7179.5" font-family="Helvetica,sans-Serif" font-size="10.00">CargoPods</text>
@@ -2689,7 +2689,7 @@
 <!-- Node174 -->
 <g id="node175" class="node">
 <title>Node174</title>
-<g id="a_node175"><a xlink:href="d6/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html" target="_top" xlink:title=" ">
+<g id="a_node175"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-7123.5 459,-7153.5 698,-7153.5 698,-7123.5 459,-7123.5"/>
 <text text-anchor="start" x="467" y="-7141.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-7130.5" font-family="Helvetica,sans-Serif" font-size="10.00">DemandCargo</text>
@@ -2705,7 +2705,7 @@
 <!-- Node175 -->
 <g id="node176" class="node">
 <title>Node175</title>
-<g id="a_node176"><a xlink:href="d3/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DistressResponse.html" target="_top" xlink:title=" ">
+<g id="a_node176"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DistressResponse.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-7074.5 459,-7104.5 698,-7104.5 698,-7074.5 459,-7074.5"/>
 <text text-anchor="start" x="467" y="-7092.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-7081.5" font-family="Helvetica,sans-Serif" font-size="10.00">DistressResponse</text>
@@ -2721,7 +2721,7 @@
 <!-- Node176 -->
 <g id="node177" class="node">
 <title>Node176</title>
-<g id="a_node177"><a xlink:href="d8/df2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1FactionFleetNearbyAndAware.html" target="_top" xlink:title=" ">
+<g id="a_node177"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1FactionFleetNearbyAndAware.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-7025.5 459,-7055.5 698,-7055.5 698,-7025.5 459,-7025.5"/>
 <text text-anchor="start" x="467" y="-7043.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-7032.5" font-family="Helvetica,sans-Serif" font-size="10.00">FactionFleetNearbyAndAware</text>
@@ -2737,7 +2737,7 @@
 <!-- Node177 -->
 <g id="node178" class="node">
 <title>Node177</title>
-<g id="a_node178"><a xlink:href="df/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1HostileFleetNearbyAndAware.html" target="_top" xlink:title=" ">
+<g id="a_node178"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1HostileFleetNearbyAndAware.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6976.5 459,-7006.5 698,-7006.5 698,-6976.5 459,-6976.5"/>
 <text text-anchor="start" x="467" y="-6994.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6983.5" font-family="Helvetica,sans-Serif" font-size="10.00">HostileFleetNearbyAndAware</text>
@@ -2753,7 +2753,7 @@
 <!-- Node178 -->
 <g id="node179" class="node">
 <title>Node178</title>
-<g id="a_node179"><a xlink:href="da/ded/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html" target="_top" xlink:title=" ">
+<g id="a_node179"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6927.5 459,-6957.5 698,-6957.5 698,-6927.5 459,-6927.5"/>
 <text text-anchor="start" x="467" y="-6945.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6934.5" font-family="Helvetica,sans-Serif" font-size="10.00">MarketCMD</text>
@@ -2769,7 +2769,7 @@
 <!-- Node179 -->
 <g id="node180" class="node">
 <title>Node179</title>
-<g id="a_node180"><a xlink:href="de/d2e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html" target="_top" xlink:title=" ">
+<g id="a_node180"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6878.5 459,-6908.5 698,-6908.5 698,-6878.5 459,-6878.5"/>
 <text text-anchor="start" x="467" y="-6896.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6885.5" font-family="Helvetica,sans-Serif" font-size="10.00">Objectives</text>
@@ -2785,7 +2785,7 @@
 <!-- Node180 -->
 <g id="node181" class="node">
 <title>Node180</title>
-<g id="a_node181"><a xlink:href="d5/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html" target="_top" xlink:title=" ">
+<g id="a_node181"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6829.5 459,-6859.5 698,-6859.5 698,-6829.5 459,-6829.5"/>
 <text text-anchor="start" x="467" y="-6847.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6836.5" font-family="Helvetica,sans-Serif" font-size="10.00">PrintWreckDescription</text>
@@ -2801,7 +2801,7 @@
 <!-- Node181 -->
 <g id="node182" class="node">
 <title>Node181</title>
-<g id="a_node182"><a xlink:href="da/df4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1RedPlanet.html" target="_top" xlink:title=" ">
+<g id="a_node182"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1RedPlanet.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6780.5 459,-6810.5 698,-6810.5 698,-6780.5 459,-6780.5"/>
 <text text-anchor="start" x="467" y="-6798.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6787.5" font-family="Helvetica,sans-Serif" font-size="10.00">RedPlanet</text>
@@ -2817,7 +2817,7 @@
 <!-- Node182 -->
 <g id="node183" class="node">
 <title>Node182</title>
-<g id="a_node183"><a xlink:href="dc/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1RemoveBarEvent.html" target="_top" xlink:title=" ">
+<g id="a_node183"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1RemoveBarEvent.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6731.5 459,-6761.5 698,-6761.5 698,-6731.5 459,-6731.5"/>
 <text text-anchor="start" x="467" y="-6749.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6738.5" font-family="Helvetica,sans-Serif" font-size="10.00">RemoveBarEvent</text>
@@ -2833,7 +2833,7 @@
 <!-- Node183 -->
 <g id="node184" class="node">
 <title>Node183</title>
-<g id="a_node184"><a xlink:href="d1/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageDefenderInteraction.html" target="_top" xlink:title=" ">
+<g id="a_node184"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageDefenderInteraction.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6682.5 459,-6712.5 698,-6712.5 698,-6682.5 459,-6682.5"/>
 <text text-anchor="start" x="467" y="-6700.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6689.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageDefenderInteraction</text>
@@ -2849,7 +2849,7 @@
 <!-- Node184 -->
 <g id="node185" class="node">
 <title>Node184</title>
-<g id="a_node185"><a xlink:href="dd/d6e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html" target="_top" xlink:title=" ">
+<g id="a_node185"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageEntity.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6633.5 459,-6663.5 698,-6663.5 698,-6633.5 459,-6633.5"/>
 <text text-anchor="start" x="467" y="-6651.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6640.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageEntity</text>
@@ -2865,7 +2865,7 @@
 <!-- Node185 -->
 <g id="node186" class="node">
 <title>Node185</title>
-<g id="a_node186"><a xlink:href="da/dd9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed.html" target="_top" xlink:title=" ">
+<g id="a_node186"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6584.5 459,-6614.5 698,-6614.5 698,-6584.5 459,-6584.5"/>
 <text text-anchor="start" x="467" y="-6602.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6591.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageGenFromSeed</text>
@@ -2881,7 +2881,7 @@
 <!-- Node186 -->
 <g id="node187" class="node">
 <title>Node186</title>
-<g id="a_node187"><a xlink:href="d9/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpecialInteraction.html" target="_top" xlink:title=" ">
+<g id="a_node187"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpecialInteraction.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6535.5 459,-6565.5 698,-6565.5 698,-6535.5 459,-6535.5"/>
 <text text-anchor="start" x="467" y="-6553.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6542.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageSpecialInteraction</text>
@@ -2897,7 +2897,7 @@
 <!-- Node187 -->
 <g id="node188" class="node">
 <title>Node187</title>
-<g id="a_node188"><a xlink:href="d3/dae/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1ZigguratCMD.html" target="_top" xlink:title=" ">
+<g id="a_node188"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1ZigguratCMD.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459,-6486.5 459,-6516.5 698,-6516.5 698,-6486.5 459,-6486.5"/>
 <text text-anchor="start" x="467" y="-6504.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-6493.5" font-family="Helvetica,sans-Serif" font-size="10.00">ZigguratCMD</text>
@@ -2913,7 +2913,7 @@
 <!-- Node188 -->
 <g id="node189" class="node">
 <title>Node188</title>
-<g id="a_node189"><a xlink:href="d7/d8a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unset.html" target="_top" xlink:title=" ">
+<g id="a_node189"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unset.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="465,-6448 465,-6467 692,-6467 692,-6448 465,-6448"/>
 <text text-anchor="middle" x="578.5" y="-6455" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.unset</text>
 </a>
@@ -2928,7 +2928,7 @@
 <!-- Node189 -->
 <g id="node190" class="node">
 <title>Node189</title>
-<g id="a_node190"><a xlink:href="dc/d1d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unsetAll.html" target="_top" xlink:title=" ">
+<g id="a_node190"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unsetAll.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="459.5,-6410 459.5,-6429 697.5,-6429 697.5,-6410 459.5,-6410"/>
 <text text-anchor="middle" x="578.5" y="-6417" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.unsetAll</text>
 </a>
@@ -2943,7 +2943,7 @@
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="d5/d16/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddCommodity.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddCommodity.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="757,-6066.5 757,-6096.5 960,-6096.5 960,-6066.5 757,-6066.5"/>
 <text text-anchor="start" x="765" y="-6084.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="858.5" y="-6073.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddCommodity</text>
@@ -2959,7 +2959,7 @@
 <!-- Node28 -->
 <g id="node29" class="node">
 <title>Node28</title>
-<g id="a_node29"><a xlink:href="d1/d47/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1Call.html" target="_top" xlink:title=" ">
+<g id="a_node29"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1Call.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="749,-5190 749,-5209 968,-5209 968,-5190 749,-5190"/>
 <text text-anchor="middle" x="858.5" y="-5197" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.Call</text>
 </a>
@@ -2974,7 +2974,7 @@
 <!-- Node101 -->
 <g id="node102" class="node">
 <title>Node101</title>
-<g id="a_node102"><a xlink:href="d2/d98/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptionsExample.html" target="_top" xlink:title=" ">
+<g id="a_node102"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PaginatedOptionsExample.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="757,-1078.5 757,-1108.5 960,-1108.5 960,-1078.5 757,-1078.5"/>
 <text text-anchor="start" x="765" y="-1096.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="858.5" y="-1085.5" font-family="Helvetica,sans-Serif" font-size="10.00">PaginatedOptionsExample</text>
@@ -2990,7 +2990,7 @@
 <!-- Node112 -->
 <g id="node113" class="node">
 <title>Node112</title>
-<g id="a_node113"><a xlink:href="d5/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepLTE.html" target="_top" xlink:title=" ">
+<g id="a_node113"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepLTE.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="757,-1274.5 757,-1304.5 960,-1304.5 960,-1274.5 757,-1274.5"/>
 <text text-anchor="start" x="765" y="-1292.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="858.5" y="-1281.5" font-family="Helvetica,sans-Serif" font-size="10.00">RepLTE</text>
@@ -3006,7 +3006,7 @@
 <!-- Node114 -->
 <g id="node115" class="node">
 <title>Node114</title>
-<g id="a_node115"><a xlink:href="df/d6a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepGTE.html" target="_top" xlink:title=" ">
+<g id="a_node115"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepGTE.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="757,-1225.5 757,-1255.5 960,-1255.5 960,-1225.5 757,-1225.5"/>
 <text text-anchor="start" x="765" y="-1243.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="858.5" y="-1232.5" font-family="Helvetica,sans-Serif" font-size="10.00">RepGTE</text>
@@ -3022,7 +3022,7 @@
 <!-- Node139 -->
 <g id="node140" class="node">
 <title>Node139</title>
-<g id="a_node140"><a xlink:href="d3/dbe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1Highlight.html" target="_top" xlink:title=" ">
+<g id="a_node140"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1Highlight.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="757,-8759.5 757,-8789.5 960,-8789.5 960,-8759.5 757,-8759.5"/>
 <text text-anchor="start" x="765" y="-8777.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
 <text text-anchor="middle" x="858.5" y="-8766.5" font-family="Helvetica,sans-Serif" font-size="10.00">Highlight</text>
@@ -3038,7 +3038,7 @@
 <!-- Node679 -->
 <g id="node191" class="node">
 <title>Node679</title>
-<g id="a_node191"><a xlink:href="d7/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreInteractionListener.html" target="_top" xlink:title=" ">
+<g id="a_node191"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreInteractionListener.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="233.5,-1053.5 233.5,-1083.5 379.5,-1083.5 379.5,-1053.5 233.5,-1053.5"/>
 <text text-anchor="start" x="241.5" y="-1071.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="306.5" y="-1060.5" font-family="Helvetica,sans-Serif" font-size="10.00">CoreInteractionListener</text>
@@ -3054,7 +3054,7 @@
 <!-- Node680 -->
 <g id="node192" class="node">
 <title>Node680</title>
-<g id="a_node192"><a xlink:href="d0/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node192"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OrbitalStationInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="481.5,-980.5 481.5,-1010.5 675.5,-1010.5 675.5,-980.5 481.5,-980.5"/>
 <text text-anchor="start" x="489.5" y="-998.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="578.5" y="-987.5" font-family="Helvetica,sans-Serif" font-size="10.00">OrbitalStationInteractionDialogPluginImpl</text>
@@ -3070,7 +3070,7 @@
 <!-- Node1396 -->
 <g id="node193" class="node">
 <title>Node1396</title>
-<g id="a_node193"><a xlink:href="d9/d56/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node193"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="233.5,-539.5 233.5,-569.5 379.5,-569.5 379.5,-539.5 233.5,-539.5"/>
 <text text-anchor="start" x="241.5" y="-557.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="306.5" y="-546.5" font-family="Helvetica,sans-Serif" font-size="10.00">InteractionDialogPlugin</text>
@@ -3098,7 +3098,7 @@
 <!-- Node1397 -->
 <g id="node194" class="node">
 <title>Node1397</title>
-<g id="a_node194"><a xlink:href="d1/dee/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node194"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="495.5,-882.5 495.5,-912.5 661.5,-912.5 661.5,-882.5 495.5,-882.5"/>
 <text text-anchor="start" x="503.5" y="-900.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="578.5" y="-889.5" font-family="Helvetica,sans-Serif" font-size="10.00">FleetInteractionDialogPluginImpl</text>
@@ -3114,7 +3114,7 @@
 <!-- Node1398 -->
 <g id="node195" class="node">
 <title>Node1398</title>
-<g id="a_node195"><a xlink:href="d1/dbe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1JumpPointInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node195"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1JumpPointInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="487.5,-98.5 487.5,-128.5 669.5,-128.5 669.5,-98.5 487.5,-98.5"/>
 <text text-anchor="start" x="495.5" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="578.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">JumpPointInteractionDialogPluginImpl</text>
@@ -3130,7 +3130,7 @@
 <!-- Node1399 -->
 <g id="node196" class="node">
 <title>Node1399</title>
-<g id="a_node196"><a xlink:href="d8/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NewGameDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node196"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NewGameDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="495.5,-49.5 495.5,-79.5 661.5,-79.5 661.5,-49.5 495.5,-49.5"/>
 <text text-anchor="start" x="503.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="578.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">NewGameDialogPluginImpl</text>
@@ -3146,7 +3146,7 @@
 <!-- Node1400 -->
 <g id="node197" class="node">
 <title>Node1400</title>
-<g id="a_node197"><a xlink:href="d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node197"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="495.5,-0.5 495.5,-30.5 661.5,-30.5 661.5,-0.5 495.5,-0.5"/>
 <text text-anchor="start" x="503.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="578.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PlanetInteractionDialogPluginImpl</text>
@@ -3162,7 +3162,7 @@
 <!-- Node1401 -->
 <g id="node198" class="node">
 <title>Node1401</title>
-<g id="a_node198"><a xlink:href="d6/d14/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node198"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="487.5,-931.5 487.5,-961.5 669.5,-961.5 669.5,-931.5 487.5,-931.5"/>
 <text text-anchor="start" x="495.5" y="-949.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="578.5" y="-938.5" font-family="Helvetica,sans-Serif" font-size="10.00">RuleBasedInteractionDialogPluginImpl</text>
@@ -3178,7 +3178,7 @@
 <!-- Node1402 -->
 <g id="node199" class="node">
 <title>Node1402</title>
-<g id="a_node199"><a xlink:href="dc/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node199"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1StandardRespawnDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="494,-833.5 494,-863.5 663,-863.5 663,-833.5 494,-833.5"/>
 <text text-anchor="start" x="502" y="-851.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="578.5" y="-840.5" font-family="Helvetica,sans-Serif" font-size="10.00">StandardRespawnDialogPluginImpl</text>
@@ -3194,7 +3194,7 @@
 <!-- Node1403 -->
 <g id="node200" class="node">
 <title>Node1403</title>
-<g id="a_node200"><a xlink:href="d7/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1BarEventDialogPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node200"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1BarEventDialogPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477.5,-784.5 477.5,-814.5 679.5,-814.5 679.5,-784.5 477.5,-784.5"/>
 <text text-anchor="start" x="485.5" y="-802.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.</text>
 <text text-anchor="middle" x="578.5" y="-791.5" font-family="Helvetica,sans-Serif" font-size="10.00">BarEventDialogPlugin</text>
@@ -3210,7 +3210,7 @@
 <!-- Node1404 -->
 <g id="node201" class="node">
 <title>Node1404</title>
-<g id="a_node201"><a xlink:href="d9/d88/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIOrdersInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node201"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIOrdersInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="462,-735.5 462,-765.5 695,-765.5 695,-735.5 462,-735.5"/>
 <text text-anchor="start" x="470" y="-753.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.inspection.</text>
 <text text-anchor="middle" x="578.5" y="-742.5" font-family="Helvetica,sans-Serif" font-size="10.00">HIOrdersInteractionDialogPluginImpl</text>
@@ -3226,7 +3226,7 @@
 <!-- Node1405 -->
 <g id="node202" class="node">
 <title>Node1405</title>
-<g id="a_node202"><a xlink:href="d8/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAvertInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node202"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAvertInteractionDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="467.5,-686.5 467.5,-716.5 689.5,-716.5 689.5,-686.5 467.5,-686.5"/>
 <text text-anchor="start" x="475.5" y="-704.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.punitive.</text>
 <text text-anchor="middle" x="578.5" y="-693.5" font-family="Helvetica,sans-Serif" font-size="10.00">PEAvertInteractionDialogPluginImpl</text>
@@ -3242,7 +3242,7 @@
 <!-- Node1406 -->
 <g id="node203" class="node">
 <title>Node1406</title>
-<g id="a_node203"><a xlink:href="dc/d09/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node203"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EventTestPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-637.5 477,-667.5 680,-667.5 680,-637.5 477,-637.5"/>
 <text text-anchor="start" x="485" y="-655.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.</text>
 <text text-anchor="middle" x="578.5" y="-644.5" font-family="Helvetica,sans-Serif" font-size="10.00">EventTestPluginImpl</text>
@@ -3258,7 +3258,7 @@
 <!-- Node1407 -->
 <g id="node204" class="node">
 <title>Node1407</title>
-<g id="a_node204"><a xlink:href="d9/dd5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node204"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ProcGenTestPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="477,-588.5 477,-618.5 680,-618.5 680,-588.5 477,-588.5"/>
 <text text-anchor="start" x="485" y="-606.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.</text>
 <text text-anchor="middle" x="578.5" y="-595.5" font-family="Helvetica,sans-Serif" font-size="10.00">ProcGenTestPluginImpl</text>
@@ -3274,7 +3274,7 @@
 <!-- Node1408 -->
 <g id="node205" class="node">
 <title>Node1408</title>
-<g id="a_node205"><a xlink:href="de/d01/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpecialIn64ce7877516a57b28ab5499acfd2171f.html" target="_top" xlink:title=" ">
+<g id="a_node205"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpecialIn64ce7877516a57b28ab5499acfd2171f.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="451.5,-539.5 451.5,-569.5 705.5,-569.5 705.5,-539.5 451.5,-539.5"/>
 <text text-anchor="start" x="459.5" y="-557.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="578.5" y="-546.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageSpecialInteraction.SalvageSpecialDialogPlugin</text>
@@ -3290,7 +3290,7 @@
 <!-- Node1409 -->
 <g id="node206" class="node">
 <title>Node1409</title>
-<g id="a_node206"><a xlink:href="d7/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node206"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialGoSlowDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="480,-490.5 480,-520.5 677,-520.5 677,-490.5 480,-490.5"/>
 <text text-anchor="start" x="488" y="-508.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.tutorial.</text>
 <text text-anchor="middle" x="578.5" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">TutorialGoSlowDialogPluginImpl</text>
@@ -3306,7 +3306,7 @@
 <!-- Node1410 -->
 <g id="node207" class="node">
 <title>Node1410</title>
-<g id="a_node207"><a xlink:href="db/d32/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node207"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLayInCourseDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="480,-441.5 480,-471.5 677,-471.5 677,-441.5 480,-441.5"/>
 <text text-anchor="start" x="488" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.tutorial.</text>
 <text text-anchor="middle" x="578.5" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">TutorialLayInCourseDialogPluginImpl</text>
@@ -3322,7 +3322,7 @@
 <!-- Node1411 -->
 <g id="node208" class="node">
 <title>Node1411</title>
-<g id="a_node208"><a xlink:href="d4/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLevelUpDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node208"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialLevelUpDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="480,-392.5 480,-422.5 677,-422.5 677,-392.5 480,-392.5"/>
 <text text-anchor="start" x="488" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.tutorial.</text>
 <text text-anchor="middle" x="578.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">TutorialLevelUpDialogPluginImpl</text>
@@ -3338,7 +3338,7 @@
 <!-- Node1412 -->
 <g id="node209" class="node">
 <title>Node1412</title>
-<g id="a_node209"><a xlink:href="d1/d1b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialPirateApproachesDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node209"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialPirateApproachesDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="479,-343.5 479,-373.5 678,-373.5 678,-343.5 479,-343.5"/>
 <text text-anchor="start" x="487" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.tutorial.</text>
 <text text-anchor="middle" x="578.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">TutorialPirateApproachesDialogPluginImpl</text>
@@ -3354,7 +3354,7 @@
 <!-- Node1413 -->
 <g id="node210" class="node">
 <title>Node1413</title>
-<g id="a_node210"><a xlink:href="d1/d4d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node210"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="480,-294.5 480,-324.5 677,-324.5 677,-294.5 480,-294.5"/>
 <text text-anchor="start" x="488" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.tutorial.</text>
 <text text-anchor="middle" x="578.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">TutorialRespawnDialogPluginImpl</text>
@@ -3370,7 +3370,7 @@
 <!-- Node1414 -->
 <g id="node211" class="node">
 <title>Node1414</title>
-<g id="a_node211"><a xlink:href="df/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node211"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="480,-245.5 480,-275.5 677,-275.5 677,-245.5 480,-245.5"/>
 <text text-anchor="start" x="488" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.tutorial.</text>
 <text text-anchor="middle" x="578.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">TutorialSustainedBurnDialogPluginImpl</text>
@@ -3386,7 +3386,7 @@
 <!-- Node1415 -->
 <g id="node212" class="node">
 <title>Node1415</title>
-<g id="a_node212"><a xlink:href="d7/dcc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node212"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialTransponderDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="480,-196.5 480,-226.5 677,-226.5 677,-196.5 480,-196.5"/>
 <text text-anchor="start" x="488" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.tutorial.</text>
 <text text-anchor="middle" x="578.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">TutorialTransponderDialogPluginImpl</text>
@@ -3402,7 +3402,7 @@
 <!-- Node1416 -->
 <g id="node213" class="node">
 <title>Node1416</title>
-<g id="a_node213"><a xlink:href="dc/df0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialWelcomeDialogPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node213"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialWelcomeDialogPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="480,-147.5 480,-177.5 677,-177.5 677,-147.5 480,-147.5"/>
 <text text-anchor="start" x="488" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.tutorial.</text>
 <text text-anchor="middle" x="578.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">TutorialWelcomeDialogPluginImpl</text>
@@ -3418,7 +3418,7 @@
 <!-- Node2047 -->
 <g id="node214" class="node">
 <title>Node2047</title>
-<g id="a_node214"><a xlink:href="dc/d79/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RuleBasedDialog.html" target="_top" xlink:title=" ">
+<g id="a_node214"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RuleBasedDialog.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="233.5,-906.5 233.5,-936.5 379.5,-936.5 379.5,-906.5 233.5,-906.5"/>
 <text text-anchor="start" x="241.5" y="-924.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="306.5" y="-913.5" font-family="Helvetica,sans-Serif" font-size="10.00">RuleBasedDialog</text>

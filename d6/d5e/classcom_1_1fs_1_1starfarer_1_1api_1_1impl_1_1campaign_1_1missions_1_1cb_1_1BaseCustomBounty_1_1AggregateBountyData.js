@@ -1,4 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1AggregateBountyData =
-[
-    [ "completedDifficulty", "d6/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty_1_1AggregateBountyData.html#ab297caa8792e2a3413bc4bcad06746ec", null ]
-];

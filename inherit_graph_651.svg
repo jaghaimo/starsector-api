@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d8/d88/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI_1_1FleetActionDelegate.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI_1_1FleetActionDelegate.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="480,-245.5 480,-275.5 717,-275.5 717,-245.5 480,-245.5"/>
 <text text-anchor="start" x="488" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.themes.</text>
 <text text-anchor="middle" x="598.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseAssignmentAI.FleetActionDelegate</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="dd/db4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="753,-245.5 753,-275.5 986,-275.5 986,-245.5 753,-245.5"/>
 <text text-anchor="start" x="761" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.inspection.</text>
 <text text-anchor="middle" x="869.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">HIActionStage</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d9/d70/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEActionStage.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEActionStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="758.5,-196.5 758.5,-226.5 980.5,-226.5 980.5,-196.5 758.5,-196.5"/>
 <text text-anchor="start" x="766.5" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.punitive.</text>
 <text text-anchor="middle" x="869.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">PEActionStage</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d7/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="767.5,-147.5 767.5,-177.5 971.5,-177.5 971.5,-147.5 767.5,-147.5"/>
 <text text-anchor="start" x="775.5" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.raid.</text>
 <text text-anchor="middle" x="869.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">PirateRaidActionStage</text>
@@ -69,7 +69,7 @@
 <!-- Node1986 -->
 <g id="node5" class="node">
 <title>Node1986</title>
-<g id="a_node5"><a xlink:href="d1/d4c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidStage.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-318.5 0,-348.5 204,-348.5 204,-318.5 0,-318.5"/>
 <text text-anchor="start" x="8" y="-336.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.raid.</text>
 <text text-anchor="middle" x="102" y="-325.5" font-family="Helvetica,sans-Serif" font-size="10.00">RaidIntel.RaidStage</text>
@@ -79,7 +79,7 @@
 <!-- Node1987 -->
 <g id="node6" class="node">
 <title>Node1987</title>
-<g id="a_node6"><a xlink:href="d7/d82/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="240,-318.5 240,-348.5 444,-348.5 444,-318.5 240,-318.5"/>
 <text text-anchor="start" x="248" y="-336.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.raid.</text>
 <text text-anchor="middle" x="342" y="-325.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseRaidStage</text>
@@ -95,7 +95,7 @@
 <!-- Node1988 -->
 <g id="node7" class="node">
 <title>Node1988</title>
-<g id="a_node7"><a xlink:href="df/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ActionStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="496.5,-196.5 496.5,-226.5 700.5,-226.5 700.5,-196.5 496.5,-196.5"/>
 <text text-anchor="start" x="504.5" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.raid.</text>
 <text text-anchor="middle" x="598.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">ActionStage</text>
@@ -111,7 +111,7 @@
 <!-- Node1989 -->
 <g id="node8" class="node">
 <title>Node1989</title>
-<g id="a_node8"><a xlink:href="d4/d21/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1AssembleStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="496.5,-74.5 496.5,-104.5 700.5,-104.5 700.5,-74.5 496.5,-74.5"/>
 <text text-anchor="start" x="504.5" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.raid.</text>
 <text text-anchor="middle" x="598.5" y="-81.5" font-family="Helvetica,sans-Serif" font-size="10.00">AssembleStage</text>
@@ -127,7 +127,7 @@
 <!-- Node1993 -->
 <g id="node12" class="node">
 <title>Node1993</title>
-<g id="a_node12"><a xlink:href="d4/dcd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="496.5,-490.5 496.5,-520.5 700.5,-520.5 700.5,-490.5 496.5,-490.5"/>
 <text text-anchor="start" x="504.5" y="-508.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.raid.</text>
 <text text-anchor="middle" x="598.5" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">OrganizeStage</text>
@@ -143,7 +143,7 @@
 <!-- Node1996 -->
 <g id="node15" class="node">
 <title>Node1996</title>
-<g id="a_node15"><a xlink:href="d9/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ReturnStage.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1ReturnStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="496.5,-392.5 496.5,-422.5 700.5,-422.5 700.5,-392.5 496.5,-392.5"/>
 <text text-anchor="start" x="504.5" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.raid.</text>
 <text text-anchor="middle" x="598.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">ReturnStage</text>
@@ -159,7 +159,7 @@
 <!-- Node1999 -->
 <g id="node18" class="node">
 <title>Node1999</title>
-<g id="a_node18"><a xlink:href="d8/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1TravelStage.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1TravelStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="496.5,-318.5 496.5,-348.5 700.5,-348.5 700.5,-318.5 496.5,-318.5"/>
 <text text-anchor="start" x="504.5" y="-336.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.raid.</text>
 <text text-anchor="middle" x="598.5" y="-325.5" font-family="Helvetica,sans-Serif" font-size="10.00">TravelStage</text>
@@ -193,7 +193,7 @@
 <!-- Node1990 -->
 <g id="node9" class="node">
 <title>Node1990</title>
-<g id="a_node9"><a xlink:href="d9/dad/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIAssembleStage.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIAssembleStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="753,-98.5 753,-128.5 986,-128.5 986,-98.5 753,-98.5"/>
 <text text-anchor="start" x="761" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.inspection.</text>
 <text text-anchor="middle" x="869.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">HIAssembleStage</text>
@@ -209,7 +209,7 @@
 <!-- Node1991 -->
 <g id="node10" class="node">
 <title>Node1991</title>
-<g id="a_node10"><a xlink:href="d9/d16/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAssembleStage.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAssembleStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="758.5,-49.5 758.5,-79.5 980.5,-79.5 980.5,-49.5 758.5,-49.5"/>
 <text text-anchor="start" x="766.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.punitive.</text>
 <text text-anchor="middle" x="869.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">PEAssembleStage</text>
@@ -225,7 +225,7 @@
 <!-- Node1992 -->
 <g id="node11" class="node">
 <title>Node1992</title>
-<g id="a_node11"><a xlink:href="df/d1f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="767.5,-0.5 767.5,-30.5 971.5,-30.5 971.5,-0.5 767.5,-0.5"/>
 <text text-anchor="start" x="775.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.raid.</text>
 <text text-anchor="middle" x="869.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PirateRaidAssembleStage</text>
@@ -241,7 +241,7 @@
 <!-- Node1994 -->
 <g id="node13" class="node">
 <title>Node1994</title>
-<g id="a_node13"><a xlink:href="d2/d49/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIOrganizeStage.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIOrganizeStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="753,-539.5 753,-569.5 986,-569.5 986,-539.5 753,-539.5"/>
 <text text-anchor="start" x="761" y="-557.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.inspection.</text>
 <text text-anchor="middle" x="869.5" y="-546.5" font-family="Helvetica,sans-Serif" font-size="10.00">HIOrganizeStage</text>
@@ -257,7 +257,7 @@
 <!-- Node1995 -->
 <g id="node14" class="node">
 <title>Node1995</title>
-<g id="a_node14"><a xlink:href="d3/d2f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="758.5,-490.5 758.5,-520.5 980.5,-520.5 980.5,-490.5 758.5,-490.5"/>
 <text text-anchor="start" x="766.5" y="-508.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.punitive.</text>
 <text text-anchor="middle" x="869.5" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">PEOrganizeStage</text>
@@ -273,7 +273,7 @@
 <!-- Node1997 -->
 <g id="node16" class="node">
 <title>Node1997</title>
-<g id="a_node16"><a xlink:href="d9/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIReturnStage.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIReturnStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="753,-441.5 753,-471.5 986,-471.5 986,-441.5 753,-441.5"/>
 <text text-anchor="start" x="761" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.inspection.</text>
 <text text-anchor="middle" x="869.5" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">HIReturnStage</text>
@@ -289,7 +289,7 @@
 <!-- Node1998 -->
 <g id="node17" class="node">
 <title>Node1998</title>
-<g id="a_node17"><a xlink:href="de/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEReturnStage.html" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEReturnStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="758.5,-392.5 758.5,-422.5 980.5,-422.5 980.5,-392.5 758.5,-392.5"/>
 <text text-anchor="start" x="766.5" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.punitive.</text>
 <text text-anchor="middle" x="869.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">PEReturnStage</text>
@@ -305,7 +305,7 @@
 <!-- Node2000 -->
 <g id="node19" class="node">
 <title>Node2000</title>
-<g id="a_node19"><a xlink:href="d2/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HITravelStage.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HITravelStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="753,-343.5 753,-373.5 986,-373.5 986,-343.5 753,-343.5"/>
 <text text-anchor="start" x="761" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.inspection.</text>
 <text text-anchor="middle" x="869.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">HITravelStage</text>
@@ -321,7 +321,7 @@
 <!-- Node2001 -->
 <g id="node20" class="node">
 <title>Node2001</title>
-<g id="a_node20"><a xlink:href="da/da9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PETravelStage.html" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PETravelStage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="758.5,-294.5 758.5,-324.5 980.5,-324.5 980.5,-294.5 758.5,-294.5"/>
 <text text-anchor="start" x="766.5" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.punitive.</text>
 <text text-anchor="middle" x="869.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">PETravelStage</text>

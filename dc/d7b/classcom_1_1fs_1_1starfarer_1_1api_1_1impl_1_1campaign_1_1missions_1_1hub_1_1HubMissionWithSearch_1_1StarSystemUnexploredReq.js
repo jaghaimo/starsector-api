@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemUnexploredReq =
-[
-    [ "StarSystemUnexploredReq", "dc/d7b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemUnexploredReq.html#a39135a4dc9482d0e5251cd64cdfcf4a5", null ],
-    [ "StarSystemUnexploredReq", "dc/d7b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemUnexploredReq.html#a19595075f154c233bd236d84ac5788be", null ],
-    [ "systemMatchesRequirement", "dc/d7b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemUnexploredReq.html#ae89864a1cd6bbafe20c0f6c616b46e8b", null ],
-    [ "negate", "dc/d7b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemUnexploredReq.html#a4045cceb964e6b448607dfa98f74ea74", null ]
-];

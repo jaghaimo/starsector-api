@@ -1,17 +1,17 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d2/d43/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventb7443876afc9cc66909b145cad76cf4d.html" title=" " alt="" coords="5,397,316,439"/>
-<area shape="rect" id="node2" href="$d0/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html" title=" " alt="" coords="364,397,675,439"/>
-<area shape="rect" id="node3" href="$dc/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1CorruptPLClerkSuppliesBarEventCreator.html" title=" " alt="" coords="749,5,1059,47"/>
-<area shape="rect" id="node4" href="$de/da4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEventCreator.html" title=" " alt="" coords="749,71,1059,112"/>
-<area shape="rect" id="node5" href="$db/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DiktatLobsterBarEventCreator.html" title=" " alt="" coords="749,136,1059,177"/>
-<area shape="rect" id="node6" href="$de/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEventCreator.html" title=" " alt="" coords="749,201,1059,243"/>
-<area shape="rect" id="node7" href="$da/dc5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEventCreator.html" title=" " alt="" coords="749,267,1059,308"/>
-<area shape="rect" id="node8" href="$d6/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEventCreator.html" title=" " alt="" coords="749,332,1059,373"/>
-<area shape="rect" id="node9" href="$d8/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator.html" title=" " alt="" coords="749,397,1059,439"/>
-<area shape="rect" id="node10" href="$d6/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEventCreator.html" title=" " alt="" coords="749,463,1059,504"/>
-<area shape="rect" id="node11" href="$d7/db1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEventCreator.html" title=" " alt="" coords="749,528,1059,569"/>
-<area shape="rect" id="node12" href="$de/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1SpecBarEventCreator.html" title=" " alt="" coords="749,593,1059,635"/>
-<area shape="rect" id="node13" href="$df/dc4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEventCreator.html" title=" " alt="" coords="749,659,1059,700"/>
-<area shape="rect" id="node14" href="$df/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html" title=" " alt="" coords="749,724,1059,765"/>
-<area shape="rect" id="node15" href="$dc/dc7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html" title=" " alt="" coords="723,789,1085,831"/>
+<area shape="rect" id="node1" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventb7443876afc9cc66909b145cad76cf4d.html" title=" " alt="" coords="5,397,316,439"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html" title=" " alt="" coords="364,397,675,439"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1CorruptPLClerkSuppliesBarEventCreator.html" title=" " alt="" coords="749,5,1059,47"/>
+<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEventCreator.html" title=" " alt="" coords="749,71,1059,112"/>
+<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DiktatLobsterBarEventCreator.html" title=" " alt="" coords="749,136,1059,177"/>
+<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEventCreator.html" title=" " alt="" coords="749,201,1059,243"/>
+<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEventCreator.html" title=" " alt="" coords="749,267,1059,308"/>
+<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEventCreator.html" title=" " alt="" coords="749,332,1059,373"/>
+<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator.html" title=" " alt="" coords="749,397,1059,439"/>
+<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEventCreator.html" title=" " alt="" coords="749,463,1059,504"/>
+<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEventCreator.html" title=" " alt="" coords="749,528,1059,569"/>
+<area shape="rect" id="node12" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1SpecBarEventCreator.html" title=" " alt="" coords="749,593,1059,635"/>
+<area shape="rect" id="node13" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEventCreator.html" title=" " alt="" coords="749,659,1059,700"/>
+<area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html" title=" " alt="" coords="749,724,1059,765"/>
+<area shape="rect" id="node15" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html" title=" " alt="" coords="723,789,1085,831"/>
 </map>

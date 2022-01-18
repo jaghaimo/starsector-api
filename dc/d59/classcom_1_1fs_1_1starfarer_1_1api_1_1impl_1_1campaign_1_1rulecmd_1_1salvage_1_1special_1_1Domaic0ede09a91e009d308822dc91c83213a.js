@@ -1,8 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domaic0ede09a91e009d308822dc91c83213a =
-[
-    [ "DomainSurveyDerelictSpecialData", "dc/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domaic0ede09a91e009d308822dc91c83213a.html#a5ae82ff984db46621e394cd273b7eaa4", null ],
-    [ "createSpecialPlugin", "dc/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domaic0ede09a91e009d308822dc91c83213a.html#a4e0c1237e6599aa6fad3dcd990139a79", null ],
-    [ "entityId", "dc/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domaic0ede09a91e009d308822dc91c83213a.html#ad0aeb35daad1875a984f6d440c320ac3", null ],
-    [ "secondaryId", "dc/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domaic0ede09a91e009d308822dc91c83213a.html#ad3509aebe8aa283542b978984acfac22", null ],
-    [ "type", "dc/d59/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domaic0ede09a91e009d308822dc91c83213a.html#ae9a02e96a89841668643b278d7bd6f58", null ]
-];

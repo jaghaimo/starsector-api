@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemIsBlackHoleReq =
-[
-    [ "SystemIsBlackHoleReq", "d9/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemIsBlackHoleReq.html#a693a4d69d7c6258d68773e62899eba4e", null ],
-    [ "SystemIsBlackHoleReq", "d9/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemIsBlackHoleReq.html#a8bf2fec5a872c61a284ee4e7118d890b", null ],
-    [ "systemMatchesRequirement", "d9/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemIsBlackHoleReq.html#a89686d3efa804492745621dd76836392", null ],
-    [ "negate", "d9/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemIsBlackHoleReq.html#a50947615175cc2add47fd45eea046c8d", null ]
-];

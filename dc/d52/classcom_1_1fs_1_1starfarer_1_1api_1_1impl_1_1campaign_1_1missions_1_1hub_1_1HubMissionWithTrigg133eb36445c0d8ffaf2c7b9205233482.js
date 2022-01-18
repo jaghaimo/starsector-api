@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg133eb36445c0d8ffaf2c7b9205233482 =
-[
-    [ "PickLocationAtInSystemJumpPointAction", "dc/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg133eb36445c0d8ffaf2c7b9205233482.html#a83f668116a1a56da7b7a599f704ce418", null ],
-    [ "doAction", "dc/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg133eb36445c0d8ffaf2c7b9205233482.html#aca53d8ed0365e197fca727798ec20269", null ],
-    [ "minDistFromPlayer", "dc/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg133eb36445c0d8ffaf2c7b9205233482.html#a50849e332dbfb0d61c24be1655135f0b", null ],
-    [ "system", "dc/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg133eb36445c0d8ffaf2c7b9205233482.html#a5f844fdc409e320411928ade450b2015", null ]
-];

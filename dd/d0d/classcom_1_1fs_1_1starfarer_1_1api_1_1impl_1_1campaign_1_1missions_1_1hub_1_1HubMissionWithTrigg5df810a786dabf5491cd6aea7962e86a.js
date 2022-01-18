@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg5df810a786dabf5491cd6aea7962e86a =
-[
-    [ "MakeFleetFlagsPermanentAction", "dd/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg5df810a786dabf5491cd6aea7962e86a.html#a9acf7ba9f54f19a3b23f7a4a71ce251c", null ],
-    [ "doAction", "dd/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg5df810a786dabf5491cd6aea7962e86a.html#a74fbfd2bcd32efda354d888f601a0049", null ],
-    [ "permanent", "dd/d0d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg5df810a786dabf5491cd6aea7962e86a.html#a19356486faaf0411907fe7c5ef4c3f14", null ]
-];

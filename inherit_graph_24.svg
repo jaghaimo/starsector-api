@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d2/db7/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BuffManagerAPI_1_1Buff.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BuffManagerAPI_1_1Buff.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-122.5 0,-152.5 146,-152.5 146,-122.5 0,-122.5"/>
 <text text-anchor="start" x="8" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="73" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">BuffManagerAPI.Buff</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d7/d9f/classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BuffManagerAPI_1_1TempBuff.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BuffManagerAPI_1_1TempBuff.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="206.5,-245.5 206.5,-275.5 352.5,-275.5 352.5,-245.5 206.5,-245.5"/>
 <text text-anchor="start" x="214.5" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="279.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">BuffManagerAPI.TempBuff</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d8/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable_1_1TowCableBuff.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable_1_1TowCableBuff.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="196.5,-196.5 196.5,-226.5 362.5,-226.5 362.5,-196.5 196.5,-196.5"/>
 <text text-anchor="start" x="204.5" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="279.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">TowCable.TowCableBuff</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d4/d43/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1CRLossPerSecondBuff.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1CRLossPerSecondBuff.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="182,-147.5 182,-177.5 377,-177.5 377,-147.5 182,-147.5"/>
 <text text-anchor="start" x="190" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="279.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">CRLossPerSecondBuff</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d2/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1CRRecoveryBuff.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1CRRecoveryBuff.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="182,-98.5 182,-128.5 377,-128.5 377,-98.5 182,-98.5"/>
 <text text-anchor="start" x="190" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="279.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">CRRecoveryBuff</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="d9/dfc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="182,-49.5 182,-79.5 377,-79.5 377,-49.5 182,-49.5"/>
 <text text-anchor="start" x="190" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="279.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">MaxBurnBuff</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="d9/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PeakPerformanceBuff.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="182,-0.5 182,-30.5 377,-30.5 377,-0.5 182,-0.5"/>
 <text text-anchor="start" x="190" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="279.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PeakPerformanceBuff</text>

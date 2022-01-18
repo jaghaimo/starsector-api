@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2_1_1InvSmugglingParams =
-[
-    [ "InvSmugglingParams", "d8/d2b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2_1_1InvSmugglingParams.html#aa0a414c95f4dbfdc053a38a5c285ef17", null ],
-    [ "bribeAmount", "d8/d2b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2_1_1InvSmugglingParams.html#a400d6b6f4144de275ff5d55796ebb9b6", null ],
-    [ "guiltChance", "d8/d2b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2_1_1InvSmugglingParams.html#ab7f00f314e44ded9f58461288bca80b1", null ]
-];

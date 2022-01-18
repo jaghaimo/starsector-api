@@ -1,0 +1,4 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent_1_1TempBarEvents =
+[
+    [ "events", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddBarEvent_1_1TempBarEvents.html#ab912d6d7a581e89b843d83dfbc12027e", null ]
+];

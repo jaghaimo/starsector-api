@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg4a794daa8547afd29835585efb2a8f78 =
+[
+    [ "OrderFleetStopPursuingPlayerUnlessInStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg4a794daa8547afd29835585efb2a8f78.html#a70cb41a24e5edfd824a4b76a214071bb", null ],
+    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg4a794daa8547afd29835585efb2a8f78.html#a38ecfa3fbc5cab3e97c132d684539329", null ],
+    [ "mission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg4a794daa8547afd29835585efb2a8f78.html#abdd241d490f5e9d57496ade482accae6", null ],
+    [ "stages", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg4a794daa8547afd29835585efb2a8f78.html#a7a745690ffb150078509cbe1b35d4602", null ]
+];

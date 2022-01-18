@@ -1,0 +1,8 @@
+var enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domain30d5a8557cd7c99d3bda9f8850793a09 =
+[
+    [ "ACTIVATE_PROBE", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domain30d5a8557cd7c99d3bda9f8850793a09.html#ac4e49a3f23d2a9422700f3717c3eb555", null ],
+    [ "ACTIVATE_SURVEY_SHIP", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domain30d5a8557cd7c99d3bda9f8850793a09.html#af0bf68a42a0b58b2bec664504f7051e3", null ],
+    [ "LOCATION_MOTHERSHIP", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domain30d5a8557cd7c99d3bda9f8850793a09.html#a610cfb63e6c24c4561c991f900199797", null ],
+    [ "LOCATION_SURVEY_SHIP", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domain30d5a8557cd7c99d3bda9f8850793a09.html#a7a29caefed4698f1a335d2ec70bf76a4", null ],
+    [ "SCRAMBLED", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Domain30d5a8557cd7c99d3bda9f8850793a09.html#a95f0a83d03d0ae6c40b8bb809fe777f2", null ]
+];

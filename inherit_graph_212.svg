@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="db/d30/interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-73.5 0,-103.5 149,-103.5 149,-73.5 0,-73.5"/>
 <text text-anchor="start" x="8" y="-91.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.characters.</text>
 <text text-anchor="middle" x="74.5" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">SkillsChangeEffect</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="da/db6/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="185,-73.5 185,-103.5 334,-103.5 334,-73.5 185,-73.5"/>
 <text text-anchor="start" x="193" y="-91.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.characters.</text>
 <text text-anchor="middle" x="259.5" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseSkillsChangeEffect</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="df/d26/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="386.5,-147.5 386.5,-177.5 535.5,-177.5 535.5,-147.5 386.5,-147.5"/>
 <text text-anchor="start" x="394.5" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.characters.</text>
 <text text-anchor="middle" x="461" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">SkillsChangeOfficerEffect</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="db/d50/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="371,-98.5 371,-128.5 551,-128.5 551,-98.5 371,-98.5"/>
 <text text-anchor="start" x="379" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.characters.</text>
 <text text-anchor="middle" x="461" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">SkillsChangeRemoveExcessOPEffect</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d1/dcb/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="378.5,-49.5 378.5,-79.5 543.5,-79.5 543.5,-49.5 378.5,-49.5"/>
 <text text-anchor="start" x="386.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.characters.</text>
 <text text-anchor="middle" x="461" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">SkillsChangeRemoveSmodsEffect</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="df/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="370,-0.5 370,-30.5 552,-30.5 552,-0.5 370,-0.5"/>
 <text text-anchor="start" x="378" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.characters.</text>
 <text text-anchor="middle" x="461" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SkillsChangeRemoveVentsCapsEffect</text>

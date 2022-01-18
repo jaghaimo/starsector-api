@@ -1,0 +1,27 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator =
+[
+    [ "createEncounter", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a46e448de97b74998915e13f30f4bbfb0", null ],
+    [ "getClosestLuddicPathBase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#acebd999859009321af0a877b80c6d95e", null ],
+    [ "getClosestLuddicPathBase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a06f5f55efc391337005e4983b0e83986", null ],
+    [ "getClosestPirateBase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a66bc02d8314b49abb2fce3e6d9eac41d", null ],
+    [ "getClosestPirateBase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a5b0409f7efa7f15ffa98c770887c4b6c", null ],
+    [ "getClosestSystemWithRuins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#abf8bbdce14e55cce0be8869051b68cde", null ],
+    [ "getClosestSystemWithRuins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a6429d1d739240ed6941168723e2c93b2", null ],
+    [ "getCoreProximityFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a16fe6a0d707ab8f47d6b05eb6b375fd5", null ],
+    [ "getCreatorTimeoutMax", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a203b29b88367dfea899c1c2678c90852", null ],
+    [ "getCreatorTimeoutMin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a2272e74d2fb2c9d68eeb768a73a0f856", null ],
+    [ "getFrequencyForPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a8611cdd627b4d42ed22a162cec395a4e", null ],
+    [ "getId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a8a077d33fd85849573c963ebb10ffe72", null ],
+    [ "getLuddicPathBaseProximityFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a503d504e01738fe82b10fc49439ff3e8", null ],
+    [ "getPirateBaseProximityFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#aa1ab1a60696ce5a9fbb17d21148b6824", null ],
+    [ "getPointTimeoutMax", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a2bca1d8c7f6e779385b034082487710e", null ],
+    [ "getPointTimeoutMin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#ae9baee8f99aec6acde509f3b394aad52", null ],
+    [ "getRuinsProximityFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a181a2ecae22e7049c014b2fe0d873387", null ],
+    [ "CORE_PROXIMITY_MAX_RANGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a30459c27de6521402d31a24db18aa426", null ],
+    [ "PATHER_AMBUSH_MAX_RANGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a76beb0e2684274b0307b4de4838be064", null ],
+    [ "PATHER_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a5d7283148a3f3763432bb9f42f3b52b4", null ],
+    [ "PIRATE_AMBUSH_MAX_RANGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a37388f09b98e509d10f76653ff00065d", null ],
+    [ "PIRATE_AMBUSH_RANGE_FOR_FULL_PROXIMITY_FACTOR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#ae1395b2c353b18ec142807b23ae34593", null ],
+    [ "RUINS_MAX_RANGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a6fbec19192903fe6de5d5b9ca63430b5", null ],
+    [ "RUINS_RANGE_FOR_FULL_PROXIMITY_FACTOR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html#a05e3b119be7a0d2ce43b84bf8a2621cc", null ]
+];

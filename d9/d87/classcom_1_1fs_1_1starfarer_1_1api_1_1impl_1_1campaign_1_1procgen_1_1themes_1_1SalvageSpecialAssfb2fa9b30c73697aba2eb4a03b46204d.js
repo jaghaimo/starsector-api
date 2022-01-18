@@ -1,8 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssfb2fa9b30c73697aba2eb4a03b46204d =
-[
-    [ "BreadcrumbSpecialCreator", "d9/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssfb2fa9b30c73697aba2eb4a03b46204d.html#a153c8433806121c7418a6743a69020bb", null ],
-    [ "createSpecial", "d9/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssfb2fa9b30c73697aba2eb4a03b46204d.html#af83f0f0c8439938fa5e1cabde3517280", null ],
-    [ "isLargeShipOrNonShip", "d9/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssfb2fa9b30c73697aba2eb4a03b46204d.html#a6aae8a4f2a4d29940545aab0b2f15656", null ],
-    [ "all", "d9/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssfb2fa9b30c73697aba2eb4a03b46204d.html#a421eba167038efb0c7f0f4bae8d91ef4", null ],
-    [ "random", "d9/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssfb2fa9b30c73697aba2eb4a03b46204d.html#af55acb4c46dfe08b82cb701adc2b8dfa", null ]
-];

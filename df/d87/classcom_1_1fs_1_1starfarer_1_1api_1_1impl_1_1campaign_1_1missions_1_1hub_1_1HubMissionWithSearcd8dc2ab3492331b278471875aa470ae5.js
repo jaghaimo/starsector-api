@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearcd8dc2ab3492331b278471875aa470ae5 =
-[
-    [ "StarSystemDaysSincePlayerVisitReq", "df/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearcd8dc2ab3492331b278471875aa470ae5.html#a0f9ed10e3b7e3ff5fd95ee6e3ef92192", null ],
-    [ "systemMatchesRequirement", "df/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearcd8dc2ab3492331b278471875aa470ae5.html#a5fd0f0d6963cb97c67f4b344aa529357", null ],
-    [ "days", "df/d87/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearcd8dc2ab3492331b278471875aa470ae5.html#a34d2f9145cf42b642756cdcd6e4baa12", null ]
-];

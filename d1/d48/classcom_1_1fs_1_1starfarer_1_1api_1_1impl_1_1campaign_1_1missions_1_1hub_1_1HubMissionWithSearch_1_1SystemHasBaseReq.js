@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemHasBaseReq =
-[
-    [ "SystemHasBaseReq", "d1/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemHasBaseReq.html#a2cf9fa368c49b88d5c4b184579e357ca", null ],
-    [ "systemMatchesRequirement", "d1/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemHasBaseReq.html#a34efc7674dd8facc04d61b8806e41fb6", null ],
-    [ "factionId", "d1/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1SystemHasBaseReq.html#a9bf38e7c2f22364b3cf195e8d8600f14", null ]
-];

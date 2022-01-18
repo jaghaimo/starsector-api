@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggb0ab8c344ae31d5e4a94010fc1a21261 =
+[
+    [ "AddFleetDefeatTriggerAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggb0ab8c344ae31d5e4a94010fc1a21261.html#a84fe3710a30c56bad2c1bb027e9e86da", null ],
+    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggb0ab8c344ae31d5e4a94010fc1a21261.html#a4403f27f5eb1ac0de8b1b425cef1e4b9", null ],
+    [ "permanent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggb0ab8c344ae31d5e4a94010fc1a21261.html#a62e3326644f3e0b5bf4da1541f341e61", null ],
+    [ "trigger", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggb0ab8c344ae31d5e4a94010fc1a21261.html#a899c3d0f8d462bacc524d3814d74e408", null ]
+];

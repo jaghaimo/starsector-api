@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d6/dba/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostBehavior.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostBehavior.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-367.5 0,-397.5 197,-397.5 197,-367.5 0,-367.5"/>
 <text text-anchor="start" x="8" y="-385.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="98.5" y="-374.5" font-family="Helvetica,sans-Serif" font-size="10.00">GhostBehavior</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="da/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-367.5 261,-397.5 458,-397.5 458,-367.5 261,-367.5"/>
 <text text-anchor="start" x="269" y="-385.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="359.5" y="-374.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseGhostBehavior</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d7/d98/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBCircle.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBCircle.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-735.5 522,-765.5 719,-765.5 719,-735.5 522,-735.5"/>
 <text text-anchor="start" x="530" y="-753.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-742.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBCircle</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d8/dea/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBDartAround.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBDartAround.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-686.5 522,-716.5 719,-716.5 719,-686.5 522,-686.5"/>
 <text text-anchor="start" x="530" y="-704.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-693.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBDartAround</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d8/d6b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBEchoMovement.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBEchoMovement.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-637.5 522,-667.5 719,-667.5 719,-637.5 522,-637.5"/>
 <text text-anchor="start" x="530" y="-655.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-644.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBEchoMovement</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="d3/df1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollow.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollow.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-588.5 522,-618.5 719,-618.5 719,-588.5 522,-588.5"/>
 <text text-anchor="start" x="530" y="-606.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-595.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBFollow</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="d7/dc9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollowClosely.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollowClosely.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-539.5 522,-569.5 719,-569.5 719,-539.5 522,-539.5"/>
 <text text-anchor="start" x="530" y="-557.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-546.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBFollowClosely</text>
@@ -117,7 +117,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="d9/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollowStream.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollowStream.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-490.5 522,-520.5 719,-520.5 719,-490.5 522,-490.5"/>
 <text text-anchor="start" x="530" y="-508.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBFollowStream</text>
@@ -133,7 +133,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="d8/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-441.5 522,-471.5 719,-471.5 719,-441.5 522,-441.5"/>
 <text text-anchor="start" x="530" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBGoAwayFrom</text>
@@ -149,7 +149,7 @@
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="d3/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFromFixed.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFromFixed.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-392.5 522,-422.5 719,-422.5 719,-392.5 522,-392.5"/>
 <text text-anchor="start" x="530" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBGoAwayFromFixed</text>
@@ -165,7 +165,7 @@
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="d1/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-343.5 522,-373.5 719,-373.5 719,-343.5 522,-343.5"/>
 <text text-anchor="start" x="530" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBGoInDirection</text>
@@ -181,7 +181,7 @@
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="d0/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirectionWithWobble.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirectionWithWobble.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-294.5 522,-324.5 719,-324.5 719,-294.5 522,-294.5"/>
 <text text-anchor="start" x="530" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBGoInDirectionWithWobble</text>
@@ -197,7 +197,7 @@
 <!-- Node12 -->
 <g id="node13" class="node">
 <title>Node12</title>
-<g id="a_node13"><a xlink:href="d8/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoTo.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoTo.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-245.5 522,-275.5 719,-275.5 719,-245.5 522,-245.5"/>
 <text text-anchor="start" x="530" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBGoTo</text>
@@ -213,7 +213,7 @@
 <!-- Node13 -->
 <g id="node14" class="node">
 <title>Node13</title>
-<g id="a_node14"><a xlink:href="dd/dba/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIntercept.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIntercept.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-196.5 522,-226.5 719,-226.5 719,-196.5 522,-196.5"/>
 <text text-anchor="start" x="530" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBIntercept</text>
@@ -229,7 +229,7 @@
 <!-- Node14 -->
 <g id="node15" class="node">
 <title>Node14</title>
-<g id="a_node15"><a xlink:href="d6/d67/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeadPlayerTo.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeadPlayerTo.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-147.5 522,-177.5 719,-177.5 719,-147.5 522,-147.5"/>
 <text text-anchor="start" x="530" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBLeadPlayerTo</text>
@@ -245,7 +245,7 @@
 <!-- Node15 -->
 <g id="node16" class="node">
 <title>Node15</title>
-<g id="a_node16"><a xlink:href="d0/d43/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-0.5 522,-30.5 719,-30.5 719,-0.5 522,-0.5"/>
 <text text-anchor="start" x="530" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBLeviathanCalfRun</text>
@@ -261,7 +261,7 @@
 <!-- Node16 -->
 <g id="node17" class="node">
 <title>Node16</title>
-<g id="a_node17"><a xlink:href="d4/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBStayInPlace.html" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBStayInPlace.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-98.5 522,-128.5 719,-128.5 719,-98.5 522,-98.5"/>
 <text text-anchor="start" x="530" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBStayInPlace</text>
@@ -277,7 +277,7 @@
 <!-- Node17 -->
 <g id="node18" class="node">
 <title>Node17</title>
-<g id="a_node18"><a xlink:href="da/d3a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBStormArea.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBStormArea.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="522,-49.5 522,-79.5 719,-79.5 719,-49.5 522,-49.5"/>
 <text text-anchor="start" x="530" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="620.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBStormArea</text>
@@ -293,7 +293,7 @@
 <!-- Node1237 -->
 <g id="node19" class="node">
 <title>Node1237</title>
-<g id="a_node19"><a xlink:href="d3/d84/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream_1_1GhostBehaviorWithSlipstream.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream_1_1GhostBehaviorWithSlipstream.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="233,-0.5 233,-30.5 486,-30.5 486,-0.5 233,-0.5"/>
 <text text-anchor="start" x="241" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="359.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">GBIGenerateSlipstream.GhostBehaviorWithSlipstream</text>

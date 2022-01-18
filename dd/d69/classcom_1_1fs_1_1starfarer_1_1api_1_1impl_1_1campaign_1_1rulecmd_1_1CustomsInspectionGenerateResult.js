@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult =
-[
-    [ "CargoInspectionResult", "dd/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult_1_1CargoInspectionResult.html", "dd/dc2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult_1_1CargoInspectionResult" ],
-    [ "CargoInspectionResultType", "d4/dc2/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateRes0f35c6ca8fc33e7fed7054abe6904ba4.html", "d4/dc2/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateRes0f35c6ca8fc33e7fed7054abe6904ba4" ],
-    [ "execute", "dd/d69/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult.html#a6401476fc311e791a4ca8b8bec621109", null ]
-];

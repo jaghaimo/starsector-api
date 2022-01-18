@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d0/d4b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AICoreOfficerPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-22.5 0,-52.5 146,-52.5 146,-22.5 0,-22.5"/>
 <text text-anchor="start" x="8" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="73" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">AICoreOfficerPlugin</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d3/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AICoreOfficerPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="384,-22.5 384,-52.5 550,-52.5 550,-22.5 384,-22.5"/>
 <text text-anchor="start" x="392" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="467" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">AICoreOfficerPluginImpl</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d9/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseAICoreOfficerPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseAICoreOfficerPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="182,-0.5 182,-30.5 348,-30.5 348,-0.5 182,-0.5"/>
 <text text-anchor="start" x="190" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="265" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseAICoreOfficerPluginImpl</text>

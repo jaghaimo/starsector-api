@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1CommodityRequirement =
+[
+    [ "commodityMatchesRequirement", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1CommodityRequirement.html#a7061dd3aa93693b3247b4d6101d9db54", null ]
+];

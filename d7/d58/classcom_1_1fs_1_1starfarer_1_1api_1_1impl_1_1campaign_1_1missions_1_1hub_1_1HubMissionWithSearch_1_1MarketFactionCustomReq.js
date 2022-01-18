@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionCustomReq =
-[
-    [ "MarketFactionCustomReq", "d7/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionCustomReq.html#a5e61305c49b236b71954192c5a60e59b", null ],
-    [ "marketMatchesRequirement", "d7/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketFactionCustomReq.html#a0b60e91562408be9eef7fe798cf23ce0", null ]
-];

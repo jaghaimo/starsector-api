@@ -1,0 +1,25 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl =
+[
+    [ "getEncounterMusicSetId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a6af7ca47864cc4591e98ecc34f0bee08", null ],
+    [ "getHyperspaceMusicSetId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a72eede1ee7a8cf099066ec992c96f8fa", null ],
+    [ "getMarketMusicSetId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#af41df64ee9e9403528cd521cb23db9fa", null ],
+    [ "getMusicSetIdForCampaignStateToken", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a5c64f4e702b03c368ac6e8f5c6648e35", null ],
+    [ "getMusicSetIdForCombat", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#abfc7b4618419a66ee005c764939373e1", null ],
+    [ "getMusicSetIdForTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#aca51daac9d450f29a7039669e2b4ab41", null ],
+    [ "getPlanetSurveyMusicSetId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#ab2cb85c22afc36f706cf3ed37ce36846", null ],
+    [ "getStarSystemMusicSetId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a50f831ae98cdf74f0579727e6b49f2f4", null ],
+    [ "getStateTokenForCampaignLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a727e95cb812e2f7923e0ea788be42782", null ],
+    [ "getToken", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a11e63eca2057a69c6ddd37f10e32c3c9", null ],
+    [ "CAMPAIGN_HYPERSPACE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a0c583d09860b1072384610709271b9d2", null ],
+    [ "CAMPAIGN_SYSTEM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a55b94bfe773270ae7bd8c59098d84b6a", null ],
+    [ "COMBAT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a990a4ea73efda84b784fab7eddd8d7eb", null ],
+    [ "CUSTOM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#ac64f2ee91d93ef8b04c3cfd9e8c4b633", null ],
+    [ "ENCOUNTER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a78735ba537a9971f040c0657c3c451db", null ],
+    [ "KEEP_PLAYING_LOCATION_MUSIC_DURING_ENCOUNTER_MEM_KEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a828f5b6183e24f193e3dc9dfc7ca5ae8", null ],
+    [ "MARKET", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#ab02f528f53ab7a028beb5e98f6382cb1", null ],
+    [ "MUSIC_SET_MEM_KEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#ad18e66f8283f72ee51470ba1543019e7", null ],
+    [ "PLANET_SURVEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#a8bfa264a8b4aa18f318582435f63ba80", null ],
+    [ "stringTokens", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#aab75669d10f17864e5c95188978212fa", null ],
+    [ "SYSTEM_MUSIC_PREFIX", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#ae22ab31b947301d38805ebeb88edf7c2", null ],
+    [ "TITLE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1MusicPlayerPluginImpl.html#afc80eabd77502b6f44b34680627a49ea", null ]
+];
