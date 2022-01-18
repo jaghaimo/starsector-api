@@ -1,4 +1,0 @@
-var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci94e51af396b9f0721ebe1b0e0552adfe =
-[
-    [ "createSpecialPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci94e51af396b9f0721ebe1b0e0552adfe.html#a1e392a1b843f03d1254378a4e3847f5a", null ]
-];

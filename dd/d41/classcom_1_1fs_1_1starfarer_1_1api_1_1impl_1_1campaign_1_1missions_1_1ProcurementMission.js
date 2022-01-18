@@ -1,0 +1,28 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission =
+[
+    [ "Stage", "de/d81/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission_1_1Stage.html", "de/d81/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission_1_1Stage" ],
+    [ "Variation", "d3/d49/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission_1_1Variation.html", "d3/d49/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission_1_1Variation" ],
+    [ "accept", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a5d042af5d4aa2991183d5ddd8346fad2", null ],
+    [ "addDescriptionForNonEndStage", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a4d40e6fd1c2c3e181ddac95928074ac9", null ],
+    [ "addNextStepText", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a3fece03ff89514c3a02b8602bdcf8979", null ],
+    [ "create", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#ac967944dc4e77ca3fb27090d08fe0c4d", null ],
+    [ "getBaseName", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#afab593b5300def4a9c616341ff39ad4f", null ],
+    [ "getSpec", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#ad46cbfa60eae417ee14becdf1c596f61", null ],
+    [ "updateInteractionDataImpl", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#ae5850cb7c008d46497ec797752205844", null ],
+    [ "BASE_PRICE_MULT", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a4e03b3db6f268fd6ff890f1784aa8560", null ],
+    [ "commodityId", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a1f4fbc7a4a304663b45fc87157b18703", null ],
+    [ "deliveryContact", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a1addcc4696c073ae606619ca882ab352", null ],
+    [ "deliveryMarket", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a420e9b941b715bd70f5391d32170d497", null ],
+    [ "ILLEGAL_QUANTITY_MULT", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a95300238626c63f998797e7b7e3ef689", null ],
+    [ "MAX_BASE_VALUE", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#aadbfc3f13f00a16bc467974fdde62cec", null ],
+    [ "MIN_BASE_VALUE", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a9c637d4f7065298363d938eeb92a5e09", null ],
+    [ "MISSION_DAYS", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a2822be8328456ac2e0227d7d72bd685a", null ],
+    [ "pricePerUnit", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a027cfdbb3571b210201e6750e51518c5", null ],
+    [ "PROB_BAR_UNDERWORLD", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a560e8dda9e371a5204bdf5ad341dedd1", null ],
+    [ "PROB_COMPLICATIONS", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a83b007059348ae7c44620ac92baaf310", null ],
+    [ "PROB_ILLEGAL_IF_UNDERWORLD", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a6bec8477abcf6324e9083de0c6cfd3f4", null ],
+    [ "PROB_REMOTE", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#ab9b93ba3e16bd0dda386df23a6c16bc8", null ],
+    [ "quantity", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#aa0e3a41103f2222f03273f840bf6ecc9", null ],
+    [ "spec", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#aee2646c74bc776127d06950b1e5b9049", null ],
+    [ "variation", "dd/d41/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a092ac16bf3ada605c5018df87f8b768c", null ]
+];

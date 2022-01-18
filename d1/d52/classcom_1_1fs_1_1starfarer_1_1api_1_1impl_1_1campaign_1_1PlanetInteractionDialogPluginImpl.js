@@ -1,0 +1,26 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl =
+[
+    [ "OptionId", "d3/d1f/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl_1_1OptionId.html", "d3/d1f/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl_1_1OptionId" ],
+    [ "addText", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a3eb2c5f2224a3f2e6004d90af305d07f", null ],
+    [ "advance", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a0939565d3cd0a92b84a93fa0140f5fce", null ],
+    [ "appendText", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a72c49a7f4c9d53d8a76a75a744d3214f", null ],
+    [ "backFromEngagement", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#ad882b8b6724fdedaad5a49a27619c302", null ],
+    [ "createInitialOptions", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a64c07f8581e4d439935372044846db3a", null ],
+    [ "getContext", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a2763f1a2146a9cb97b0191b565430c53", null ],
+    [ "getMemoryMap", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#ad9d3449e3ce7b57b9bf93676e9ac8166", null ],
+    [ "getString", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a34431f9f47d7cea69efee0237fd41478", null ],
+    [ "init", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#ab3068dbcb525ade6d093eba9827ec8db", null ],
+    [ "optionMousedOver", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a94e964672b9e1f32d62359bc40b76be3", null ],
+    [ "optionSelected", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a785863ce9a2cbd802e8a1f281e358c8e", null ],
+    [ "ADDED_KEY", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#ac3b1e39d3c8e99cb379c6ba3ec5bc07a", null ],
+    [ "dialog", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a53ade763b96c1ccc8ac1ca56fb402466", null ],
+    [ "HIGHLIGHT_COLOR", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a744ed0e8d4613167ca2c681a45022c87", null ],
+    [ "lastOptionMousedOver", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a9a00ea3b7b02c94f54fdbd51a9e8f10b", null ],
+    [ "options", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a3e1aeeac7e60eb210c6882db343b152d", null ],
+    [ "planet", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#abc441968adef746c48b380d4c7bde31c", null ],
+    [ "playerFleet", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a1063795b761e0e59e2ffd3e70220d391", null ],
+    [ "STABLE_FUEL_REQ", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a8dcf2a21975c285bb1a12fa95300f416", null ],
+    [ "STABLE_MACHINERY_REQ", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a0a5e2ad22fc18c047d1e6c2562406b95", null ],
+    [ "textPanel", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#a608b4d4357d0583e324f84911582f1dd", null ],
+    [ "visual", "d1/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1PlanetInteractionDialogPluginImpl.html#aea96774b77926c6d7c0d5a0db50887c3", null ]
+];

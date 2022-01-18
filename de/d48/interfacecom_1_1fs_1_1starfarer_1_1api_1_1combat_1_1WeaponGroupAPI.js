@@ -1,0 +1,16 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI =
+[
+    [ "addWeaponAPI", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#a2d99f9ccecb048f6a731281c08ba2113", null ],
+    [ "getActiveWeapon", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#affc9a6a3733fd207c7a4d32bddd45b53", null ],
+    [ "getAIPlugins", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#abf6eef8f5788df341ee9eca28433f7eb", null ],
+    [ "getAutofirePlugin", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#a47b51e8b81c54353c27fde287d677f88", null ],
+    [ "getShip", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#a1d18cdc6c14b33084f6afaa2806e902e", null ],
+    [ "getType", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#a363e496ff7f11e0c0f6cf358512fb9f4", null ],
+    [ "getWeaponsCopy", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#a945000647686eb70728f793f26c9c115", null ],
+    [ "isAutofiring", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#ae6f6fed99ebd9021e9cff5bde251c3f9", null ],
+    [ "isUsingDefaultAI", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#a43e45d3d208a1cc7236f4aa6a8bedc7d", null ],
+    [ "removeWeapon", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#a09120261dcb71ee0a99c5ebb65a95830", null ],
+    [ "setType", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#aa17f9982cd36ab89bf805466d05a772a", null ],
+    [ "toggleOff", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#aa9b01efba7bb39bab28087a8b6521bf2", null ],
+    [ "toggleOn", "de/d48/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponGroupAPI.html#aeb164d07b2057778c46318856d29a217", null ]
+];

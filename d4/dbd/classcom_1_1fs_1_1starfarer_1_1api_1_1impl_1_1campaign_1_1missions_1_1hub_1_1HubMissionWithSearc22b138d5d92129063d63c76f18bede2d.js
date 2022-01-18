@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc22b138d5d92129063d63c76f18bede2d =
+[
+    [ "MultipleCommodityRequirements", "d4/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc22b138d5d92129063d63c76f18bede2d.html#a223927bb6d28e63bb410b04958d1be50", null ],
+    [ "commodityMatchesRequirement", "d4/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc22b138d5d92129063d63c76f18bede2d.html#a7144785eaf42221306e2685a6c48879f", null ],
+    [ "mode", "d4/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc22b138d5d92129063d63c76f18bede2d.html#acb0144788bfcc13025fa71b8675a55ea", null ],
+    [ "reqs", "d4/dbd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc22b138d5d92129063d63c76f18bede2d.html#a621794f566a51bf1443f6a1f3c9cf0bd", null ]
+];

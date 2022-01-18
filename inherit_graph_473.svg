@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventb7443876afc9cc66909b145cad76cf4d.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="d2/d43/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BarEventb7443876afc9cc66909b145cad76cf4d.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-294.5 0,-324.5 233,-324.5 233,-294.5 0,-294.5"/>
 <text text-anchor="start" x="8" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="116.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">BarEventManager.GenericBarEventCreator</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="d0/df3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="269,-294.5 269,-324.5 502,-324.5 502,-294.5 269,-294.5"/>
 <text text-anchor="start" x="277" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="385.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseBarEventCreator</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1CorruptPLClerkSuppliesBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="dc/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1CorruptPLClerkSuppliesBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-588.5 557.5,-618.5 790.5,-618.5 790.5,-588.5 557.5,-588.5"/>
 <text text-anchor="start" x="565.5" y="-606.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-595.5" font-family="Helvetica,sans-Serif" font-size="10.00">CorruptPLClerkSuppliesBarEventCreator</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="de/da4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-539.5 557.5,-569.5 790.5,-569.5 790.5,-539.5 557.5,-539.5"/>
 <text text-anchor="start" x="565.5" y="-557.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-546.5" font-family="Helvetica,sans-Serif" font-size="10.00">DeliveryBarEventCreator</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DiktatLobsterBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="db/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DiktatLobsterBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-490.5 557.5,-520.5 790.5,-520.5 790.5,-490.5 557.5,-490.5"/>
 <text text-anchor="start" x="565.5" y="-508.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiktatLobsterBarEventCreator</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="de/d2a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-441.5 557.5,-471.5 790.5,-471.5 790.5,-441.5 557.5,-441.5"/>
 <text text-anchor="start" x="565.5" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">LuddicCraftBarEventCreator</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="da/dc5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-392.5 557.5,-422.5 790.5,-422.5 790.5,-392.5 557.5,-392.5"/>
 <text text-anchor="start" x="565.5" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">LuddicFarmerBarEventCreator</text>
@@ -117,7 +117,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="d6/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1MercsOnTheRunBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-343.5 557.5,-373.5 790.5,-373.5 790.5,-343.5 557.5,-343.5"/>
 <text text-anchor="start" x="565.5" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">MercsOnTheRunBarEventCreator</text>
@@ -133,7 +133,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="d8/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1PlanetaryShieldBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-294.5 557.5,-324.5 790.5,-324.5 790.5,-294.5 557.5,-294.5"/>
 <text text-anchor="start" x="565.5" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">PlanetaryShieldBarEventCreator</text>
@@ -149,7 +149,7 @@
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="d6/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-245.5 557.5,-275.5 790.5,-275.5 790.5,-245.5 557.5,-245.5"/>
 <text text-anchor="start" x="565.5" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">QuartermasterCargoSwapBarEventCreator</text>
@@ -165,7 +165,7 @@
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="d7/db1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1ScientistAICoreBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-196.5 557.5,-226.5 790.5,-226.5 790.5,-196.5 557.5,-196.5"/>
 <text text-anchor="start" x="565.5" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">ScientistAICoreBarEventCreator</text>
@@ -181,7 +181,7 @@
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1SpecBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="de/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1SpecBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-147.5 557.5,-177.5 790.5,-177.5 790.5,-147.5 557.5,-147.5"/>
 <text text-anchor="start" x="565.5" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">SpecBarEventCreator</text>
@@ -197,7 +197,7 @@
 <!-- Node12 -->
 <g id="node13" class="node">
 <title>Node12</title>
-<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="df/dc4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-98.5 557.5,-128.5 790.5,-128.5 790.5,-98.5 557.5,-98.5"/>
 <text text-anchor="start" x="565.5" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">TriTachLoanBarEventCreator</text>
@@ -213,7 +213,7 @@
 <!-- Node13 -->
 <g id="node14" class="node">
 <title>Node13</title>
-<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="df/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachMajorLoanBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="557.5,-49.5 557.5,-79.5 790.5,-79.5 790.5,-49.5 557.5,-49.5"/>
 <text text-anchor="start" x="565.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.</text>
 <text text-anchor="middle" x="674" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">TriTachMajorLoanBarEventCreator</text>
@@ -229,7 +229,7 @@
 <!-- Node14 -->
 <g id="node15" class="node">
 <title>Node14</title>
-<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="dc/dc7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="538,-0.5 538,-30.5 810,-30.5 810,-0.5 538,-0.5"/>
 <text text-anchor="start" x="546" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.</text>
 <text text-anchor="middle" x="674" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">HistorianBarEventCreator</text>

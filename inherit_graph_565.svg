@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1ConditionChecker.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="d9/d5b/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1ConditionChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-269.5 0,-299.5 225,-299.5 225,-269.5 0,-269.5"/>
 <text text-anchor="start" x="8" y="-287.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="112.5" y="-276.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.ConditionChecker</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1AlwaysTrueChecker.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="d9/d4f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1AlwaysTrueChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-539.5 261,-569.5 486,-569.5 486,-539.5 261,-539.5"/>
 <text text-anchor="start" x="269" y="-557.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-546.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.AlwaysTrueChecker</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1DaysElapsedChecker.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="d1/dc6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1DaysElapsedChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-490.5 261,-520.5 486,-520.5 486,-490.5 261,-490.5"/>
 <text text-anchor="start" x="269" y="-508.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.DaysElapsedChecker</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1EnteredLocationChecker.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="d4/daa/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1EnteredLocationChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-441.5 261,-471.5 486,-471.5 486,-441.5 261,-441.5"/>
 <text text-anchor="start" x="269" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.EnteredLocationChecker</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1EntityNotAliveChecker.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="d2/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1EntityNotAliveChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-392.5 261,-422.5 486,-422.5 486,-392.5 261,-392.5"/>
 <text text-anchor="start" x="269" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.EntityNotAliveChecker</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1GlobalBooleanChecker.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="d3/d27/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1GlobalBooleanChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-343.5 261,-373.5 486,-373.5 486,-343.5 261,-343.5"/>
 <text text-anchor="start" x="269" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.GlobalBooleanChecker</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1HostilitiesEndedChecker.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="d6/d91/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1HostilitiesEndedChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-294.5 261,-324.5 486,-324.5 486,-294.5 261,-294.5"/>
 <text text-anchor="start" x="269" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.HostilitiesEndedChecker</text>
@@ -117,7 +117,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1HostilitiesStartedChecker.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="d6/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1HostilitiesStartedChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-245.5 261,-275.5 486,-275.5 486,-245.5 261,-245.5"/>
 <text text-anchor="start" x="269" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.HostilitiesStartedChecker</text>
@@ -133,7 +133,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1InCommRelayRangeChecker.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="db/dc3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1InCommRelayRangeChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-196.5 261,-226.5 486,-226.5 486,-196.5 261,-196.5"/>
 <text text-anchor="start" x="269" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.InCommRelayRangeChecker</text>
@@ -149,7 +149,7 @@
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1InHyperRangeOfEntityChecker.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="d6/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1InHyperRangeOfEntityChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-147.5 261,-177.5 486,-177.5 486,-147.5 261,-147.5"/>
 <text text-anchor="start" x="269" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.InHyperRangeOfEntityChecker</text>
@@ -165,7 +165,7 @@
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1InRangeOfEntityChecker.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="d4/de7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1InRangeOfEntityChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-98.5 261,-128.5 486,-128.5 486,-98.5 261,-98.5"/>
 <text text-anchor="start" x="269" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.InRangeOfEntityChecker</text>
@@ -181,7 +181,7 @@
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1MarketDecivChecker.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="d1/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1MarketDecivChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-49.5 261,-79.5 486,-79.5 486,-49.5 261,-49.5"/>
 <text text-anchor="start" x="269" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.MarketDecivChecker</text>
@@ -197,7 +197,7 @@
 <!-- Node12 -->
 <g id="node13" class="node">
 <title>Node12</title>
-<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1MemoryBooleanChecker.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="d3/d04/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1MemoryBooleanChecker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="261,-0.5 261,-30.5 486,-30.5 486,-0.5 261,-0.5"/>
 <text text-anchor="start" x="269" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHubMission.MemoryBooleanChecker</text>

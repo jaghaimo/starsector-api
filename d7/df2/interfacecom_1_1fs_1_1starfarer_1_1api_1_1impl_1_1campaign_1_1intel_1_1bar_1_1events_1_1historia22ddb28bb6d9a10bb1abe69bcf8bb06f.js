@@ -1,0 +1,8 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f =
+[
+    [ "createOffer", "d7/df2/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f.html#a6992fb5d527ec52314653194cea44380", null ],
+    [ "getFrequency", "d7/df2/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f.html#a444b6c501862e8d09205baaa4884ada7", null ],
+    [ "getOfferId", "d7/df2/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f.html#adca8b75eb5ef271578c8ae46aca27acb", null ],
+    [ "ignoresLimit", "d7/df2/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f.html#aa3b446adf4dfd2ed2a4c056707e80adc", null ],
+    [ "notifyAccepted", "d7/df2/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f.html#a179101b409a310ef945a169a86af1553", null ]
+];

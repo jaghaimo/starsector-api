@@ -1,0 +1,9 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b =
+[
+    [ "endWithContinue", "d9/d29/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html#a56e0253963431f5c1c3cc556051bf1cd", null ],
+    [ "init", "d9/d29/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html#ad15dcf07370bd45214c463098a46e956", null ],
+    [ "isDone", "d9/d29/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html#a6d27298518b8f8933230d5e076974b20", null ],
+    [ "optionSelected", "d9/d29/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html#ae5176485f625e4f4dcaf569af4793db2", null ],
+    [ "shouldAbortSalvageAndRemoveEntity", "d9/d29/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html#a5c8b768d99c6415c663af9865b11eda7", null ],
+    [ "shouldShowAgain", "d9/d29/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html#a45303ee19c85b378f0f81632e0715204", null ]
+];

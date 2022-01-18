@@ -1,0 +1,8 @@
+var enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin_1_1InstallableItemDescriptionMode =
+[
+    [ "CARGO_TOOLTIP", "de/d53/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin_1_1InstallableItemDescriptionMode.html#a2e432ac9016299f6ad15a0de98b6b327", null ],
+    [ "INDUSTRY_MENU_TOOLTIP", "de/d53/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin_1_1InstallableItemDescriptionMode.html#a5b99e97604e51e61d8c7d8527aa18ab3", null ],
+    [ "INDUSTRY_TOOLTIP", "de/d53/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin_1_1InstallableItemDescriptionMode.html#adcb7412ef0567884c2eb5c9cce9fbead", null ],
+    [ "MANAGE_ITEM_DIALOG_INSTALLED", "de/d53/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin_1_1InstallableItemDescriptionMode.html#afa7525027920329e4afc93cb8fb00b13", null ],
+    [ "MANAGE_ITEM_DIALOG_LIST", "de/d53/enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin_1_1InstallableItemDescriptionMode.html#ae70c9ba87d8262c0402bc13c60a68bbf", null ]
+];

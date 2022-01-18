@@ -1,0 +1,6 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggd5dd0c6cb24266f427f3f0eccd90ba27 =
+[
+    [ "MakeNonStoryCriticalAction", "d4/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggd5dd0c6cb24266f427f3f0eccd90ba27.html#afb10a333bd744559fd9a0f18632281a2", null ],
+    [ "doAction", "d4/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggd5dd0c6cb24266f427f3f0eccd90ba27.html#a70e48536a7d9bf2b811714487dec569b", null ],
+    [ "memoryArray", "d4/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggd5dd0c6cb24266f427f3f0eccd90ba27.html#a7a393ef97df5deacf8b154174b2bc53a", null ]
+];

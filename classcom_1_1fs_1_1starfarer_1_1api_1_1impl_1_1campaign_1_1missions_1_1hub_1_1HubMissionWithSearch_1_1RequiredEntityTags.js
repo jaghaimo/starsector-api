@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredEntityTags =
-[
-    [ "RequiredEntityTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredEntityTags.html#a2e69f892eab887db30f5438f4ac4b9bb", null ],
-    [ "entityMatchesRequirement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredEntityTags.html#a3060ce7a601f7c2fc22d7d055f46294b", null ]
-];

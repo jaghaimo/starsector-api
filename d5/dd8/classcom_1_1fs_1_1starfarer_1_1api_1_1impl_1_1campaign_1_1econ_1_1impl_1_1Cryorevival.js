@@ -1,0 +1,28 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival =
+[
+    [ "CryosleeperFactor", "d4/d3b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival_1_1CryosleeperFactor.html", "d4/d3b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival_1_1CryosleeperFactor" ],
+    [ "addAlphaCoreDescription", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a661a532a9dbf35b73c349e4ff7923554", null ],
+    [ "addImproveDesc", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#aece0d31786f1d8bdd572a8ee073f5075", null ],
+    [ "addPostDemandSection", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a3c3edfd111408799e8006fb42e02acb0", null ],
+    [ "apply", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a5be48db2f23dd0f79f303de3adaf9a1d", null ],
+    [ "applyAlphaCoreModifiers", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a7bc7ee572d83a95510559470b7faccd8", null ],
+    [ "applyAlphaCoreSupplyAndDemandModifiers", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a8b6721666e1042f29ef977f38b83fd15", null ],
+    [ "applyNoAICoreModifiers", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a365d2aa873d33474cb16129140c5592c", null ],
+    [ "canImprove", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a75bb8174afeb8547846a3a25b4f45f2a", null ],
+    [ "getDemandMetPopulationMult", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#ab647b12c1b54ec96c3020835c5d2280b", null ],
+    [ "getDistancePopulationMult", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#ae28a5886d71f48610c09cf7a626c3988", null ],
+    [ "getImmigrationBonus", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#aff2f10af285b0bc4994e584e7b4eee3e", null ],
+    [ "getMaxImmigrationBonus", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a222801775839081e1647acbdb79e806e", null ],
+    [ "getNearestCryosleeper", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#af9da6bec261a606b688992ff70e84855", null ],
+    [ "getUnavailableReason", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a453935e7458253eec99087ebbfa82e6c", null ],
+    [ "hasPostDemandSection", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a29feb3c44a448a05dc61d62ee5940272", null ],
+    [ "isAvailableToBuild", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a2662b63a51b4414debb26d9a6120e0d1", null ],
+    [ "modifyIncoming", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a8aab6578776c0289a74af5a4f0e8ee51", null ],
+    [ "showWhenUnavailable", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#aba00af9ecead214e7a822fb68818017c", null ],
+    [ "unapply", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a535bd0952537aa7d0f32f05ece50cf05", null ],
+    [ "ALPHA_CORE_BONUS", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a8113b01b7609eda9035a69002ecd0261", null ],
+    [ "IMPROVE_BONUS", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a7d179d0d5859c8dfb805880fa59e383e", null ],
+    [ "MAX_BONUS_DIST_LY", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a49753d96d09508401ac1252e1a2ba7ce", null ],
+    [ "MAX_BONUS_WHEN_UNMET_DEMAND", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#a859322221c23008cf93ef968a98c4816", null ],
+    [ "MIN_BONUS_MULT", "d5/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Cryorevival.html#adbcea077898bc7248870d8e8bdef4325", null ]
+];

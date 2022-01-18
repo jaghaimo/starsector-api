@@ -1,0 +1,6 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg21add73a58479ba1da8bc56cdd91331d =
+[
+    [ "OrderFleetInterceptPlayerAction", "d2/d80/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg21add73a58479ba1da8bc56cdd91331d.html#ab6797583414d12e4ee96a94e875d9719", null ],
+    [ "doAction", "d2/d80/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg21add73a58479ba1da8bc56cdd91331d.html#a885e8ac10e73f5fb24f43862207bfa4a", null ],
+    [ "makeHostile", "d2/d80/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg21add73a58479ba1da8bc56cdd91331d.html#a782b0d4683dac6a539043e37716984dd", null ]
+];

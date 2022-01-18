@@ -1,0 +1,6 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1UnsetEntityFlagsAction =
+[
+    [ "UnsetEntityFlagsAction", "d4/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1UnsetEntityFlagsAction.html#a596a81aa0f454ebad5f5a29d18a3775d", null ],
+    [ "doAction", "d4/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1UnsetEntityFlagsAction.html#ac72e9e41156d8c748dac7ee34c99caa7", null ],
+    [ "flags", "d4/d02/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1UnsetEntityFlagsAction.html#a097eb8db3f9d425bb49b49082f764fc4", null ]
+];

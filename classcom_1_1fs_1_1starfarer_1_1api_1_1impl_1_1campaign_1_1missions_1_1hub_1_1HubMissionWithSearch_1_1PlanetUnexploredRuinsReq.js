@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnexploredRuinsReq =
-[
-    [ "PlanetUnexploredRuinsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnexploredRuinsReq.html#a0e30934493041fb8fda12c83bb1dbe36", null ],
-    [ "PlanetUnexploredRuinsReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnexploredRuinsReq.html#aca080d504ea200e1b23a54d5e7c5fbcd", null ],
-    [ "planetMatchesRequirement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnexploredRuinsReq.html#af057f8d21be713ee51aca0ab10c61903", null ],
-    [ "negate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnexploredRuinsReq.html#a7a088e2cf8b5239b7045d6e27f503e2b", null ]
-];

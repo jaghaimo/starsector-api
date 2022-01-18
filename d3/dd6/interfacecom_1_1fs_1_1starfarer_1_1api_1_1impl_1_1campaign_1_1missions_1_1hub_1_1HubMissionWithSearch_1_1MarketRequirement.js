@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketRequirement =
+[
+    [ "marketMatchesRequirement", "d3/dd6/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketRequirement.html#af9ff2d58f158252a5469967a3bd2f847", null ]
+];

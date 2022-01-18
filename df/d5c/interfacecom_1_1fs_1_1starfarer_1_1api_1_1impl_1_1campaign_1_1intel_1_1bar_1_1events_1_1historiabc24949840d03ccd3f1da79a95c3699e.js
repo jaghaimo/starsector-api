@@ -1,0 +1,6 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historiabc24949840d03ccd3f1da79a95c3699e =
+[
+    [ "getId", "df/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historiabc24949840d03ccd3f1da79a95c3699e.html#ae41d2e453dd9375b18c9121c2a574752", null ],
+    [ "getText", "df/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historiabc24949840d03ccd3f1da79a95c3699e.html#a6288173060c4a4a7e5cd60ad70801839", null ],
+    [ "getWeight", "df/d5c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historiabc24949840d03ccd3f1da79a95c3699e.html#a08a3b8ea4e55e3b6c71e13469e7ad280", null ]
+];

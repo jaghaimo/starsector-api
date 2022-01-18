@@ -1,0 +1,26 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow =
+[
+    [ "EMPArcHitType", "d5/d4d/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow_1_1EMPArcHitType.html", "d5/d4d/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow_1_1EMPArcHitType" ],
+    [ "RealityDisruptorChargeGlow", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a245e283b0257485ef8a911faacd74f37", null ],
+    [ "addChargingParticles", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a23a44fa17fae40c5d4221af8fe38a7ac", null ],
+    [ "advance", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a5377725d4a22433d0130f71b25e70742", null ],
+    [ "attachToProjectile", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a88258c52c61575fccf5be0fc929517bc", null ],
+    [ "findTarget", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#afe47f5b433e32e92c4c1cf6c9c660fe3", null ],
+    [ "getGlobalAlphaMult", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#ac6421c2cfc68ecd4a849fe5512db7e78", null ],
+    [ "getRenderRadius", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a6f113c7473a91cceeb17b83b16612ef2", null ],
+    [ "isExpired", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a77ffc738a7e2bbdd0600b281657c9cbb", null ],
+    [ "isProjectileExpired", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a638479b1b9ca88cc2cf4ea6a2b5b4c5b", null ],
+    [ "isWeaponCharging", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a7d5fc20bafa7b7b5676cc8ad0c7dd5f8", null ],
+    [ "pickNoTargetDest", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a9a90a7cdfa65928aa662d9e638a6be9e", null ],
+    [ "render", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#aacd04111f213bec402d6f54dd335835f", null ],
+    [ "spawnArc", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a4aaed80b6c39420c6146b42da894b140", null ],
+    [ "spawnEMPParticles", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#abeaa6d23741c7b4471645ffda4b4327a", null ],
+    [ "arcInterval", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a5e15bbe126faf5d94849e8fe65785b9e", null ],
+    [ "delay", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a3b9897c422450c29da5d8e96c4b18546", null ],
+    [ "interval", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a77d967965404c11956f6f701c3cd7445", null ],
+    [ "MAX_ARC_RANGE", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#ad835a0802c30cf7773acbdfbf08e3ffc", null ],
+    [ "proj", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#ada3907203a6702582d18d8a8ca81ec1f", null ],
+    [ "RIFT_COLOR", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#ad7f42315196673f9345aff17ccfd8e85", null ],
+    [ "UNDERCOLOR", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#ad4d28c30291b60bf772f1963239b018d", null ],
+    [ "weapon", "d1/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a52864712506b5740d098f77fac08aae5", null ]
+];

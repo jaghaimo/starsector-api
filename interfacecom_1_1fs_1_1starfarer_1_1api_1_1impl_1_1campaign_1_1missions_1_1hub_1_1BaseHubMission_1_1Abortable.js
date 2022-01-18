@@ -1,4 +1,0 @@
-var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1Abortable =
-[
-    [ "abort", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1Abortable.html#a70e6927b475ad249a3d13eecb8ab6377", null ]
-];

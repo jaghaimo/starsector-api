@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="d7/df2/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia22ddb28bb6d9a10bb1abe69bcf8bb06f.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-48.5 0,-78.5 272,-78.5 272,-48.5 0,-48.5"/>
 <text text-anchor="start" x="8" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.</text>
 <text text-anchor="middle" x="136" y="-55.5" font-family="Helvetica,sans-Serif" font-size="10.00">HistorianData.HistorianOfferCreator</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="db/df9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="308,-48.5 308,-78.5 580,-78.5 580,-48.5 308,-48.5"/>
 <text text-anchor="start" x="316" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.</text>
 <text text-anchor="middle" x="444" y="-55.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseHistorianOfferCreator</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BlueprintOfferCreator.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="d6/dcf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BlueprintOfferCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="616,-73.5 616,-103.5 888,-103.5 888,-73.5 616,-73.5"/>
 <text text-anchor="start" x="624" y="-91.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.</text>
 <text text-anchor="middle" x="752" y="-80.5" font-family="Helvetica,sans-Serif" font-size="10.00">BlueprintOfferCreator</text>
@@ -53,7 +53,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="dc/d8d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="616,-24.5 616,-54.5 888,-54.5 888,-24.5 616,-24.5"/>
 <text text-anchor="start" x="624" y="-42.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.</text>
 <text text-anchor="middle" x="752" y="-31.5" font-family="Helvetica,sans-Serif" font-size="10.00">DonationOfferCreator</text>
@@ -69,7 +69,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="dc/d78/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="924,-147.5 924,-177.5 1196,-177.5 1196,-147.5 924,-147.5"/>
 <text text-anchor="start" x="932" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.</text>
 <text text-anchor="middle" x="1060" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">FighterBlueprintOfferCreator</text>
@@ -85,7 +85,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="d2/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="924,-98.5 924,-128.5 1196,-128.5 1196,-98.5 924,-98.5"/>
 <text text-anchor="start" x="932" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.</text>
 <text text-anchor="middle" x="1060" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShipBlueprintOfferCreator</text>
@@ -101,7 +101,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="d6/d95/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="924,-49.5 924,-79.5 1196,-79.5 1196,-49.5 924,-49.5"/>
 <text text-anchor="start" x="932" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.</text>
 <text text-anchor="middle" x="1060" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">SpecialItemOfferCreator</text>
@@ -117,7 +117,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOfferCreator.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="d5/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOfferCreator.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="924,-0.5 924,-30.5 1196,-30.5 1196,-0.5 924,-0.5"/>
 <text text-anchor="start" x="932" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.</text>
 <text text-anchor="middle" x="1060" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">WeaponBlueprintOfferCreator</text>

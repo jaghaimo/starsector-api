@@ -1,0 +1,9 @@
+var enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluepr25186ea622ad2a4b09fd22cd877fcc20 =
+[
+    [ "AUTO_PICK", "d9/d55/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluepr25186ea622ad2a4b09fd22cd877fcc20.html#a2d18044eacdc81bfa7458f3bd5410281", null ],
+    [ "AUTO_PICK_NOT_SYSTEM", "d9/d55/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluepr25186ea622ad2a4b09fd22cd877fcc20.html#ad9976405369bd3c4ad460d999dce7800", null ],
+    [ "PLANET_INTERESTING_PROPERTY", "d9/d55/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluepr25186ea622ad2a4b09fd22cd877fcc20.html#a81ec37f3ba867652461e4c7f7ef34ae6", null ],
+    [ "PLANET_SURVEY_DATA", "d9/d55/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluepr25186ea622ad2a4b09fd22cd877fcc20.html#a5b714d7fadb9f1f5e2d476ce0514d78d", null ],
+    [ "SCRAMBLED", "d9/d55/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluepr25186ea622ad2a4b09fd22cd877fcc20.html#a9a796d9dc6b667591279ec1ca5e8eda7", null ],
+    [ "SYSTEM_PRELIMINARY_SURVEY", "d9/d55/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bluepr25186ea622ad2a4b09fd22cd877fcc20.html#a6b442bc5f3cc49ae79b2fdb2788771e4", null ]
+];

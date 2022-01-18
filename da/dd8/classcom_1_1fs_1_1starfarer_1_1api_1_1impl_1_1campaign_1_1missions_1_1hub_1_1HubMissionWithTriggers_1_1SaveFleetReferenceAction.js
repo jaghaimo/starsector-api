@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SaveFleetReferenceAction =
+[
+    [ "SaveFleetReferenceAction", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SaveFleetReferenceAction.html#af88555eb80e363835c0653d3ab7eaf6b", null ],
+    [ "doAction", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SaveFleetReferenceAction.html#a728d12badaccec9797a8964cc36a2eab", null ],
+    [ "key", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SaveFleetReferenceAction.html#a8471f7a2174cef261535d6097c36567d", null ],
+    [ "memory", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SaveFleetReferenceAction.html#a388c7f53767e25e92774e8ac00f53f1c", null ]
+];

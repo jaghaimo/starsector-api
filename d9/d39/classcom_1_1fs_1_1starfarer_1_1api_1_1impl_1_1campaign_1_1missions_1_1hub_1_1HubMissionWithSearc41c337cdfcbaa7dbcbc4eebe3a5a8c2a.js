@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc41c337cdfcbaa7dbcbc4eebe3a5a8c2a =
+[
+    [ "MarketInDirectionOfOtherMissionsReq", "d9/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc41c337cdfcbaa7dbcbc4eebe3a5a8c2a.html#aa2adf2aa9133b95005a316eedf8ac0f4", null ],
+    [ "marketMatchesRequirement", "d9/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc41c337cdfcbaa7dbcbc4eebe3a5a8c2a.html#ad3da1f3de3a3dc46957960bafae16d47", null ],
+    [ "arcMult", "d9/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc41c337cdfcbaa7dbcbc4eebe3a5a8c2a.html#acf1b0a3587c4a4167c932679ddb6ba44", null ],
+    [ "mission", "d9/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearc41c337cdfcbaa7dbcbc4eebe3a5a8c2a.html#a914542b0cf283d1ba62ee1826e05574b", null ]
+];

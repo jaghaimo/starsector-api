@@ -1,8 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg8b651de8c0cdd6991a4929fd6111fb9e =
-[
-    [ "AddCommodityFractionDropAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg8b651de8c0cdd6991a4929fd6111fb9e.html#a0a32720393bd369d9b27bb8499d98ef6", null ],
-    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg8b651de8c0cdd6991a4929fd6111fb9e.html#a79f6f09c6ad48fbabea7b4f4324f696e", null ],
-    [ "commodityId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg8b651de8c0cdd6991a4929fd6111fb9e.html#abdb42025353fe11fa5707b9c87b21858", null ],
-    [ "dropQuantityBasedOnShipsDestroyed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg8b651de8c0cdd6991a4929fd6111fb9e.html#a652ee273e01e7570c5836a782fc2277a", null ],
-    [ "fraction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg8b651de8c0cdd6991a4929fd6111fb9e.html#a4a7a3f6ea48b02a8c02f88030493d4d7", null ]
-];

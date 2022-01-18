@@ -1,0 +1,16 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin =
+[
+    [ "addHackStatusToTooltip", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a844026b8d7da85301bbf72b434c6f1d4", null ],
+    [ "advance", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a64f13bcc7ea180e9297d5450e4dc758d", null ],
+    [ "getModId", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a68d963b4bcc5f25098a9c6ae65358a5c", null ],
+    [ "init", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a32cee23a3e678a90baf939ba343d8075", null ],
+    [ "isMakeshift", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#aab779ef57164cf07d13245268325364f", null ],
+    [ "printEffect", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a080ed3a6e2decedcff26434112a1a0fd", null ],
+    [ "printNonFunctionalAndHackDescription", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a255d76e30f3f5aec02f4fa4aa8ba10ee", null ],
+    [ "readResolve", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a5af13f45c8fb0b6369548a9d36c54064", null ],
+    [ "respondToFalseSensorReadings", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a2d21a0c5c64c64ee6fa17f5cf0729041", null ],
+    [ "spawnPlayerSensorReading", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a5659bf40020e61aeb335ddb7017a67a5", null ],
+    [ "GHOST_RESPONSE", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a77e22cce3319631f48031de82682dfed", null ],
+    [ "SENSOR_BONUS", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#a69a14c141470e1b8ff9969cea7f71a31", null ],
+    [ "SENSOR_BONUS_MAKESHIFT", "da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html#ab53ae9c1a73b619f87ecec6b6491b736", null ]
+];

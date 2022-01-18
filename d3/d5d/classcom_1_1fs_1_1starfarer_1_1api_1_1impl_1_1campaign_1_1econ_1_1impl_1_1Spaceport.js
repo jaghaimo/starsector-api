@@ -1,0 +1,25 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport =
+[
+    [ "addAlphaCoreDescription", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a389af05d14ec941dfb2bfe10f88745b7", null ],
+    [ "addImproveDesc", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#af90bd4698aa9ba560674f21e7a2d1884", null ],
+    [ "addPostDemandSection", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#ade6ea9e94339c5900908ebb80c2d710e", null ],
+    [ "apply", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a435d9a71a93dc667e571e1012dd535b4", null ],
+    [ "applyAlphaCoreModifiers", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a02b4833789a17162482cccc71fafd69b", null ],
+    [ "applyAlphaCoreSupplyAndDemandModifiers", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a41555afed42eb86a235e7010bd22fc3d", null ],
+    [ "applyImproveModifiers", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a5eb9c91e0d94227a000cc8fd86632ab1", null ],
+    [ "applyNoAICoreModifiers", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a0cbf203f743b6d81faf650ddd1afc9fc", null ],
+    [ "canImprove", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a06ebdee6968e670091958487f8e16021", null ],
+    [ "getPopulationGrowthBonus", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a848e6dff691c6d41e911a5f7406f163c", null ],
+    [ "getUpkeepAffectingDeficit", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a730619744fce94de42ec199e43a4fbea", null ],
+    [ "getUpkeepPenalty", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a562e5c7cf7e9e3cf04a1b0979c2fbb32", null ],
+    [ "hasPostDemandSection", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a5d954241fe8e2084d8a5b8ba9d5ff6f2", null ],
+    [ "modifyIncoming", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a2e35a817a49158a72aa98ae52c116dae", null ],
+    [ "unapply", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a80e9e082583722c798b54c2f639e4b2a", null ],
+    [ "ALPHA_CORE_ACCESSIBILITY", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a739fb442e28a186fb969c43b8490b7d9", null ],
+    [ "BASE_ACCESSIBILITY", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a4fe8a419abe12d82dfc30d08db51fd52", null ],
+    [ "IMPROVE_ACCESSIBILITY", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a5a4fd0f9ec6d6de08945d36caab8ab06", null ],
+    [ "MEGAPORT_ACCESSIBILITY", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a2ab3de862770665944e6b87558806290", null ],
+    [ "OFFICER_PROB_MOD", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a243b4ed75207e2163aad40c5fa7431c0", null ],
+    [ "OFFICER_PROB_MOD_MEGA", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a2b6bcbaab95c394fa1cfb5744f6566df", null ],
+    [ "UPKEEP_MULT_PER_DEFICIT", "d3/d5d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html#a9e5db133b151cd931a5fdafa6ac4147b", null ]
+];

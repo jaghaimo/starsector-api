@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin_bf16432171fd33b7f3c165ca4abc376b =
-[
-    [ "GenerateFleetOfficersPickData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin_bf16432171fd33b7f3c165ca4abc376b.html#aa51f9d8e72fad2c4b9cb7771b61a9686", null ],
-    [ "fleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin_bf16432171fd33b7f3c165ca4abc376b.html#a685f17ef8c376cb71464c6654c1717b8", null ],
-    [ "params", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin_bf16432171fd33b7f3c165ca4abc376b.html#a4f24b6e856397c1c79fada1d71a85c0c", null ]
-];

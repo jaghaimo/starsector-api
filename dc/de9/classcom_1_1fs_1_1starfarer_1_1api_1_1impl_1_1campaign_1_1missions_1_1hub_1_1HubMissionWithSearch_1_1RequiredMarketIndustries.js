@@ -1,0 +1,5 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredMarketIndustries =
+[
+    [ "RequiredMarketIndustries", "dc/de9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredMarketIndustries.html#a5710ab5c31f9d3d82458bb6683c8de40", null ],
+    [ "marketMatchesRequirement", "dc/de9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredMarketIndustries.html#aaaba68075f17390b26b4b150f2ce857e", null ]
+];

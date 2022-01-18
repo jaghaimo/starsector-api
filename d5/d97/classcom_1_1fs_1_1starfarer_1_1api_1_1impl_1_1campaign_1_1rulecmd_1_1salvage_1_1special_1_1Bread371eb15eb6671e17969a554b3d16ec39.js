@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bread371eb15eb6671e17969a554b3d16ec39 =
+[
+    [ "BreadcrumbSpecialData", "d5/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bread371eb15eb6671e17969a554b3d16ec39.html#a9cb5d5f971eb6b14e04e9496b343851a", null ],
+    [ "createSpecialPlugin", "d5/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bread371eb15eb6671e17969a554b3d16ec39.html#abfc62ee44afe238d9acf3819ff77a9bd", null ],
+    [ "targetId", "d5/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bread371eb15eb6671e17969a554b3d16ec39.html#ad9bdea22127a5a1249ce820c2b5ae26f", null ],
+    [ "targetName", "d5/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Bread371eb15eb6671e17969a554b3d16ec39.html#a80097ba247d903f87a371272a5f2b173", null ]
+];

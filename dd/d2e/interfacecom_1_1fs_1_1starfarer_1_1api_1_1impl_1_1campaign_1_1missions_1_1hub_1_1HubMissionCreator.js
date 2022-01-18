@@ -1,0 +1,26 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator =
+[
+    [ "createHubMission", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a9ae4c2f793185ff26d772313758515ed", null ],
+    [ "getAcceptedTimeoutDuration", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#af231646c2cda833bf3db9753f581b7a8", null ],
+    [ "getCompletedTimeoutDuration", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a88041cf09ddf25dce80c4f77f67c53e9", null ],
+    [ "getFailedTimeoutDuration", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a5c7b31a2e15b64da9cd1dc553371a06e", null ],
+    [ "getFrequencyWeight", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#aed7a368bcf3112770cb97f16f08872a5", null ],
+    [ "getGenRandom", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#afe2466be9a5d36d9237f0015d093d60a", null ],
+    [ "getNumCompleted", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a5c416c5b45fd01d1b7b5b15f6936d27f", null ],
+    [ "getNumFailed", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a0ecad2b85bd3b1f464223a87166f89a7", null ],
+    [ "getSpec", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a4e21b546cb89954ddc598dd8a65ff1c5", null ],
+    [ "getSpecId", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a5259d7e6a6f1c14239ba274156770972", null ],
+    [ "getWasShownTimeoutDuration", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a77705579f5f457ca08fad537503bc260", null ],
+    [ "incrCompleted", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a715f6651ec7da805030718b8576ee87a", null ],
+    [ "incrFailed", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a78725ee0757a939b1758d4f2b1156d63", null ],
+    [ "isActive", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#ad5b10d6bfc24fa9c14a22f1ee06364e1", null ],
+    [ "isPriority", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#adf41601fb4347ee19baede290cbbc22c", null ],
+    [ "matchesRep", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a494d97adb4f502b92fdbd39b69ddaa26", null ],
+    [ "setActive", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a8c522905c56187c67be344c0b3b34466", null ],
+    [ "setNumCompleted", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#aecd16b2ac3bb6f930cc737500c5cfd5b", null ],
+    [ "setNumFailed", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#aec89142bbe5fd8fb214dbf014546a752", null ],
+    [ "setSeed", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#aac664a03d6e872df8540184175035f0d", null ],
+    [ "setWasAutoAdded", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#aee329c10f9421334da6628f7a72e9c8c", null ],
+    [ "updateRandom", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#aa91bd894ca5e8cee38e61dd85a766020", null ],
+    [ "wasAutoAdded", "dd/d2e/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html#a604fad8a13f065296fe8f631e994b047", null ]
+];

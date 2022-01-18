@@ -1,0 +1,4 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1CustomStreamRevealer =
+[
+    [ "CustomStreamRevealer", "dc/d42/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager_1_1CustomStreamRevealer.html#aa6f4e8a7dbe9163ac973c7875572cc7b", null ]
+];

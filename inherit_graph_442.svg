@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="d5/d89/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-196.5 0,-226.5 189,-226.5 189,-196.5 0,-196.5"/>
 <text text-anchor="start" x="8" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="94.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">GroundRaidObjectivePlugin</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="db/d0c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BaseGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="225,-196.5 225,-226.5 414,-226.5 414,-196.5 225,-196.5"/>
 <text text-anchor="start" x="233" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="319.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseGroundRaidObjectivePluginImpl</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AICoreGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="d7/de5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AICoreGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="475,-392.5 475,-422.5 664,-422.5 664,-392.5 475,-392.5"/>
 <text text-anchor="start" x="483" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="569.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">AICoreGroundRaidObjectivePluginImpl</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="d9/db4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="463.5,-343.5 463.5,-373.5 675.5,-373.5 675.5,-343.5 463.5,-343.5"/>
 <text text-anchor="start" x="471.5" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="569.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractGoalGroundRaidObjectivePluginImpl</text>
@@ -69,7 +69,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BlueprintGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="d3/dec/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1BlueprintGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="473,-294.5 473,-324.5 666,-324.5 666,-294.5 473,-294.5"/>
 <text text-anchor="start" x="481" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="569.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">BlueprintGroundRaidObjectivePluginImpl</text>
@@ -85,7 +85,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CommodityGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="de/dab/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CommodityGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="468,-245.5 468,-275.5 671,-275.5 671,-245.5 468,-245.5"/>
 <text text-anchor="start" x="476" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="569.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">CommodityGroundRaidObjectivePluginImpl</text>
@@ -101,7 +101,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="de/d20/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="475,-196.5 475,-226.5 664,-226.5 664,-196.5 475,-196.5"/>
 <text text-anchor="start" x="483" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="569.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">CreditsGroundRaidObjectivePluginImpl</text>
@@ -117,7 +117,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="df/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1DisruptIndustryRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="475,-147.5 475,-177.5 664,-177.5 664,-147.5 475,-147.5"/>
 <text text-anchor="start" x="483" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="569.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">DisruptIndustryRaidObjectivePluginImpl</text>
@@ -133,7 +133,7 @@
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="d4/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1ShipWeaponsGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="462,-98.5 462,-128.5 677,-128.5 677,-98.5 462,-98.5"/>
 <text text-anchor="start" x="470" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="569.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShipWeaponsGroundRaidObjectivePluginImpl</text>
@@ -149,7 +149,7 @@
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SpecialItemRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="d0/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SpecialItemRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="475,-49.5 475,-79.5 664,-79.5 664,-49.5 475,-49.5"/>
 <text text-anchor="start" x="483" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="569.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">SpecialItemRaidObjectivePluginImpl</text>
@@ -165,7 +165,7 @@
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective_1_1CustomRaidObjective.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="dd/d67/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AddRaidObjective_1_1CustomRaidObjective.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="450,-0.5 450,-30.5 689,-30.5 689,-0.5 450,-0.5"/>
 <text text-anchor="start" x="458" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="569.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddRaidObjective.CustomRaidObjective</text>
@@ -181,7 +181,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArrayGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="dc/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1SolarArrayGroundRaidObjectivePluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="725,-343.5 725,-373.5 925,-373.5 925,-343.5 725,-343.5"/>
 <text text-anchor="start" x="733" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.graid.</text>
 <text text-anchor="middle" x="825" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">SolarArrayGroundRaidObjectivePluginImpl</text>

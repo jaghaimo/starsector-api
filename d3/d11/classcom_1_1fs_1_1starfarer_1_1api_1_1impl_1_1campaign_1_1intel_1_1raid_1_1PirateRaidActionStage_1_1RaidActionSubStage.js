@@ -1,0 +1,5 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage_1_1RaidActionSubStage =
+[
+    [ "duration", "d3/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage_1_1RaidActionSubStage.html#a5c879179bf329fe140034efdc275d62a", null ],
+    [ "targets", "d3/d11/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage_1_1RaidActionSubStage.html#a7d1ec58e9b5a6b60ac1e04ef1e76430f", null ]
+];

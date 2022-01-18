@@ -1,0 +1,6 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetSetTravelActionText =
+[
+    [ "FleetSetTravelActionText", "d9/d03/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetSetTravelActionText.html#ab26fa2a192bf4af8e0109a5b8ec9fecd", null ],
+    [ "doAction", "d9/d03/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetSetTravelActionText.html#ae7c94a8ee1d8c773dd98497e92447d69", null ],
+    [ "text", "d9/d03/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetSetTravelActionText.html#ac8dfb97ca9a3ea4a3dd8c0928b2e4510", null ]
+];

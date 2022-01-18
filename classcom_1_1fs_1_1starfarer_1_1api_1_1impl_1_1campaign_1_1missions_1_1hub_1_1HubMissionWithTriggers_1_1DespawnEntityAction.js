@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1DespawnEntityAction =
-[
-    [ "DespawnEntityAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1DespawnEntityAction.html#ab80b6566f0773a3dcd08cdf1a3e1602e", null ],
-    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1DespawnEntityAction.html#ae2a163080025db8d33b1c04108edc562", null ],
-    [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1DespawnEntityAction.html#ac467cc7b530d6d5373965e4a8049aafa", null ]
-];

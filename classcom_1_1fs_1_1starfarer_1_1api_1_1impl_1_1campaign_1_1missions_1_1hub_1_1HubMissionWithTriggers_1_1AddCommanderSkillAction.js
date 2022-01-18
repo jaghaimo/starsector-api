@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddCommanderSkillAction =
-[
-    [ "AddCommanderSkillAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddCommanderSkillAction.html#ac7d76b11cfa91b1a9aca05aecd680753", null ],
-    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddCommanderSkillAction.html#a952450d7eb3df65a65b86a6ef31c7faa", null ],
-    [ "level", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddCommanderSkillAction.html#a6a62b34c1255ee1a618465252fac32ac", null ],
-    [ "skill", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddCommanderSkillAction.html#a47a369bd24b680eda9d175fa5a4b8d08", null ]
-];

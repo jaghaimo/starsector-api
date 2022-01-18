@@ -1,0 +1,6 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetFleetFactionAction =
+[
+    [ "SetFleetFactionAction", "df/da8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetFleetFactionAction.html#ab790a9b32c1ca04a4806b9efce9973c5", null ],
+    [ "doAction", "df/da8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetFleetFactionAction.html#a203ce092632a807e6267c0038b3b8699", null ],
+    [ "factionId", "df/da8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetFleetFactionAction.html#ab3bfaf9e41d0c71195fa8ae84dd78c9f", null ]
+];

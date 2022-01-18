@@ -1,0 +1,8 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg584f5078dd56fa392b85ea8c34ce64cf =
+[
+    [ "OrderFleetPatrolPointsAction", "dc/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg584f5078dd56fa392b85ea8c34ce64cf.html#ae098ca45ec539de929905e82a19e3023", null ],
+    [ "doAction", "dc/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg584f5078dd56fa392b85ea8c34ce64cf.html#a046b5af95f92cfbfe38e5b227e90fa20", null ],
+    [ "patrolPoints", "dc/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg584f5078dd56fa392b85ea8c34ce64cf.html#a69abe1aa644a8122bcfb40da365935be", null ],
+    [ "randomizeLocation", "dc/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg584f5078dd56fa392b85ea8c34ce64cf.html#aeb594553c0835fc06c768360e8d3677e", null ],
+    [ "system", "dc/d99/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg584f5078dd56fa392b85ea8c34ce64cf.html#af89e3309eb791c4bb694c2cf9dc55022", null ]
+];

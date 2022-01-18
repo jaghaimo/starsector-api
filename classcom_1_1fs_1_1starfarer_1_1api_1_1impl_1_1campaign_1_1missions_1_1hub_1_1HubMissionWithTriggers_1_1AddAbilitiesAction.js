@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddAbilitiesAction =
-[
-    [ "AddAbilitiesAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddAbilitiesAction.html#ae2aa762b7c091ce873c1499824c8400e", null ],
-    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddAbilitiesAction.html#a35703f7c659962cba8124b6c19ddacc4", null ],
-    [ "abilities", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1AddAbilitiesAction.html#a6659d519eb28ad756e022a0798f8f70e", null ]
-];

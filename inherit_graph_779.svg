@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidSource.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="dd/d22/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidSource.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="414.5,-598.5 414.5,-628.5 609.5,-628.5 609.5,-598.5 414.5,-598.5"/>
 <text text-anchor="start" x="422.5" y="-616.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="512" y="-605.5" font-family="Helvetica,sans-Serif" font-size="10.00">AsteroidSource</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="da/de4/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="647,-598.5 647,-628.5 842,-628.5 842,-598.5 647,-598.5"/>
 <text text-anchor="start" x="655" y="-616.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="744.5" y="-605.5" font-family="Helvetica,sans-Serif" font-size="10.00">AsteroidBeltTerrainPlugin</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="d3/d34/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="878,-598.5 878,-628.5 1073,-628.5 1073,-598.5 878,-598.5"/>
 <text text-anchor="start" x="886" y="-616.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="975.5" y="-605.5" font-family="Helvetica,sans-Serif" font-size="10.00">AsteroidFieldTerrainPlugin</text>
@@ -53,7 +53,7 @@
 <!-- Node81 -->
 <g id="node4" class="node">
 <title>Node81</title>
-<g id="a_node4"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AuroraRenderer_1_1AuroraRendererDelegate.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="d0/d00/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AuroraRenderer_1_1AuroraRendererDelegate.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="414.5,-500.5 414.5,-530.5 609.5,-530.5 609.5,-500.5 414.5,-500.5"/>
 <text text-anchor="start" x="422.5" y="-518.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="512" y="-507.5" font-family="Helvetica,sans-Serif" font-size="10.00">AuroraRenderer.AuroraRendererDelegate</text>
@@ -63,7 +63,7 @@
 <!-- Node82 -->
 <g id="node5" class="node">
 <title>Node82</title>
-<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="db/d28/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MagneticFieldTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="647,-549.5 647,-579.5 842,-579.5 842,-549.5 647,-549.5"/>
 <text text-anchor="start" x="655" y="-567.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="744.5" y="-556.5" font-family="Helvetica,sans-Serif" font-size="10.00">MagneticFieldTerrainPlugin</text>
@@ -79,7 +79,7 @@
 <!-- Node83 -->
 <g id="node6" class="node">
 <title>Node83</title>
-<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="d2/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SpatialAnomalyTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="647,-451.5 647,-481.5 842,-481.5 842,-451.5 647,-451.5"/>
 <text text-anchor="start" x="655" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="744.5" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">SpatialAnomalyTerrainPlugin</text>
@@ -95,7 +95,7 @@
 <!-- Node84 -->
 <g id="node7" class="node">
 <title>Node84</title>
-<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="d2/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="647,-500.5 647,-530.5 842,-530.5 842,-500.5 647,-500.5"/>
 <text text-anchor="start" x="655" y="-518.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="744.5" y="-507.5" font-family="Helvetica,sans-Serif" font-size="10.00">StarCoronaTerrainPlugin</text>
@@ -111,7 +111,7 @@
 <!-- Node85 -->
 <g id="node8" class="node">
 <title>Node85</title>
-<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1EventHorizonPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="d2/d5f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1EventHorizonPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="878,-549.5 878,-579.5 1073,-579.5 1073,-549.5 878,-549.5"/>
 <text text-anchor="start" x="886" y="-567.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="975.5" y="-556.5" font-family="Helvetica,sans-Serif" font-size="10.00">EventHorizonPlugin</text>
@@ -127,7 +127,7 @@
 <!-- Node86 -->
 <g id="node9" class="node">
 <title>Node86</title>
-<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaAkaMainyuTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="d3/d5a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaAkaMainyuTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="878,-500.5 878,-530.5 1073,-530.5 1073,-500.5 878,-500.5"/>
 <text text-anchor="start" x="886" y="-518.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="975.5" y="-507.5" font-family="Helvetica,sans-Serif" font-size="10.00">StarCoronaAkaMainyuTerrainPlugin</text>
@@ -143,7 +143,7 @@
 <!-- Node87 -->
 <g id="node10" class="node">
 <title>Node87</title>
-<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaJetTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="df/d42/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaJetTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="878,-451.5 878,-481.5 1073,-481.5 1073,-451.5 878,-451.5"/>
 <text text-anchor="start" x="886" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="975.5" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">StarCoronaJetTerrainPlugin</text>
@@ -159,7 +159,7 @@
 <!-- Node305 -->
 <g id="node11" class="node">
 <title>Node305</title>
-<g id="a_node11"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="df/d02/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-98.5 0,-128.5 146,-128.5 146,-98.5 0,-98.5"/>
 <text text-anchor="start" x="8" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="73" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">CampaignTerrainPlugin</text>
@@ -169,7 +169,7 @@
 <!-- Node306 -->
 <g id="node12" class="node">
 <title>Node306</title>
-<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="d9/d9b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="182,-98.5 182,-128.5 377,-128.5 377,-98.5 182,-98.5"/>
 <text text-anchor="start" x="190" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="279.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseTerrain</text>
@@ -185,7 +185,7 @@
 <!-- Node307 -->
 <g id="node13" class="node">
 <title>Node307</title>
-<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="da/de6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="414.5,-402.5 414.5,-432.5 609.5,-432.5 609.5,-402.5 414.5,-402.5"/>
 <text text-anchor="start" x="422.5" y="-420.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="512" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseRingTerrain</text>
@@ -201,7 +201,7 @@
 <!-- Node312 -->
 <g id="node18" class="node">
 <title>Node312</title>
-<g id="a_node18"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="d5/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTiledTerrain.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="414.5,-206.5 414.5,-236.5 609.5,-236.5 609.5,-206.5 414.5,-206.5"/>
 <text text-anchor="start" x="422.5" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="512" y="-213.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseTiledTerrain</text>
@@ -217,7 +217,7 @@
 <!-- Node315 -->
 <g id="node21" class="node">
 <title>Node315</title>
-<g id="a_node21"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node21"><a xlink:href="da/d7d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1SlipstreamTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="414.5,-98.5 414.5,-128.5 609.5,-128.5 609.5,-98.5 414.5,-98.5"/>
 <text text-anchor="start" x="422.5" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="512" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">SlipstreamTerrainPlugin</text>
@@ -233,7 +233,7 @@
 <!-- Node316 -->
 <g id="node22" class="node">
 <title>Node316</title>
-<g id="a_node22"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node22"><a xlink:href="d0/d3f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="414.5,-49.5 414.5,-79.5 609.5,-79.5 609.5,-49.5 414.5,-49.5"/>
 <text text-anchor="start" x="422.5" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="512" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">WavefrontTerrainPlugin</text>
@@ -249,7 +249,7 @@
 <!-- Node317 -->
 <g id="node23" class="node">
 <title>Node317</title>
-<g id="a_node23"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html" target="_top" xlink:title=" ">
+<g id="a_node23"><a xlink:href="d0/deb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="413,-0.5 413,-30.5 611,-30.5 611,-0.5 413,-0.5"/>
 <text text-anchor="start" x="421" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.velfield.</text>
 <text text-anchor="middle" x="512" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SlipstreamTerrainPlugin2</text>
@@ -289,7 +289,7 @@
 <!-- Node308 -->
 <g id="node14" class="node">
 <title>Node308</title>
-<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="d0/da0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="647,-402.5 647,-432.5 842,-432.5 842,-402.5 647,-402.5"/>
 <text text-anchor="start" x="655" y="-420.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="744.5" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00">DebrisFieldTerrainPlugin</text>
@@ -305,7 +305,7 @@
 <!-- Node309 -->
 <g id="node15" class="node">
 <title>Node309</title>
-<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="da/d30/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="647,-255.5 647,-285.5 842,-285.5 842,-255.5 647,-255.5"/>
 <text text-anchor="start" x="655" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="744.5" y="-262.5" font-family="Helvetica,sans-Serif" font-size="10.00">PulsarBeamTerrainPlugin</text>
@@ -321,7 +321,7 @@
 <!-- Node310 -->
 <g id="node16" class="node">
 <title>Node310</title>
-<g id="a_node16"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="d8/d89/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RadioChatterTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="647,-353.5 647,-383.5 842,-383.5 842,-353.5 647,-353.5"/>
 <text text-anchor="start" x="655" y="-371.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="744.5" y="-360.5" font-family="Helvetica,sans-Serif" font-size="10.00">RadioChatterTerrainPlugin</text>
@@ -337,7 +337,7 @@
 <!-- Node311 -->
 <g id="node17" class="node">
 <title>Node311</title>
-<g id="a_node17"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="dc/d35/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="647,-304.5 647,-334.5 842,-334.5 842,-304.5 647,-304.5"/>
 <text text-anchor="start" x="655" y="-322.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="744.5" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">RingSystemTerrainPlugin</text>
@@ -353,7 +353,7 @@
 <!-- Node313 -->
 <g id="node19" class="node">
 <title>Node313</title>
-<g id="a_node19"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="d1/d16/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="647,-206.5 647,-236.5 842,-236.5 842,-206.5 647,-206.5"/>
 <text text-anchor="start" x="655" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="744.5" y="-213.5" font-family="Helvetica,sans-Serif" font-size="10.00">HyperspaceTerrainPlugin</text>
@@ -369,7 +369,7 @@
 <!-- Node314 -->
 <g id="node20" class="node">
 <title>Node314</title>
-<g id="a_node20"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="d2/d83/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1NebulaTerrainPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="647,-155.5 647,-185.5 842,-185.5 842,-155.5 647,-155.5"/>
 <text text-anchor="start" x="655" y="-173.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="744.5" y="-162.5" font-family="Helvetica,sans-Serif" font-size="10.00">NebulaTerrainPlugin</text>
@@ -385,7 +385,7 @@
 <!-- Node1003 -->
 <g id="node24" class="node">
 <title>Node1003</title>
-<g id="a_node24"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager_1_1FlareManagerDelegate.html" target="_top" xlink:title=" ">
+<g id="a_node24"><a xlink:href="df/dec/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1FlareManager_1_1FlareManagerDelegate.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="414.5,-549.5 414.5,-579.5 609.5,-579.5 609.5,-549.5 414.5,-549.5"/>
 <text text-anchor="start" x="422.5" y="-567.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="512" y="-556.5" font-family="Helvetica,sans-Serif" font-size="10.00">FlareManager.FlareManagerDelegate</text>
@@ -407,7 +407,7 @@
 <!-- Node1798 -->
 <g id="node25" class="node">
 <title>Node1798</title>
-<g id="a_node25"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl_1_1NebulaTextureProvider.html" target="_top" xlink:title=" ">
+<g id="a_node25"><a xlink:href="d2/df4/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BattleCreationPluginImpl_1_1NebulaTextureProvider.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="417.5,-147 417.5,-188 606.5,-188 606.5,-147 417.5,-147"/>
 <text text-anchor="start" x="425.5" y="-176" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="start" x="425.5" y="-165" font-family="Helvetica,sans-Serif" font-size="10.00">BattleCreationPluginImpl.NebulaTexture</text>
@@ -424,7 +424,7 @@
 <!-- Node1969 -->
 <g id="node26" class="node">
 <title>Node1969</title>
-<g id="a_node26"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarRenderer_1_1PulsarRendererDelegate.html" target="_top" xlink:title=" ">
+<g id="a_node26"><a xlink:href="dd/d41/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarRenderer_1_1PulsarRendererDelegate.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="414.5,-255.5 414.5,-285.5 609.5,-285.5 609.5,-255.5 414.5,-255.5"/>
 <text text-anchor="start" x="422.5" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.terrain.</text>
 <text text-anchor="middle" x="512" y="-262.5" font-family="Helvetica,sans-Serif" font-size="10.00">PulsarRenderer.PulsarRendererDelegate</text>

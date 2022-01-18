@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_1_1SpecialCreationContext =
-[
-    [ "SpecialCreationContext", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_1_1SpecialCreationContext.html#aef07d23fcff4f41fa8c7906a4b21e23d", null ],
-    [ "all", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_1_1SpecialCreationContext.html#ad55c223833c4a787854155ca4d758c4e", null ],
-    [ "onNewGame", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_1_1SpecialCreationContext.html#a093d212990d0cd1f2fee0c9c8647f348", null ],
-    [ "themeId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssigner_1_1SpecialCreationContext.html#a52c4d6891db1ad55a62766983bb2cf9b", null ]
-];

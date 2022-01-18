@@ -1,0 +1,26 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption =
+[
+    [ "ShippingDisruption", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a4da047d445705c9edb584294efacecc7", null ],
+    [ "addShippingLost", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a492a316c2e0c2e4ef5c7f7a78e3f78b3", null ],
+    [ "advance", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a5ebd8e4a9d4ae351cb33ea27ae11b1d1", null ],
+    [ "apply", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a7a58e8806f5e9f0100db4acd9467e9ec", null ],
+    [ "createTooltip", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a48aba2efadbbffbbddf2f5284b032c88", null ],
+    [ "getDisruption", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a012337e949f043e7688e15b46de30609", null ],
+    [ "getDisruptionTimeLeft", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#acf4544e401031c74e54c18eabb6f8a95", null ],
+    [ "getHighlights", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#ac6086b5dfdcc8613e5dae82adb6f925e", null ],
+    [ "getPenaltyForShippingLost", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#ae25a10d277bd68d2c2fc5d99d2bb6424", null ],
+    [ "getTokenReplacements", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a88faed3210b69c2d884301377c2ee23f", null ],
+    [ "getTooltipWidth", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#aac4469812b2586f929b4e440f87aba8a", null ],
+    [ "hasCustomTooltip", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a1d92c75493bfed4a82613dfaef83bc12", null ],
+    [ "isTooltipExpandable", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#af69d196553664666f835219cd88a726e", null ],
+    [ "isTransient", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a4f3c97179a575dc3dcdb2c0065968016", null ],
+    [ "notifyDisrupted", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a256acc10d6091fe102e2fb3c173a0b72", null ],
+    [ "setDisruptionTimeLeft", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#acc0c476a32aa66cd96d1d397aef04e87", null ],
+    [ "unapply", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#ab111a58ab441455952940ebce033ebb2", null ],
+    [ "updatePenaltyValue", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a27b919a2237d8320eabd5415c6230024", null ],
+    [ "ACCESS_LOSS_DURATION", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#afcf0e0c8691252b8b489069e4dbf5749", null ],
+    [ "ACCESS_PER_UNITS_LOST", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a027535a0725a6ba83421f7b889bf32f2", null ],
+    [ "COMMODITY_LOSS_PREFIX", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#a0720423db4fdca2d11720e5a4036ac86", null ],
+    [ "disruptionTimeLeft", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#aa943aad587cf15c2a2f887584ccd4bc8", null ],
+    [ "shippingLost", "d0/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#ad7483718facb5a535803a47d30d339d9", null ]
+];

@@ -1,0 +1,27 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin =
+[
+    [ "SlipstreamParams", "d3/d5c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParams.html", "d3/d5c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParams" ],
+    [ "SlipstreamParticle", "dd/d94/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParticle.html", "dd/d94/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParticle" ],
+    [ "SlipstreamEntityPlugin", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#af92f2253e6ddab33113f2b5441332890", null ],
+    [ "advance", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#ab3c11b7bf941335e926932c74af00854", null ],
+    [ "applyEffect", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a2dc4c6b44edf15987d1d4811c195f78e", null ],
+    [ "applyEffectToFleets", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a58431fedf005e4d8bad150450ec84d2d", null ],
+    [ "getLengthAndWidthFractionWithinStream", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a15d351a02ddf0722fdb3e75354cedf45", null ],
+    [ "getRandomColor", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#acb9f586cf3d2131e709edef89b072c34", null ],
+    [ "getRenderRange", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a930778c9fa7cd7ee3b35f8f39eb57237", null ],
+    [ "init", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a6860c82a76ed81abeb63f181615add27", null ],
+    [ "readResolve", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a829ea4ebfa0731358a398a1d381850d1", null ],
+    [ "render", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a58544b397360cc43d4959fd1d03c60d7", null ],
+    [ "renderLayer", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a7e005b935d979941317eb8cf529f8aab", null ],
+    [ "rotateAroundOrigin", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a9645d3ae12881ed330943e377eb446db", null ],
+    [ "fader", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a10a5e068222bd2a399dee1eaab89b6af", null ],
+    [ "MAX_PARTICLES_ADD_PER_FRAME", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a08bc283ba3f37e35a53b2c91ac470ae2", null ],
+    [ "params", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a8586c9ea1225a4a3ea2825d2925f17ce", null ],
+    [ "particles", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a3cbcbaa07e988d4c4264b1144c430a77", null ],
+    [ "playerWasInSlipstream", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a3283d919da92d11b9b5ea5a04c2cdb2f", null ],
+    [ "RAD_PER_DEG", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#aa01cdbc456356b087685d42285ec85dc", null ],
+    [ "texelsPerPixel", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a11b4c35106d753312316650960d90369", null ],
+    [ "texProgress1", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#adb26f65d6abebbe6b682c16c78f36650", null ],
+    [ "texProgress2", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#aa60876d1093fbd7a9e4d248181afb1ef", null ],
+    [ "texProgress3", "d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html#a8cc4f5ca3d01e22ea2645727aa3ca49b", null ]
+];

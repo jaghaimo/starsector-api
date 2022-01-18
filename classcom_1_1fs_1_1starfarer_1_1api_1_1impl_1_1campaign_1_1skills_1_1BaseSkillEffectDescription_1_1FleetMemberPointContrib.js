@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription_1_1FleetMemberPointContrib =
-[
-    [ "FleetMemberPointContrib", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription_1_1FleetMemberPointContrib.html#a0d9114380b75eb458a531a00f600fa77", null ],
-    [ "member", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription_1_1FleetMemberPointContrib.html#a7829766970617cda6196145370498314", null ],
-    [ "points", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BaseSkillEffectDescription_1_1FleetMemberPointContrib.html#ab86f4b08aca5cc213e5db21a4ed9f432", null ]
-];

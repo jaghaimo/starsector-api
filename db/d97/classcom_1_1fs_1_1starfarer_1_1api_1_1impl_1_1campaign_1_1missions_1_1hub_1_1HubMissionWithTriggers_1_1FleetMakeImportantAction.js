@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetMakeImportantAction =
+[
+    [ "FleetMakeImportantAction", "db/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetMakeImportantAction.html#ae4fa5c06e91c3bde65de9ade4e54f578", null ],
+    [ "doAction", "db/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetMakeImportantAction.html#a5d2aa8013929b187a0f0d1010e4771cc", null ],
+    [ "flag", "db/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetMakeImportantAction.html#a138e1962116fea61e70f5ea07331027e", null ],
+    [ "stages", "db/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1FleetMakeImportantAction.html#a57570b33c3f9dc86b09372114be1261d", null ]
+];

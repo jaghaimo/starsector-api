@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1OrderFleetEBurn =
-[
-    [ "OrderFleetEBurn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1OrderFleetEBurn.html#a927e69974538d9e669d54368b5f41182", null ],
-    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1OrderFleetEBurn.html#a86f6fc2bd0b19dea07725be1dd8b57e4", null ]
-];

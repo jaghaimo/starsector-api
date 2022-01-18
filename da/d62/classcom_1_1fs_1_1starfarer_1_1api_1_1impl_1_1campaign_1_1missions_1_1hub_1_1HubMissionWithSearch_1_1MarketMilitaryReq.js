@@ -1,0 +1,4 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketMilitaryReq =
+[
+    [ "marketMatchesRequirement", "da/d62/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketMilitaryReq.html#aac33cbcae2b8d25610f7834f7a97f5e1", null ]
+];

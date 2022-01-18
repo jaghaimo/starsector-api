@@ -1,0 +1,7 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg384c73a3e7e18f75c0da43c57ff566d0 =
+[
+    [ "PickLocationAtClosestToPlayerJumpPointAction", "d6/d28/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg384c73a3e7e18f75c0da43c57ff566d0.html#a191e53882148a099955620a5ebf4c291", null ],
+    [ "doAction", "d6/d28/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg384c73a3e7e18f75c0da43c57ff566d0.html#ac068bc3f08af3ca7d5fad2e2b57f9c98", null ],
+    [ "minDistFromPlayer", "d6/d28/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg384c73a3e7e18f75c0da43c57ff566d0.html#a0c6eba10dfdffe1cf73457fdfe3e34e6", null ],
+    [ "system", "d6/d28/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg384c73a3e7e18f75c0da43c57ff566d0.html#af498212e3c6572cb86c31345310164bd", null ]
+];

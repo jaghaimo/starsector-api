@@ -1,0 +1,5 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredTerrainTags =
+[
+    [ "RequiredTerrainTags", "d0/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredTerrainTags.html#a41b48b42fdba68f91a9d1abb146a6bb8", null ],
+    [ "terrainMatchesRequirement", "d0/d12/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1RequiredTerrainTags.html#aaf94444cdfdcc857037c8171dda0f0d6", null ]
+];

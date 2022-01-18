@@ -1,0 +1,4 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantThemeGenercb307795232e0a428fdebffc64e0ea18 =
+[
+    [ "createConfig", "d0/dca/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantThemeGenercb307795232e0a428fdebffc64e0ea18.html#ac0dc172c65c7219c873f20312ab7b43a", null ]
+];

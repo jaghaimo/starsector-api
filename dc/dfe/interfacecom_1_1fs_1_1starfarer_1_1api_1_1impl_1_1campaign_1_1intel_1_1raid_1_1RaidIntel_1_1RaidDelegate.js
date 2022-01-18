@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidDelegate =
+[
+    [ "notifyRaidEnded", "dc/dfe/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidDelegate.html#a4b97e69e1554de75db87091b5abcd6bc", null ]
+];

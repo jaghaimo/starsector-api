@@ -1,0 +1,4 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhost =
+[
+    [ "EncounterTricksterGhost", "d6/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhost.html#ab34b30c28427c08917cc4f4550daec7f", null ]
+];

@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="d9/d29/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="0,-171.5 0,-201.5 239,-201.5 239,-171.5 0,-171.5"/>
 <text text-anchor="start" x="8" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="119.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageSpecialInteraction.SalvageSpecialPlugin</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="d3/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="275,-171.5 275,-201.5 547,-201.5 547,-171.5 275,-171.5"/>
 <text text-anchor="start" x="283" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.</text>
 <text text-anchor="middle" x="411" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseSalvageSpecial</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="d4/df6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="583,-343.5 583,-373.5 855,-373.5 855,-343.5 583,-343.5"/>
 <text text-anchor="start" x="591" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.</text>
 <text text-anchor="middle" x="719" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">BlueprintSpecial</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BreadcrumbSpecial.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="d5/d03/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BreadcrumbSpecial.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="583,-294.5 583,-324.5 855,-324.5 855,-294.5 583,-294.5"/>
 <text text-anchor="start" x="591" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.</text>
 <text text-anchor="middle" x="719" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">BreadcrumbSpecial</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="da/df5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="583,-245.5 583,-275.5 855,-275.5 855,-245.5 583,-245.5"/>
 <text text-anchor="start" x="591" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.</text>
 <text text-anchor="middle" x="719" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">CargoManifestSpecial</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="d8/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="583,-196.5 583,-226.5 855,-226.5 855,-196.5 583,-196.5"/>
 <text text-anchor="start" x="591" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.</text>
 <text text-anchor="middle" x="719" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">DomainSurveyDerelictSpecial</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1ShipRecoverySpecial.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="d5/d63/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1ShipRecoverySpecial.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="583,-147.5 583,-177.5 855,-177.5 855,-147.5 583,-147.5"/>
 <text text-anchor="start" x="591" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.</text>
 <text text-anchor="middle" x="719" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">ShipRecoverySpecial</text>
@@ -117,7 +117,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SleeperPodsSpecial.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="d5/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SleeperPodsSpecial.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="583,-98.5 583,-128.5 855,-128.5 855,-98.5 583,-98.5"/>
 <text text-anchor="start" x="591" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.</text>
 <text text-anchor="middle" x="719" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">SleeperPodsSpecial</text>
@@ -133,7 +133,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SurveyDataSpecial.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="dd/d58/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SurveyDataSpecial.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="583,-49.5 583,-79.5 855,-79.5 855,-49.5 583,-49.5"/>
 <text text-anchor="start" x="591" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.</text>
 <text text-anchor="middle" x="719" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">SurveyDataSpecial</text>
@@ -149,7 +149,7 @@
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1TransmitterTrapSpecial.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="d3/d81/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1TransmitterTrapSpecial.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="583,-0.5 583,-30.5 855,-30.5 855,-0.5 583,-0.5"/>
 <text text-anchor="start" x="591" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.</text>
 <text text-anchor="middle" x="719" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">TransmitterTrapSpecial</text>

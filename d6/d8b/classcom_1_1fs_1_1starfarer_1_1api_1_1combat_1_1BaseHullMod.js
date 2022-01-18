@@ -1,0 +1,26 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod =
+[
+    [ "addPostDescriptionSection", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a33c67bf29e82daaad9e6a6ffcf0ee0b2", null ],
+    [ "advanceInCampaign", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a587534a7f579777d5fc60c320fa6a900", null ],
+    [ "advanceInCombat", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a107100a4b58129790cba1a26265c1ad8", null ],
+    [ "affectsOPCosts", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a127952abff2dc53535433f1301cd16f1", null ],
+    [ "applyEffectsAfterShipCreation", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aade4030b287b2c896f920683f0eead56", null ],
+    [ "applyEffectsBeforeShipCreation", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3859215f6c3408946bf590a2ce5c0e74", null ],
+    [ "applyEffectsToFighterSpawnedByShip", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a2618f88ad207fe4bc6a9b767aa4c1dfd", null ],
+    [ "canBeAddedOrRemovedNow", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aaae3c524c7a5a510217de317cd3e1926", null ],
+    [ "getBorderColor", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3d4dafb6c76803b977aebbbc3a13a662", null ],
+    [ "getCanNotBeInstalledNowReason", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aea8091832767eeee7418083c700c6eaf", null ],
+    [ "getDescriptionParam", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5f6ac9583ca5b1606fda3e53f15c3d14", null ],
+    [ "getDescriptionParam", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a81fc41471bf3bff9e51db9106e2e1bd2", null ],
+    [ "getDisplayCategoryIndex", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a4e46310cb894138daaa01e28993bc62f", null ],
+    [ "getDisplaySortOrder", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ae32c361669ecea76e3ec97542dcc4db9", null ],
+    [ "getNameColor", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ae679eb68aee1521b3dcc431d697b5abd", null ],
+    [ "getUnapplicableReason", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a1e372e808b9fc3e1aa3da1002c5bf9c8", null ],
+    [ "init", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ab9759e3e82f30c895e84eb8f7c0800df", null ],
+    [ "isApplicableToShip", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#aba110c18a85c975b063efdf40ac482a7", null ],
+    [ "isInPlayerFleet", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5b8ef320d4aacd94df8a64148fd85a76", null ],
+    [ "isInPlayerFleet", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a5cc2038b37baeca04d6d648e7ee509ca", null ],
+    [ "shipHasOtherModInCategory", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a39c14f424839ae19f55ee0d5f859e52f", null ],
+    [ "shouldAddDescriptionToTooltip", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a3ea50f57642925029054d03f5362630b", null ],
+    [ "spec", "d6/d8b/classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac9399ad6c42e88aad34841da9e87d5cc", null ]
+];
