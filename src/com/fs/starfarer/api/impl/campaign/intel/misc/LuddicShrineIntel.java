@@ -168,7 +168,7 @@ public class LuddicShrineIntel extends BaseIntelPlugin {
 			info.addPara(desc.getText1(), opad);
 		} else if (id.equals("volturn")) {
 			if (visited) {
-				info.addImage(Global.getSettings().getSpriteName("illustrations", "luddic_shrine"), width, opad);
+				info.addImage(Global.getSettings().getSpriteName("illustrations", "volturn_shrine_fake"), width, opad);
 			}
 			Description desc = Global.getSettings().getDescription("shrine_volturn", Type.CUSTOM);
 			info.addPara(desc.getText1(), opad);
@@ -180,7 +180,7 @@ public class LuddicShrineIntel extends BaseIntelPlugin {
 			info.addPara(desc.getText1(), opad);
 		} else if (id.equals("gilead")) {
 			if (visited) {
-				info.addImage(Global.getSettings().getSpriteName("illustrations", "gilead_shrine"), width, opad);
+				info.addImage(Global.getSettings().getSpriteName("illustrations", "gilead"), width, opad);
 			}
 			Description desc = Global.getSettings().getDescription("shrine_gilead", Type.CUSTOM);
 			info.addPara(desc.getText1(), opad);
