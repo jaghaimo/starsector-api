@@ -1544,11 +1544,7 @@ Call $mHub listMissions
 SetEnabled mh_open false",,,
 addMhubCloseOption,AddMHCloseOption,,"SetShortcut mh_close ""ESCAPE""",,"1000:mh_close:""I'll need to think about it.""",
 closeMhub,DialogOptionSelected,$option == mh_close,"Call $mHub doCleanup
-FireAll PopulateOptions","""Good bye, captain,"" Sebestyen says. ""Keep safe!""
-OR
-""See you again soon, captain!"" Sebestyen says cheerfully.
-OR
-""Until next time?"" Sebestyen says. ""Be careful out there!""",,
+FireAll PopulateOptions",,,
 convOptionLeave,PopulateOptions,"$isPerson
 !$cutCommLinkPolite","SetShortcut cutCommLink ""ESCAPE""",,100:cutCommLink:Cut the comm link,
 convOptionLeavePolite,PopulateOptions,"$isPerson
@@ -9515,7 +9511,7 @@ gaKAReturnToAcademyReturnLeave,DialogOptionSelected,$option == gaKA_returnLeave,
 FireAll PopulateOptions",,,
 gaKAReturnToAcademy8Coureuse,DialogOptionSelected,"$global.foundCoureuse
 $option == gaKA_return8","ShowSecondPerson coureuse
-AddCredits 1000000","As you enter Baird's office, you notice Scylla Coureuse waiting in the sitting area. She nods in greeting as she folds up a portable workstation.
+AddCredits 100000","As you enter Baird's office, you notice Scylla Coureuse waiting in the sitting area. She nods in greeting as she folds up a portable workstation.
 
 ""Ah, Scylla. Good. Give me just a moment."" Baird moves behind her desk, unlocks the interface, and taps in a command.
 
