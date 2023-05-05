@@ -9,10 +9,7 @@
         -39,
         32
     ],
-    "builtInMods": [
-        "phasefield",
-        "delicate"
-    ],
+    "builtInMods": ["rugged"],
     "center": [
         46,
         45
@@ -26,7 +23,7 @@
             "length": 32,
             "location": [
                 -45,
-                16
+                15
             ],
             "style": "LOW_TECH",
             "width": 7
@@ -48,7 +45,7 @@
             "length": 32,
             "location": [
                 -42,
-                28
+                27
             ],
             "style": "LOW_TECH",
             "width": 7
@@ -131,32 +128,32 @@
             "arc": 5,
             "id": "WS 004",
             "locations": [
-                42,
-                -4
+                45,
+                0
             ],
             "mount": "HARDPOINT",
             "size": "SMALL",
             "type": "SYSTEM"
         },
         {
-            "angle": 130,
+            "angle": 110,
             "arc": 5,
             "id": "WS 005",
             "locations": [
-                -20,
-                29
+                12,
+                38
             ],
             "mount": "HARDPOINT",
             "size": "SMALL",
             "type": "SYSTEM"
         },
         {
-            "angle": 230,
+            "angle": 250,
             "arc": 5,
             "id": "WS 006",
             "locations": [
-                -21,
-                -28
+                12,
+                -37
             ],
             "mount": "HARDPOINT",
             "size": "SMALL",

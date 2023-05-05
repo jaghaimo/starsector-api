@@ -21,6 +21,7 @@
 	#"glowColor":[100,255,100,255],
 	"width":28.0,
 	#"width":14.0,
+	"hitGlowBrightenDuration":0.25,
 	"textureType":ROUGH,
 	"textureScrollSpeed":128.0,
 	"pixelsPerTexel":5.0,

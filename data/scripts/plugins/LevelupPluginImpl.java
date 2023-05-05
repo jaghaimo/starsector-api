@@ -82,6 +82,10 @@ public class LevelupPluginImpl implements LevelupPlugin {
 		return (int) Global.getSettings().getFloat("storyPointsPerLevel");
 	}
 	
+	public int getBonusXPUseMultAtMaxLevel() {
+		return (int) Global.getSettings().getFloat("bonusXPUseMultAtMaxLevel");
+	}
+	
 //	public long getXPForNextLevel(int level) {
 //		if (level < XP_PER_LEVEL.length) {
 //			return XP_PER_LEVEL[level];

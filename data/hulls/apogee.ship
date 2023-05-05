@@ -261,10 +261,10 @@
             "id": "WS 006",
             "locations": [
                 141,
-                34
+                33
             ],
             "mount": "HARDPOINT",
-            "size": "SMALL",
+            "size": "MEDIUM",
             "type": "ENERGY"
         },
         {
@@ -273,7 +273,7 @@
             "id": "WS 007",
             "locations": [
                 142,
-                -2
+                -3
             ],
             "mount": "HARDPOINT",
             "size": "SMALL",

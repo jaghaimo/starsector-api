@@ -10,10 +10,13 @@
 		"glimmer_Assault":5,
 		"lumen_Standard":10,
 		
+		"brawler_LG_Elite":10,
+		
 		"brawler_Assault":7,
 		"brawler_Elite":3,
 		"brawler_tritachyon_Standard":10,
 		"brawler_pather_Raider":10,
+		"brawler_Support":0, # PL-only variant
 		
 		"cerberus_d_pirates_Shielded":4,
 		"cerberus_d_pirates_Standard":6,
@@ -40,7 +43,7 @@
 		"lasher_luddic_church_Standard":10,
 		"lasher_luddic_path_Raider":10,
 		
-		"monitor_Escort":10,
+		#"monitor_Escort":10,
 		
 		"mudskipper2_CS":5,
 		"mudskipper2_Hellbore":5,
@@ -55,14 +58,16 @@
 		"vigilance_FS":3,
 		"vigilance_Standard":3,
 		"vigilance_Strike":3,
+		"vigilance_Support1":0, # PL-only variant
+		"vigilance_Support2":0, # PL-only variant
 		
 		"wolf_Assault":3,
 		"wolf_Overdriven":1,
 		"wolf_PD":2,
 		"wolf_Strike":2,
 		"wolf_d_pirates_Attack":10,
-		"wolf_hegemony_Assault":4,
-		"wolf_hegemony_PD":3,
+		"wolf_hegemony_Assault":8,
+		"wolf_hegemony_PD":2,
 		
 		"shard_left_Attack":5,
 		"shard_left_Attack2":5,
@@ -80,11 +85,14 @@
 		"glimmer_Support":5,
 		"lumen_Standard":10,
 		
+		"brawler_LG_Elite":10,
 		"brawler_Assault":7,
 		"brawler_Elite":3,
 		"brawler_tritachyon_Standard":10,
 		"brawler_pather_Raider":10,
+		"brawler_Support":0, # PL-only variant
 		
+		"centurion_LG_Assault":10,
 		"centurion_Assault":10,
 		
 		"cerberus_d_pirates_Shielded":4,
@@ -123,8 +131,10 @@
 		"mudskipper2_CS":3,
 		"mudskipper2_Hellbore":3,
 		
-		"vanguard_Attack":5,
-		"vanguard_Strike":5,
+		"vanguard_Attack":4,
+		"vanguard_Strike":4,
+		"vanguard_Outdated":1,
+		"vanguard_Outdated2":1,
 		"vanguard_pirates_Attack":5,
 		"vanguard_pirates_Strike":5,
 		
@@ -132,6 +142,8 @@
 		"vigilance_FS":3,
 		"vigilance_Standard":3,
 		"vigilance_Strike":3,
+		"vigilance_Support1":0, # PL-only variant
+		"vigilance_Support2":0, # PL-only variant
 		
 		"wolf_Assault":3,
 		"wolf_CS":2,
@@ -140,8 +152,8 @@
 		"wolf_Strike":2,
 		"wolf_d_pirates_Attack":10,
 		"wolf_hegemony_Assault":4,
-		"wolf_hegemony_CS":3,
-		"wolf_hegemony_PD":3,
+		"wolf_hegemony_CS":4,
+		"wolf_hegemony_PD":2,
 		
 		"shard_left_Attack":5,
 		"shard_left_Attack2":5,
@@ -169,15 +181,22 @@
 		"fulgent_Assault":5,
 		"fulgent_Support":5,
 		
+		"hammerhead_LG_Balanced":5,
+		"hammerhead_LG_Elite":5,
+		
 		"hammerhead_Balanced":3,
 		"hammerhead_Elite":3,
 		"hammerhead_Overdriven":2,
 		"hammerhead_Support":2,
+		"hammerhead_DEM":0, # PL-only
 		
-		"manticore_Support":5,
-		"manticore_Assault":5,
+		"manticore_Support":2.5,
+		"manticore_Assault":2.5,
+		"manticore_Balanced":2.5,
+		"manticore_Outdated":2.5,
 		"manticore_pirates_Support":5,
 		"manticore_pirates_Assault":5,
+		"manticore_luddic_path_Strike":10,
 		
 		"medusa_Attack":4,
 		"medusa_CS":3,
@@ -190,9 +209,13 @@
 		"shrike_Attack":7,
 		"shrike_p_Attack":10,
 		
+		"sunder_LG_Assault":5,
+		"sunder_LG_CS":5,
+		
 		"sunder_Assault":4,
 		"sunder_CS":4,
 		"sunder_Overdriven":2,
+		"sunder_Support":0, # PL-only variant
 		
 		"facet_Attack":5,
 		"facet_Attack2":5,
@@ -201,11 +224,10 @@
 	},
 	"combatLarge":{
 		"aurora_Assault":2,
-		"aurora_Assault_Support":2,
-		"aurora_Balanced":2,
-		"aurora_Escort":1,
-		"aurora_FS":1,
+		"aurora_Attack":2,
 		"aurora_Strike":2,
+		"aurora_Support":2,
+		#"aurora_Balanced":2,
 		"apogee_Balanced":10,
 		
 		"colossus2_Pather":10,
@@ -215,21 +237,37 @@
 		"dominator_Support":2.5,
 		"dominator_Outdated":2.5,
 		"dominator_XIV_Elite":10,
+		
+		"eagle_LG_Assault":5,
+		"eagle_LG_Support":5,
+		
 		"eagle_Assault":5,
 		"eagle_Balanced":5,
 		"eagle_xiv_Elite":10,
+		"eagle_Support":0, # PL-only variant
+		
+		"falcon_LG_CS":5,
+		"falcon_LG_Attack":5,
+		
 		"falcon_Attack":5,
 		"falcon_CS":5,
 		"falcon_xiv_Elite":5,
 		"falcon_xiv_Escort":5,
 		"falcon_p_Strike":10,
+		"falcon_Escort":0, # PL-only variant
 		
 		"eradicator_Assault":4,
-		"eradicator_Strike":3,
-		"eradicator_Support":2,
+		"eradicator_Strike":2,
+		"eradicator_Outdated":1,
+		"eradicator_Outdated2":1,
+		"eradicator_Support":1,
 		"eradicator_Overdriven":1,
 		"eradicator_pirates_Attack":8,
 		"eradicator_pirates_Overdriven":2,
+		"eradicator_Fighter_Support":0,
+		
+		"venture_p_Pirate":10,
+		"venture_pather_Attack":10,
 		
 		"fury_Attack":5,
 		"fury_Support":5,
@@ -238,12 +276,20 @@
 		"champion_Elite":3,
 		"champion_Support":2,
 		"champion_Escort":1,
+		"champion_DEMEscort":0,
+		"champion_Strike":0,
 		
 		"gryphon_Standard":7,
 		"gryphon_FS":3,
+		"gryphon_DEM":0,
 		
 		"rampart_Standard":10,
 		"brilliant_Standard":10,
+		
+		"apex_Standard":4,
+		"apex_Assault":3,
+		"apex_Missile":2,
+		"apex_Overdriven":1,
 		
 		"tesseract_Attack":2.5,
 		"tesseract_Attack2":2.5,
@@ -253,6 +299,11 @@
 		"fallback":{"combatMedium":1},
 	},
 	"combatCapital":{
+		"conquest_DEM":0, # probability overridden in persean_league.faction
+		"pegasus_Strike":5,
+		"pegasus_Balanced":5,
+		"executor_Standard":5,
+		"executor_Elite":5,
 		"conquest_Standard":5,
 		"conquest_Elite":5,
 		"onslaught_Standard":4,
@@ -263,11 +314,17 @@
 		"paragon_Escort":3,
 		"paragon_Raider":3,
 		"odyssey_Balanced":10,
+		"retribution_Standard":10,
+		"invictus_Standard":5,
+		"invictus_Support":5,
 		
 		"guardian_Standard":10,
 		"radiant_Standard":4,
 		"radiant_Strike":3,
 		"radiant_Assault":3,
+		
+		"nova_Standard":5,
+		"nova_Attack":5,
 		
 		"atlas2_Standard":10,
 		"prometheus2_Standard":10,
@@ -348,7 +405,8 @@
 		"condor_Attack":3,
 		"condor_Support":3,
 		"drover_Strike":10,
-		"gemini_Standard":5,
+		"drover_Support":0, # probability overridden in persean_league.faction
+		#"gemini_Standard":5,
 		
 		"scintilla_Strike":5,
 		"scintilla_Support":5,
@@ -359,6 +417,8 @@
 	"carrierMedium":{
 		"heron_Strike":5,
 		"heron_Attack":5,
+		"heron_Attack1":0, # PL-only variant
+		"heron_Attack2":0, # PL-only variant
 		"mora_Assault":3,
 		"mora_Support":3,
 		"mora_Strike":4,
@@ -399,12 +459,14 @@
 		"fallback2":{"phaseLarge":0.5},
 	},
 	"phaseLarge":{
-		"doom_Strike":5,
-		"doom_Support":5,
+		"doom_Strike":4,
+		"doom_Support":3,
+		"doom_Attack":3,
 		"fallback":{"phaseMedium":1},
 		"fallback2":{"phaseSmall":1},
 	},
 	"phaseCapital":{
+		"ziggurat_Strike":10,
 	},
 
 	# freighters and such

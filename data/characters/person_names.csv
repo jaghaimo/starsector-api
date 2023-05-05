@@ -1276,12 +1276,14 @@ Hanta,,l,future
 Yourdon,,l,future
 Diziet,f,f,future
 Luyten,,l,future
+Cacri,,l,future
 Sol,m,f,future
 Luna,f,f,future
 Sirius,,l,future
 Procyon,,l,future
 Centauri,,l,future
 Proxima,,l,future
+Aquarii,,l,future
 Eridani,,l,future
 Lacaille,,l,future
 Cygni,,l,future
@@ -1379,6 +1381,7 @@ Ultra,f,f,future
 Perihelion,f,f,future
 Aphelion,m,f,future
 Belter,,l,future
+Strangelet,,l,future
 Spaceborn,,l,future
 Hygiea,f,f,"myth, future"
 Cybele,f,f,"myth, future"
@@ -1575,7 +1578,7 @@ Sonari,,l,world
 Dalmar,,l,world
 Ibrahim,,l,world
 Gullet,,l,world
-Daud,,l,world
+#Daud,,l,world
 Apauso,,l,world
 Adebayo,,l,world
 Oni,,l,world
@@ -1855,7 +1858,7 @@ Sunrise,,l,pirate
 Charming,,l,pirate
 Maudite,,l,pirate
 Turn,,l,pirate
-Black-goat,,l,pirate
+Blackgoat,,l,pirate
 Volley,,l,pirate
 Salvo,,l,pirate
 Blitz,m,f,pirate
@@ -1876,3 +1879,9 @@ Slash,f,f,pirate
 Sirocco,,l,"pirate, future"
 Crashblossom,,l,pirate
 Shrapnel,"m, f",f,pirate
+Zigzag,"m, f",f,pirate
+Flatline,,l,pirate
+Automatic,m,f,pirate
+Millions,,l,pirate
+Magnetic,f,f,"pirate, future"
+Antigrav,,l,pirate

@@ -1,6 +1,7 @@
 {
 	"specClass":"beam",
 	"id":"gravitonbeam",
+	"beamEffect":"com.fs.starfarer.api.impl.combat.GravitonBeamEffect",
 	"type":"ENERGY",
 	"size":"MEDIUM",
 	"displayArcRadius":550,

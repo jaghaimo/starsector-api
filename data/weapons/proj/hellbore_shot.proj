@@ -16,6 +16,8 @@
 	"textureScrollSpeed":64.0,
 	"pixelsPerTexel":5.0,
 	"passThroughMissiles":true,
+	"passThroughFighters":true,
+	"passThroughFightersOnlyWhenDestroyed":true,
 	"bulletSprite":"graphics/missiles/shell_hellbore.png"
 	#"bulletSprite":"graphics/missiles/shell_round_lrg.png"
 }

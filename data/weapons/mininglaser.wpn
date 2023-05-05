@@ -2,6 +2,7 @@
 	"specClass":"beam",
 	"id":"mininglaser",
 	"type":"ENERGY",
+	"mountTypeOverride":"HYBRID",
 	"size":"SMALL",
 	"collisionClass":"RAY",
 	"collisionClassByFighter":"RAY_FIGHTER",

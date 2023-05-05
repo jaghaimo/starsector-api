@@ -13,10 +13,12 @@
 	"outOfUsesSound":"gun_out_of_ammo",
 	
 	"aiHints":{
-		"threatRange":1000,
+		"threatRange":1500,
 		"threatAmount":8,
 		"threatAngle":0,
 		"threatArc":360,
+		"threatDamage":1200,
+		"threatSpeed":400,
 	}
 }
 

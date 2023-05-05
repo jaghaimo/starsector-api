@@ -9,7 +9,7 @@ import com.fs.starfarer.api.impl.hullmods.DefectiveManufactory;
 public class ConvertedCargoBay extends BaseHullMod {
 
 	//public static final int CREW_REQ = 40;
-	public static final int REFIT_TIME_PLUS = 50;
+	public static int REFIT_TIME_PLUS = 50;
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {

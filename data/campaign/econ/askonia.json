@@ -110,6 +110,7 @@
 			"entities":["umbra"],
 			"faction":"pirates",
 			"size":5,
+			"freePort":true,
 			"startingConditions":[
 				#"military_base",
 				#"headquarters",
@@ -125,7 +126,8 @@
 			],
 			"industries":[
 				"population",
-				"spaceport",
+				#["spaceport", "fullerene_spool"],
+				["spaceport"],
 				"mining",
 				"heavybatteries",
 				"militarybase",

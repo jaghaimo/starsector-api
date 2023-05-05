@@ -20,21 +20,25 @@ public class ECCMPackage extends BaseHullMod {
 //	stats.getMissileTurnAccelerationBonus().modifyPercent(id, 50f);
 	
 	
-	public static final float MISSILE_SPEED_BONUS = 25f;
-	public static final float MISSILE_RANGE_MULT = 0.8f;
-	public static final float MISSILE_ACCEL_BONUS = 150f;
-	public static final float MISSILE_RATE_BONUS = 50f;
-	public static final float MISSILE_TURN_ACCEL_BONUS = 150f;
+	public static float MISSILE_SPEED_BONUS = 25f;
+	public static float MISSILE_RANGE_MULT = 0.8f;
+	public static float MISSILE_ACCEL_BONUS = 150f;
+	public static float MISSILE_RATE_BONUS = 50f;
+	public static float MISSILE_TURN_ACCEL_BONUS = 150f;
 	
-	public static final float EW_PENALTY_MULT = 0.5f;
-	public static final float EW_PENALTY_REDUCTION = 5f;
-	//public static final float MAX_EW_PENALTY_MOD = 5f;
+	public static float EW_PENALTY_MULT = 0.5f;
+	public static float EW_PENALTY_REDUCTION = 5f;
+	//public static float MAX_EW_PENALTY_MOD = 5f;
 	
-	public static final float ECCM_CHANCE = 0.5f;
-	public static final float GUIDANCE_IMPROVEMENT = 1f;
+	public static float ECCM_CHANCE = 0.5f;
+	public static float GUIDANCE_IMPROVEMENT = 1f;
+	
+	public static float SMOD_ECCM_CHANCE = 1f;
+	public static float SMOD_EW = 0f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getEccmChance().modifyFlat(id, ECCM_CHANCE);
+		boolean sMod = isSMod(stats);
+		stats.getEccmChance().modifyFlat(id, sMod ? SMOD_ECCM_CHANCE : ECCM_CHANCE);
 		stats.getMissileGuidance().modifyFlat(id, GUIDANCE_IMPROVEMENT);
 		
 //		stats.getMissileMaxSpeedBonus().modifyPercent(id, 10f);
@@ -49,7 +53,12 @@ public class ECCMPackage extends BaseHullMod {
 		stats.getMissileTurnAccelerationBonus().modifyPercent(id, MISSILE_TURN_ACCEL_BONUS);
 		
 		
-		stats.getDynamic().getStat(Stats.ELECTRONIC_WARFARE_PENALTY_MULT).modifyMult(id, EW_PENALTY_MULT);
+//		if (sMod) {
+//			stats.getDynamic().getStat(Stats.ELECTRONIC_WARFARE_PENALTY_MULT).modifyMult(id, SMOD_EW);
+//		} else {
+			//stats.getDynamic().getStat(Stats.ELECTRONIC_WARFARE_PENALTY_MULT).modifyMult(id, EW_PENALTY_MULT);
+			stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MOD).modifyMult(id, EW_PENALTY_MULT);
+//		}
 		//stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MOD).modifyFlat(id, -EW_PENALTY_REDUCTION);
 		
 		//stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MAX_FOR_SHIP_MOD).modifyFlat(id, -MAX_EW_PENALTY_MOD);

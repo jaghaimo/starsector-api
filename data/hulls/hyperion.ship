@@ -37,7 +37,10 @@
         6,
         49
     ],
-    "builtInMods": ["high_maintenance"],
+    "builtInMods": [
+        "high_maintenance",
+        "delicate"
+    ],
     "center": [
         54,
         34

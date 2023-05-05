@@ -26,6 +26,8 @@
 					   "particleCount":11,
 					   "particleColor":[255,120,105,250]},
 	"projectileSpecId":"heavymg_shot",  # projectile that will be fired
+	"stopPreviousFireSound":true,
 	#"fireSoundOne":"heavy_machinegun_intro",
 	"fireSoundTwo":"heavy_machinegun_fire",
+	#"fireSoundTwo":"plasma_cannon_fire",
 }

@@ -34,6 +34,9 @@
 	"fadeTime":0.2, # fadeout duration			
 	"glowColor":[255,100,100,75],
 	"glowRadius":125,
+	"passThroughMissiles":true,
+	"passThroughFighters":true,
+	"applyOnHitEffectWhenPassThrough":false,
 	"engineSpec":{"turnAcc":500,
 				  "turnRate":100,
 				  "acc":500,

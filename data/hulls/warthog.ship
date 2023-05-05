@@ -26,7 +26,7 @@
                 -11,
                 9
             ],
-            "style": "MIDLINE",
+            "style": "LOW_TECH",
             "width": 12
         },
         {
@@ -37,7 +37,7 @@
                 -11,
                 -9
             ],
-            "style": "MIDLINE",
+            "style": "LOW_TECH",
             "width": 12
         },
         {
@@ -46,9 +46,9 @@
             "length": 12,
             "location": [
                 -11,
-                3
+                2
             ],
-            "style": "MIDLINE",
+            "style": "LOW_TECH",
             "width": 4
         },
         {
@@ -59,7 +59,7 @@
                 -11,
                 -2
             ],
-            "style": "MIDLINE",
+            "style": "LOW_TECH",
             "width": 4
         }
     ],
@@ -72,7 +72,7 @@
         0
     ],
     "shieldRadius": 20,
-    "spriteName": "graphics/ships/fighter_assault_midline.png",
+    "spriteName": "graphics/ships/fighters/warthog_lowtech.png",
     "style": "LOW_TECH",
     "viewOffset": 0,
     "weaponSlots": [

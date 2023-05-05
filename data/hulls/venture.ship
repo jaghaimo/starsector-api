@@ -244,6 +244,42 @@
             "mount": "HIDDEN",
             "size": "LARGE",
             "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 009",
+            "locations": [
+                -43,
+                0
+            ],
+            "mount": "HARDPOINT",
+            "size": "LARGE",
+            "type": "DECORATIVE"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 010",
+            "locations": [
+                -73,
+                0
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 011",
+            "locations": [
+                -45,
+                0
+            ],
+            "mount": "TURRET",
+            "size": "LARGE",
+            "type": "DECORATIVE"
         }
     ],
     "width": 194

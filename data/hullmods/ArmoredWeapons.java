@@ -11,6 +11,8 @@ public class ArmoredWeapons extends BaseHullMod {
 	public static float ARMOR_BONUS = 10f;
 	public static float TURN_PENALTY = 25f;
 	
+	public static float SMOD_BONUS = 10f;
+	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getArmorBonus().modifyPercent(id, ARMOR_BONUS);
 		stats.getWeaponHealthBonus().modifyPercent(id, HEALTH_BONUS);
@@ -22,6 +24,12 @@ public class ArmoredWeapons extends BaseHullMod {
 		// slower recoil recovery, also, to match the reduced recoil-per-shot
 		// overall effect is same as without skill but halved in every respect
 		stats.getRecoilDecayMult().modifyMult(id, 1f - (0.01f * RECOIL_BONUS));
+		
+		boolean sMod = isSMod(stats);
+		if (sMod) {
+			stats.getBallisticRoFMult().modifyMult(id, 1f + SMOD_BONUS * 0.01f);
+			stats.getEnergyRoFMult().modifyMult(id, 1f + SMOD_BONUS * 0.01f);
+		}
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
@@ -31,6 +39,11 @@ public class ArmoredWeapons extends BaseHullMod {
 		if (index == 3) return "" + (int) ARMOR_BONUS + "%";
 		return null;
 	}
-
+	
+	public String getSModDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "" + (int) SMOD_BONUS + "%";
+		return null;
+	}
+	
 
 }

@@ -21,7 +21,12 @@
 					 "particleSizeRange":3.0,
 					 "particleDuration":1,
 					 "particleCount":200,
-					 "particleColor":[255,155,155,255]},
+					 "particleColor":[255,155,155,255],
+					 "explosionColor":[255,100,100,255],
+					 "detailedExplosionFlashColorFringe":[255,100,100,255],
+					 "detailedExplosionFlashRadius":500,
+					 "useDetailedExplosion":true
+					 },
 	"flameoutTime":3, # total time from flameout to full fadeout
 	"armingTime":0.5,
 	"noEngineGlowTime":0.5, # time spent without the engine glow being rendered

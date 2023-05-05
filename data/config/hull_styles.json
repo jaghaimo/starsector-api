@@ -6,7 +6,8 @@
 	"LOW_TECH":{
 		"hyperspaceJitterColor":[255,125,45,200],
 		"baseCampaignExplosionColor":[255,125,25,255],
-		"baseCombatExplosionColor":[255,125,25,255],
+		"baseCombatExplosionColor":[255,125,25,255], # smooth flash
+		"combatExplosionNonFlashColorOverride":[255,165,100,255], # the more billowy explosion
 		"fighterRepairFlickerColor":[255,125,25,255],
 		"fighterChipIconColor":[255,200,150,255],
 		"weaponDisabledExplosionColor":[255,125,25,255],
@@ -47,7 +48,8 @@
 	"MIDLINE":{
 		"hyperspaceJitterColor":[255,145,75,200],
 		"baseCampaignExplosionColor":[255,145,75,255],
-		"baseCombatExplosionColor":[255,145,75,255],
+		"baseCombatExplosionColor":[255,145,75,255], # smooth flash
+		"combatExplosionNonFlashColorOverride":[255,145,75,255], # the more billowy explosion
 		"fighterRepairFlickerColor":[255,145,75,255],
 		"fighterChipIconColor":[255,255,255,255],
 		"weaponDisabledExplosionColor":[255,145,75,255],
@@ -84,7 +86,8 @@
 	"HIGH_TECH":{
 		"hyperspaceJitterColor":[100,165,255,200],
 		"baseCampaignExplosionColor":[100,165,255,255],
-		"baseCombatExplosionColor":[100,165,255,255],
+		"baseCombatExplosionColor":[100,165,255,255], # smooth flash
+		"combatExplosionNonFlashColorOverride":[100,165,255,255], # the more billowy explosion
 		"fighterRepairFlickerColor":[100,165,255,255],
 		"fighterChipIconColor":[100,165,255,255],
 		"weaponDisabledExplosionColor":[100,165,255,255],
@@ -122,7 +125,8 @@
 	"OMEGA":{
 		"hyperspaceJitterColor":[105,100,255,200],
 		"baseCampaignExplosionColor":[105,100,255,255],
-		"baseCombatExplosionColor":[105,100,255,255],
+		"baseCombatExplosionColor":[105,100,255,255], # smooth flash
+		"combatExplosionNonFlashColorOverride":[105,100,255,255], # the more billowy explosion
 		"fighterRepairFlickerColor":[105,100,255,255],
 		"fighterChipIconColor":[105,100,255,255],
 		"weaponDisabledExplosionColor":[105,100,255,255],

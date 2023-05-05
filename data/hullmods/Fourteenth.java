@@ -48,7 +48,7 @@ public class Fourteenth extends BaseHullMod {
 		stats.getAcceleration().modifyMult(id, HANDLING_MULT);
 		stats.getDeceleration().modifyMult(id, HANDLING_MULT);
 		stats.getMaxTurnRate().modifyMult(id, HANDLING_MULT);
-		stats. getTurnAcceleration().modifyMult(id, HANDLING_MULT);
+		stats.getTurnAcceleration().modifyMult(id, HANDLING_MULT);
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {

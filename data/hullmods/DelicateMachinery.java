@@ -19,6 +19,6 @@ public class DelicateMachinery extends BaseHullMod {
 	}
 
 	public boolean isApplicableToShip(ShipAPI ship) {
-		return ship != null && (ship.getHullSpec().getNoCRLossTime() < 10000 || ship.getHullSpec().getCRLossPerSecond() > 0); 
+		return ship != null && (ship.getHullSpec().getNoCRLossTime() < 10000 || ship.getHullSpec().getCRLossPerSecond(ship.getMutableStats()) > 0); 
 	}
 }

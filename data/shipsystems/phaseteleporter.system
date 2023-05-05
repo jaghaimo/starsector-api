@@ -21,7 +21,7 @@
 	
 	"range":1500,
 	"randomRange":0,
-	"requiresZeroFluxBoost":true,
+	#"requiresZeroFluxBoost":true,
 	
 	"vulnerableChargeup":true,
 	"vulnerableChargedown":false,

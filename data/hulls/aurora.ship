@@ -1,24 +1,24 @@
 {
     "bounds": [
-        -104,
-        59,
-        10,
+        -106,
+        60,
+        4,
         38,
-        28,
-        61,
-        51,
-        65,
-        138,
-        -18,
-        87,
+        23,
+        62,
+        54,
+        68,
+        140,
+        -16,
+        86,
         -49,
-        14,
-        -46,
+        16,
+        -49,
         15,
         -30,
-        -104,
-        -51,
-        -113,
+        -105,
+        -52,
+        -114,
         1
     ],
     "center": [
@@ -34,7 +34,7 @@
             "length": 64,
             "location": [
                 -115,
-                26
+                27
             ],
             "style": "HIGH_TECH",
             "width": 16
@@ -44,8 +44,8 @@
             "contrailSize": 64,
             "length": 64,
             "location": [
-                -115,
-                -24
+                -117,
+                -23
             ],
             "style": "HIGH_TECH",
             "width": 16
@@ -56,7 +56,7 @@
             "length": 48,
             "location": [
                 -116,
-                19
+                21
             ],
             "style": "HIGH_TECH",
             "width": 12
@@ -66,8 +66,8 @@
             "contrailSize": 64,
             "length": 48,
             "location": [
-                -118,
-                13
+                -117,
+                16
             ],
             "style": "HIGH_TECH",
             "width": 12
@@ -77,8 +77,8 @@
             "contrailSize": 64,
             "length": 80,
             "location": [
-                -117,
-                4
+                -116,
+                1
             ],
             "style": "HIGH_TECH",
             "width": 16
@@ -88,29 +88,18 @@
             "contrailSize": 64,
             "length": 48,
             "location": [
-                -119,
-                -1
-            ],
-            "style": "HIGH_TECH",
-            "width": 12
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 48,
-            "location": [
-                -118,
-                -7
-            ],
-            "style": "HIGH_TECH",
-            "width": 12
-        },
-        {
-            "angle": 180,
-            "contrailSize": 64,
-            "length": 48,
-            "location": [
                 -117,
+                -5
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -115,
                 -14
             ],
             "style": "HIGH_TECH",
@@ -121,8 +110,8 @@
             "contrailSize": 64,
             "length": 48,
             "location": [
-                -104,
-                44
+                -115,
+                -18
             ],
             "style": "HIGH_TECH",
             "width": 12
@@ -132,8 +121,8 @@
             "contrailSize": 64,
             "length": 48,
             "location": [
-                -109,
-                37
+                -111,
+                40
             ],
             "style": "HIGH_TECH",
             "width": 12
@@ -143,8 +132,8 @@
             "contrailSize": 64,
             "length": 48,
             "location": [
-                -109,
-                -33
+                -112,
+                35
             ],
             "style": "HIGH_TECH",
             "width": 12
@@ -154,8 +143,19 @@
             "contrailSize": 64,
             "length": 48,
             "location": [
-                -105,
-                -38
+                -112,
+                -30
+            ],
+            "style": "HIGH_TECH",
+            "width": 12
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -111,
+                -36
             ],
             "style": "HIGH_TECH",
             "width": 12
@@ -176,11 +176,22 @@
             "contrailSize": 128,
             "length": 24,
             "location": [
-                9,
+                11,
                 -46
             ],
             "style": "HIGH_TECH",
             "width": 8
+        },
+        {
+            "angle": 180,
+            "contrailSize": 64,
+            "length": 48,
+            "location": [
+                -117,
+                8
+            ],
+            "style": "HIGH_TECH",
+            "width": 13
         }
     ],
     "height": 280,
@@ -192,7 +203,7 @@
         1
     ],
     "shieldRadius": 190,
-    "spriteName": "graphics/ships/aurora_ca.png",
+    "spriteName": "graphics/ships/aurora/aurora.png",
     "style": "HIGH_TECH",
     "viewOffset": 0,
     "weaponSlots": [
@@ -297,7 +308,7 @@
             "arc": 5,
             "id": "WS 009",
             "locations": [
-                102,
+                103,
                 17
             ],
             "mount": "HARDPOINT",
@@ -309,8 +320,8 @@
             "arc": 5,
             "id": "WS 010",
             "locations": [
-                140,
-                -11
+                141,
+                -10
             ],
             "mount": "HARDPOINT",
             "size": "SMALL",
@@ -321,7 +332,7 @@
             "arc": 5,
             "id": "WS 011",
             "locations": [
-                63,
+                64,
                 58
             ],
             "mount": "HARDPOINT",
@@ -333,7 +344,7 @@
             "arc": 5,
             "id": "WS 012",
             "locations": [
-                95,
+                97,
                 35
             ],
             "mount": "HARDPOINT",
@@ -345,12 +356,24 @@
             "arc": 5,
             "id": "WS 013",
             "locations": [
-                97,
+                98,
                 -42
             ],
             "mount": "HARDPOINT",
             "size": "SMALL",
             "type": "SYNERGY"
+        },
+        {
+            "angle": 180,
+            "arc": 5,
+            "id": "WS 014",
+            "locations": [
+                -115,
+                1
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
         }
     ],
     "width": 128

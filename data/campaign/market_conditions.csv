@@ -73,6 +73,7 @@ AI Core Admin (hidden),ai_core_admin,,TRUE,com.fs.starfarer.api.impl.campaign.ec
 Pirate Activity,pirate_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivity,"There have been signs that pirates are targeting shipping and colonies in this system - from port inspectors being pressured to turn a blind eye, to inconsistencies in cargo manifests, to other increased criminal activity.
 
 The pirates most likely have a base somewhere relatively nearby.",graphics/icons/markets/pirate_activity.png,1300
+Hostile Activity,hostile_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.events.HostileActivity,,graphics/icons/markets/pirate_activity.png,1350
 Luddic Path Cells,pather_cells,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCells,,graphics/icons/markets/pather_cells.png,1400
 ,,,,,,,
 # stand-alone conditions,,,,,,,

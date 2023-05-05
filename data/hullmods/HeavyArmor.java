@@ -10,7 +10,9 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class HeavyArmor extends BaseHullMod {
 
-	public static final float MANEUVER_PENALTY = 10f;
+	public static float MANEUVER_PENALTY = 10f;
+	
+	public static float SMOD_MANEUVER_PENALTY = 25f;
 	
 	
 	private static Map mag = new HashMap();
@@ -29,10 +31,20 @@ public class HeavyArmor extends BaseHullMod {
 		
 		stats.getArmorBonus().modifyFlat(id, (Float) mag.get(hullSize));
 		
-		stats.getAcceleration().modifyMult(id, 1f - MANEUVER_PENALTY * 0.01f);
-		stats.getDeceleration().modifyMult(id, 1f - MANEUVER_PENALTY * 0.01f);
-		stats.getTurnAcceleration().modifyMult(id, 1f - MANEUVER_PENALTY * 0.01f);
-		stats.getMaxTurnRate().modifyMult(id, 1f - MANEUVER_PENALTY * 0.01f);
+//		stats.getAcceleration().modifyMult(id, 1f - MANEUVER_PENALTY * 0.01f);
+//		stats.getDeceleration().modifyMult(id, 1f - MANEUVER_PENALTY * 0.01f);
+//		stats.getTurnAcceleration().modifyMult(id, 1f - MANEUVER_PENALTY * 0.01f);
+//		stats.getMaxTurnRate().modifyMult(id, 1f - MANEUVER_PENALTY * 0.01f);
+		
+		boolean sMod = isSMod(stats);
+		if (sMod) {
+			stats.getAcceleration().modifyMult(id, 1f - SMOD_MANEUVER_PENALTY * 0.01f);
+			stats.getDeceleration().modifyMult(id, 1f - SMOD_MANEUVER_PENALTY * 0.01f);
+			stats.getTurnAcceleration().modifyMult(id, 1f - SMOD_MANEUVER_PENALTY * 0.01f);
+			stats.getMaxTurnRate().modifyMult(id, 1f - SMOD_MANEUVER_PENALTY * 0.01f);
+		}
+		
+//		stats.getEnergyAmmoRegenMult().modifyMult(id, 10f);
 		
 //		stats.getDynamic().getMod(Stats.MAX_LOGISTICS_HULLMODS_MOD).modifyFlat(id, 1);
 //		//stats.getCargoMod().modifyFlat(id, -70);
@@ -53,10 +65,26 @@ public class HeavyArmor extends BaseHullMod {
 		//if (index == 0) return "" + ((Float) mag.get(hullSize)).intValue();
 		//return null;
 	}
+	
+	
+	@Override
+	public String getSModDescriptionParam(int index, HullSize hullSize, ShipAPI ship) {
+		if (index == 0) return "" + (int) SMOD_MANEUVER_PENALTY + "%";
+		return null;
+	}
+	
+	@Override
+	public boolean isSModEffectAPenalty() {
+		return true;
+	}
+	
+	
 
 	public boolean isApplicableToShip(ShipAPI ship) {
 		//if (ship.getMutableStats().getCargoMod().computeEffective(ship.getHullSpec().getCargo()) < 70) return false;
 
 		return true;
 	}
+
+
 }

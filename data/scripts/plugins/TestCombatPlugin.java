@@ -7,7 +7,9 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector2f;
 
+import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.BaseCustomUIPanelPlugin;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamageType;
@@ -17,6 +19,9 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.WeaponGroupAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.mission.FleetSide;
+import com.fs.starfarer.api.ui.CustomPanelAPI;
+import com.fs.starfarer.api.ui.PositionAPI;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 
 public class TestCombatPlugin extends BaseEveryFrameCombatPlugin {
@@ -196,18 +201,54 @@ public class TestCombatPlugin extends BaseEveryFrameCombatPlugin {
 		// TODO Auto-generated method stub
 		if (!TEST_MODE) return;
 	}
+	
+	protected CustomPanelAPI panel = null;
 	public void renderInUICoords(ViewportAPI viewport) {
 		if (!TEST_MODE) return;
-		//renderQuad(100, 100, 200, 200, Color.white, 1f);
+		if (Global.getCurrentState() == GameState.TITLE) {
+			if (panel == null) {
+				panel = Global.getSettings().createCustom(200, 100, new BaseCustomUIPanelPlugin() {
+					@Override
+					public void buttonPressed(Object buttonId) {
+						System.out.println("BUTTON PRESSED: " + buttonId);
+					}
+				});
+				TooltipMakerAPI t = panel.createUIElement(200, 100, false);
+				t.addButton("TEST", "TEST", 200, 20, 0f);
+				panel.addUIElement(t).inTL(0, 0);
+				panel.getPosition().setLocation(500, 500);
+				panel.getPosition().setSize(200, 100);
+			}
+			//renderQuad(100, 100, 200, 200, Color.white, 1f);
+			PositionAPI p = panel.getPosition();
+			float x = p.getX();
+			float y = p.getY();
+			float w = p.getWidth();
+			float h = p.getHeight();
+			renderQuad(x, y, w, h, Color.gray, 1f);
+			panel.render(1f);
+		}
 	}
+	
+	@Override
+	public void processInputPreCoreControls(float amount, List<InputEventAPI> events) {
+		if (!TEST_MODE) return;
+		if (engine == null) return;
+		super.processInputPreCoreControls(amount, events);
+		if (Global.getCurrentState() == GameState.TITLE && panel != null) {
+			panel.advance(amount);
+			panel.processInput(events);
+		}
+	}
+	
 	public void renderInWorldCoords(ViewportAPI viewport) {
 		if (!TEST_MODE) return;
-		//Vector2f loc = engine.getPlayerShip().getLocation();
+		Vector2f loc = engine.getPlayerShip().getLocation();
 		//renderQuad(loc.x, loc.y, 10, 10, Color.red, 1f);
 	}
 
-
 	
+
 	public static void renderQuad(float x, float y, float width, float height, Color color, float alphaMult) {
 		
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
@@ -229,4 +270,6 @@ public class TestCombatPlugin extends BaseEveryFrameCombatPlugin {
 		}
 		GL11.glEnd();
 	}
+	
+	
 }

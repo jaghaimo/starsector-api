@@ -33,6 +33,7 @@
         -33,
         63
     ],
+    "builtInMods": ["bdeck"],
     "center": [
         70,
         49
@@ -46,7 +47,7 @@
             "length": 30,
             "location": [
                 -49,
-                52
+                51
             ],
             "style": "MIDLINE",
             "width": 12
@@ -202,7 +203,7 @@
             ],
             "mount": "HIDDEN",
             "size": "SMALL",
-            "type": "SYSTEM"
+            "type": "DECORATIVE"
         },
         {
             "angle": 225,
@@ -214,7 +215,7 @@
             ],
             "mount": "HIDDEN",
             "size": "SMALL",
-            "type": "SYSTEM"
+            "type": "DECORATIVE"
         },
         {
             "angle": -45,
@@ -226,7 +227,7 @@
             ],
             "mount": "HIDDEN",
             "size": "SMALL",
-            "type": "SYSTEM"
+            "type": "DECORATIVE"
         },
         {
             "angle": 45,
@@ -238,7 +239,7 @@
             ],
             "mount": "HIDDEN",
             "size": "SMALL",
-            "type": "SYSTEM"
+            "type": "DECORATIVE"
         },
         {
             "angle": 0,
@@ -275,6 +276,30 @@
             "mount": "HIDDEN",
             "size": "MEDIUM",
             "type": "LAUNCH_BAY"
+        },
+        {
+            "angle": 110,
+            "arc": 10,
+            "id": "WS 013",
+            "locations": [
+                0,
+                63
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
+        },
+        {
+            "angle": 250,
+            "arc": 10,
+            "id": "WS 014",
+            "locations": [
+                1,
+                -62
+            ],
+            "mount": "HIDDEN",
+            "size": "SMALL",
+            "type": "SYSTEM"
         }
     ],
     "width": 140

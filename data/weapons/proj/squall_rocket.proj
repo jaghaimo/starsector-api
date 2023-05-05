@@ -3,6 +3,7 @@
 	"specClass":"missile",
 	#"missileType":"ROCKET",
 	"missileType":"MISSILE_TWO_STAGE_SECOND_UNGUIDED",
+	"onFireEffect":"com.fs.starfarer.api.impl.combat.SquallOnFireEffect",
 	"sprite":"graphics/missiles/missile_squall.png",
 	"size":[6,20],	
 	"center":[3,10],
