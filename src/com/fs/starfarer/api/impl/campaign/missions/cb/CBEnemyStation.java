@@ -153,6 +153,7 @@ public class CBEnemyStation extends BaseCustomBountyCreator {
 			
 			if (difficulty == 10 && !starfortress) continue;
 			if ((difficulty == 8 || difficulty == 9) && !battlestation) continue;
+			if (!battlestation && !starfortress && difficulty >= 8) continue;
 			
 			CampaignFleetAPI fleet = Misc.getStationFleet(market);
 			if (fleet != null) {

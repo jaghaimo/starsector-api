@@ -25,7 +25,7 @@ public class SubCredits extends BaseCommandPlugin {
 		}
 		
 		
-		MemoryAPI memory = Global.getSector().getCharacterData().getMemory();
+		MemoryAPI memory = Global.getSector().getCharacterData().getMemoryWithoutUpdate();
 		memory.set("$credits", (int)Global.getSector().getPlayerFleet().getCargo().getCredits().get(), 0);
 		memory.set("$creditsStr", Misc.getWithDGS(Global.getSector().getPlayerFleet().getCargo().getCredits().get()), 0);
 		

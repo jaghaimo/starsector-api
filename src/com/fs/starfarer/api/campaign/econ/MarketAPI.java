@@ -420,6 +420,8 @@ public interface MarketAPI extends HasMemory {
 	void setInvalidMissionTarget(Boolean invalidMissionTarget);
 	void setSuppressedConditions(LinkedHashSet<String> suppressedConditions);
 	void setRetainSuppressedConditionsSetWhenEmpty(Boolean retainSuppressedConditionsSetWhenEmpty);
+	float getGrossIncome();
+	boolean hasFunctionalIndustry(String id);
 }
 
 

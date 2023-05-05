@@ -32,6 +32,11 @@ public class ElectronicWarfareScript extends BaseEveryFrameCombatPlugin {
 		this.engine = engine;
 	}
 	
+	
+//	public ElectronicWarfareScript() {
+//		System.out.println("WEFWEGWGWEGF124");
+//	}
+	
 	private ShipAPI prevPlayerShip = null;
 	private int skipFrames = 0;
 	private Set<CombatFleetManagerAPI> needsCleanup = new HashSet<CombatFleetManagerAPI>();
@@ -105,10 +110,13 @@ public class ElectronicWarfareScript extends BaseEveryFrameCombatPlugin {
 		String icon = Global.getSettings().getSpriteName("ui", "icon_tactical_electronic_warfare");
 		
 		if (engine.getPlayerShip() != null && !playerWon) {
-			int eccm = (int) Math.round(engine.getPlayerShip().getMutableStats().getDynamic().getValue(Stats.ELECTRONIC_WARFARE_PENALTY_MOD, 0f));
-			eccm = -eccm;
+			int eccm = 100 - (int) Math.round(engine.getPlayerShip().getMutableStats().getDynamic().getValue(Stats.ELECTRONIC_WARFARE_PENALTY_MOD, 100f));
+			if (eccm > 100) eccm = 100;
+			if (eccm < 0) eccm = 0;
+			//eccm = -eccm;
 			if (eccm != 0) {
-				engine.maintainStatusForPlayerShip(KEY_STATUS2, icon, "On-board ECCM", "up to " + eccm + "% ecm neutralized", false);
+				//engine.maintainStatusForPlayerShip(KEY_STATUS2, icon, "On-board ECCM", "up to " + eccm + "% ecm neutralized", false);
+				engine.maintainStatusForPlayerShip(KEY_STATUS2, icon, "On-board ECCM", "" + eccm + "% ecm neutralized", false);
 			}
 		}
 		
@@ -122,7 +130,7 @@ public class ElectronicWarfareScript extends BaseEveryFrameCombatPlugin {
 			if (member.getShip() == null) continue;
 			
 			float currPenalty = penalty * member.getShip().getMutableStats().getDynamic().getValue(Stats.ELECTRONIC_WARFARE_PENALTY_MULT);
-			currPenalty = member.getShip().getMutableStats().getDynamic().getValue(Stats.ELECTRONIC_WARFARE_PENALTY_MOD, penalty);
+			currPenalty = member.getShip().getMutableStats().getDynamic().getValue(Stats.ELECTRONIC_WARFARE_PENALTY_MOD, currPenalty);
 			if (currPenalty < 0) currPenalty = 0;
 			
 			float maxMod = penalty * member.getShip().getMutableStats().getDynamic().getValue(Stats.ELECTRONIC_WARFARE_PENALTY_MAX_FOR_SHIP_MOD, 0);

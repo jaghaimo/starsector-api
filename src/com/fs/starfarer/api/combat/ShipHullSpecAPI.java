@@ -27,6 +27,8 @@ public interface ShipHullSpecAPI {
 		float getRadius();
 		float getCenterX();
 		float getCenterY();
+		void setRingColor(Color color);
+		void setInnerColor(Color innerColor);
 	}
 	
 	public interface EngineSpecAPI {
@@ -64,6 +66,8 @@ public interface ShipHullSpecAPI {
 		WEAPONS_BACK_TO_FRONT,
 		DO_NOT_SHOW_MODULES_IN_FLEET_LIST,
 		RENDER_ENGINES_BELOW_HULL,
+		NEVER_DODGE_MISSILES,
+		MISSILE_HARDPOINTS_ROTATE,
 		
 		NO_NEURAL_LINK,
 		
@@ -86,6 +90,19 @@ public interface ShipHullSpecAPI {
 	float getNoCRLossTime();
 	float getCRToDeploy();
 	float getCRLossPerSecond();
+	
+//	/**
+//	 * The returned value is NOT modified by stats.getCRLossPerSecondPercent(), but does
+//	 * account for modifications to stats.getCRPerDeploymentPercent().
+//	 * @param stats
+//	 * @return
+//	 */
+	/**
+	 * (Equivalent to getCRLossPerSecond(), the parameter is ignored.)
+	 * @param stats
+	 * @return
+	 */
+	float getCRLossPerSecond(MutableShipStatsAPI stats);
 	
 	float getBaseValue();
 	
@@ -214,5 +231,16 @@ public interface ShipHullSpecAPI {
 	String getShipSystemId();
 
 	void setShipSystemId(String shipSystemId);
+
+	//ShipHullSpecAPI clone();
+
+	void setDescriptionPrefix(String descriptionPrefix);
+	WeaponSlotAPI getWeaponSlot(String slotId);
+	//List getAllWeaponSlotsNonCopy();
+	//void addWeaponSlot(WeaponSlotAPI slot);
+
+	void setFleetPoints(int fleetPoints);
+
+	void setDescriptionId(String descriptionId);
 
 }

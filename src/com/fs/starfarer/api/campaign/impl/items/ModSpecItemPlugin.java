@@ -22,6 +22,7 @@ import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
+import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -185,6 +186,8 @@ public class ModSpecItemPlugin extends BaseSpecialItemPlugin {
 			tooltip.addPara(spec.getDesc(), Misc.getGrayColor(), opad);
 		}
 		
+		tooltip.addSectionHeading("Effect", Alignment.MID, opad * 1f);
+		
 		HullModEffect e = modSpec.getEffect();
 		HullSize size = HullSize.CAPITAL_SHIP;
 		if (e.shouldAddDescriptionToTooltip(size, null, true)) {
@@ -206,6 +209,10 @@ public class ModSpecItemPlugin extends BaseSpecialItemPlugin {
 		}
 		
 		e.addPostDescriptionSection(tooltip, size, null, getTooltipWidth(), true);
+		
+		if (e.hasSModEffectSection(size, null, false)) {
+			e.addSModSection(tooltip, size, null, getTooltipWidth(), true, false);
+		}
 		
 		addCostLabel(tooltip, opad, transferHandler, stackSource);
 		

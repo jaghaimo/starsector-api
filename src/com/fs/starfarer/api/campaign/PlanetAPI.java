@@ -1,6 +1,7 @@
 package com.fs.starfarer.api.campaign;
 
 import java.awt.Color;
+import java.util.Random;
 
 import org.lwjgl.util.vector.Vector3f;
 
@@ -50,4 +51,6 @@ public interface PlanetAPI extends SectorEntityToken {
 	void setSecondLight(Vector3f location, Color color);
 
 	String getTypeNameWithWorldLowerCase();
+
+	void changeType(String type, Random random);
 }

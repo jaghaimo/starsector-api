@@ -40,4 +40,6 @@ public interface CustomUIPanelPlugin {
 	 * @param events
 	 */
 	void processInput(List<InputEventAPI> events);
+	
+	void buttonPressed(Object buttonId);
 }

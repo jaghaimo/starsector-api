@@ -19,6 +19,7 @@ import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
  */
 public class RealityDisruptorEffect implements OnFireEffectPlugin, OnHitEffectPlugin, EveryFrameWeaponEffectPlugin {
 
+	
 	protected CombatEntityAPI chargeGlowEntity;
 	protected RealityDisruptorChargeGlow chargeGlowPlugin;
 	public RealityDisruptorEffect() {

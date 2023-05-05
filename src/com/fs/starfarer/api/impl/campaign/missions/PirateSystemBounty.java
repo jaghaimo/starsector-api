@@ -35,7 +35,7 @@ import com.fs.starfarer.api.util.Misc;
 
 public class PirateSystemBounty extends HubMissionWithBarEvent implements FleetEventListener {
 
-	public static float BOUNTY_DAYS = 90f;
+	public static float BOUNTY_DAYS = 120f;
 	public static float BASE_BOUNTY = 1000f;
 	//public static float VS_STATION_BONUS = 50000f;
 	

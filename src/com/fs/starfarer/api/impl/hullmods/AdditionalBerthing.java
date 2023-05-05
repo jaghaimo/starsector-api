@@ -9,9 +9,10 @@ import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 
 public class AdditionalBerthing extends BaseLogisticsHullMod {
 
-	public static final float MIN_FRACTION = 0.3f;
+	public static float MIN_FRACTION = 0.3f;
+	public static float MAINTENANCE_PERCENT = 50;
 	
-	public static final float MAINTENANCE_PERCENT = 50;
+	public static float SMOD_MULT = 2f;
 	
 	private static Map mag = new HashMap();
 	static {
@@ -23,16 +24,24 @@ public class AdditionalBerthing extends BaseLogisticsHullMod {
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		
+		
 		float mod = (Float) mag.get(hullSize);
 		if (stats.getVariant() != null) {
 			mod = Math.max(stats.getVariant().getHullSpec().getMaxCrew() * MIN_FRACTION, mod);
 		}
+		boolean sMod = isSMod(stats);
+		if (sMod) mod *= SMOD_MULT; 
 		stats.getMaxCrewMod().modifyFlat(id, mod);
 		
-		if (stats.getVariant() != null && stats.getVariant().hasHullMod(HullMods.CIVGRADE) && !stats.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {
+		if (!sMod && stats.getVariant() != null && stats.getVariant().hasHullMod(HullMods.CIVGRADE) && !stats.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {
 			stats.getSuppliesPerMonth().modifyPercent(id, MAINTENANCE_PERCENT);
 		}
 	}
+	
+//	public String getSModDescriptionParam(int index, HullSize hullSize) {
+//		if (index == 0) return "" + (int) Math.round((SMOD_MULT - 1f) * 100f) + "%";
+//		return null;
+//	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + ((Float) mag.get(HullSize.FRIGATE)).intValue();

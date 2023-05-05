@@ -9,6 +9,7 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers;
+import com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetAutoDespawn;
 
 public class FleetCreatorMission extends HubMissionWithTriggers {
 	
@@ -30,7 +31,9 @@ public class FleetCreatorMission extends HubMissionWithTriggers {
 		List<CampaignFleetAPI> fleets = runStageTriggersReturnFleets(STAGE);
 		if (fleets.isEmpty()) return null;
 		
-		return fleets.get(0);
+		CampaignFleetAPI fleet = fleets.get(0);
+		fleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);
+		return fleet;
 	}
 
 	@Override
@@ -45,6 +48,8 @@ public class FleetCreatorMission extends HubMissionWithTriggers {
 		String type = FleetTypes.PATROL_MEDIUM;
 		OfficerQuality oQuality = OfficerQuality.DEFAULT;
 		OfficerNum oNum = OfficerNum.DEFAULT;
+		
+		//Global.getSector().getEconomy().getMarket("b07a");
 		
 		if (difficulty <= 0) {
 			size = FleetSize.TINY;

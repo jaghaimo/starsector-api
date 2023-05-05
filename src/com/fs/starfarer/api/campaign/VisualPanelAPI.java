@@ -76,11 +76,17 @@ public interface VisualPanelAPI {
 	void hideThirdPerson();
 
 	void showCore(CoreUITabId tabId, SectorEntityToken other, Object custom, CoreInteractionListener listener);
+	void showCore(CoreUITabId tabId, SectorEntityToken other, Object custom, CoreUITradeMode mode, CoreInteractionListener listener);
 
 	void showMapMarker(SectorEntityToken marker, String title, Color titleColor, 
 						boolean withIntel, String icon, String text, Set<String> intelTags);
 
 	void removeMapMarkerFromPersonInfo();
+
+	void showFirstPerson();
+	void hideFirstPerson();
+
+	void showLargePlanet(SectorEntityToken planet);
 }
 
 

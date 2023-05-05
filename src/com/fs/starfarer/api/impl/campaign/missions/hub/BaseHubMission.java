@@ -1148,7 +1148,7 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 					break;
 				}
 			}
-			runTriggers();
+			//runTriggers();
 		} while (changed);
 		
 		runTriggers();
@@ -1249,6 +1249,8 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 				sendUpdateForNextStep(NEXT_STEP_UPDATE, dialog == null ? null : dialog.getTextPanel());
 			}
 		}
+		
+		runTriggers();
 	}
 	
 	protected void endSuccess(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
@@ -1392,7 +1394,9 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 
 		boolean withMessage = textPanel != null;
 		
-		if (completionRepPerson.successDelta != 0) {
+		boolean adjustPersonRep = (action == RepActions.MISSION_SUCCESS && completionRepPerson.successDelta != 0) ||
+				(action == RepActions.MISSION_FAILURE && completionRepPerson.failureDelta != 0);
+		if (adjustPersonRep && getPerson() != null) {
 			ReputationAdjustmentResult rep = Global.getSector().adjustPlayerReputation(
 					new RepActionEnvelope(action, completionRepPerson,
 							textPanel, true, withMessage), 
@@ -1401,7 +1405,9 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 			completionRepPerson.successDelta = 0;
 		}
 
-		if (completionRepFaction.successDelta != 0) {
+		boolean adjustFactionRep = (action == RepActions.MISSION_SUCCESS && completionRepFaction.successDelta != 0) ||
+				(action == RepActions.MISSION_FAILURE && completionRepFaction.failureDelta != 0);
+		if (adjustFactionRep && getPerson() != null) {
 			ReputationAdjustmentResult rep = Global.getSector().adjustPlayerReputation(
 					new RepActionEnvelope(action, completionRepFaction,
 							textPanel, true, withMessage), 
@@ -3670,6 +3676,11 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 			setMapMarkerNameColor(color);
 		}
 	}
+
+	public List<MissionTrigger> getTriggers() {
+		return triggers;
+	}
+	
 
 }
 

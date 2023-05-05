@@ -359,7 +359,7 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 				if (spec.hasTag(Tags.RESTRICTED)) continue;
 				if (spec.getHints().contains(ShipTypeHints.HIDE_IN_CODEX)) continue;
 				if (spec.getHints().contains(ShipTypeHints.UNBOARDABLE)) continue;
-				if (spec.isDefaultDHull() || spec.isDHull()) continue;
+				if (spec.isDefaultDHull()) continue; // || spec.isDHull()) continue;
 				if ("shuttlepod".equals(spec.getHullId())) continue;
 				if (ships.contains(spec.getHullId())) continue;
 				if (!hullSizes.contains(spec.getHullSize())) continue;
@@ -664,7 +664,7 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 		
 		float quality = ShipQuality.getShipQuality(market, market.getFactionId());
 		if (armsDealer) {
-			quality = Math.max(quality, 1f);
+			quality = Math.max(quality, 1.5f); // high enough (with some margin, at that) for no d-mods
 		}
 
 		CampaignFleetAPI ships = Global.getFactory().createEmptyFleet(market.getFactionId(), "temp", true);

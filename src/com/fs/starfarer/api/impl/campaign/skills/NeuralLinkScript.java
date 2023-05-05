@@ -374,7 +374,7 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 	
 	
 	public void processInputPreCoreControls(float amount, List<InputEventAPI> events) {
-		if (engine.getCombatUI().isShowingCommandUI()) return;
+		if (engine == null || engine.getCombatUI() == null || engine.getCombatUI().isShowingCommandUI()) return;
 		
 		ShipAPI playerShip = engine.getPlayerShip();
 		if (playerShip == null) return;

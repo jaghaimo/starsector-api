@@ -3,6 +3,7 @@ package com.fs.starfarer.api.campaign;
 import java.awt.Color;
 import java.util.List;
 
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.StoryOptionParams;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.ValueDisplayMode;
 
@@ -79,4 +80,7 @@ public interface OptionPanelAPI {
 	boolean hasOptionTooltipAppender(Object data);
 	boolean optionHasConfirmDelegate(Object data);
 	Object getOptionDataBeingConfirmed();
+	void removeOption(Object data);
+	
+	void setStoryOptionParams(Object data, StoryOptionParams params, StoryPointActionDelegate delegate);
 }

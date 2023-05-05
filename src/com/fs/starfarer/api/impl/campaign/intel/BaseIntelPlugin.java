@@ -156,6 +156,14 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 		this.listInfoParam = null;
 	}
 	
+	public void sendUpdateIfPlayerHasIntel(Object listInfoParam, TextPanelAPI textPanel) {
+		if (textPanel == null) {
+			sendUpdateIfPlayerHasIntel(listInfoParam, false);
+		} else {
+			sendUpdate(listInfoParam, textPanel);
+		}
+	}
+	
 	public void sendUpdateIfPlayerHasIntel(Object listInfoParam, boolean onlyIfImportant) {
 		sendUpdateIfPlayerHasIntel(listInfoParam, onlyIfImportant, false);
 	}
@@ -434,7 +442,7 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	public boolean isHidden() {
 		// never mind; handled by making comm relay in Galatia non-functional until the jump-point is stabilized
 		// but procurement missions etc generated inside Galatia still show up, so: need to do this
-		return TutorialMissionIntel.isTutorialInProgress();  
+		return TutorialMissionIntel.isTutorialInProgress() || hidden != null;  
 		//return hidden != null;
 	}
 	
@@ -677,11 +685,11 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	}
 	
 	
-	protected ButtonAPI addGenericButton(TooltipMakerAPI info, float width, String text, Object data) {
+	public ButtonAPI addGenericButton(TooltipMakerAPI info, float width, String text, Object data) {
 		return addGenericButton(info, width, 
 				getFactionForUIColors().getBaseUIColor(), getFactionForUIColors().getDarkUIColor(), text, data);
 	}
-	protected ButtonAPI addGenericButton(TooltipMakerAPI info, float width, Color tc, Color bg, String text, Object data) {
+	public ButtonAPI addGenericButton(TooltipMakerAPI info, float width, Color tc, Color bg, String text, Object data) {
 		float opad = 10f;
 		ButtonAPI button = info.addButton(text, data, tc, bg,
 				  (int)(width), 20f, opad * 2f);
@@ -731,6 +739,10 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 	public Color getCircleBorderColorOverride() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void tableRowClicked(IntelUIAPI ui, TableRowClickData data) {
+		
 	}
 	
 }

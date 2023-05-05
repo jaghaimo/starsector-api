@@ -57,6 +57,13 @@ public class MissionTrigger {
 	}
 	
 	
+	/**
+	 * Optional, null by default.
+	 * Set by calling
+	 * getCurrentTrigger().setId(id)
+	 * After beginning a trigger.
+	 */
+	protected String id = null;
 	protected ConditionChecker condition;
 	protected LinkedHashSet<Object> stages = new LinkedHashSet<Object>();
 	protected List<TriggerAction> actions = new ArrayList<TriggerAction>();
@@ -73,5 +80,10 @@ public class MissionTrigger {
 	public List<TriggerAction> getActions() {
 		return actions;
 	}
-	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 }

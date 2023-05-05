@@ -415,7 +415,23 @@ public class BaseCustomBounty extends HubMissionWithBarEvent implements FleetEve
 		data.fleet.addEventListener(this);
 		makeImportant(data.fleet, "$" + id + "_target", Stage.BOUNTY);
 
-		setTimeLimit(Stage.FAILED, creator.getBountyDays(), creator.getSystemWithNoTimeLimit(data));
+		if (data.fleet.isHidden()) {
+			MarketAPI market = Misc.getStationMarket(data.fleet);
+			if (market != null) {
+				SectorEntityToken station = Misc.getStationEntity(market, data.fleet);
+				if (station != null) {
+					makeImportant(station, "$" + id + "_target", Stage.BOUNTY);
+				}
+			}
+		}
+		
+		if (!data.fleet.getFaction().isNeutralFaction()) {
+			addTag(data.fleet.getFaction().getId());
+		}
+		
+		if (creator.getBountyDays() > 0) {
+			setTimeLimit(Stage.FAILED, creator.getBountyDays(), creator.getSystemWithNoTimeLimit(data));
+		}
 		//setTimeLimit(Stage.FAILED, 3, creator.getSystemWithNoTimeLimit(data));
 		setCreditRewardApplyRelMult(data.baseReward);
 		setRepRewardPerson(data.repPerson);

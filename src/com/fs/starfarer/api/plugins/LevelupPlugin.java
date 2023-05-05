@@ -7,4 +7,5 @@ public interface LevelupPlugin {
 	int getMaxLevel();
 	int getStoryPointsPerLevel();
 	//long getXPForNextLevel(int level);
+	int getBonusXPUseMultAtMaxLevel();
 }

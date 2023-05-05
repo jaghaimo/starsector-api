@@ -6,10 +6,11 @@ import java.util.Random;
 import org.apache.log4j.Logger;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CoreUIAPI;
+import com.fs.starfarer.api.campaign.FactionDoctrineAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
-import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
@@ -49,7 +50,26 @@ public class MilitarySubmarketPlugin extends BaseSubmarketPlugin {
 			float stability = market.getStabilityValue();
 			float sMult = Math.max(0.1f, stability / 10f);
 			getCargo().getMothballedShips().clear();
+			
+			// larger ships at lower stability to compensate for the reduced number of ships
+			// so that low stability doesn't restrict the options to more or less just frigates 
+			// and the occasional destroyer
+			int size = submarket.getFaction().getDoctrine().getShipSize();
+			int add = 0;
+			if (stability <= 4) {
+				add = 2;
+			} else if (stability <= 6) {
+				add = 1;
+			}
+			
+			size += add;
+			if (size > 5) size = 5;
+			
+			FactionDoctrineAPI doctrineOverride = submarket.getFaction().getDoctrine().clone();
+			doctrineOverride.setShipSize(size);
+			
 			addShips(submarket.getFaction().getId(),
+					//(150f + market.getSize() * 25f) * sMult, // combat
 					200f * sMult, // combat
 					15f, // freighter 
 					10f, // tanker
@@ -59,9 +79,9 @@ public class MilitarySubmarketPlugin extends BaseSubmarketPlugin {
 					null, // qualityOverride
 					0f, // qualityMod
 					null,
-					null);
+					doctrineOverride);
 				
-			addHullMods(4, 2 + itemGenRandom.nextInt(4));
+			addHullMods(4, 2 + itemGenRandom.nextInt(4), submarket.getFaction().getId());
 		}
 		
 		getCargo().sort();

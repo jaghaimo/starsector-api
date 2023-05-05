@@ -8,7 +8,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class FaultyAutomatedSystems extends BaseHullMod {
 
-	public static float CREW_PERCENT = 100f;
+	public static float CREW_PERCENT = 50f;
 	public static float MAX_CR_PENALTY = 0.05f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {

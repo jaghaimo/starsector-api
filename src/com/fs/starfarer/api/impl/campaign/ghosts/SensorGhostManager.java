@@ -239,5 +239,10 @@ public class SensorGhostManager implements EveryFrameScript {
 	public boolean isDone() {
 		return false;
 	}
+
+	public List<SensorGhost> getGhosts() {
+		return ghosts;
+	}
+
 	
 }

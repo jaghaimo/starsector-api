@@ -42,16 +42,36 @@ public class BlackMarketPlugin extends BaseSubmarketPlugin {
 			float stability = market.getStabilityValue();
 			
 			pruneWeapons(0f);
+			
+			boolean military = Misc.isMilitary(market);
+//			boolean hiddenBase = market.getMemoryWithoutUpdate().getBoolean(MemFlags.HIDDEN_BASE_MEM_FLAG);
+//			
+//			float extraShips = 0f;
+//			int extraShipSize = 0;
+//			if (military && hiddenBase && !market.hasSubmarket(Submarkets.GENERIC_MILITARY)) {
+//				extraShips = 500f;
+//				extraShipSize = 1;
+//			}
+			
 			WeightedRandomPicker<String> factionPicker = new WeightedRandomPicker<String>();
 			factionPicker.add(market.getFactionId(), 15f - stability);
 			factionPicker.add(Factions.INDEPENDENT, 4f);
 			factionPicker.add(submarket.getFaction().getId(), 6f);
 			
-			int weapons = 6 + Math.max(0, market.getSize() - 1) + (Misc.isMilitary(market) ? 5 : 0);
-			int fighters = 2 + Math.max(0, (market.getSize() - 3) / 2) + (Misc.isMilitary(market) ? 2 : 0);
+			int weapons = 6 + Math.max(0, market.getSize() - 1) + (military ? 5 : 0);
+			int fighters = 2 + Math.max(0, (market.getSize() - 3) / 2) + (military ? 2 : 0);
+			weapons = 6 + Math.max(0, market.getSize() - 1);
+			fighters = 2 + Math.max(0, (market.getSize() - 3) / 2);
 			
 			addWeapons(weapons, weapons + 2, 3, factionPicker);
 			addFighters(fighters, fighters + 2, 3, factionPicker);
+			
+			if (military) {
+				weapons = market.getSize();
+				fighters = Math.max(1, market.getSize() / 3);
+				addWeapons(weapons, weapons + 2, 3, market.getFactionId(), false);
+				addFighters(fighters, fighters + 2, 3, market.getFactionId());
+			}
 			
 			float sMult = 0.5f + Math.max(0, (1f - stability / 10f)) * 0.5f;
 			getCargo().getMothballedShips().clear();

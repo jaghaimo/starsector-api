@@ -8,6 +8,7 @@ import org.lwjgl.input.Keyboard;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StoryPointActionDelegate;
@@ -46,6 +47,7 @@ public class ContactIntel extends BaseIntelPlugin {
 		PRIORITY,
 		SUSPENDED,
 		LOST_CONTACT_DECIV,
+		LOST_CONTACT,
 	}
 	
 	
@@ -154,6 +156,17 @@ public class ContactIntel extends BaseIntelPlugin {
 		memory.unset(BaseMissionHub.CONTACT_SUSPENDED);
 	}
 	
+	public void loseContact(InteractionDialogAPI dialog) {
+		//endAfterDelay();
+		state = ContactState.LOST_CONTACT;
+		if (dialog != null) {
+			sendUpdate(UPDATE_LOST_CONTACT, dialog.getTextPanel());
+		} else {
+			sendUpdateIfPlayerHasIntel(UPDATE_LOST_CONTACT, false);
+		}
+		endImmediately();
+	}
+	
 	public void doPeriodicCheck() {
 		if (isEnded() || isEnding()) return;
 		
@@ -161,7 +174,7 @@ public class ContactIntel extends BaseIntelPlugin {
 		MemoryAPI memory = person.getMemoryWithoutUpdate();
 		unsetFlags();
 		
-		if (state != ContactState.LOST_CONTACT_DECIV && market != null) {
+		if (state != ContactState.LOST_CONTACT_DECIV && state != ContactState.LOST_CONTACT && market != null) {
 			if (!marketWasDeciv && (market.hasCondition(Conditions.DECIVILIZED) || !market.isInEconomy())) {
 				MarketAPI other = findMarketToRelocateTo();
 				if (other == null) {
@@ -174,6 +187,7 @@ public class ContactIntel extends BaseIntelPlugin {
 				return;
 			}
 		}
+		if (state == ContactState.LOST_CONTACT) return;
 		if (state == ContactState.POTENTIAL) return;
 		if (state == ContactState.SUSPENDED) {
 			memory.set(BaseMissionHub.CONTACT_SUSPENDED, true);
@@ -271,6 +285,8 @@ public class ContactIntel extends BaseIntelPlugin {
 	public String getName() {
 		if (state == ContactState.LOST_CONTACT_DECIV) {
 			return "Lost Contact: " + person.getNameString();
+		} else if (state == ContactState.LOST_CONTACT) {
+			return "Lost Contact: " + person.getNameString();
 		} else if (state == ContactState.POTENTIAL) {
 			return "Potential Contact: " + person.getNameString();
 		} else if (state == ContactState.SUSPENDED) {
@@ -352,6 +368,11 @@ public class ContactIntel extends BaseIntelPlugin {
 				info.addPara(market.getName() + " decivilized", tc, initPad);
 				initPad = 0f;
 			}
+			unindent(info);
+			return;
+		}
+		
+		if (state == ContactState.LOST_CONTACT) {
 			unindent(info);
 			return;
 		}
@@ -457,6 +478,8 @@ public class ContactIntel extends BaseIntelPlugin {
 					opad, marketFaction.getBaseUIColor(),
 					Misc.ucFirst(marketFaction.getDisplayNameWithArticleWithoutArticle()));
 			info.addPara("This colony has decivilized, and you've since lost contact with " + person.getHimOrHer() + ".", opad);
+		} else if (state == ContactState.LOST_CONTACT) {
+			info.addPara("You've lost this contact.", opad);
 		} else {
 			if (market != null) {
 				LabelAPI label = info.addPara(person.getNameString() + " is " + 
@@ -815,6 +838,7 @@ public class ContactIntel extends BaseIntelPlugin {
 			if (((ContactIntel)intel).getState() == ContactState.POTENTIAL) continue;
 			if (((ContactIntel)intel).getState() == ContactState.SUSPENDED) continue;
 			if (((ContactIntel)intel).getState() == ContactState.LOST_CONTACT_DECIV) continue;
+			if (((ContactIntel)intel).getState() == ContactState.LOST_CONTACT) continue;
 			count++;
 		}
 		return count;
@@ -830,9 +854,27 @@ public class ContactIntel extends BaseIntelPlugin {
 		return count;
 	}
 	
-	public static boolean playerHasContact(PersonAPI person) {
+	public static boolean playerHasIntelItemForContact(PersonAPI person) {
 		for (IntelInfoPlugin intel : Global.getSector().getIntelManager().getIntel(ContactIntel.class)) {
-			if (((ContactIntel)intel).getPerson() == person) return true;
+			if (((ContactIntel)intel).getPerson() == person) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static boolean playerHasContact(PersonAPI person, boolean includePotential) {
+		for (IntelInfoPlugin intel : Global.getSector().getIntelManager().getIntel(ContactIntel.class)) {
+			if (((ContactIntel)intel).getPerson() == person) {
+				ContactState state = ((ContactIntel)intel).getState();
+				if (state == ContactState.POTENTIAL && !includePotential) {
+					continue;
+				}
+				if (state == ContactState.LOST_CONTACT || state == ContactState.LOST_CONTACT_DECIV) {
+					continue;
+				}
+				return true;
+			}
 		}
 		return false;
 	}
@@ -849,7 +891,7 @@ public class ContactIntel extends BaseIntelPlugin {
 		addPotentialContact(DEFAULT_POTENTIAL_CONTACT_PROB, contact, market, text);
 	}
 	public static void addPotentialContact(float probability, PersonAPI contact, MarketAPI market, TextPanelAPI text) {
-		if (playerHasContact(contact)) return;
+		if (playerHasIntelItemForContact(contact)) return;
 		if (contact.getFaction().isPlayerFaction()) return;
 		if (market == null) return;
 		if (market != null && market.getMemoryWithoutUpdate().getBoolean(NO_CONTACTS_ON_MARKET)) return;

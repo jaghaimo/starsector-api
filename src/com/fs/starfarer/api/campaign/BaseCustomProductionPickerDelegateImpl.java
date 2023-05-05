@@ -35,4 +35,8 @@ public class BaseCustomProductionPickerDelegateImpl implements CustomProductionP
 	public void notifyProductionSelected(FactionProductionAPI production) {
 	}
 
+	public boolean withQuantityLimits() {
+		return true;
+	}
+
 }

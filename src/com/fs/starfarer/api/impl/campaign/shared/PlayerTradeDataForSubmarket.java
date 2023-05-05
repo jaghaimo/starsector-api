@@ -12,9 +12,9 @@ import java.util.Map;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.PlayerMarketTransaction;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.PlayerMarketTransaction.ShipSaleInfo;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -448,6 +448,11 @@ public class PlayerTradeDataForSubmarket {
 		}
 		return total;
 	}
+
+	public void setSubmarket(SubmarketAPI submarket) {
+		this.submarket = submarket;
+	}
+	
 }
 
 

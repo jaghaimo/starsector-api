@@ -26,6 +26,7 @@ public class HighResSensors extends BaseLogisticsHullMod  implements HullModFlee
 	public static float MIN_CR = 0.1f;
 	public static String MOD_KEY = "core_HighResSensors";
 	
+	private static Map combatMag = new HashMap();
 	private static Map mag = new HashMap();
 //	static {
 //		mag.put(HullSize.FRIGATE, Global.getSettings().getFloat("baseSensorFrigate"));
@@ -38,6 +39,11 @@ public class HighResSensors extends BaseLogisticsHullMod  implements HullModFlee
 		mag.put(HullSize.DESTROYER, 75f);
 		mag.put(HullSize.CRUISER, 100f);
 		mag.put(HullSize.CAPITAL_SHIP, 150f);
+		
+		combatMag.put(HullSize.FRIGATE, 1000f);
+		combatMag.put(HullSize.DESTROYER, 1500f);
+		combatMag.put(HullSize.CRUISER, 2000f);
+		combatMag.put(HullSize.CAPITAL_SHIP, 2500f);
 	}
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
@@ -47,8 +53,21 @@ public class HighResSensors extends BaseLogisticsHullMod  implements HullModFlee
 //		stats.getSensorStrength().modifyFlat(id, bonus);
 		
 		stats.getDynamic().getMod(Stats.HRS_SENSOR_RANGE_MOD).modifyFlat(id, (Float) mag.get(hullSize));
+		
+		boolean sMod = isSMod(stats);
+		if (sMod) {
+			float mag = ((Float) combatMag.get(hullSize)).intValue();
+			stats.getSightRadiusMod().modifyFlat(id, mag);
+		}
 	}
 	
+	public String getSModDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "" + ((Float) combatMag.get(HullSize.FRIGATE)).intValue();
+		if (index == 1) return "" + ((Float) combatMag.get(HullSize.DESTROYER)).intValue();
+		if (index == 2) return "" + ((Float) combatMag.get(HullSize.CRUISER)).intValue();
+		if (index == 3) return "" + ((Float) combatMag.get(HullSize.CAPITAL_SHIP)).intValue();
+		return null;
+	}
 	public String getDescriptionParam(int index, HullSize hullSize) {
 //		if (index == 0) return "" + (int) BONUS;
 //		if (index == 1) return "" + (int) CAPITAL_BONUS;
@@ -89,7 +108,7 @@ public class HighResSensors extends BaseLogisticsHullMod  implements HullModFlee
 		Color h = Misc.getHighlightColor();
 		Color bad = Misc.getNegativeHighlightColor();
 		
-		tooltip.addPara("A ship with a high resolution sensors increases the fleet's sensor range by %s/%s/%s/%s," +
+		tooltip.addPara("A ship with high resolution sensors increases the fleet's sensor range by %s/%s/%s/%s," +
 				" depending on hull size. " +
 				"Each additional ship with high resolution sensors provides diminishing returns. " +
 				"The higher the highest sensor range increase from a single ship in the fleet, the later diminishing returns kick in.", 

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CampaignEntityPickerListener;
+import com.fs.starfarer.api.campaign.BaseCampaignEntityPickerListener;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
@@ -91,7 +91,7 @@ public class GateCMD extends BaseCommandPlugin {
 		gates.remove(entity);
 		dialog.showCampaignEntityPicker("Select destination", "Destination:", "Initiate transit", 
 				Global.getSector().getPlayerFaction(), gates, 
-			new CampaignEntityPickerListener() {
+			new BaseCampaignEntityPickerListener() {
 				public void pickedEntity(SectorEntityToken entity) {
 					int cost = computeFuelCost(entity);
 					Global.getSector().getPlayerFleet().getCargo().removeFuel(cost);

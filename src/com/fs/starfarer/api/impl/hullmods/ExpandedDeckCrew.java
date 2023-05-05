@@ -8,8 +8,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class ExpandedDeckCrew extends BaseHullMod {
 
-	public static float RATE_DECREASE_MODIFIER = 10f;
-	public static float RATE_INCREASE_MODIFIER = 20f;
+	public static float RATE_DECREASE_MODIFIER = 15f;
+	public static float RATE_INCREASE_MODIFIER = 25f;
 	
 	public static float CREW_PER_DECK = 20f;
 	

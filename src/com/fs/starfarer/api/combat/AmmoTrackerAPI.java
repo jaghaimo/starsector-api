@@ -15,5 +15,6 @@ public interface AmmoTrackerAPI {
 	void setMaxAmmo(int maxAmmo);
 	float getReloadSize();
 	void setReloadSize(float reloadSize);
+	void setReloadProgress(float progress);
 
 }

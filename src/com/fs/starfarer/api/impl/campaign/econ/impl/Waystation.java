@@ -7,6 +7,9 @@ import com.fs.starfarer.api.campaign.SubmarketPlugin;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.Stage;
 import com.fs.starfarer.api.impl.campaign.submarkets.LocalResourcesSubmarketPlugin;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -17,11 +20,11 @@ import com.fs.starfarer.api.util.Pair;
 public class Waystation extends BaseIndustry {
 	
 	public static float UPKEEP_MULT_PER_DEFICIT = 0.1f;
-	public static final float BASE_ACCESSIBILITY = 0.1f;
+	public static float BASE_ACCESSIBILITY = 0.1f;
 	
-	public static final float IMPROVE_ACCESSIBILITY = 0.2f;
+	public static float IMPROVE_ACCESSIBILITY = 0.2f;
 	
-	public static final float ALPHA_CORE_ACCESSIBILITY = 0.2f;
+	public static float ALPHA_CORE_ACCESSIBILITY = 0.2f;
 	
 	
 	public void apply() {
@@ -32,6 +35,9 @@ public class Waystation extends BaseIndustry {
 		demand(Commodities.FUEL, size);
 		demand(Commodities.SUPPLIES, size);
 		demand(Commodities.CREW, size);
+		
+		demand(Commodities.VOLATILES, 1);
+		demand(Commodities.RARE_METALS, 1);
 		
 		String desc = getNameForModifier();
 		
@@ -58,7 +64,15 @@ public class Waystation extends BaseIndustry {
 				lr.getStockpilingBonus(Commodities.FUEL).modifyFlat(getModId(0), size * mult);
 				lr.getStockpilingBonus(Commodities.SUPPLIES).modifyFlat(getModId(0), size * mult);
 				lr.getStockpilingBonus(Commodities.CREW).modifyFlat(getModId(0), size * mult);
+				lr.getStockpilingBonus(Commodities.VOLATILES).modifyFlat(getModId(0), 1f * mult);
+				lr.getStockpilingBonus(Commodities.RARE_METALS).modifyFlat(getModId(0), 1f * mult);
 			}
+		}
+		
+		HyperspaceTopographyEventIntel intel = HyperspaceTopographyEventIntel.get();
+		if (intel != null && intel.isStageActive(Stage.SLIPSTREAM_DETECTION)) {
+			market.getStats().getDynamic().getMod(Stats.SLIPSTREAM_REVEAL_RANGE_LY_MOD).modifyFlat(
+							getModId(0), HyperspaceTopographyEventIntel.WAYSTATION_BONUS, getNameForModifier());
 		}
 		
 		
@@ -76,6 +90,8 @@ public class Waystation extends BaseIndustry {
 		market.getAccessibilityMod().unmodifyFlat(getModId(0));
 		market.getAccessibilityMod().unmodifyFlat(getModId(1));
 		market.getAccessibilityMod().unmodifyFlat(getModId(2));
+		
+		market.getStats().getDynamic().getMod(Stats.SLIPSTREAM_REVEAL_RANGE_LY_MOD).unmodifyFlat(getModId(0));
 		
 		if (market.isPlayerOwned()) {
 			SubmarketPlugin sub = Misc.getLocalResources(market);
@@ -105,6 +121,10 @@ public class Waystation extends BaseIndustry {
 		if (!market.isPlayerOwned()) return;
 			
 		float opad = 10f;
+		
+		tooltip.addPara("Increases the range at which slipstreams are detected around the colony by %s, once "
+				+ "the capability to do so is available.", opad, Misc.getHighlightColor(),
+				"" + (int)HyperspaceTopographyEventIntel.WAYSTATION_BONUS); 
 		
 //		tooltip.addPara("As long as demand is met, allows the colony to stockpile fuel, supplies, and crew, even " +
 //						"if it does not produce them locally.", opad);

@@ -19,10 +19,6 @@ import com.fs.starfarer.api.util.Misc;
 
 public class ScavengeAbility extends BaseDurationAbility {
 
-	public static final float SENSOR_RANGE_BONUS = 3000f;
-	public static final float DETECTABILITY_RANGE_BONUS = 5000f;
-	public static final float ACCELERATION_MULT = 4f;
-	
 	private IntervalUtil interval = null;
 	
 	@Override

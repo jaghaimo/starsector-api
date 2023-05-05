@@ -385,7 +385,7 @@ public class RiftCascadeEffect implements BeamEffectPlugin { //WithReset {
 		
 		if (source != null) {
 			Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(
-											source, WeaponType.MISSILE, false, mine.getDamage());
+											source, WeaponType.ENERGY, false, mine.getDamage());
 		}
 		
 		mine.getDamage().getModifier().modifyMult("mine_sizeMult", sizeMult);

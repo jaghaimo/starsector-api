@@ -30,6 +30,7 @@ public class HighScatterAmp extends BaseHullMod {
 //	public static float RANGE_LARGE = 700;
 	
 	public static float DAMAGE_BONUS_PERCENT = 10f;
+	public static float SMOD_MODIFIER = 5f;
 	
 	
 	@Override
@@ -46,8 +47,10 @@ public class HighScatterAmp extends BaseHullMod {
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
+		boolean sMod = isSMod(stats);
+		
 		//stats.getBeamWeaponRangeBonus().modifyMult(id, 1f - RANGE_PENALTY_PERCENT * 0.01f);
-		stats.getBeamWeaponDamageMult().modifyPercent(id, DAMAGE_BONUS_PERCENT);
+		stats.getBeamWeaponDamageMult().modifyPercent(id, DAMAGE_BONUS_PERCENT + (sMod ? SMOD_MODIFIER : 0));
 		
 		// test code for WeaponOPCostModifier, FighterOPCostModifier
 //		stats.addListener(new WeaponOPCostModifier() {
@@ -73,6 +76,10 @@ public class HighScatterAmp extends BaseHullMod {
 //		return true;
 //	}
 
+	public String getSModDescriptionParam(int index, HullSize hullSize, ShipAPI ship) {
+		if (index == 0) return "" + (int) Math.round(SMOD_MODIFIER) + "%";
+		return null;
+	}
 
 
 	@Override

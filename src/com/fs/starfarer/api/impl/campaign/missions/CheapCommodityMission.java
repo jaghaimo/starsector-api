@@ -101,7 +101,6 @@ public class CheapCommodityMission extends HubMissionWithBarEvent {
 		CommodityOnMarketAPI com = null;
 		if (variation == Variation.LOCAL) {
 			requireMarketIs(market);
-			requireMarketLocationNot(createdAt.getContainingLocation());
 			requireCommodityIsNotPersonnel();
 			requireCommodityDeficitAtMost(0);
 			requireCommodityAvailableAtLeast(1);
@@ -136,6 +135,7 @@ public class CheapCommodityMission extends HubMissionWithBarEvent {
 			if (person.hasTag(Tags.CONTACT_UNDERWORLD) && rollProbability(PROB_ILLEGAL_IF_UNDERWORLD)) {
 				preferCommodityIllegal();
 			} else {
+				requireMarketFactionNotHostileTo(Factions.PLAYER);
 				requireCommodityLegal();
 			}
 			if (preferExpensive) {
@@ -208,6 +208,7 @@ public class CheapCommodityMission extends HubMissionWithBarEvent {
 		set("$cheapCom_totalPrice", Misc.getDGSCredits(pricePerUnit * quantity));
 		set("$cheapCom_variation", variation);
 		set("$cheapCom_manOrWoman", getPerson().getManOrWoman());
+		
 		//set("$cheapCom_heOrShe", getPerson().getHeOrShe());
 		//set("$cheapCom_HeOrShe", getPerson().getHeOrShe().substring(0, 1).toUpperCase() + getPerson().getHeOrShe().substring(1));
 		

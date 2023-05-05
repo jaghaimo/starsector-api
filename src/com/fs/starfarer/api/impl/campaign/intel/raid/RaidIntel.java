@@ -413,7 +413,7 @@ public class RaidIntel extends BaseIntelPlugin implements RouteFleetSpawner {
 		String strDesc = getRaidStrDesc();
 		int numFleets = (int) getOrigNumFleets();
 		String fleets = "fleets";
-		if (numFleets == 1) fleets = "fleet";
+		if (numFleets == 1) fleets = " large fleet, or several smaller ones";
 		
 		LabelAPI label = info.addPara(Misc.ucFirst(faction.getDisplayNameWithArticle()) + " " + is + 
 				" conducting a raid of the " + system.getName() + ". The raiding forces are " +

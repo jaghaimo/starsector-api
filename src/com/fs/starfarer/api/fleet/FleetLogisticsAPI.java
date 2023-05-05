@@ -33,7 +33,7 @@ public interface FleetLogisticsAPI {
 	float getPersonnelSuppliesPerDay();
 	
 	/**
-	 * Added up monthly supply cost for ships, divided by 30 to get daily cost.
+	 * Added up monthly supply cost for ships, divided by 30 to get daily cost. Includes repairs and CR recovery.
 	 * @return
 	 */
 	float getShipMaintenanceSupplyCost();

@@ -113,6 +113,7 @@ public interface SubmarketPlugin {
 	public String getTotalValueOverride();
 	
 	public SubmarketAPI getSubmarket();
+	boolean okToUpdateShipsAndWeapons();
 	
 }
 

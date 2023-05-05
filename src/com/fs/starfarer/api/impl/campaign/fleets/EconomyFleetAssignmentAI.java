@@ -263,7 +263,7 @@ public class EconomyFleetAssignmentAI extends RouteFleetAssignmentAI {
 	protected String getEndingActionText(RouteSegment segment) {
 		String list = getCargoList(segment);
 		if (list.isEmpty()) {
-			return "orbiting " + getData().to.getName();
+			return "orbiting " + getData().from.getName();
 		}
 		return "unloading " + list + " at " + getData().from.getName();
 	}

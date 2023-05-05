@@ -23,4 +23,6 @@ public interface ModSpecAPI {
 	void setRequiredMemoryMB(int requiredMemoryMB);
 	List<ModDependencyAPI> getDependencies();
 	List<ModDependencyAPI> getAllDependencies();
+	String getSortString();
+	void setSortString(String sortString);
 }

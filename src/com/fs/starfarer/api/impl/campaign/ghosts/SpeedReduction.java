@@ -31,7 +31,7 @@ public class SpeedReduction implements EveryFrameScript {
 		Vector2f v = target.getVelocity();
 		
 		Vector2f dV = Misc.getUnitVector(new Vector2f(), v);
-		dV.scale(-1f * Math.min(v.length(), speedReductionRate * amount));
+		dV.scale(-1f * Math.min(v.length(), speedReductionRate * Math.min(durationSeconds, amount)));
 		
 		SensorGhost ghost = SensorGhostManager.getGhostFor(target);
 		if (ghost != null) {

@@ -227,8 +227,8 @@ public class GAKallichore extends GABaseMission {
 			info.addPara(getGoToMarketText(loke.getMarket()) + " and pick up the hack device", tc, pad);
 			return true;
 		} else if (currentStage == Stage.INSTALL_HACK) {
-			info.addPara(getGoToSystemTextShort(relay.getStarSystem()) + " and install hack transmitter " +
-					"on " + relay.getName() + "", tc, pad);
+			info.addPara(getGoToSystemTextShort(relay.getStarSystem()) + " and install the hack transmitter " +
+					"on the " + relay.getName() + "", tc, pad);
 			return true;
 		} else if (currentStage == Stage.RETRIEVE_ARCHIVE) {
 			info.addPara(getGoToMarketText(gargoyle.getMarket()) + 

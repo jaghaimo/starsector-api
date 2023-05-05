@@ -190,5 +190,17 @@ public interface MissileAPI extends DamagingProjectileAPI {
 	 */
 	Vector2f getStart();
 	void setStart(Vector2f start);
+	MutableShipStatsAPI getEngineStats();
+	void setFizzleTime(float fizzleTime);
+	void setFadeTime(float fadeTime);
+	void setNoGlowTime(float noGlowTime);
+	Color getDestroyedExplosionColorOverride();
+	void setDestroyedExplosionColorOverride(Color destroyedExplosionColorOverride);
+	float getEtaModifier();
+	void setEtaModifier(float etaModifier);
+	float getGuidanceBonus();
+	
+	// always null anyway
+	//MutableShipStatsAPI getStats();
 }
 

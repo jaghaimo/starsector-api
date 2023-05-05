@@ -11,11 +11,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.SpecialItemPlugin;
 import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
@@ -289,11 +289,9 @@ public class DropGroupRow implements Cloneable {
 
 	public static WeightedRandomPicker<DropGroupRow> getPicker(String group) {
 		WeightedRandomPicker<DropGroupRow> picker = new WeightedRandomPicker<DropGroupRow>();
-		Collection<Object> specs = Global.getSettings().getAllSpecs(DropGroupRow.class);
+		Collection<DropGroupRow> specs = Global.getSettings().getAllSpecs(DropGroupRow.class);
 		
-		for (Object o : specs) {
-			DropGroupRow spec = (DropGroupRow) o;
-			
+		for (DropGroupRow spec : specs) {
 //			if (!spec.isMultiValued() && spec.isHullMod() && spec.getHullModSpec().hasTag(Tags.HULLMOD_NO_DROP)) {
 //				continue;
 //			}

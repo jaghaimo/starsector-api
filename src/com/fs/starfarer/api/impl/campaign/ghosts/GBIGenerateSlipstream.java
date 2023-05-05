@@ -93,7 +93,8 @@ public class GBIGenerateSlipstream extends BaseGhostBehaviorInterrupt implements
 			params.maxSpeed = Misc.getSpeedForBurnLevel(params.burnLevel + 5);
 			params.lineLengthFractionOfSpeed = 0.25f * Math.max(0.25f, Math.min(1f, 30f / (float) params.burnLevel));
 			
-			slipstream = (CampaignTerrainAPI) Global.getSector().getCurrentLocation().addTerrain(Terrain.SLIPSTREAM, params);
+			//slipstream = (CampaignTerrainAPI) Global.getSector().getCurrentLocation().addTerrain(Terrain.SLIPSTREAM, params);
+			slipstream = (CampaignTerrainAPI) ghost.getEntity().getContainingLocation().addTerrain(Terrain.SLIPSTREAM, params);
 			slipstream.setLocation(loc.x, loc.y);
 			plugin = (SlipstreamTerrainPlugin2) slipstream.getPlugin();
 			plugin.setDynamic(true);
@@ -105,12 +106,22 @@ public class GBIGenerateSlipstream extends BaseGhostBehaviorInterrupt implements
 				b.setSlipstream(plugin);
 			}
 		}
+		//ghost.getMovement().getLocation()
 		
+		//System.out.println("Location: [" + (int)ghost.getEntity().getLocation().x + "," + (int)ghost.getEntity().getLocation().y + "] (from GBIGenerateSlipstream)");
 		
 		float distPerSegment = 300f;
 		
 		float dist = Misc.getDistance(loc, prev);
 		if (dist >= distPerSegment || forceAdd) {
+			
+//			if (plugin.getSegments().size() > 0 &&
+//					plugin.getSegments().get(plugin.getSegments().size() - 1).loc.y < loc.y) {
+//				System.out.println("ADDING BAD STREAM SEGMENT at [" + (int)loc.x + ", " + (int)loc.y + "] (from GBIGenerateSlipstream)");
+//			} else {
+//				System.out.println("ADDING STREAM SEGMENT at [" + (int)loc.x + ", " + (int)loc.y + "] (from GBIGenerateSlipstream)");				
+//			}
+			
 			float width = minWidth + (maxWidth - minWidth) * Misc.random.nextFloat();
 			plugin.addSegment(loc, width);
 			prev = new Vector2f(loc);

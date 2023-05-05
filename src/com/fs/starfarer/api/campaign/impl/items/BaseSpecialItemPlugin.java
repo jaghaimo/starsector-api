@@ -56,7 +56,11 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 	
 	
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, CargoTransferHandlerAPI transferHandler, Object stackSource) {
-		createTooltip(tooltip, expanded, transferHandler, stackSource, true);
+		boolean useGray = true;
+		if (getClass() == BaseSpecialItemPlugin.class) {
+			useGray = false;
+		}
+		createTooltip(tooltip, expanded, transferHandler, stackSource, useGray);
 	}
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, CargoTransferHandlerAPI transferHandler, Object stackSource, boolean useGray) {
 		float opad = 10f;
@@ -70,6 +74,10 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 			Color c = Misc.getTextColor();
 			if (useGray) c = Misc.getGrayColor();
 			tooltip.addPara(spec.getDesc(), c, opad);
+		}
+		
+		if (getClass() == BaseSpecialItemPlugin.class) {
+			addCostLabel(tooltip, opad, transferHandler, stackSource);
 		}
 	}
 

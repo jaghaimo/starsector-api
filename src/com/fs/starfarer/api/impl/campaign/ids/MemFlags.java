@@ -13,6 +13,19 @@ package com.fs.starfarer.api.impl.campaign.ids;
  */
 public class MemFlags {
 
+	public static final String AUTO_OPEN_BUY_SHIPS_TAB = "$autoOpenBuyShipsTab";
+	
+	public static final String SHRINE_PILGRIM_FLEET = "$shrinePilgrimFleet";
+	public static final String ACADEMY_FLEET = "$academyFleet";
+	
+	public static final String OFFICER_SKILL_PICKS_PER_LEVEL = "$officerSkillPicksPerLevel";
+	public static final String OFFICER_MAX_LEVEL = "$officerMaxLevel";
+	public static final String OFFICER_MAX_ELITE_SKILLS = "$officerMaxEliteSkills";
+	
+	public static final String KANTA_BLUFFS = "$kantaBluffs";
+	public static final String PLAYER_UNTRUSTWORTHY = "$untrustworthy";
+	
+	
 	public static final String GLOBAL_SENSOR_BURST_JUST_USED_IN_CURRENT_LOCATION = "$sensorBurstJustUsed";
 	public static final String JUST_DID_SENSOR_BURST = "$justDidSensorBurst";
 	public static final String JUST_TOGGLED_TRANSPONDER = "$justToggledTransponder";
@@ -120,6 +133,8 @@ public class MemFlags {
 	public static final String MEMORY_KEY_MAKE_HOSTILE = "$cfai_makeHostile";
 	public static final String MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF = "$cfai_makeHostileWhileTOff";
 	public static final String MEMORY_KEY_MAKE_NON_HOSTILE = "$cfai_makeNonHostile";
+	public static final String MEMORY_KEY_ALLOW_PLAYER_BATTLE_JOIN_TOFF = "$cfai_allowPlayerBattleJoinTOff";
+	
 	public static final String MEMORY_KEY_MAKE_ALWAYS_PURSUE = "$cfai_makeAlwaysPursue";
 	public static final String MEMORY_KEY_MAKE_PREVENT_DISENGAGE = "$cfai_makePreventDisengage";
 	public static final String MEMORY_KEY_MAKE_ALLOW_DISENGAGE = "$cfai_makeAllowDisengage";

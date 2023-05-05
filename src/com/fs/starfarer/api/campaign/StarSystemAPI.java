@@ -174,4 +174,6 @@ public interface StarSystemAPI extends LocationAPI {
 	void setMapGridWidthOverride(Float mapGridWidthOverride);
 	Float getMapGridHeightOverride();
 	void setMapGridHeightOverride(Float mapGridHeightOverride);
+
+	void setMaxRadiusInHyperspace(float maxRadiusInHyperspace);
 }

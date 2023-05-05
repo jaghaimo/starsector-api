@@ -17,16 +17,19 @@ import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
+import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.EconomyAPI.EconomyUpdateListener;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
@@ -42,6 +45,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
@@ -51,6 +55,7 @@ import com.fs.starfarer.api.impl.campaign.intel.PersonBountyIntel.BountyResultTy
 import com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarData;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.PirateBaseRumorBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker;
+import com.fs.starfarer.api.impl.campaign.intel.events.PirateBasePirateActivityCause2;
 import com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidActionStage;
 import com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidAssembleStage;
 import com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel;
@@ -64,7 +69,9 @@ import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.AddedEntity;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.EntityLocation;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.LocationType;
+import com.fs.starfarer.api.impl.campaign.rulecmd.HA_CMD;
 import com.fs.starfarer.api.ui.Alignment;
+import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
@@ -74,7 +81,27 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript, FleetEventListener,
 																EconomyUpdateListener, RaidDelegate {
 	
+	public static final String PIRATE_BASE_COMMANDER = "$pirateBaseCommander";
+	public static final String HAS_DEAL_WITH_BASE_COMMANDER = "$playerHasDealWithPirateBaseCommander";
+	
 	public static String MEM_FLAG = "$core_pirateBase";
+	
+	public static PirateBaseIntel getIntelFor(StarSystemAPI system) {
+		for (IntelInfoPlugin intel : Global.getSector().getIntelManager().getIntel(PirateBaseIntel.class)) {
+			if (((PirateBaseIntel)intel).getSystem() == system) {
+				return (PirateBaseIntel) intel;
+			}
+		}
+		return null;
+	}
+	public static PirateBaseIntel getIntelFor(SectorEntityToken station) {
+		for (IntelInfoPlugin intel : Global.getSector().getIntelManager().getIntel(PirateBaseIntel.class)) {
+			if (((PirateBaseIntel)intel).getEntity() == station) {
+				return (PirateBaseIntel) intel;
+			}
+		}
+		return null;
+	}
 	
 	public static enum PirateBaseTier {
 		TIER_1_1MODULE,
@@ -83,6 +110,11 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		TIER_4_3MODULE,
 		TIER_5_3MODULE,
 	}
+	
+	
+	public static Object DEAL_MADE_PARAM = new Object();
+	public static Object DEAL_BROKEN_PARAM = new Object();
+	public static Object DEAL_CANCELLED_PARAM = new Object();
 	
 	public static Object BOUNTY_EXPIRED_PARAM = new Object();
 	public static Object DISCOVERED_PARAM = new Object();
@@ -99,6 +131,7 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	
 	protected StarSystemAPI system;
 	protected MarketAPI market;
+	protected PersonAPI baseCommander;
 	protected SectorEntityToken entity;
 	
 	protected float elapsedDays = 0f;
@@ -111,6 +144,15 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	
 	protected IntervalUtil monthlyInterval = new IntervalUtil(20f, 40f);
 	protected int raidTimeoutMonths = 0;
+	
+	
+	public boolean playerHasDealWithBaseCommander() {
+		return baseCommander != null && baseCommander.getMemoryWithoutUpdate().getBoolean(HAS_DEAL_WITH_BASE_COMMANDER);
+	}
+	public void setPlayerHasDealWithBaseCommander(boolean hasDeal) {
+		if (baseCommander == null) return;
+		baseCommander.getMemoryWithoutUpdate().set(HAS_DEAL_WITH_BASE_COMMANDER, hasDeal);
+	}
 	
 	public PirateBaseIntel(StarSystemAPI system, String factionId, PirateBaseTier tier) {
 		this.system = system;
@@ -202,6 +244,14 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		market.reapplyIndustries();
 		
 		Global.getSector().getEconomy().addMarket(market, true);
+
+		baseCommander = market.getFaction().createRandomPerson(Misc.random);
+		baseCommander.setRankId(Ranks.SPACE_CAPTAIN);
+		baseCommander.setPostId(Ranks.POST_STATION_COMMANDER);
+		baseCommander.setImportanceAndVoice(PersonImportance.HIGH, Misc.random);
+		baseCommander.addTag(Tags.CONTACT_UNDERWORLD);
+		baseCommander.getMemoryWithoutUpdate().set(PIRATE_BASE_COMMANDER, true);
+		market.getCommDirectory().addPerson(baseCommander);
 		
 		log.info(String.format("Added pirate base in [%s], tier: %s", system.getName(), tier.name()));
 		
@@ -411,7 +461,6 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		case TIER_5_3MODULE:
 			removeMult = 0;
 			break;
-		
 		}
 		
 		int remove = Math.round(picker.getItems().size() * removeMult);
@@ -429,6 +478,12 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 				station.getStatus().setDetached(pick, true);
 				station.getStatus().setPermaDetached(pick, true);
 			}
+		}
+		
+		if (tier == PirateBaseTier.TIER_5_3MODULE || tier == PirateBaseTier.TIER_4_3MODULE) {
+			baseCommander.setImportance(PersonImportance.VERY_HIGH);
+		} else {
+			baseCommander.setImportance(PersonImportance.HIGH);
 		}
 	}
 	
@@ -697,6 +752,20 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		bullet(info);
 		boolean isUpdate = getListInfoParam() != null;
 		
+		if (getListInfoParam() == DEAL_BROKEN_PARAM) {
+			info.addPara("Agreement broken", initPad, tc, 
+					Misc.getNegativeHighlightColor(), "Agreement broken");
+			initPad = 0f;
+		} else if (getListInfoParam() == DEAL_CANCELLED_PARAM) {
+			info.addPara("Agreement dissolved", tc, initPad);
+			initPad = 0f;
+		} else if (mode == ListInfoMode.INTEL || getListInfoParam() == DEAL_MADE_PARAM) {
+			if (playerHasDealWithBaseCommander()) {
+				info.addPara("Agreement made with base commander", initPad, tc, 
+						Misc.getPositiveHighlightColor(), "Agreement");
+				initPad = 0f;
+			}
+		}
 		
 		if (bountyData != null && result == null) {
 			if (getListInfoParam() != BOUNTY_EXPIRED_PARAM) {
@@ -834,6 +903,27 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		} else {
 			info.addPara("You have not yet discovered the exact location or capabilities of this base.", opad);
 		}
+		
+		boolean deal = playerHasDealWithBaseCommander();
+		if (deal) {
+//			FactionAPI pf = Global.getSector().getPlayerFaction();
+//			info.addSectionHeading("Protection payments", 
+//					pf.getBaseUIColor(), pf.getDarkUIColor(), Alignment.MID, opad);
+			float feeFraction = Global.getSettings().getFloat("pirateProtectionPaymentFraction");
+			String fee = Misc.getDGSCredits(HA_CMD.computePirateProtectionPaymentPerMonth(this));
+			LabelAPI label = info.addPara("You have an %s with "
+					+ "the base commander, and fleets from this base do not, as a rule, "
+					+ "harass your colonies or shipping. The protection payment is %s of "
+					+ "the gross income of all of your affected colonies, which "
+					+ "amounts to %s per month at their current level of income.", opad, 
+					Misc.getPositiveHighlightColor(),
+					"agreement",
+					"" + (int)Math.round(feeFraction * 100f) + "%", fee
+					);
+			label.setHighlightColors(Misc.getPositiveHighlightColor(), h, h);
+			label.setHighlight("agreement", "" + (int)Math.round(feeFraction * 100f) + "%", fee);
+		}
+		
 			
 		info.addSectionHeading("Recent events", 
 							   faction.getBaseUIColor(), faction.getDarkUIColor(), Alignment.MID, opad);
@@ -879,7 +969,14 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		}
 		tags.add(Tags.INTEL_EXPLORATION);
 		
+		// old way, when pirate activity applied to player colonies
+		// not needed anymore but shouldn't hurt
 		if (target != null && !Misc.getMarketsInLocation(target, Factions.PLAYER).isEmpty()) {
+			tags.add(Tags.INTEL_COLONIES);
+		}
+		
+		// new hostile activity
+		if (!PirateBasePirateActivityCause2.getColoniesAffectedBy(this).isEmpty()) {
 			tags.add(Tags.INTEL_COLONIES);
 		}
 		
@@ -1182,6 +1279,10 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	public boolean affectsMarket(MarketAPI market) {
 		if (market.isHidden()) return false;
 		if (market.getFaction() == this.market.getFaction()) return false;
+		
+		// player colonies affected by "Hostile Activity" instead
+		if (market.getFaction().isPlayerFaction()) return false;
+		
 		return true;
 	}
 	
@@ -1294,6 +1395,12 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 
 	public SectorEntityToken getEntity() {
 		return entity;
+	}
+	public PersonAPI getBaseCommander() {
+		return baseCommander;
+	}
+	public void setBaseCommander(PersonAPI baseCommander) {
+		this.baseCommander = baseCommander;
 	}
 
 }

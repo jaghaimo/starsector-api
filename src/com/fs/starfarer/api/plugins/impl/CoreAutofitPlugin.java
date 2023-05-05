@@ -31,9 +31,11 @@ import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.DModManager;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.loading.VariantSource;
@@ -372,7 +374,14 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			addHullmods(current, delegate, HullMods.BLAST_DOORS);
 		}
 
-		addHullmods(current, delegate, target.getNonBuiltInHullmods().toArray(new String[0]));
+		List<String> targetMods = new ArrayList<String>();
+		for (String id : target.getNonBuiltInHullmods()) {
+			//if (HullMods.FLUX_DISTRIBUTOR.equals(id) || HullMods.FLUX_COIL.equals(id)) continue;
+			targetMods.add(id);
+		}
+		if (!targetMods.isEmpty()) {
+			addHullmods(current, delegate, targetMods.toArray(new String[0]));
+		}
 		
 		int addedRandomHullmodPts = 0;
 		if (randomize) {
@@ -476,8 +485,28 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 				}
 			}
 		}
-		addExtraVents(current);
-		addExtraCaps(current);
+		
+		
+		if (current.getHullSpec().isPhase()) {
+			addExtraCaps(current);
+		} else {
+			addExtraVents(current);
+		}
+		
+		addHullmods(current, delegate, HullMods.ARMOREDWEAPONS);
+		int opCost = current.computeOPCost(stats);
+		int opMax = current.getHullSpec().getOrdnancePoints(stats);
+		int opLeft = opMax - opCost;
+		if (opLeft > 0) {
+			addRandomizedHullmodsPost(current, delegate);
+		}
+		
+		if (current.getHullSpec().isPhase()) {
+			addExtraVents(current);
+		} else {
+			addExtraCaps(current);
+		}
+		
 		
 		current.setVariantDisplayName(target.getDisplayName());
 		
@@ -737,7 +766,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			}
 			
 			
-			if (current.hasHullMod(HullMods.ADVANCED_TARGETING_CORE)) {
+			if (current.hasHullMod(HullMods.ADVANCED_TARGETING_CORE) || current.hasHullMod(HullMods.DISTRIBUTED_FIRE_CONTROL)) {
 				if (mod.equals(HullMods.INTEGRATED_TARGETING_UNIT)) {
 					continue;
 				}
@@ -786,12 +815,21 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 
 		ShipAPI ship = delegate.getShip();
 		ShipVariantAPI orig = null;
-//		if (ship != null) {
-//			orig = ship.getVariant();
-//			ship.setVariantForHullmodCheckOnly(current);
-//		}
+		// why is this commented out? It fixes an issue with logistics hullmods not being properly applied
+		// if the current variant already has some
+		// but probably? causes some other issues
+		// possibly: it was not setting the orig variant back when returning 0; this is now fixed
+		if (ship != null) {
+			orig = ship.getVariant();
+			ship.setVariantForHullmodCheckOnly(current);
+		}
 		if (ship != null && mod.getEffect() != null && ship.getVariant() != null && !mod.getEffect().isApplicableToShip(ship)
-				&& !ship.getVariant().hasHullMod(mod.getId())) return 0;
+				&& !ship.getVariant().hasHullMod(mod.getId())) {
+			if (orig != null) {
+				ship.setVariantForHullmodCheckOnly(orig);
+			}
+			return 0;
+		}
 		
 		if (orig != null && ship != null) {
 			ship.setVariantForHullmodCheckOnly(orig);
@@ -1640,6 +1678,16 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			result = filtered;
 		}
 		
+		if (TutorialMissionIntel.isTutorialInProgress() &&
+				current.getHullSpec() != null && current.getHullSpec().hasTag(Factions.DERELICT)) {
+			List<AvailableWeapon> remove = new ArrayList<AvailableWeapon>();
+			for (AvailableWeapon w : result) {
+				if (w.getId().equals("heatseeker")) {
+					remove.add(w);
+				}
+			}
+			result.removeAll(remove);
+		}
 		
 		return result;
 	}
@@ -2139,6 +2187,10 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		
 		
 		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(random);
+		
+		if (availableMods.contains(HullMods.ARMOREDWEAPONS)) {
+			picker.add(HullMods.ARMOREDWEAPONS, 1f);
+		}
 		
 		if (availableMods.contains(HullMods.MISSLERACKS)) {
 			if (missilesWithAmmoOnCurrent >= 2) {

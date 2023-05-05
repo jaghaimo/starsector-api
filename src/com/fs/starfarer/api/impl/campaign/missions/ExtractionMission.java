@@ -45,6 +45,7 @@ public class ExtractionMission extends HubMissionWithBarEvent {
 	protected MarketAPI market;
 	protected RaidDangerLevel danger;
 	protected int storyCost = 0;
+	protected String seedyBarOwner;
 	
 	@Override
 	protected boolean create(MarketAPI createdAt, boolean barEvent) {
@@ -70,6 +71,17 @@ public class ExtractionMission extends HubMissionWithBarEvent {
 		if (barEvent) {
 			setGiverIsPotentialContactOnSuccess();
 		}
+		
+		seedyBarOwner = pickOne("Eduardo",
+								"Roy", 
+								"Hyde",
+								"Shang",
+								"Rick",
+								"Bogdan",
+								"William",
+								"Marlowe",
+								"Benny"
+				);
 		
 		PersonImportance importance = person.getImportance();
 		int minMarketSize = 3;
@@ -204,7 +216,8 @@ public class ExtractionMission extends HubMissionWithBarEvent {
 	
 	protected void updateInteractionDataImpl() {
 		set("$extr_variation", variation);
-		
+		set("$extr_barName", seedyBarOwner + "'s");
+		set("$extr_barOwner", seedyBarOwner);
 		set("$extr_barEvent", isBarEvent());
 		set("$extr_manOrWoman", getPerson().getManOrWoman());
 		set("$extr_reward", Misc.getWithDGS(getCreditsReward()));
@@ -213,6 +226,9 @@ public class ExtractionMission extends HubMissionWithBarEvent {
 		set("$extr_systemName", market.getStarSystem().getNameWithLowercaseTypeShort());
 		set("$extr_marketName", market.getName());
 		set("$extr_marketOnOrAt", market.getOnOrAt());
+		set("$extr_marketFactionArticle", market.getFaction().getPersonNamePrefixAOrAn());
+		set("$extr_marketFaction", market.getFaction().getPersonNamePrefix());
+		set("$extr_factionColor",  market.getFaction().getBaseUIColor());
 		set("$extr_dist", getDistanceLY(market));
 		
 		set("$extr_danger", danger);

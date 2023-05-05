@@ -68,6 +68,7 @@ public class CoreRuleTokenReplacementGeneratorImpl implements RuleTokenReplaceme
 		map.put("$playerLastname", Global.getSector().getCharacterData().getPerson().getName().getLast());
 		
 		PersonAPI playerPerson = Global.getSector().getPlayerPerson();
+		String honorific = Global.getSector().getCharacterData().getHonorific();
 		if (playerPerson != null) {
 			if (playerPerson.isMale()) {
 				map.put("$playerSirOrMadam", "sir");
@@ -96,10 +97,22 @@ public class CoreRuleTokenReplacementGeneratorImpl implements RuleTokenReplaceme
 				map.put("$playerHeOrShe", "she");
 				map.put("$PlayerHeOrShe", "She");
 			}
+			
+			if (honorific != null && !honorific.isEmpty()) {
+				map.put("$playerSirOrMadam", Misc.lcFirst(honorific));
+				map.put("$PlayerSirOrMadam", honorific);
+				
+				if (!Misc.SIR.toLowerCase().equals(honorific.toLowerCase()) && 
+					!Misc.MAAM.toLowerCase().equals(honorific.toLowerCase())) {
+					map.put("$playerBrotherOrSister", "walker");
+					map.put("$PlayerBrotherOrSister", "Walker");
+				}
+			}
 		}
 		
 		if (market != null) {
-			map.put("$market", market.getName());
+			//map.put("$market", market.getName());
+			map.put("$marketName", market.getName());
 			
 			if (target.getLocation() instanceof StarSystemAPI) {
 				map.put("$marketSystem", ((StarSystemAPI)target.getLocation()).getBaseName() + " star system");

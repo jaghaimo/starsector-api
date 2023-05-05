@@ -6,14 +6,11 @@ import java.util.Map;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
-import com.fs.starfarer.api.characters.ImportantPeopleAPI.PersonDataAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
-import com.fs.starfarer.api.impl.campaign.ids.Ranks;
-import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -32,8 +29,12 @@ public class MarketReduceRandomRep extends BaseCommandPlugin {
 		//CommDirectoryEntryAPI
 		//for (CommDirectoryAPI comms : dialog.getInteractionTarget().getMarket().getCommDirectory()) {
 		for (PersonAPI person : dialog.getInteractionTarget().getMarket().getPeopleCopy()) {
-			if (	
-					!person.getMarket().getCommDirectory().getEntryForPerson(person.getId()).isHidden()) {
+			if (person == null) continue;
+			if (person.getMarket() == null) continue;
+			if (person.getMarket().getCommDirectory() == null) continue;
+			if (person.getMarket().getCommDirectory().getEntryForPerson(person.getId()) == null) continue;
+			
+			if (!person.getMarket().getCommDirectory().getEntryForPerson(person.getId()).isHidden()) {
 					
 					//Ranks.POST_ADMINISTRATOR.equals(person.getPostId()) ||
 					//Ranks.POST_BASE_COMMANDER.equals(person.getPostId()) ||

@@ -33,6 +33,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.procgen.Constellation;
 import com.fs.starfarer.api.impl.campaign.procgen.ObjectiveGenDataSpec;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
@@ -189,6 +190,10 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 	}
 	
 	public void addShipGraveyard(StarSystemData data, SectorEntityToken focus, WeightedRandomPicker<String> factions) {
+		addShipGraveyard(data, focus, factions, null);
+	}
+	public void addShipGraveyard(StarSystemData data, SectorEntityToken focus, WeightedRandomPicker<String> factions, 
+			WeightedRandomPicker<String> hulls) {
 		int numShips = random.nextInt(9) + 3;
 		//numShips = 12;
 		if (DEBUG) System.out.println("    Adding ship graveyard (" + numShips + " ships)");
@@ -207,6 +212,9 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 			float radius = bands.pickAndRemove();
 			
 			DerelictShipData params = DerelictShipEntityPlugin.createRandom(factions.pick(), null, random, DerelictShipEntityPlugin.getDefaultSModProb());
+			if (hulls != null && !hulls.isEmpty()) {
+				params = DerelictShipEntityPlugin.createHull(hulls.pickAndRemove(), random, DerelictShipEntityPlugin.getDefaultSModProb());
+			}
 			if (params != null) {
 				CustomCampaignEntityAPI entity = (CustomCampaignEntityAPI) addSalvageEntity(random,
 									focus.getContainingLocation(),
@@ -1621,6 +1629,49 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		this.random = random;
 	}
 	
+	
+	/**
+	 * Sorted by *descending* distance from sortFrom.
+	 * @param context
+	 * @param sortFrom
+	 * @return
+	 */
+	protected List<Constellation> getSortedAvailableConstellations(ThemeGenContext context, boolean emptyOk, final Vector2f sortFrom, List<Constellation> exclude) {
+		List<Constellation> constellations = new ArrayList<Constellation>();
+		for (Constellation c : context.constellations) {
+			if (context.majorThemes.containsKey(c)) continue;
+			if (!emptyOk && constellationIsEmpty(c)) continue;
+			
+			constellations.add(c);
+		}
+		
+		if (exclude != null) {
+			constellations.removeAll(exclude);
+		}
+		
+		Collections.sort(constellations, new Comparator<Constellation>() {
+			public int compare(Constellation o1, Constellation o2) {
+				float d1 = Misc.getDistance(o1.getLocation(), sortFrom);
+				float d2 = Misc.getDistance(o2.getLocation(), sortFrom);
+				return (int) Math.signum(d2 - d1);
+			}
+		});
+		return constellations;
+	}
+	
+	public static boolean constellationIsEmpty(Constellation c) {
+		for (StarSystemAPI s : c.getSystems()) {
+			if (!systemIsEmpty(s)) return false;
+		}
+		return true;
+	}
+	public static boolean systemIsEmpty(StarSystemAPI system) {
+		for (PlanetAPI p : system.getPlanets()) {
+			if (!p.isStar()) return false;
+		}
+		//system.getTerrainCopy().isEmpty()
+		return true;
+	}
 	
 }
 

@@ -10,7 +10,10 @@ import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel.Stage;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
+import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
@@ -155,6 +158,21 @@ public class Spaceport extends BaseIndustry implements MarketImmigrationModifier
 			
 			float bonus = getPopulationGrowthBonus();
 			tooltip.addPara("Population growth: %s", opad, h, "+" + (int)bonus);
+			
+			HyperspaceTopographyEventIntel intel = HyperspaceTopographyEventIntel.get();
+			if (intel != null && intel.isStageActive(Stage.SLIPSTREAM_DETECTION)) {
+				h = Misc.getHighlightColor();
+				tooltip.addSectionHeading("Hyperspace topography", Alignment.MID, opad);
+				if (!isFunctional()) {
+					tooltip.addPara("Slipstream detection requires functional Spaceport", Misc.getNegativeHighlightColor(), opad);
+				} else {
+					int range = (int) Math.round(market.getStats().getDynamic().getMod(Stats.SLIPSTREAM_REVEAL_RANGE_LY_MOD).computeEffective(0f));
+					tooltip.addPara("Slipstream detection range: %s light-years", opad, h, "" + range);
+					tooltip.addStatModGrid(tooltip.getWidthSoFar(), 50, opad, pad, market.getStats().getDynamic().getMod(Stats.SLIPSTREAM_REVEAL_RANGE_LY_MOD));
+				}
+				
+			}
+			
 //			tooltip.addStatModGrid(400, 50, opad, pad, fake, new StatModValueGetter() {
 //				public String getPercentValue(StatMod mod) {
 //					return null;

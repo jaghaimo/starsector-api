@@ -8,12 +8,15 @@ import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.PlanetAPI;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
 import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.EventStageDisplayData;
 import com.fs.starfarer.api.ui.ButtonAPI.UICheckboxSize;
 
 
@@ -134,27 +137,43 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 	 * @param itemHeight
 	 * @param columns
 	 */
-	void beginTable(FactionAPI faction, float itemHeight, Object ... columns);
+	UIPanelAPI beginTable(FactionAPI faction, float itemHeight, Object ... columns);
+	UIPanelAPI beginTable2(FactionAPI faction, float itemHeight, boolean withBorder, boolean withHeader, Object ... columns);	
 	
 	/**
 	 * Columns are pairs of <string name> <Float|Integer width>
 	 */
-	void beginTable(Color base, Color dark, Color bright, float itemHeight, Object ... columns);
+	UIPanelAPI beginTable(Color base, Color dark, Color bright, float itemHeight, Object ... columns);
+	UIPanelAPI beginTable(Color base, Color dark, Color bright, float itemHeight, boolean withBorder, boolean withHeader, Object ... columns);
 	
+	/**
+	 * Possible sets of data for a column:
+	 * string |
+	 * color, string |
+	 * alignment, color, string |
+	 * alignment, color, LabelAPI
+	 * 
+	 * @param data
+	 */
+	Object addRow(Object ... data);
 	/**
 	 * Possible sets of data for a column:
 	 * string
 	 * color, string
 	 * alignment, color, string
+	 * alignment, color, LabelAPI
 	 * 
 	 * @param data
 	 */
-	Object addRow(Object ... data);
+	Object addRowWithGlow(Object ... data);
+	void addTooltipToAddedRow(TooltipCreator tc, TooltipLocation loc);
+	void addTooltipToAddedRow(TooltipCreator tc, TooltipLocation loc, boolean recreateEveryFrame);
+	
 	void addTable(String emptyText, int andMore, float pad);
 	void setGridValueColor(Color valueColor);
 	
 	TooltipMakerAPI beginImageWithText(String spriteName, float imageHeight);
-	void addImageWithText(float pad);
+	UIPanelAPI addImageWithText(float pad);
 	void addIconGroup(float rowHeight, int rows, float pad);
 	LabelAPI addPara(String format, float pad, Color color, Color hl, String ... highlights);
 	
@@ -224,8 +243,96 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 			float pad);
 	void setAreaCheckboxFont(String areaCheckboxFont);
 	void setAreaCheckboxFontDefault();
+	UIComponentAPI addLabelledValue(String label, String value, Color labelColor, Color valueColor, float width, float pad);
+	float getHeightSoFar();
+	
+	/**
+	 * Returns the intel UI; only works when creating small intel descriptions.
+	 * @return
+	 */
+	IntelUIAPI getIntelUI();
+	EventProgressBarAPI addEventProgressBar(BaseEventIntel intel, float pad);
+	
+	/**
+	 * Add a custom component without appending it to the bottom of the tooltip. Will need to call one of the 
+	 * .getPosition().inXXX methods to actually place it somewhere specific within the tooltip.
+	 * @param comp
+	 * @return
+	 */
+	UIComponentAPI addCustomDoNotSetPosition(UIComponentAPI comp);
+	
+	UIComponentAPI addEventStageMarker(EventStageDisplayData data);
+	UIComponentAPI addEventProgressMarker(BaseEventIntel intel);
+	TooltipMakerAPI beginImageWithText(String spriteName, float imageHeight, float widthWithImage, boolean midAlignImage);
+	LabelAPI addSectionHeading(String str, Color textColor, Color bgColor, Alignment align, float width, float pad);
+	TooltipMakerAPI beginSubTooltip(float width);
+	/**
+	 * Tooltip still needs to be added using addCustom() or similar.
+	 */
+	void endSubTooltip();
+	void setHeightSoFar(float height);
+	
+	/**
+	 * TODO: maps don't seem to work right if the tooltip is recreated every frame,
+	 * for now make sure to use the addTooltipToPrevious method that takes a boolean to turn that off. 
+	 */
+	UIPanelAPI createSectorMap(float w, float h, MapParams p, String title);
+	
+	/**
+	 * TODO: maps don't seem to work right if the tooltip is recreated every frame,
+	 * for now make sure to use the addTooltipToPrevious method that takes a boolean to turn that off. 
+	 */
+	UIPanelAPI createSectorMap(float w, float h, MapParams p, String title, Color color, Color dark);
+	float getWidthSoFar();
+	void addTooltipToPrevious(TooltipCreator tc, TooltipLocation loc, boolean recreateEveryFrame);
 	
 	
+	/**
+	 * Create a label without adding it to the tooltip, so it can be added via addCustom() or passed in to 
+	 * a table row. Uses the current paragraph font.
+	 */
+	LabelAPI createLabel(String str, Color color);
+	
+	/**
+	 * Create a label without adding it to the tooltip, so it can be added via addCustom() or passed in to 
+	 * a table row. Uses the current paragraph font.
+	 */
+	LabelAPI createLabel(String str, Color color, float maxTextWidth);
+	void addTableHeaderTooltip(int colIndex, TooltipCreator tc);
+	void addTableHeaderTooltip(int colIndex, String text);
+	UIPanelAPI addSectorMap(float w, float h, StarSystemAPI system, float pad);
+	void addTooltipTo(TooltipCreator tc, UIComponentAPI to, TooltipLocation loc);
+	void addTooltipTo(TooltipCreator tc, UIComponentAPI to, TooltipLocation loc, boolean recreateEveryFrame);
+	UIComponentAPI createRect(Color color, float thickness);
+	
+	void makeTableItemsClickable();
+	/**
+	 * To identify which row was clicked on.
+	 * @param id
+	 */
+	void setIdForAddedRow(Object id);
+	
+	
+	void setExternalScroller(ScrollPanelAPI scroller);
+	
+	/**
+	 * Only non-null if this tooltip was added to a CustomPanelAPI using addUIElement().
+	 * @return
+	 */
+	ScrollPanelAPI getExternalScroller();
+
+	/**
+	 * Default is 0.85f.
+	 */
+	void setBgAlpha(float bgAlpha);
+	
+	void setButtonFontOrbitron20();
+	void setButtonFontOrbitron20Bold();
+	void setButtonFontOrbitron24();
+	void setButtonFontOrbitron24Bold();
+	UIComponentAPI addSkillPanelOneColumn(PersonAPI person, float pad);
+	void showPlanetInfo(PlanetAPI planet, float pad);
+	void showPlanetInfo(PlanetAPI planet, float w, float h, boolean withName, float pad);
 	
 	//LabelAPI addParaWithIndent(String text, Color color, float indent, String format, float pad, Color hl, String... highlights);
 }

@@ -6,8 +6,8 @@ import java.util.Map;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
@@ -31,8 +31,12 @@ public class AdjustRepActivePerson extends BaseCommandPlugin {
 			return result.delta != 0;
 		} catch (Throwable t) {
 			CustomRepImpact impact = new CustomRepImpact();
-			impact.limit = RepLevel.valueOf(params.get(0).getString(memoryMap));
-			impact.delta = params.get(1).getFloat(memoryMap) * 0.01f;
+			if (params.size() >= 2) {
+				impact.limit = RepLevel.valueOf(params.get(0).getString(memoryMap));
+				impact.delta = params.get(1).getFloat(memoryMap) * 0.01f;
+			} else {
+				impact.delta = params.get(0).getFloat(memoryMap) * 0.01f;
+			}
 			ReputationAdjustmentResult result = Global.getSector().adjustPlayerReputation(
 					new RepActionEnvelope(RepActions.CUSTOM, impact,
 										  null, dialog.getTextPanel(), true), entity.getActivePerson());

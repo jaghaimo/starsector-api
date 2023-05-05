@@ -8,8 +8,8 @@ import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.EveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
-import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.ShipSystemAPI;
 import com.fs.starfarer.api.combat.ShipSystemAPI.SystemState;
 import com.fs.starfarer.api.combat.ShipwideAIFlags.AIFlags;
 import com.fs.starfarer.api.input.InputEventAPI;
@@ -139,6 +139,11 @@ public class EntropyAmplifierStats extends BaseShipSystemScript {
 		float range = getMaxRange(ship);
 		boolean player = ship == Global.getCombatEngine().getPlayerShip();
 		ShipAPI target = ship.getShipTarget();
+		
+		if (ship.getShipAI() != null && ship.getAIFlags().hasFlag(AIFlags.TARGET_FOR_SHIP_SYSTEM)){
+			target = (ShipAPI) ship.getAIFlags().getCustom(AIFlags.TARGET_FOR_SHIP_SYSTEM);
+		}
+		
 		if (target != null) {
 			float dist = Misc.getDistance(ship.getLocation(), target.getLocation());
 			float radSum = ship.getCollisionRadius() + target.getCollisionRadius();
@@ -168,7 +173,6 @@ public class EntropyAmplifierStats extends BaseShipSystemScript {
 	
 	public static float getMaxRange(ShipAPI ship) {
 		return ship.getMutableStats().getSystemRangeBonus().computeEffective(RANGE);
-		//return RANGE;
 	}
 
 	

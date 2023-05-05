@@ -70,7 +70,7 @@ public class TutorialWelcomeDialogPluginImpl implements InteractionDialogPlugin 
 		
 		switch (option) {
 		case INIT:
-			textPanel.addParagraph("Welcome to the Sector! " +
+			textPanel.addParagraph("Welcome to the Persean Sector! " +
 								   "Your fleet is in the middle of nowhere and critically low on supplies.");
 	
 			textPanel.addParagraph("If you don't acquire more supplies, " +

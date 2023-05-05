@@ -76,7 +76,7 @@ public class CBRemnant extends BaseCustomBountyCreator {
 			size = FleetSize.HUGE;
 			type = FleetTypes.PATROL_LARGE;
 			oQuality = OfficerQuality.AI_ALPHA;
-		} else {
+		} else if (difficulty >= 10) {
 			size = FleetSize.MAXIMUM;
 			type = FleetTypes.PATROL_LARGE;
 			oQuality = OfficerQuality.AI_ALPHA;
@@ -95,6 +95,7 @@ public class CBRemnant extends BaseCustomBountyCreator {
 			mission.triggerFleetMakeFaster(true, 1, true);
 		} else {
 			mission.triggerCreateFleet(size, quality, Factions.REMNANTS, type, data.system);
+			mission.triggerSetFleetDoctrineQuality(5, 3, 5);
 			mission.triggerSetFleetOfficers(oNum, oQuality);
 			mission.triggerAutoAdjustFleetSize(size, size.next());
 			mission.triggerSetRemnantConfigActive();

@@ -62,7 +62,7 @@ public class CBDerelict extends BaseCustomBountyCreator {
 			size = FleetSize.VERY_LARGE;
 		} else if (difficulty == 9) {
 			size = FleetSize.HUGE;
-		} else {
+		} else if (difficulty >= 10) {
 			size = FleetSize.MAXIMUM;
 		}
 		

@@ -11,10 +11,8 @@ import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.combat.listeners.WeaponBaseRangeModifier;
-import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
 import com.fs.starfarer.api.ui.Alignment;
-import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
@@ -35,8 +33,8 @@ public class BallisticRangefinder extends BaseHullMod {
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 	}
 
-	@Override
-	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+	public static WeaponSize getLargestBallisticSlot(ShipAPI ship) {
+		if (ship == null) return null;
 		WeaponSize largest = null;
 		for (WeaponSlotAPI slot : ship.getHullSpec().getAllWeaponSlotsCopy()) {
 			if (slot.isDecorative() ) continue;
@@ -46,6 +44,12 @@ public class BallisticRangefinder extends BaseHullMod {
 				}
 			}
 		}
+		return largest;
+	}
+	
+	@Override
+	public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
+		WeaponSize largest = getLargestBallisticSlot(ship);
 		if (largest == null) return;
 		float small = 0f;
 		float medium = 0f;
@@ -84,7 +88,10 @@ public class BallisticRangefinder extends BaseHullMod {
 			return 1f;
 		}
 		public float getWeaponBaseRangeFlatMod(ShipAPI ship, WeaponAPI weapon) {
-			if (weapon.getSlot() == null || weapon.getSlot().getWeaponType() != WeaponType.BALLISTIC) {
+//			if (weapon.getSlot() == null || weapon.getSlot().getWeaponType() != WeaponType.BALLISTIC) {
+//				return 0f;
+//			}
+			if (weapon.getType() != WeaponType.BALLISTIC && weapon.getType() != WeaponType.HYBRID) {
 				return 0f;
 			}
 			if (weapon.hasAIHint(AIHints.PD)) {
@@ -130,57 +137,168 @@ public class BallisticRangefinder extends BaseHullMod {
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		Color bad = Misc.getNegativeHighlightColor();
+		Color t = Misc.getTextColor();
+		Color g = Misc.getGrayColor();
 		
-		LabelAPI label = tooltip.addPara("If the largest Ballistic slot on the ship is large:"
-				+ " increases the base range of small weapons in Ballistic slots by %s,"
-				+ " and of medium weapons by %s, up to %s maximum.", opad, h,
-				"" + (int)BONUS_SMALL_3, "" + (int)BONUS_MEDIUM_3, "" + (int)BONUS_MAX_3);
-//		label.setHighlight("Ballistic", "base", "Ballistic", "" + (int)BONUS_SMALL_3, "" + (int)BONUS_MEDIUM_3, "" + (int)BONUS_MAX_3);
-//		label.setHighlightColors(Misc.MOUNT_BALLISTIC, h, Misc.MOUNT_BALLISTIC, h, h, h);
-		label.setHighlight("" + (int)BONUS_SMALL_3, "" + (int)BONUS_MEDIUM_3, "" + (int)BONUS_MAX_3);
-		label.setHighlightColors(h, h, h);
+		WeaponSize largest = getLargestBallisticSlot(ship);
 		
-		label = tooltip.addPara("Otherwise:"
-				+ " increases the base range of small weapons in Ballistic slots by %s,"
-				+ " up to %s maximum.", opad, h,
-				"" + (int)BONUS_SMALL_1, "" + (int)BONUS_MAX_1);
-//		label.setHighlight("base", "Ballistic", "" + (int)BONUS_SMALL_1, "" + (int)BONUS_MAX_1);
-//		label.setHighlightColors(h, Misc.MOUNT_BALLISTIC, h, h);
-		label.setHighlight("" + (int)BONUS_SMALL_1, "" + (int)BONUS_MAX_1);
-		label.setHighlightColors(h, h);
-				
+//		LabelAPI label = tooltip.addPara("If the largest Ballistic slot on the ship is large:"
+//				+ " increases the base range of small weapons in Ballistic slots by %s,"
+//				+ " and of medium weapons by %s, up to %s maximum.", opad, h,
+//				"" + (int)BONUS_SMALL_3, "" + (int)BONUS_MEDIUM_3, "" + (int)BONUS_MAX_3);
+////		label.setHighlight("Ballistic", "base", "Ballistic", "" + (int)BONUS_SMALL_3, "" + (int)BONUS_MEDIUM_3, "" + (int)BONUS_MAX_3);
+////		label.setHighlightColors(Misc.MOUNT_BALLISTIC, h, Misc.MOUNT_BALLISTIC, h, h, h);
+//		label.setHighlight("" + (int)BONUS_SMALL_3, "" + (int)BONUS_MEDIUM_3, "" + (int)BONUS_MAX_3);
+//		label.setHighlightColors(h, h, h);
+//		if (largest != null && largest != WeaponSize.LARGE) {
+//			label.setColor(Misc.getGrayColor());
+//		}
+//		
+//		label = tooltip.addPara("Otherwise:"
+//				+ " increases the base range of small weapons in Ballistic slots by %s,"
+//				+ " up to %s maximum.", opad, h,
+//				"" + (int)BONUS_SMALL_1, "" + (int)BONUS_MAX_1);
+////		label.setHighlight("base", "Ballistic", "" + (int)BONUS_SMALL_1, "" + (int)BONUS_MAX_1);
+////		label.setHighlightColors(h, Misc.MOUNT_BALLISTIC, h, h);
+//		label.setHighlight("" + (int)BONUS_SMALL_1, "" + (int)BONUS_MAX_1);
+//		label.setHighlightColors(h, h);
+//		if (largest != null && largest == WeaponSize.LARGE) {
+//			label.setColor(Misc.getGrayColor());
+//		}	
+//
+////		if (ship != null) {
+////			tooltip.addSectionHeading("Effect on this ship", Alignment.MID, opad);
+////		}
+//		
+//		tooltip.addSectionHeading("Exceptions", Alignment.MID, opad);
+//		label = tooltip.addPara("Does not affect point-defense weapons, "
+//						+ "or Ballistic weapons in Composite, Hybrid, and Universal slots.", opad);
+////		label.setHighlight("Ballistic", "Composite", "Hybrid", "Universal");
+////		label.setHighlightColors(Misc.MOUNT_BALLISTIC, Misc.MOUNT_COMPOSITE, Misc.MOUNT_HYBRID, Misc.MOUNT_UNIVERSAL);
+//		label.setHighlight("Composite", "Hybrid", "Universal");
+//		label.setHighlightColors(Misc.MOUNT_COMPOSITE, Misc.MOUNT_HYBRID, Misc.MOUNT_UNIVERSAL);
+//		
+//		label = tooltip.addPara("Hybrid weapons in Ballistic slots receive %s the bonus. "
+////				+ "In addition, the bonus will be at least %s for all Hybrid weapons in Ballistic slots, including large ones,"
+////				+ " subject to the maximum.", opad, h,
+//				+ "In addition, the range bonus for all non-PD Hybrid weapons in Ballistic slots will be at least %s, "
+//				+ "regardless of size or other factors, but still subject to the maximum.", opad, h,
+////				+ "In addition, non-PD Hybrid weapons in Ballistic slots, including large ones, will receive %s bonus range,"
+////						+ " subject to the maximum, in cases where other weapons of the same size would receive no bonus.", opad, h,
+//				"" + (int)Math.round(HYBRID_MULT) + Strings.X, "" + (int)Math.round(HYBRID_BONUS_MIN));
+////		label.setHighlight("Hybrid", "Ballistic", "" + (int)Math.round(HYBRID_MULT) + Strings.X);
+////		label.setHighlightColors(Misc.MOUNT_HYBRID, Misc.MOUNT_BALLISTIC, h);
+//		label.setHighlight("Hybrid", "" + (int)Math.round(HYBRID_MULT) + Strings.X, "Hybrid", "" + (int)Math.round(HYBRID_BONUS_MIN));
+//		label.setHighlightColors(Misc.MOUNT_HYBRID, h, Misc.MOUNT_HYBRID, h);
+		
+		
+		
+		tooltip.addPara("Utilizes targeting data from the ship's largest ballistic slot "
+				+ "to benefit certain weapons, extending the base range of "
+				+ "typical ballistic weapons to match similar but larger weapons. "
+				+ "Also benefits hybrid weapons. Point-defense weapons are unaffected.",
+				opad, h, "ship's largest ballistic slot", "base range");
+		
+		//tooltip.addPara("The maximum range is capped, based on the largest slot.", opad);
+		tooltip.addPara("The range bonus is based on the size of the largest ballistic slot, "
+				+ "and the increased base range is capped, but still subject to other modifiers.", opad);
+		
+//		tooltip.addPara("Affects small and medium ballistic weapons, and all hybrid weapons. "
+//				+ "Point-defense weapons are not affected.", opad, h,
+//				"");
+				//"small and medium", "hybrid", "Point-defense");
+		
+		tooltip.addSectionHeading("Ballistic weapon range", Alignment.MID, opad);
+		
+		
+		tooltip.addPara("Affects small and medium ballistic weapons.", opad);
+		
+		float col1W = 120;
+		float colW = (int) ((width - col1W - 12f) / 3f);
+		float lastW = colW;
+		
+		tooltip.beginTable(Misc.getBasePlayerColor(), Misc.getDarkPlayerColor(), Misc.getBrightPlayerColor(),
+				20f, true, true, 
+				new Object [] {"Largest b. slot", col1W, "Small wpn", colW, "Medium wpn", colW, "Range cap", lastW});
+		
+		
+		Color c = null;
+		if (largest == WeaponSize.SMALL) c = h;
+		else if (largest == WeaponSize.MEDIUM) c = h;
+		else c = g;
+		tooltip.addRow(Alignment.MID, c, "Small / Medium",
+				Alignment.MID, c, "+" + (int) BONUS_SMALL_1,
+				Alignment.MID, g, "---",
+				Alignment.MID, c, "" + (int)BONUS_MAX_1);
+		
+		if (largest == WeaponSize.LARGE) c = h;
+		else c = g;
+		tooltip.addRow(Alignment.MID, c, "Large",
+				Alignment.MID, c, "+" + (int) BONUS_SMALL_3,
+				Alignment.MID, c, "+" + (int) BONUS_MEDIUM_3,
+				Alignment.MID, c, "" + (int)BONUS_MAX_3);
+		
+		tooltip.addTable("", 0, opad);
 
-		tooltip.addSectionHeading("Exceptions", Alignment.MID, opad);
-		label = tooltip.addPara("Does not affect point-defense weapons, "
-						+ "or Ballistic weapons in Composite, Hybrid, and Universal slots.", opad);
-//		label.setHighlight("Ballistic", "Composite", "Hybrid", "Universal");
-//		label.setHighlightColors(Misc.MOUNT_BALLISTIC, Misc.MOUNT_COMPOSITE, Misc.MOUNT_HYBRID, Misc.MOUNT_UNIVERSAL);
-		label.setHighlight("Composite", "Hybrid", "Universal");
-		label.setHighlightColors(Misc.MOUNT_COMPOSITE, Misc.MOUNT_HYBRID, Misc.MOUNT_UNIVERSAL);
 		
-		label = tooltip.addPara("Hybrid weapons in Ballistic slots receive %s the bonus. "
-//				+ "In addition, the bonus will be at least %s for all Hybrid weapons in Ballistic slots, including large ones,"
-//				+ " subject to the maximum.", opad, h,
-				+ "In addition, non-PD Hybrid weapons in Ballistic slots, including large ones, will receive %s bonus range,"
-						+ " subject to the maximum, in cases where other weapons of the same size would receive no bonus.", opad, h,
-				"" + (int)Math.round(HYBRID_MULT) + Strings.X, "" + (int)Math.round(HYBRID_BONUS_MIN));
-//		label.setHighlight("Hybrid", "Ballistic", "" + (int)Math.round(HYBRID_MULT) + Strings.X);
-//		label.setHighlightColors(Misc.MOUNT_HYBRID, Misc.MOUNT_BALLISTIC, h);
-		label.setHighlight("Hybrid", "" + (int)Math.round(HYBRID_MULT) + Strings.X, "Hybrid", "" + (int)Math.round(HYBRID_BONUS_MIN));
-		label.setHighlightColors(Misc.MOUNT_HYBRID, h, Misc.MOUNT_HYBRID, h);
+		tooltip.addSectionHeading("Hybrid weapon range", Alignment.MID, opad + 7f);
 		
-		tooltip.addSectionHeading("Interactions with other modifiers", Alignment.MID, opad);
+		tooltip.addPara("Affects hybrid weapons (those that can fit into both ballistic and energy slots)"
+				+ " of all sizes.", opad);
+		
+		col1W = 120;
+		colW = (int) ((width - col1W - lastW - 15f) / 3f);
+		
+		tooltip.beginTable(Misc.getBasePlayerColor(), Misc.getDarkPlayerColor(), Misc.getBrightPlayerColor(),
+				20f, true, true, 
+				new Object [] {"Largest b. slot", col1W, "Small", colW, "Medium", colW, "Large", colW, "Range cap", lastW});
+		
+		
+		c = null;
+		if (largest == WeaponSize.SMALL) c = h;
+		else if (largest == WeaponSize.MEDIUM) c = h;
+		else c = g;
+		tooltip.addRow(Alignment.MID, c, "Small / Medium",
+				Alignment.MID, c, "+" + (int) (BONUS_SMALL_1 * HYBRID_MULT),
+				Alignment.MID, g, "+" + (int) HYBRID_BONUS_MIN,
+				Alignment.MID, g, "+" + (int) HYBRID_BONUS_MIN,
+				Alignment.MID, c, "" + (int)BONUS_MAX_1);
+		
+		if (largest == WeaponSize.LARGE) c = h;
+		else c = g;
+		tooltip.addRow(Alignment.MID, c, "Large",
+				Alignment.MID, c, "+" + (int) (BONUS_SMALL_3 * HYBRID_MULT),
+				Alignment.MID, c, "+" + (int) (BONUS_MEDIUM_3 * HYBRID_MULT),
+				Alignment.MID, c, "+" + (int) HYBRID_BONUS_MIN,
+				Alignment.MID, c, "" + (int)BONUS_MAX_3);
+		
+		tooltip.addTable("", 0, opad);
+		
+		
+		tooltip.addSectionHeading("Interactions with other modifiers", Alignment.MID, opad + 7f);
 		tooltip.addPara("Since the base range is increased, this modifier"
-				+ " - unlike most other flat modifiers in the game - "
-				+ "is affected by percentage modifiers from other hullmods and skills.", opad);
+				+ " - unlike most other flat modifiers - "
+				+ "is increased by percentage modifiers from other hullmods and skills.", opad);
+	}
+	
+	public float getTooltipWidth() {
+		return 412f;
 	}
 	
 	@Override
 	public boolean isApplicableToShip(ShipAPI ship) {
+		WeaponSize largest = getLargestBallisticSlot(ship);
+		if (ship != null && largest == null) {
+			return false;
+		}
 		return getUnapplicableReason(ship) == null;
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
+		WeaponSize largest = getLargestBallisticSlot(ship);
+		if (ship != null && largest == null) {
+			return "Ship has no ballistic weapon slots";
+		}
 		if (ship != null && 
 				ship.getHullSize() != HullSize.CAPITAL_SHIP && 
 				ship.getHullSize() != HullSize.DESTROYER && 

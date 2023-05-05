@@ -22,18 +22,27 @@ public class Ranks {
 	public static String CITIZEN = "citizen";
 	public static String UNKNOWN = "unknown";
 	public static String TERRORIST = "terrorist";
+	public static String FREEDOM_FIGHTER = "freedomFighter";
 	public static String CLONE = "clone";
 	public static String BROTHER = "brother";
 	public static String FATHER = "father";
 	public static String SISTER = "sister";
 	public static String MOTHER = "mother";
+	public static String ELDER = "elder";
 	
 	public static String KNIGHT_CAPTAIN = "knightCaptain";
+	
+	public static String CHIEF_HIGH_INSPECTOR = "chiefHighInspector";
+	public static String DEPUTY_STAR_MARSHAL = "deputyStarMarshal";
+	public static String GUARD_HIGH_DEPUTY_EXECUTOR = "guardHighDeputyExecutor";
 	
 	public static String AGENT = "agent";
 	public static String SPECIAL_AGENT = "specialAgent";
 	public static String PILOT = "pilot";
 	
+	
+	public static String POST_INTELLIGENCE_DIRECTOR = "intelligenceDirector";
+	public static String POST_GUARD_LEADER = "guardLeader";
 	
 	public static String FACTION_LEADER = "factionLeader";
 	public static String POST_FACTION_LEADER = "factionLeader";
@@ -68,6 +77,7 @@ public class Ranks {
 	public static String POST_INVESTIGATOR = "investigator";
 	
 	public static String POST_ADMINISTRATOR = "administrator";
+	public static String POST_MILITARY_ADMINISTRATOR = "militaryAdministrator";
 	public static String POST_FREELANCE_ADMIN = "freeAdmin";
 	
 	public static String POST_GENERIC_MILITARY = "genericMilitary";
@@ -91,14 +101,19 @@ public class Ranks {
 	
 	public static String POST_DOCTOR = "doctor";
 	public static String POST_HACKER = "hacker";
+	public static String POST_HERMIT = "hermit";
 	public static String POST_PENSIONER = "pensioner";
 	public static String POST_ACTIVIST = "activist";
 	public static String POST_TERRORIST = "terrorist";
 	public static String POST_SYNOD_SUBCURATE = "synodSubcurate";
-	public static String POST_ARCHCURATE = "synodSubcurate";
+	public static String POST_ARCHCURATE = "archcurate";
 	public static String POST_WARLORD = "warlord";
 	public static String POST_UNKNOWN = "unknown";
-	
+	public static String POST_SHRINE_PRIEST = "shrinePriest";
+	public static String POST_EXCUBITOR_ORBIS = "excubitorOrbis";
+	public static String POST_INITIATE = "initiate";
+	public static String POST_NOVICE = "novice";
+	public static String POST_PILGRIM = "pilgrim";
 	
 	//public static String POST_ = "";
 	

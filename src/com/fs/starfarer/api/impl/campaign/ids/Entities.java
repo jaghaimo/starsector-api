@@ -34,6 +34,7 @@ public class Entities {
 	public static final String CARGO_PODS = "cargo_pods";
 	public static final String WARNING_BEACON = "warning_beacon";
 	
+	public static final String ORBITAL_DOCKYARD = "orbital_dockyard";
 	public static final String STATION_MINING = "station_mining_remnant";
 	public static final String STATION_RESEARCH = "station_research_remnant";
 	public static final String ORBITAL_HABITAT = "orbital_habitat_remnant";
@@ -61,6 +62,7 @@ public class Entities {
 	public static final String WEAPONS_CACHE_SMALL_HIGH = "weapons_cache_small_high";
 	public static final String WEAPONS_CACHE_SMALL_REMNANT = "weapons_cache_small_remnant";
 	
+	public static final String HIDDEN_CACHE = "hidden_cache";
 	public static final String ALPHA_SITE_WEAPONS_CACHE = "alpha_site_weapons_cache";
 	
 	

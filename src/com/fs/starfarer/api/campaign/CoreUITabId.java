@@ -7,6 +7,6 @@ public enum CoreUITabId {
 	CARGO,
 	MAP,
 	INTEL,
-	OFFICERS,
+	//OFFICERS,
 	OUTPOSTS,
 }

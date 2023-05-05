@@ -9,6 +9,7 @@ import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.plugins.OfficerLevelupPlugin;
@@ -72,6 +73,9 @@ public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 	}
 
 	public int getMaxLevel(PersonAPI person) {
+		if (person != null && person.getMemoryWithoutUpdate().contains(MemFlags.OFFICER_MAX_LEVEL)) {
+			return person.getMemoryWithoutUpdate().getInt(MemFlags.OFFICER_MAX_LEVEL);
+		}
 		int bonus = 0;
 		if (person != null) {
 			MutableCharacterStatsAPI stats = person.getFleetCommanderStats();
@@ -83,6 +87,9 @@ public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 	}
 	
 	public int getMaxEliteSkills(PersonAPI person) {
+		if (person != null && person.getMemoryWithoutUpdate().contains(MemFlags.OFFICER_MAX_ELITE_SKILLS)) {
+			return person.getMemoryWithoutUpdate().getInt(MemFlags.OFFICER_MAX_ELITE_SKILLS);
+		}
 		int bonus = 0;
 		if (person != null) {
 			MutableCharacterStatsAPI stats = person.getFleetCommanderStats();
@@ -113,6 +120,7 @@ public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 				for (SkillSpecAPI skill : list) {
 					if (!skill.isCombatOfficerSkill()) continue;
 					if (skill.hasTag(Skills.TAG_DEPRECATED)) continue;
+					if (skill.hasTag(Skills.TAG_PLAYER_ONLY)) continue;
 					if (stats.getSkillLevel(skill.getId()) <= 0) {
 						unknown.add(skill);
 					}
@@ -173,6 +181,7 @@ public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 				for (SkillSpecAPI skill : list) {
 					if (!skill.isCombatOfficerSkill()) continue;
 					if (skill.hasTag(Skills.TAG_DEPRECATED)) continue;
+					if (skill.hasTag(Skills.TAG_PLAYER_ONLY)) continue;
 					if (stats.getSkillLevel(skill.getId()) <= 0) {
 						if (skill.getTier() == 5) topTier = true;
 						if (!topTier || level >= 3) {
@@ -190,6 +199,9 @@ public class OfficerLevelupPluginImpl implements OfficerLevelupPlugin {
 		int max = 4;
 		if (Misc.isMentored(person)) {
 			max = 6;
+		}
+		if (person.getMemoryWithoutUpdate().contains(MemFlags.OFFICER_SKILL_PICKS_PER_LEVEL)) {
+			max = person.getMemoryWithoutUpdate().getInt(MemFlags.OFFICER_SKILL_PICKS_PER_LEVEL);
 		}
 		List<String> result = new ArrayList<String>();
 		

@@ -191,7 +191,6 @@ public class ProductionReportIntel extends FleetLogIntel {
 //				}
 //				info.addGrid(small);
 			}
-			
 			if (!cargo.getMothballedShips().getMembersListCopy().isEmpty()) {
 				CountingMap<String> counts = new CountingMap<String>();
 				for (FleetMemberAPI member : cargo.getMothballedShips().getMembersListCopy()) {
@@ -211,6 +210,11 @@ public class ProductionReportIntel extends FleetLogIntel {
 //				}
 //				info.addGrid(small);
 			}
+			
+			// in case some of the ships shown are in the player's fleet; the above may cause them to briefly get
+			// set to zero CR
+			Global.getSector().getPlayerFleet().getFleetData().setSyncNeeded();
+			Global.getSector().getPlayerFleet().getFleetData().syncIfNeeded();
 		}
 
 	}

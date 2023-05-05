@@ -12,8 +12,17 @@ public class ReserveWingStats extends BaseShipSystemScript {
 	public static String RD_NO_EXTRA_CRAFT = "rd_no_extra_craft";
 	public static String RD_FORCE_EXTRA_CRAFT = "rd_force_extra_craft";
 	
-	public static float EXTRA_FIGHTER_DURATION = 15;
-	public static float RATE_COST = 0.25f;
+//	public static float EXTRA_FIGHTER_DURATION = 15;
+//	public static float RATE_COST = 0.25f;
+//	public static float RATE_COST_1_BAY = 0.15f;
+	public static float EXTRA_FIGHTER_DURATION = 30;
+	public static float RATE_COST = 0f;
+	public static float RATE_COST_1_BAY = 0f;
+	
+	public static float getRateCost(int bays) {
+		if (bays <= 1) return RATE_COST_1_BAY;
+		return RATE_COST;
+	}
 	
 	public void apply(MutableShipStatsAPI stats, String id, State state, float effectLevel) {
 		ShipAPI ship = null;
@@ -32,16 +41,18 @@ public class ReserveWingStats extends BaseShipSystemScript {
 			
 			float minRate = Global.getSettings().getFloat("minFighterReplacementRate");
 			
+			int bays = ship.getLaunchBaysCopy().size();
+			float cost = getRateCost(bays);
 			for (FighterLaunchBayAPI bay : ship.getLaunchBaysCopy()) {
 				if (bay.getWing() == null) continue;
 				
-				float rate = Math.max(minRate, bay.getCurrRate() - RATE_COST);
+				float rate = Math.max(minRate, bay.getCurrRate() - cost);
 				bay.setCurrRate(rate);
 				
 				bay.makeCurrentIntervalFast();
 				FighterWingSpecAPI spec = bay.getWing().getSpec();
 				
-				int addForWing = getAdditionalFor(spec);
+				int addForWing = getAdditionalFor(spec, bays);
 				int maxTotal = spec.getNumFighters() + addForWing;
 				int actualAdd = maxTotal - bay.getWing().getWingMembers().size();
 				//int actualAdd = addForWing;
@@ -57,11 +68,17 @@ public class ReserveWingStats extends BaseShipSystemScript {
 		}
 	}
 	
-	public static int getAdditionalFor(FighterWingSpecAPI spec) {
+	public static int getAdditionalFor(FighterWingSpecAPI spec, int bays) {
 		//if (spec.isBomber() && !spec.hasTag(RD_FORCE_EXTRA_CRAFT)) return 0;
 		if (spec.hasTag(RD_NO_EXTRA_CRAFT)) return 0;
 		
 		int size = spec.getNumFighters();
+		if (true) return size;
+		
+		if (bays == 1) {
+			return Math.max(size, 2);
+		}
+		
 //		if (size <= 3) return 1;
 //		return 2;
 		if (size <= 3) return 1;

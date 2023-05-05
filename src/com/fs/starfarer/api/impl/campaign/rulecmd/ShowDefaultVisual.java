@@ -31,9 +31,12 @@ public class ShowDefaultVisual extends BaseCommandPlugin {
 				target = target.getMarket().getPlanetEntity();
 			}
 			if (target instanceof PlanetAPI) {
+				//Global.getSettings().setBoolean("3dPlanetBGInInteractionDialog", true);
 				if (!Global.getSettings().getBoolean("3dPlanetBGInInteractionDialog")) {
 					dialog.getVisualPanel().showPlanetInfo((PlanetAPI) target);
 				}
+				//dialog.getVisualPanel().showLargePlanet((PlanetAPI) target);
+				
 			} else if (target instanceof CampaignFleetAPI) {
 				CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 				CampaignFleetAPI otherFleet = (CampaignFleetAPI) target;

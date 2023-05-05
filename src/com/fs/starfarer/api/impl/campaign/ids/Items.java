@@ -19,7 +19,9 @@ public class Items {
 	public static final String TAG_DEALER = "dealer";
 	public static final String TAG_NO_DEALER = "no_dealer";
 	
-	public static final String TAG_NO_AUTOFIT = "no_autofit";
+	public static final String TAG_BLUEPRINT_PACKAGE = "package_bp";
+	
+	//public static final String TAG_NO_AUTOFIT = "no_autofit";
 	
 	public static final String MODSPEC = "modspec";
 	
@@ -43,6 +45,8 @@ public class Items {
 	public static final String DEALMAKER_HOLOSUITE = "dealmaker_holosuite";
 	public static final String CORONAL_PORTAL = "coronal_portal";
 	
+	public static final String PLANETKILLER = "planetkiller";
+	
 	
 	public static final String PIRATE_PACKAGE = "pirate_package";
 	public static final String LP_PACKAGE = "LP_package";
@@ -56,6 +60,8 @@ public class Items {
 	public static final String INDUSTRY_BP = "industry_bp";
 	
 	public static final String JANUS = "janus";
+	
+	public static final String TOPOGRAPHIC_DATA = "topographic_data";
 	
 }
 	

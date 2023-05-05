@@ -25,6 +25,7 @@ import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
+import com.fs.starfarer.api.impl.hullmods.Automated;
 import com.fs.starfarer.api.ui.BaseTooltipCreator;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator;
@@ -788,6 +789,7 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		for (FleetMemberAPI curr : data.getMembersListCopy()) {
 			if (curr.isMothballed()) continue;
 			if (!Misc.isAutomated(curr)) continue;
+			if (Automated.isAutomatedNoPenalty(curr)) continue;
 			float mult = 1f;
 			//if (curr.getCaptain().isAICore()) {
 				points += curr.getCaptain().getMemoryWithoutUpdate().getFloat(AICoreOfficerPlugin.AUTOMATED_POINTS_VALUE);

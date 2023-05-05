@@ -25,8 +25,11 @@ public interface PersistentUIDataAPI {
 
 
 	LinkedHashSet<String> getCheckedRefitTags();
-
+	LinkedHashSet<String> getAllRefitTags();
 
 	SectorEntityToken getCourseTarget();
+
+
+	ControlGroupsAPI getControlGroups();
 	
 }

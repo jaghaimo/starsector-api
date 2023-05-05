@@ -3,12 +3,14 @@ package com.fs.starfarer.api.impl.campaign.skills;
 import java.awt.Color;
 
 import com.fs.starfarer.api.characters.DescriptionSkillEffect;
+import com.fs.starfarer.api.characters.FleetStatsSkillEffect;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.ShipSkillEffect;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.fleet.MutableFleetStatsAPI;
 import com.fs.starfarer.api.impl.campaign.DModManager;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -20,6 +22,7 @@ public class DerelictContingent {
 	//public static float MINUS_CR_PER_DMOD = 3f;
 	public static float MINUS_CR_PER_DMOD = 0f;
 	public static float MINUS_DP_PERCENT_PER_DMOD = 6f;
+	public static float EXTRA_DMODS = 4;
 
 	
 	
@@ -62,6 +65,10 @@ public class DerelictContingent {
 					stats.getMaxCombatReadiness().modifyFlat(id, -crPenalty * 0.01f, "Derelict Operations skill");
 				}
 			}
+			
+//			if (EXTRA_DMODS > 0) {
+//				stats.getDynamic().getMod(Stats.DMOD_ACQUIRE_PROB_MOD).modifyFlat(id, 1000f);
+//			}
 		}
 		
 		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
@@ -70,6 +77,10 @@ public class DerelictContingent {
 			if (MINUS_CR_PER_DMOD > 0) {
 				stats.getMaxCombatReadiness().unmodify(id);
 			}
+			
+//			if (EXTRA_DMODS > 0) {
+//				stats.getDynamic().getMod(Stats.DMOD_ACQUIRE_PROB_MOD).unmodify(id);
+//			}
 		}
 		
 		public void createCustomDescription(MutableCharacterStatsAPI stats, SkillSpecAPI skill, 
@@ -86,6 +97,29 @@ public class DerelictContingent {
 				info.addPara("(D) hull deployment cost reduction also applies to maintenance cost", hc, 0f);
 			}
 
+		}
+	}
+	
+	public static class Level2 implements FleetStatsSkillEffect {
+		public void apply(MutableFleetStatsAPI stats, String id, float level) {
+			stats.getDynamic().getMod(Stats.SHIP_DMOD_REDUCTION).modifyFlat(id, -EXTRA_DMODS);	
+		}
+		
+		public void unapply(MutableFleetStatsAPI stats, String id) {
+			stats.getDynamic().getMod(Stats.SHIP_DMOD_REDUCTION).unmodify(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			//return "Recovered ships have " + (int) EXTRA_DMODS + " more d-mods on average";
+			return "Recovered ships have more d-mods than normal";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.FLEET;
 		}
 	}
 

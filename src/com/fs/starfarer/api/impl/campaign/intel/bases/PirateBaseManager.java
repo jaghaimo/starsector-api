@@ -187,6 +187,7 @@ public class PirateBaseManager extends BaseEventManager {
 		
 		for (StarSystemAPI system : Global.getSector().getStarSystems()) {
 			if (system.hasPulsar()) continue;
+			if (system.hasTag(Tags.THEME_SPECIAL)) continue;
 			
 			float days = Global.getSector().getClock().getElapsedDaysSince(system.getLastPlayerVisitTimestamp());
 			if (days < 45f) continue;
@@ -199,10 +200,13 @@ public class PirateBaseManager extends BaseEventManager {
 				weight = 3f;
 			} else if (system.hasTag(Tags.THEME_REMNANT_NO_FLEETS)) {
 				weight = 3f;
+			} else if (system.hasTag(Tags.THEME_REMNANT_DESTROYED)) {
+				weight = 3f;
 			} else if (system.hasTag(Tags.THEME_RUINS)) {
 				weight = 5f;
 			} else if (system.hasTag(Tags.THEME_CORE_UNPOPULATED)) {
-				weight = 1f;
+				//weight = 1f;
+				weight = 0f;
 			}
 			if (weight <= 0f) continue;
 			

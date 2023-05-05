@@ -565,7 +565,7 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 			cid = "population_" + size;
 			MarketConditionSpecAPI mcs = Global.getSettings().getMarketConditionSpec(cid);
 			if (mcs != null) {
-				return spec.getDesc() + "\n\n" + mcs.getDesc();
+				return spec.getDesc() + "\n\n" + mcs.getDesc().replaceAll("\\$market", market.getName());
 			}
 		}
 		return super.getDescriptionOverride();

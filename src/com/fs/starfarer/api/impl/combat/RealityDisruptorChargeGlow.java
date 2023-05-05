@@ -2,9 +2,11 @@ package com.fs.starfarer.api.impl.combat;
 
 import java.awt.Color;
 import java.util.Iterator;
+import java.util.List;
 
 import org.lwjgl.util.vector.Vector2f;
 
+import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CollisionClass;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -17,6 +19,7 @@ import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 
@@ -32,11 +35,56 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 		DEST_NO_TARGET,
 	}
 	
-	public static int MAX_ARC_RANGE = 300;
+	public static float ARC_RATE_MULT = 2f;
+	
+	//public static int MAX_ARC_RANGE = 300;
+	public static int MAX_ARC_RANGE = 600;
 	//public static int ARCS_ON_HIT = 15;
+	
+	public static float REPAIR_RATE_MULT = 0.5f;
+	public static float REPAIR_RATE_DEBUFF_DUR = 10f;
 	
 	public static Color UNDERCOLOR = RiftCascadeEffect.EXPLOSION_UNDERCOLOR;
 	public static Color RIFT_COLOR = RiftCascadeEffect.STANDARD_RIFT_COLOR;
+	
+	
+	public static Object STATUS_KEY = new Object();
+	
+	
+	public static class RDRepairRateDebuff implements AdvanceableListener {
+		public static String DEBUFF_ID = "reality_disruptor_repair_debuff";
+		
+		public ShipAPI ship;
+		public float dur = REPAIR_RATE_DEBUFF_DUR;
+		public RDRepairRateDebuff(ShipAPI ship) {
+			this.ship = ship;
+			
+			ship.getMutableStats().getCombatEngineRepairTimeMult().modifyMult(DEBUFF_ID, 1f/REPAIR_RATE_MULT);
+			ship.getMutableStats().getCombatWeaponRepairTimeMult().modifyMult(DEBUFF_ID, 1f/REPAIR_RATE_MULT);
+		}
+
+		public void resetDur() {
+			dur = REPAIR_RATE_DEBUFF_DUR;
+		}
+		
+		public void advance(float amount) {
+			dur -= amount;
+			
+			if (Global.getCurrentState() == GameState.COMBAT &&
+					Global.getCombatEngine() != null && Global.getCombatEngine().getPlayerShip() == ship) {
+				Global.getCombatEngine().maintainStatusForPlayerShip(STATUS_KEY,
+						Global.getSettings().getSpriteName("ui", "icon_tactical_reality_disruptor"),
+						"REALITY DISRUPTOR", "SLOWER REPAIRS: " + (int)Math.max(1, Math.round(dur)) + " SEC", true);
+			}
+			
+			if (dur <= 0) {
+				ship.removeListener(this);
+				ship.getMutableStats().getCombatEngineRepairTimeMult().unmodify(DEBUFF_ID);
+				ship.getMutableStats().getCombatWeaponRepairTimeMult().unmodify(DEBUFF_ID);
+			}
+		}
+	}
+	
 	
 	
 	protected WeaponAPI weapon;
@@ -78,7 +126,7 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 		if (proj != null && !isProjectileExpired(proj) && !proj.isFading()) {
 			delay -= amount;
 			if (delay <= 0) {
-				arcInterval.advance(amount);
+				arcInterval.advance(amount * ARC_RATE_MULT);
 				if (arcInterval.intervalElapsed()) {
 					spawnArc();
 				}
@@ -150,6 +198,16 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 			spawnEMPParticles(EMPArcHitType.SOURCE, proj.getLocation(), null);
 			spawnEMPParticles(EMPArcHitType.DEST, arc.getTargetLocation(), target);
 			
+			if (target instanceof ShipAPI) {
+				ShipAPI s = (ShipAPI) target;
+				List<RDRepairRateDebuff> listeners = s.getListeners(RDRepairRateDebuff.class);
+				if (listeners.isEmpty()) {
+					s.addListener(new RDRepairRateDebuff(s));
+				} else {
+					listeners.get(0).resetDur();
+				}
+			}
+			
 		} else {
 			Vector2f from = new Vector2f(proj.getLocation());
 			Vector2f to = pickNoTargetDest(proj, weapon, engine);
@@ -195,6 +253,7 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 				ShipAPI otherShip = (ShipAPI) other;
 				if (otherShip.isHulk()) continue;
 				if (otherShip.isPhased()) continue;
+				if (!otherShip.isTargetable()) continue;
 			}
 			if (other.getCollisionClass() == CollisionClass.NONE) continue;
 

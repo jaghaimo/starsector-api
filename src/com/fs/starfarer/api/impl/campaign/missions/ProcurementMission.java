@@ -147,6 +147,7 @@ public class ProcurementMission extends HubMissionWithBarEvent {
 			if (person.hasTag(Tags.CONTACT_UNDERWORLD) && rollProbability(PROB_ILLEGAL_IF_UNDERWORLD)) {
 				preferCommodityIllegal();
 			} else {
+				requireMarketFactionNotHostileTo(Factions.PLAYER);
 				requireCommodityLegal();
 				requireCommodityDemandAtLeast(1);
 			}

@@ -112,12 +112,16 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 	}
 
 	public void advance(float amount) {
+		//if (true) return;
 		
 		float days = Misc.getDays(amount);
 		
 		Set<FactionAPI> seen = new HashSet<FactionAPI>();
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsInGroup(null)) {
-			if (market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY)) {
+//			JSONObject json = market.getFaction().getCustom().optJSONObject(Factions.CUSTOM_PUNITIVE_EXPEDITION_DATA);
+//			boolean canSendWithoutMilitaryBase = json != null && json.optBoolean("canSendWithoutMilitaryBase", false);
+			//if (market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY) || canSendWithoutMilitaryBase) {
+			if (true) {
 				FactionAPI faction = market.getFaction();
 				if (Misc.getCommissionFaction() == faction) continue;
 				
@@ -125,7 +129,7 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 					seen.add(faction);
 					continue;
 				}
-				JSONObject json = faction.getCustom().optJSONObject(Factions.CUSTOM_PUNITIVE_EXPEDITION_DATA);
+				JSONObject json = faction.getCustomJSONObject(Factions.CUSTOM_PUNITIVE_EXPEDITION_DATA);
 				if (json != null) {
 					PunExData curr = new PunExData();
 					curr.faction = faction;
@@ -414,9 +418,13 @@ public class PunitiveExpeditionManager implements EveryFrameScript {
 		
 		WeightedRandomPicker<MarketAPI> picker = new WeightedRandomPicker<MarketAPI>(curr.random);
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsInGroup(null)) {
+			boolean canSendWithoutMilitaryBase = json.optBoolean("canSendWithoutMilitaryBase", false);
+			boolean military = market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY); 
 			if (market.getFaction() == curr.faction && 
-					market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY)) {
-				picker.add(market, market.getSize());
+					(military || canSendWithoutMilitaryBase)) {
+				float w = 1f;
+				if (military) w *= 10f;
+				picker.add(market, market.getSize() * w);
 			}
 		}
 		

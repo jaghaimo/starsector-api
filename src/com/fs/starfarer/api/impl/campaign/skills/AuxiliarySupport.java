@@ -1,15 +1,12 @@
 package com.fs.starfarer.api.impl.campaign.skills;
 
-import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FleetDataAPI;
 import com.fs.starfarer.api.characters.CharacterStatsSkillEffect;
 import com.fs.starfarer.api.characters.FleetTotalItem;
 import com.fs.starfarer.api.characters.FleetTotalSource;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
-import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
-import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
 public class AuxiliarySupport {
@@ -43,15 +40,15 @@ public class AuxiliarySupport {
 			FleetDataAPI data = getFleetData(null);
 			float auxBonus = computeAndCacheThresholdBonus(data, stats, "aux_effect", AUXILIARY_EFFECT_BONUS, ThresholdBonusType.MILITARIZED_OP);
 			
-			HullModSpecAPI mil = Global.getSettings().getHullModSpec(HullMods.MILITARIZED_SUBSYSTEMS);
-			HullModSpecAPI ep = Global.getSettings().getHullModSpec(HullMods.ESCORT_PACKAGE);
-			HullModSpecAPI ap = Global.getSettings().getHullModSpec(HullMods.ASSAULT_PACKAGE);
-			
-			info.addPara("+%s to combat effects of " + mil.getDisplayName() + ", " +
-					ep.getDisplayName() + ", and " + ap.getDisplayName() + " (maximum: %s)", 0f, hc, hc,
-					"" + (int) auxBonus + "%",
-					"" + (int) AUXILIARY_EFFECT_BONUS + "%");
-			addMilitarizedOPThresholdInfo(info, data, stats);
+//			HullModSpecAPI mil = Global.getSettings().getHullModSpec(HullMods.MILITARIZED_SUBSYSTEMS);
+//			HullModSpecAPI ep = Global.getSettings().getHullModSpec(HullMods.ESCORT_PACKAGE);
+//			HullModSpecAPI ap = Global.getSettings().getHullModSpec(HullMods.ASSAULT_PACKAGE);
+//			
+//			info.addPara("+%s to combat effects of " + mil.getDisplayName() + ", " +
+//					ep.getDisplayName() + ", and " + ap.getDisplayName() + " (maximum: %s)", 0f, hc, hc,
+//					"" + (int) auxBonus + "%",
+//					"" + (int) AUXILIARY_EFFECT_BONUS + "%");
+//			addMilitarizedOPThresholdInfo(info, data, stats);
 			
 			//info.addSpacer(5f);
 		}

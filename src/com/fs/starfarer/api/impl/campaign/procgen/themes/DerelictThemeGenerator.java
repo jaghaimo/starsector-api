@@ -23,12 +23,14 @@ import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTPoints;
 import com.fs.starfarer.api.impl.campaign.procgen.Constellation;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial.DomainSurveyDerelictSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDerelictSpecial.SpecialType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialType;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TopographicDataSpecial.TopographicDataSpecialData;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
@@ -37,6 +39,7 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 
 	public static final float BASE_LINK_FRACTION = 0.25f;
 	public static final float SALVAGE_SPECIAL_FRACTION = 0.5f;
+	public static final float TOPOGRAPHIC_DATA_FRACTION = 0.1f;
 	
 	public static final int BRANCHES_PER_MOTHERSHIP_MIN = 3;
 	public static final int BRANCHES_PER_MOTHERSHIP_MAX = 4;
@@ -353,11 +356,31 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 		Set<PlanetAPI> usedPlanets = new HashSet<PlanetAPI>();
 		Set<StarSystemAPI> usedSystems = new HashSet<StarSystemAPI>();
 		
-		for(AddedEntity e : entities) {
+		for (AddedEntity e : entities) {
 			if (hasSpecial(e.entity)) continue;
 			
 			SurveyDataSpecialType type = null;
 			
+			if (StarSystemGenerator.random.nextFloat() < TOPOGRAPHIC_DATA_FRACTION) {
+				int min = 0;
+				int max = 0;
+				if (Entities.DERELICT_SURVEY_PROBE.equals(e.entityType)) {
+					min = HTPoints.LOW_MIN;
+					max = HTPoints.LOW_MAX;
+				} else if (Entities.DERELICT_SURVEY_SHIP.equals(e.entityType)) {
+					min = HTPoints.MEDIUM_MIN;
+					max = HTPoints.MEDIUM_MAX;
+				} else if (Entities.DERELICT_MOTHERSHIP.equals(e.entityType)) {
+					min = HTPoints.HIGH_MIN;
+					max = HTPoints.HIGH_MAX;
+				}
+				int points = min + StarSystemGenerator.random.nextInt(max - min + 1);
+				if (points > 0) {
+					TopographicDataSpecialData data = new TopographicDataSpecialData(points);
+					Misc.setSalvageSpecial(e.entity, data);
+					continue;
+				}
+			}
 			if (StarSystemGenerator.random.nextFloat() < SALVAGE_SPECIAL_FRACTION) {
 				float p1 = 0.33f, p2 = 0.67f;
 				if (Entities.DERELICT_SURVEY_PROBE.equals(e.entityType)) {

@@ -120,4 +120,16 @@ public interface WeaponSpecAPI {
 	float getMaxRange();
 	void setMaxRange(float maxRange);
 	void setOrdnancePointCost(float armamentCapacity);
+	boolean isShowDamageWhenDecorative();
+	boolean isBurstBeam();
+	boolean isStopPreviousFireSound();
+	void setStopPreviousFireSound(boolean stopPreviousFireSound);
+	boolean isPlayFullFireSoundOne();
+	void setPlayFullFireSoundOne(boolean playFullFireSoundOne);
+	void setBeamSpeed(float beamSpeed);
+	void setMaxAmmo(int maxAmmo);
+	void setAmmoPerSecond(float ammoPerSecond);
+	float getReloadSize();
+	void setReloadSize(float reloadSize);
+	void setProjectileSpeed(float projectileSpeed);
 }

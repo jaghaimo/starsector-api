@@ -12,6 +12,7 @@ public class SectorThemeGenerator {
 	public static List<ThemeGenerator> generators = new ArrayList<ThemeGenerator>();
 	
 	static {
+		//generators.add(new SpecialThemeGenerator());
 		generators.add(new DerelictThemeGenerator());
 		generators.add(new RemnantThemeGenerator());
 		generators.add(new RuinsThemeGenerator());

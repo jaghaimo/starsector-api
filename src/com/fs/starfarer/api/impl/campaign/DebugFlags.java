@@ -42,6 +42,7 @@ public class DebugFlags {
 	public static boolean ALLOW_ALL_CONTACT_MISSIONS = false; // regardless of importance or relationship or requirement structure
 	
 	public static boolean SLIPSTREAM_DEBUG = false;
+	public static boolean USE_SLIPSTREAM_VISIBILITY_IN_DEBUG_MODE = true;
 	
 	
 	// not really a debug flag...

@@ -1296,15 +1296,24 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		}
 		
 		float hitStrength = member.getStats().getArmorBonus().computeEffective(member.getHullSpec().getArmorRating());
-		hitStrength *= strikeDamage / crPerDep; 
-		member.getStatus().applyDamage(hitStrength);
-		if (member.getStatus().getHullFraction() < 0.01f) {
-			member.getStatus().setHullFraction(0.01f);
+		hitStrength *= strikeDamage / crPerDep;
+		if (hitStrength > 0) {
+			member.getStatus().applyDamage(hitStrength);
+			if (member.getStatus().getHullFraction() < 0.01f) {
+				member.getStatus().setHullFraction(0.01f);
+			}
 		}
 		
 		if (fleet.isPlayerFleet()) {
+			String verb = "suffers";
+			Color c = Misc.getNegativeHighlightColor();
+			if (hitStrength <= 0) {
+				verb = "avoids";
+				//c = Misc.getPositiveHighlightColor();
+				c = Misc.getTextColor();
+			}
 			Global.getSector().getCampaignUI().addMessage(
-					member.getShipName() + " suffers damage from the storm", Misc.getNegativeHighlightColor());
+					member.getShipName() + " " + verb + " damage from the storm", c);
 			
 			Global.getSector().getCampaignUI().showHelpPopupIfPossible("chmHyperStorm");
 		}

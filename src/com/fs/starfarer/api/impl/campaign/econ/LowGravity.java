@@ -7,7 +7,7 @@ import com.fs.starfarer.api.util.Misc;
 
 public class LowGravity extends BaseHazardCondition {
 
-	public static final float ACCESS_BONUS = 10f;
+	public static float ACCESS_BONUS = 10f;
 	
 	public void apply(String id) {
 		super.apply(id);

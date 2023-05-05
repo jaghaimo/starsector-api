@@ -76,6 +76,17 @@ public class CollisionGridUtil implements CollisionGridAPI {
 		int startY = (int) (below + ((loc.y - objHeight/2f) / cellSize));
 		int endY = (int) (below + (loc.y + objHeight/2f) / cellSize);
 		
+		int limit = Integer.MAX_VALUE / 2;
+		if (startX > limit) startX = limit;
+		if (endX > limit) endX = limit;
+		if (startY > limit) startY = limit;
+		if (endY > limit) endY = limit;
+		
+		if (startX < -limit) startX = -limit;
+		if (endX < -limit) endX = -limit;
+		if (startY < -limit) startY = -limit;
+		if (endY < -limit) endY = -limit;
+		
 		for (int i = startX; i <= endX; i++) {
 			for (int j = startY; j <= endY; j++) {
 				addToBucket(i, j, object);

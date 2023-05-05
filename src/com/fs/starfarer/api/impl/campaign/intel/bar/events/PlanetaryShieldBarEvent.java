@@ -55,6 +55,10 @@ public class PlanetaryShieldBarEvent extends BaseBarEventWithPerson {
 		
 		if (getTargetPlanet() == null) return false;
 		
+		if (Global.getSector().getIntelManager().hasIntelOfClass(PlanetaryShieldIntel.class)) {
+			return false;
+		}
+		
 		if (Global.getSector().getPlayerStats().getLevel() < 10 && !DebugFlags.BAR_DEBUG) return false;
 		
 		return true;
@@ -82,6 +86,7 @@ public class PlanetaryShieldBarEvent extends BaseBarEventWithPerson {
 			if (curr == market) continue;
 			if (curr.isPlayerOwned()) continue;
 			if (curr.isHidden()) continue;
+			if (curr.isInvalidMissionTarget()) continue;
 			if (curr.getStabilityValue() <= 0) continue;
 			
 			float w = curr.getSize();

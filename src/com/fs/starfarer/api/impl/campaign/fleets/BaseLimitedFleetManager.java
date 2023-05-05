@@ -8,8 +8,9 @@ import org.apache.log4j.Logger;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
-import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.util.IntervalUtil;
 
@@ -28,8 +29,10 @@ public abstract class BaseLimitedFleetManager implements EveryFrameScript, Fleet
 	public static class ManagedFleetData {
 		public float startingFleetPoints = 0;
 		public CampaignFleetAPI fleet;
-		public ManagedFleetData(CampaignFleetAPI fleet) {
+		public LocationAPI spawnedFor;
+		public ManagedFleetData(CampaignFleetAPI fleet, LocationAPI spawnedFor) {
 			this.fleet = fleet;
+			this.spawnedFor = spawnedFor;
 		}
 	}
 	
@@ -84,7 +87,11 @@ public abstract class BaseLimitedFleetManager implements EveryFrameScript, Fleet
 			CampaignFleetAPI fleet = spawnFleet();
 			if (fleet != null) {
 				fleet.addEventListener(this);
-				ManagedFleetData data = new ManagedFleetData(fleet);
+				LocationAPI spawnLoc = null;
+				if (this instanceof DisposableFleetManager) {
+					spawnLoc = ((DisposableFleetManager)this).getCurrSpawnLoc();
+				}
+				ManagedFleetData data = new ManagedFleetData(fleet, spawnLoc);
 				active.add(data);
 				log.info("Spawned fleet [" + fleet.getNameWithFaction() + "] at hyperloc " + fleet.getLocationInHyperspace());
 			} else {

@@ -6,9 +6,9 @@ import java.util.Map;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BaseStoryPointActionDelegate;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.OptionPanelAPI.OptionTooltipCreator;
 import com.fs.starfarer.api.campaign.StoryPointActionDelegate;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
-import com.fs.starfarer.api.campaign.OptionPanelAPI.OptionTooltipCreator;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -224,6 +224,8 @@ public class SetStoryOption extends BaseCommandPlugin {
 		});
 		
 		dialog.getOptionPanel().addOptionConfirmation(params.optionId, delegate);
+		
+		dialog.getOptionPanel().setStoryOptionParams(params.optionId, params, delegate);
 		
 		return true;
 	}

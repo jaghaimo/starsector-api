@@ -31,7 +31,7 @@ public class PromoteOfficerIntel extends BaseIntelPlugin {
 	
 	public static String BUTTON_PROMOTE = "button_promote";
 	public static String BUTTON_DELETE = "button_delete";
-	public static float DURATION = 120f;
+	public static float DURATION = 180f;
 	
 	protected PersonAPI person;
 
@@ -44,6 +44,7 @@ public class PromoteOfficerIntel extends BaseIntelPlugin {
 		
 		person = OfficerManagerEvent.createOfficer(Global.getSector().getFaction(Factions.PLAYER), 1,
 									SkillPickPreference.ANY, true, null, false, false, -1, null);
+		person.setPortraitSprite(OfficerManagerEvent.pickPortraitPreferNonDuplicate(person.getFaction(), person.getGender()));
 		if (text != null) {
 			text.addPara(getDescText());
 		}

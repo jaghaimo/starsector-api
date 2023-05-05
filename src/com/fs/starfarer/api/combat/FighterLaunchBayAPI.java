@@ -50,10 +50,11 @@ public interface FighterLaunchBayAPI {
 
 	WeaponSlotAPI getWeaponSlot();
 
-
-
 	void setCurrRate(float currRate);
 	float getCurrRate();
+
+	float getCurrReplacementIntervalDuration();
+	float getTimeUntilNextReplacement();
 }
 
 

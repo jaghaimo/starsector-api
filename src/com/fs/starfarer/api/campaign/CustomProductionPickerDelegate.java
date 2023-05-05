@@ -12,5 +12,7 @@ public interface CustomProductionPickerDelegate {
 	public float getCostMult();
 	public float getMaximumValue();
 	
+	public boolean withQuantityLimits();
+	
 	public void notifyProductionSelected(FactionProductionAPI production);
 }

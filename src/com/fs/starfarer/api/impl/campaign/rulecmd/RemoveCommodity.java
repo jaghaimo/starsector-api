@@ -65,8 +65,10 @@ public class RemoveCommodity extends BaseCommandPlugin {
 			}
 		}
 		
-		// update $supplies, $fuel, etc if relevant
-		AddRemoveCommodity.updatePlayerMemoryQuantity(commodityId);
+		if (!"credits".equals(commodityId)) {
+			// update $supplies, $fuel, etc if relevant
+			AddRemoveCommodity.updatePlayerMemoryQuantity(commodityId);
+		}
 		
 		return true;
 	}

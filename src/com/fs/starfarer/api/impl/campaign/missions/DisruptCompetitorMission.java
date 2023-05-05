@@ -162,7 +162,9 @@ public class DisruptCompetitorMission extends HubMissionWithBarEvent {
 		set("$dcom_marketName", market.getName());
 		set("$dcom_marketOnOrAt", market.getOnOrAt());
 		set("$dcom_dist", getDistanceLY(market));
-		
+		set("$dcom_marketFactionArticle", market.getFaction().getPersonNamePrefixAOrAn());
+		set("$dcom_marketFaction", market.getFaction().getPersonNamePrefix());
+		set("$dcom_factionColor",  market.getFaction().getBaseUIColor());
 		set("$dcom_danger", RAID_DANGER);
 		
 		set("$dcom_marines", Misc.getWithDGS(getMarinesRequiredForCustomObjective(market, RAID_DANGER)));

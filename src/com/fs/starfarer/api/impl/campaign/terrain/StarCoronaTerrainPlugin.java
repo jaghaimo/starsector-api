@@ -639,6 +639,11 @@ public class StarCoronaTerrainPlugin extends BaseRingTerrain implements AuroraRe
 	public boolean canPlayerHoldStationIn() {
 		return false;
 	}
+
+	public FlareManager getFlareManager() {
+		return flareManager;
+	}
+	
 }
 
 

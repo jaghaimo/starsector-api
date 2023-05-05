@@ -10,8 +10,8 @@ import java.util.Set;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
-import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.FullName.Gender;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBackstory.HistorianBackstoryInfo;
 import com.fs.starfarer.api.util.Misc;
@@ -61,8 +61,10 @@ public class HistorianData {
 	protected boolean introduced = false;
 	protected int tier = 0;
 	
-	protected List<HistorianOfferCreator> creators = new ArrayList<HistorianOfferCreator>();
-	protected List<HistorianBackstoryInfo> backstory = new ArrayList<HistorianBackstoryInfo>();
+//	protected transient List<HistorianOfferCreator> creators = new ArrayList<HistorianOfferCreator>();
+//	protected transient List<HistorianBackstoryInfo> backstory = new ArrayList<HistorianBackstoryInfo>();
+	protected transient List<HistorianOfferCreator> creators;
+	protected transient List<HistorianBackstoryInfo> backstory;
 	protected Set<String> shownBackstory = new LinkedHashSet<String>();
 	protected Set<String> givenOffers = new LinkedHashSet<String>();
 	
@@ -78,16 +80,24 @@ public class HistorianData {
 			person.setPortraitSprite(Global.getSettings().getSpriteName("intel", "historian_female"));
 		}
 		
-		creators.add(new DonationOfferCreator());
-		creators.add(new ShipBlueprintOfferCreator(20f));
-		creators.add(new WeaponBlueprintOfferCreator(10f));
-		creators.add(new FighterBlueprintOfferCreator(10f));
-		creators.add(new SpecialItemOfferCreator(10f));
-		
-		HistorianBackstory.init(backstory);
+//		creators.add(new DonationOfferCreator());
+//		creators.add(new ShipBlueprintOfferCreator(20f));
+//		creators.add(new WeaponBlueprintOfferCreator(10f));
+//		creators.add(new FighterBlueprintOfferCreator(10f));
+//		creators.add(new SpecialItemOfferCreator(10f));
+		readResolve();
+		//HistorianBackstory.init(backstory);
 	}
 	
 	protected Object readResolve() {
+		if (creators == null) {
+			creators = new ArrayList<HistorianOfferCreator>();
+			creators.add(new DonationOfferCreator());
+			creators.add(new ShipBlueprintOfferCreator(20f));
+			creators.add(new WeaponBlueprintOfferCreator(10f));
+			creators.add(new FighterBlueprintOfferCreator(10f));
+			creators.add(new SpecialItemOfferCreator(10f));
+		}
 		if (backstory == null) {
 			backstory = new ArrayList<HistorianBackstoryInfo>();
 			HistorianBackstory.init(backstory);
@@ -199,6 +209,7 @@ public class HistorianData {
 		int attempts = num + 5;
 		for (int i = 0; i < attempts && result.size() < num; i++) {
 			HistorianOfferCreator c = limited.pick();
+			if (c == null) continue;
 			HistorianOffer offer = c.createOffer(random, result);
 			if (offer != null) {
 				offer.setCreator(c);

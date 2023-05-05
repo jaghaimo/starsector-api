@@ -35,4 +35,6 @@ public interface LabelAPI {
 	void flash(float durIn, float durOut);
 	void render(float alphaMult);
 	void advance(float amount);
+	void setHighlightOnMouseover(boolean highlightOnMouseover);
+	void setColor(Color color);
 }

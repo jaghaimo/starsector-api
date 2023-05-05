@@ -16,6 +16,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.util.Misc;
 
 public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 
@@ -118,9 +119,14 @@ public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 			StarSystemAPI system = (StarSystemAPI) playerFleet.getContainingLocation();
 			String musicSetId = system.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
 			if (musicSetId != null) return musicSetId;
+
+			if (system.hasTag(Tags.THEME_CORE) ||
+					!Misc.getMarketsInLocation(system, Factions.PLAYER).isEmpty()) {
+				return "music_campaign";
+			}
 		}
 		
-		return "music_campaign";
+		return "music_campaign_non_core";
 	}
 	
 	protected String getEncounterMusicSetId(Object param) {

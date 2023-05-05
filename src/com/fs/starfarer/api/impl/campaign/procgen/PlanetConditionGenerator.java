@@ -61,10 +61,9 @@ public class PlanetConditionGenerator {
 			context = createContext(planet, age);
 		}
 		
-		Collection<Object> all = Global.getSettings().getAllSpecs(ConditionGenDataSpec.class);
+		Collection<ConditionGenDataSpec> all = Global.getSettings().getAllSpecs(ConditionGenDataSpec.class);
 		List<ConditionGenDataSpec> specs = new ArrayList<ConditionGenDataSpec>();
-		for (Object obj : all) {
-			ConditionGenDataSpec spec = (ConditionGenDataSpec) obj;
+		for (ConditionGenDataSpec spec : all) {
 			specs.add(spec);
 		}
 		
@@ -235,9 +234,8 @@ public class PlanetConditionGenerator {
 	
 	public static List<ConditionGenDataSpec> getDataForGroup(String group) {
 		List<ConditionGenDataSpec> result = new ArrayList<ConditionGenDataSpec>();
-		Collection<Object> all = Global.getSettings().getAllSpecs(ConditionGenDataSpec.class);
-		for (Object obj : all) {
-			ConditionGenDataSpec spec = (ConditionGenDataSpec) obj;
+		Collection<ConditionGenDataSpec> all = Global.getSettings().getAllSpecs(ConditionGenDataSpec.class);
+		for (ConditionGenDataSpec spec : all) {
 			if (group.equals(spec.getGroup())) {
 				result.add(spec);
 			}

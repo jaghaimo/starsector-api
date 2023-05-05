@@ -48,12 +48,11 @@ public class ProcgenUsedNames {
 		WeightedRandomPicker<NamePick> picker = new WeightedRandomPicker<NamePick>(StarSystemGenerator.random);
 		
 		
-		Collection<Object> all = Global.getSettings().getAllSpecs(NameGenData.class);
+		Collection<NameGenData> all = Global.getSettings().getAllSpecs(NameGenData.class);
 		
 		// names for child of parent, if any
 		if (parent != null) {
-			for (Object obj : all) {
-				NameGenData spec = (NameGenData) obj;
+			for (NameGenData spec : all) {
 				if (isUsed(spec.getName())) continue;
 				if (!spec.hasTag(tag)) continue;
 				if (parent == null && spec.getName().contains("$parent")) continue;
@@ -65,8 +64,7 @@ public class ProcgenUsedNames {
 		
 		// if needed, add names w/o parent
 		if (picker.isEmpty()) {
-			for (Object obj : all) {
-				NameGenData spec = (NameGenData) obj;
+			for (NameGenData spec : all) {
 				if (isUsed(spec.getName())) continue;
 				if (!spec.hasTag(tag)) continue;
 				if (!spec.getParents().isEmpty()) continue;

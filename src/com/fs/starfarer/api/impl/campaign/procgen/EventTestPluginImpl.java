@@ -2,11 +2,14 @@ package com.fs.starfarer.api.impl.campaign.procgen;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignClockAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogPlugin;
 import com.fs.starfarer.api.campaign.LocationAPI;
@@ -21,17 +24,25 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
+import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI;
+import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.eventide.DuelDialogDelegate;
 import com.fs.starfarer.api.impl.campaign.eventide.DuelPanel;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel;
 import com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionManager;
+import com.fs.starfarer.api.impl.campaign.intel.misc.LuddicShrineIntel;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager.PunExData;
 import com.fs.starfarer.api.impl.campaign.plog.PLEntry;
 import com.fs.starfarer.api.impl.campaign.plog.PLIntel;
 import com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog;
 import com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl;
+import com.fs.starfarer.api.loading.FighterWingSpecAPI;
+import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class EventTestPluginImpl implements InteractionDialogPlugin {
@@ -78,6 +89,8 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 		
 		//visual.showImageVisual(planet.getCustomInteractionDialogImageVisual());
 	
+		visual.showLargePlanet(Global.getSector().getEntityById("mazalot"));
+		
 		dialog.setOptionOnEscape("Leave", OptionId.LEAVE);
 		optionSelected(null, OptionId.INIT);
 	}
@@ -214,6 +227,19 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 			options.addOption("Leave", OptionId.LEAVE, null);
 			break;
 		case PRINT_LOG:
+			
+//			if (Global.getSector().getCurrentLocation() instanceof StarSystemAPI) {
+//				new HostileActivityIntel((StarSystemAPI) Global.getSector().getCurrentLocation());
+//			}
+			
+			//BaseEventIntel event = new BaseEventIntel();
+			HyperspaceTopographyEventIntel event = new HyperspaceTopographyEventIntel(dialog.getTextPanel(), true);
+			//Global.getSector().addScript(this);
+			//Global.getSector().getIntelManager().addIntel(event);
+			//Global.getSector().getListenerManager().addListener(this);
+			
+			checkFactionUseOfStuff();
+			
 			textPanel.addPara("Player log:");
 			String log = "";
 			for (PLEntry e : PlaythroughLog.getInstance().getEntries()) {
@@ -235,6 +261,13 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 		case ADD_LOG_INTEL:
 			PLIntel intel = new PLIntel();
 			Global.getSector().getIntelManager().addIntel(intel, false, textPanel);
+			
+			LuddicShrineIntel.addShrineIntelIfNeeded("beholder_station", textPanel);
+			LuddicShrineIntel.addShrineIntelIfNeeded("chicomoztoc", textPanel);
+			LuddicShrineIntel.addShrineIntelIfNeeded("gilead", textPanel);
+			LuddicShrineIntel.addShrineIntelIfNeeded("jangala", textPanel);
+			LuddicShrineIntel.addShrineIntelIfNeeded("killa", textPanel);
+			LuddicShrineIntel.addShrineIntelIfNeeded("volturn", textPanel);
 			
 //			PromoteOfficerIntel intel = new PromoteOfficerIntel(textPanel);
 //			Global.getSector().getIntelManager().addIntel(intel, false, textPanel);
@@ -288,7 +321,7 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 	protected void createInitialOptions() {
 		options.clearOptions();
 		
-//		options.addOption("Fight!", OptionId.FIGHT);
+		options.addOption("Fight!", OptionId.FIGHT);
 //		options.addOption("Fight tutorial", OptionId.TUTORIAL);
 		
 		MarketAPI market = getNearestMarket(false);
@@ -330,7 +363,131 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 		}
 		return null;
 	}
+	
+	
+	public void checkFactionUseOfStuff() {
+		List<FactionAPI> factions = Global.getSector().getAllFactions();
+		
+		System.out.println();
+		System.out.println("----------------------- FIGHTERS -----------------------");
+		System.out.println();
+		
+		Map<String, String> oneFactionFighters = new LinkedHashMap<String, String>();  
+		for (FighterWingSpecAPI spec : Global.getSettings().getAllFighterWingSpecs()) {
+			if (spec.hasTag(Tags.RESTRICTED)) continue;
+			int count = 0;
+			String id = spec.getId();
+			String fId = null;
+			List<String> all = new ArrayList<String>();
+			for (FactionAPI f : factions) {
+				if (f.isPlayerFaction()) continue;
+				if (f.getKnownFighters().contains(id)) {
+					count++;
+					fId = f.getId();
+					all.add(fId);
+				}
+			}
+			if (count == 0) {
+				//System.out.println("Fighter wing [" + id + "] has no increased sell frequency anywhere");
+				System.out.println("FIGHTER WING [" + id + "] IS NOT USED BY ANY FACTION");
+			}
+			if (count == 1) {
+				oneFactionFighters.put(id, fId);
+			}
+		
+			if (count != 0) {
+				System.out.println("Fighter wing [" + id + "] is known by: [" + Misc.getAndJoined(all) + "]");
+			}
+		}
+		
+		System.out.println();
+		System.out.println("----------------------- WEAPONS -----------------------");
+		System.out.println();
+		
+		for (WeaponSpecAPI spec : Global.getSettings().getAllWeaponSpecs()) {
+			if (spec.hasTag(Tags.RESTRICTED)) continue;
+			if (spec.hasTag(Tags.NO_SELL)) continue;
+			if (spec.getAIHints().contains(AIHints.SYSTEM)) continue;
+			String id = spec.getWeaponId();
+			int count = 0;
+			List<String> all = new ArrayList<String>();
+			for (FactionAPI f : factions) {
+				if (f.isPlayerFaction()) continue;
+				Float p = f.getWeaponSellFrequency().get(id);
+				if (p != null && p > 1f) {
+					count++;
+				}
+				if (f.knowsWeapon(id)) {
+					all.add(f.getId());
+				}
+			}
+			if (count <= 0) {
+				System.out.println("Weapon [" + id + "] is not sold with higher frequency; known by: [" + Misc.getAndJoined(all) + "]");
+			}
+		}
+		
+		
+		System.out.println();
+		System.out.println("----------------------- SHIPS -----------------------");
+		System.out.println();
+		
+		Map<String, String> oneFactionShips = new LinkedHashMap<String, String>();
+		for (ShipHullSpecAPI spec : Global.getSettings().getAllShipHullSpecs()) {
+			if (spec.hasTag(Tags.RESTRICTED)) continue;
+			if (spec.hasTag(Tags.NO_SELL)) continue;
+			if (spec.getHullSize() == HullSize.FIGHTER) continue;
+			String id = spec.getHullId();
+			if (id.endsWith("_default_D")) continue;
+			if (id.endsWith("_default_D")) continue;
+			if (id.startsWith("module_")) continue;
+			int count = 0;
+			String fId = null;
+			List<String> all = new ArrayList<String>();
+			for (FactionAPI f : factions) {
+				if (f.isPlayerFaction()) continue;
+				if (f.getKnownShips().contains(id)) {
+					count++;
+					fId = f.getId();
+					all.add(fId);
+				}
+			}
+//			if (count <= 0) {
+//				System.out.println("SHIP [" + id + "] IS NOT USED BY ANY FACTION");
+//			}
+			
+			if (count == 1) {
+				oneFactionShips.put(id, fId);
+			}
+			
+			if (count > 0) {
+				System.out.println("Ship [" + id + "] is known by: [" + Misc.getAndJoined(all) + "]");
+			}
+		}
+		
+//		System.out.println();
+//		
+//		for (String id : oneFactionShips.keySet()) {
+//			System.out.println("Ship [" + id + "] is only known by [" + oneFactionShips.get(id) + "]");
+//		}
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

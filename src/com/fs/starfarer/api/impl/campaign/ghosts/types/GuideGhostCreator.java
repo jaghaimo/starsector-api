@@ -48,7 +48,7 @@ public class GuideGhostCreator extends BaseSensorGhostCreator {
 				score += score;
 			}
 			
-			if (score > 0) {
+			if (score > 0 && system.getHyperspaceAnchor() != null) {
 				picker.add(system.getHyperspaceAnchor(), score);
 			}
 		}

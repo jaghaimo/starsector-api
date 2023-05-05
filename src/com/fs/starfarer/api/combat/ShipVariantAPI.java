@@ -181,6 +181,8 @@ public interface ShipVariantAPI {
 
 	boolean hasDMods();
 
+	LinkedHashSet<String> getSModdedBuiltIns();
+
 
 
 }

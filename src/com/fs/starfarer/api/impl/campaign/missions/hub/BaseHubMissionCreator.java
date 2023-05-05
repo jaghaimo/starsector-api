@@ -83,7 +83,7 @@ public class BaseHubMissionCreator implements HubMissionCreator {
 	
 	
 	public float getFrequencyWeight() {
-		return 10f;
+		return spec.getFreq();
 	}
 
 	public float getWasShownTimeoutDuration() {

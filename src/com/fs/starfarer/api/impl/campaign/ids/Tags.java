@@ -2,6 +2,15 @@ package com.fs.starfarer.api.impl.campaign.ids;
 
 public class Tags {
 	
+	/**
+	 * On fleet members and on variants.
+	 */
+	public static final String TAG_NO_AUTOFIT = "no_autofit";
+	public static final String TAG_AUTOMATED_NO_PENALTY = "no_auto_penalty";
+	public static final String TAG_RETAIN_SMODS_ON_RECOVERY = "retain_smods_on_recovery";
+	//public static final String NO_RESTORATION = "no_restoration";
+	
+	public static final String TAG_NO_AUTOFIT_UNLESS_PLAYER = "no_autofit_unless_player";
 	
 	/**
 	 * In ship_systems.csv, NOT on ships
@@ -23,6 +32,17 @@ public class Tags {
 	public static final String VARIANT_DO_NOT_DROP_AI_CORE_FROM_CAPTAIN = "no_ai_core_drop";
 	public static final String VARIANT_ALWAYS_RECOVERABLE = "always_recoverable";
 	public static final String VARIANT_UNBOARDABLE = "unboardable";
+	
+	
+	public static final String HULL_UNRESTORABLE = "unrestorable";
+	public static final String VARIANT_UNRESTORABLE = "unrestorable";
+	
+	
+	/**
+	 * Faster spawning for a not-a-real-ship just used to fire beams (and generate threat for the AI to respond to them).
+	 * Automatically added by createFXDrone(). 
+	 */
+	public static final String VARIANT_FX_DRONE = "fx_drone";
 
 	
 	
@@ -50,9 +70,14 @@ public class Tags {
 	 * Fighter wings with this tag can be installed on automated ships. 
 	 */
 	public static final String AUTOMATED_FIGHTER = "auto_fighter";
+	public static final String ONLY_ALLOW_AUTOMATED_FIGHTERS = "only_allow_automated_fighters";
+	
 	
 	public static final String NO_ENTITY_TOOLTIP = "no_entity_tooltip";  
 	
+	public static final String NO_TOPOGRAPHY_SCANS = "no_topography_scans";
+	
+	public static final String PK_SYSTEM = "pk_system";
 	public static final String SYSTEM_CUT_OFF_FROM_HYPER = "system_cut_off_from_hyper";
 	
 	public static final String THEME_HIDDEN = "theme_hidden";
@@ -82,6 +107,12 @@ public class Tags {
 	public static final String THEME_RUINS_MAIN = "theme_ruins_main";
 	public static final String THEME_RUINS_SECONDARY = "theme_ruins_secondary";
 	
+	/**
+	 * Marker meaning that this system should not be picked again for something special during procgen, like
+	 * the "Red Planet" mission.
+	 */
+	public static final String THEME_SPECIAL = "theme_special";
+	
 	public static final String THEME_DERELICT = "theme_derelict";
 	public static final String THEME_DERELICT_MOTHERSHIP = "theme_derelict_mothership";
 	public static final String THEME_DERELICT_CRYOSLEEPER = "theme_derelict_cryosleeper";
@@ -105,6 +136,7 @@ public class Tags {
 	//public static final String SALVAGE_ENTITY_NO_SALVAGE = "no_salvage";
 	
 	public static final String WEAPON_REMNANTS = "remnant";
+	public static final String SHIP_REMNANTS = "remnant";
 	
 	public static final String SHIP_CAN_NOT_SCUTTLE = "ship_can_not_scuttle";
 	public static final String SHIP_UNIQUE_SIGNATURE = "ship_unique_signature";
@@ -122,6 +154,8 @@ public class Tags {
 	public static final String MODULE_NO_STATUS_BAR = "module_no_status_bar";
 	public static final String MODULE_HULL_BAR_ONLY = "module_hull_bar_only";
 	
+	
+	public static final String HULLMOD_PHASE_BRAWLER = "phase_brawler";
 	
 	public static final String HULLMOD_NO_DROP = "no_drop";
 	public static final String HULLMOD_NO_DROP_SALVAGE = "no_drop_salvage";
@@ -162,6 +196,11 @@ public class Tags {
 	public static final String WING_ATTACK_AT_AN_ANGLE = "attack_at_an_angle";
 	public static final String WING_INDEPENDENT_OF_CARRIER = "independent_of_carrier";
 	public static final String WING_TARGET_ESCORT_TARGET = "target_escort_target";
+	
+	/**
+	 * Can apply to wing or to fighter's hull variant. 
+	 */
+	public static final String WING_STAY_IN_FRONT_OF_SHIP = "stay_in_front_of_ship";
 	
 	public static final String NO_DROP = "no_drop"; // general-purpose
 	public static final String NO_BP_DROP = "no_bp_drop"; // no blueprints dropped during raid
@@ -284,6 +323,7 @@ public class Tags {
 	public static final String INTEL_MILITARY = "Military";
 	public static final String INTEL_BEACON = "Warning beacons";
 	public static final String INTEL_GATES = "Gates";
+	public static final String INTEL_SHRINES = "Luddic shrines";
 	public static final String INTEL_COLONIES = "Colony threats";
 	public static final String INTEL_COMM_SNIFFERS = "Comm sniffers";
 	
@@ -307,6 +347,38 @@ public class Tags {
 	public static final String ZIG_GHOST = "zig_ghost";
 	
 	public static final String OMEGA = "omega";
+	
+	public static final String DAMAGE_SPECIAL = "damage_special";
+	public static final String DAMAGE_SOFT_FLUX = "damage_soft_flux";
+	
+	public static final String LIDAR = "lidar";
+	public static final String NOVA = "nova";
+	public static final String FIXED_RANGE = "fixed_range";
+	
+	public static final String FIRES_ONE_BURST = "fires_one_burst";
+	
+	public static final String KANTA_GIFT = "kanta_gift";
+	
+	public static final String LUDDIC_SHRINE = "luddic_shrine";
+	
+	
+	// MissileAutoloader
+	public static final String RELOAD_1PT = "reload_1pt";
+	public static final String RELOAD_1_AND_A_HALF_PT = "reload_1_and_a_half_pt";
+	public static final String RELOAD_2PT = "reload_2pt";
+	public static final String RELOAD_3PT = "reload_3pt";
+	public static final String RELOAD_4PT = "reload_4pt";
+	public static final String RELOAD_5PT = "reload_5pt";
+	public static final String RELOAD_6PT = "reload_6pt";
+	public static final String NO_RELOAD = "no_reload";
+	
+	
 }
+
+
+
+
+
+
 
 

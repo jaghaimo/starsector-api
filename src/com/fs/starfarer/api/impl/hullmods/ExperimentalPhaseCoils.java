@@ -17,10 +17,12 @@ public class ExperimentalPhaseCoils extends BaseHullMod {
 		return null;
 	}
 
-	@Override
-	public boolean affectsOPCosts() {
-		return true;
-	}
+	
+// ??? this seems unnecessary, commenting it out -am
+//	@Override
+//	public boolean affectsOPCosts() {
+//		return true;
+//	}
 
 }
 

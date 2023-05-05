@@ -44,4 +44,7 @@ public interface CharacterDataAPI {
 
 	void setSavefileVersion(String skillVersion);
 
+	String getHonorific();
+	void setHonorific(String honorific);
+
 }

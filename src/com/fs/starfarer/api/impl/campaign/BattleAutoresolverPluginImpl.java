@@ -15,9 +15,9 @@ import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.EncounterOption;
 import com.fs.starfarer.api.combat.DeployedFleetMemberAPI;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
+import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
-import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
@@ -27,7 +27,7 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class BattleAutoresolverPluginImpl implements BattleAutoresolverPlugin {
 
-	protected static class EngagementResultImpl implements EngagementResultAPI {
+	public static class EngagementResultImpl implements EngagementResultAPI {
 		protected BattleAPI battle;
 		protected EngagementResultForFleetImpl winnerResult, loserResult;
 		
@@ -74,7 +74,7 @@ public class BattleAutoresolverPluginImpl implements BattleAutoresolverPlugin {
 		}
 	}
 	
-	protected static class EngagementResultForFleetImpl implements EngagementResultForFleetAPI {
+	public static class EngagementResultForFleetImpl implements EngagementResultForFleetAPI {
 		protected CampaignFleetAPI fleet;
 		protected FleetGoal goal;
 		protected boolean winner = false;
@@ -133,7 +133,7 @@ public class BattleAutoresolverPluginImpl implements BattleAutoresolverPlugin {
 		}
 	}
 	
-	protected static enum FleetMemberBattleOutcome {
+	public static enum FleetMemberBattleOutcome {
 		UNSCATHED,
 		LIGHT_DAMAGE,
 		MEDIUM_DAMAGE,
@@ -141,19 +141,19 @@ public class BattleAutoresolverPluginImpl implements BattleAutoresolverPlugin {
 		DISABLED,
 	}
 	
-	protected static final class FleetMemberAutoresolveData {
-		protected FleetMemberAPI member;
-		protected float strength;
-		protected float shieldRatio;
-		protected boolean combatReady;
+	public static class FleetMemberAutoresolveData {
+		public FleetMemberAPI member;
+		public float strength;
+		public float shieldRatio;
+		public boolean combatReady;
 	}
 	
-	protected static final class FleetAutoresolveData {
-		protected CampaignFleetAPI fleet;
-		protected float fightingStrength;
-		protected List<FleetMemberAutoresolveData> members = new ArrayList<FleetMemberAutoresolveData>();
+	public static class FleetAutoresolveData {
+		public CampaignFleetAPI fleet;
+		public float fightingStrength;
+		public List<FleetMemberAutoresolveData> members = new ArrayList<FleetMemberAutoresolveData>();
 		
-		protected void report() {
+		public void report() {
 			if (!report) return;
 			
 			BattleAutoresolverPluginImpl.report(String.format("Fighting srength of %s: %f", fleet.getNameWithFaction(), fightingStrength));

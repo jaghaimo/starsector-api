@@ -173,5 +173,10 @@ public class PlayerActivityTracker {
 	public FleetStatsSnapshot getPlayerFleetStats() {
 		return playerFleetStats;
 	}
+
+	public Map<SubmarketAPI, PlayerTradeDataForSubmarket> getSubmarketTradeData() {
+		return submarketTradeData;
+	}
+	
 	
 }

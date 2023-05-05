@@ -402,7 +402,7 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 			float r = random.nextFloat();
 			if (r > 0.85f) {
 				num = 3;
-			} else if (num > 0.5f) {
+			} else if (r > 0.5f) {
 				num = 2;
 			}
 			
@@ -412,6 +412,7 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 				if (spec.isHidden()) continue;
 				if (spec.isHiddenEverywhere()) continue;
 				if (spec.hasTag(Tags.HULLMOD_DMOD)) continue;
+				if (spec.hasTag(Tags.HULLMOD_NO_BUILD_IN)) continue;
 				if (variant.getPermaMods().contains(spec.getId())) continue;
 				picker.add(id, spec.getCapitalCost());
 			}
@@ -650,10 +651,14 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 					
 					extra.sort();
 					playerFleet.getCargo().addAll(extra);
+					
+					
 					for (CargoStackAPI stack : extra.getStacksCopy()) {
 						AddRemoveCommodity.addStackGainText(stack, text);
 					}
 					clearExtraSalvage(entity);
+					
+					ListenerUtil.reportSpecialCargoGainedFromRecoveredDerelict(extra, dialog);
 					//addText("The recovery operation is finished without any further surprises.");
 				}
 				

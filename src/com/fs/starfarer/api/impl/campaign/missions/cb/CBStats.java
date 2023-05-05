@@ -15,7 +15,7 @@ public class CBStats {
 	public static float DEFAULT_DAYS = 120;
 	public static float REMNANT_STATION_DAYS = 365;
 	public static float ENEMY_STATION_DAYS = 365;
-	public static float REMNANT_PLUS_DAYS = 365;
+	public static float REMNANT_PLUS_DAYS = 0; // no time limit
 	
 	// offer frequency
 	public static float PATHER_FREQ = 0.5f;

@@ -155,6 +155,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		public float defenderStr;
 		
 		public boolean nonMarket = false;
+		public boolean secret = false;
 		
 		public RaidType raidType = null;
 		public BombardType bombardType = null;
@@ -578,7 +579,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		
 		options.addOption(engageText, ENGAGE);
 		
-		
+		temp.secret = false;
 		temp.canRaid = ongoingBattle || hasOtherButInsignificant || (hasNonStation && !otherWantsToFight) || !hasNonStation;
 		temp.canBombard = (hasOtherButInsignificant || (hasNonStation && !otherWantsToFight) || !hasNonStation) && !hasStation;
 		//temp.canSurpriseRaid = Misc.getDaysSinceLastRaided(market) < SURPRISE_RAID_TIMEOUT;
@@ -1649,6 +1650,8 @@ public class MarketCMD extends BaseCommandPlugin {
 			return;
 		}
 		
+		temp.secret = secret;
+		
 //		if (temp.raidType == RaidType.VALUABLE) {
 //			dialog.getVisualPanel().showImagePortion("illustrations", "raid_valuables_result", 640, 400, 0, 0, 480, 300);
 //		} else if (temp.raidType == RaidType.DISRUPT) {
@@ -1665,9 +1668,10 @@ public class MarketCMD extends BaseCommandPlugin {
 		addMilitaryResponse();
 		
 		
-		if (market != null) {
-			applyDefenderIncreaseFromRaid(market);
-		}
+		// if done here, increases marine casualties from this raid - move it down later
+//		if (market != null) {
+//			applyDefenderIncreaseFromRaid(market);
+//		}
 		
 		setRaidCooldown(getRaidCooldownMax());
 
@@ -1796,6 +1800,10 @@ public class MarketCMD extends BaseCommandPlugin {
 				withContinue = true;
 				break;
 			}
+		}
+		
+		if (market != null) {
+			applyDefenderIncreaseFromRaid(market);
 		}
 		
 //		if (market.getMemoryWithoutUpdate().getBoolean("$raid_showContinueBeforeResult"))

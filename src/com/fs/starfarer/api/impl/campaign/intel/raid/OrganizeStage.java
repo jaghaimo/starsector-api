@@ -13,17 +13,20 @@ public class OrganizeStage extends BaseRaidStage {
 	
 	protected MarketAPI market;
 	protected IntervalUtil interval = new IntervalUtil(0.1f, 0.2f);
+	protected boolean wasMilitary = false;
 	
 	public OrganizeStage(RaidIntel raid, MarketAPI market, float durDays) {
 		super(raid);
 		this.market = market;
 		this.maxDays = durDays;
+		
+		wasMilitary = market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY);
 	}
 	
 	
 	public void advance(float amount) {
 		if (status == RaidStageStatus.ONGOING && 
-				(!market.isInEconomy() || !market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY))) {
+				(!market.isInEconomy() || (!market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_MILITARY) && wasMilitary))) {
 			abort();
 			return;
 		}

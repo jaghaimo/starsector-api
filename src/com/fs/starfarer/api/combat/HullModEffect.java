@@ -38,7 +38,7 @@ public interface HullModEffect {
 	String getUnapplicableReason(ShipAPI ship);
 	
 	/**
-	 * ship may be null from autofit.
+	 * Ship may be null from autofit.
 	 * @param ship
 	 * @param marketOrNull
 	 * @param mode
@@ -114,6 +114,20 @@ public interface HullModEffect {
 	 * @return
 	 */
 	int getDisplayCategoryIndex();
+	
+	boolean hasSModEffectSection(HullSize hullSize, ShipAPI ship, boolean isForModSpec);
+	void addSModSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec, boolean isForBuildInList);
+	void addSModEffectSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width,
+			boolean isForModSpec, boolean isForBuildInList);
+	boolean hasSModEffect();
+	
+	String getSModDescriptionParam(int index, HullSize hullSize);
+	String getSModDescriptionParam(int index, HullSize hullSize, ShipAPI ship);
+	
+	float getTooltipWidth();
+	boolean isSModEffectAPenalty();
+	
+	boolean showInRefitScreenModPickerFor(ShipAPI ship);
 }
 
 

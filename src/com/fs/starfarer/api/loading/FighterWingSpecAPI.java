@@ -52,6 +52,8 @@ public interface FighterWingSpecAPI {
 	void setOpCost(float opCost);
 	float getOpCost(MutableShipStatsAPI shipStats);
 	void resetAutofitPriorityCategories();
+	float getRange();
+	void setRange(float range);
 
 }
 

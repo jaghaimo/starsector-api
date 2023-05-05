@@ -49,6 +49,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 	protected float duration;
 	protected FactionAPI faction;
 	protected int playerCargoCap = 0;
+	protected int playerFuelCap = 0;
 	
 	protected DestinationData data;
 	
@@ -94,6 +95,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 		//if (this.market == market) return;
 		if (this.market != market) {
 			playerCargoCap = 0;
+			playerFuelCap = 0;
 		}
 		
 		this.market = market;
@@ -237,6 +239,9 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 		
 		CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();
 		quantity = (int) cargo.getMaxCapacity();
+		if (pick.com.isFuel()) {
+			quantity = (int) cargo.getMaxFuel();
+		}
 		
 		if (random.nextFloat() < PROB_HIGHER_CAPACITY) {
 			quantity *= 1f + random.nextFloat() * 3f;
@@ -244,13 +249,19 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 		}
 		
 		// don't want mission at market to update quantity as player changes their fleet up
-		if (playerCargoCap == 0) {
-			playerCargoCap = quantity;
+		if (pick.com.isFuel()) {
+			if (playerFuelCap == 0) {
+				playerFuelCap = quantity;
+			} else {
+				quantity = playerFuelCap;
+			}
 		} else {
-			quantity = playerCargoCap;
+			if (playerCargoCap == 0) {
+				playerCargoCap = quantity;
+			} else {
+				quantity = playerCargoCap;
+			}
 		}
-		
-		if (pick.com.isFuel()) quantity = (int) cargo.getMaxFuel();
 		
 		quantity *= 0.5f + 0.25f * random.nextFloat();
 		

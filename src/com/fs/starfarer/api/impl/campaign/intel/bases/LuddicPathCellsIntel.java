@@ -36,6 +36,7 @@ import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
+import com.fs.starfarer.api.impl.campaign.rulecmd.HA_CMD;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -143,6 +144,16 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		return result;
 	}
 	
+	public static LuddicPathCellsIntel getCellsForMarket(MarketAPI market) {
+		if (market == null) return null;
+		List<IntelInfoPlugin> cells = Global.getSector().getIntelManager().getIntel(LuddicPathCellsIntel.class);
+		for (IntelInfoPlugin curr : cells) {
+			LuddicPathCellsIntel intel = (LuddicPathCellsIntel) curr;
+			if (intel.getMarket() == market) return intel;
+		}
+		return null;
+	}
+	
 	
 	public MarketAPI getMarket() {
 		return market;
@@ -206,7 +217,10 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 			return;
 		}
 		
-		if (sleeper) return;
+		if (isSleeper()) return;
+		
+		// incidents handled through HostileActivityEventIntel now
+		if (true) return;
 		
 		if (DebugFlags.PATHER_BASE_DEBUG) {
 			days *= 200f;
@@ -318,7 +332,7 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		Color h = Misc.getHighlightColor();
 		float opad = 10f;
 		
-		info.addSectionHeading("Pather Interest", getFactionForUIColors().getBaseUIColor(),
+		info.addSectionHeading("Pather interest", getFactionForUIColors().getBaseUIColor(),
 				  getFactionForUIColors().getDarkUIColor(), Alignment.MID, opad);
 		
 		info.addPara("The following activity is attracting Pather interest, whether due to AI core use or the inherent nature of the industry:", opad);
@@ -398,8 +412,13 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		} else {
 			info.addPara("There are active Luddic Path cells " +
 					market.getOnOrAt() + " " + market.getName() + ".", opad);
+//			info.addPara("They are engaged in planning acts of terror and industrial sabotage, but " +
+//					"need material support - smuggled in from the nearest Pather base - to carry them off."
+//					+ " The cells also provide intel to Pather fleets operating in-system.", opad);
 			info.addPara("They are engaged in planning acts of terror and industrial sabotage, but " +
-					"need material support - smuggled in from the nearest Pather base - to carry them off.", opad);
+					"are unlikely to carry them off unless the overal level of hostile activity in the system "
+					+ "provides sufficient cover."
+					+ " The cells also provide intel to Pather fleets operating in-system.", opad);
 			
 			if (sleeperTimeout > 0) {
 				int daysNum = (int) Math.round(sleeperTimeout);
@@ -421,7 +440,7 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 					}
 					
 					info.addPara("If the base is destroyed, it will take some time to organize " +
-							"support from another base.", opad);
+							"support from another base, and both ground and fleet operations will be disrupted.", opad);
 				} 
 			}
 		}
@@ -432,8 +451,11 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 			
 			if (!isSleeper()) {
 				float stability = LuddicPathCells.STABLITY_PENALTY;
-				info.addPara("%s stability. Possibility of various acts of terror and sabotage, " +
-						"if smugglers from a Luddic Path base are able to provide material support.", 
+//				info.addPara("%s stability. Possibility of various acts of terror and sabotage, " +
+//						"if smugglers from a Luddic Path base are able to provide material support.", 
+//						opad, h,
+//						"-" + (int)stability);
+				info.addPara("%s stability.", 
 						opad, h,
 						"-" + (int)stability);
 			} else {
@@ -614,6 +636,11 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 	}
 
 	public boolean isSleeper() {
+		if (Factions.PLAYER.equals(market.getFactionId())) {
+			if (HA_CMD.playerHasPatherAgreement()) {
+				return true;
+			}
+		}
 		return sleeper;
 	}
 

@@ -23,6 +23,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.Objectives;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.plugins.BuildObjectiveTypePicker;
@@ -43,7 +44,7 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 		EXTREME(0.8f),
 		;
 		
-		private static LocationDanger [] vals = values();
+		public static LocationDanger [] vals = values();
 		
 		public float enemyStrengthFraction;
 		private LocationDanger(float enemyStrengthFraction) {
@@ -437,6 +438,15 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 			seen.add(target.getFactionId());
 			enemyStr += WarSimScript.getFactionStrength(target.getFaction(), system);
 		}
+		
+		if (faction.isPlayerFaction()) {
+			HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+			//HostileActivityIntel intel = HostileActivityIntel.get(system);
+			if (intel != null) {
+				enemyStr += intel.getVeryApproximateFPStrength(system);
+			}
+		}
+		
 		return enemyStr;
 	}
 	

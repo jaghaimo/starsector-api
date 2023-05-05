@@ -41,4 +41,12 @@ public interface CombatUIAPI {
 	void reFanOutShipInfo();
 
 	void hideShipInfo();
+
+	boolean areWeaponArcsOn();
+
+	List<ShipAPI> getAllTargetReticleTargets();
+	ShipAPI getMainTargetReticleTarget();
+
+	boolean isStrafeToggledOn();
+	void setStrafeToggledOn(boolean strafeToggledOn);
 }

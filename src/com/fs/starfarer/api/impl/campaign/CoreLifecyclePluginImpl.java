@@ -35,6 +35,7 @@ import com.fs.starfarer.api.campaign.econ.MonthlyReport.FDNode;
 import com.fs.starfarer.api.campaign.events.CampaignEventTarget;
 import com.fs.starfarer.api.campaign.listeners.CoreDiscoverEntityPlugin;
 import com.fs.starfarer.api.campaign.listeners.ListenerManagerAPI;
+import com.fs.starfarer.api.campaign.listeners.TestIndustryOptionProvider;
 import com.fs.starfarer.api.characters.AdminData;
 import com.fs.starfarer.api.characters.ImportantPeopleAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
@@ -186,6 +187,8 @@ import com.fs.starfarer.api.impl.campaign.fleets.PatrolAssignmentAIV4;
 import com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManager.PatrolFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.PatrolFleetManagerV2;
+import com.fs.starfarer.api.impl.campaign.fleets.PersonalFleetHoracioCaden;
+import com.fs.starfarer.api.impl.campaign.fleets.PersonalFleetOxanaHyder;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.OptionalFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData;
@@ -194,6 +197,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteSegment;
 import com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager.SeededFleet;
 import com.fs.starfarer.api.impl.campaign.fleets.SourceBasedFleetManager;
+import com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.ghosts.SensorGhostManager;
 import com.fs.starfarer.api.impl.campaign.graid.StandardGroundRaidObjectivesCreator;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
@@ -213,6 +217,8 @@ import com.fs.starfarer.api.impl.campaign.intel.AnalyzeEntityMissionIntel;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel;
 import com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.MissionResult;
+import com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel;
+import com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel.RepChangeData;
 import com.fs.starfarer.api.impl.campaign.intel.FactionHostilityIntel;
 import com.fs.starfarer.api.impl.campaign.intel.FactionHostilityManager;
 import com.fs.starfarer.api.impl.campaign.intel.GenericMissionManager;
@@ -247,6 +253,7 @@ import com.fs.starfarer.api.impl.campaign.intel.bar.events.QuartermasterCargoSwa
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.QuartermasterCargoSwapBarEventCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreBarEventCreator;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.ScientistAICoreIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.SpecBarEventCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanBarEventCreator;
@@ -260,6 +267,7 @@ import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBa
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.ShipBlueprintOfferCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.SpecialItemOfferCreator;
+import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.WeaponBlueprintOffer;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.WeaponBlueprintOfferCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseManager;
@@ -275,26 +283,46 @@ import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivIntel;
 import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker;
 import com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker.MarketDecivData;
+import com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.EventStageData;
+import com.fs.starfarer.api.impl.campaign.intel.events.CommerceBountyManager;
+import com.fs.starfarer.api.impl.campaign.intel.events.DisposableHostileActivityFleetManager;
+import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityManager;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTFactorTracker;
 import com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionManager;
 import com.fs.starfarer.api.impl.campaign.intel.misc.BreadcrumbIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.DistressCallIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.GateIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.LuddicShrineIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.ProductionReportIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.TradeFleetDepartureIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager.PunExData;
+import com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel;
 import com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter;
+import com.fs.starfarer.api.impl.campaign.missions.academy.GAAtTheGates;
+import com.fs.starfarer.api.impl.campaign.missions.academy.GATransverseJump;
 import com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty;
 import com.fs.starfarer.api.impl.campaign.missions.cb.BaseCustomBounty.AggregateBountyData;
 import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission;
+import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.DefeatTriggerAdded;
+import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.ImportanceData;
 import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.StageConnection;
+import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.StageData;
+import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMission.VariableSet;
 import com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMissionCreator;
 import com.fs.starfarer.api.impl.campaign.missions.hub.BaseMissionHub;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionBarEventWrapper;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers;
+import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.MakeNonStoryCriticalAction;
+import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.SetFleetFlagAction;
+import com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetAutoDespawn;
 import com.fs.starfarer.api.impl.campaign.missions.hub.MissionTrigger;
+import com.fs.starfarer.api.impl.campaign.missions.hub.TriggerFleetAssignmentAI;
+import com.fs.starfarer.api.impl.campaign.plog.OfficerSkillGainRecord;
 import com.fs.starfarer.api.impl.campaign.plog.PLStatCargo;
 import com.fs.starfarer.api.impl.campaign.plog.PLStatColonies;
 import com.fs.starfarer.api.impl.campaign.plog.PLStatCredits;
@@ -306,11 +334,13 @@ import com.fs.starfarer.api.impl.campaign.plog.PLStatMarines;
 import com.fs.starfarer.api.impl.campaign.plog.PLStatSupplies;
 import com.fs.starfarer.api.impl.campaign.plog.PLTextEntry;
 import com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog;
+import com.fs.starfarer.api.impl.campaign.plog.SModRecord;
 import com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride;
 import com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.OmegaOfficerGeneratorPlugin;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.PKDefenderPluginImpl;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantSeededFleetManager;
@@ -335,6 +365,7 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SleeperPodsSpe
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SleeperPodsSpecial.SleeperSpecialType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialType;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TopographicDataSpecial.TopographicDataSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial.TransmitterTrapSpecialData;
 import com.fs.starfarer.api.impl.campaign.shared.CommodityStatTracker.CommodityStats;
 import com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket;
@@ -389,10 +420,15 @@ import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent.Tutorial
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.impl.campaign.velfield.BoundingBox;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager.AddedStream;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager.StreamData;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamParams2;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamSegment;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamVisibilityManager;
 import com.fs.starfarer.api.impl.campaign.world.TTBlackSite;
+import com.fs.starfarer.api.impl.campaign.world.TTBlackSite.ZigFIDConfig;
+import com.fs.starfarer.api.impl.campaign.world.ZigLeashAssignmentAI;
 import com.fs.starfarer.api.loading.CampaignPingSpec;
 import com.fs.starfarer.api.plugins.impl.CoreBuildObjectiveTypePicker;
 import com.fs.starfarer.api.util.DelayedActionScript;
@@ -478,6 +514,11 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				}
 			}
 		}
+		for (String id : new ArrayList<String>(faction.getDoctrine().getOfficerSkills())) {
+			if (Global.getSettings().getSkillSpec(id) == null) {
+				throw new RuntimeException("Officer skill with id [" + id + "] not found for faction [" + faction.getId() + "]");
+			}
+		}
 	}
 	
 	protected void addScriptsIfNeeded() {
@@ -486,7 +527,13 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		
 		SectorAPI sector = Global.getSector();
 		
+		
 		ListenerManagerAPI listeners = sector.getListenerManager();
+		
+		if (Global.getSettings().isDevMode()) {
+			listeners.addListener(new TestIndustryOptionProvider(), true);
+		}
+		
 		if (!listeners.hasListenerOfClass(StandardGroundRaidObjectivesCreator.class)) {
 			listeners.addListener(new StandardGroundRaidObjectivesCreator(), true);
 		}
@@ -497,8 +544,19 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		if (!listeners.hasListenerOfClass(CoronalTapFactor.class)) {
 			listeners.addListener(new CoronalTapFactor(), true);
 		}
+		if (!listeners.hasListenerOfClass(SlipstreamVisibilityManager.class)) {
+			listeners.addListener(new SlipstreamVisibilityManager(), true);
+		}
+		
+//		if (!sector.hasScript(SlipstreamVisibilityManager.class)) {
+//		sector.addScript(new SlipstreamVisibilityManager());
+//	}
+
 		
 		GenericPluginManagerAPI plugins = sector.getGenericPlugins();
+		if (!plugins.hasPlugin(PKDefenderPluginImpl.class)) {
+			plugins.addPlugin(new PKDefenderPluginImpl(), true);
+		}
 		if (!plugins.hasPlugin(SalvageDefenderModificationPluginImpl.class)) {
 			plugins.addPlugin(new SalvageDefenderModificationPluginImpl(), true);
 		}
@@ -527,6 +585,18 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		PlayerFleetPersonnelTracker.getInstance();
 		
 		
+		if (!sector.hasScript(PersonalFleetHoracioCaden.class)) {
+			sector.addScript(new PersonalFleetHoracioCaden());
+		}
+		if (!sector.hasScript(PersonalFleetOxanaHyder.class)) {
+			sector.addScript(new PersonalFleetOxanaHyder());
+		}
+//		if (!sector.hasScript(PilgrimageFleetRouteManager.class)) {
+//			sector.addScript(new PilgrimageFleetRouteManager());
+//		}
+		if (!sector.hasScript(MiscFleetRouteManager.class)) {
+			sector.addScript(new MiscFleetRouteManager());
+		}
 		if (!sector.hasScript(EncounterManager.class)) {
 			sector.addScript(new EncounterManager());
 		}
@@ -572,6 +642,19 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 			sector.addScript(new DecivTracker());
 		}
 		
+		if (!sector.hasScript(DisposableHostileActivityFleetManager.class)) {
+			sector.addScript(new DisposableHostileActivityFleetManager());
+		}
+		if (!sector.hasScript(HostileActivityManager.class)) {
+			sector.addScript(new HostileActivityManager());
+		}
+		if (!sector.hasScript(HTFactorTracker.class)) {
+			sector.addScript(new HTFactorTracker());
+		}
+		if (!sector.hasScript(CommerceBountyManager.class)) {
+			sector.addScript(new CommerceBountyManager());
+		}
+		
 		if (!sector.hasScript(FactionHostilityManager.class)) {
 			sector.addScript(new FactionHostilityManager());
 			
@@ -608,6 +691,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		sector.getListenerManager().addListener(new SkillsChangeRemoveVentsCapsEffect(), true);
 		sector.getListenerManager().addListener(new SkillsChangeRemoveSmodsEffect(), true);
 		sector.getListenerManager().addListener(new SkillsChangeOfficerEffect(), true);
+
 	}
 	
 	protected void addBarEvents() {
@@ -797,6 +881,12 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 			}
 		}
 		
+		MarketAPI umbra = Global.getSector().getEconomy().getMarket("umbra");
+		if (umbra != null && umbra.hasIndustry(Industries.SPACEPORT)) {
+			umbra.getIndustry(Industries.SPACEPORT).setImproved(true);
+		}
+		
+		
 		createInitialPeople();
 		
 		addScriptsIfNeeded();
@@ -804,6 +894,8 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		updateKnownPlanets();
 		
 		markStoryCriticalMarketsEtc();
+		
+		tagLuddicShrines();
 		
 //		Global.getSector().getStarSystem("hybrasil").getLocation().set(-10000, -10000);
 //		Global.getSector().getHyperspace().updateAllOrbits();
@@ -837,7 +929,43 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		Misc.makeStoryCritical("epiphany", id);
 		Misc.makeStoryCritical("fikenhild", id);
 		Misc.makeStoryCritical("kantas_den", id);
+		
+		id = Missions.THE_USURPERS;
+		Misc.makeStoryCritical("sindria", id);
+		Misc.makeStoryCritical("volturn", id);
+		Misc.makeStoryCritical("umbra", id);
+		
+		id = Missions.PILGRIMS_PATH;
+		Misc.makeStoryCritical("jangala", id);
+		Misc.makeStoryCritical("hesperus", id);
+		Misc.makeStoryCritical("gilead", id);
+		Misc.makeStoryCritical("volturn", id);
+		
+		id = Missions.KNIGHT_ERRANT;
+		Misc.makeStoryCritical("gilead", id);
+		Misc.makeStoryCritical("chalcedon", id);
+		Misc.makeStoryCritical("mazalot", id);
+		
 		//Misc.makeStoryCritical("new_maxios", id);
+	}
+	
+	public void tagLuddicShrines() {
+		// for LPP missions (and general interest, I'm sure.)
+		Global.getSector().getEconomy().getMarket("volturn").addTag(Tags.LUDDIC_SHRINE);
+		Global.getSector().getEconomy().getMarket("hesperus").addTag(Tags.LUDDIC_SHRINE);
+		Global.getSector().getEconomy().getMarket("gilead").addTag(Tags.LUDDIC_SHRINE);
+		Global.getSector().getEconomy().getMarket("jangala").addTag(Tags.LUDDIC_SHRINE);
+		
+		SectorEntityToken beholderStation = Global.getSector().getEntityById("beholder_station");
+		if (beholderStation != null) {
+			beholderStation.addTag(Tags.LUDDIC_SHRINE);
+		}
+		
+		SectorEntityToken killa = Global.getSector().getEntityById("killa");
+		if (killa != null) {
+			killa.addTag(Tags.LUDDIC_SHRINE);
+		}
+				 
 	}
 	
 //	protected void addBaseBlueprints() {
@@ -1445,7 +1573,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		}
 		
 		int size = market.getSize();
-		if (size <= 4) return;
+		//if (size <= 4) return;
 		
 		int industries = 0;
 		
@@ -1556,6 +1684,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.aliasAttribute(SlipstreamSegment.class, "bMult", "m");
 		x.aliasAttribute(SlipstreamSegment.class, "discovered", "d");
 		x.aliasAttribute(SlipstreamSegment.class, "fader", "f");
+		
 		
 		x.alias("SlipTP2", SlipstreamTerrainPlugin2.class);
 		x.aliasAttribute(SlipstreamTerrainPlugin2.class, "params", "p");
@@ -2311,6 +2440,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		
 		x.alias("BaseGenericPlugin", BaseGenericPlugin.class);
 		x.alias("SalvageDefenderModificationPluginImpl", SalvageDefenderModificationPluginImpl.class);
+		x.alias("PKDefenderPluginImpl", PKDefenderPluginImpl.class);
 		
 		x.alias("CampaignPingSpec", CampaignPingSpec.class);
 		x.aliasAttribute(CampaignPingSpec.class, "id", "id");
@@ -2723,6 +2853,91 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.alias("AdminData", AdminData.class);
 		x.alias("FieldRepairsScript", FieldRepairsScript.class);
 		x.alias("CommSnifferIntel", CommSnifferIntel.class);
+		
+		
+		
+		x.alias("PersonalFleetHoracioCaden", PersonalFleetHoracioCaden.class);
+		x.alias("PersonalFleetOxanaHyder", PersonalFleetOxanaHyder.class);
+		x.alias("MiscFleetRouteManager", MiscFleetRouteManager.class);
+		x.alias("EncounterManager", EncounterManager.class);
+		
+		x.alias("AddedStream", AddedStream.class);
+		x.aliasAttribute(AddedStream.class, "terrain", "tn");
+		x.aliasAttribute(AddedStream.class, "plugin", "p");
+		x.aliasAttribute(AddedStream.class, "from", "f");
+		x.aliasAttribute(AddedStream.class, "to", "t");
+		x.aliasAttribute(AddedStream.class, "control", "c");
+		x.aliasAttribute(AddedStream.class, "timestamp", "ts");
+		
+		
+		x.alias("FactionCommissionIntel", FactionCommissionIntel.class);
+		x.alias("FCI-RepChangeData", RepChangeData.class);
+		
+		x.alias("WeaponBlueprintOffer", WeaponBlueprintOffer.class);
+		x.alias("HostileActivityEventIntel", HostileActivityEventIntel.class);
+		x.alias("ScientistAICoreIntel", ScientistAICoreIntel.class);
+		x.alias("GAAtTheGates", GAAtTheGates.class);
+		x.alias("GATransverseJump", GATransverseJump.class);
+		x.alias("LuddicShrineIntel", LuddicShrineIntel.class);
+		x.alias("HyperspaceTopographyEventIntel", LuddicShrineIntel.class);
+		x.alias("DisposableHostileActivityFleetManager", DisposableHostileActivityFleetManager.class);
+		
+		x.alias("TopographicDataSpecialData", TopographicDataSpecialData.class);
+		x.aliasAttribute(TopographicDataSpecialData.class, "points", "p");
+		
+		x.alias("ZigLeashAssignmentAI", ZigLeashAssignmentAI.class);
+		x.alias("ZigFIDConfig", ZigFIDConfig.class);
+		
+		x.alias("ShipQuality", ShipQuality.class);
+		
+		x.alias("TriggerFleetAssignmentAI", TriggerFleetAssignmentAI.class);
+		x.alias("MissionFleetAutoDespawn", MissionFleetAutoDespawn.class);
+		x.alias("BHM-DefeatTriggerAdded", DefeatTriggerAdded.class);
+		x.alias("BHM-MakeNonStoryCriticalAction", MakeNonStoryCriticalAction.class);
+		x.alias("BHM-SetFleetFlagAction", SetFleetFlagAction.class);
+		x.alias("BHM-StageData", StageData.class);
+		x.alias("BHM-ImportanceData", ImportanceData.class);
+		
+		x.alias("BHM-VS", VariableSet.class);
+		
+		x.alias("BaseEventIntel", BaseEventIntel.class);
+		
+		x.alias("BEI-EventStageData", EventStageData.class);
+//		x.aliasAttribute(EventStageData.class, "id", "");
+//		x.aliasAttribute(EventStageData.class, "progress", "");
+//		x.aliasAttribute(EventStageData.class, "isOneOffEvent", "");
+//		x.aliasAttribute(EventStageData.class, "wasEverReached", "");
+//		x.aliasAttribute(EventStageData.class, "isRepeatable", "");
+//		x.aliasAttribute(EventStageData.class, "sendIntelUpdateOnReaching", "");
+//		x.aliasAttribute(EventStageData.class, "hideIconWhenPastStageUnlessLastActive", "");
+//		x.aliasAttribute(EventStageData.class, "keepIconBrightWhenLaterStageReached", "");
+//		x.aliasAttribute(EventStageData.class, "iconSize", "");
+//		x.aliasAttribute(EventStageData.class, "randomized", "");
+//		x.aliasAttribute(EventStageData.class, "randomType", "");
+//		x.aliasAttribute(EventStageData.class, "progressToResetAt", "");
+//		x.aliasAttribute(EventStageData.class, "progressToRollAt", "");
+//		x.aliasAttribute(EventStageData.class, "rollData", "");
+		
+		x.alias("OSGRec", OfficerSkillGainRecord.class);
+		x.aliasAttribute(OfficerSkillGainRecord.class, "personId", "p");
+		x.aliasAttribute(OfficerSkillGainRecord.class, "skillId", "s");
+		x.aliasAttribute(OfficerSkillGainRecord.class, "elite", "e");
+		
+		x.alias("SModRec", SModRecord.class);
+		x.aliasAttribute(SModRecord.class, "member", "m");
+		x.aliasAttribute(SModRecord.class, "smods", "sm");
+		x.aliasAttribute(SModRecord.class, "spSpent", "sp");
+		x.aliasAttribute(SModRecord.class, "bonusXPFractionGained", "bxp");
+		x.aliasAttribute(SModRecord.class, "timestamp", "ts");
+
+		
+		x.alias("RouteFleetAssignmentAI", RouteFleetAssignmentAI.class);
+		x.alias("RaidIntel", RaidIntel.class);
+		x.alias("SlipstreamManager-StreamData", StreamData.class);
+		
+		
+		//x.alias("AddedStream", AddedStream.class);
+		//x.aliasAttribute(BaseHubMissionCreator.class, "", "");
 		
 	}
 

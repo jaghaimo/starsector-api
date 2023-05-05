@@ -98,9 +98,11 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
+import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.ShipCommand;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
@@ -154,6 +156,7 @@ import com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain.TileParams;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin.DebrisFieldParams;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.MagneticFieldTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.NebulaTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
@@ -172,6 +175,16 @@ import sun.nio.ch.DirectBuffer;
 
 
 public class Misc {
+	
+	public static boolean CAN_SMOD_BUILT_IN = true;
+	
+	public static String SIR = "Sir";
+	public static String MAAM = "Ma'am";
+	public static String CAPTAIN = "Captain";
+	
+	
+	public static float FLUX_PER_CAPACITOR = Global.getSettings().getFloat("fluxPerCapacitor");
+	public static float DISSIPATION_PER_VENT = Global.getSettings().getFloat("dissipationPerVent");
 	
 	private static boolean cbMode = Global.getSettings().getBoolean("colorblindMode");
 	
@@ -285,6 +298,15 @@ public class Misc {
 				string = this.string;
 			}
 			return string;
+		}
+		
+		public Object getObject(Map<String, MemoryAPI> memoryMap) {
+			Object o = null;
+			if (isVariable()) {
+				VarAndMemory var = getVarNameAndMemory(memoryMap);
+				o = var.memory.get(var.name);
+			}
+			return o;
 		}
 		
 		public boolean getBoolean(Map<String, MemoryAPI> memoryMap) {
@@ -642,6 +664,14 @@ public class Misc {
 		}
 	}
 	
+	public static String getRoundedValueOneAfterDecimalIfNotWhole(float value) {
+		if (Math.abs((float)Math.round(value) - value) < 0.0001f) {
+			return String.format("%d", (int) Math.round(value));
+		} else {
+			return String.format("%.1f", value);
+		}
+	}
+	
 	
 
 	public static float logOfBase(float base, float num) {
@@ -721,6 +751,9 @@ public class Misc {
 		return event;
 	}
 	
+	public static Color getStoryDarkBrigherColor() {
+		return setAlpha(scaleColorOnly(getStoryOptionColor(), 0.65f), 255);
+	}
 	public static Color getStoryDarkColor() {
 		return setAlpha(scaleColorOnly(getStoryOptionColor(), 0.4f), 175);
 	}
@@ -841,11 +874,17 @@ public class Misc {
 			result = result.substring(0, result.length() - 2);
 		}
 		if (strings.length > 2) {
-			//result += ", and " + strings[strings.length - 1];
-			result += ", " + joiner + " " + strings[strings.length - 1];
+			if (joiner.isEmpty()) {
+				result += ", " + strings[strings.length - 1];
+			} else {
+				result += ", " + joiner + " " + strings[strings.length - 1];
+			}
 		} else if (strings.length == 2) {
-			//result += " and " + strings[strings.length - 1];
-			result += " " + joiner + " " + strings[strings.length - 1];
+			if (joiner.isEmpty()) {
+				result += ", " + strings[strings.length - 1];
+			} else {
+				result += " " + joiner + " " + strings[strings.length - 1];
+			}
 		}
 		return result;
 	}
@@ -933,6 +972,21 @@ public class Misc {
 			}
 		}
 		return result;
+	}
+	
+	public static List<StarSystemAPI> getPlayerSystems(boolean includeNonPlayerFaction) {
+		return getSystemsWithPlayerColonies(includeNonPlayerFaction);
+	}
+	public static List<StarSystemAPI> getSystemsWithPlayerColonies(boolean includeNonPlayerFaction) {
+		List<MarketAPI> markets = Misc.getPlayerMarkets(includeNonPlayerFaction);
+		List<StarSystemAPI> systems = new ArrayList<StarSystemAPI>();
+		for (MarketAPI market : markets) {
+			StarSystemAPI system = market.getStarSystem();
+			if (system != null && !systems.contains(system)) {
+				systems.add(system);
+			}
+		}
+		return systems;
 	}
 	
 	public static List<MarketAPI> getFactionMarkets(String factionId) {
@@ -2187,6 +2241,18 @@ public class Misc {
 		return null;
 	}
 	
+	public static MagneticFieldTerrainPlugin getMagneticFieldFor(PlanetAPI planet) {
+		if (planet == null || planet.getContainingLocation() == null) return null;
+		
+		for (CampaignTerrainAPI curr : planet.getContainingLocation().getTerrainCopy()) {
+			if (curr.getPlugin() instanceof MagneticFieldTerrainPlugin) {
+				MagneticFieldTerrainPlugin field = (MagneticFieldTerrainPlugin) curr.getPlugin();
+				if (field.getRelatedEntity() == planet) return field;
+			}
+		}
+		return null;
+	}
+	
 	public static PulsarBeamTerrainPlugin getPulsarFor(PlanetAPI star) {
 		for (CampaignTerrainAPI curr : star.getContainingLocation().getTerrainCopy()) {
 			if (curr.getPlugin() instanceof PulsarBeamTerrainPlugin) {
@@ -2338,6 +2404,46 @@ public class Misc {
 		return new Color(arr.getInt(0), arr.getInt(1), arr.getInt(2), arr.getInt(3));
 	}
 	
+	public static Vector2f getVector(JSONObject json, String arrayKey, Vector2f def) throws JSONException {
+		if (!json.has(arrayKey)) return def;
+		return getVector(json, arrayKey);
+	}
+	public static Vector2f getVector(JSONObject json, String arrayKey) throws JSONException {
+		Vector2f v = new Vector2f();
+		JSONArray arr = json.getJSONArray(arrayKey);
+		v.set((float) arr.getDouble(0), (float) arr.getDouble(1));
+		return v;
+	}
+	
+	public static Vector3f getVector3f(JSONObject json, String arrayKey) throws JSONException {
+		Vector3f v = new Vector3f();
+		JSONArray arr = json.getJSONArray(arrayKey);
+		v.set((float) arr.getDouble(0), (float) arr.getDouble(1), (float) arr.getDouble(1));
+		return v;
+	}
+	
+	public static Vector2f optVector(JSONObject json, String arrayKey) {
+		Vector2f v = new Vector2f();
+		JSONArray arr = json.optJSONArray(arrayKey);
+		if (arr == null) return null;
+		v.set((float) arr.optDouble(0), (float) arr.optDouble(1));
+		return v;
+	}
+	
+	public static Vector3f optVector3f(JSONObject json, String arrayKey) throws JSONException {
+		Vector3f v = new Vector3f();
+		JSONArray arr = json.optJSONArray(arrayKey);
+		if (arr == null) return new Vector3f();
+		v.set((float) arr.getDouble(0), (float) arr.getDouble(1), (float) arr.getDouble(2));
+		return v;
+	}	
+	
+	public static Vector2f getVector(JSONObject json, String arrayKey, int index) throws JSONException {
+		Vector2f v = new Vector2f();
+		JSONArray arr = json.getJSONArray(arrayKey);
+		v.set((float) arr.getDouble(index * 2 + 0), (float) arr.getDouble(index * 2 + 1));
+		return v;
+	}	
 	
 	public static void normalizeNoise(float[][] noise) {
 		float minNoise = 1;
@@ -2996,7 +3102,6 @@ public class Misc {
 		if (member.getVariant().hasTag(Tags.VARIANT_ALWAYS_RECOVERABLE)) {
 			return true;
 		}
-		
 		Random rand = new Random(1000000 * member.getId().hashCode() + Global.getSector().getPlayerBattleSeed());
 		//rand = new Random();
 		float chance = Global.getSettings().getFloat("baseShipRecoveryChance");
@@ -3014,7 +3119,11 @@ public class Misc {
 		
 		if (chance < 0) chance = 0;
 		if (chance > 1f) chance = 1f;
-		return rand.nextFloat() < chance;
+		boolean recoverable = rand.nextFloat() < chance; 
+		
+//		System.out.println("Recovery for " + member.getHullSpec().getHullId() + 
+//				"(" + member.getId().hashCode() + "): " + chance + " (" + recoverable + ")");
+		return recoverable;
 	}
 
 //	public static float computeDetectionRangeForEntity(float radius) {
@@ -4172,6 +4281,15 @@ public class Misc {
 		return fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.FLEET_BUSY);
 	}
 	
+	public static SectorEntityToken getStationEntity(MarketAPI market, CampaignFleetAPI fleet) {
+		for (SectorEntityToken entity : market.getConnectedEntities()) {
+			if (entity.hasTag(Tags.STATION)) {
+				CampaignFleetAPI curr = getStationFleet(entity);
+				if (curr != null && curr == fleet) return entity;
+			}
+		}
+		return null;
+	}
 	public static CampaignFleetAPI getStationFleet(MarketAPI market) {
 		for (SectorEntityToken entity : market.getConnectedEntities()) {
 			if (entity.hasTag(Tags.STATION)) {
@@ -4486,7 +4604,8 @@ public class Misc {
 		}
 		
 		if (withQuality) {
-			str *= Math.max(0.25f, 0.5f + quality);
+			//str *= Math.max(0.25f, 0.5f + quality);
+			str *= Math.max(0.25f, 0.8f + quality * 0.4f);
 		}
 		if (withHull) {
 			str *= 0.5f + 0.5f * member.getStatus().getHullFraction();
@@ -5106,39 +5225,40 @@ public class Misc {
 
 	
 	public static float getBuildInBonusXP(HullModSpecAPI mod, HullSize size) {
-		float threshold = Global.getSettings().getBonusXP("permModNoBonusXPOPThreshold");
-		
-		float cost = 0f;
-		switch (size) {
-		case CAPITAL_SHIP:
-			//fraction = Global.getSettings().getBonusXP("permModCaptial");
-			cost = mod.getCapitalCost();
-			break;
-		case CRUISER:
-			//fraction = Global.getSettings().getBonusXP("permModCruiser");
-			cost = mod.getCruiserCost();
-			break;
-		case DESTROYER:
-			//fraction = Global.getSettings().getBonusXP("permModDestroyer");
-			cost = mod.getDestroyerCost();
-			break;
-		case FRIGATE:
-			//fraction = Global.getSettings().getBonusXP("permModFrigate");
-			cost = mod.getFrigateCost();
-			break;
-		}
-		
-		float max = Global.getSettings().getBonusXP("permModMaxBonusXP");
+		//float threshold = Global.getSettings().getBonusXP("permModNoBonusXPOPThreshold");
 		
 		float fraction = 0f;
-		if (threshold > 0) {
-			fraction = max * (1f - cost / threshold);
-			if (fraction < 0f) fraction = 0f;
-			if (fraction > 1f) fraction = 1f;
+		//float cost = 0f;
+		switch (size) {
+		case CAPITAL_SHIP:
+			fraction = Global.getSettings().getBonusXP("permModCaptial");
+			//cost = mod.getCapitalCost();
+			break;
+		case CRUISER:
+			fraction = Global.getSettings().getBonusXP("permModCruiser");
+			//cost = mod.getCruiserCost();
+			break;
+		case DESTROYER:
+			fraction = Global.getSettings().getBonusXP("permModDestroyer");
+			//cost = mod.getDestroyerCost();
+			break;
+		case FRIGATE:
+			fraction = Global.getSettings().getBonusXP("permModFrigate");
+			//cost = mod.getFrigateCost();
+			break;
 		}
 		
-		MutableCharacterStatsAPI stats = Global.getSector().getPlayerStats();
-		fraction += stats.getDynamic().getMod(Stats.BUILD_IN_BONUS_XP_MOD).computeEffective(0);
+		//float max = Global.getSettings().getBonusXP("permModMaxBonusXP");
+		
+//		float fraction = 0f;
+//		if (threshold > 0) {
+//			fraction = max * (1f - cost / threshold);
+//			if (fraction < 0f) fraction = 0f;
+//			if (fraction > 1f) fraction = 1f;
+//		}
+		
+//		MutableCharacterStatsAPI stats = Global.getSector().getPlayerStats();
+//		fraction += stats.getDynamic().getMod(Stats.BUILD_IN_BONUS_XP_MOD).computeEffective(0);
 		if (fraction < 0f) fraction = 0f;
 		if (fraction > 1f) fraction = 1f;
 		return fraction;
@@ -5159,6 +5279,9 @@ public class Misc {
 	}
 	
 	public static boolean isSpecialMod(ShipVariantAPI variant, HullModSpecAPI spec) {
+//		if (spec.getId().equals(HullMods.ANDRADA_MODS)) {
+//			return true;fwewefwefe
+//		}
 		if (spec.isHidden()) return false;
 		if (spec.isHiddenEverywhere()) return false;
 		if (spec.hasTag(Tags.HULLMOD_DMOD)) return false;
@@ -5169,6 +5292,22 @@ public class Misc {
 		return true;
 	}
 	
+	public static boolean hasSModdableBuiltIns(ShipVariantAPI variant) {
+		if (!CAN_SMOD_BUILT_IN || variant == null) return false;
+		int num = 0;
+		for (String id : variant.getHullMods()) {
+			HullModSpecAPI spec = Global.getSettings().getHullModSpec(id);
+			if (spec.isHidden()) continue;
+			if (spec.isHiddenEverywhere()) continue;
+			if (spec.hasTag(Tags.HULLMOD_DMOD)) continue;
+			if (variant.getHullSpec().isBuiltInMod(id) &&
+					spec.getEffect().hasSModEffect() && !spec.getEffect().isSModEffectAPenalty() &&
+					!variant.getSModdedBuiltIns().contains(id)) {
+				num++;
+			}
+		}
+		return num > 0;
+	}
 	public static int getCurrSpecialMods(ShipVariantAPI variant) {
 		if (variant == null) return 0;
 		int num = 0;
@@ -6064,6 +6203,105 @@ public class Misc {
 //		if (storage != null)
 //			((StoragePlugin)storage.getPlugin()).setPlayerPaidToUnlock(true);
 //	}
+	
+
+	public static boolean turnTowardsPointV2(MissileAPI missile, Vector2f point, float angVel) {
+		float desiredFacing = getAngleInDegrees(missile.getLocation(), point);
+		return turnTowardsFacingV2(missile, desiredFacing, angVel);
+	}
+	
+	public static boolean turnTowardsFacingV2(MissileAPI missile, float desiredFacing, float relativeAngVel) {		
+		
+		float turnVel = missile.getAngularVelocity() - relativeAngVel;
+		float absTurnVel = Math.abs(turnVel);
+		
+		float turnDecel = missile.getEngineController().getTurnDeceleration();
+		// v t - 0.5 a t t = dist
+		// dv = a t;  t = v / a
+		float decelTime = absTurnVel / turnDecel; 
+		float decelDistance = absTurnVel * decelTime - 0.5f * turnDecel * decelTime * decelTime;
+		
+		float facingAfterNaturalDecel = missile.getFacing() + Math.signum(turnVel) * decelDistance;
+		float diffWithEventualFacing = getAngleDiff(facingAfterNaturalDecel, desiredFacing);
+		float diffWithCurrFacing = getAngleDiff(missile.getFacing(), desiredFacing);
+		
+		if (diffWithEventualFacing > 1f) {
+			float turnDir = getClosestTurnDirection(missile.getFacing(), desiredFacing);
+			if (Math.signum(turnVel) == Math.signum(turnDir)) {
+				if (decelDistance > diffWithCurrFacing) {
+					turnDir = -turnDir;
+				}
+			}
+			if (turnDir < 0) {
+				missile.giveCommand(ShipCommand.TURN_RIGHT);
+			} else if (turnDir >= 0) {
+				missile.giveCommand(ShipCommand.TURN_LEFT);
+			} else {
+				return false;
+			}
+		}
+		return false;
+	}
+	
+	public static int getUntrustwortyCount() {
+		int count = Global.getSector().getPlayerMemoryWithoutUpdate().getInt(MemFlags.PLAYER_UNTRUSTWORTHY);
+		return count;
+	}
+	
+	public static void incrUntrustwortyCount() {
+		int count = getUntrustwortyCount();
+		Global.getSector().getPlayerMemoryWithoutUpdate().set(MemFlags.PLAYER_UNTRUSTWORTHY, count + 1);
+	}
+	
+	public static void adjustRep(PersonAPI person, float delta, TextPanelAPI text) {
+		adjustRep(person, delta, null, text);
+	}
+	public static void adjustRep(PersonAPI person, float delta, RepLevel limit, TextPanelAPI text) {
+		CustomRepImpact impact = new CustomRepImpact();
+		impact.delta = delta;
+		if (limit != null) {
+			impact.limit = limit;
+		}
+		Global.getSector().adjustPlayerReputation(
+				new RepActionEnvelope(RepActions.CUSTOM, 
+						impact, null, text, true, true),
+						person);
+	}
+	
+	public static void adjustRep(String factionId, float delta, TextPanelAPI text) {
+		adjustRep(factionId, delta, null, text);
+	}
+	public static void adjustRep(String factionId, float delta, RepLevel limit, TextPanelAPI text) {
+		CustomRepImpact impact = new CustomRepImpact();
+		impact.delta = delta;
+		if (limit != null) {
+			impact.limit = limit;
+		}
+		Global.getSector().adjustPlayerReputation(
+				new RepActionEnvelope(RepActions.CUSTOM, 
+						impact, null, text, true, true),
+				factionId);
+	}
+	
+	public static String getHullSizeStr(HullSize size) {
+		switch (size) {
+		case CAPITAL_SHIP: return "Capital";
+		case CRUISER: return "Cruiser";
+		case DESTROYER: return "Destroyer";
+		case FIGHTER: return "Fighter";
+		case FRIGATE: return "Frigate";
+		}
+		return "Unknown";
+	}
+	
+	public static float getColorDist(Color one, Color two) {
+		float r = Math.abs(one.getRed() - two.getRed());
+		float g = Math.abs(one.getGreen() - two.getGreen());
+		float b = Math.abs(one.getBlue() - two.getBlue());
+		float a = Math.abs(one.getAlpha() - two.getAlpha());
+		
+		return (float) Math.sqrt(r * r + g * g + b * b + a * a);
+	}
 }
 
 

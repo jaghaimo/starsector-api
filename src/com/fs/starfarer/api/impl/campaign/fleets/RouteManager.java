@@ -491,7 +491,10 @@ public class RouteManager implements FleetEventListener {
 		return addRoute(source, market, seed, extra, spawner, null);
 	}
 	
-	public void removeRote(RouteData route) {
+	@Deprecated public void removeRote(RouteData route) {
+		removeRoute(route);
+	}
+	public void removeRoute(RouteData route) {
 		routes.remove(route);
 		removeFromMap(route);
 	}

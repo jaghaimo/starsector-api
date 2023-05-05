@@ -32,4 +32,15 @@ public class Planets {
 	public static final String PLANET_WATER = "water";
 	public static final String PLANET_TERRAN = "terran";
 	public static final String PLANET_TERRAN_ECCENTRIC = "terran-eccentric";
+	
+	
+	
+	public static final String BARREN = "barren";
+	public static final String BARREN_CASTIRON = "barren_castiron";
+	public static final String BARREN2 = "barren2";
+	public static final String BARREN3 = "barren3";
+	public static final String BARREN_VENUSLIKE = "barren_venuslike";
+	
+	
+	
 }

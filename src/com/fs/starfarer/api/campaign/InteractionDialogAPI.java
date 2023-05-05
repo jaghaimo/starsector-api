@@ -86,6 +86,7 @@ public interface InteractionDialogAPI {
 						List<Industry> industries, IndustryPickerListener listener);
 	
 	void makeOptionOpenCore(String optionId, CoreUITabId tabId, CoreUITradeMode mode);
+	void makeOptionOpenCore(String optionId, CoreUITabId tabId, CoreUITradeMode mode, boolean onlyShowTargetTabShortcut);
 	
 	void setOptionColor(Object optionId, Color color);
 	void makeStoryOption(Object optionId, int storyPoints, float bonusXPFraction, String soundId);
@@ -105,6 +106,7 @@ public interface InteractionDialogAPI {
 	void showCustomVisualDialog(float customPanelWidth, float customPanelHeight, CustomVisualDialogDelegate delegate);
 	void showCargoPickerDialog(String title, String okText, String cancelText, boolean small, float textPanelWidth,
 			float width, float height, CargoAPI cargo, CargoPickerListener listener);
+
 }
 
 

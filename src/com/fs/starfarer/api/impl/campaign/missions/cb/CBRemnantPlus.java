@@ -26,6 +26,7 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class CBRemnantPlus extends BaseCustomBountyCreator {
 
+	public static String ACCEPTED_KEY = "$CBRemnantPlus_accepted";
 	public static float PROB_IN_SYSTEM_WITH_BASE = 0.5f;
 	
 	@Override
@@ -35,7 +36,15 @@ public class CBRemnantPlus extends BaseCustomBountyCreator {
 	
 	@Override
 	public float getFrequency(HubMissionWithBarEvent mission, int difficulty) {
+		boolean wasEverAccepted = Global.getSector().getMemoryWithoutUpdate().getBoolean(ACCEPTED_KEY);
+		if (wasEverAccepted) return 0f;
 		return super.getFrequency(mission, difficulty) * CBStats.REMNANT_PLUS_FREQ;
+	}
+	
+	@Override
+	public void notifyAccepted(MarketAPI createdAt, HubMissionWithBarEvent mission, CustomBountyData data) {
+		//mission.setNoAbandon();
+		Global.getSector().getMemoryWithoutUpdate().set(ACCEPTED_KEY, true);
 	}
 	
 	@Override

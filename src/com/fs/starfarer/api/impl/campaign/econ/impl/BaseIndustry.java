@@ -26,6 +26,7 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI.MarketInteractionMode;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.campaign.econ.MutableCommodityQuantity;
 import com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
@@ -1267,6 +1268,8 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 				//addAICoreSection(tooltip, AICoreDescriptionMode.TOOLTIP);
 				addInstalledItemsSection(mode, tooltip, expanded);
 				addImprovedSection(mode, tooltip, expanded);
+				
+				ListenerUtil.addToIndustryTooltip(this, mode, tooltip, getTooltipWidth(), expanded);
 			}
 			
 			tooltip.addPara("*Shown production and demand values are already adjusted based on current market size and local conditions.", gray, opad);
@@ -1382,6 +1385,8 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			addBetaCoreDescription(tooltip, mode);
 		} else if (gamma) {
 			addGammaCoreDescription(tooltip, mode);
+		} else {
+			addUnknownCoreDescription(coreId, tooltip, mode);
 		}
 	}
 	
@@ -1454,6 +1459,29 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 //				"" + (int)((1f - UPKEEP_MULT) * 100f) + "%");
 		tooltip.addPara(pre + "Reduces demand by %s unit.", opad, highlight,
 				"" + DEMAND_REDUCTION);
+	}
+	
+	protected void addUnknownCoreDescription(String coreId, TooltipMakerAPI tooltip, AICoreDescriptionMode mode) {
+		
+		CommoditySpecAPI core = Global.getSettings().getCommoditySpec(coreId);
+		if (core == null) return;
+		
+		float opad = 10f;
+		Color highlight = Misc.getHighlightColor();
+		
+		String pre = core.getName() + " currently assigned. ";
+		if (mode == AICoreDescriptionMode.MANAGE_CORE_DIALOG_LIST || mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP) {
+			pre = core.getName() + ". ";
+		}
+		
+		if (mode == AICoreDescriptionMode.INDUSTRY_TOOLTIP || mode == AICoreDescriptionMode.MANAGE_CORE_TOOLTIP) {
+			TooltipMakerAPI text = tooltip.beginImageWithText(core.getIconName(), 48);
+			text.addPara(pre + "No effect.", opad);
+			tooltip.addImageWithText(opad);
+			return;
+		}
+		
+		tooltip.addPara(pre + "No effect.", opad);
 	}
 	
 	

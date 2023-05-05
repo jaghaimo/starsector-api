@@ -66,7 +66,9 @@ public class DModManager {
 		//int original = getNumDMods(variant);
 		if (random == null) random = new Random();
 		
-		
+//		if (own) {
+//			System.out.println("323ffwe");
+//		}
 		DModAdderParams params = new DModAdderParams();
 		params.variant = variant;
 		params.destroyed = destroyed;
@@ -126,7 +128,11 @@ public class DModManager {
 		reduceNextDmodsBy = 0;
 		if (recoverer != null) {
 			int extra = (int) recoverer.getStats().getDynamic().getValue(Stats.SHIP_DMOD_REDUCTION, 0);
-			extra = random.nextInt(reduction + 1);
+			if (extra >= 0) {
+				extra = random.nextInt(extra + 1);
+			} else {
+				extra = -1 * random.nextInt(-extra + 1);
+			}
 			reduction += extra;
 		}
 		
@@ -240,9 +246,11 @@ public class DModManager {
 	}
 	
 
+	public static boolean assumeAllShipsAreAutomated = false;
 
 	public static void removeUnsuitedMods(ShipVariantAPI variant, List<HullModSpecAPI> mods) {
 		boolean auto = variant.hasHullMod(HullMods.AUTOMATED);
+		if (assumeAllShipsAreAutomated) auto = true;
 		boolean civ = variant.getHullSpec().getHints().contains(ShipTypeHints.CIVILIAN);
 		//boolean phase = variant.getHullSpec().getDefenseType() == ShieldType.PHASE;
 		boolean phase = variant.getHullSpec().isPhase();

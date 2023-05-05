@@ -22,8 +22,8 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.DModManager;
-import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.VariantSource;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
@@ -320,11 +320,20 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 		int memberIndex = 0;
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 			
-			if (!forceAutofit && member.getHullSpec().hasTag(Items.TAG_NO_AUTOFIT)) {
+			if (!forceAutofit && member.getHullSpec().hasTag(Tags.TAG_NO_AUTOFIT)) {
 				continue;
 			}
-			if (!forceAutofit && member.getVariant() != null && member.getVariant().hasTag(Items.TAG_NO_AUTOFIT)) {
+			if (!forceAutofit && member.getVariant() != null && member.getVariant().hasTag(Tags.TAG_NO_AUTOFIT)) {
 				continue;
+			}
+			
+			if (!faction.isPlayerFaction()) {
+				if (!forceAutofit && member.getHullSpec().hasTag(Tags.TAG_NO_AUTOFIT_UNLESS_PLAYER)) {
+					continue;
+				}
+				if (!forceAutofit && member.getVariant() != null && member.getVariant().hasTag(Tags.TAG_NO_AUTOFIT_UNLESS_PLAYER)) {
+					continue;
+				}
 			}
 			
 			// need this so that when reinflating a fleet that lost members, the members reinflate consistently
@@ -498,6 +507,8 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 		fleet.getFleetData().setSyncNeeded();
 		fleet.getFleetData().syncIfNeeded();
 		
+		// handled in the method that calls inflate()
+		//ListenerUtil.reportFleetInflated(fleet, this);
 	}
 	
 	public static int getNumDModsToAdd(ShipVariantAPI variant, float averageDMods, Random random) {

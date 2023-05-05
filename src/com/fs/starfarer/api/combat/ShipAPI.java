@@ -171,7 +171,7 @@ public interface ShipAPI extends CombatEntityAPI {
 	
 	
 	/**
-	 * All weapons every disabled during the last battle.
+	 * All weapons ever disabled during the last battle.
 	 * @return
 	 */
 	Set<WeaponAPI> getDisabledWeapons();
@@ -696,6 +696,30 @@ public interface ShipAPI extends CombatEntityAPI {
 
 
 	float getExtraAlphaMult2();
+
+
+	void setDrone(boolean isDrone);
+
+
+	CombatEngineLayers getLayer();
+	void setLayer(CombatEngineLayers layer);
+
+
+	boolean isForceHideFFOverlay();
+	void setForceHideFFOverlay(boolean forceHideFFOverlay);
+
+
+	Set<String> getTags();
+	void addTag(String tag);
+	boolean hasTag(String tag);
+
+
+	void setSprite(SpriteAPI sprite);
+
+
+	float getPeakTimeRemaining();
+
+	EnumSet<CombatEngineLayers> getActiveLayers();
 
 }
 

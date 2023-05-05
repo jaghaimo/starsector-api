@@ -11,6 +11,7 @@ import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCells;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager;
+import com.fs.starfarer.api.util.Misc;
 
 /**
  * Adds the following types of fleets:
@@ -93,6 +94,15 @@ public class DisposableLuddicPathFleetManager extends DisposableFleetManager {
 	protected CampaignFleetAPI spawnFleetImpl() {
 		StarSystemAPI system = currSpawnLoc;
 		if (system == null) return null;
+		
+		CampaignFleetAPI player = Global.getSector().getPlayerFleet();
+		if (player == null) return null;
+		
+		int num = Misc.getMarketsInLocation(system).size();
+		if (Misc.getMarketsInLocation(system, Factions.PLAYER).size() == num && num > 0) { 
+			return null; // handled by HostileActivityIntel, DisposableHostileActivityFleetManager, etc
+		}
+		
 		
 		String fleetType = FleetTypes.PATROL_SMALL;
 

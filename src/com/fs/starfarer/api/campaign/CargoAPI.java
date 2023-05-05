@@ -175,7 +175,12 @@ public interface CargoAPI {
 
 	FleetDataAPI getFleetData();
 
-	void updateSpaceUsed();	
+	void updateSpaceUsed();
+
+	void removeFighters(String id, int count);
+
+	boolean isUnlimitedStacks();
+	void setUnlimitedStacks(boolean unlimitedStacks);	
 }
 
 

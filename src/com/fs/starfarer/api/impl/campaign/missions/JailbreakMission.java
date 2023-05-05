@@ -165,6 +165,9 @@ public class JailbreakMission extends HubMissionWithBarEvent {
 		set("$jabr_systemName", market.getStarSystem().getNameWithLowercaseTypeShort());
 		set("$jabr_marketName", market.getName());
 		set("$jabr_marketOnOrAt", market.getOnOrAt());
+		set("$jabr_marketFactionArticle", market.getFaction().getPersonNamePrefixAOrAn());
+		set("$jabr_marketFaction", market.getFaction().getPersonNamePrefix());
+		set("$jabr_factionColor",  market.getFaction().getBaseUIColor());
 		set("$jabr_dist", getDistanceLY(market));
 		
 		set("$jabr_danger", danger);

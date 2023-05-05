@@ -553,7 +553,7 @@ public class SalvageEntity extends BaseCommandPlugin {
 		}
 		
 		if (debris != null) {
-			text.addParagraph("The density of the debris field affects both the amount resources and the number of rare items found.");
+			text.addParagraph("The density of the debris field affects both the amount of resources and the number of rare items found.");
 		} else {
 			text.addPara("The recovery effectiveness does not affect the chance of finding rare and valuable items.");
 		}

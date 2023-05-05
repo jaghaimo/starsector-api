@@ -307,7 +307,7 @@ public class GAFindingCoureuse extends GABaseMission {
 		}
 		
 		if (currentStage == Stage.INVESTIGATE_FIKENHILD) {
-			info.addPara("Talk to contacs on Fikenhild associated with Scylla Coureuse to find a lead to her current location -"
+			info.addPara("Talk to contacts on Fikenhild associated with Scylla Coureuse to find a lead to her current location -"
 					+ " or attract the attention of someone who knows where she is.", opad);
 			//info.addPara(getGoTalkToPersonText(arroyo) + ". He has a relationship with Provost Baird that "
 			//		+ "can be leveraged to compel his cooperation.", opad);
@@ -336,7 +336,7 @@ public class GAFindingCoureuse extends GABaseMission {
 			return true;
 		} else if (currentStage == Stage.INVESTIGATE_FIKENHILD) {
 			
-			info.addPara("Talk to associates of Scylla Coureuse on Fikenhild to find a lead to her location -"
+			info.addPara("Talk to associates of Scylla Coureuse on Fikenhild to find a lead to her location"
 					+ " or attract attention from someone who knows where she is", tc, pad);
 			return true;
 		} else if (currentStage == Stage.FOLLOW_THE_EXPERIMENTS) {

@@ -31,6 +31,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTPoints;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.AddedEntity;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.StarSystemData;
@@ -44,6 +45,7 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SleeperPodsSpe
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SleeperPodsSpecial.SleeperSpecialType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialType;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TopographicDataSpecial.TopographicDataSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial.TransmitterTrapSpecialData;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin;
 import com.fs.starfarer.api.util.Misc;
@@ -122,6 +124,7 @@ public class SalvageSpecialAssigner {
 		picker.add(new CargoManifestSpecialCreator(random, valuableCargo, c * 0.25f, c * 0.5f), 10f);
 		picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 5f);
 		picker.add(new BlueprintSpecialCreator(random), 1f);
+		picker.add(new TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.LOW_MAX), 1f);
 		
 		SpecialCreator pick = picker.pick();
 		SpecialCreationContext context = new SpecialCreationContext();
@@ -151,6 +154,7 @@ public class SalvageSpecialAssigner {
 		picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 10f);
 		picker.add(new BreadcrumbSpecialCreator(random, null), 10f);
 		picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 25), 10f);
+		picker.add(new TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.LOW_MAX), 5f);
 		
 		SpecialCreator pick = picker.pick();
 		
@@ -296,6 +300,7 @@ public class SalvageSpecialAssigner {
 			
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_LARGE, trapFactions, 
 					(int)(10 + 30 * sizeMult), (int)(10 + 30 * sizeMult)), 10f);
+			picker.add(new TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.HIGH_MAX), 3f);
 			
 			// text for these is not set up to handle the "planet" case
 			//picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 20f);
@@ -325,6 +330,7 @@ public class SalvageSpecialAssigner {
 			picker.add(new CargoManifestSpecialCreator(random, valuableCargo, c * 0.25f, c * 0.5f), 10f);
 			picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 10f);
 			picker.add(new BreadcrumbSpecialCreator(random, context.all), 10f);
+			picker.add(new TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.LOW_MAX), 5f);
 			
 			if (entity.getOrbit() != null) {
 				picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 25), 10f);
@@ -350,6 +356,7 @@ public class SalvageSpecialAssigner {
 			picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK_NOT_SYSTEM), 10f);
 			picker.add(new BreadcrumbSpecialCreator(random, context.all), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 25), 10f);
+			picker.add(new TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.LOW_MAX), 1f);
 		}
 		
 		if (Entities.STATION_MINING_REMNANT.equals(type) || Entities.STATION_MINING.equals(type)) {
@@ -364,6 +371,7 @@ public class SalvageSpecialAssigner {
 			picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 20f);
 			picker.add(new BreadcrumbSpecialCreator(random, context.all), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_MEDIUM, trapFactions, 10, 16), 10f);
+			picker.add(new TopographicDataSpecialCreator(random, HTPoints.MEDIUM_MIN, HTPoints.MEDIUM_MAX), 1f);
 		}
 		
 		if (Entities.STATION_RESEARCH_REMNANT.equals(type) || Entities.STATION_RESEARCH.equals(type)) {
@@ -378,6 +386,7 @@ public class SalvageSpecialAssigner {
 			picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 10f);
 			picker.add(new BreadcrumbSpecialCreator(random, context.all), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_MEDIUM, trapFactions, 10, 16), 20f);
+			picker.add(new TopographicDataSpecialCreator(random, HTPoints.HIGH_MIN, HTPoints.HIGH_MAX), 10f);
 		}
 		
 		if (Entities.ORBITAL_HABITAT_REMNANT.equals(type) || Entities.ORBITAL_HABITAT.equals(type)) {
@@ -392,6 +401,7 @@ public class SalvageSpecialAssigner {
 			picker.add(new SurveyDataSpecialCreator(random, SurveyDataSpecialType.AUTO_PICK), 5f);
 			picker.add(new BreadcrumbSpecialCreator(random, context.all), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_MEDIUM, trapFactions, 10, 16), 10f);
+			picker.add(new TopographicDataSpecialCreator(random, HTPoints.MEDIUM_MIN, HTPoints.MEDIUM_MAX), 2f);
 		}
 		
 		
@@ -445,6 +455,7 @@ public class SalvageSpecialAssigner {
 			picker.add(new SleeperPodsSpecialCreator(random, SleeperSpecialType.ADMIN, 1, 5, officerFactions), 0.2f);
 			picker.add(new CargoManifestSpecialCreator(random, industryCargo, 10, 30), 10f);
 			picker.add(new TransmitterTrapSpecialCreator(random, 0.5f, FleetTypes.PATROL_SMALL, trapFactions, 4, 8), 10f);
+			picker.add(new TopographicDataSpecialCreator(random, HTPoints.LOW_MIN, HTPoints.LOW_MAX), 1f);
 		}
 		
 		List<String> equipmentSmall = Arrays.asList(Entities.EQUIPMENT_CACHE_SMALL);
@@ -744,6 +755,25 @@ public class SalvageSpecialAssigner {
 	}
 	
 	
+	public static class TopographicDataSpecialCreator implements SpecialCreator {
+		private Random random;
+		private int min;
+		private int max;
+		
+		public TopographicDataSpecialCreator(Random random, int min, int max) {
+			if (min < 1) min = 1;
+			if (max < 1) max = 1;
+			this.random = random;
+			this.min = (int) min;
+			this.max = (int) max;
+		}
+		
+		public Object createSpecial(SectorEntityToken entity, SpecialCreationContext context) {
+			int points = min + random.nextInt(max - min + 1);
+			TopographicDataSpecialData data = new TopographicDataSpecialData(points);
+			return data;
+		}
+	}
 	public static class CargoManifestSpecialCreator implements SpecialCreator {
 		private Random random;
 		private SurveyDataSpecialType type;

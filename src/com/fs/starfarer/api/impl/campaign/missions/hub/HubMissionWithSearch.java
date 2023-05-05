@@ -1530,6 +1530,7 @@ public abstract class HubMissionWithSearch extends HubMissionWithTriggers {
 	}
 	
 	protected void findMatchingSystems() {
+		requireSystemTags(ReqMode.NOT_ANY, Tags.THEME_HIDDEN);
 		search.matchingSystems = new ArrayList<StarSystemAPI>();
 		search.preferredSystems = new ArrayList<StarSystemAPI>();
 		findMatching(search.systemReqs, search.systemPrefs, Global.getSector().getStarSystems(),
@@ -1685,6 +1686,7 @@ public abstract class HubMissionWithSearch extends HubMissionWithTriggers {
 				if (entity instanceof AsteroidAPI) continue;
 				if (entity.hasTag(Tags.EXPIRES)) continue;
 				if (entity.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
+				//if (!(entity.getCustomPlugin() instanceof DerelictShipEntityPlugin)) continue;
 				inMatchingSystems.add(entity);
 			}
 		}

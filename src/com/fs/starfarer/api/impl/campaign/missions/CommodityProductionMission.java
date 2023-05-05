@@ -18,6 +18,7 @@ import com.fs.starfarer.api.campaign.econ.MonthlyReport.FDNode;
 import com.fs.starfarer.api.campaign.listeners.EconomyTickListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
@@ -183,6 +184,13 @@ public class CommodityProductionMission extends HubMissionWithBarEvent implement
 		}
 		//commodityId = Commodities.VOLATILES;
 		if (commodityId == null) return false;
+		
+		if (commodityId.equals(Commodities.ORGANS)) {
+			needed = Math.min(3, needed);
+		}
+		if (commodityId.equals(Commodities.DRUGS)) {
+			needed = Math.min(6, needed);
+		}
 		
 		variation = commoditiesPlayerIsNotProducing.getItems().contains(commodityId) ? 
 								Variation.NOT_PRODUCING : Variation.PRODUCING_ALREADY;

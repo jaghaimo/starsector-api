@@ -45,4 +45,6 @@ public interface FactionDoctrineAPI {
 	int getTotalStrengthPoints();
 	boolean isStrictComposition();
 	void setStrictComposition(boolean strictComposition);
+	float getOfficerSkillsShuffleProbability();
+	List<String> getOfficerSkills();
 }

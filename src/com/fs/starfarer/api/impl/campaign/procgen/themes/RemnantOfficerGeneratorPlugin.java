@@ -242,11 +242,17 @@ public class RemnantOfficerGeneratorPlugin extends BaseGenerateFleetOfficersPlug
 //				person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 0);
 //			}
 //		} else {
-			if (person.getStats().getSkillLevel(Skills.ENERGY_WEAPON_MASTERY) <= 0) {
-				person.getStats().setSkillLevel(Skills.ENERGY_WEAPON_MASTERY, 2);
+			if (member.getHullSpec() != null && member.getHullSpec().hasTag(Factions.DERELICT) &&
+					person.getStats().getSkillLevel(Skills.BALLISTIC_MASTERY) <= 0) {
+				person.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 2);
 			} else {
-				person.getStats().setSkillLevel(Skills.MISSILE_SPECIALIZATION, 2);
+				if (person.getStats().getSkillLevel(Skills.ENERGY_WEAPON_MASTERY) <= 0) {
+					person.getStats().setSkillLevel(Skills.ENERGY_WEAPON_MASTERY, 2);
+				} else {
+					person.getStats().setSkillLevel(Skills.MISSILE_SPECIALIZATION, 2);
+				}
 			}
+			
 			if (member.isCapital() || member.isStation()) {
 				if (person.getStats().getSkillLevel(Skills.POLARIZED_ARMOR) <= 0) {
 					person.getStats().setSkillLevel(Skills.COMBAT_ENDURANCE, 0);

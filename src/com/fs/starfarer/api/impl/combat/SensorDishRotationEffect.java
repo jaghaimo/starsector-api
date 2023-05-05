@@ -20,7 +20,7 @@ public class SensorDishRotationEffect implements EveryFrameWeaponEffectPlugin {
 			currDir = -currDir;
 		}
 		
-		weapon.setCurrAngle(curr);
+		weapon.setFacing(curr);
 	}
 
 	public static boolean isBetween(float one, float two, float check) {

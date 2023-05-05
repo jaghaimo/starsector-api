@@ -52,7 +52,7 @@ public class DeadDropMission extends HubMissionWithBarEvent {
 						"a cloudy, damaged data crystal",
 						"a small EM-shielded safe",
 						"a hardcopy book made of paper",
-						"a sewing kit with strangly curved needles",
+						"a sewing kit with strangely curved needles",
 						"a single rose in a miniaturized stasis field",
 						"a small packet of seeds embossed with a Luddic sigil",
 						"an aged, twisted piece of wood",

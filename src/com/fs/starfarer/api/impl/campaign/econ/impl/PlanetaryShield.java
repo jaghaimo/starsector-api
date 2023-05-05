@@ -5,6 +5,7 @@ import java.awt.Color;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -30,6 +31,7 @@ public class PlanetaryShield extends BaseIndustry {
 						.modifyMult(getModId(), 1f + bonus, getNameForModifier());
 		
 		if (isFunctional()) {
+			market.suppressCondition(Conditions.METEOR_IMPACTS);
 			applyVisuals(market.getPlanetEntity());
 		} else {
 			unapply();
@@ -59,6 +61,7 @@ public class PlanetaryShield extends BaseIndustry {
 	public void unapply() {
 		super.unapply();
 		
+		market.unsuppressCondition(Conditions.METEOR_IMPACTS);
 		unapplyVisuals(market.getPlanetEntity());
 		
 		market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD).unmodifyMult(getModId());

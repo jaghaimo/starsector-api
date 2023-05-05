@@ -29,10 +29,9 @@ public class MarkovNames {
 	public static void loadIfNeeded() {
 		if (prob == null) {
 			List<String> names = new ArrayList<String>();
-			Collection<Object> specs = Global.getSettings().getAllSpecs(NameGenData.class);
-			for (Object curr : specs) {
+			Collection<NameGenData> specs = Global.getSettings().getAllSpecs(NameGenData.class);
+			for (NameGenData spec : specs) {
 				//if ((float) Math.random() > 0.1f) continue;
-				NameGenData spec = (NameGenData) curr;
 				names.add(spec.getName());
 			}
 			MarkovNames.load(names, 3);

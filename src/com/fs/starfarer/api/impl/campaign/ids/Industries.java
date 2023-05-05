@@ -5,11 +5,15 @@ public class Industries {
 	public static final String POPULATION = "population";
 	public static final String FARMING = "farming";
 	public static final String AQUACULTURE = "aquaculture";
+	
+	public static final String LIONS_GUARD = "lionsguard";
+	
 	public static final String MINING = "mining";
 	public static final String TECHMINING = "techmining";
 	public static final String REFINING = "refining";
 	public static final String SPACEPORT = "spaceport";
 	public static final String MEGAPORT = "megaport";
+	public static final String COMMERCE = "commerce";
 	public static final String LIGHTINDUSTRY = "lightindustry";
 	public static final String HEAVYINDUSTRY = "heavyindustry";
 	public static final String ORBITALWORKS = "orbitalworks";

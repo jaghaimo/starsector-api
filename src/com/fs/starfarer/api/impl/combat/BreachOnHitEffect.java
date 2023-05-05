@@ -19,11 +19,11 @@ public class BreachOnHitEffect implements OnHitEffectPlugin {
 	public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target,
 					  Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
 		if (!shieldHit && target instanceof ShipAPI) {
-			dealArmorDamage(projectile, (ShipAPI) target, point);
+			dealArmorDamage(projectile, (ShipAPI) target, point, DAMAGE);
 		}
 	}
 	
-	public static void dealArmorDamage(DamagingProjectileAPI projectile, ShipAPI target, Vector2f point) {
+	public static void dealArmorDamage(DamagingProjectileAPI projectile, ShipAPI target, Vector2f point, float armorDamage) {
 		CombatEngineAPI engine = Global.getCombatEngine();
 
 		ArmorGridAPI grid = target.getArmorGrid();
@@ -55,7 +55,7 @@ public class BreachOnHitEffect implements OnHitEffectPlugin {
 				}
 				
 				float armorInCell = grid.getArmorValue(cx, cy);
-				float damage = DAMAGE * damMult * damageTypeMult;
+				float damage = armorDamage * damMult * damageTypeMult;
 				damage = Math.min(damage, armorInCell);
 				if (damage <= 0) continue;
 				

@@ -39,6 +39,11 @@ public class GBGoInDirectionWithWobble extends BaseGhostBehavior {
 		Vector2f.add(loc, ghost.getEntity().getLocation(), loc);
 		ghost.moveTo(loc, maxBurn);
 		
+		
+		//System.out.println("Move angle: " + angle);
+		//System.out.println("Velocity: [" + (int)ghost.getEntity().getVelocity().x + "," + (int)ghost.getEntity().getVelocity().y + "]");
+		//System.out.println("Location: [" + (int)ghost.getEntity().getLocation().x + "," + (int)ghost.getEntity().getLocation().y + "]");
+		
 	}
 	
 	

@@ -11,6 +11,8 @@ import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.util.Highlights;
 import com.fs.starfarer.api.util.Misc;
 
@@ -28,7 +30,17 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 
 		if (okToUpdateShipsAndWeapons()) {
 			sinceSWUpdate = 0f;
-	
+
+			boolean military = Misc.isMilitary(market);
+			boolean hiddenBase = market.getMemoryWithoutUpdate().getBoolean(MemFlags.HIDDEN_BASE_MEM_FLAG);
+			
+			float extraShips = 0f;
+			//int extraShipSize = 0;
+			if (military && hiddenBase && !market.hasSubmarket(Submarkets.GENERIC_MILITARY)) {
+				extraShips = 150f;
+				//extraShipSize = 1;
+			}
+			
 			pruneWeapons(0f);
 			
 			int weapons = 5 + Math.max(0, market.getSize() - 1) + (Misc.isMilitary(market) ? 5 : 0);
@@ -46,7 +58,7 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 			if (freighters > 30) freighters = 30;
 			
 			addShips(market.getFactionId(),
-					10f, // combat
+					10f + extraShips, // combat
 					freighters, // freighter 
 					0f, // tanker
 					10f, // transport
@@ -65,9 +77,10 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 					0f, // liner
 					0f, // utilityPts
 					null, // qualityOverride
-					-0.5f, // qualityMod
+					-1f, // qualityMod
 					null,
-					null);
+					null,
+					4);
 			
 			float tankers = 20f;
 			com = market.getCommodityData(Commodities.FUEL);
@@ -87,7 +100,7 @@ public class OpenMarketPlugin extends BaseSubmarketPlugin {
 					null);
 			
 			
-			addHullMods(1, 1 + itemGenRandom.nextInt(3));
+			addHullMods(1, 1 + itemGenRandom.nextInt(3), market.getFactionId());
 		}
 		
 		getCargo().sort();

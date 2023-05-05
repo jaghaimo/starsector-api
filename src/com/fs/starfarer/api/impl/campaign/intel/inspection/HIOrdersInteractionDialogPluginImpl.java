@@ -270,7 +270,7 @@ public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlu
 	
 	protected void leave() {
 		dialog.dismiss();
-		ui.updateUIForItem(intel);	
+		if (ui != null) ui.updateUIForItem(intel);	
 	}
 	
 	

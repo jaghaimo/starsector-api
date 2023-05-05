@@ -134,12 +134,14 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 			return probability;
 		}
 		public void reportDefeated(SDMParams p, SectorEntityToken entity, CampaignFleetAPI fleet) {
-			float total = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR);
-			for (FleetMemberAPI member : Misc.getSnapshotMembersLost(fleet)) {
-				//total += FleetFactoryV2.getMemberWeight(member);
-				total += member.getFleetPointCost();
+			if (Factions.DERELICT.equals(p.factionId)) {
+				float total = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR);
+				for (FleetMemberAPI member : Misc.getSnapshotMembersLost(fleet)) {
+					//total += FleetFactoryV2.getMemberWeight(member);
+					total += member.getFleetPointCost();
+				}
+				Global.getSector().getMemoryWithoutUpdate().set(DEFEATED_DERELICT_STR, total);
 			}
-			Global.getSector().getMemoryWithoutUpdate().set(DEFEATED_DERELICT_STR, total);
 		}
 		public void modifyFleet(SDMParams p, CampaignFleetAPI fleet, Random random, boolean withOverride) {
 			if (Factions.OMEGA.equals(fleet.getFaction().getId())) {

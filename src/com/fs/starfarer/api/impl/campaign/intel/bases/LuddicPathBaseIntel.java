@@ -16,6 +16,7 @@ import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
@@ -27,6 +28,8 @@ import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
@@ -39,6 +42,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
@@ -68,6 +72,8 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameScript, FleetEventListener,
 																EconomyUpdateListener, RaidDelegate {
 	
+	public static final String PATHER_BASE_COMMANDER = "$patherBaseCommander";
+	
 	public static String MEM_FLAG = "$core_luddicPathBase";
 	
 	public static Object BOUNTY_EXPIRED_PARAM = new Object();
@@ -75,6 +81,7 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 	
 	public static Logger log = Global.getLogger(LuddicPathBaseIntel.class);
 	
+	protected PersonAPI baseCommander;
 	protected StarSystemAPI system;
 	protected MarketAPI market;
 	protected SectorEntityToken entity;
@@ -165,6 +172,16 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 		market.reapplyIndustries();
 		
 		Global.getSector().getEconomy().addMarket(market, true);
+		
+		baseCommander = market.getFaction().createRandomPerson(Misc.random);
+		baseCommander.setRankId(Ranks.SPACE_CAPTAIN);
+		baseCommander.setPostId(Ranks.POST_STATION_COMMANDER);
+		baseCommander.setImportanceAndVoice(PersonImportance.HIGH, Misc.random);
+		baseCommander.addTag(Tags.CONTACT_MILITARY);
+		//baseCommander.addTag(Tags.CONTACT_PATHER); // currently no missions for that
+		baseCommander.getMemoryWithoutUpdate().set(PATHER_BASE_COMMANDER, true);
+		baseCommander.setImportance(PersonImportance.VERY_HIGH);
+		market.getCommDirectory().addPerson(baseCommander);
 		
 		Global.getSector().getIntelManager().addIntel(this, true);
 		if (!DebugFlags.PATHER_BASE_DEBUG) {
@@ -467,10 +484,12 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 				if (cell.getMarket().isPlayerOwned() || DebugFlags.PATHER_BASE_DEBUG) {
 					cell.sendUpdateIfPlayerHasIntel(LuddicPathCellsIntel.UPDATE_DISRUPTED, false);
 				}
+				ListenerUtil.reportCellDisrupted(cell);
 			}
 			
 			PirateBaseManager.markRecentlyUsedForBase(system);
 			LuddicPathBaseManager.getInstance().incrDestroyed();
+			
 		}
 	}
 
@@ -876,6 +895,12 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 		return large;
 	}
 
+	public PersonAPI getBaseCommander() {
+		return baseCommander;
+	}
+	public void setBaseCommander(PersonAPI baseCommander) {
+		this.baseCommander = baseCommander;
+	}
 }
 
 

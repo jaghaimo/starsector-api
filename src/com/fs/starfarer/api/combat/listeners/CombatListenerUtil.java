@@ -8,6 +8,7 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageAPI;
+import com.fs.starfarer.api.combat.DeployedFleetMemberAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
@@ -174,6 +175,19 @@ public class CombatListenerUtil {
 			}
 		}
 		return cost;
+	}
+	
+	
+	
+	public static void reportFleetMemberDeployed(DeployedFleetMemberAPI member) {
+		for (FleetMemberDeploymentListener x : Global.getCombatEngine().getListenerManager().getListeners(FleetMemberDeploymentListener.class)) {
+			x.reportFleetMemberDeployed(member);
+		}
+//		if (member.getShip() != null) {
+//			for (FleetMemberDeploymentListener x : member.getShip().getListeners(FleetMemberDeploymentListener.class)) {
+//				x.reportFleetMemberDeployed(member);
+//			}
+//		}
 	}
 }
 

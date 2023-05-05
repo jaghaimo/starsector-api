@@ -9,10 +9,12 @@ import org.lwjgl.input.Keyboard;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogPlugin;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
+import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
@@ -20,6 +22,7 @@ import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
+import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Sounds;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
@@ -35,10 +38,17 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 	public static int STABLE_MACHINERY_REQ = 200;
 	
 	
+	//public static String BLACK_HOLE_SCANNED = "$blackHoleScanned";
+	public static String ADDED_KEY = "$core_starAddedStable";
+	
 	private static enum OptionId {
 		INIT,
 		ADD_STABLE_CONFIRM,
 		ADD_STABLE_DESCRIBE,
+		//SCAN_BlACK_HOLE,
+		DUMP_PLANETKILLER,
+		DUMP_PLANETKILLER_ON_SECOND_THOUGHT,
+		DUMP_PLANETKILLER_CONT_1,
 		ADD_STABLE_NEVER_MIND,
 		LEAVE,
 	}
@@ -50,7 +60,17 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 	
 	private CampaignFleetAPI playerFleet;
 	private PlanetAPI planet;
+	private boolean unpauseOnExit = true;
 	
+	public boolean isUnpauseOnExit() {
+		return unpauseOnExit;
+	}
+
+	public void setUnpauseOnExit(boolean unpauseOnExit) {
+		this.unpauseOnExit = unpauseOnExit;
+	}
+
+
 	private static final Color HIGHLIGHT_COLOR = Global.getSettings().getColor("buttonShortcut");
 	
 	public void init(InteractionDialogAPI dialog) {
@@ -124,13 +144,26 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 			dialog.addOptionSelectedText(option);
 		}
 		
+		String type = "star";
+		String corona = "star's corona";
+		String corona2 = "in the star's corona";
+		if (planet.getSpec().isBlackHole()) {
+			type = "black hole";
+			corona = "event horizon";
+			corona2 = "near the event horizon";
+		}
+		
 		switch (option) {
 		case INIT:
+			//boolean scannedAlready = planet.getMemoryWithoutUpdate().getBoolean(BLACK_HOLE_SCANNED);
 			boolean didAlready = planet.getMemoryWithoutUpdate().getBoolean(ADDED_KEY);
 			addText(getString("approach"));
 			if (didAlready) {
-				addText("The star's corona exhibits fluctuations indicative of recent antimatter application.");
+				addText("The " + corona + " exhibits fluctuations indicative of recent antimatter application.");
 			}
+//			if (scannedAlready) {
+//				addText("You've scanned this black hole.");
+//			}
 			
 			Description desc = Global.getSettings().getDescription(planet.getCustomDescriptionId(), Type.CUSTOM);
 			if (desc != null && desc.hasText3()) {
@@ -138,6 +171,36 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 			}
 			createInitialOptions();
 			break;
+		case DUMP_PLANETKILLER:
+			addText("Your officers respond promptly to the order, and move to the task with all alacrity. There is an edge to their call-and-response,"
+					+ " however, as if they cannot help but acknowledge the deep sense of the gravity in this act.\n"
+					+ "\"Package ready to drop, captain,\" your ops chief says. \"On your order.\"");
+			options.clearOptions();
+			options.addOption("\"Destroy it!\"", OptionId.DUMP_PLANETKILLER_CONT_1, null);
+			options.addOption("\"No... I will keep it.\"", OptionId.DUMP_PLANETKILLER_ON_SECOND_THOUGHT, null); // Isildur, nooo!!!
+			break;
+		case DUMP_PLANETKILLER_ON_SECOND_THOUGHT:
+			createInitialOptions();
+			break;
+		case DUMP_PLANETKILLER_CONT_1:
+			addText("At your command the planetkiller, locked in its cradle, is boosted toward the very center of the black hole, up and over the plane of the accretion disc.\n"
+					+ "With a flash only a little more than noise in the sensor telemetry, it is gone."); //, like tears in rain"); - OMG Alex, you're killing me -dgb
+			AddRemoveCommodity.addItemLossText(new SpecialItemData(Items.PLANETKILLER, null), 1, dialog.getTextPanel());
+			Global.getSector().getPlayerStats().addStoryPoints(1, dialog.getTextPanel(), false);
+			removePK();
+			options.clearOptions();
+			options.addOption("Leave", OptionId.LEAVE, null);
+			options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
+			break;
+//		case SCAN_BlACK_HOLE:
+//			planet.getMemoryWithoutUpdate().set(BLACK_HOLE_SCANNED, true);
+//			addText("TODO TODO TODO Your sensors officer works quickly, initiating a multi-wave scan of the black hole - or, rather, its event horizon. "
+//					+ "A few minutes later, you have the data; "
+//					+ "not terribly useful on its own, but gradually reaching a critical mass "
+//					+ "when combined with other readings taken elsewhere.");
+//			HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(new HTBlackHoleFactor(), dialog);
+//			createInitialOptions();
+//			break;
 		case ADD_STABLE_CONFIRM:
 			StarSystemAPI system = planet.getStarSystem();
 			if (system != null) {
@@ -155,7 +218,7 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 			createInitialOptions();
 			break;
 		case ADD_STABLE_DESCRIBE:
-			addText("The procedure requires spreading prodigious amounts of antimatter in the star's corona, " +
+			addText("The procedure requires spreading prodigious amounts of antimatter " + corona2 + ", " +
 					"according to calculations far beyond the ability of anything on the right side of the " +
 					"treaty that ended the Second AI War.");
 			boolean canAfford = dialog.getTextPanel().addCostPanel("Resources required (available)", 
@@ -203,23 +266,38 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 			createInitialOptions();
 			break;
 		case LEAVE:
-			Global.getSector().setPaused(false);
+			if (unpauseOnExit) {
+				Global.getSector().setPaused(false);
+			}
 			dialog.dismiss();
 			break;
 		}
 	}
 	
-	public static String ADDED_KEY = "$core_starAddedStable"; 
 	
 	protected void createInitialOptions() {
 		options.clearOptions();
 		
+		MemoryAPI memory = dialog.getInteractionTarget().getMemory();
+		
+		String type = "star";
+		String corona = "star's corona";
+		String corona2 = "in the star's corona";
+		boolean blackHole = false;
+		if (planet.getSpec().isBlackHole()) {
+			blackHole = true;
+			type = "black hole";
+			corona = "event horizon";
+			corona2 = "near the event horizon";
+		}
+		
 		StarSystemAPI system = planet.getStarSystem();
+		//boolean scannedAlready = planet.getMemoryWithoutUpdate().getBoolean(BLACK_HOLE_SCANNED);
 		boolean didAlready = planet.getMemoryWithoutUpdate().getBoolean(ADDED_KEY);
 		if (system != null && planet == system.getStar() && !didAlready) {
 //			int num = Misc.getNumStableLocations(planet.getStarSystem());
 			//options.addOption("Induce a resonance cascade in the star's hyperfield, creating a stable location", OptionId.ADD_STABLE_DESCRIBE, null);
-			options.addOption("Consider inducing a resonance cascade in the star's hyperfield, creating a stable location", OptionId.ADD_STABLE_DESCRIBE, null);
+			options.addOption("Consider inducing a resonance cascade in the " + type + "'s hyperfield, creating a stable location", OptionId.ADD_STABLE_DESCRIBE, null);
 //			SetStoryOption.set(dialog, Global.getSettings().getInt("createStableLocation"), 
 //					OptionId.ADD_STABLE, "createStableLocation", Sounds.STORY_POINT_SPEND_TECHNOLOGY);
 //			if (num >= 3) {
@@ -233,6 +311,15 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 //			}
 		}
 		
+//		if (blackHole && !scannedAlready) {
+//			options.addOption("Scan the black hole to assess its impact on local hyperspace topography",
+//					OptionId.SCAN_BlACK_HOLE, null);
+//		}
+		
+		
+		if (hasPK()) {
+			options.addOption("Dump the planetkiller weapon into the black hole", OptionId.DUMP_PLANETKILLER, null);
+		}
 		
 		options.addOption("Leave", OptionId.LEAVE, null);
 		options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
@@ -240,6 +327,15 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 		if (Global.getSettings().isDevMode()) {
 			DevMenuOptions.addOptions(dialog);
 		}
+	}
+	
+	public void removePK() {
+		Global.getSector().getPlayerFleet().getCargo().
+				removeItems(CargoItemType.SPECIAL, new SpecialItemData(Items.PLANETKILLER, null), 1);
+	}
+	public boolean hasPK() {
+		return Global.getSector().getPlayerFleet().getCargo().
+				getQuantity(CargoItemType.SPECIAL, new SpecialItemData(Items.PLANETKILLER, null)) > 0;
 	}
 	
 	

@@ -13,6 +13,7 @@ import com.fs.starfarer.api.impl.campaign.intel.SystemBountyManager;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateActivity;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.PirateBaseTier;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager;
+import com.fs.starfarer.api.util.Misc;
 
 /**
  * Adds the following types of fleets:
@@ -36,6 +37,12 @@ public class DisposablePirateFleetManager extends DisposableFleetManager {
 		return "pirates";
 	}
 	
+	
+	@Override
+	public void advance(float amount) {
+		super.advance(amount);
+	}
+
 	@Override
 	protected int getDesiredNumFleetsForSpawnLocation() {
 		PirateBaseTier tier = getPirateActivityTier();
@@ -100,6 +107,12 @@ public class DisposablePirateFleetManager extends DisposableFleetManager {
 		
 		CampaignFleetAPI player = Global.getSector().getPlayerFleet();
 		if (player == null) return null;
+		
+		int num = Misc.getMarketsInLocation(system).size();
+		if (Misc.getMarketsInLocation(system, Factions.PLAYER).size() == num && num > 0) { 
+			return null; // handled by HostileActivityIntel, DisposableHostileActivityFleetManager, etc
+		}
+		
 //		float distToPlayerLY = Misc.getDistanceLY(player.getLocationInHyperspace(), system.getLocation());
 //		if (distToPlayerLY > 1f) return null;
 		

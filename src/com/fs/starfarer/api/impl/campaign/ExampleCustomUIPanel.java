@@ -6,12 +6,12 @@ import java.util.List;
 import org.lwjgl.opengl.GL11;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CustomUIPanelPlugin;
+import com.fs.starfarer.api.campaign.BaseCustomUIPanelPlugin;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.ui.PositionAPI;
 
-public class ExampleCustomUIPanel implements CustomUIPanelPlugin {
+public class ExampleCustomUIPanel extends BaseCustomUIPanelPlugin {
 
 	private PositionAPI p;
 	private SpriteAPI sprite;
@@ -88,8 +88,14 @@ public class ExampleCustomUIPanel implements CustomUIPanelPlugin {
 	}
 
 	public void renderBelow(float alphaMult) {
-		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void buttonPressed(Object buttonId) {
+		super.buttonPressed(buttonId);
+	}
+	
+	
 
 }

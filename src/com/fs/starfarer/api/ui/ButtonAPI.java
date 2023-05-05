@@ -21,4 +21,33 @@ public interface ButtonAPI extends UIComponentAPI {
 	boolean isHighlighted();
 	void setHighlightBrightness(float highlightBrightness);
 	float getHighlightBrightness();
+	void setQuickMode(boolean quickMode);
+	void setClickable(boolean clickable);
+	float getGlowBrightness();
+	void setGlowBrightness(float glowBrightness);
+	
+	/**
+	 * Only works for certain types of basic buttons.
+	 * @param text
+	 */
+	void setText(String text);
+	/**
+	 * Only works for certain types of basic buttons.
+	 */
+	String getText();
+	
+	
+	void setSkipPlayingPressedSoundOnce(boolean skipPlayingPressedSoundOnce);
+	void setHighlightBounceDown(boolean b);
+	void setShowTooltipWhileInactive(boolean showTooltipWhileInactive);
+	void setRightClicksOkWhenDisabled(boolean rightClicksOkWhenDisabled);
+	void setFlashBrightness(float flashBrightness);
+	void flash(boolean withSound, float in, float out);
+	void flash(boolean withSound);
+	void flash();
+	void setPerformActionWhenDisabled(boolean performActionWhenDisabled);
+	boolean isPerformActionWhenDisabled();
+	boolean isSkipPlayingPressedSoundOnce();
+	Object getCustomData();
+	void setCustomData(Object customData);
 }

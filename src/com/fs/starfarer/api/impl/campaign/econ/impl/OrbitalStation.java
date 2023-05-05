@@ -8,11 +8,11 @@ import org.json.JSONObject;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.AICoreOfficerPlugin;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI;
 import com.fs.starfarer.api.campaign.FleetInflater;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.MarketInteractionMode;
@@ -398,7 +398,7 @@ public class OrbitalStation extends BaseIndustry implements FleetEventListener {
 	protected void ensureStationEntityIsSetOrCreated() {
 		if (stationEntity == null) {
 			for (SectorEntityToken entity : market.getConnectedEntities()) {
-				if (entity.hasTag(Tags.STATION)) {
+				if (entity.hasTag(Tags.STATION) && !entity.hasTag("NO_ORBITAL_STATION")) { // added NO_ORBITAL_STATION per modder request 
 					stationEntity = entity;
 					usingExistingStation = true;
 					break;

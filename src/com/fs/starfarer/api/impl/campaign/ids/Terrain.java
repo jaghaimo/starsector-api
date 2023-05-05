@@ -12,6 +12,10 @@ public class Terrain {
 	
 	public static final String CORONA = "corona";
 	public static final String CORONA_AKA_MAINYU = "corona_aka_mainyu";
+	
+	/**
+	 * Unused.
+	 */
 	public static final String CORONA_JET = "corona_jet";
 	public static final String EVENT_HORIZON = "event_horizon";
 	

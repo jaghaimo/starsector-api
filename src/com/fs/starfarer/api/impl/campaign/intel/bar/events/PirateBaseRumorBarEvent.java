@@ -17,6 +17,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarData;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.PirateBasePirateActivityCause2;
 import com.fs.starfarer.api.util.Misc;
 
 public class PirateBaseRumorBarEvent extends BaseBarEvent {
@@ -33,7 +35,24 @@ public class PirateBaseRumorBarEvent extends BaseBarEvent {
 	}
 
 	public boolean shouldShowAtMarket(MarketAPI market) {
-		return intel.getTarget() == market.getContainingLocation();
+		if (intel.getTarget() == market.getContainingLocation()) {
+			return true;
+		}
+		if (market.isPlayerOwned()) {
+			HostileActivityEventIntel ha = HostileActivityEventIntel.get();
+			if (ha != null) {
+				return PirateBasePirateActivityCause2.getBaseIntel(market.getStarSystem()) == intel;
+			}
+//			HostileActivityIntel hai = HostileActivityIntel.get(market.getStarSystem());
+//			if (hai != null) {
+//				PirateBasePirateActivityCause cause = (PirateBasePirateActivityCause)hai.getActivityCause(
+//								PirateHostileActivityPluginImpl.class, PirateBasePirateActivityCause.class);
+//				if (cause != null) {
+//					return cause.getBaseIntel() == intel;
+//				}
+//			}
+		}
+		return false;
 	}
 	
 	@Override

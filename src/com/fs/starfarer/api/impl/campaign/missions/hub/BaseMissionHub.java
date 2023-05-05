@@ -330,7 +330,7 @@ public class BaseMissionHub implements MissionHub, CallableEvent {
 		}
 		
 		for (HubMissionCreator creator : creators) {
-//			if (creator.getSpecId().equals("hijack")) {
+//			if (creator.getSpecId().equals("mcb")) {
 //				System.out.println("fweefwew");
 //			}
 			// keep timeout missions so that after the player accepts a mission

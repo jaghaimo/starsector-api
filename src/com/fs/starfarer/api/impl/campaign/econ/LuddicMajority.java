@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class LuddicMajority extends BaseMarketConditionPlugin {
 
-	private static String [] luddicFactions = new String [] {
+	public static String [] luddicFactions = new String [] {
 		"knights_of_ludd",
 		"luddic_church",
 		"luddic_path",

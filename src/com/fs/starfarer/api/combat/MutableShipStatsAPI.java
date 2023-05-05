@@ -371,6 +371,8 @@ public interface MutableShipStatsAPI {
 	MutableStat getEnergyAmmoRegenMult();
 	MutableStat getBallisticAmmoRegenMult();
 
+	MutableStat getShieldSoftFluxConversion();
+
 }
 
 

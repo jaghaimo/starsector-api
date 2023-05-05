@@ -3,6 +3,7 @@ package com.fs.starfarer.api.impl.campaign.procgen.themes;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -11,31 +12,57 @@ import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CustomEntitySpecAPI;
+import com.fs.starfarer.api.campaign.JumpPointAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoronalTapParticleScript;
+import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield;
+import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
+import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
+import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Planets;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
+import com.fs.starfarer.api.impl.campaign.ids.Submarkets;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.Constellation;
+import com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride;
+import com.fs.starfarer.api.impl.campaign.procgen.NameGenData;
+import com.fs.starfarer.api.impl.campaign.procgen.PlanetConditionGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.PlanetGenDataSpec;
+import com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames;
+import com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames.NamePick;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.StarSystemType;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.ShipRecoverySpecialCreator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.SpecialCreationContext;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.ShipCondition;
+import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 
 public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
-
+	
+	public static String PK_SYSTEM_KEY = "$core_pkSystem";
+	public static String PK_PLANET_KEY = "$core_pkPlanet";
+	public static String PK_CACHE_KEY = "$core_pkCache";
+	public static String PK_NEXUS_KEY = "$core_pkNexus";
+	
+	public static String PLANETARY_SHIELD_PLANET_KEY = "$core_planetaryShieldPlanet";
+	public static String PLANETARY_SHIELD_PLANET = "$psi_planet";
+	
+	
 	public static float PROB_TO_ADD_SOMETHING = 0.5f;
 	
 	public static int MIN_GATES = Global.getSettings().getInt("minNonCoreGatesInSector");
@@ -62,8 +89,15 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 		
 		if (DEBUG) System.out.println("\n\n\n");
 		if (DEBUG) System.out.println("Generating misc derelicts etc in all systems");
-		
+		//getSortedAvailableConstellations(context, true, new Vector2f(), null).size()
 		List<StarSystemData> all = new ArrayList<StarSystemData>();
+		
+		/* this adds misc stuff to systems that are:
+			1) Not tagged with some other theme
+			2) But does add misc stuff to derelict-tagged systems
+			So, basicallly it covers:
+			 	derelict theme + whatever few constellations didn't get anything from any theme
+		*/
 		for (Constellation c : context.constellations) {
 			String theme = context.majorThemes.get(c);
 			
@@ -108,6 +142,17 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 		addDerelicts(context, "revenant_Elite", 1, 2, 0, 1, Tags.THEME_REMNANT, Tags.THEME_RUINS, Tags.THEME_DERELICT, Tags.THEME_UNSAFE);
 		
 		
+		addRedPlanet(context);
+		addPKSystem(context);
+		
+		addSolarShadesAndMirrors(context);
+		
+		addCoronalTaps(context);
+		
+		addExtraGates(context);
+	}
+	
+	protected void addRedPlanet(ThemeGenContext context) {
 		if (DEBUG) System.out.println("Looking for planetary shield planet");
 		
 		PlanetAPI bestHab = null;
@@ -119,8 +164,11 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 
 		// looking for a habitable planet furthest from the Sector's center, with a bit of 
 		// a random factor
+		int systemsChecked = 0;
 		for (Constellation c : context.constellations) {
 			for (StarSystemAPI system : c.getSystems()) {
+				if (system.hasTag(Tags.THEME_SPECIAL)) continue;
+				
 				if (!system.hasTag(Tags.THEME_MISC_SKIP) && 
 						!system.hasTag(Tags.THEME_MISC)) {
 					continue;
@@ -129,6 +177,8 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 				if (system.hasTag(Tags.THEME_DERELICT)) {
 					continue;
 				}
+				
+				systemsChecked++;
 				
 				for (PlanetAPI curr : system.getPlanets()) {
 					if (curr.isStar()) continue;
@@ -186,13 +236,6 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 			if (DEBUG) System.out.println("Failed to find a planet in remnant systems");
 		}
 		if (DEBUG) System.out.println("Finished adding Planetary Shield planet\n\n\n\n\n");
-		
-		
-		addSolarShadesAndMirrors(context);
-		
-		addCoronalTaps(context);
-		
-		addExtraGates(context);
 	}
 	
 	protected void addDerelicts(ThemeGenContext context, String variant,
@@ -418,11 +461,6 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 	}
 	
 	
-	public static String PLANETARY_SHIELD_PLANET_KEY = "$core_planetaryShieldPlanet";
-	public static String PLANETARY_SHIELD_PLANET = "$psi_planet";
-	
-
-	
 	public void populateNonMain(StarSystemData data) {
 		if (DEBUG) System.out.println(" Generating misc derelicts in system " + data.system.getName());
 		boolean special = data.isBlackHole() || data.isNebula() || data.isPulsar();
@@ -544,6 +582,8 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 		WeightedRandomPicker<StarSystemAPI> backup = new WeightedRandomPicker<StarSystemAPI>(StarSystemGenerator.random);
 		for (Constellation c : list) {
 			for (StarSystemAPI system : c.getSystems()) {
+				if (system.hasTag(Tags.THEME_SPECIAL)) continue;
+				
 				float w = 0f;
 				if (system.hasTag(Tags.THEME_REMNANT)) {
 					w = 10f;
@@ -696,6 +736,373 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 		return entity;
 	}
 	
+	
+	protected void addPKSystem(ThemeGenContext context) {
+		if (DEBUG) System.out.println("Looking for system to hide PK in");
+		
+		List<StarSystemAPI> preferred = new ArrayList<StarSystemAPI>();
+		List<StarSystemAPI> other = new ArrayList<StarSystemAPI>();
+		
+		for (Constellation c : context.constellations) {
+			for (StarSystemAPI system : c.getSystems()) {
+				if (system.hasTag(Tags.THEME_SPECIAL)) continue;
+				
+				if (system.isNebula()) continue;
+				if (system.hasPulsar()) continue;
+				if (system.hasBlackHole()) continue;
+				
+				boolean misc = system.hasTag(Tags.THEME_MISC_SKIP) || system.hasTag(Tags.THEME_MISC);
+				if (system.hasTag(Tags.THEME_DERELICT)) misc = false;
+				
+				boolean nonLargeDerelict = system.hasTag(Tags.THEME_DERELICT) && 
+										!system.hasTag(Tags.THEME_DERELICT_MOTHERSHIP) &&
+										!system.hasTag(Tags.THEME_DERELICT_CRYOSLEEPER) &&
+										!system.hasTag(Tags.THEME_DERELICT_SURVEY_SHIP);
+				
+				boolean secondaryRuins = system.hasTag(Tags.THEME_RUINS_SECONDARY);
+				boolean remnantNoFleets = system.hasTag(Tags.THEME_REMNANT_NO_FLEETS);
+				boolean unsafe = system.hasTag(Tags.THEME_UNSAFE);
+				
+				if (unsafe || !(misc || nonLargeDerelict || secondaryRuins || remnantNoFleets)) {
+					continue;
+				}
+				
+				int count = 0;
+				for (PlanetAPI curr : system.getPlanets()) {
+					if (curr.isStar()) continue;
+					if (curr.isMoon()) continue;
+					if (curr.isGasGiant()) continue;
+					if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;
+					if (curr.getCircularOrbitRadius() < 6000) continue;
+					count++;
+				}
+				
+				if (count > 0) {
+					preferred.add(system);
+				} else {
+					other.add(system);
+				}
+			}
+		}
+		
+		Comparator<StarSystemAPI> comp = new Comparator<StarSystemAPI>() {
+			public int compare(StarSystemAPI o1, StarSystemAPI o2) {
+				return (int) Math.signum(o2.getLocation().length() - o1.getLocation().length());
+			}
+		};
+
+		List<StarSystemAPI> sorted = new ArrayList<StarSystemAPI>();
+		if (!preferred.isEmpty()) {
+			sorted.addAll(preferred);
+		} else {
+			sorted.addAll(other);
+		}
+		if (sorted.isEmpty()) {
+			if (DEBUG) System.out.println("FAILED TO FIND SUITABLE SYSTEM FOR PK");
+			return;
+		}
+		Collections.sort(sorted, comp);
+		
+		
+		// pick from some of the matching systems furthest from core
+		WeightedRandomPicker<StarSystemAPI> picker = new WeightedRandomPicker<StarSystemAPI>(random);
+		for (int i = 0; i < 20 && i < sorted.size(); i++) {
+			//sorted.get(i).addTag(Tags.PK_SYSTEM);
+			picker.add(sorted.get(i), 1f);
+		}
+		
+		StarSystemAPI system = picker.pick();
+		
+		if (DEBUG) System.out.println("Adding PK to [" + system.getName() + "] at [" + system.getLocation() + "]");
+		setUpPKSystem(system);
+		
+		
+		if (DEBUG) System.out.println("Finished adding PK system\n\n\n\n\n");
+	}
+
+	protected void setUpPKSystem(StarSystemAPI system) {
+		system.addTag(Tags.THEME_SPECIAL);
+		system.addTag(Tags.PK_SYSTEM);
+		
+		Global.getSector().getPersistentData().put(PK_SYSTEM_KEY, system);
+		Global.getSector().getMemoryWithoutUpdate().set(PK_SYSTEM_KEY, system.getId());
+		
+		// - pick a planet at 6k range or higher to make into a tundra world
+		// - turn any planets with a lower hazard rating into barren and reassign their conditions 
+		
+		PlanetAPI tundra = null;
+		for (PlanetAPI curr : system.getPlanets()) {
+			if (curr.isStar()) continue;
+			//if (curr.isMoon()) continue;
+			if (curr.isGasGiant()) continue;
+			if (curr.getMarket() == null) continue;
+			if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;
+			if (curr.getCircularOrbitRadius() < 6000) continue;
+			
+			tundra = curr;
+			break;
+		}
+		
+		//pick = null;
+		
+		// if there's no planet in a suitable range, create one
+		// could end up with a tundra world really far out if the system is full of stuff
+		// but has no planets, but it's unlikely
+		if (tundra == null) {
+			List<OrbitGap> gaps = BaseThemeGenerator.findGaps(system.getCenter(), 6000, 20000, 800);
+			float orbitRadius = 7000;
+			if (!gaps.isEmpty()) {
+				orbitRadius = (gaps.get(0).start + gaps.get(0).end) * 0.5f;
+			}
+			float orbitDays = orbitRadius / (20f + random.nextFloat() * 5f);
+			float radius = 100f + random.nextFloat() * 50f;
+			float angle = random.nextFloat() * 360f;
+			String type = Planets.BARREN;
+			NamePick namePick = ProcgenUsedNames.pickName(NameGenData.TAG_PLANET, null, null);
+			String name = namePick.nameWithRomanSuffixIfAny;
+			tundra = system.addPlanet(Misc.genUID(), system.getStar(), name, type, angle, radius, orbitRadius, orbitDays);
+			
+			if (tundra == null) {
+				if (DEBUG) System.out.println("FAILED TO CREATE PLANET IN PK SYSTEM");
+				return;
+			}
+		}
+		
+		tundra.setName("Sentinel");
+		tundra.addTag(Tags.NOT_RANDOM_MISSION_TARGET);
+		tundra.getMemoryWithoutUpdate().set(PK_PLANET_KEY, true);
+		Global.getSector().getPersistentData().put(PK_PLANET_KEY, tundra);
+		
+		if (DEBUG) System.out.println("Setting planet [" + tundra.getName() + "] to tundra");
+		tundra.changeType(Planets.TUNDRA, random);
+		tundra.getMarket().getConditions().clear();
+		PlanetConditionGenerator.generateConditionsForPlanet(null, tundra, system.getAge());
+		tundra.getMarket().removeCondition(Conditions.DECIVILIZED);
+		tundra.getMarket().removeCondition(Conditions.DECIVILIZED_SUBPOP);
+		tundra.getMarket().removeCondition(Conditions.RUINS_EXTENSIVE);
+		tundra.getMarket().removeCondition(Conditions.RUINS_SCATTERED);
+		tundra.getMarket().removeCondition(Conditions.RUINS_VAST);
+		tundra.getMarket().removeCondition(Conditions.RUINS_WIDESPREAD);
+		tundra.getMarket().removeCondition(Conditions.INIMICAL_BIOSPHERE);
+		
+		tundra.getMarket().removeCondition(Conditions.FARMLAND_POOR);
+		tundra.getMarket().removeCondition(Conditions.FARMLAND_ADEQUATE);
+		tundra.getMarket().removeCondition(Conditions.FARMLAND_RICH);
+		tundra.getMarket().removeCondition(Conditions.FARMLAND_BOUNTIFUL);
+		tundra.getMarket().addCondition(Conditions.FARMLAND_POOR);
+
+		
+		// make sure the tundra world is the best habitable world in-system so there's no questions
+		// as to why it was chosen by the survivors
+		float pickHazard = tundra.getMarket().getHazardValue();
+		
+		for (PlanetAPI curr : system.getPlanets()) {
+			if (curr.isStar()) continue;
+			if (curr.isGasGiant()) continue;
+			if (curr.getMarket() == null) continue;
+			if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;
+			if (curr == tundra) continue;
+			
+			float h = curr.getMarket().getHazardValue();
+			if (curr.hasCondition(Conditions.HABITABLE) && h <= pickHazard) {
+				curr.changeType(Planets.BARREN_VENUSLIKE, random);
+				curr.getMarket().getConditions().clear();
+				PlanetConditionGenerator.generateConditionsForPlanet(null, curr, system.getAge());
+			}
+		}
+		
+		for (SectorEntityToken curr : system.getEntitiesWithTag(Tags.STABLE_LOCATION)) {
+			system.removeEntity(curr);
+		}
+		for (SectorEntityToken curr : system.getEntitiesWithTag(Tags.OBJECTIVE)) {
+			system.removeEntity(curr);
+		}
+		
+		
+		List<OrbitGap> gaps = BaseThemeGenerator.findGaps(system.getCenter(), 2000, 20000, 800);
+		float orbitRadius = 7000;
+		if (!gaps.isEmpty()) {
+			orbitRadius = (gaps.get(0).start + gaps.get(0).end) * 0.5f;
+		}
+		float radius = 500f + 200f * random.nextFloat();
+		float area = radius * radius * 3.14f;
+		int count = (int) (area / 80000f);
+		count *= 2;
+		if (count < 10) count = 10;
+		if (count > 100) count = 100;
+		float angle = random.nextFloat() * 360f;
+		float orbitDays = orbitRadius / (20f + random.nextFloat() * 5f);
+		
+		SectorEntityToken field = system.addTerrain(Terrain.ASTEROID_FIELD,
+				new AsteroidFieldParams(
+					radius, // min radius
+					radius + 100f, // max radius
+					count, // min asteroid count
+					count, // max asteroid count
+					4f, // min asteroid radius 
+					16f, // max asteroid radius
+					null)); // null for default name
+		
+		field.setCircularOrbit(system.getCenter(), angle, orbitRadius, orbitDays);
+		
+		SectorEntityToken cache = BaseThemeGenerator.addSalvageEntity(system, Entities.HIDDEN_CACHE, Factions.NEUTRAL);
+		cache.getMemoryWithoutUpdate().set(PK_CACHE_KEY, true);
+		//cache.getLocation().set(10000, 10000);
+		cache.setCircularOrbit(field, 0, 0, 100f);
+		Misc.setDefenderOverride(cache, new DefenderDataOverride(Factions.HEGEMONY, 1f, 20, 20, 1));
+		
+		// Misc.addDefeatTrigger(fleet, trigger);
+		
+		// add a ship graveyard around the cache - Luddic Path ships, presumably from another
+		// Path operative that got farther along but never reported back
+		StarSystemData data = new StarSystemData();
+		WeightedRandomPicker<String> derelictShipFactions = new WeightedRandomPicker<String>(random);
+		derelictShipFactions.add(Factions.LUDDIC_PATH);
+		WeightedRandomPicker<String> hulls = new WeightedRandomPicker<String>(random);
+		hulls.add("prometheus2", 1f);
+		hulls.add("colossus2", 1f);
+		hulls.add("colossus2", 1f);
+		hulls.add("colossus2", 1f);
+		hulls.add("eradicator", 1f);
+		hulls.add("enforcer", 1f);
+		hulls.add("sunder", 1f);
+		hulls.add("venture_pather", 1f);
+		hulls.add("manticore_luddic_path", 1f);
+		hulls.add("cerberus_luddic_path", 1f);
+		hulls.add("hound_luddic_path", 1f);
+		hulls.add("buffalo2", 1f);
+		addShipGraveyard(data, field, derelictShipFactions, hulls);
+		for (AddedEntity ae : data.generated) {
+			SalvageSpecialAssigner.assignSpecials(ae.entity, true);
+		}
+		
+		// add some remnant derelicts around a fringe jump-point
+		// where the fight was
+		float max = 0f;
+		JumpPointAPI fringePoint = null;
+		List<JumpPointAPI> points = system.getEntities(JumpPointAPI.class);
+		for (JumpPointAPI curr : points) {
+			float dist = curr.getCircularOrbitRadius();
+			if (dist > max) {
+				max = dist;
+				fringePoint = curr;
+			}
+		}
+		
+		if (fringePoint != null) {
+			data = new StarSystemData();
+			WeightedRandomPicker<String> remnantShipFactions = new WeightedRandomPicker<String>(random);
+			remnantShipFactions.add(Factions.REMNANTS);
+			hulls = new WeightedRandomPicker<String>(random);
+			hulls.add("radiant", 0.25f);
+			hulls.add("nova", 0.5f);
+			hulls.add("brilliant", 1f);
+			hulls.add("apex", 1f);
+			hulls.add("scintilla", 1f);
+			hulls.add("scintilla", 1f);
+			hulls.add("fulgent", 1f);
+			hulls.add("fulgent", 1f);
+			hulls.add("glimmer", 1f);
+			hulls.add("glimmer", 1f);
+			hulls.add("lumen", 1f);
+			hulls.add("lumen", 1f);
+			addShipGraveyard(data, fringePoint, remnantShipFactions, hulls);
+			addDebrisField(data, fringePoint, 400f);
+			
+			for (AddedEntity ae : data.generated) {
+				SalvageSpecialAssigner.assignSpecials(ae.entity, true);
+				if (ae.entity.getCustomPlugin() instanceof DerelictShipEntityPlugin) {
+					DerelictShipEntityPlugin plugin = (DerelictShipEntityPlugin) ae.entity.getCustomPlugin();
+					plugin.getData().ship.condition = ShipCondition.WRECKED;
+				}
+			}
+		}
+		
+		// Improvised dockyard where presumably the ship conversion took place
+		SectorEntityToken dockyard = system.addCustomEntity("pk_dockyard",
+				"Sentinel Gantries", Entities.ORBITAL_DOCKYARD, "neutral");
+
+		dockyard.setCircularOrbitPointingDown(tundra, 45, 300, 30);		
+		dockyard.setCustomDescriptionId("pk_orbital_dockyard");
+		dockyard.getMemoryWithoutUpdate().set("$pkDockyard", true);
+		
+		//neutralStation.setInteractionImage("illustrations", "abandoned_station2");
+		Misc.setAbandonedStationMarket("pk_dockyard", dockyard);
+		
+		
+		// add some unused stuff to the dockyard
+		CargoAPI cargo = dockyard.getMarket().getSubmarket(Submarkets.SUBMARKET_STORAGE).getCargo();
+		cargo.initMothballedShips(Factions.HEGEMONY);
+		
+		CampaignFleetAPI temp = Global.getFactory().createEmptyFleet(Factions.HEGEMONY, null, true);
+		temp.getFleetData().addFleetMember("enforcer_XIV_Elite");
+		temp.getFleetData().addFleetMember("enforcer_XIV_Elite");
+		temp.getFleetData().addFleetMember("eagle_xiv_Elite");
+		temp.getFleetData().addFleetMember("dominator_XIV_Elite");
+		DefaultFleetInflaterParams p = new DefaultFleetInflaterParams();
+		p.quality = -1;
+		temp.setInflater(new DefaultFleetInflater(p));
+		temp.inflateIfNeeded();
+		temp.setInflater(null);
+
+		int index = 0;
+		for (FleetMemberAPI member : temp.getFleetData().getMembersListCopy()) {
+			for (String slotId : member.getVariant().getFittedWeaponSlots()) {
+				String weaponId = member.getVariant().getWeaponId(slotId);
+				if (random.nextFloat() < 0.5f) {
+					member.getVariant().clearSlot(slotId);
+				}
+				if (random.nextFloat() < 0.25f) {
+					cargo.addWeapons(weaponId, 1);
+				}
+			}
+			if (index == 0 || index == 2) {
+				cargo.getMothballedShips().addFleetMember(member);
+			}
+			index++;
+		}
+		cargo.addCommodity(Commodities.METALS, 50f + random.nextInt(51));
+		
+		List<CampaignFleetAPI> stations = getRemnantStations(true, false);
+		float minDist = Float.MAX_VALUE;
+		CampaignFleetAPI nexus = null;
+		for (CampaignFleetAPI curr : stations) {
+			float dist = Misc.getDistanceLY(tundra, curr);
+			if (dist < minDist) {
+				minDist = dist;
+				nexus = curr;
+			}
+		}
+		if (nexus != null) {
+			if (DEBUG) System.out.println("Found Remnant nexus in [" + nexus.getContainingLocation().getName() + "]");
+			nexus.getMemoryWithoutUpdate().set(PK_NEXUS_KEY, true);
+			Global.getSector().getPersistentData().put(PK_NEXUS_KEY, nexus);
+			Global.getSector().getMemoryWithoutUpdate().set(PK_NEXUS_KEY, nexus.getContainingLocation().getId());
+			
+			Misc.addDefeatTrigger(nexus, "PKNexusDefeated");
+		}
+	}
+	
+	
+	public static List<CampaignFleetAPI> getRemnantStations(boolean includeDamaged, boolean onlyDamaged) {
+		List<CampaignFleetAPI> stations = new ArrayList<CampaignFleetAPI>();
+		for (StarSystemAPI system : Global.getSector().getStarSystems()) {
+			if (!system.hasTag(Tags.THEME_REMNANT_MAIN)) continue;
+			if (system.hasTag(Tags.THEME_REMNANT_DESTROYED)) continue;
+			
+			for (CampaignFleetAPI fleet : system.getFleets()) {
+				if (!fleet.isStationMode()) continue;
+				if (!Factions.REMNANTS.equals(fleet.getFaction().getId())) continue;
+				
+				boolean damaged = fleet.getMemoryWithoutUpdate().getBoolean("$damagedStation");
+				if (damaged && !includeDamaged) continue;
+				if (!damaged && onlyDamaged) continue;
+				
+				stations.add(fleet);
+			}
+		}
+		return stations;
+	}
 }
 
 

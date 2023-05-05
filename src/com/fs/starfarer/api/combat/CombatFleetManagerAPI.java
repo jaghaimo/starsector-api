@@ -150,6 +150,9 @@ public interface CombatFleetManagerAPI {
 	ShipAPI getShipFor(PersonAPI captain);
 
 	FleetMemberAPI getBiggestStationDeployedOrNot();
+
+	AdmiralAIPlugin getAdmiralAI();
+	void setAdmiralAI(AdmiralAIPlugin admiralAI);
 }
 
 

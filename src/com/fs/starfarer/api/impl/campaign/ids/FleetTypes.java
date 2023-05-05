@@ -4,6 +4,9 @@ public class FleetTypes {
 	
 	public static final String FOOD_RELIEF_FLEET = "foodReliefFleet";
 	
+	public static final String SHRINE_PILGRIMS = "shrinePilgrims";
+	public static final String ACADEMY_FLEET = "academyFleet";
+	
 	public static final String TRADE = "trade";
 	public static final String TRADE_SMUGGLER = "tradeSmuggler";
 	public static final String TRADE_SMALL = "smallTrader";

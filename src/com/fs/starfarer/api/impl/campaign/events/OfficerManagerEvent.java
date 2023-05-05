@@ -2,7 +2,9 @@ package com.fs.starfarer.api.impl.campaign.events;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -71,12 +73,12 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 	
 	public static Logger log = Global.getLogger(OfficerManagerEvent.class);
 	
-	private IntervalUtil removeTracker = new IntervalUtil(1f, 3f);
+	protected IntervalUtil removeTracker = new IntervalUtil(1f, 3f);
 	
-	private List<AvailableOfficer> available = new ArrayList<AvailableOfficer>();
-	private List<AvailableOfficer> availableAdmins = new ArrayList<AvailableOfficer>();
+	protected List<AvailableOfficer> available = new ArrayList<AvailableOfficer>();
+	protected List<AvailableOfficer> availableAdmins = new ArrayList<AvailableOfficer>();
 	
-	private TimeoutTracker<String> recentlyChecked = new TimeoutTracker<String>();
+	protected TimeoutTracker<String> recentlyChecked = new TimeoutTracker<String>();
 	
 	protected long seed = 0;
 	
@@ -139,6 +141,7 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		if (random.nextFloat() < officerProb) {
 			boolean merc = random.nextFloat() < mercProb;
 			AvailableOfficer officer = createOfficer(merc, market, random);
+			officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(officer.person.getFaction(), officer.person.getGender()));
 			officer.timeRemaining = dur;
 			addAvailable(officer);
 			log.info("Added officer at " + officer.marketId + "");
@@ -146,6 +149,7 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 			if (random.nextFloat() < officerProb * additionalProb) {
 				merc = random.nextFloat() < mercProb;
 				officer = createOfficer(merc, market, random);
+				officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(officer.person.getFaction(), officer.person.getGender()));
 				officer.timeRemaining = dur;
 				addAvailable(officer);
 				log.info("Added officer at [" + officer.marketId + "]");
@@ -155,6 +159,7 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		if (random.nextFloat() < adminProb) {
 			AvailableOfficer officer = createAdmin(market, random);
 			officer.timeRemaining = dur;
+			officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(officer.person.getFaction(), officer.person.getGender()));
 			addAvailableAdmin(officer);
 			log.info("Added admin at [" + officer.marketId + "]");
 		}
@@ -256,7 +261,7 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		officer.person.getMemoryWithoutUpdate().unset("$ome_salary");
 	}
 	
-	public static String pickPortrait(FactionAPI faction, Gender gender) {
+	public static String pickPortraitPreferNonDuplicate(FactionAPI faction, Gender gender) {
 		WeightedRandomPicker<String> all = faction.getPortraits(gender);
 		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>();
 		
@@ -476,10 +481,27 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		
 		if (DEBUG) System.out.println("Generating officer\n");
 		
+		List<String> fixedSkills = new ArrayList<String>(faction.getDoctrine().getOfficerSkills());
+		Iterator<String> iter = fixedSkills.iterator();
+		while (iter.hasNext()) {
+			String id = iter.next();
+			SkillSpecAPI spec = Global.getSettings().getSkillSpec(id);
+			if (spec != null && spec.hasTag(Skills.TAG_PLAYER_ONLY)) {
+				iter.remove();
+			}
+		}
+		
+		if (random.nextFloat() < faction.getDoctrine().getOfficerSkillsShuffleProbability()) {
+			Collections.shuffle(fixedSkills, random);
+		}
+		
 		int numSpec = 0;
 		for (int i = 0; i < 1; i++) {
 			List<String> skills = plugin.pickLevelupSkills(person, random);
 			String skillId = pickSkill(person, skills, pref, numSpec, random);
+			if (!fixedSkills.isEmpty()) {
+				skillId = fixedSkills.remove(0);
+			}
 			if (skillId != null) {
 				if (DEBUG) System.out.println("Picking initial skill: " + skillId);
 				person.getStats().increaseSkill(skillId);
@@ -502,6 +524,9 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		
 		while (officerData.canLevelUp(allowAnyLevel)) {
 			String skillId = pickSkill(officerData.getPerson(), officerData.getSkillPicks(), pref, numSpec, random);
+			if (!fixedSkills.isEmpty()) {
+				skillId = fixedSkills.remove(0);
+			}
 			if (skillId != null) {
 				if (DEBUG) System.out.println("Leveling up " + skillId);
 				officerData.levelUp(skillId, random);
@@ -769,7 +794,7 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		return true;
 	}
 	
-	private AvailableOfficer getOfficer(String personId) {
+	public AvailableOfficer getOfficer(String personId) {
 		for (AvailableOfficer officer: available) {
 			if (officer.person.getId().equals(personId)) {
 				return officer;
@@ -778,7 +803,7 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		return null;
 	}
 	
-	private AvailableOfficer getAdmin(String personId) {
+	public AvailableOfficer getAdmin(String personId) {
 		for (AvailableOfficer officer: availableAdmins) {
 			if (officer.person.getId().equals(personId)) {
 				return officer;

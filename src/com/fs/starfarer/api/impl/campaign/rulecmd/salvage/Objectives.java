@@ -29,11 +29,16 @@ import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTNeutrinoBurstFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTPoints;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
+import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamVisibilityManager;
 import com.fs.starfarer.api.loading.Description;
 import com.fs.starfarer.api.loading.Description.Type;
+import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
@@ -44,7 +49,14 @@ import com.fs.starfarer.api.util.Misc.Token;
  */
 public class Objectives extends BaseCommandPlugin {
 
-	public static final float SALVAGE_FRACTION = 0.5f;
+	public static String BURST_RANGE = "$COB_burstRange";
+	
+	public static float BURST_RANGE_MAKESHIFT = 10;
+	public static float BURST_RANGE_DOMAIN = 15;
+	public static float BURST_RANGE_SCAVENGER_MIN = 5; // used by HT_CMD
+	public static float BURST_RANGE_SCAVENGER_MAX = 10; // used by HT_CMD
+	
+	public static float SALVAGE_FRACTION = 0.5f;
 	
 	protected CampaignFleetAPI playerFleet;
 	protected SectorEntityToken entity;
@@ -77,6 +89,12 @@ public class Objectives extends BaseCommandPlugin {
 		
 		faction = entity.getFaction();
 		
+		if (entity.hasTag(Tags.MAKESHIFT)) {
+			memory.set(BURST_RANGE, (int)BURST_RANGE_MAKESHIFT, 0);
+		} else {
+			memory.set(BURST_RANGE, (int)BURST_RANGE_DOMAIN, 0);
+		}
+		
 		//DebugFlags.OBJECTIVES_DEBUG = false;
 	}
 
@@ -105,6 +123,9 @@ public class Objectives extends BaseCommandPlugin {
 			return hasRepImpact();
 		} else if (command.equals("showRepairCost")) {
 			printRepairCost(true);
+		} else if (command.equals("showBurstCost")) {
+			boolean hasRecent = HyperspaceTopographyEventIntel.hasRecentReadingsNearPlayer();
+			printBurstCost(canBurst() && !hasRecent);
 		} else if (command.equals("showRepairCostNoPrompt")) {
 			printRepairCost(false);
 		} else if (command.equals("printHackDesc")) {
@@ -114,6 +135,8 @@ public class Objectives extends BaseCommandPlugin {
 			return canBuild(type);
 		} else if (command.equals("canActivate")) {
 			return canActivate(entity.getCustomEntityType());
+		} else if (command.equals("canBurst")) {
+			return canBurst();
 		} else if (command.equals("build")) {
 			String type = params.get(1).getString(memoryMap);
 			build(type, Factions.PLAYER);
@@ -135,11 +158,44 @@ public class Objectives extends BaseCommandPlugin {
 				control(Factions.PLAYER);
 			} else if (action.equals("salvage")) {
 				salvage(Factions.PLAYER);
+			} else if (action.equals("burst")) {
+				doBurst();
 			}
 		}
 		return true;
 	}
 	
+	protected void doBurst() {
+		CargoAPI cargo = playerCargo;
+		String [] res = getBurstResources();
+		int [] quantities = getBurstQuantities();
+		for (int i = 0; i < res.length; i++) {
+			String commodityId = res[i];
+			int quantity = quantities[i];
+			cargo.removeCommodity(commodityId, quantity);
+			AddRemoveCommodity.addCommodityLossText(commodityId, quantity, text);
+		}
+		
+		float range = memory.getFloat(BURST_RANGE);
+		SlipstreamVisibilityManager.updateSlipstreamVisibility(entity.getLocationInHyperspace(), range);
+		
+		int points = 0;
+		if (entity.hasTag(Tags.MAKESHIFT)) {
+			points = HTPoints.NEUTRINO_BURST_MAKESHIFT;
+		} else {
+			points = HTPoints.NEUTRINO_BURST_DOMAIN;
+		}
+		
+		
+		boolean hasRecent = HyperspaceTopographyEventIntel.hasRecentReadingsNearPlayer();
+		if (!hasRecent && points > 0) {
+			HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(new HTNeutrinoBurstFactor(points), dialog);
+			if (HyperspaceTopographyEventIntel.get() != null) {
+				HyperspaceTopographyEventIntel.get().addRecentReadings(entity.getLocationInHyperspace());
+			}
+		}
+	}
+
 	protected boolean hasRepImpact() {
 		for (MarketAPI curr : Global.getSector().getEconomy().getMarkets(entity.getContainingLocation())) {
 			if (curr.getFaction() == entity.getFaction() && 
@@ -372,6 +428,24 @@ public class Objectives extends BaseCommandPlugin {
 		return true;
 	}
 	
+	public boolean canBurst() {
+		if (DebugFlags.OBJECTIVES_DEBUG) {
+			return true;
+		}
+		
+		CargoAPI cargo = playerCargo;
+		String [] res = getBurstResources();
+		int [] quantities = getBurstQuantities();
+		for (int i = 0; i < res.length; i++) {
+			String commodityId = res[i];
+			int quantity = quantities[i];
+			if (quantity > cargo.getQuantity(CargoItemType.RESOURCES, commodityId)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
 	
 	public void updateMemory() {
 		//memory.set("$cob_hacked", isHacked(), 0f);
@@ -477,6 +551,26 @@ public class Objectives extends BaseCommandPlugin {
 		}
 	}
 	
+	public void printBurstCost(boolean withPrompt) {
+		Misc.showCost(text, null, null, getBurstResources(), getBurstQuantities());
+		boolean hasRecent = HyperspaceTopographyEventIntel.hasRecentReadingsNearPlayer();
+		if (hasRecent) {
+			LabelAPI label = text.addPara("You've recently acquired topographic data within %s light-years of your current location,"
+					+ " and a neutrino burst here "
+					+ "will not meaningfully contribute to your understanding of "
+					+ "hyperspace topology. It will, however, still "
+					+ "reveal all nearby slipstreams.", Misc.getHighlightColor(),
+					"" + (int)HyperspaceTopographyEventIntel.RECENT_READINGS_RANGE_LY);
+			label.setHighlightColors(Misc.getHighlightColor(), Misc.getNegativeHighlightColor(), Misc.getNegativeHighlightColor());
+			label.setHighlight("" + (int)HyperspaceTopographyEventIntel.RECENT_READINGS_RANGE_LY,
+							"will not meaningfully contribute", "hyperspace topology");
+		}
+		//RECENT_READINGS_RANGE_LY
+		if (withPrompt) {
+			text.addPara("Proceed with neutrino burst?");
+		}
+	}
+	
 	public void printSalvage() {
 		Misc.showCost(text, "Potential salvage", false, null, null, getResources(), getSalvageQuantities());
 		
@@ -514,7 +608,7 @@ public class Objectives extends BaseCommandPlugin {
 	}
 	public int [] getQuantities() {
 		if (entity.hasTag(Tags.MAKESHIFT) || entity.hasTag(Tags.STABLE_LOCATION)) {
-			return new int[] {20, 100, 10};
+			return new int[] {15, 30, 5};
 		}
 		return new int[] {50, 200, 20, 20};
 	}
@@ -528,6 +622,14 @@ public class Objectives extends BaseCommandPlugin {
 		return new int[] {5};
 	}
 	
+	
+	public int [] getBurstQuantities() {
+		return new int[] {HTPoints.NEUTRINO_BURST_VOLATILES_COST};
+	}
+	
+	public String [] getBurstResources() {
+		return new String[] {Commodities.VOLATILES};
+	}
 }
 
 

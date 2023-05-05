@@ -51,5 +51,8 @@ public interface HullModSpecAPI {
 	void addUITag(String tag);
 	boolean hasUITag(String tag);
 	void setManufacturer(String manufacturer);
+	String getSModDescription(HullSize hullSize);
+	void setSModEffectFormat(String sModEffectFormat);
+	String getSModEffectFormat();
 
 }

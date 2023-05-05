@@ -86,6 +86,10 @@ public class AcausalDisruptorStats extends BaseShipSystemScript {
 		float range = getMaxRange(ship);
 		boolean player = ship == Global.getCombatEngine().getPlayerShip();
 		ShipAPI target = ship.getShipTarget();
+		if (ship.getShipAI() != null && ship.getAIFlags().hasFlag(AIFlags.TARGET_FOR_SHIP_SYSTEM)){
+			target = (ShipAPI) ship.getAIFlags().getCustom(AIFlags.TARGET_FOR_SHIP_SYSTEM);
+		}
+		
 		if (target != null) {
 			float dist = Misc.getDistance(ship.getLocation(), target.getLocation());
 			float radSum = ship.getCollisionRadius() + target.getCollisionRadius();

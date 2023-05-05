@@ -12,24 +12,30 @@ import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
+import com.fs.starfarer.api.campaign.CoreUITabId;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.FleetInflater;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.PlayerMarketTransaction;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.econ.Industry;
+import com.fs.starfarer.api.campaign.econ.Industry.IndustryTooltipMode;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.campaign.listeners.GroundRaidObjectivesListener.RaidResultData;
+import com.fs.starfarer.api.campaign.listeners.IndustryOptionProvider.IndustryOptionData;
 import com.fs.starfarer.api.campaign.listeners.SubmarketInteractionListener.SubmarketInteractionType;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.CollisionGridAPI;
 import com.fs.starfarer.api.combat.MutableStat;
+import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.enc.EncounterPoint;
 import com.fs.starfarer.api.impl.campaign.enc.EncounterPointProvider;
 import com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin;
+import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.TempData;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager;
@@ -85,6 +91,12 @@ public class ListenerUtil {
 	public static void reportAboutToShowLootToPlayer(CargoAPI loot, InteractionDialogAPI dialog) {
 		for (ShowLootListener x : Global.getSector().getListenerManager().getListeners(ShowLootListener.class)) {
 			x.reportAboutToShowLootToPlayer(loot, dialog);
+		}
+	}
+	
+	public static void reportSpecialCargoGainedFromRecoveredDerelict(CargoAPI loot, InteractionDialogAPI dialog) {
+		for (CargoGainedListener x : Global.getSector().getListenerManager().getListeners(CargoGainedListener.class)) {
+			x.reportSpecialCargoGainedFromRecoveredDerelict(loot, dialog);
 		}
 	}
 	
@@ -313,11 +325,95 @@ public class ListenerUtil {
 		return result;
 	}
 	
-//	public static void reportFleetSpawnedToListener(CampaignFleetAPI fleet) {
-//		for (FleetSpawnListener x : Global.getSector().getListenerManager().getListeners(FleetSpawnListener.class)) {
-//			x.reportFleetSpawnedToListener(fleet);
+	public static void reportCellDisrupted(LuddicPathCellsIntel cell) {
+		for (PatherCellListener x : Global.getSector().getListenerManager().getListeners(PatherCellListener.class)) {
+			x.reportCellsDisrupted(cell);
+		}
+	}
+	
+	public static void reportAboutToOpenCoreTab(CoreUITabId tab, Object param) {
+		for (CoreUITabListener x : Global.getSector().getListenerManager().getListeners(CoreUITabListener.class)) {
+			x.reportAboutToOpenCoreTab(tab, param);
+		}
+	}
+	
+	
+	public static void reportAboutToRefreshCharacterStatEffects() {
+		for (CharacterStatsRefreshListener x : Global.getSector().getListenerManager().getListeners(CharacterStatsRefreshListener.class)) {
+			x.reportAboutToRefreshCharacterStatEffects();
+		}
+	}
+	
+	public static void reportRefreshedCharacterStatEffects() {
+		for (CharacterStatsRefreshListener x : Global.getSector().getListenerManager().getListeners(CharacterStatsRefreshListener.class)) {
+			x.reportRefreshedCharacterStatEffects();
+		}
+	}
+	
+	public static void renderInUICoordsBelowUI(ViewportAPI viewport) {
+		for (CampaignUIRenderingListener x : Global.getSector().getListenerManager().getListeners(CampaignUIRenderingListener.class)) {
+			x.renderInUICoordsBelowUI(viewport);
+		}
+	}
+	public static void renderInUICoordsAboveUIBelowTooltips(ViewportAPI viewport) {
+		for (CampaignUIRenderingListener x : Global.getSector().getListenerManager().getListeners(CampaignUIRenderingListener.class)) {
+			x.renderInUICoordsAboveUIBelowTooltips(viewport);
+		}
+	}
+	public static void renderInUICoordsAboveUIAndTooltips(ViewportAPI viewport) {
+		for (CampaignUIRenderingListener x : Global.getSector().getListenerManager().getListeners(CampaignUIRenderingListener.class)) {
+			x.renderInUICoordsAboveUIAndTooltips(viewport);
+		}
+	}
+	
+	public static List<IndustryOptionData> getIndustryOptions(Industry ind) {
+		List<IndustryOptionData> result = new ArrayList<IndustryOptionData>();
+		for (IndustryOptionProvider x : Global.getSector().getListenerManager().getListeners(IndustryOptionProvider.class)) {
+			List<IndustryOptionData> curr = x.getIndustryOptions(ind);
+			if (curr != null) {
+				result.addAll(curr);
+			}
+		}
+		return result;
+	}
+	
+	public static void addToIndustryTooltip(Industry ind, IndustryTooltipMode mode, TooltipMakerAPI tooltip, float width, boolean expanded) {
+		// don't want to do it this way since a provider might add a one-time option that doesn't stay in the list
+		// but has a lasting effect that needs to be shown in the tooltip
+//		List<IndustryOptionData> list = getIndustryOptions(ind);
+//		Set<IndustryOptionProvider> providers = new LinkedHashSet<IndustryOptionProvider>();
+//		for (IndustryOptionData curr : list) {
+//			providers.add(curr.provider);
 //		}
-//	}
+//		for (IndustryOptionProvider x : providers) {
+//			x.addToIndustryTooltip(mode, tooltip, width, expanded);
+//		}
+		
+		for (IndustryOptionProvider x : Global.getSector().getListenerManager().getListeners(IndustryOptionProvider.class)) {
+			x.addToIndustryTooltip(ind, mode, tooltip, width, expanded);
+		}
+	}
+	
+	public static void reportFleetInflated(CampaignFleetAPI fleet, FleetInflater inflater) {
+		for (FleetInflationListener x : Global.getSector().getListenerManager().getListeners(FleetInflationListener.class)) {
+			x.reportFleetInflated(fleet, inflater);
+		}
+	}
+	
+	
+	public static void reportNavigationDataSectionAboutToBeCreated(SectorEntityToken target) {
+		for (NavigationDataSectionListener x : Global.getSector().getListenerManager().getListeners(NavigationDataSectionListener.class)) {
+			x.reportNavigationDataSectionAboutToBeCreated(target);
+		}
+	}
+	
+	public static void reportNavigationDataSectionWasCreated(SectorEntityToken target) {
+		for (NavigationDataSectionListener x : Global.getSector().getListenerManager().getListeners(NavigationDataSectionListener.class)) {
+			x.reportNavigationDataSectionWasCreated(target);
+		}
+	}
+	
+	
 }
 
 

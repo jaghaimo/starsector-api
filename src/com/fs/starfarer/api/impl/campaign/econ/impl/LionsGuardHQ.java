@@ -11,6 +11,7 @@ import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase.PatrolFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.PatrolType;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
@@ -26,7 +27,9 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
+import com.fs.starfarer.api.loading.VariantSource;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
@@ -182,9 +185,9 @@ public class LionsGuardHQ extends BaseIndustry implements RouteFleetSpawner, Fle
 			int medium = getCount(PatrolType.COMBAT);
 			int heavy = getCount(PatrolType.HEAVY);
 
-			int maxLight = 3;
+			int maxLight = 2;
 			int maxMedium = 2;
-			int maxHeavy = 1;
+			int maxHeavy = 2;
 			
 			WeightedRandomPicker<PatrolType> picker = new WeightedRandomPicker<PatrolType>();
 			picker.add(PatrolType.HEAVY, maxHeavy - heavy); 
@@ -344,6 +347,15 @@ public class LionsGuardHQ extends BaseIndustry implements RouteFleetSpawner, Fle
 		
 		fleet.getCommander().setPostId(postId);
 		fleet.getCommander().setRankId(rankId);
+		
+		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+			if (member.isCapital()) {
+				member.setVariant(member.getVariant().clone(), false, false);
+				member.getVariant().setSource(VariantSource.REFIT);
+				member.getVariant().addTag(Tags.TAG_NO_AUTOFIT);
+				member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);
+			}
+		}
 		
 		market.getContainingLocation().addEntity(fleet);
 		fleet.setFacing((float) Math.random() * 360f);

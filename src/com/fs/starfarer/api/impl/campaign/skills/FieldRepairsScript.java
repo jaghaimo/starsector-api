@@ -136,6 +136,9 @@ public class FieldRepairsScript implements EveryFrameScript {
 		WeightedRandomPicker<FleetMemberAPI> picker = new WeightedRandomPicker<FleetMemberAPI>();
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 			if (member.getVariant().isStockVariant()) continue;
+			if (member.isMothballed()) continue;
+			if (member.getHullSpec().hasTag(Tags.HULL_UNRESTORABLE) ||
+					member.getVariant().hasTag(Tags.VARIANT_UNRESTORABLE)) continue;
 			int dmods = DModManager.getNumNonBuiltInDMods(member.getVariant());
 			if (dmods > 0) {
 				picker.add(member, 1);
@@ -166,7 +169,9 @@ public class FieldRepairsScript implements EveryFrameScript {
 		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
 		WeightedRandomPicker<FleetMemberAPI> picker = new WeightedRandomPicker<FleetMemberAPI>();
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
-			if (member.getVariant().isStockVariant()) {
+			if (member.getVariant().isStockVariant() || member.isMothballed() ||
+					member.getHullSpec().hasTag(Tags.HULL_UNRESTORABLE) ||
+					member.getVariant().hasTag(Tags.VARIANT_UNRESTORABLE)) {
 				seen.add(member.getId());
 				continue;
 			}

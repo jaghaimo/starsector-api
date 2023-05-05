@@ -99,6 +99,19 @@ public class Commission extends BaseCommandPlugin {
 		} else if (command.equals("personCanGiveCommission")) {
 			return personCanGiveCommission();
 		}
+		else if (command.equals("commissionFactionIsAtWarWith")) {
+			if (hasOtherCommission()) {
+				if (params.size() >= 1) {
+					String target_faction_id = params.get(0).getString(memoryMap);
+					FactionAPI target_faction = Global.getSector().getFaction(target_faction_id);
+					if(target_faction != null )
+					{
+						return Misc.getCommissionFaction().isHostileTo(target_faction);
+					}
+				}
+			}
+			return false;
+		}
 		
 		return true;
 	}

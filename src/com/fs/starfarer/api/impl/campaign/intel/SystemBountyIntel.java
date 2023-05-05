@@ -9,21 +9,21 @@ import org.apache.log4j.Logger;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
+import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
-import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.ActionType;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
-import com.fs.starfarer.api.impl.campaign.MilitaryResponseScript;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
+import com.fs.starfarer.api.impl.campaign.MilitaryResponseScript;
 import com.fs.starfarer.api.impl.campaign.MilitaryResponseScript.MilitaryResponseParams;
 import com.fs.starfarer.api.impl.campaign.econ.BaseMarketConditionPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
@@ -47,15 +47,25 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 	protected FactionAPI faction = null;
 	protected FactionAPI enemyFaction = null;
 	protected SystemBountyResult latestResult;
+	
+	protected boolean commerceMode = false; // due to Commerce industry in player system
 
 	protected MilitaryResponseScript script;
 	
 	public SystemBountyIntel(MarketAPI market) {
+		this(market, -1, false);
+	}
+	public SystemBountyIntel(MarketAPI market, int baseReward, boolean commerceMode) {
 		this.market = market;
+		this.commerceMode = commerceMode;
+		
 		location = market.getContainingLocation();
 		faction = market.getFaction();
+		if (commerceMode) {
+			faction = Global.getSector().getFaction(Factions.INDEPENDENT);
+		}
 		
-		if (market.getFaction().isPlayerFaction()) {
+		if (!commerceMode && market.getFaction().isPlayerFaction()) {
 			endImmediately();
 			return;
 		}
@@ -73,6 +83,9 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		baseBounty *= highStabilityMult;
 		
 		baseBounty = (int) baseBounty;
+		if (baseReward > 0) {
+			baseBounty = baseReward;
+		}
 		
 		log.info(String.format("Starting bounty at market [%s], %d credits per frigate", market.getName(), (int) baseBounty));
 		
@@ -81,18 +94,24 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		
 		//conditionToken = market.addCondition(Conditions.EVENT_SYSTEM_BOUNTY, this);
 		
-		Global.getSector().getIntelManager().queueIntel(this);
+		if (commerceMode) {
+			Global.getSector().getIntelManager().addIntel(this);
+		} else {
+			Global.getSector().getIntelManager().queueIntel(this);
+		}
 		
 		Global.getSector().getListenerManager().addListener(this);
 		
-		MilitaryResponseParams params = new MilitaryResponseParams(ActionType.HOSTILE, 
-				"system_bounty_" + market.getId(), 
-				getFactionForUIColors(),
-				market.getPrimaryEntity(),
-				0.75f,
-				duration);
-		script = new MilitaryResponseScript(params);
-		location.addScript(script);
+		if (!commerceMode) {
+			MilitaryResponseParams params = new MilitaryResponseParams(ActionType.HOSTILE, 
+					"system_bounty_" + market.getId(), 
+					getFactionForUIColors(),
+					market.getPrimaryEntity(),
+					0.75f,
+					duration);
+			script = new MilitaryResponseScript(params);
+			location.addScript(script);
+		}
 	}
 	
 	public void reportMadeVisibleToPlayer() {
@@ -155,7 +174,7 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		
 		elapsedDays += days;
 
-		if (elapsedDays >= duration && !isDone()) {
+		if (elapsedDays >= duration && !isDone() && !commerceMode) {
 			endAfterDelay();
 			boolean current = market.getContainingLocation() == Global.getSector().getCurrentLocation();
 			sendUpdateIfPlayerHasIntel(new Object(), !current);
@@ -170,6 +189,7 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 	}
 	
 	public float getTimeRemainingFraction() {
+		if (commerceMode) return 1f;
 		float f = 1f - elapsedDays / duration;
 		return f;
 	}
@@ -214,7 +234,15 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		int payment = 0;
 		float fpDestroyed = 0;
 		for (CampaignFleetAPI otherFleet : battle.getNonPlayerSideSnapshot()) {
-			if (!market.getFaction().isHostileTo(otherFleet.getFaction())) continue;
+			if (commerceMode) {
+				if (!market.getFaction().isHostileTo(otherFleet.getFaction()) && 
+						!otherFleet.getFaction().isHostileTo(Factions.INDEPENDENT)) continue;
+				
+				if (Misc.isTrader(otherFleet)) continue;
+				if (Factions.INDEPENDENT.equals(otherFleet.getFaction().getId())) continue;
+			} else {
+				if (!market.getFaction().isHostileTo(otherFleet.getFaction())) continue;
+			}
 			
 			float bounty = 0;
 			for (FleetMemberAPI loss : Misc.getSnapshotMembersLost(otherFleet)) {
@@ -269,13 +297,17 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 														  null, null, info, tc, isUpdate, 0f);
 			} else if (mode == ListInfoMode.IN_DESC) {
 				info.addPara("%s base reward per frigate", initPad, tc, h, Misc.getDGSCredits(baseBounty));
-				addDays(info, "remaining", duration - elapsedDays, tc);
+				if (!commerceMode) {
+					addDays(info, "remaining", duration - elapsedDays, tc);
+				}
 			} else {
 				if (!isEnding()) {
 					info.addPara("Faction: " + faction.getDisplayName(), initPad, tc,
 								 faction.getBaseUIColor(), faction.getDisplayName());
 					info.addPara("%s base reward per frigate", 0f, tc, h, Misc.getDGSCredits(baseBounty));
-					addDays(info, "remaining", duration - elapsedDays, tc);
+					if (!commerceMode) {
+						addDays(info, "remaining", duration - elapsedDays, tc);
+					}
 				}
 			}
 		}
@@ -345,9 +377,18 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 			locStr = "in or near the " + market.getStarSystem().getNameWithLowercaseType();
 		}
 		
-		info.addPara("%s authorities " + market.getOnOrAt() + " " + market.getName() + 
-				" have posted a bounty on all hostile fleets " + locStr + ".",
-				opad, faction.getBaseUIColor(), Misc.ucFirst(faction.getPersonNamePrefix()));
+		if (commerceMode) {
+			info.addPara("%s commercial concerns " + market.getOnOrAt() + " " + market.getName() + 
+					" have banded together and posted a modest but long-term bounty on all "
+					+ "hostile fleets " + locStr + ".",
+					opad, faction.getBaseUIColor(), Misc.ucFirst(faction.getPersonNamePrefix()));
+			info.addPara("The bounty stipulates that trade fleets are an exception - "
+					+ "attacking them will not result in a reward, regardless of their faction.", opad);
+		} else {
+			info.addPara("%s authorities " + market.getOnOrAt() + " " + market.getName() + 
+					" have posted a bounty on all hostile fleets " + locStr + ".",
+					opad, faction.getBaseUIColor(), Misc.ucFirst(faction.getPersonNamePrefix()));
+		}
 
 		if (isEnding()) {
 			info.addPara("This bounty is no longer on offer.", opad);
@@ -361,9 +402,14 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		
 		addBulletPoints(info, ListInfoMode.IN_DESC);
 		
-		if (enemyFaction != null) {
-			info.addPara("Likely triggered by %s activity.",
-					opad, enemyFaction.getBaseUIColor(), enemyFaction.getPersonNamePrefix());
+		if (!commerceMode) {
+			if (enemyFaction != null) {
+				info.addPara("Likely triggered by %s activity.",
+						opad, enemyFaction.getBaseUIColor(), enemyFaction.getPersonNamePrefix());
+			}
+		} else {
+			info.addPara("Triggered by the presence of Commerce on one of your colonies in-system, and by the "
+					+ "level of hostile activity.", opad);
 		}
 		
 		
@@ -374,23 +420,25 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 //					 faction.getDisplayNameWithArticleWithoutArticle());
 		
 		
-		String isOrAre = faction.getDisplayNameIsOrAre();
-		FactionCommissionIntel temp = new FactionCommissionIntel(faction);
-		List<FactionAPI> hostile = temp.getHostileFactions();
-		if (hostile.isEmpty()) {
-			info.addPara(Misc.ucFirst(faction.getDisplayNameWithArticle()) + " " + isOrAre + " not currently hostile to any major factions.", 0f);
-		} else {
-			info.addPara(Misc.ucFirst(faction.getDisplayNameWithArticle()) + " " + isOrAre + " currently hostile to:", opad);
-			
-			info.setParaFontDefault();
-			
-			info.setBulletedListMode(BaseIntelPlugin.INDENT);
-			float initPad = pad;
-			for (FactionAPI other : hostile) {
-				info.addPara(Misc.ucFirst(other.getDisplayName()), other.getBaseUIColor(), initPad);
-				initPad = 0f;
+		if (!commerceMode) {
+			String isOrAre = faction.getDisplayNameIsOrAre();
+			FactionCommissionIntel temp = new FactionCommissionIntel(faction);
+			List<FactionAPI> hostile = temp.getHostileFactions();
+			if (hostile.isEmpty()) {
+				info.addPara(Misc.ucFirst(faction.getDisplayNameWithArticle()) + " " + isOrAre + " not currently hostile to any major factions.", 0f);
+			} else {
+				info.addPara(Misc.ucFirst(faction.getDisplayNameWithArticle()) + " " + isOrAre + " currently hostile to:", opad);
+				
+				info.setParaFontDefault();
+				
+				info.setBulletedListMode(BaseIntelPlugin.INDENT);
+				float initPad = pad;
+				for (FactionAPI other : hostile) {
+					info.addPara(Misc.ucFirst(other.getDisplayName()), other.getBaseUIColor(), initPad);
+					initPad = 0f;
+				}
+				info.setBulletedListMode(null);
 			}
-			info.setBulletedListMode(null);
 		}
 		
 		if (latestResult != null) {
@@ -427,6 +475,32 @@ public class SystemBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		return market.getPrimaryEntity();
 	}
 
+	
+	public float getDuration() {
+		return duration;
+	}
+
+	public void setDuration(float duration) {
+		this.duration = duration;
+	}
+
+	public float getBaseBounty() {
+		return baseBounty;
+	}
+
+	public void setBaseBounty(float baseBounty) {
+		this.baseBounty = baseBounty;
+	}
+	public boolean isCommerceMode() {
+		return commerceMode;
+	}
+	
+	public void setCommerceMode(boolean commerceMode) {
+		this.commerceMode = commerceMode;
+	}
+	public LocationAPI getLocation() {
+		return location;
+	}
 	
 }
 

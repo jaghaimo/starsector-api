@@ -232,7 +232,8 @@ public class RouteFleetAssignmentAI extends BaseAssignmentAI {
 							"returning to " + to.getName());
 		if (current.daysMax > current.elapsed) {
 			fleet.addAssignment(FleetAssignment.ORBIT_PASSIVE, to, 
-								current.daysMax - current.elapsed, "orbiting " + to.getName());
+								//current.daysMax - current.elapsed, "orbiting " + to.getName());
+								current.daysMax - current.elapsed, getEndingActionText(current));
 		}
 		fleet.addAssignment(FleetAssignment.GO_TO_LOCATION_AND_DESPAWN, to, 
 				1000f, getEndingActionText(current),

@@ -11,6 +11,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.listeners.CargoGainedListener;
 import com.fs.starfarer.api.campaign.listeners.ShowLootListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
@@ -31,7 +32,7 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
-public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootListener {
+public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootListener, CargoGainedListener {
 
 	public static float PROB_PATHER = 0.5f;
 	public static float PROB_MERC = 0.5f;
@@ -282,6 +283,10 @@ public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootLi
 		}
 	}
 	
+	public void reportSpecialCargoGainedFromRecoveredDerelict(CargoAPI loot, InteractionDialogAPI dialog) {
+		reportAboutToShowLootToPlayer(loot, dialog);
+	}
+	
 	@Override
 	public void acceptImpl(InteractionDialogAPI dialog, Map<String, MemoryAPI> memoryMap) {
 		super.acceptImpl(dialog, memoryMap);
@@ -372,6 +377,8 @@ public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootLi
 	public SectorEntityToken getMapLocation(SectorMapAPI map) {
 		return getMapLocationFor(system.getHyperspaceAnchor());
 	}
+
+
 }
 
 

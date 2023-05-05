@@ -1,5 +1,6 @@
 package com.fs.starfarer.api.combat;
 
+import java.awt.Color;
 import java.util.List;
 
 import org.lwjgl.util.vector.Vector2f;
@@ -109,6 +110,8 @@ public interface WeaponAPI {
 		DIRECT_AIM,
 		NO_TURN_RATE_BOOST_WHEN_IDLE,
 		RESET_BARREL_INDEX_ON_BURST,
+		
+		USE_LESS_VS_SHIELDS,
 	}
 	
 	
@@ -251,6 +254,24 @@ public interface WeaponAPI {
 	SpriteAPI getGlowSpriteAPI();
 	AmmoTrackerAPI getAmmoTracker();
 	void setRefireDelay(float delay);
+	void setFacing(float facing);
+	void updateBeamFromPoints();
+	boolean isKeepBeamTargetWhileChargingDown();
+	void setKeepBeamTargetWhileChargingDown(boolean keepTargetWhileChargingDown);
+	void setScaleBeamGlowBasedOnDamageEffectiveness(boolean scaleGlowBasedOnDamageEffectiveness);
+	void setForceFireOneFrame(boolean forceFire);
+	void setGlowAmount(float glow, Color glowColor);
+	void setForceNoFireOneFrame(boolean forceNoFireOneFrame);
+	void setSuspendAutomaticTurning(boolean suspendAutomaticTurning);
+	float getBurstFireTimeRemaining();
+	Vector2f getRenderOffsetForDecorativeBeamWeaponsOnly();
+	void setRenderOffsetForDecorativeBeamWeaponsOnly(Vector2f renderOffsetForDecorativeBeamWeaponsOnly);
+	float getRefireDelay();
+	void forceShowBeamGlow();
+	boolean isInBurst();
+	WeaponSpecAPI getOriginalSpec();
+	void setWeaponGlowWidthMult(float weaponGlowWidthMult);
+	void setWeaponGlowHeightMult(float weaponGlowHeightMult);
 }
 
 

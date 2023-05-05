@@ -3,6 +3,8 @@ package com.fs.starfarer.api.impl.campaign.ids;
 public class Stats {
 	
 	// character stats
+	public static final String CAN_DEPLOY_LEFT_RIGHT_MOD = "can_deploy_left_right";
+	
 	public static final String AUXILIARY_EFFECT_ADD_PERCENT = "auxiliary_effect_add_percent";
 	public static final String OFFICER_MAX_LEVEL_MOD = "officer_max_level_mod";
 	public static final String OFFICER_MAX_ELITE_SKILLS_MOD = "officer_max_elite_skills_mod";
@@ -28,6 +30,8 @@ public class Stats {
 	//- old, will probably replace these two?
 //	public static final String OFFICER_NUM_MULT = "officer_num_mult";
 //	public static final String OFFICER_LEVEL_MULT = "officer_level_mult";
+	
+	public static final String SLIPSTREAM_REVEAL_RANGE_LY_MOD = "slipstream_reveal_range_ly_mod";
 	
 	public static final String ADMIN_PROB_MOD = "admin_prob";
 	public static final String OFFICER_PROB_MOD = "officer_prob";
@@ -109,6 +113,8 @@ public class Stats {
 	
 	
 	// fleet members
+	//public static final String CR_LOSS_WHEN_DISABLED_MULT = "cr_loss_when_disabled_mult";
+	
 	public static final String FLEET_GROUND_SUPPORT = "ground_support";
 	public static final String FLEET_BOMBARD_COST_REDUCTION = "fleet_bombard_cost_reduction";
 	
@@ -140,8 +146,12 @@ public class Stats {
 	 */
 	public static final String DEPLOYMENT_POINTS_MOD = "deployment_points_mod";
 	
+	public static final String FIGHTER_REARM_TIME_EXTRA_FLAT_MOD = "fighter_rearm_time_extra_flat_mod";
+	public static final String FIGHTER_REARM_TIME_EXTRA_PER_WING_MOD = "fighter_rearm_time_extra_per_wing_mod";
+	public static final String FIGHTER_REARM_TIME_EXTRA_FRACTION_OF_BASE_REFIT_TIME_MOD = "fighter_rearm_time_extra_fraction_of_base_refit_time_mod";
+	
 	//public static final String HAS_FORCE_CONCENTRATION_BONUS_MOD = "has_force_concentration_bonus";
-	public static final String CAN_DEPLOY_LEFT_RIGHT_MOD = "can_deploy_left_right";
+	
 	
 	public static final String PHASE_CLOAK_FLUX_LEVEL_FOR_MIN_SPEED_MOD = "phase_cloak_flux_level_for_min_speed_mod";
 	
@@ -165,6 +175,7 @@ public class Stats {
 	public static final String ELECTRONIC_WARFARE_FLAT = "electronic_warfare_flat";
 	public static final String ELECTRONIC_WARFARE_PENALTY_MULT = "electronic_warfare_penalty_mult";
 	public static final String ELECTRONIC_WARFARE_PENALTY_MOD = "electronic_warfare_penalty_mod";
+	
 	public static final String ELECTRONIC_WARFARE_PENALTY_MAX_FOR_SHIP_MOD = "electronic_warfare_penalty_max_for_ship_mod";
 	public static final String COMMAND_POINT_RATE_FLAT = "command_point_rate_flat";
 	public static final String INDIVIDUAL_SHIP_RECOVERY_MOD = "individual_ship_recovery_mod";
@@ -214,6 +225,13 @@ public class Stats {
 	public static final String MEDIUM_BEAM_MOD = "medium_beam_mod";
 	public static final String LARGE_BEAM_MOD = "large_beam_mod";
 		
+	public static final String CONVERTED_HANGAR_MOD = "converted_hangar_mod";
+	public static final String CONVERTED_HANGAR_NO_CREW_INCREASE = "converted_hangar_no_crew_increase";
+	public static final String CONVERTED_HANGAR_NO_REARM_INCREASE = "converted_hangar_no_rearm_increase";
+	public static final String CONVERTED_HANGAR_NO_DP_INCREASE = "converted_hangar_no_dp_increase";
+	public static final String CONVERTED_HANGAR_NO_REFIT_PENALTY = "converted_hangar_no_refit_penalty";
+	//public static final String CONVERTED_HANGAR_NO_PERFORMANCE_PENALTY = "converted_hangar_no_performance_penalty";
+	//public static final String CONVERTED_HANGAR_NO_COST_INCREASE = "converted_hangar_no_cost_increase";
 	
 	
 	/**

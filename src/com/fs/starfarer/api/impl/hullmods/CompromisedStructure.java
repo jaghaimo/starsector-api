@@ -7,7 +7,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class CompromisedStructure extends BaseHullMod {
-	public static final float DEPLOYMENT_COST_MULT = 0.8f;
+	public static float DEPLOYMENT_COST_MULT = 0.8f;
 	
 	public static void modifyCost(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getSuppliesToRecover().modifyMult(id, DEPLOYMENT_COST_MULT);
@@ -24,8 +24,8 @@ public class CompromisedStructure extends BaseHullMod {
 		return null;
 	}
 	
-	public static final float ARMOR_PENALTY_MULT = 0.8f;
-	public static final float HULL_PENALTY_MULT = 0.8f;
+	public static float ARMOR_PENALTY_MULT = 0.8f;
+	public static float HULL_PENALTY_MULT = 0.8f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		

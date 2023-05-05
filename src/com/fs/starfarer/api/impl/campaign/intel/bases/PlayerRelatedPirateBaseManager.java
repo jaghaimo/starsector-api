@@ -11,7 +11,6 @@ import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
@@ -27,7 +26,7 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 	public static final String KEY = "$core_PR_pirateBaseManager";
 	
 	
-	public static int MIN_MONTHS_BEFORE_RAID = Global.getSettings().getInt("minMonthsBeforeFirstPirateRaidOnPlayerColony");
+	//public static int MIN_MONTHS_BEFORE_RAID = Global.getSettings().getInt("minMonthsBeforeFirstPirateRaidOnPlayerColony");
 	
 	public static int MIN_TIMEOUT = Global.getSettings().getIntFromArray("playerRelatedPirateBaseCreationTimeoutMonths", 0); 
 	public static int MAX_TIMEOUT = Global.getSettings().getIntFromArray("playerRelatedPirateBaseCreationTimeoutMonths", 1);
@@ -43,7 +42,7 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 	
 	
 	protected long start = 0;
-	protected boolean sentFirstRaid = false;
+	//protected boolean sentFirstRaid = false;
 	protected IntervalUtil monthlyInterval = new IntervalUtil(20f, 40f);
 	protected int monthsPlayerColoniesExist = 0;
 	protected int baseCreationTimeout = 0;
@@ -89,13 +88,13 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 			
 			monthsPlayerColoniesExist++;
 			
-			if (!sentFirstRaid) {
-				if (monthsPlayerColoniesExist >= MIN_MONTHS_BEFORE_RAID && !markets.isEmpty()) {
-					sendFirstRaid(markets);
-					baseCreationTimeout = MIN_TIMEOUT + random.nextInt(MAX_TIMEOUT - MIN_TIMEOUT + 1);
-				}
-				return;
-			}
+//			if (!sentFirstRaid) {
+//				if (monthsPlayerColoniesExist >= MIN_MONTHS_BEFORE_RAID && !markets.isEmpty()) {
+//					sendFirstRaid(markets);
+//					baseCreationTimeout = MIN_TIMEOUT + random.nextInt(MAX_TIMEOUT - MIN_TIMEOUT + 1);
+//				}
+//				return;
+//			}
 			
 			if (baseCreationTimeout > 0) {
 				baseCreationTimeout--;
@@ -186,8 +185,9 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 			return;
 		}
 		
-		intel.setTargetPlayerColoniesOnly(true);
-		intel.setForceTarget(initialTarget);
+		//intel.setTargetPlayerColoniesOnly(true);
+		// this is for raids: don't do it since raids are handled by HostileActivityEventIntel now
+		//intel.setForceTarget(initialTarget);
 		intel.updateTarget();
 		bases.add(intel);
 		
@@ -206,35 +206,35 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 		return picker.pick();
 	}
 	
-	protected void sendFirstRaid(List<MarketAPI> markets) {
-		if (markets.isEmpty()) return;
-		
-		
-		WeightedRandomPicker<MarketAPI> picker = new WeightedRandomPicker<MarketAPI>(random);
-		picker.addAll(markets);
-		MarketAPI target = picker.pick();
-		
-		PirateBaseIntel closest = null;
-		float minDist = Float.MAX_VALUE;
-		for (IntelInfoPlugin p : Global.getSector().getIntelManager().getIntel(PirateBaseIntel.class)) {
-			PirateBaseIntel intel = (PirateBaseIntel) p;
-			if (intel.isEnding()) continue;
-			
-			float dist = Misc.getDistanceLY(intel.getMarket().getPrimaryEntity(), target.getPrimaryEntity());
-			if (dist < minDist && dist <= 15) {
-				minDist = dist;
-				closest = intel;
-			}
-		}
-		
-		if (closest != null && target != null) {
-			float raidFP = 120 + 30f * random.nextFloat();
-//			raidFP = 1000;
-//			raidFP = 500;
-			closest.startRaid(target.getStarSystem(), raidFP);
-			sentFirstRaid = true;
-		}
-	}
+//	protected void sendFirstRaid(List<MarketAPI> markets) {
+//		if (markets.isEmpty()) return;
+//		
+//		
+//		WeightedRandomPicker<MarketAPI> picker = new WeightedRandomPicker<MarketAPI>(random);
+//		picker.addAll(markets);
+//		MarketAPI target = picker.pick();
+//		
+//		PirateBaseIntel closest = null;
+//		float minDist = Float.MAX_VALUE;
+//		for (IntelInfoPlugin p : Global.getSector().getIntelManager().getIntel(PirateBaseIntel.class)) {
+//			PirateBaseIntel intel = (PirateBaseIntel) p;
+//			if (intel.isEnding()) continue;
+//			
+//			float dist = Misc.getDistanceLY(intel.getMarket().getPrimaryEntity(), target.getPrimaryEntity());
+//			if (dist < minDist && dist <= 15) {
+//				minDist = dist;
+//				closest = intel;
+//			}
+//		}
+//		
+//		if (closest != null && target != null) {
+//			float raidFP = 120 + 30f * random.nextFloat();
+////			raidFP = 1000;
+////			raidFP = 500;
+//			closest.startRaid(target.getStarSystem(), raidFP);
+//			sentFirstRaid = true;
+//		}
+//	}
 
 	
 	
@@ -279,10 +279,13 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 				weight = 3f;
 			} else if (system.hasTag(Tags.THEME_REMNANT_NO_FLEETS)) {
 				weight = 3f;
+			} else if (system.hasTag(Tags.THEME_REMNANT_DESTROYED)) {
+				weight = 3f;
 			} else if (system.hasTag(Tags.THEME_RUINS)) {
 				weight = 5f;
 			} else if (system.hasTag(Tags.THEME_CORE_UNPOPULATED)) {
-				weight = 1f;
+				//weight = 1f;
+				weight = 0f;
 			}
 			if (weight <= 0f) continue;
 			

@@ -110,6 +110,13 @@ public class FusionLampEntityPlugin extends BaseCustomEntityPlugin {
 		}
 		return lightColor;
 	}
+	
+	public void setGlowColor(Color color) {
+		entity.getMemoryWithoutUpdate().set(GLOW_COLOR_KEY, color);
+	}
+	public void setLightColor(Color color) {
+		entity.getMemoryWithoutUpdate().set(LIGHT_COLOR_KEY, color);
+	}
 
 	public float getRenderRange() {
 		return entity.getRadius() + 1200f;

@@ -149,8 +149,8 @@ public class GAProjectZiggurat extends GABaseMission { //implements ShipRecovery
 		
 		connectWithGlobalFlag(Stage.GET_KELISE_LEAD, Stage.SELL_BLACKMAIL_MATERIAL, "$gaPZ_sellBlackmail");
 		connectWithGlobalFlag(Stage.SELL_BLACKMAIL_MATERIAL, Stage.SOLD_BLACKMAIL_MATERIAL, "$gaPZ_soldBlackmail");
-		connectWithGlobalFlag(Stage.GET_KELISE_LEAD, Stage.TALK_TO_CALLISTO, "$gaPZ_talkToKallisto");
-		connectWithGlobalFlag(Stage.SOLD_BLACKMAIL_MATERIAL, Stage.TALK_TO_CALLISTO, "$gaPZ_talkToKallisto");
+		connectWithGlobalFlag(Stage.GET_KELISE_LEAD, Stage.TALK_TO_CALLISTO, "$gaPZ_talkToCallisto");
+		connectWithGlobalFlag(Stage.SOLD_BLACKMAIL_MATERIAL, Stage.TALK_TO_CALLISTO, "$gaPZ_talkToCallisto");
 		connectWithGlobalFlag(Stage.TALK_TO_CALLISTO, Stage.GO_TO_RELAY_SYSTEM, "$gaPZ_goToRelaySystem");
 		connectWithGlobalFlag(Stage.GO_TO_RELAY_SYSTEM, Stage.GO_TO_NASCENT_WELL, "$gaPZ_goToWell");
 		setStageOnEnteredLocation(Stage.INVESTIGATE_SITE, alphaSite);

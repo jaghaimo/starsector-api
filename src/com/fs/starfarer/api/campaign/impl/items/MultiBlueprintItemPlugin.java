@@ -40,16 +40,29 @@ public class MultiBlueprintItemPlugin extends BaseSpecialItemPlugin implements B
 		}
 	}
 	
+	transient protected List<String> cachedFighters = null;
+	transient protected List<String> cachedShips = null;
+	transient protected List<String> cachedWeapons= null;
+	
 	public List<String> getProvidedFighters() {
-		return getWingIds(tags);
+		if (cachedFighters == null) {
+			cachedFighters = getWingIds(tags);
+		}
+		return cachedFighters;
 	}
 
 	public List<String> getProvidedShips() {
-		return getShipIds(tags);
+		if (cachedShips == null) {
+			cachedShips = getShipIds(tags);
+		}
+		return cachedShips;
 	}
 
 	public List<String> getProvidedWeapons() {
-		return getWeaponIds(tags);
+		if (cachedWeapons == null) {
+			cachedWeapons = getWeaponIds(tags);
+		}
+		return cachedWeapons;
 	}
 	public List<String> getProvidedIndustries() {
 		return null;
@@ -79,9 +92,9 @@ public class MultiBlueprintItemPlugin extends BaseSpecialItemPlugin implements B
 		float brX = cx + 34f + p;
 		float brY = cy - 9f - p;
 		
-		List<String> ships = getShipIds(tags);
-		List<String> weapons = getWeaponIds(tags);
-		List<String> fighters = getWingIds(tags);
+		List<String> ships = getProvidedShips();
+		List<String> weapons = getProvidedWeapons();
+		List<String> fighters = getProvidedFighters();
 		boolean known = areAllKnown(ships, weapons, fighters);
 		
 		float mult = 1f;
@@ -131,9 +144,9 @@ public class MultiBlueprintItemPlugin extends BaseSpecialItemPlugin implements B
 		Color b = Misc.getButtonTextColor();
 		b = Misc.getPositiveHighlightColor();
 		
-		List<String> ships = getShipIds(tags);
-		List<String> weapons = getWeaponIds(tags);
-		List<String> fighters = getWingIds(tags);
+		List<String> ships = getProvidedShips();
+		List<String> weapons = getProvidedWeapons();
+		List<String> fighters = getProvidedFighters();
 		
 		float maxTotal = 21;
 		int minPer = 3;
@@ -233,17 +246,17 @@ public class MultiBlueprintItemPlugin extends BaseSpecialItemPlugin implements B
 
 	@Override
 	public boolean shouldRemoveOnRightClickAction() {
-		List<String> ships = getShipIds(tags);
-		List<String> weapons = getWeaponIds(tags);
-		List<String> fighters = getWingIds(tags);
+		List<String> ships = getProvidedShips();
+		List<String> weapons = getProvidedWeapons();
+		List<String> fighters = getProvidedFighters();
 		return !areAllKnown(ships, weapons, fighters);
 	}
 
 	@Override
 	public void performRightClickAction() {
-		List<String> ships = getShipIds(tags);
-		List<String> weapons = getWeaponIds(tags);
-		List<String> fighters = getWingIds(tags);
+		List<String> ships = getProvidedShips();
+		List<String> weapons = getProvidedWeapons();
+		List<String> fighters = getProvidedFighters();
 		
 		if (areAllKnown(ships, weapons, fighters)) {
 			Global.getSector().getCampaignUI().getMessageDisplay().addMessage(

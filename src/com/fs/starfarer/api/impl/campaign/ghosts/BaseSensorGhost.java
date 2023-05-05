@@ -261,10 +261,22 @@ public class BaseSensorGhost implements SensorGhost {
 				script.remove(curr);
 			}
 		}
+
 		
 		movement.advance(amount);
+//		if (this instanceof LeviathanGhost) {
+//			Vector2f prev = entity.getLocation();
+//			Vector2f next = movement.getLocation();
+//			if (Misc.getDistance(prev, next) > 100f) {
+//				System.out.println("LOCATION JUMP");
+//				movement.advance(amount);
+//			}
+//		}
+		
+		
 		entity.getLocation().set(movement.getLocation());
 		entity.getVelocity().set(movement.getVelocity());
+		//entity.getVelocity().set(0f, 0f);
 	}
 	
 	

@@ -95,8 +95,11 @@ public class MagneticFieldTerrainPlugin extends BaseRingTerrain implements Auror
 	
 	protected MagneticFieldParams params;
 	protected FlareManager flareManager;
-
 	
+	public MagneticFieldParams getParams() {
+		return params;
+	}
+
 	public void init(String terrainId, SectorEntityToken entity, Object param) {
 		super.init(terrainId, entity, param);
 		this.params = (MagneticFieldParams) param;
@@ -542,6 +545,14 @@ public class MagneticFieldTerrainPlugin extends BaseRingTerrain implements Auror
 
 	public RangeBlockerUtil getAuroraBlocker() {
 		return null;
+	}
+
+	public AuroraRenderer getRenderer() {
+		return renderer;
+	}
+	
+	public FlareManager getFlareManager() {
+		return flareManager;
 	}
 }
 

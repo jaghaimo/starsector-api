@@ -46,4 +46,8 @@ public class BaseShipSystemScript implements ShipSystemStatsScriptAdvanced {
 	public int getUsesOverride(ShipAPI ship) {
 		return -1;
 	}
+
+	public String getDisplayNameOverride(State state, float effectLevel) {
+		return null;
+	}
 }

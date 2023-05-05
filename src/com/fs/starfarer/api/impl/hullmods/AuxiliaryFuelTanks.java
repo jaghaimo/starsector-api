@@ -25,9 +25,11 @@ public class AuxiliaryFuelTanks extends BaseLogisticsHullMod {
 		if (stats.getVariant() != null) {
 			mod = Math.max(stats.getVariant().getHullSpec().getFuel() * MIN_FRACTION, mod);
 		}
+		boolean sMod = isSMod(stats);
+		if (sMod) mod *= AdditionalBerthing.SMOD_MULT;
 		stats.getFuelMod().modifyFlat(id, mod);
 		
-		if (stats.getVariant() != null && stats.getVariant().hasHullMod(HullMods.CIVGRADE) && !stats.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {
+		if (!sMod && stats.getVariant() != null && stats.getVariant().hasHullMod(HullMods.CIVGRADE) && !stats.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {
 			stats.getSuppliesPerMonth().modifyPercent(id, AdditionalBerthing.MAINTENANCE_PERCENT);
 		}
 	}

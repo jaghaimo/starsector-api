@@ -9,7 +9,7 @@ import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 
 public class ExpandedCargoHolds extends BaseLogisticsHullMod {
 
-	public static final float MIN_FRACTION = 0.3f;
+	public static float MIN_FRACTION = 0.3f;
 	
 	private static Map mag = new HashMap();
 	static {
@@ -24,9 +24,12 @@ public class ExpandedCargoHolds extends BaseLogisticsHullMod {
 		if (stats.getVariant() != null) {
 			mod = Math.max(stats.getVariant().getHullSpec().getCargo() * MIN_FRACTION, mod);
 		}
+		
+		boolean sMod = isSMod(stats);
+		if (sMod) mod *= AdditionalBerthing.SMOD_MULT;
 		stats.getCargoMod().modifyFlat(id, mod);
 		
-		if (stats.getVariant() != null && stats.getVariant().hasHullMod(HullMods.CIVGRADE) && !stats.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {
+		if (!sMod && stats.getVariant() != null && stats.getVariant().hasHullMod(HullMods.CIVGRADE) && !stats.getVariant().hasHullMod(HullMods.MILITARIZED_SUBSYSTEMS)) {
 			stats.getSuppliesPerMonth().modifyPercent(id, AdditionalBerthing.MAINTENANCE_PERCENT);
 		}
 	}

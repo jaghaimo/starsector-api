@@ -45,6 +45,7 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 	
 	public static float FUEL_USE_MULT = 0.5f;
+	public static String FUEL_USE_MODIFIER_DESC = "Inside slipstream";
 	
 	public static class SlipstreamParams2 {
 		public String spriteKey1 = "slipstream0";
@@ -105,7 +106,7 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 		
 		public boolean discovered = false;
 		
-		protected Object readResolve() {
+		public Object readResolve() {
 			float minRadius = 0f;
 			float maxRadius = width * 0.05f;
 			float rate = maxRadius * 0.5f;
@@ -245,6 +246,9 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 	}
 	
 	protected void advanceDespawn(float amount) {
+//		if (isDespawning()) {
+//			System.out.println("3f23f23f32");
+//		}
 		if (despawnNoise == null) return;
 		if (entity.hasTag(Tags.FADING_OUT_AND_EXPIRING)) return;
 		
@@ -598,9 +602,13 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 	}
 	
 	protected void advanceNearbySegments(float amount) {
+//		if (isDespawning()) {
+//			System.out.println("3f23f23f32");
+//		}
+		
 		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
 		if (pf == null || !entity.isInCurrentLocation()) {
-			if (spawnNoise != null) {
+			if (spawnNoise != null || despawnNoise != null) {
 				for (int i = 0; i < segments.size(); i++) {
 					SlipstreamSegment curr = segments.get(i);
 					curr.fader.advance(amount);
@@ -2297,7 +2305,7 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 			fleet.setVelocity(vel.x + windDir.x, vel.y + windDir.y);
 			
 			fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_1",
-					"Inside slipstream", FUEL_USE_MULT, 
+					FUEL_USE_MODIFIER_DESC, FUEL_USE_MULT, 
 					fleet.getStats().getDynamic().getStat(Stats.FUEL_USE_NOT_SHOWN_ON_MAP_MULT));
 					//fleet.getStats().getFuelUseHyperMult());
 			
@@ -2780,7 +2788,8 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 		for (int i = 0; i < segments.size(); i+=incr) {
 			SlipstreamSegment curr = segments.get(i);
 			if (forRadar && !nearSet.contains(curr)) continue;
-			if (!forRadar && !curr.discovered && !DebugFlags.SLIPSTREAM_DEBUG) continue;
+			if (!forRadar && !curr.discovered && Global.getSettings().isCampaignSensorsOn() &&
+					(!DebugFlags.SLIPSTREAM_DEBUG || DebugFlags.USE_SLIPSTREAM_VISIBILITY_IN_DEBUG_MODE)) continue;
 			//if (!forRadar && !curr.discovered && !Global.getSettings().isDevMode()) continue;
 			//if (!forRadar && !curr.discovered) continue;
 			list.add(curr);

@@ -9,6 +9,8 @@ public interface CommoditySpecAPI {
 	String getIconName();
 	String getIconLargeName();
 	
+	void setOrder(float displayNumber);
+	
 	int getStackSize();
 	float getOrder();
 	float getCargoSpace();
@@ -55,6 +57,10 @@ public interface CommoditySpecAPI {
 	
 	RaidDangerLevel getBaseDanger();
 	void setBaseDanger(RaidDangerLevel danger);
+	
+	void setName(String displayName);
+	void setIconName(String iconName);
+	void setDemandClass(String demandClass);
 }
 
 

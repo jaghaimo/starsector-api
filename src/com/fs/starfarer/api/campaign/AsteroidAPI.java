@@ -7,4 +7,6 @@ public interface AsteroidAPI extends SectorEntityToken {
 
 	void setRotation(float rotation);
 
+	void forceRender();
+
 }

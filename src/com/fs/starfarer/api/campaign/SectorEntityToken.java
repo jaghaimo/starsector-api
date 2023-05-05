@@ -297,6 +297,10 @@ public interface SectorEntityToken extends HasMemory {
 
 	void forceSensorFaderOut();
 
+	void setLightSource(SectorEntityToken star, Color color);
+
+	List<EveryFrameScript> getScripts();
+
 }
 	
 	

@@ -4,6 +4,8 @@ public class Conditions {
 	
 	public static final String COMM_RELAY = "comm_relay";
 	
+	
+	public static final String HOSTILE_ACTIVITY = "hostile_activity";
 	public static final String PIRATE_ACTIVITY = "pirate_activity";
 	public static final String PATHER_CELLS = "pather_cells";
 	

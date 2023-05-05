@@ -6,8 +6,10 @@ import java.util.Map;
 import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
@@ -16,6 +18,8 @@ import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.loading.AbilitySpecAPI;
+import com.fs.starfarer.api.loading.FighterWingSpecAPI;
+import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
@@ -72,14 +76,25 @@ public class AddRemoveCommodity extends BaseCommandPlugin {
 		}
 		
 		
-		// update $supplies, $fuel, etc if relevant
-		updatePlayerMemoryQuantity(commodityId);
+		if (!"credits".equals(commodityId)) {
+			// update $supplies, $fuel, etc if relevant
+			updatePlayerMemoryQuantity(commodityId);
+		}
 		
 		return true;
 	}
 	
 	public static void updatePlayerMemoryQuantity(String commodityId) {
-		MemoryAPI memory = Global.getSector().getCharacterData().getMemory();
+		if ("credits".equals(commodityId)) {
+			CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
+			MemoryAPI memory = Global.getSector().getCharacterData().getMemoryWithoutUpdate();
+			memory.set("$credits", (int)fleet.getCargo().getCredits().get(), 0);
+			memory.set("$creditsStr", Misc.getWithDGS((int)fleet.getCargo().getCredits().get()), 0);
+			memory.set("$creditsStrC", Misc.getWithDGS((int)fleet.getCargo().getCredits().get()) + Strings.C, 0);
+			return;
+		}
+		
+		MemoryAPI memory = Global.getSector().getCharacterData().getMemoryWithoutUpdate();
 		String key = "$" + commodityId;
 		if (memory.contains(key)) {
 			if (memory.get(key) instanceof Integer || memory.get(key) instanceof Float) {
@@ -102,6 +117,82 @@ public class AddRemoveCommodity extends BaseCommandPlugin {
 		int quantity = (int) stack.getSize();
 		text.addParagraph("Gained " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getPositiveHighlightColor());
 		text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
+		text.setFontInsignia();
+	}
+	
+	
+	public static void addFighterGainText(String wingId, int quantity, TextPanelAPI text) {
+		FighterWingSpecAPI spec = Global.getSettings().getFighterWingSpec(wingId);
+		if (spec == null) return;
+		
+		text.setFontSmallInsignia();
+		String name = spec.getWingName();
+		text.addParagraph("Gained " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getPositiveHighlightColor());
+		text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
+		text.setFontInsignia();
+	}
+	public static void addFighterLossText(String wingId, int quantity, TextPanelAPI text) {
+		FighterWingSpecAPI spec = Global.getSettings().getFighterWingSpec(wingId);
+		if (spec == null) return;
+		
+		text.setFontSmallInsignia();
+		String name = spec.getWingName();
+		text.addParagraph("Lost " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getNegativeHighlightColor());
+		text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
+		text.setFontInsignia();
+	}
+	
+	public static void addWeaponGainText(String weaponId, int quantity, TextPanelAPI text) {
+		WeaponSpecAPI spec = Global.getSettings().getWeaponSpec(weaponId);
+		if (spec == null) return;
+		
+		text.setFontSmallInsignia();
+		String name = spec.getWeaponName();
+		text.addParagraph("Gained " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getPositiveHighlightColor());
+		text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
+		text.setFontInsignia();
+	}
+	public static void addWeaponLossText(String weaponId, int quantity, TextPanelAPI text) {
+		WeaponSpecAPI spec = Global.getSettings().getWeaponSpec(weaponId);
+		if (spec == null) return;
+		
+		text.setFontSmallInsignia();
+		String name = spec.getWeaponName();
+		text.addParagraph("Lost " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getNegativeHighlightColor());
+		text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
+		text.setFontInsignia();
+	}
+	
+	public static void addItemGainText(SpecialItemData data, int quantity, TextPanelAPI text) {
+		CargoAPI cargo = Global.getFactory().createCargo(true);
+		cargo.addSpecial(data, 1);
+		CargoStackAPI stack = cargo.getStacksCopy().get(0);
+		
+		text.setFontSmallInsignia();
+		String name = stack.getDisplayName();
+		if (quantity == 1) {
+			text.addParagraph("Gained " + name + "", Misc.getPositiveHighlightColor());
+			text.highlightInLastPara(Misc.getHighlightColor(), name);
+		} else {
+			text.addParagraph("Gained " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getPositiveHighlightColor());
+			text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
+		}
+		text.setFontInsignia();
+	}
+	public static void addItemLossText(SpecialItemData data, int quantity, TextPanelAPI text) {
+		CargoAPI cargo = Global.getFactory().createCargo(true);
+		cargo.addSpecial(data, 1);
+		CargoStackAPI stack = cargo.getStacksCopy().get(0);
+		
+		text.setFontSmallInsignia();
+		String name = stack.getDisplayName();
+		if (quantity == 1) {
+			text.addParagraph("Lost " + name + "", Misc.getNegativeHighlightColor());
+			text.highlightInLastPara(Misc.getHighlightColor(), name);
+		} else {
+			text.addParagraph("Lost " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getNegativeHighlightColor());
+			text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
+		}
 		text.setFontInsignia();
 	}
 	

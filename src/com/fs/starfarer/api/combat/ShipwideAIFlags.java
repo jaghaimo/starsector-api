@@ -13,6 +13,13 @@ public class ShipwideAIFlags {
 		HARASS_MOVE_IN_COOLDOWN,
 		
 		AVOIDING_BORDER,
+		DO_NOT_AVOID_BORDER,
+		CAMP_LOCATION,
+		FACING_OVERRIDE_FOR_MOVE_AND_ESCORT_MANEUVERS,
+		ESCORT_OTHER_SHIP,
+		//PULL_BACK_FIGHTERS, // can do ship.setForceCarrierPullBackTime()
+		
+		
 		
 		MANEUVER_TARGET,
 		MOVEMENT_DEST_WHILE_SIDETRACKED,
@@ -30,6 +37,8 @@ public class ShipwideAIFlags {
 		PURSUING,
 		HAS_INCOMING_DAMAGE,
 		KEEP_SHIELDS_ON,
+		STAY_PHASED, // will not re-phase but should stay phased if cloak is on
+		PHASE_BRAWLER_DUMPING_FLUX, // will not re-phase but should stay phased if cloak is on
 		DO_NOT_BACK_OFF,
 		
 		/**
@@ -96,6 +105,10 @@ public class ShipwideAIFlags {
 		BIGGEST_THREAT,
 		
 		MOVEMENT_DEST,
+		
+		HAS_POTENTIAL_MINE_TRIGGER_NEARBY,
+		
+		TARGET_FOR_SHIP_SYSTEM,
 	}
 	
 	public static final float FLAG_DURATION = 0.5f;
@@ -148,6 +161,9 @@ public class ShipwideAIFlags {
 //		if (flag == AIFlags.BACK_OFF) {
 //			System.out.println("fwfwefew");
 //		}
+//		if (flag == AIFlags.DO_NOT_USE_SHIELDS) {
+//			System.out.println("fwfwefew");
+//		}
 		FlagData data = flags.get(flag);
 		if (data != null) {
 			data.elapsed = 0;
@@ -180,7 +196,9 @@ public class ShipwideAIFlags {
 		for (AIFlags flag : flags.keySet()) {
 			FlagData data = flags.get(flag);
 			data.elapsed += amount;
-			if (data.elapsed > FLAG_DURATION && data.elapsed > data.durationOverride) {
+			//if (data.elapsed > FLAG_DURATION && data.elapsed > data.durationOverride) {
+			if ((data.durationOverride <= 0 && data.elapsed > FLAG_DURATION) ||
+					(data.durationOverride > 0 && data.elapsed > data.durationOverride)) {
 				remove.add(flag);
 			}
 		}

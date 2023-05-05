@@ -82,7 +82,6 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 	protected PersonAPI daud;
 	protected MarketAPI chicomoztoc;
 	
-	protected PersonAPI kantasDenStationcommander;
 	protected PersonAPI kanta;
 	protected PersonAPI loke;
 	protected PersonAPI cotton;
@@ -202,9 +201,6 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 			break;
 		}
 		if (galatiaGate == null) return false;
-		
-		kantasDenStationcommander = getPersonAtMarketPost(kantasDen, Ranks.POST_STATION_COMMANDER);
-		if (kantasDenStationcommander == null) return false;
 
 		setName("At The Gates");
 		setRepFactionChangesNone();
@@ -241,6 +237,7 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 		List<SectorEntityToken> jumpPoints = magecGate.getStarSystem().getJumpPoints();
 		for (SectorEntityToken point : jumpPoints) {
 			spawnKantaVengeanceFleetPirateScout(point);
+			spawnKantaVengeanceFleetPirateScout(point); // 2 scouts per.
 			spawnKantaVengeanceFleetPirateArmada(point);
 			spawnKantaVengeanceFleetMerc(point);
 		}
@@ -541,7 +538,14 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 			info.addPara("Return to the Galatia Academy with Elissa Zal and the working Janus Device.", opad);
 		}
 	}
-
+	
+	@Override
+	protected boolean shouldSendUpdateForStage(Object id) {
+		if (getCurrentStage() == Stage.DO_SCANS && GateEntityPlugin.getNumGatesScanned() >= 6) {
+			return false; // going straight to RETURN_WITH_DEAL_AND_SCANS
+		}
+		return super.shouldSendUpdateForStage(id);
+	}
 	@Override
 	public boolean addNextStepText(TooltipMakerAPI info, Color tc, float pad) {
 
@@ -716,6 +720,7 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 		// We don't want the encounter fleet to get destroyed by pulsars or Remnants. 
 		// Plus, this should make the Gate "interesting" enough already. 
 		if (system.hasTag(Tags.THEME_UNSAFE)) return;
+		if(Misc.hasPulsar(system)) return;
 
 		// if the system is unsuitable - no gate, or gate is scanned: return
 		SectorEntityToken gate = null;

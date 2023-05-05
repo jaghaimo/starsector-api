@@ -40,7 +40,7 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 	}
 	
 	protected float getExpireDaysPerFleet() {
-		return 10f;
+		return 30f;
 	}
 	
 	protected String getSpawnKey(StarSystemAPI system) {
@@ -65,7 +65,7 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 	
 	@Override
 	protected int getMaxFleets() {
-		return 100; // limiting in based on spawnRateMult instead
+		return 100; // limiting is based on spawnRateMult instead
 	}
 
 	@Override
@@ -141,10 +141,20 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 		
 		float desiredNumFleets = getDesiredNumFleetsForSpawnLocation();
 		float recentSpawns = getRecentSpawnsForSystem(currSpawnLoc);
+		if (active != null) {
+			float activeInSystem = 0f;
+			for (ManagedFleetData data : active) {
+				if (data.spawnedFor == currSpawnLoc || data.fleet.getContainingLocation() == currSpawnLoc) {
+					activeInSystem++;
+				}
+			}
+			recentSpawns = Math.max(recentSpawns, activeInSystem);
+		}
 		
 		spawnRateMult = (float) Math.pow(Math.max(0, (desiredNumFleets - recentSpawns) * 1f), 4f);
 		if (spawnRateMult < 0) spawnRateMult = 0;
 		
+		//if (DEBUG || this instanceof DisposableHostileActivityFleetManager) {
 		if (DEBUG) {
 			System.out.println(String.format("ID: %s, system: %s, recent: %s, desired: %s, spawnRateMult: %s",
 					getSpawnId(),
@@ -155,14 +165,14 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 		}
 	}
 
-	protected StarSystemAPI pickCurrentSpawnLocation() {
-		return pickNearestPopulatedSystem();
-	}
 	protected abstract int getDesiredNumFleetsForSpawnLocation();
 	
 	protected abstract CampaignFleetAPI spawnFleetImpl();
 	protected abstract String getSpawnId();
 	
+	protected StarSystemAPI pickCurrentSpawnLocation() {
+		return pickNearestPopulatedSystem();
+	}
 	protected StarSystemAPI pickNearestPopulatedSystem() {
 		if (Global.getSector().isInNewGameAdvance()) return null;
 		CampaignFleetAPI player = Global.getSector().getPlayerFleet();

@@ -22,7 +22,26 @@ public class AddAbility extends BaseCommandPlugin {
 		// if they spec out of the skill that granted it, but this command will be "quiet"
 		
 		String abilityId = params.get(0).getString(memoryMap);
+		if (abilityId == null) return false;
+		
 		boolean hadAbilityAlready = Global.getSector().getPlayerFleet().hasAbility(abilityId);
+		
+		boolean found = false;
+		AbilitySlotsAPI slots = Global.getSector().getUIData().getAbilitySlotsAPI();
+		int curr = slots.getCurrBarIndex();
+		OUTER: for (int i = 0; i < 5; i++) {
+			slots.setCurrBarIndex(i);
+			for (AbilitySlotAPI slot : slots.getCurrSlotsCopy()) {
+				if (abilityId.equals(slot.getAbilityId())) {
+					found = true;
+					break OUTER;
+				}
+			}
+			slots.setCurrBarIndex(curr);
+		}
+		if (!found) {
+			hadAbilityAlready = false;
+		}
 		
 		Global.getSector().getCharacterData().addAbility(abilityId);
 		//Global.getSector().getUIData().getAbilitySlotsAPI().getCurrSlotsCopy().get(8).getAbilityId()
@@ -31,7 +50,6 @@ public class AddAbility extends BaseCommandPlugin {
 			boolean assignedToSlot = false;
 			if (params.size() >= 2) {
 				int slotIndex = (int) params.get(1).getFloat(memoryMap);
-				AbilitySlotsAPI slots = Global.getSector().getUIData().getAbilitySlotsAPI();
 				slots.setCurrBarIndex(0);
 				AbilitySlotAPI slot = slots.getCurrSlotsCopy().get(slotIndex);
 				if (slot.getAbilityId() == null) {
@@ -41,7 +59,6 @@ public class AddAbility extends BaseCommandPlugin {
 			}
 			
 			if (!assignedToSlot) {
-				AbilitySlotsAPI slots = Global.getSector().getUIData().getAbilitySlotsAPI();
 				int currBarIndex = slots.getCurrBarIndex();
 				OUTER: for (int i = 0; i < 5; i++) {
 					slots.setCurrBarIndex(i);

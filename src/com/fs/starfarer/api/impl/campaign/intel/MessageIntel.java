@@ -52,6 +52,7 @@ public class MessageIntel extends BaseIntelPlugin {
 	protected List<MessageLineData> lines = new ArrayList<MessageLineData>();
 	protected String icon;
 	protected String sound;
+	protected String extra;
 	
 	public MessageIntel() {
 		
@@ -76,6 +77,10 @@ public class MessageIntel extends BaseIntelPlugin {
 	public void addLine(String text, Color color, String [] highlights, Color ... colors) {
 		MessageLineData line = new MessageLineData(text, color, highlights, colors);
 		lines.add(line);
+	}
+	
+	public void clearLines() {
+		lines.clear();
 	}
 	
 	@Override
@@ -135,6 +140,14 @@ public class MessageIntel extends BaseIntelPlugin {
 			return sound;
 		}
 		return getSoundMinorMessage();
+	}
+
+	public String getExtra() {
+		return extra;
+	}
+
+	public void setExtra(String extra) {
+		this.extra = extra;
 	}
 	
 }

@@ -10,7 +10,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CustomUIPanelPlugin;
+import com.fs.starfarer.api.campaign.BaseCustomUIPanelPlugin;
 import com.fs.starfarer.api.campaign.CustomVisualDialogDelegate.DialogCallbacks;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
@@ -19,7 +19,7 @@ import com.fs.starfarer.api.ui.PositionAPI;
 import com.fs.starfarer.api.util.FaderUtil;
 import com.fs.starfarer.api.util.Misc;
 
-public class DuelPanel implements CustomUIPanelPlugin {
+public class DuelPanel extends BaseCustomUIPanelPlugin {
 
 	public static enum AttackResult {
 		NO_HIT,
@@ -225,7 +225,9 @@ public class DuelPanel implements CustomUIPanelPlugin {
 
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		GL11.glEnable(GL11.GL_SCISSOR_TEST);
-		GL11.glScissor((int)x, (int)y, (int)w, (int)h);
+		
+		float s = Global.getSettings().getScreenScaleMult();
+		GL11.glScissor((int)(x * s), (int)(y * s), (int)(w * s), (int)(h * s));
 		
 //		SpriteAPI s = Global.getSettings().getSprite(TEX);
 //		s.render(x, y + h - s.getHeight());
@@ -580,7 +582,7 @@ public class DuelPanel implements CustomUIPanelPlugin {
 				if (tutorialMode) prompt.reportAction(Actions.ATTACK);
 				continue;
 			}
-			if (event.isKeyDownEvent() &&
+			if (Global.getSettings().isDevMode() && event.isKeyDownEvent() &&
 					event.getEventValue() == Keyboard.KEY_F) {
 				event.consume();
 				player.doAction(Actions.FALL, true);

@@ -45,6 +45,16 @@ public interface SpecialItemSpecAPI {
 	String getManufacturer();
 
 	void setManufacturer(String manufacturer);
+
+	void setParams(String params);
+
+	void setIconName(String iconName);
+
+	void setName(String displayName);
+
+	void setBasePrice(float baseValue);
+
+	void setOrder(float displayNumber);
 	
 }
 

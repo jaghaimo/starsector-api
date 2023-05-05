@@ -9,7 +9,7 @@ import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.util.Misc.Token;
 
 /**
- * SetShortcut <key> (from Keyboard, after KEY_) <putLast>
+ * SetShortcut <option> <key> (from Keyboard, after KEY_) <putLast>
  */
 public class SetShortcut extends BaseCommandPlugin {
 

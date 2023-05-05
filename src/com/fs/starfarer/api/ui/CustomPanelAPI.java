@@ -8,5 +8,11 @@ public interface CustomPanelAPI extends UIPanelAPI {
 
 	TooltipMakerAPI createUIElement(float width, float height, boolean withScroller);
 	PositionAPI addUIElement(TooltipMakerAPI element);
+	
+	/**
+	 * Returns the intel UI; only works when creating large intel descriptions.
+	 * @return
+	 */
+	IntelUIAPI getIntelUI();
 
 }

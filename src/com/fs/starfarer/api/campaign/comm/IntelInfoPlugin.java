@@ -11,8 +11,19 @@ import com.fs.starfarer.api.ui.CustomPanelAPI;
 import com.fs.starfarer.api.ui.IntelUIAPI;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.ui.UIPanelAPI;
 
 public interface IntelInfoPlugin {
+	
+	public static class TableRowClickData {
+		public Object rowId;
+		public UIPanelAPI table;
+		public TableRowClickData(Object rowId, UIPanelAPI table) {
+			this.rowId = rowId;
+			this.table = table;
+		}
+		
+	}
 	
 	public static enum ListInfoMode {
 		MESSAGES,
@@ -97,6 +108,12 @@ public interface IntelInfoPlugin {
 	
 	void notifyPlayerAboutToOpenIntelScreen();
 	boolean shouldRemoveIntel();
+	
+	/**
+	 * Method NEEDS to handle map being null gracefully.
+	 * @param map
+	 * @return
+	 */
 	Set<String> getIntelTags(SectorMapAPI map);
 	boolean isImportant();
 	void setImportant(Boolean important);
@@ -167,6 +184,7 @@ public interface IntelInfoPlugin {
 	boolean isEnding();
 
 
+	void tableRowClicked(IntelUIAPI ui, TableRowClickData data);
 }
 
 

@@ -1350,7 +1350,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 //				members.add(member);
 //			}
 			dialog.showFleetMemberPickerDialog("Select craft to send in pursuit", "Ok", "Cancel", 
-					3, 7, 58f, false, true, members,
+					4, 8, 58f, false, true, members,
 			new FleetMemberPickerListener() {
 				public void pickedFleetMembers(List<FleetMemberAPI> members) {
 					if (members != null && !members.isEmpty()) {
@@ -2607,6 +2607,10 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 				
 				//boolean letGo = (!canPursue && !canHasass) || !allyHasReadyShips || station;
 				boolean letGo = (!canPursue && !canHasass) || !allyHasReadyShips;// || station;
+				if (station) { // make it so the player can decide to pursue
+					letGo = false;
+					alliedWantsToFight = true;
+				}
 				//if (!letGo) {
 					//PursuitOption po = playerFleet.getAI().pickPursuitOption(context, otherFleet);
 					PursuitOption po = pickPursuitOption(playerFleet, otherFleet, context);
@@ -3024,26 +3028,34 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 	}
 	
 	protected PursuitOption pickPursuitOption(CampaignFleetAPI fleet, CampaignFleetAPI other, FleetEncounterContext context) {
+		context.setNoHarryBecauseOfStation(false);
+		
 		if (fleet.getAI() == null) return PursuitOption.LET_THEM_GO;
 		
 		if (config.alwaysPursue) {
 			return PursuitOption.PURSUE;
 		}
 		
+		boolean allStation = false;
+		boolean hasStation = false;
 		if (context.getBattle() != null) {
-			boolean allStation = true;
+			allStation = true;
 			for (CampaignFleetAPI curr : context.getBattle().getSideFor(fleet)) {
 //				if (curr.isStationMode()) {
 //					return PursuitOption.HARRY;
 //				}
 				allStation &= curr.isStationMode();
+				hasStation |= curr.isStationMode();
 			}
-			if (allStation) {
-				return PursuitOption.LET_THEM_GO;
-			}
+			//if (allStation) {
 		}
 		
-		return fleet.getAI().pickPursuitOption(context, other);
+		PursuitOption option = fleet.getAI().pickPursuitOption(context, other);
+		if (hasStation && option == PursuitOption.HARRY) {
+			context.setNoHarryBecauseOfStation(true);
+			return PursuitOption.LET_THEM_GO;
+		}
+		return option;
 	}
 	
 	public FactionAPI getNonHostileOtherFaction() {

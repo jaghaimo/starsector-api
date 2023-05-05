@@ -43,11 +43,6 @@ public class BaseModPlugin implements ModPlugin {
 		
 	}
 
-	/**
-	 * Also called on starting a new game.
-	 *
-	 * @param newGame Set to true when called during new game initiaization, false otherwise
-	 */
 	public void onGameLoad(boolean newGame) {
 		
 	}

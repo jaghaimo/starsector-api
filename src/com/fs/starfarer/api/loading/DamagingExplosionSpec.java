@@ -21,6 +21,8 @@ public class DamagingExplosionSpec implements Cloneable {
 	private float maxDamage;
 	private float minDamage;
 	
+	private float particleSpawnRadius = -1f;
+	
 	private CollisionClass collisionClass;
 	private CollisionClass collisionClassByFighter;
 	
@@ -127,6 +129,8 @@ public class DamagingExplosionSpec implements Cloneable {
 			spec.detailedExplosionFlashColorFringe = Misc.optColor(explosionSpecJson, "detailedExplosionFlashColorFringe", null);
 			spec.detailedExplosionFlashColorCore = Misc.optColor(explosionSpecJson, "detailedExplosionFlashColorCore", null);
 			
+			spec.particleSpawnRadius = (float) explosionSpecJson.optDouble("particleSpawnRadius", -1f);
+			
 			
 			if (spec.getParticleCount() == 0) {
 				spec.setShowGraphic(false);
@@ -161,6 +165,14 @@ public class DamagingExplosionSpec implements Cloneable {
 		}
 	}
 	
+	public float getParticleSpawnRadius() {
+		return particleSpawnRadius;
+	}
+
+	public void setParticleSpawnRadius(float particleSpawnRadius) {
+		this.particleSpawnRadius = particleSpawnRadius;
+	}
+
 	public Color getExplosionColor() {
 		return explosionColor;
 	}

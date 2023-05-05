@@ -1582,6 +1582,7 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 		public FleetParamsV3 params;
 		public FleetSize fSize;
 		public Float fSizeOverride;
+		public Float combatFleetPointsOverride;
 		public FleetQuality fQuality;
 		public Float fQualityMod;
 		public Integer fQualitySMods;
@@ -1650,7 +1651,12 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 				fraction = FleetSize.MAXIMUM.maxFPFraction;
 			}
 			
+			//fraction = 1f;
+			
 			float combatPoints = fraction * maxPoints;
+			if (combatFleetPointsOverride != null) {
+				combatPoints = combatFleetPointsOverride;
+			}
 
 			FactionDoctrineAPI doctrine = params.doctrineOverride;
 			if (excess > 0) {
@@ -1933,6 +1939,10 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 	public void triggerSetFleetSizeFraction(float fractionOfMax) {
 		CreateFleetAction cfa = getPreviousCreateFleetAction();
 		cfa.fSizeOverride = fractionOfMax;
+	}
+	public void triggerSetFleetCombatFleetPoints(float combatFleetPointsOverride) {
+		CreateFleetAction cfa = getPreviousCreateFleetAction();
+		cfa.combatFleetPointsOverride = combatFleetPointsOverride;
 	}
 	public void triggerAutoAdjustFleetQuality(FleetQuality min, FleetQuality max) {
 		float f = getQualityFraction();
@@ -2404,6 +2414,7 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 		triggerCustomAction(new TriggerAction() {
 			public void doAction(TriggerActionContext context) {
 				context.fleet.setCommander(commander);
+				context.fleet.getFleetData().ensureHasFlagship();
 			}
 		});
 	}

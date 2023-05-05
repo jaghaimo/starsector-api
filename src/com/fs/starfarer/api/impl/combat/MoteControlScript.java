@@ -189,6 +189,7 @@ public class MoteControlScript extends BaseShipSystemScript {
 		
 		float amount = Global.getCombatEngine().getElapsedInLastFrame();
 		
+		//Global.getCombatEngine().setPaused(true);
 		
 		SharedMoteAIData data = getSharedData(ship);
 		data.elapsed += amount;

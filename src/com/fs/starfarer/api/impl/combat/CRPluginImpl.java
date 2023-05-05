@@ -21,25 +21,25 @@ import com.fs.starfarer.api.loading.WeaponSpecAPI;
 
 public class CRPluginImpl implements CombatReadinessPlugin {
 
-	public static final float NO_SYSTEM_THRESHOLD = 0.0f;
+	public static float NO_SYSTEM_THRESHOLD = 0.0f;
 	
-	public static final float IMPROVE_START = 0.7f;
-	public static final float DEGRADE_START = 0.5f;
-	public static final float SHIELD_MALFUNCTION_START = 0.1f;
-	public static final float CRITICAL_MALFUNCTION_START = 0.2f;
-	public static final float MALFUNCTION_START = 0.4f;
-	public static final float MISSILE_AMMO_REDUCTION_START = 0.4f;
+	public static float IMPROVE_START = 0.7f;
+	public static float DEGRADE_START = 0.5f;
+	public static float SHIELD_MALFUNCTION_START = 0.1f;
+	public static float CRITICAL_MALFUNCTION_START = 0.2f;
+	public static float MALFUNCTION_START = 0.4f;
+	public static float MISSILE_AMMO_REDUCTION_START = 0.4f;
 	
-	public static final float MAX_MOVEMENT_CHANGE = 10f; // percent
-	public static final float MAX_DAMAGE_TAKEN_CHANGE = 10f; // percent
-	//public static final float MAX_ROF_CHANGE = 25f; // percent
-	public static final float MAX_DAMAGE_CHANGE = 10f; // percent
-	public static final float MAX_REFIT_CHANGE = 10f; // percent
+	public static float MAX_MOVEMENT_CHANGE = 10f; // percent
+	public static float MAX_DAMAGE_TAKEN_CHANGE = 10f; // percent
+	//public static float MAX_ROF_CHANGE = 25f; // percent
+	public static float MAX_DAMAGE_CHANGE = 10f; // percent
+	public static float MAX_REFIT_CHANGE = 10f; // percent
 	
-	public static final float MAX_SHIELD_MALFUNCTION_CHANCE = 5f; // percent
-	public static final float MAX_CRITICAL_MALFUNCTION_CHANCE = 25f; // percent
-	public static final float MAX_ENGINE_MALFUNCTION_CHANCE = 7.5f; // percent
-	public static final float MAX_WEAPON_MALFUNCTION_CHANCE = 10f; // percent
+	public static float MAX_SHIELD_MALFUNCTION_CHANCE = 5f; // percent
+	public static float MAX_CRITICAL_MALFUNCTION_CHANCE = 25f; // percent
+	public static float MAX_ENGINE_MALFUNCTION_CHANCE = 7.5f; // percent
+	public static float MAX_WEAPON_MALFUNCTION_CHANCE = 10f; // percent
 	
 	
 	public void applyMaxCRCrewModifiers(FleetMemberAPI member) {

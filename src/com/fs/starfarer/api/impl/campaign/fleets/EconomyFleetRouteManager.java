@@ -148,7 +148,7 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 			if ((float) Math.random() < pLoss) {
 				boolean returning = (float) Math.random() < 0.5f; 
 				applyLostShipping(data, returning, true, true, true);
-				RouteManager.getInstance().removeRote(route);
+				RouteManager.getInstance().removeRoute(route);
 				return;
 			}
 			

@@ -55,4 +55,5 @@ public interface FluxTrackerAPI {
 	float getEngineBoostLevel();
 	void setOverloadProgress(float empProgress);
 	void setOverloadDuration(float empDuration);
+	void ventFlux();
 }

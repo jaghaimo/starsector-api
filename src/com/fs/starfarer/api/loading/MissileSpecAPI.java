@@ -71,5 +71,18 @@ public interface MissileSpecAPI {
 	void setRenderTargetIndicator(boolean renderTargetIndicator);
 	boolean isNoDebrisWhenDestroyed();
 	void setNoDebrisWhenDestroyed(boolean noDebrisWhenDestroyed);
+	Color getDestroyedExplosionColor();
+	void setDestroyedExplosionColor(Color destroyedExplosionColor);
+	boolean isDefaultDestroyedExplosionColor();
+	boolean isPassThroughMissiles();
+	void setPassThroughMissiles(boolean passThroughMissiles);
+	boolean isPassThroughFighters();
+	void setPassThroughFighters(boolean passThroughFighters);
+	boolean isApplyOnHitEffectWhenPassThrough();
+	void setApplyOnHitEffectWhenPassThrough(boolean applyOnHitEffectWhenPassThrough);
+	boolean isPassThroughFightersOnlyWhenDestroyed();
+	void setPassThroughFightersOnlyWhenDestroyed(boolean passThroughFightersOnlyWhenDestroyed);
+	String getTypeString();
+	ShotBehaviorSpecAPI getBehaviorSpec();
 
 }

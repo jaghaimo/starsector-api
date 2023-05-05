@@ -624,6 +624,8 @@ public class DelayedFleetEncounter extends HubMissionWithTriggers implements Gat
 	protected void advanceImpl(float amount) {
 		super.advanceImpl(amount);
 		
+		//System.out.println("Wait: " + waitDays);
+		
 		if (getCurrentStage() == Stage.SPAWN_FLEET && checker != null) {
 			checker.advance(amount);
 		}

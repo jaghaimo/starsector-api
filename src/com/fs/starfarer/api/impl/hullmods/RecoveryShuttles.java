@@ -9,13 +9,22 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class RecoveryShuttles extends BaseHullMod {
 
-	public static final float CREW_LOSS_MULT = 0.25f;
+	public static float CREW_LOSS_MULT = 0.25f;
+	
+	public static float SMOD_CREW_LOSS_MULT = 0.05f;
 	
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
-		stats.getDynamic().getStat(Stats.FIGHTER_CREW_LOSS_MULT).modifyMult(id, CREW_LOSS_MULT);
+		boolean sMod = isSMod(stats);
+		float mult = CREW_LOSS_MULT;
+		if (sMod) mult = SMOD_CREW_LOSS_MULT; 
+		stats.getDynamic().getStat(Stats.FIGHTER_CREW_LOSS_MULT).modifyMult(id, mult);
 	}
 		
+	public String getSModDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "" + (int) ((1f - SMOD_CREW_LOSS_MULT) * 100f) + "%";
+		return null;
+	}
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + (int) ((1f - CREW_LOSS_MULT) * 100f) + "%";
 		return null;

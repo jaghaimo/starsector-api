@@ -55,8 +55,8 @@ public class HistorianBackstory {
 			public String getText() {
 				//HistorianData hd = HistorianData.getInstance();
 				return "\"Now I may be old, but there's older by far. If the records are to be believed - and I do, the Hegemony keeps very good records - " +
-						"then the pirate Warlord Kanta was born well before the Collapse. Or shall we call her ex-Domain Navy Colonel Jorien Kanta? " +
-						"Oh yes, she had a name like anyone else once. One wonders if it's very expensive biomods or periodic cyrosleep that keeps her going. " +
+						"then the pirate Warlord Kanta was born well before the Collapse. Or shall we call her ex-Domain Armada officer Jorien Kanta? " +
+						"Oh yes, she had a name like anyone else once. One wonders if it's very expensive biomods or periodic cryosleep that keeps her going. " +
 						"I'd love to find out...\"";
 			}
 		});

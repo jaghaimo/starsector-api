@@ -31,7 +31,7 @@ public class GraviticScanAbility extends BaseToggleAbility {
 	@Override
 	protected String getActivationText() {
 		if (COMMODITY_ID != null && getFleet() != null && getFleet().getCargo().getCommodityQuantity(COMMODITY_ID) <= 0 &&
-				!Global.getSettings().isDevMode()) {
+				(!Global.getSettings().isDevMode() || Global.getSettings().getBoolean("playtestingMode"))) {
 			return null;
 		}
 		return "Neutrino detector activated";
@@ -166,7 +166,7 @@ public class GraviticScanAbility extends BaseToggleAbility {
 		
 		if (COMMODITY_ID != null) {
 			float cost = days * COMMODITY_PER_DAY;
-			if (fleet.getCargo().getCommodityQuantity(COMMODITY_ID) > 0 || Global.getSettings().isDevMode()) {
+			if (fleet.getCargo().getCommodityQuantity(COMMODITY_ID) > 0 || (Global.getSettings().isDevMode() && !Global.getSettings().getBoolean("playtestingMode"))) {
 				fleet.getCargo().removeCommodity(COMMODITY_ID, cost);
 			} else {
 				CommoditySpecAPI spec = getCommodity();

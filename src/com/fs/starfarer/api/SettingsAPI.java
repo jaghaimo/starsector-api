@@ -14,6 +14,7 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.campaign.CustomEntitySpecAPI;
 import com.fs.starfarer.api.campaign.CustomUIPanelPlugin;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.FactionSpecAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetSpecAPI;
 import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
@@ -31,6 +32,8 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.ShipSystemSpecAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.loading.AbilitySpecAPI;
@@ -44,6 +47,7 @@ import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.loading.PersonMissionSpec;
 import com.fs.starfarer.api.loading.RoleEntryAPI;
 import com.fs.starfarer.api.loading.TerrainSpecAPI;
+import com.fs.starfarer.api.loading.WeaponSlotAPI;
 import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.plugins.LevelupPlugin;
 import com.fs.starfarer.api.ui.ButtonAPI;
@@ -75,6 +79,8 @@ public interface SettingsAPI {
 	float getFloat(String key);
 	boolean getBoolean(String key);
 	ClassLoader getScriptClassLoader();
+	
+	boolean isCampaignSensorsOn();
 	
 	boolean isDevMode();
 	void setDevMode(boolean devMode);
@@ -287,7 +293,7 @@ public interface SettingsAPI {
 
 	Object getSpec(Class c, String id, boolean nullOnNotFound);
 	void putSpec(Class c, String id, Object spec);
-	Collection<Object> getAllSpecs(Class c);
+	<T> Collection<T> getAllSpecs(Class<T> c);
 
 	/**
 	 * @param n 1 to 3999.
@@ -322,6 +328,8 @@ public interface SettingsAPI {
 	CommoditySpecAPI getCommoditySpec(String commodityId);
 
 	ShipHullSpecAPI getHullSpec(String hullId);
+	
+	FactionSpecAPI getFactionSpec(String id);
 
 	int computeNumFighterBays(ShipVariantAPI variant);
 
@@ -489,5 +497,23 @@ public interface SettingsAPI {
 	CustomPanelAPI createCustom(float width, float height, CustomUIPanelPlugin plugin);
 
 	int getMissionScore(String id);
+
+	WeaponSlotAPI createWeaponSlot(String id, WeaponType weaponType, WeaponSize slotSize, String slotTypeStr,
+								   String nodeId, Vector2f nodePos, float angle, float arc);
+
+	JSONArray getMergedSpreadsheetData(String idColumn, String path) throws IOException, JSONException;
+	JSONObject getMergedJSON(String path) throws IOException, JSONException;
+
+	void setEasySensorBonus(float easySensorBonus);
+
+	boolean isEnableShipExplosionWhiteout();
+	void setEnableShipExplosionWhiteout(boolean enableShipExplosionWhiteout);
+
+	List<WeaponSpecAPI> getSystemWeaponSpecs();
+
+	List<String> getSpriteKeys(String category);
+
+	JSONObject loadJSON(String filename, boolean withMods) throws IOException, JSONException;
+	JSONArray loadCSV(String filename, boolean withMods) throws IOException, JSONException;
 
 }

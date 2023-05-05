@@ -1671,6 +1671,7 @@ public class StarSystemGenerator {
 				float startingRadius = planet.getRadius() + STARTING_RADIUS_MOON_BASE + STARTING_RADIUS_MOON_RANGE * random.nextFloat();
 				GenContext moonContext = new GenContext(this, context.system, context.center, context.starData, planet, 0, starAge.name(),
 														startingRadius, context.maxOrbitRadius, planetData.getCategory(), context.orbitIndex);
+				moonContext.excludeCategories.addAll(context.excludeCategories);
 				moonContext.multipliers.addAll(context.multipliers);
 				// add moons etc
 				GenResult moonResult = addOrbitingEntities(moonContext, numOrbits, true, false, false, false);
@@ -1690,6 +1691,7 @@ public class StarSystemGenerator {
 			float startingRadius = planet.getRadius() + STARTING_RADIUS_MOON_BASE + STARTING_RADIUS_MOON_RANGE * random.nextFloat();
 			GenContext moonContext = new GenContext(this, context.system, context.center, context.starData, planet, 0, starAge.name(),
 													startingRadius, context.maxOrbitRadius, planetData.getCategory(), context.orbitIndex);
+			moonContext.excludeCategories.addAll(context.excludeCategories);
 			moonContext.multipliers.addAll(context.multipliers);
 			GenResult moonResult = addOrbitingEntities(moonContext, 1, true, false, true, true);
 			context.generatedPlanets.addAll(moonContext.generatedPlanets);
@@ -1874,10 +1876,8 @@ public class StarSystemGenerator {
 		String parentCategory = context.parentCategory;
 		
 		WeightedRandomPicker<CategoryGenDataSpec> picker = new WeightedRandomPicker<CategoryGenDataSpec>(random);
-		Collection<Object> categoryDataSpecs = Global.getSettings().getAllSpecs(CategoryGenDataSpec.class);
-		for (Object obj : categoryDataSpecs) {
-			CategoryGenDataSpec categoryData = (CategoryGenDataSpec) obj;
-			
+		Collection<CategoryGenDataSpec> categoryDataSpecs = Global.getSettings().getAllSpecs(CategoryGenDataSpec.class);
+		for (CategoryGenDataSpec categoryData : categoryDataSpecs) {
 			if (context.excludeCategories.contains(categoryData.getCategory())) continue;
 			
 			boolean catNothing = categoryData.getCategory().equals(CAT_NOTHING);
@@ -1975,9 +1975,8 @@ public class StarSystemGenerator {
 	
 		WeightedRandomPicker<EntityGenDataSpec> picker = new WeightedRandomPicker<EntityGenDataSpec>(random);
 		
-		Collection<Object> planetDataSpecs = Global.getSettings().getAllSpecs(PlanetGenDataSpec.class);
-		for (Object obj : planetDataSpecs) {
-			PlanetGenDataSpec planetData = (PlanetGenDataSpec) obj;
+		Collection<PlanetGenDataSpec> planetDataSpecs = Global.getSettings().getAllSpecs(PlanetGenDataSpec.class);
+		for (PlanetGenDataSpec planetData : planetDataSpecs) {
 			if (!planetData.getCategory().equals(categoryData.getCategory())) continue;
 			
 			float offset = getHabOffset(planetData);
@@ -2014,9 +2013,8 @@ public class StarSystemGenerator {
 			if (weight > 0) picker.add(planetData, weight);
 		}
 		
-		Collection<Object> terrainDataSpecs = Global.getSettings().getAllSpecs(TerrainGenDataSpec.class);
-		for (Object obj : terrainDataSpecs) {
-			TerrainGenDataSpec terrainData = (TerrainGenDataSpec) obj;
+		Collection<TerrainGenDataSpec> terrainDataSpecs = Global.getSettings().getAllSpecs(TerrainGenDataSpec.class);
+		for (TerrainGenDataSpec terrainData : terrainDataSpecs) {
 			if (!terrainData.getCategory().equals(categoryData.getCategory())) continue;
 			
 			if (!nothingOk && terrainData.getId().equals("rings_nothing")) continue;

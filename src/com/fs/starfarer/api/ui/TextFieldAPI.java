@@ -2,7 +2,7 @@ package com.fs.starfarer.api.ui;
 
 import java.awt.Color;
 
-public interface TextFieldAPI {
+public interface TextFieldAPI extends UIComponentAPI {
 
 	void setPad(float pad);
 	LabelAPI getTextLabelAPI();

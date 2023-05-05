@@ -269,7 +269,10 @@ public interface CombatEngineAPI {
 
 	boolean isInFastTimeAdvance();
 
-	CombatEntityAPI spawnProjectile(ShipAPI ship, WeaponAPI weapon,
+	/**
+	 * DOES NOT WORK.
+	 */
+	@Deprecated CombatEntityAPI spawnProjectile(ShipAPI ship, WeaponAPI weapon,
 			String weaponId, String projSpecId, Vector2f point, float angle,
 			Vector2f shipVelocity);
 
@@ -430,6 +433,16 @@ public interface CombatEngineAPI {
 	ShipAPI getShipPlayerIsTransferringCommandTo();
 
 	ShipAPI getShipPlayerLastTransferredCommandTo();
+
+	ShipAPI createFXDrone(ShipVariantAPI variant);
+
+	void addEntity(CombatEntityAPI entity);
+
+	void addNebulaSmoothParticle(Vector2f loc, Vector2f vel, float size, float endSizeMult, float rampUpFraction,
+			float fullBrightnessFraction, float totalDuration, Color color);
+
+	void addNebulaSmoothParticle(Vector2f loc, Vector2f vel, float size, float endSizeMult, float rampUpFraction,
+			float fullBrightnessFraction, float totalDuration, Color color, boolean expandAsSqrt);
 	
 	//float getElapsedInCurrentFrame();
 

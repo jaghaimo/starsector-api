@@ -47,7 +47,7 @@ public class SlipstreamManager implements EveryFrameScript {
 	 * X is ignored; just marks the center to make it easier to edit
 	 * After a capital letter:
 	 * < makes the stream go in the opposite-to-standard direction
-	 * +-<single digit number> adjusts the stream's burn level; 0 means 10
+	 * +-<single digit number> adjusts the stream's burn level; 0 means +10
 	 * ~ makes the stream narrower, on average
 	 * = makes it wider
 	 * | makes it much straighter than usual
@@ -457,6 +457,12 @@ public class SlipstreamManager implements EveryFrameScript {
 		if (DebugFlags.SLIPSTREAM_DEBUG) {
 			random = Misc.random;
 		}
+		
+//		int total = 0;
+//		for (AddedStream curr : active) {
+//			total += curr.plugin.getSegments().size();
+//		}
+//		System.out.println("TOTAL SEGMENTS: " + total + ", streams: " + active.size());
 		
 		float days = Global.getSector().getClock().convertToDays(amount);
 		if (DebugFlags.SLIPSTREAM_DEBUG) {

@@ -42,6 +42,13 @@ public interface ProjectileSpecAPI {
 	void setLength(float length);
 	float getMaxRange();
 	void setMaxRange(float maxRange);
+	
+	/**
+	 * Can pass in shipStats == null to get the base value.
+	 * @param shipStats
+	 * @param weapon
+	 * @return
+	 */
 	float getMoveSpeed(MutableShipStatsAPI shipStats, WeaponAPI weapon);
 	void setMoveSpeed(float moveSpeed);
 	float getFadeTime();
@@ -77,5 +84,12 @@ public interface ProjectileSpecAPI {
 	void setNoShieldImpactSounds(boolean noShieldImpactSounds);
 	boolean isNoNonShieldImpactSounds();
 	boolean isNoImpactSounds();
+	boolean isPassThroughFighters();
+	void setPassThroughFighters(boolean passThroughFighters);
+	boolean isPassThroughFightersOnlyWhenDestroyed();
+	void setPassThroughFightersOnlyWhenDestroyed(boolean passThroughFightersOnlyWhenDestroyed);
+	boolean isApplyOnHitEffectWhenPassThrough();
+	void setApplyOnHitEffectWhenPassThrough(boolean applyOnHitEffectWhenPassThrough);
+	ShotBehaviorSpecAPI getBehaviorSpec();
 
 }

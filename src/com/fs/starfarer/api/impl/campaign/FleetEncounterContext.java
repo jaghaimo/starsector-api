@@ -23,6 +23,7 @@ import com.fs.starfarer.api.campaign.CombatDamageData.DamageToFleetMember;
 import com.fs.starfarer.api.campaign.CombatDamageData.DealtByFleetMember;
 import com.fs.starfarer.api.campaign.EngagementResultForFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.FleetDataAPI;
 import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin;
 import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin.DataForEncounterSide.OfficerEngagementData;
@@ -83,7 +84,9 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 	
 	protected CombatDamageData runningDamageTotal = null;
 	
-	
+	public FleetEncounterContext() {
+		
+	}
 	public boolean isAutoresolve() {
 		return isAutoresolve;
 	}
@@ -737,11 +740,30 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		this.textPanelForXPGain = textPanelForXPGain;
 	}
 
+	protected boolean noHarryBecauseOfStation = false;
+	public boolean isNoHarryBecauseOfStation() {
+		return noHarryBecauseOfStation;
+	}
+	public void setNoHarryBecauseOfStation(boolean noHarryBecauseOfStation) {
+		this.noHarryBecauseOfStation = noHarryBecauseOfStation;
+	}
+	
 	public void applyAfterBattleEffectsIfThereWasABattle() {
 		if (!hasWinnerAndLoser() || !engagedInHostilities) {
 			for (FleetMemberAPI member : Global.getSector().getPlayerFleet().getFleetData().getMembersListCopy()) {
 				member.getStatus().resetAmmoState();
 			}
+			
+			if (noHarryBecauseOfStation && battle != null) {
+				List<CampaignFleetAPI> otherSide = battle.getNonPlayerSide();
+				CampaignFleetAPI fleet = battle.getPrimary(otherSide);
+				if (fleet.getAI() != null && 
+						!fleet.getAI().isCurrentAssignment(FleetAssignment.STANDING_DOWN)) {
+					fleet.getAI().addAssignmentAtStart(FleetAssignment.STANDING_DOWN, fleet, 0.5f + 0.5f * (float) Math.random(), null);
+				}
+			}
+			
+			//Global.getSector().setLastPlayerBattleTimestamp(Global.getSector().getClock().getTimestamp());
 			Global.getSector().getPlayerFleet().setNoEngaging(3f);
 			return;
 		}
@@ -841,6 +863,14 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		
 		//float totalFpUsed = 0f;
 		float loserDepDestroyed = 0f;
+		float loserDepLeft = 0f;
+		
+		for (FleetMemberAPI member : loserData.getRetreatedFromLastEngagement()) {
+			loserDepLeft += member.getDeploymentPointsCost();
+		}
+		for (FleetMemberAPI member : loserData.getInReserveDuringLastEngagement()) {
+			loserDepLeft += member.getDeploymentPointsCost();
+		}
 		
 		for (FleetMemberAPI member : loserData.getDestroyedInLastEngagement()) {
 			loserDepDestroyed += member.getDeploymentPointsCost();
@@ -871,7 +901,13 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		float count = 0f;
 		for (FleetMemberAPI member : winnerData.getDeployedInLastEngagement()) {
 			float dp = member.getDeploymentPointsCost();
-			float recoveryFraction = Math.max(0, (dp * 0.75f - loserDepDestroyed)) / dp;
+			float recoveryFraction = Math.max(0, (dp * 1.25f - loserDepDestroyed)) / dp;
+//			if (member.getFleetData() != null && member.getFleetData().getFleet() != null &&
+//					member.getFleetData().getFleet().isPlayerFleet()) {
+			if (loserDepDestroyed > loserDepLeft * 2f) {
+				recoveryFraction = Math.max(0, (dp * 0.75f - loserDepDestroyed)) / dp; 
+			}
+			if (recoveryFraction > 1f) recoveryFraction = 1f;
 			if (loserDepDestroyed <= 0) recoveryFraction = 1f;
 			
 			float deployCost = getDeployCost(member);
@@ -1379,8 +1415,8 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		return storyRecoverableShips;
 	}
 
-	private List<FleetMemberAPI> recoverableShips = new ArrayList<FleetMemberAPI>();
-	private List<FleetMemberAPI> storyRecoverableShips = new ArrayList<FleetMemberAPI>();
+	protected List<FleetMemberAPI> recoverableShips = new ArrayList<FleetMemberAPI>();
+	protected List<FleetMemberAPI> storyRecoverableShips = new ArrayList<FleetMemberAPI>();
 	public List<FleetMemberAPI> getRecoverableShips(BattleAPI battle, CampaignFleetAPI winningFleet, CampaignFleetAPI otherFleet) {
 		
 		storyRecoverableShips.clear();
@@ -1406,15 +1442,33 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		all.addAll(ownCasualties);
 		Collections.sort(all, new Comparator<FleetMemberData>() {
 			public int compare(FleetMemberData o1, FleetMemberData o2) {
-				return o2.getMember().getVariant().getSMods().size() - o1.getMember().getVariant().getSMods().size();
+				int result = o2.getMember().getVariant().getSMods().size() - o1.getMember().getVariant().getSMods().size();
+				if (result == 0) {
+					result = o2.getMember().getHullSpec().getHullSize().ordinal() - o1.getMember().getHullSpec().getHullSize().ordinal();
+				}
+				return result;
 			}
 		});
 		
 		
+		//Random random = Misc.getRandom(battle.getSeed(), 11);
+		Random random = Misc.getRandom(Global.getSector().getPlayerBattleSeed(), 11);
+		//System.out.println("BATTLE SEED: " + Global.getSector().getPlayerBattleSeed());
+		
 		// since the number of recoverable ships is limited, prefer "better" ships
-		Random random = Misc.getRandom(battle.getSeed(), 11);
 		WeightedRandomPicker<FleetMemberData> enemyPicker = new WeightedRandomPicker<FleetMemberData>(random);
-		for (FleetMemberData curr : enemyCasualties) {
+		
+		// doesn't matter how it's sorted, as long as it's consistent so that
+		// the order it's insertied into the picker in is the same
+		List<FleetMemberData> enemy = new ArrayList<FleetMemberData>(enemyCasualties);
+		Collections.sort(enemy, new Comparator<FleetMemberData>() {
+			public int compare(FleetMemberData o1, FleetMemberData o2) {
+				int result = o2.getMember().getId().hashCode() - o1.getMember().getId().hashCode();
+				return result;
+			}
+		});
+		
+		for (FleetMemberData curr : enemy) {
 			float base = 10f;
 			switch (curr.getMember().getHullSpec().getHullSize()) {
 			case CAPITAL_SHIP: base = 40f; break;
@@ -1434,6 +1488,10 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		
 		all.addAll(sortedEnemy);
 		
+//		for (FleetMemberData curr : all) {
+//			System.out.println(curr.getMember().getHullId());
+//		}
+		
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		
 		int maxRecoverablePerType = 24;
@@ -1443,6 +1501,9 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		
 		int count = 0;
 		for (FleetMemberData data : all) {
+//			if (data.getMember().getHullId().contains("legion")) {
+//				System.out.println("wefwefwefe");
+//			}
 			//if (data.getMember().getHullSpec().getHints().contains(ShipTypeHints.UNBOARDABLE)) continue;
 			if (Misc.isUnboardable(data.getMember())) continue;
 			if (data.getStatus() != Status.DISABLED && data.getStatus() != Status.DESTROYED) continue;
@@ -1483,9 +1544,10 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 						Misc.isShipRecoverable(data.getMember(), playerFleet, own, useOfficerRecovery, 1f * mult);
 			boolean storyRecovery = !noRecovery && !normalRecovery;
 		
+			boolean alwaysRec = data.getMember().getVariant().hasTag(Tags.VARIANT_ALWAYS_RECOVERABLE);
 
 			float shipRecProb = data.getMember().getStats().getDynamic().getMod(Stats.INDIVIDUAL_SHIP_RECOVERY_MOD).computeEffective(0f);
-			if (!own && (storyRecovery || normalRecovery) && shipRecProb < 1f) {
+			if (!own && !alwaysRec && (storyRecovery || normalRecovery) && shipRecProb < 1f) {
 				float per = Global.getSettings().getFloat("probNonOwnNonRecoverablePerDMod");
 				float perAlready = Global.getSettings().getFloat("probNonOwnNonRecoverablePerAlreadyRecoverable");
 				float max = Global.getSettings().getFloat("probNonOwnNonRecoverableMax");
@@ -1580,7 +1642,9 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 					wingProb = playerFleet.getStats().getDynamic().getValue(Stats.OWN_WING_RECOVERY_MOD, wingProb);
 				}
 				
-				prepareShipForRecovery(data.getMember(), own, true, !own, weaponProb, wingProb, salvageRandom);
+				boolean retain = data.getMember().getHullSpec().hasTag(Tags.TAG_RETAIN_SMODS_ON_RECOVERY) ||
+						data.getMember().getVariant().hasTag(Tags.TAG_RETAIN_SMODS_ON_RECOVERY);
+				prepareShipForRecovery(data.getMember(), own, true, !own && !retain, weaponProb, wingProb, salvageRandom);
 				
 				if (normalRecovery) {
 					if (result.size() < maxRecoverablePerType) {
@@ -1601,6 +1665,9 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 //				data.getMember().getVariant().removeTag(Tags.SHIP_RECOVERABLE);
 //			}
 		}
+		
+		//System.out.println("Recoverable: " + result.size() + ", story: " + storyRecoverableShips.size());
+		
 		
 		recoverableShips.clear();
 		recoverableShips.addAll(result);
@@ -1645,11 +1712,20 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			float minCR = playerFleet.getStats().getDynamic().getValue(Stats.RECOVERED_CR_MIN, 0f);
 			float maxCR = playerFleet.getStats().getDynamic().getValue(Stats.RECOVERED_CR_MAX, 0f);
 			
+			minHull += member.getStats().getDynamic().getValue(Stats.RECOVERED_HULL_MIN, 0f);
+			maxHull += member.getStats().getDynamic().getValue(Stats.RECOVERED_HULL_MAX, 0f);
+			minCR += member.getStats().getDynamic().getValue(Stats.RECOVERED_CR_MIN, 0f);
+			maxCR += member.getStats().getDynamic().getValue(Stats.RECOVERED_CR_MAX, 0f);
+			
 			float hull = (float) Math.random() * (maxHull - minHull) + minHull;
 			if (hull < 0.01f) hull = 0.01f;
+			if (hull > 1f) hull = 1f;
 			member.getStatus().setHullFraction(hull);
 			
 			float cr = (float) Math.random() * (maxCR - minCR) + minCR;
+			if (cr < 0) cr = 0;
+			float max = member.getRepairTracker() == null ? 1f : member.getRepairTracker().getMaxCR();
+			if (cr > max) cr = max;
 			member.getRepairTracker().setCR(cr);
 			
 			if (winnerData != null) winnerData.getInReserveDuringLastEngagement().add(member);
@@ -1977,8 +2053,10 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		}
 		if (bonusXP > 0 && points > 0) {
 			Global.getSector().getPlayerStats().setOnlyAddBonusXPDoNotSpendStoryPoints(true);
+			Global.getSector().getPlayerStats().setBonusXPGainReason("from losing s-modded ships");
 			Global.getSector().getPlayerStats().spendStoryPoints((int)Math.round(points), true, textPanelForXPGain, false, bonusXP, null);
 			Global.getSector().getPlayerStats().setOnlyAddBonusXPDoNotSpendStoryPoints(false);
+			Global.getSector().getPlayerStats().setBonusXPGainReason(null);
 		}
 		
 		//CampaignFleetAPI fleet = side.getFleet();
@@ -2552,6 +2630,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 
 		Set<String> remove = new HashSet<String>();
 		
+		// there's another failsafe for OMEGA specifically, see SalvageDefenderInteraction.postPlayerSalvageGeneration()
 		if (variant.hasTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS)) {
 			for (String slotId : variant.getNonBuiltInWeaponSlots()) {
 				String weaponId = variant.getWeaponId(slotId);
@@ -2766,14 +2845,34 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			}
 		}
 		
+		List<FleetMemberAPI> applyDeployCostTo = new ArrayList<FleetMemberAPI>(result.getDeployed());
+		
 		for (FleetMemberAPI member : result.getDisabled()) {
-			member.getRepairTracker().applyCREvent(-1, "disabled in combat");
+			// does not work, needs more things changed to work
+			//float mult = member.getStats().getDynamic().getValue(Stats.CR_LOSS_WHEN_DISABLED_MULT);
+			float mult = 1f;
+			if (mult > 0) {
+				member.getRepairTracker().applyCREvent(-1f * mult, "disabled in combat");
+			}
+			if (mult < 1) {
+				applyDeployCostTo.add(member);
+			}
 		}
 		for (FleetMemberAPI member : result.getDestroyed()) {
-			member.getRepairTracker().applyCREvent(-1, "disabled in combat");
+//			if (member.getHullId().equals("vanguard_pirates")) {
+//				System.out.println("efwefwef");
+//			}
+			//float mult = member.getStats().getDynamic().getValue(Stats.CR_LOSS_WHEN_DISABLED_MULT);
+			float mult = 1f;
+			if (mult > 0) {
+				member.getRepairTracker().applyCREvent(-1f * mult, "disabled in combat");
+			}
+			if (mult < 1) {
+				applyDeployCostTo.add(member);
+			}
 		}
 		
-		for (FleetMemberAPI member : result.getDeployed()) {
+		for (FleetMemberAPI member : applyDeployCostTo) {
 			float deployCost = getDeployCost(member);
 			if (member.isFighterWing()) {
 				member.getRepairTracker().applyCREvent(-deployCost, "wing deployed in combat");
@@ -3229,6 +3328,8 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		}
 		scoreEnemy *= 0.67f;
 		
+		float maxPlayserShipScore = 0f;
+		
 		officerBase *= 0.5f;
 		officerPerLevel *= 0.5f;
 		Set<PersonAPI> seenOfficers = new HashSet<PersonAPI>();
@@ -3248,10 +3349,13 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			for (int i = 0; i < dMods; i++) {
 				mult *= dModMult;
 			}
-			scorePlayer += member.getUnmodifiedDeploymentPointsCost() * mult;
+			float currShipBaseScore = member.getUnmodifiedDeploymentPointsCost() * mult;
+			scorePlayer += currShipBaseScore;
+			if (battle.getSourceFleet(member) != null && battle.getSourceFleet(member).isPlayerFleet()) {
+				maxPlayserShipScore = Math.max(maxPlayserShipScore, currShipBaseScore);
+			}
 		}
 		
-
 		// so that removing officers from ships prior to a fight doesn't increase the XP gained
 		// otherwise would usually be optimal to do this prior to every fight for any officers 
 		// on ships that aren't expected to be deployed
@@ -3263,6 +3367,8 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			scorePlayer += officerBase + officerPerLevel * Math.max(1f, od.getPerson().getStats().getLevel());
 		}
 	
+		scorePlayer = Math.max(scorePlayer, Math.min(scoreEnemy * 0.5f, maxPlayserShipScore * 6f));
+		
 		if (scorePlayer < 1) scorePlayer = 1;
 		if (scoreEnemy < 1) scoreEnemy = 1;
 		

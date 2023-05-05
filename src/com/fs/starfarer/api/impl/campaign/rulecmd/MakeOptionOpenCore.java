@@ -3,14 +3,14 @@ package com.fs.starfarer.api.impl.campaign.rulecmd;
 import java.util.List;
 import java.util.Map;
 
+import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.CoreUITabId;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
-import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.util.Misc.Token;
 
 /**
- * OpenCoreTab <MakeOptionOpenCore> <optionId> <defaultTab> <tradeMode>
+ * OpenCoreTab <MakeOptionOpenCore> <optionId> <defaultTab> <tradeMode> <optional: onlyShowTargetTabShortcut>
  */
 public class MakeOptionOpenCore extends BaseCommandPlugin {
 
@@ -34,7 +34,12 @@ public class MakeOptionOpenCore extends BaseCommandPlugin {
 			mode = CoreUITradeMode.valueOf(params.get(2).getString(memoryMap));
 		}
 		
-		dialog.makeOptionOpenCore(optionId, tabId, mode);
+		boolean onlyShowTargetTabShortcut = false;
+		if (params.size() > 3) {
+			onlyShowTargetTabShortcut = params.get(3).getBoolean(memoryMap);
+		}
+		
+		dialog.makeOptionOpenCore(optionId, tabId, mode, onlyShowTargetTabShortcut);
 		
 		return true;
 	}

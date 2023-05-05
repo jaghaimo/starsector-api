@@ -345,6 +345,12 @@ public interface SectorAPI {
 
 	void setFastForwardIteration(boolean isFastForwardIteration);
 
+	/**
+	 * Same as getCharacterData().getMemoryWithoutUpdate()
+	 * @return
+	 */
+	MemoryAPI getPlayerMemoryWithoutUpdate();
+
 }
 
 

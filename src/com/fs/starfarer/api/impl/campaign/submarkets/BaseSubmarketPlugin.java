@@ -28,6 +28,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
+import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
@@ -269,6 +270,9 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 		if (action == TransferAction.PLAYER_BUY) {
 			return "Illegal to buy"; // this shouldn't happen
 		} else {
+			if (isFreeTransfer()) {
+				return "Illegal to store";
+			}
 			return "Illegal to sell";
 		}
 	}
@@ -291,12 +295,18 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 	}
 	
 	protected void addWeapons(int min, int max, int maxTier, String factionId) {
+		addWeapons(min, max, maxTier, factionId, true);
+	}
+	protected void addWeapons(int min, int max, int maxTier, String factionId, boolean withCategories) {
 		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>(itemGenRandom);
 		picker.add(factionId);
-		addWeapons(min, max, maxTier, picker);
+		addWeapons(min, max, maxTier, picker, withCategories);
 	}
 	
 	protected void addWeapons(int min, int max, int maxTier, WeightedRandomPicker<String> factionPicker) {
+		addWeapons(min, max, maxTier, factionPicker, true);
+	}
+	protected void addWeapons(int min, int max, int maxTier, WeightedRandomPicker<String> factionPicker, boolean withCategories) {
 		WeightedRandomPicker<WeaponSpecAPI> picker = new WeightedRandomPicker<WeaponSpecAPI>(itemGenRandom);
 		
 		WeightedRandomPicker<WeaponSpecAPI> pd = new WeightedRandomPicker<WeaponSpecAPI>(itemGenRandom);
@@ -322,6 +332,9 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 				float p = DefaultFleetInflater.getTierProbability(spec.getTier(), quality);
 				p = 1f; // 
 				p *= w;
+				if (faction.getWeaponSellFrequency().containsKey(id)) {
+					p *= faction.getWeaponSellFrequency().get(id);
+				}
 				picker.add(spec, p);
 				
 				String cat = spec.getAutofitCategory();
@@ -343,25 +356,27 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 		
 		int num = min + itemGenRandom.nextInt(max - min + 1);
 		
-		if (num > 0 && !pd.isEmpty()) {
-			pickAndAddWeapons(pd);
-			num--;
-		}
-		if (num > 0 && !kinetic.isEmpty()) {
-			pickAndAddWeapons(kinetic);
-			num--;
-		}
-		if (num > 0 && !missile.isEmpty()) {
-			pickAndAddWeapons(missile);
-			num--;
-		}
-		if (num > 0 && !nonKinetic.isEmpty()) {
-			pickAndAddWeapons(nonKinetic);
-			num--;
-		}
-		if (num > 0 && !strike.isEmpty()) {
-			pickAndAddWeapons(strike);
-			num--;
+		if (withCategories) {
+			if (num > 0 && !pd.isEmpty()) {
+				pickAndAddWeapons(pd);
+				num--;
+			}
+			if (num > 0 && !kinetic.isEmpty()) {
+				pickAndAddWeapons(kinetic);
+				num--;
+			}
+			if (num > 0 && !missile.isEmpty()) {
+				pickAndAddWeapons(missile);
+				num--;
+			}
+			if (num > 0 && !nonKinetic.isEmpty()) {
+				pickAndAddWeapons(nonKinetic);
+				num--;
+			}
+			if (num > 0 && !strike.isEmpty()) {
+				pickAndAddWeapons(strike);
+				num--;
+			}
 		}
 		
 
@@ -413,6 +428,9 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 			
 			float p = DefaultFleetInflater.getTierProbability(spec.getTier(), quality);
 			p = 1f;
+			if (faction.getFighterSellFrequency().containsKey(id)) {
+				p *= faction.getFighterSellFrequency().get(id);
+			}
 			picker.add(spec, p);
 		}
 		
@@ -566,6 +584,9 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 	}
 	
 	protected void addHullMods(int maxTier, int num) {
+		addHullMods(maxTier, num, null);
+	}
+	protected void addHullMods(int maxTier, int num, String factionId) {
 		//float p = Global.getSettings().getFloat("sellHullmodProb");
 		
 		CargoAPI cargo = getCargo();
@@ -575,6 +596,11 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 			}
 		}
 		
+		FactionAPI faction = null;
+		if (factionId != null) {
+			faction = Global.getSector().getFaction(factionId);
+		}
+		
 		WeightedRandomPicker<HullModSpecAPI> picker = new WeightedRandomPicker<HullModSpecAPI>(itemGenRandom);
 		for (String id : submarket.getFaction().getKnownHullMods()) {
 			//if (Global.getSector().getCharacterData().knowsHullMod(id)) continue;
@@ -582,9 +608,18 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 			if (spec.isHidden()) continue;
 			if (spec.isAlwaysUnlocked()) continue;
 			if (spec.getTier() > maxTier) continue;
-			picker.add(spec, spec.getRarity());
+			float p = spec.getRarity();
+			if (faction != null && faction.getHullmodSellFrequency().containsKey(id) &&
+					!Global.getSector().getPlayerFaction().knowsHullMod(id)) {
+				p *= faction.getHullmodSellFrequency().get(id);
+			}
+//			if (Global.getSector().getPlayerFaction().knowsHullMod(id)) {
+//				p *= 0.25f;
+//			}
+				
+			picker.add(spec, p);
 		}
-		
+		//picker.getItems().contains("missile_autoloader");
 		for (int i = 0; i < num; i++) {
 			HullModSpecAPI pick = picker.pickAndRemove();
 			if (pick == null) continue;

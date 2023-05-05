@@ -69,4 +69,6 @@ public interface FactionProductionAPI {
 
 	FactionProductionAPI clone();
 
+	boolean addItem(ProductionItemType type, String specId, int quantity, int maxQuantity);
+
 }

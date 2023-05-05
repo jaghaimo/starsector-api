@@ -42,7 +42,7 @@ public class MonthlyReportNodeTooltipCreator implements TooltipCreator {
 		Color bright = faction.getBrightUIColor();
 		
 		if (MonthlyReport.FLEET.equals(node.custom)) {
-			tooltip.addPara("Fleet-related expenses.", 0);
+			tooltip.addPara("Fleet-related income and expenses.", 0);
 		} else if (MonthlyReport.OUTPOSTS.equals(node.custom)) {
 			tooltip.addPara("Colony-related income and expenses.", 0);
 		} else if (MonthlyReport.PRODUCTION_WEAPONS.equals(node.custom)) {

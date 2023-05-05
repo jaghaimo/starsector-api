@@ -10,6 +10,7 @@ import java.util.Map;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.BaseHullMod;
@@ -24,6 +25,7 @@ import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipCommand;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Personalities;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
@@ -695,6 +697,14 @@ public class ShardSpawner extends BaseHullMod {
 				for (int i = 0; i < ships.length; i++) {
 					ships[i].cloneVariant();
 					ships[i].getVariant().addTag(Tags.SHIP_LIMITED_TOOLTIP);
+					
+					if (Global.getCombatEngine().isInCampaign() || Global.getCombatEngine().isInCampaignSim()) {
+						FactionAPI faction = Global.getSector().getFaction(Factions.OMEGA);
+						if (faction != null) {
+							String name = faction.pickRandomShipName();
+							ships[i].setName(name);
+						}
+					}
 				}
 				fleetManager.setSuppressDeploymentMessages(wasSuppressed);
 				collisionClass = ships[0].getCollisionClass();

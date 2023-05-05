@@ -217,12 +217,30 @@ public interface FactionAPI extends HasMemory {
 	
 	Set<String> getKnownShips();
 	void addKnownShip(String hullId, boolean setTimestamp);
+	
+	/**
+	 * All of the blueprints specified in the .faction file are re-added to the faction 
+	 * every time a savegame is loaded. To make blueprint removal permanent, the list of 
+	 * things-to-remove needs to be stored and they need to be re-removed on every game load.
+	 */
 	void removeKnownShip(String hullId);
 	Set<String> getKnownWeapons();
 	void addKnownWeapon(String weaponId, boolean setTimestamp);
+	
+	/**
+	 * All of the blueprints specified in the .faction file are re-added to the faction 
+	 * every time a savegame is loaded. To make blueprint removal permanent, the list of 
+	 * things-to-remove needs to be stored and they need to be re-removed on every game load.
+	 */
 	void removeKnownWeapon(String weaponId);
 	Set<String> getKnownFighters();
 	void addKnownFighter(String wingId, boolean setTimestamp);
+	
+	/**
+	 * All of the blueprints specified in the .faction file are re-added to the faction 
+	 * every time a savegame is loaded. To make blueprint removal permanent, the list of 
+	 * things-to-remove needs to be stored and they need to be re-removed on every game load.
+	 */
 	void removeKnownFighter(String wingId);
 	Set<String> getKnownIndustries();
 	void addKnownIndustry(String industryId);
@@ -318,6 +336,14 @@ public interface FactionAPI extends HasMemory {
 	int getRepInt(String id);
 	String pickVoice(PersonImportance importance, Random random);
 	String getShipNamePrefix();
+	
+	Map<String, Float> getWeaponSellFrequency();
+	Map<String, Float> getFighterSellFrequency();
+	Map<String, Float> getHullmodSellFrequency();
+	FactionSpecAPI getFactionSpec();
+	
+	void initSpecIfNeeded();
+	JSONObject getCustomJSONObject(String key);
 	
 	
 }

@@ -9,7 +9,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class HullRestoration {
 	
-	public static float RECOVERY_PROB = 1f;
+	public static float RECOVERY_PROB = 2f;
 	public static float CR_PER_SMOD = 5;
 	
 	public static float DMOD_AVOID_MAX = 0.9f;

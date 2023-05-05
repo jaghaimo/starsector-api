@@ -100,6 +100,8 @@ public interface ShieldAPI {
 	 * @return
 	 */
 	void setRingRotationRate(float ringRotationRate);
+	boolean isSkipRendering();
+	void setSkipRendering(boolean skipRendering);
 	
 	
 	

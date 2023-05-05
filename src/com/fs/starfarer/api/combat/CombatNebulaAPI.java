@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.combat;
 
+import org.lwjgl.util.vector.Vector2f;
+
 /**
  * Covers the map plus a 100 pixel area around it.
  * 
@@ -9,6 +11,14 @@ package com.fs.starfarer.api.combat;
  */
 public interface CombatNebulaAPI {
 
+	public interface CloudAPI {
+		void thicken(float thicknessGain);
+		Vector2f getLocation();
+		float getThickness();
+		void setThickness(float thickness);
+		
+	}
+	
 	int getTilesWide();
 	int getTilesHigh();
 	
@@ -40,5 +50,8 @@ public interface CombatNebulaAPI {
 	 * @return
 	 */
 	int getAbove();
+	
 	void setHasNebula(int cellX, int cellY, float brightness);
+	CloudAPI getCloud(float x, float y);
+	CloudAPI getCloud(int cellX, int cellY);
 }

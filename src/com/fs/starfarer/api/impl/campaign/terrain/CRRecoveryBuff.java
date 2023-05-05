@@ -21,6 +21,7 @@ public class CRRecoveryBuff implements Buff {
 	}
 	public void apply(FleetMemberAPI member) {
 		member.getStats().getBaseCRRecoveryRatePercentPerDay().modifyMult(getId(), mult);
+		//member.getStats().getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyMult(getId(), 0.5f); 
 	}
 	public String getId() {
 		return id;

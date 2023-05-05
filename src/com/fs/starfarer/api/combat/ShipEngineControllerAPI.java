@@ -48,6 +48,8 @@ public interface ShipEngineControllerAPI {
 		Color getEngineColor();
 
 		Color getContrailColor();
+
+		void repair();
 	}
 	
 	
@@ -84,5 +86,6 @@ public interface ShipEngineControllerAPI {
 	ValueShifterAPI getExtendGlowFraction();
 	void forceShowAccelerating();
 	ColorShifterAPI getFlameColorShifter();
+	float getTurnDeceleration();
 	
 }

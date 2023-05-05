@@ -11,12 +11,13 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CommDirectoryEntryAPI;
+import com.fs.starfarer.api.campaign.CommDirectoryEntryAPI.EntryType;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.CommDirectoryEntryAPI.EntryType;
+import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
@@ -128,7 +129,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 		
 		Global.getSector().getMemoryWithoutUpdate().set("$tut_jangalaContactName", mainContact.getNameString());
 		
-		updateStage(TutorialMissionStage.INIT);
+		updateStage(TutorialMissionStage.INIT, null);
 		
 		setImportant(true);
 		
@@ -166,12 +167,13 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 		return mainContact;
 	}
 
-	protected void updateStage(TutorialMissionStage stage) {
+	protected void updateStage(TutorialMissionStage stage, TextPanelAPI text) {
 		this.stage = stage;
 		Global.getSector().getMemoryWithoutUpdate().set(TUT_STAGE, stage.name());
 		
 		if (stage != TutorialMissionStage.INIT) {
-			sendUpdateIfPlayerHasIntel(stage, false);
+			//sendUpdateIfPlayerHasIntel(stage, false);
+			sendUpdateIfPlayerHasIntel(stage, text);
 		}
 	}
 	
@@ -213,7 +215,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 //				Global.getSector().reportEventStage(this, "salvage_core_end", Global.getSector().getPlayerFleet(),
 //						MessagePriority.DELIVER_IMMEDIATELY, createSetMessageLocationScript(ancyra));
 				Misc.makeImportant(mainContact, REASON);
-				updateStage(TutorialMissionStage.GOT_AI_CORE);
+				updateStage(TutorialMissionStage.GOT_AI_CORE, null);
 			}
 		}
 		
@@ -238,7 +240,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 //							MessagePriority.DELIVER_IMMEDIATELY, createSetMessageLocationScript(ancyra));
 				Misc.makeImportant(mainContact, REASON);
 				Misc.makeUnimportant(tetra, REASON);
-				updateStage(TutorialMissionStage.RECOVERED_SHIPS);
+				updateStage(TutorialMissionStage.RECOVERED_SHIPS, null);
 			}
 		}
 		
@@ -251,7 +253,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 //						MessagePriority.DELIVER_IMMEDIATELY, createSetMessageLocationScript(ancyra));
 				Misc.makeImportant(mainContact, REASON);
 				Misc.makeUnimportant(inner, REASON);
-				updateStage(TutorialMissionStage.STABILIZED);
+				updateStage(TutorialMissionStage.STABILIZED, null);
 			}
 			
 		}
@@ -265,6 +267,9 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		CargoAPI cargo = playerFleet.getCargo();
 		
+		TextPanelAPI text = null;
+		if (dialog != null) text = dialog.getTextPanel();
+		
 		if (action.equals("startGetData")) {
 //			Global.getSector().reportEventStage(this, "sneak_start", Global.getSector().getPlayerFleet(),
 //					MessagePriority.DELIVER_IMMEDIATELY, createSetMessageLocationScript(derinkuyu));
@@ -276,7 +281,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			
 			detachment.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_PATROL_ALLOW_TOFF, true);
 			
-			updateStage(TutorialMissionStage.GO_GET_DATA);
+			updateStage(TutorialMissionStage.GO_GET_DATA, text);
 			
 			Global.getSector().getMemoryWithoutUpdate().set("$tutMadeContactAtAncyra", true);
 			
@@ -290,7 +295,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			Misc.makeUnimportant(dataContact, REASON);
 			Misc.makeImportant(mainContact, REASON);
 			
-			updateStage(TutorialMissionStage.GOT_DATA);
+			updateStage(TutorialMissionStage.GOT_DATA, text);
 			
 		} else if (action.equals("goSalvage")) {
 //			Global.getSector().reportEventStage(this, "salvage_core_start", Global.getSector().getPlayerFleet(),
@@ -298,7 +303,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			Misc.makeUnimportant(mainContact, REASON);
 			Misc.makeImportant(probe, REASON);
 			
-			updateStage(TutorialMissionStage.GO_GET_AI_CORE);
+			updateStage(TutorialMissionStage.GO_GET_AI_CORE, text);
 			
 			saveNag();
 		} else if (action.equals("goRecover")) {
@@ -313,7 +318,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			
 			preRecoverFleetSize = playerFleet.getFleetData().getNumMembers();
 			
-			updateStage(TutorialMissionStage.GO_RECOVER_SHIPS);
+			updateStage(TutorialMissionStage.GO_RECOVER_SHIPS, text);
 		} else if (action.equals("goStabilize")) {
 //			Global.getSector().reportEventStage(this, "stabilize_jump_point", Global.getSector().getPlayerFleet(),
 //					MessagePriority.DELIVER_IMMEDIATELY, createSetMessageLocationScript(inner));
@@ -325,7 +330,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			inner.getMemoryWithoutUpdate().set(JumpPointInteractionDialogPluginImpl.CAN_STABILIZE, true);
 			fringe.getMemoryWithoutUpdate().set(JumpPointInteractionDialogPluginImpl.CAN_STABILIZE, true);
 			
-			updateStage(TutorialMissionStage.GO_STABILIZE);
+			updateStage(TutorialMissionStage.GO_STABILIZE, text);
 			
 			saveNag();
 //		} else if (action.equals("addStipend")) {
@@ -358,7 +363,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			jangalaContact.getMemoryWithoutUpdate().set("$tut_eventRef", this);
 			Misc.makeImportant(jangalaContact, REASON);
 			
-			updateStage(TutorialMissionStage.DELIVER_REPORT);
+			updateStage(TutorialMissionStage.DELIVER_REPORT, text);
 			
 			endGalatiaPortionOfMission(true, true);
 			
@@ -371,7 +376,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			Misc.makeUnimportant(jangalaContact, REASON);
 			Misc.cleanUpMissionMemory(jangalaContact.getMemoryWithoutUpdate(), REASON + "_");
 			
-			updateStage(TutorialMissionStage.DONE);
+			updateStage(TutorialMissionStage.DONE, text);
 			
 			MarketAPI jangala = Global.getSector().getEconomy().getMarket("jangala");
 			
@@ -635,7 +640,7 @@ public class TutorialMissionIntel extends BaseIntelPlugin implements EveryFrameS
 			info.addPara("Deliver report to " + getJangalaContactPostName() + " at Jangala", tc, pad);
 			break;
 		case DONE:
-			info.addPara("Completed", pad);
+			info.addPara("Completed", tc, pad);
 			break;
 		}
 		

@@ -58,6 +58,7 @@ import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager;
+import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl;
 import com.fs.starfarer.api.impl.campaign.shared.PlayerTradeDataForSubmarket;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
@@ -203,12 +204,19 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 			memory.set("$systemCutOffFromHyper", true, 0);
 		}
 		
+		if (entity.getContainingLocation() != null) {
+			memory.set("$locationId", entity.getContainingLocation().getId(), 0f);
+		}
 		
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		
 		memory.set("$id", entity.getId(), 0);
 		
 		memory.set("$transponderOn", entity.isTransponderOn(), 0);
+		
+//		if (entity.getMarket() != null) {
+//			memory.set("$market", entity.getMarket().getName(), 0);
+//		}
 		
 		memory.set("$name", entity.getName(), 0);
 		memory.set("$fullName", entity.getFullName(), 0);
@@ -319,6 +327,9 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 	
 	public void updateMarketFacts(MarketAPI market, MemoryAPI memory) {
 		if (market != null) {
+			for (String tag : market.getTags()) {
+				memory.set("$tag:" + tag, true, 0);
+			}
 			for (MarketConditionAPI mc : market.getConditions()) {
 				memory.set("$mc:" + mc.getId(), true, 0);
 			}
@@ -395,7 +406,7 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		
 		float extra = market.getMemoryWithoutUpdate().getFloat(MemFlags.MARKET_EXTRA_SUSPICION);
 		suspicionLevel += extra;
-		suspicionLevel *= Math.min(1f, suspicionLevel);
+		suspicionLevel = Math.min(1f, suspicionLevel);
 		
 		return suspicionLevel;
 	}
@@ -419,6 +430,7 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		memory.set("$isPerson", true, 0);
 		memory.set("$name", person.getName().getFullName(), 0);
 		memory.set("$personName", person.getName().getFullName(), 0);
+		memory.set("$isContact", ContactIntel.playerHasContact(person, false), 0);
 		
 		memory.set("$rankId", person.getRankId(), 0);
 		memory.set("$postId", person.getPostId(), 0);
@@ -530,6 +542,10 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		memory.set("$name", person.getName().getFullName(), 0);
 		
 		
+		if (Misc.getCommissionFactionId() != null) {
+			memory.set("$commissionFactionId", Misc.getCommissionFactionId(), 0);
+		}
+		
 		
 		if (fleet.getContainingLocation() != null) {
 			memory.set("$locationId", fleet.getContainingLocation().getId(), 0);
@@ -628,6 +644,8 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		memory.set("$fleetSizeCount", fleetSizeCount, 0);
 		memory.set("$numShips", fleet.getFleetData().getMembersListCopy().size(), 0);
 		memory.set("$fleetPoints", fleet.getFleetPoints(), 0);
+		
+		memory.set("$numColonies", Misc.getPlayerMarkets(true).size(), 0);
 		
 		if (fleet.getFlagship() != null) {
 			memory.set("$flagshipName", fleet.getFlagship().getShipName(), 0);

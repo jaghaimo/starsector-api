@@ -159,7 +159,7 @@ public class CBRemnantStation extends BaseCustomBountyCreator {
 				boolean damaged = fleet.getMemoryWithoutUpdate().getBoolean("$damagedStation");
 				if ((difficulty == 7 || difficulty == 8) && damaged) {
 					stations.add(fleet);
-				} else if (!damaged) {
+				} else if (!damaged && difficulty > 8) {
 					stations.add(fleet);
 				}
 			}

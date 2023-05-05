@@ -27,8 +27,12 @@ public class AdjustRep extends BaseCommandPlugin {
 			return result.delta != 0;
 		} catch (Throwable t) {
 			CustomRepImpact impact = new CustomRepImpact();
-			impact.limit = RepLevel.valueOf(params.get(1).getString(memoryMap));
-			impact.delta = params.get(2).getFloat(memoryMap) * 0.01f;
+			if (params.size() >= 3) {
+				impact.limit = RepLevel.valueOf(params.get(1).getString(memoryMap));
+				impact.delta = params.get(2).getFloat(memoryMap) * 0.01f;
+			} else {
+				impact.delta = params.get(1).getFloat(memoryMap) * 0.01f;
+			}
 			ReputationAdjustmentResult result = Global.getSector().adjustPlayerReputation(
 					new RepActionEnvelope(RepActions.CUSTOM, impact,
 										  null, dialog.getTextPanel(), true), 

@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
+import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
@@ -154,7 +155,7 @@ public class FactionHostilityIntel extends BaseIntelPlugin {
 	
 	@Override
 	public FactionAPI getFactionForUIColors() {
-		return null;
+		return Global.getSector().getPlayerFaction();
 	}
 
 	public String getSmallDescriptionTitle() {
@@ -185,25 +186,97 @@ public class FactionHostilityIntel extends BaseIntelPlugin {
 			label.setHighlightColors(one.getBaseUIColor(), two.getBaseUIColor());
 		}
 		
+//		LabelAPI header = info.addSectionHeading("${data.defaultValue}", Alignment.MID, 0f);
+//		header.getPosition().inTL(1.4f, 10f);
+		
 //		String font = Global.getSettings().getString("defaultFont");
 //		info.addCheckbox(200, 28, "Testing!", UICheckboxSize.TINY, opad);
 //		info.addCheckbox(200, 28, "Testing!", UICheckboxSize.SMALL, opad);
 //		info.addCheckbox(200, 28, "Testing!", font, Misc.getHighlightColor(), UICheckboxSize.LARGE, opad);
 //		info.addTextField(200, opad);
 		
+//		info.addPara("FEWFWEFWE", opad);
+		
 //		info.addPara("wkefhuiwehfuweffewfewfeddewefewewefwefwewefwefweehfuwefwewefwefwehfuwefwewefwefwehfuwefwewefwefwkwejfwffhwejkfhkwejfh423wfwhel" +
-//				"fewfwefwefwefweh[%s]fh2fwfwefwefwefwefwfkwghfieuwhfekhwejkuhfiohwef1wef2wef3wef4wefewfwefwe", 10f,
+//				"fewfwefwefwefweh[%s]fh2fwfwefwefwefwefwfkwghfieuwhfekhwejkuhfiohwef1wef2wef3wef4wefewfwefwenABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ\n"
+//				+ "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ\n\nABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ", 10f,
 //				tc, h, "5%/6%/7%/8%");
 //		info.addPara("wkefhuiwehfuweffewfewfe[%s]wefwefweee123eee" + "\u3002" + 
 //				"ddewefewewefwefwe[%s]wefwefweehfuwdfeefwewefwefwehfuwefwe[%s]wefwefwehfuwefwewefwefwkwejfwffhwejkfhkwejfh423wfwhel" +
 //				"fewfwefwef[%s]fh2fwfwefwefwefwefwfkwghfieuwhfekhwejkuhfiohwef1w[%s]ef2wef3wef4wefewfwefwe", 10f,
 //				tc, h, "20", "4X", "103", "5%/6%/7%/8%", "54%");
-		
+//		
 //		info.addPara("wkefhuiwehfuweffewfewfe[%s]wefwefweeeeddewefewewefwefwe[%s]wefwefweehfuwdfeefwewefwefwehfuwefwe[%s]wefwefwehfuwefwewefwefwkwejfwffhwejkfhkwejfh423wfwhel" +
 //				"fewfwefwefwefweh[%s]fh2fwfwefwefwefwefwfkwghfieuwhfekhwejkuhfiohwef1w[%s]ef2wef3wef4wefewfwefwe", 10f,
 //				tc, h, "20", "4X", "103", "5%/6%/7%/8%", "54%");
 
+//        TooltipMakerAPI listPanel = info;
+//        List<ShipVariantAPI> blueprints = new ArrayList<ShipVariantAPI>();
+//        for (int i = 0; i < 20; i++) {
+//            blueprints.add(Global.getSettings().getVariant("crig_Standard"));
+//        }
+//        float summaryOffset = 0f;
+//        for (ShipVariantAPI blueprint : blueprints) {
+//            addBlueprintEntry(listPanel, blueprint);
+//            //summaryOffset += 9f;
+//            summaryOffset += 0f;
+//        }
+//        listPanel.addSpacer(-summaryOffset);
+//
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+//        addGenericButton(info, width, "TESTING", "TESTING");
+		
+//		PersonAPI person = OfficerManagerEvent.createOfficer(Global.getSector().getPlayerFaction(), 5);
+//		info.addSkillPanel(person, opad);
+//		info.addSkillPanelOneColumn(person, opad);
+		
+		PlanetAPI jangala = (PlanetAPI) Global.getSector().getEntityById("jangala");
+		info.showPlanetInfo(jangala, opad);
+		info.showPlanetInfo(jangala, 100, 100, true, opad);
+		info.showPlanetInfo(jangala, 50, 50, false, opad);
+		info.showPlanetInfo(jangala, width, width, true, opad);
 	}
+	
+//    @Override
+//	public void buttonPressConfirmed(Object buttonId, IntelUIAPI ui) {
+//		super.buttonPressConfirmed(buttonId, ui);
+//		System.out.println("TESTING");
+//	}
+//
+//	private static void addBlueprintEntry(TooltipMakerAPI listPanel, ShipVariantAPI blueprint) {
+//        ButtonAPI checkbox = listPanel.addAreaCheckbox("", null, Misc.getDarkPlayerColor(),
+//                Misc.getDarkPlayerColor(), Misc.getDarkPlayerColor(),
+//                300f, 30f, 1f);
+//        checkbox.getPosition().setXAlignOffset(0f);
+//        listPanel.addSpacer(0f);
+//        //listPanel.getPrev().getPosition().setXAlignOffset(-15f);
+//        FleetMemberAPI dummyMember = Global.getFactory().createFleetMember(FleetMemberType.SHIP, blueprint);
+//        List<FleetMemberAPI> memberAsList = new ArrayList<FleetMemberAPI>();
+//        memberAsList.add(dummyMember);
+//        listPanel.addShipList(1, 1, 30f, Misc.getDarkPlayerColor(), memberAsList, 0f);
+//        UIComponentAPI hullIcon = listPanel.getPrev();
+//        hullIcon.getPosition().setYAlignOffset(30f);
+//        listPanel.addSpacer(10f);
+//        //listPanel.getPrev().getPosition().setXAlignOffset(25f);
+//    }
+    
 	
 	public String getIcon() {
 		return Global.getSettings().getSpriteName("intel", "hostilities");

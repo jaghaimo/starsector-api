@@ -914,6 +914,8 @@ public class FleetFactoryV3 {
 		float fleetSizeOfficerQualityMult = combatShips / (baseShipsForMaxOfficerLevel *  (1f - officerQualityMult * 0.5f));
 		if (fleetSizeOfficerQualityMult > 1) fleetSizeOfficerQualityMult = 1;
 		
+		maxOfficers += (int)((float)doctrine.getOfficerQuality() * mercMult) + params.officerNumberBonus;
+		
 		//int numOfficers = (int) (combatPoints / fpPerBaseOfficer) + params.officerNumberBonus;
 		int numOfficers = (int) Math.min(maxOfficers, combatShips / combatShipsPerOfficer);
 		//numOfficers += (int) Math.max(0, (combatPoints - mercFP) / fpPerExtraOfficer);
@@ -922,12 +924,18 @@ public class FleetFactoryV3 {
 		
 		if (debug) System.out.println("numOfficers: " + numOfficers);
 		
-		maxOfficers += (int)((float)doctrine.getOfficerQuality() * mercMult) + params.officerNumberBonus;
 		
 //		if (params.maxOfficers >= 0) maxOfficers = params.maxOfficers;
 //		if (params.minOfficers >= 0 && numOfficers < params.minOfficers) numOfficers = params.minOfficers;
 		
 		if (numOfficers > maxOfficers) numOfficers = maxOfficers;
+		
+		if (params.commander != null && params.commander.isPlayer()) {
+			numOfficers = (int) params.commander.getStats().getOfficerNumber().getModifiedInt();
+		}
+		if (params.maxOfficersToAdd != null) {
+			numOfficers = Math.min(numOfficers, params.maxOfficersToAdd);
+		}
 		
 		//int maxOfficerLevel = (int) Math.round((officerQualityMult * 0.75f + fleetSizeOfficerQualityMult * 1f) * (float) baseMaxOfficerLevel);
 		int maxOfficerLevel = (int)Math.round(((float)doctrine.getOfficerQuality() / 2f) +  
@@ -954,6 +962,7 @@ public class FleetFactoryV3 {
 				maxSize = size;
 			}
 		}
+		//maxSize = 2;
 		for (FleetMemberAPI member : members) {
 			if (member.isFighterWing()) continue;
 			if (member.isFlagship()) continue;
@@ -997,9 +1006,10 @@ public class FleetFactoryV3 {
 			}
 			addCommanderSkills(commander, fleet, params, random);
 		}
-		
-		commander.setRankId(Ranks.SPACE_COMMANDER);
-		commander.setPostId(Ranks.POST_FLEET_COMMANDER);
+		if (params.commander == null) {
+			commander.setRankId(Ranks.SPACE_COMMANDER);
+			commander.setPostId(Ranks.POST_FLEET_COMMANDER);
+		}
 		fleet.setCommander(commander);
 		fleet.getFleetData().setFlagship(flagship);
 		
@@ -1029,6 +1039,9 @@ public class FleetFactoryV3 {
 			}
 			if (level < 1) level = 1;
 			if (level > officerLevelLimit) level = officerLevelLimit;
+			if (params.commander != null && params.commander.isPlayer()) {
+				level = (int) params.commander.getStats().getDynamic().getMod(Stats.OFFICER_MAX_LEVEL_MOD).computeEffective(Global.getSettings().getInt("officerMaxLevel"));
+			}
 			
 			pref = getSkillPrefForShip(member);
 			PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), level, pref, false, fleet, true, true, -1, random);
@@ -1041,6 +1054,10 @@ public class FleetFactoryV3 {
 			}
 			added++;
 			member.setCaptain(person);
+			
+			if (params.commander != null && params.commander.isPlayer()) {
+				fleet.getFleetData().addOfficer(person);
+			}
 		}
 		
 		if (debug) {

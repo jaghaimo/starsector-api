@@ -12,4 +12,9 @@ public interface MarketConditionSpecAPI {
 	boolean isPlanetary();
 	boolean isDecivRemove();
 	void setDecivRemove(boolean decivRemove);
+	void setId(String id);
+	void setName(String name);
+	void setDesc(String desc);
+	void setOrder(float order);
+	void setPlanetary(boolean planetary);
 }

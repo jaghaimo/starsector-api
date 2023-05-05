@@ -284,4 +284,53 @@ public class TowCable implements HullModEffect {
 	public int getDisplayCategoryIndex() {
 		return -1;
 	}
+
+	public boolean hasSModEffectSection(HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
+		return false;
+	}
+
+	public void addSModSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width,
+			boolean isForModSpec) {
+		
+	}
+
+	public void addSModEffectSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width,
+			boolean isForModSpec, boolean isForBuildInList) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void addSModSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width,
+			boolean isForModSpec, boolean isForBuildInList) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public boolean hasSModEffect() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public String getSModDescriptionParam(int index, HullSize hullSize) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getSModDescriptionParam(int index, HullSize hullSize, ShipAPI ship) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public float getTooltipWidth() {
+		return 0;
+	}
+
+	public boolean isSModEffectAPenalty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean showInRefitScreenModPickerFor(ShipAPI ship) {
+		return true;
+	}
 }

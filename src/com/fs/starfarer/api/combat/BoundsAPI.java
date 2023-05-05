@@ -48,4 +48,6 @@ public interface BoundsAPI {
 	 * @param y2
 	 */
 	void addSegment(float x2, float y2);
+
+	List<SegmentAPI> getOrigSegments();
 }

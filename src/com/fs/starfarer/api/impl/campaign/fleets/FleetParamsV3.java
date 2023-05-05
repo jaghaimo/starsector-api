@@ -69,6 +69,7 @@ public class FleetParamsV3 {
 	
 	public int officerLevelBonus = 0;
 	public int officerNumberBonus = 0;
+	public Integer maxOfficersToAdd = null;
 	public float officerNumberMult = 1;
 	public int officerLevelLimit = 0;
 	public int commanderLevelLimit = 0;
@@ -117,6 +118,10 @@ public class FleetParamsV3 {
 		}
 	}
 	
+	public FleetParamsV3() {
+		
+	}
+			
 	public FleetParamsV3(Vector2f locInHyper, String factionId, Float qualityOverride, String fleetType,
 			float combatPts, float freighterPts, float tankerPts,
 			float transportPts, float linerPts,

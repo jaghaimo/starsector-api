@@ -14,7 +14,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 public interface HullDamageAboutToBeTakenListener {
 	
 	/**
-	 * if false is returned, the hull damage to be taken is negated.
+	 * if true is returned, the hull damage to be taken is negated.
 	 *  
 	 * @param param
 	 * @param ship

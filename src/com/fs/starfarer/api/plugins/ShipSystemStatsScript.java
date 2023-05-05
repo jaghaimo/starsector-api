@@ -32,4 +32,6 @@ public interface ShipSystemStatsScript {
 	
 	int getUsesOverride(ShipAPI ship);
 	float getRegenOverride(ShipAPI ship);
+	
+	String getDisplayNameOverride(State state, float effectLevel);
 }

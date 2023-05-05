@@ -44,5 +44,10 @@ public interface WeaponSlotAPI {
 	void setRenderOrderMod(float renderOrderMod);
 	float computeMidArcAngle(ShipAPI ship);
 	List<Vector2f> getLaunchPointOffsets();
+	//WeaponSlotAPI clone();
+	boolean isWeaponSlot();
+	//void setSlotSize(WeaponSize slotSize);
+	//void setId(String id);
+	//void setNode(String nodeId, Vector2f position);
 	
 }

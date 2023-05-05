@@ -1,0 +1,98 @@
+package com.fs.starfarer.api.campaign;
+
+import java.awt.Color;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.json.JSONObject;
+
+import com.fs.starfarer.api.characters.FullName.Gender;
+import com.fs.starfarer.api.util.WeightedRandomPicker;
+
+public interface FactionSpecAPI {
+
+	LinkedHashSet<String> getOverriddenHulls();
+	Map<String, Float> getHullFrequency();
+	void setHullFrequency(Map<String, Float> hullFrequency);
+	Map<String, Float> getWeaponSellFrequency();
+	Map<String, Float> getFighterSellFrequency();
+	Map<String, Float> getHullmodSellFrequency();
+	Map<String, Float> getShipSellFrequency();
+	Map<String, Float> getTagFrequency();
+	void setTagFrequency(Map<String, Float> tagFrequency);
+	String getDisplayNameLong();
+	void setDisplayNameLong(String displayNameLong);
+	Map<String, String> getMusicMap();
+	String getDisplayNameLongWithArticle();
+	void setDisplayNameLongWithArticle(String displayNameLongWithArticle);
+	List<String> getFlags();
+	List<String> getCrests();
+	String getPersonNamePrefixAOrAn();
+	void setPersonNamePrefixAOrAn(String personNamePrefixAOrAn);
+	String getPersonNamePrefix();
+	void setPersonNamePrefix(String personNamePrefix);
+	String getEntityNamePrefix();
+	void setEntityNamePrefix(String entityNamePrefix);
+	String getDisplayNameIsOrAre();
+	void setDisplayNameIsOrAre(String displayNameIsOrAre);
+	String getBarSound();
+	void setBarSound(String barSound);
+	boolean isShowInIntelTab();
+	void setShowInIntelTab(boolean showInIntelTab);
+	String getId();
+	void setId(String id);
+	Color getBaseUIColor();
+	Color getBrightUIColor();
+	void setBrightUIColor(Color brightUIColor);
+	void setBaseUIColor(Color baseUIColor);
+	Color getSecondaryUIColor();
+	void setSecondaryUIColor(Color secondaryUIColor);
+	int getSecondarySegments();
+	void setSecondarySegments(int secondarySegments);
+	Color getDarkUIColor();
+	void setDarkUIColor(Color darkUIColor);
+	Color getGridUIColor();
+	void setGridUIColor(Color gridUIColor);
+	String getDisplayName();
+	void setDisplayName(String displayName);
+	String getLogo();
+	String getCrest();
+	void setCrest(String crest);
+	void setLogo(String logo);
+	WeightedRandomPicker<String> getNameCategories();
+	WeightedRandomPicker<String> getMalePortraits();
+	WeightedRandomPicker<String> getFemalePortraits();
+	List<String> getAllPortraits(Gender gender);
+	String getShipNamePrefix();
+	void setShipNamePrefix(String shipNamePrefix);
+	String pickPersonality();
+	WeightedRandomPicker<String> getCaptainPersonalities();
+	void addCaptainPersonality(String id, float weight);
+	Color getColor();
+	void setColor(Color color);
+	WeightedRandomPicker<String> getShipNameSources();
+	String getDisplayNameWithArticle();
+	void setDisplayNameWithArticle(String displayNameWithArticle);
+	Set<String> getIllegalCommodities();
+	float getTariffFraction();
+	void setTariffFraction(float tariffFraction);
+	JSONObject getCustom();
+	void setCustom(JSONObject custom);
+	Set<String> getShipsWhenImporting();
+	Set<String> getKnownShips();
+	Set<String> getKnownWeapons();
+	Set<String> getKnownFighters();
+	Set<String> getKnownIndustries();
+	Set<String> getKnownHullMods();
+	Set<String> getPriorityShips();
+	Set<String> getPriorityWeapons();
+	Set<String> getPriorityFighters();
+	Map<String, Float> getVariantOverrides();
+	FactionDoctrineAPI getFactionDoctrine();
+	WeightedRandomPicker<String> getVoicePickerLow();
+	WeightedRandomPicker<String> getVoicePickerMedium();
+	WeightedRandomPicker<String> getVoicePickerHigh();
+
+}

@@ -109,6 +109,12 @@ public interface CampaignUIAPI {
 
 	void showHelpPopupIfPossible(String id);
 
+	/**
+	 * Calls Global.getSector().getUIData().getCourseTarget(). The actual ultimate autopilot destination,
+	 * not its next step.
+	 * @return
+	 */
+	SectorEntityToken getUltimateCourseTarget();
 	SectorEntityToken getCurrentCourseTarget();
 	SectorEntityToken getNextStepForCourse(SectorEntityToken courseTarget);
 	void layInCourseForNextStep(SectorEntityToken courseTarget);
@@ -120,6 +126,18 @@ public interface CampaignUIAPI {
 	boolean isPlayerFleetFollowingMouse();
 
 	void showMessageDialog(String message);
+
+	float getMinZoomFactor();
+	float getMaxZoomFactor();
+	void setMinZoomFactor(float min);
+	void setMaxZoomFactor(float max);
+
+	boolean isSuppressFuelRangeRenderingOneFrame();
+	void setSuppressFuelRangeRenderingOneFrame(boolean suppressFuelRangeRenderingOneFrame);
+
+	int getMaxIntelMapIcons();
+	void setMaxIntelMapIcons(int maxIntelMapIcons);
+
 
 }
 

@@ -17,23 +17,27 @@ public class MilitarizedSubsystems extends BaseLogisticsHullMod {
 	private static float MAINTENANCE_PERCENT = 100;
 //	private static float FLUX_PERCENT = 25;
 //	private static float ARMOR_BONUS = 25;
-	private static float FLUX_DISSIPATION_PERCENT = 10;
-	private static float ARMOR_BONUS = 10;
+//	private static float FLUX_DISSIPATION_PERCENT = 10;
+//	private static float ARMOR_BONUS = 10;
 	
 	//private static final float DEPLOY_COST_MULT = 0.7f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
+		boolean sMod = isSMod(stats);
+		
 		stats.getSensorStrength().unmodify(HullMods.CIVGRADE);
 		stats.getSensorProfile().unmodify(HullMods.CIVGRADE);
 		
 		stats.getMaxBurnLevel().modifyFlat(id, BURN_LEVEL_BONUS);
 
-		float mult = getEffectMult(stats);
-		stats.getFluxDissipation().modifyPercent(id, FLUX_DISSIPATION_PERCENT * mult);
-		stats.getEffectiveArmorBonus().modifyFlat(id, ARMOR_BONUS * mult);
+//		float mult = getEffectMult(stats);
+//		stats.getFluxDissipation().modifyPercent(id, FLUX_DISSIPATION_PERCENT * mult);
+//		stats.getEffectiveArmorBonus().modifyFlat(id, ARMOR_BONUS * mult);
 		
 		//stats.getSuppliesPerMonth().modifyPercent(id, MAINTENANCE_PERCENT);
-		stats.getMinCrewMod().modifyPercent(id, MAINTENANCE_PERCENT);
+		if (!sMod) {
+			stats.getMinCrewMod().modifyPercent(id, MAINTENANCE_PERCENT);
+		}
 		
 		//stats.getDynamic().getMod(Stats.ACT_AS_COMBAT_SHIP).modifyFlat(id, 1f);
 		
@@ -82,10 +86,10 @@ public class MilitarizedSubsystems extends BaseLogisticsHullMod {
 	public String getDescriptionParam(int index, HullSize hullSize) {
 		if (index == 0) return "" + BURN_LEVEL_BONUS;
 		//if (index == 1) return "" + (int)Math.round((1f - DEPLOY_COST_MULT) * 100f) + "%";
-		float mult = getEffectMult(null);
-		if (index == 1) return "" + (int) Math.round(FLUX_DISSIPATION_PERCENT * mult) + "%";
-		if (index == 2) return "" + (int) Math.round(ARMOR_BONUS * mult);
-		if (index == 3) return "" + (int)Math.round(MAINTENANCE_PERCENT) + "%";
+//		float mult = getEffectMult(null);
+//		if (index == 1) return "" + (int) Math.round(FLUX_DISSIPATION_PERCENT * mult) + "%";
+//		if (index == 2) return "" + (int) Math.round(ARMOR_BONUS * mult);
+		if (index == 1) return "" + (int)Math.round(MAINTENANCE_PERCENT) + "%";
 		return null;
 	}
 	@Override

@@ -4,6 +4,8 @@ public class HullMods {
 
 	//public static final String PDJAMMER = "pdjammer";
 	
+	public static final String ANDRADA_MODS = "andrada_mods";
+	
 	public static final String HIGH_SCATTER_AMP = "high_scatter_amp";
 	
 	public static final String DETACH_WHEN_INACTIVE_SUBMODULE = "detach_when_inactive_submodule";
@@ -11,6 +13,7 @@ public class HullMods {
 	public static final String DEDICATED_TARGETING_CORE = "dedicated_targeting_core";
 	public static final String INTEGRATED_TARGETING_UNIT = "targetingunit";
 	public static final String ADVANCED_TARGETING_CORE = "advancedcore";
+	public static final String DISTRIBUTED_FIRE_CONTROL = "distributed_fire_control";
 	
 	
 	public static final String ADAPTIVE_COILS = "adaptive_coils";
@@ -27,6 +30,8 @@ public class HullMods {
 	public static final String NEURAL_INTERFACE = "neural_interface";
 	public static final String NEURAL_INTEGRATOR = "neural_integrator";
 	
+	public static final String DEFENSIVE_TARGETING_ARRAY = "defensive_targeting_array";
+	
 	
 	
 	public static final String PHASE_FIELD = "phasefield";
@@ -40,7 +45,7 @@ public class HullMods {
 	public static final String COMP_ARMOR = "comp_armor";
 	public static final String COMP_HULL = "comp_hull";
 	public static final String DEGRADED_ENGINES = "degraded_engines";
-	public static final String DEGRADED_DRIVE_FIELD = "degraded_drive_fields";
+	public static final String DEGRADED_DRIVE_FIELD = "degraded_drive_field";
 	public static final String FAULTY_GRID = "faulty_grid";
 	public static final String UNSTABLE_COILS = "unstable_coils";
 	public static final String COMP_STRUCTURE = "comp_structure";
@@ -73,6 +78,7 @@ public class HullMods {
 	public static final String ECM = "ecm";
 	public static final String EXPANDED_DECK_CREW = "expanded_deck_crew";
 	public static final String MAGAZINES = "magazines";
+	public static final String MISSILE_AUTOLOADER = "missile_autoloader";
 	public static final String MISSLERACKS = "missleracks";
 	public static final String EXTENDED_SHIELDS = "extendedshieldemitter";
 	public static final String FRONT_SHIELD_CONVERSION = "frontemitter";
@@ -90,6 +96,8 @@ public class HullMods {
 	public static final String STABILIZEDSHIELDEMITTER = "stabilizedshieldemitter";
 	public static final String SURVEYING_EQUIPMENT = "surveying_equipment";
 	
+	public static final String SHIELD_SHUNT = "shield_shunt";
+	
 	public static final String SAFETYOVERRIDES = "safetyoverrides";
 	public static final String UNSTABLE_INJECTOR = "unstable_injector";
 	
@@ -99,12 +107,11 @@ public class HullMods {
 	public static final String AUXILIARY_FUEL_TANKS = "auxiliary_fuel_tanks";
 	public static final String EXPANDED_CARGO_HOLDS = "expanded_cargo_holds";
 	public static final String MILITARIZED_SUBSYSTEMS = "militarized_subsystems";
-	public static final String ESCORT_PACKAGE = "escort_package";
-	public static final String ASSAULT_PACKAGE = "assault_package";
+//	public static final String ESCORT_PACKAGE = "escort_package";
+//	public static final String ASSAULT_PACKAGE = "assault_package";
 	public static final String EFFICIENCY_OVERHAUL = "efficiency_overhaul";
 	
 	public static final String HIGH_FREQUENCY_ATTRACTOR = "high_frequency_attractor";
-	
 	
 	
 	

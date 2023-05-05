@@ -359,6 +359,7 @@ public class SurveyPlanetMissionIntel extends BaseMissionIntel implements Survey
 	public Set<String> getIntelTags(SectorMapAPI map) {
 		Set<String> tags = super.getIntelTags(map);
 		tags.add(Tags.INTEL_EXPLORATION);
+		tags.add(Tags.INTEL_MISSIONS);
 		tags.add(faction.getId());
 		return tags;
 	}
