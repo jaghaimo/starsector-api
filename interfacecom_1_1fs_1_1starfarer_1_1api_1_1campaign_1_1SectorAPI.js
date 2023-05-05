@@ -46,6 +46,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI =
     [ "getPlayerBattleSeed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a3ab402c36759be309fd2e5b3bf9c0ca2", null ],
     [ "getPlayerFaction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a763cef46b40424475949be7d8b85d802", null ],
     [ "getPlayerFleet", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a00622d2cfb5e1b44aa97c8752135b0e9", null ],
+    [ "getPlayerMemoryWithoutUpdate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a1ee1411458e77b7663eec7bcbe4f5b94", null ],
     [ "getPlayerPerson", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#ac5141ee7b2896a7c842557161cd8be1f", null ],
     [ "getPlayerStats", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#ab5c4b15c0fec901a49bd95b6983649e9", null ],
     [ "getPluginPicker", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#addfd5156d90c972c708db46b43eb0d14", null ],

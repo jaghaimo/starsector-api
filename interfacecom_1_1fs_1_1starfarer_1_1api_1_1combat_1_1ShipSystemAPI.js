@@ -28,6 +28,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI =
     [ "isOutOfAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a284b1194e0bba148d88d621c4129ee2a", null ],
     [ "isStateActive", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a49a5b0f231f0bb02630aaca5e2ad5fbb", null ],
     [ "setAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a35167a2dae881a7354732411521098b2", null ],
+    [ "setAmmoReloadProgress", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a4e0eaf44cd9e7a2f37ae3bb00670c731", null ],
     [ "setCooldown", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a098db11519f6be5d2af1c9b5bc630e79", null ],
     [ "setCooldownRemaining", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aadaea48b0b748933f1172c539c9c1b5f", null ],
     [ "setFluxPerSecond", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ae81cefc311fca111f77fd5a1d9896249", null ],

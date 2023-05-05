@@ -1,0 +1,28 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints =
+[
+    [ "BURN_POINT_CHUNK_SIZE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a7590b656c62e9efbc862c85255d910d7", null ],
+    [ "HIGH_MAX", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a9701e4833552bc94600ca1d916c9d2c6", null ],
+    [ "HIGH_MIN", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#abcac5ac9bba83f13fb93c19d6ab0fdbf", null ],
+    [ "LOW_MAX", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a14375054b6b5b4c98569b9b24bc49595", null ],
+    [ "LOW_MIN", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#abb1e1223f2e2d4fda012d673ae1976f1", null ],
+    [ "MEDIUM_MAX", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#abe34edd60434e3f3d9779d3fd20fd930", null ],
+    [ "MEDIUM_MIN", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a081954d0a200e841f8c20fde18802659", null ],
+    [ "NEUTRINO_BURST_DOMAIN", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#aa8d2e7ad22cd98e392a1753b6714e15b", null ],
+    [ "NEUTRINO_BURST_MAKESHIFT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a8f2e2033935b9ef560b218a5ebab1411", null ],
+    [ "NEUTRINO_BURST_VOLATILES_COST", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#afd6fa8b47ebefa1402fff6ff7f647cdd", null ],
+    [ "PER_DAY_AT_BURN_20", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a62cf0701f261f47313b46af7dca34c33", null ],
+    [ "PER_DAY_AT_BURN_30", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#af4d71d2fdcb02e477421a56bb8595708", null ],
+    [ "PER_DAY_AT_BURN_40", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#ad2f5e8ea5662c7187407505e84536bcb", null ],
+    [ "PER_DAY_AT_BURN_50", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a21c59258268d2bbfc82dcaa32ee60e9b", null ],
+    [ "SCAN_BINARY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#ad834bde93866770d31c0587471aa7f48", null ],
+    [ "SCAN_BLACK_HOLE_LONG_RANGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a0f97ec6ab6495ea8c5d272965603990b", null ],
+    [ "SCAN_BLACK_HOLE_SHORT_RANGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#ac45aeca75b7aa030d0bfa1d3197a2494", null ],
+    [ "SCAN_GAS_GIANT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a48a5161cd71229fe3c1df9399939bea3", null ],
+    [ "SCAN_ION_STORM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#aaf6585a1ddbd0580ca102de6827011c0", null ],
+    [ "SCAN_NEBULA", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a43a791f285fa92f3cd525a41748c0b55", null ],
+    [ "SCAN_NEUTRON_STAR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#ad6e7ab400e474b219f1b03ff0a9ed715", null ],
+    [ "SCAN_PULSAR_BEAM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a809c6ee0388bf1b55e2dd7dbeb0ad86e", null ],
+    [ "SCAN_TRINARY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#ace8eb540ac2144125c161829fa5889e6", null ],
+    [ "SCAVENGER_MAX", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#a0c5146a3943ad49d5d63fe631e1f94bf", null ],
+    [ "SCAVENGER_MIN", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTPoints.html#af01120bcc00a59c61495626edd015b70", null ]
+];

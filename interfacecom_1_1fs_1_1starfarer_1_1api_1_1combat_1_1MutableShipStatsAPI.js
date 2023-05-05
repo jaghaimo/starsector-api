@@ -129,6 +129,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI =
     [ "getShieldDamageTakenMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#afc2d3e4af2b0de7d0b423dd1d6ebc0dc", null ],
     [ "getShieldMalfunctionChance", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a0bef0025f68e89cfee62d0429d4fed07", null ],
     [ "getShieldMalfunctionFluxLevel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a10c1b089adb8533efcf375f1e5b53e94", null ],
+    [ "getShieldSoftFluxConversion", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#aaf66d19386fc4f7fc5413a0415f8614c", null ],
     [ "getShieldTurnRateMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#ac6bd33b0ea66cdf8e2f3bcae49110a62", null ],
     [ "getShieldUnfoldRateMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a881db9f5be595e6df5496de618160640", null ],
     [ "getShieldUpkeepMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MutableShipStatsAPI.html#a2ea73a830d0c24beff82367d5ac8427e", null ],

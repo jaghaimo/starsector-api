@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes =
 [
+    [ "ACADEMY_FLEET", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#a3e5117f3966a54d97d24507bcbf9a408", null ],
     [ "BATTLESTATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#a39fc3f361bc62f30c9f13c6453061ea4", null ],
     [ "FOOD_RELIEF_FLEET", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#aed0375919c185de98ecc234875b9db4d", null ],
     [ "INSPECTION_FLEET", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#a9cc648241c6711daebbd1d4d71a5922c", null ],
@@ -15,6 +16,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes 
     [ "SCAVENGER_LARGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#acd6a71c99083f2a98bd2d65107279f56", null ],
     [ "SCAVENGER_MEDIUM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#a2a605a50fe0731437d6319bbfb5b8781", null ],
     [ "SCAVENGER_SMALL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#afca8a070eb365bc2f0bae546bb8ae8a4", null ],
+    [ "SHRINE_PILGRIMS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#a985f0f6b39c27be07dda59621c9f04f0", null ],
     [ "TASK_FORCE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#afa6bfd5bf8979057a10d5e5251e821b9", null ],
     [ "TRADE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#a24b0bfb84b27e362fc723bc8f5d45bac", null ],
     [ "TRADE_LINER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1FleetTypes.html#a40417b44ff4692493e4afded8f138a21", null ],

@@ -9,5 +9,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1O
     [ "showStageInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html#ad1862e167addf0d91e5fc98d6fce1380", null ],
     [ "updateStatus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html#a6cf57e3f4492df998773b3badb8c43f8", null ],
     [ "interval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html#a40fc14c3b1aad9919a1336f773830cc5", null ],
-    [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html#a2344f0666411699a9bfb1a3a3890ad39", null ]
+    [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html#a2344f0666411699a9bfb1a3a3890ad39", null ],
+    [ "wasMilitary", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html#a181009cc42599f87722b09a508b3bb47", null ]
 ];

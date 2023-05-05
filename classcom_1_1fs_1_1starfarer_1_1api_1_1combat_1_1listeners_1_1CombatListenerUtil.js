@@ -15,5 +15,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerU
     [ "modifyDamageTaken", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#af096d558d48227cef3ac5559743ccccb", null ],
     [ "modifyDamageTaken", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#ad248943d3af7587119fe98a42098d6a2", null ],
     [ "notifyAboutToTakeHullDamage", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#ad4927466cc3f877abf32607e332823c3", null ],
-    [ "reportDamageApplied", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#ad796fd1d57447cec071db7b1fe6a214d", null ]
+    [ "reportDamageApplied", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#ad796fd1d57447cec071db7b1fe6a214d", null ],
+    [ "reportFleetMemberDeployed", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html#a458935256bcd397313bdfbd998e94a4c", null ]
 ];

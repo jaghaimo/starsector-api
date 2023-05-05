@@ -43,6 +43,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin =
     [ "isOpenMarket", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#ac7646964155c9a73e227e447e12b8950", null ],
     [ "isParticipatesInEconomy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a7deae258582fca2c41285042d8bcf7e7", null ],
     [ "isTooltipExpandable", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a459fa4545e39245b3d1a2020b81ba5c5", null ],
+    [ "okToUpdateShipsAndWeapons", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a578a6b41aacd7fc94760df30bcf0ce8f", null ],
     [ "reportPlayerMarketTransaction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a9280f410cf6a38a4da97263e48798600", null ],
     [ "showInCargoScreen", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#a548d879a056be37225628317aee6028c", null ],
     [ "showInFleetScreen", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html#ad790f7780389e6dba15915bb49556779", null ],

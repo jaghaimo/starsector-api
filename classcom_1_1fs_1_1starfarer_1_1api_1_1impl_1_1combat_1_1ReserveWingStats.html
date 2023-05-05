@@ -136,12 +136,18 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getRegenOverride</b>
 <tr class="memitem:a747bd638000878c92c83dabb3cf38a90 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript"><td class="memItemLeft" align="right" valign="top"><a id="a747bd638000878c92c83dabb3cf38a90"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>getUsesOverride</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> ship)</td></tr>
 <tr class="separator:a747bd638000878c92c83dabb3cf38a90 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0d818da225008acacff88027954700 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript"><td class="memItemLeft" align="right" valign="top"><a id="a8f0d818da225008acacff88027954700"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>getDisplayNameOverride</b> (<a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript_1_1State.html">State</a> state, float effectLevel)</td></tr>
+<tr class="separator:a8f0d818da225008acacff88027954700 inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a2db386f1e6b4b5a9f91673e952fa54cd"><td class="memItemLeft" align="right" valign="top"><a id="a2db386f1e6b4b5a9f91673e952fa54cd"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>getAdditionalFor</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html">FighterWingSpecAPI</a> spec)</td></tr>
-<tr class="separator:a2db386f1e6b4b5a9f91673e952fa54cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a543eaabfa40f229e0e48bc220d0fed62"><td class="memItemLeft" align="right" valign="top"><a id="a543eaabfa40f229e0e48bc220d0fed62"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>getRateCost</b> (int bays)</td></tr>
+<tr class="separator:a543eaabfa40f229e0e48bc220d0fed62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4282a3a9bd38a5ae1ddf8de3c197afa0"><td class="memItemLeft" align="right" valign="top"><a id="a4282a3a9bd38a5ae1ddf8de3c197afa0"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>getAdditionalFor</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html">FighterWingSpecAPI</a> spec, int bays)</td></tr>
+<tr class="separator:a4282a3a9bd38a5ae1ddf8de3c197afa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -152,11 +158,14 @@ static String&#160;</td><td class="memItemRight" valign="bottom"><b>RD_NO_EXTRA_
 static String&#160;</td><td class="memItemRight" valign="bottom"><b>RD_FORCE_EXTRA_CRAFT</b> = &quot;rd_force_extra_craft&quot;</td></tr>
 <tr class="separator:a46051a7d3404076592660fcbe2df363c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9da3418d473ba81c6e61f33eedf804ed"><td class="memItemLeft" align="right" valign="top"><a id="a9da3418d473ba81c6e61f33eedf804ed"></a>
-static float&#160;</td><td class="memItemRight" valign="bottom"><b>EXTRA_FIGHTER_DURATION</b> = 15</td></tr>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>EXTRA_FIGHTER_DURATION</b> = 30</td></tr>
 <tr class="separator:a9da3418d473ba81c6e61f33eedf804ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5277476e551dcf3259fab569cbf1f77a"><td class="memItemLeft" align="right" valign="top"><a id="a5277476e551dcf3259fab569cbf1f77a"></a>
-static float&#160;</td><td class="memItemRight" valign="bottom"><b>RATE_COST</b> = 0.25f</td></tr>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>RATE_COST</b> = 0f</td></tr>
 <tr class="separator:a5277476e551dcf3259fab569cbf1f77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f8076b995f4c9a2172a752dbec5224"><td class="memItemLeft" align="right" valign="top"><a id="aa6f8076b995f4c9a2172a752dbec5224"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>RATE_COST_1_BAY</b> = 0f</td></tr>
+<tr class="separator:aa6f8076b995f4c9a2172a752dbec5224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/combat/ReserveWingStats.java</li>

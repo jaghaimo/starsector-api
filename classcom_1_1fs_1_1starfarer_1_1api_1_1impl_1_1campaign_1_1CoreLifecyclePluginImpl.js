@@ -31,6 +31,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePlugi
     [ "regenPortrait", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#aa783d4c73a3f4b650168e45f293e39df", null ],
     [ "removeSkill", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#a4a7d97f0657eb8a112dd79239997b41e", null ],
     [ "restoreRemovedEntities", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#a4d78ee612757dd09bc055da5921cef4b", null ],
+    [ "tagLuddicShrines", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#a2555ce7713328f46bdd4ffb15d49c702", null ],
     [ "updateKnownPlanets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#a1b3b48e21aba0aa547dfe32d647dc871", null ],
     [ "verifyFactionData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#ae23fe0530f6f20ee01d67122f82d52eb", null ],
     [ "verifyFactionData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#a1a66832b77bf516182d49b28c305d09f", null ],

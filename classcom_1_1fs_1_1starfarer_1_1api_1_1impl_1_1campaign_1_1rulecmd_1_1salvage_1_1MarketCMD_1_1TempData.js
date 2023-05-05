@@ -16,6 +16,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage
     [ "raidLoot", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1TempData.html#a93106bdbec1b119f47f34f9ac6acd9b1", null ],
     [ "raidMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1TempData.html#a29da29dd1bc12d79cc727537ae52133a", null ],
     [ "raidType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1TempData.html#a95fe443e6ff558f0115c62cfff7a0fd8", null ],
+    [ "secret", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1TempData.html#a0cde6df3762828196c140f32b534b813", null ],
     [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1TempData.html#ab9e0dc3bd878f01d36fe6d9ed825ff41", null ],
     [ "willBecomeHostile", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1TempData.html#a211d08d38471914e2ae916d2c757fa8d", null ],
     [ "xpGained", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1TempData.html#a9f19f8ff469cba8509b8b581d053d644", null ]

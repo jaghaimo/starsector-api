@@ -19,6 +19,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI =
     [ "hideVisualPanel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a187a64edb36e83e4af6cc4a999f9911c", null ],
     [ "isCurrentOptionHadAConfirm", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a78980078adf9288db401c981e920a94f", null ],
     [ "makeOptionOpenCore", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a64e40f4a6a9162bb20688d18ca824c9c", null ],
+    [ "makeOptionOpenCore", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#ab7d2b323c2b556f7dd1ba7768cf5761b", null ],
     [ "makeStoryOption", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a01d3c4696f6643c48a2d3b91a777699c", null ],
     [ "setBackgroundDimAmount", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a2f90b6855b7c0fb7bb9b9448be37e128", null ],
     [ "setInteractionTarget", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html#a15ef652fe07499a5fcbfd2b238fabff7", null ],

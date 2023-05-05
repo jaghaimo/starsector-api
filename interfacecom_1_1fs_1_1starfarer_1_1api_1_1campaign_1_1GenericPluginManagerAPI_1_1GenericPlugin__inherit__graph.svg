@@ -114,83 +114,83 @@
 <path fill="none" stroke="midnightblue" d="M109.39,-285.09C128.5,-323.35 170.82,-396.48 230,-432.5 245.55,-441.96 263.86,-447.9 281.88,-451.58"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="112.36,-283.17 104.83,-275.71 106.06,-286.24 112.36,-283.17"/>
 </g>
-<!-- Node13 -->
-<g id="node13" class="node">
-<title>Node13</title>
-<g id="a_node13"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin.html" target="_top" xlink:title=" ">
+<!-- Node14 -->
+<g id="node14" class="node">
+<title>Node14</title>
+<g id="a_node14"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="269.5,-147.5 269.5,-177.5 460.5,-177.5 460.5,-147.5 269.5,-147.5"/>
 <text text-anchor="start" x="277.5" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.fleets.</text>
 <text text-anchor="middle" x="365" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">GenerateFleetOfficersPlugin</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node13 -->
-<g id="edge13" class="edge">
-<title>Node1&#45;&gt;Node13</title>
+<!-- Node1&#45;&gt;Node14 -->
+<g id="edge14" class="edge">
+<title>Node1&#45;&gt;Node14</title>
 <path fill="none" stroke="midnightblue" d="M128.92,-239.64C154.85,-223.1 193.4,-200.64 230,-187.5 242.47,-183.02 255.9,-179.3 269.27,-176.23"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="126.8,-236.85 120.3,-245.22 130.6,-242.73 126.8,-236.85"/>
 </g>
-<!-- Node17 -->
-<g id="node17" class="node">
-<title>Node17</title>
-<g id="a_node17"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFr0fbcd416ff1be4659031e9afd4edb469.html" target="_top" xlink:title=" ">
+<!-- Node18 -->
+<g id="node18" class="node">
+<title>Node18</title>
+<g id="a_node18"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFr0fbcd416ff1be4659031e9afd4edb469.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="230,-392.5 230,-422.5 500,-422.5 500,-392.5 230,-392.5"/>
 <text text-anchor="start" x="238" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
 <text text-anchor="middle" x="365" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageGenFromSeed.SalvageDefenderModificationPlugin</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node17 -->
-<g id="edge17" class="edge">
-<title>Node1&#45;&gt;Node17</title>
+<!-- Node1&#45;&gt;Node18 -->
+<g id="edge18" class="edge">
+<title>Node1&#45;&gt;Node18</title>
 <path fill="none" stroke="midnightblue" d="M115.67,-283.66C138.7,-312.06 181.76,-359.38 230,-383.5 236.87,-386.94 244.16,-389.89 251.64,-392.42"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="118.15,-281.15 109.18,-275.5 112.67,-285.51 118.15,-281.15"/>
 </g>
-<!-- Node18 -->
-<g id="node18" class="node">
-<title>Node18</title>
-<g id="a_node18"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1CreateFleetPlugin.html" target="_top" xlink:title=" ">
+<!-- Node19 -->
+<g id="node19" class="node">
+<title>Node19</title>
+<g id="a_node19"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1CreateFleetPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="298,-98.5 298,-128.5 432,-128.5 432,-98.5 298,-98.5"/>
 <text text-anchor="start" x="306" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.plugins.</text>
 <text text-anchor="middle" x="365" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">CreateFleetPlugin</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node18 -->
-<g id="edge19" class="edge">
-<title>Node1&#45;&gt;Node18</title>
+<!-- Node1&#45;&gt;Node19 -->
+<g id="edge21" class="edge">
+<title>Node1&#45;&gt;Node19</title>
 <path fill="none" stroke="midnightblue" d="M116.11,-237.14C139.29,-208.98 182.23,-162.48 230,-138.5 250.83,-128.04 275.47,-121.93 297.9,-118.37"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="113.12,-235.26 109.56,-245.24 118.57,-239.66 113.12,-235.26"/>
 </g>
-<!-- Node19 -->
-<g id="node19" class="node">
-<title>Node19</title>
-<g id="a_node19"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1DModAdderPlugin.html" target="_top" xlink:title=" ">
+<!-- Node20 -->
+<g id="node20" class="node">
+<title>Node20</title>
+<g id="a_node20"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1DModAdderPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="298,-49.5 298,-79.5 432,-79.5 432,-49.5 298,-49.5"/>
 <text text-anchor="start" x="306" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.plugins.</text>
 <text text-anchor="middle" x="365" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">DModAdderPlugin</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node19 -->
-<g id="edge20" class="edge">
-<title>Node1&#45;&gt;Node19</title>
+<!-- Node1&#45;&gt;Node20 -->
+<g id="edge22" class="edge">
+<title>Node1&#45;&gt;Node20</title>
 <path fill="none" stroke="midnightblue" d="M109.46,-236.11C128.67,-198.13 171.11,-125.52 230,-89.5 250.19,-77.15 275.05,-70.64 297.86,-67.28"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="106.16,-234.89 104.88,-245.41 112.44,-237.99 106.16,-234.89"/>
 </g>
-<!-- Node20 -->
-<g id="node20" class="node">
-<title>Node20</title>
-<g id="a_node20"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreBuildObjectiveTypePicker.html" target="_top" xlink:title=" ">
+<!-- Node21 -->
+<g id="node21" class="node">
+<title>Node21</title>
+<g id="a_node21"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreBuildObjectiveTypePicker.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="287.5,-0.5 287.5,-30.5 442.5,-30.5 442.5,-0.5 287.5,-0.5"/>
 <text text-anchor="start" x="295.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.plugins.impl.</text>
 <text text-anchor="middle" x="365" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">CoreBuildObjectiveTypePicker</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node20 -->
-<g id="edge21" class="edge">
-<title>Node1&#45;&gt;Node20</title>
+<!-- Node1&#45;&gt;Node21 -->
+<g id="edge23" class="edge">
+<title>Node1&#45;&gt;Node21</title>
 <path fill="none" stroke="midnightblue" d="M105.24,-235.94C120.27,-189.6 159.44,-89.54 230,-40.5 246.71,-28.88 267.32,-22.25 287.32,-18.56"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="101.9,-234.89 102.25,-245.48 108.58,-236.99 101.9,-234.89"/>
 </g>
@@ -198,17 +198,17 @@
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="597.5,-477.5 597.5,-507.5 763.5,-507.5 763.5,-477.5 597.5,-477.5"/>
-<text text-anchor="start" x="605.5" y="-495.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
-<text text-anchor="middle" x="680.5" y="-484.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbandonMarketPluginImpl</text>
+<polygon fill="none" stroke="black" points="597.5,-490.5 597.5,-520.5 763.5,-520.5 763.5,-490.5 597.5,-490.5"/>
+<text text-anchor="start" x="605.5" y="-508.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
+<text text-anchor="middle" x="680.5" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbandonMarketPluginImpl</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M459.69,-501.61C503.51,-499.8 555.23,-497.65 597.49,-495.9"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="459.45,-498.12 449.6,-502.03 459.74,-505.12 459.45,-498.12"/>
+<path fill="none" stroke="midnightblue" d="M459.69,-505.5C503.51,-505.5 555.23,-505.5 597.49,-505.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="459.6,-502 449.6,-505.5 459.6,-509 459.6,-502"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -261,78 +261,100 @@
 <!-- Node11&#45;&gt;Node3 -->
 <g id="edge11" class="edge">
 <title>Node11&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M458.5,-467.12C502.55,-472.18 554.79,-478.18 597.41,-483.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="458.7,-463.62 448.37,-465.96 457.9,-470.58 458.7,-463.62"/>
+<path fill="none" stroke="midnightblue" d="M458.5,-470.96C502.55,-477.84 554.79,-486.01 597.41,-492.67"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="458.79,-467.46 448.37,-469.37 457.71,-474.38 458.79,-467.46"/>
 </g>
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSe153cb471dc7087f7726aa24a04df0947.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="536,-416.5 536,-446.5 825,-446.5 825,-416.5 536,-416.5"/>
-<text text-anchor="start" x="544" y="-434.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
-<text text-anchor="middle" x="680.5" y="-423.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageGenFromSeed.SalvageDefenderModificationPluginImpl</text>
+<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="562,-392.5 562,-422.5 799,-422.5 799,-392.5 562,-392.5"/>
+<text text-anchor="start" x="570" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.themes.</text>
+<text text-anchor="middle" x="680.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">PKDefenderPluginImpl</text>
 </a>
 </g>
 </g>
 <!-- Node11&#45;&gt;Node12 -->
 <g id="edge12" class="edge">
 <title>Node11&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M458.61,-449.12C482.87,-447.18 509.61,-445.05 535.85,-442.96"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="458.06,-445.65 448.37,-449.93 458.62,-452.63 458.06,-445.65"/>
+<path fill="none" stroke="midnightblue" d="M458.49,-442.04C497.86,-435.89 543.77,-428.71 583.51,-422.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="457.71,-438.62 448.37,-443.63 458.79,-445.54 457.71,-438.62"/>
 </g>
-<!-- Node14 -->
-<g id="node14" class="node">
-<title>Node14</title>
-<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseGenerateFleetOfficersPlugin.html" target="_top" xlink:title=" ">
+<!-- Node13 -->
+<g id="node13" class="node">
+<title>Node13</title>
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSe153cb471dc7087f7726aa24a04df0947.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="536,-441.5 536,-471.5 825,-471.5 825,-441.5 536,-441.5"/>
+<text text-anchor="start" x="544" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.salvage.</text>
+<text text-anchor="middle" x="680.5" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">SalvageGenFromSeed.SalvageDefenderModificationPluginImpl</text>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node13 -->
+<g id="edge13" class="edge">
+<title>Node11&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M458.61,-456.5C482.87,-456.5 509.61,-456.5 535.85,-456.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="458.37,-453 448.37,-456.5 458.37,-460 458.37,-453"/>
+</g>
+<!-- Node15 -->
+<g id="node15" class="node">
+<title>Node15</title>
+<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseGenerateFleetOfficersPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="585,-147.5 585,-177.5 776,-177.5 776,-147.5 585,-147.5"/>
 <text text-anchor="start" x="593" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.fleets.</text>
 <text text-anchor="middle" x="680.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">BaseGenerateFleetOfficersPlugin</text>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node14 -->
-<g id="edge14" class="edge">
-<title>Node13&#45;&gt;Node14</title>
+<!-- Node14&#45;&gt;Node15 -->
+<g id="edge15" class="edge">
+<title>Node14&#45;&gt;Node15</title>
 <path fill="none" stroke="midnightblue" d="M471.17,-162.5C507.97,-162.5 549.03,-162.5 584.91,-162.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="470.91,-159 460.91,-162.5 470.91,-166 470.91,-159"/>
 </g>
-<!-- Node15 -->
-<g id="node15" class="node">
-<title>Node15</title>
-<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1OmegaOfficerGeneratorPlugin.html" target="_top" xlink:title=" ">
+<!-- Node16 -->
+<g id="node16" class="node">
+<title>Node16</title>
+<g id="a_node16"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1OmegaOfficerGeneratorPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="861,-172.5 861,-202.5 1098,-202.5 1098,-172.5 861,-172.5"/>
 <text text-anchor="start" x="869" y="-190.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.themes.</text>
 <text text-anchor="middle" x="979.5" y="-179.5" font-family="Helvetica,sans-Serif" font-size="10.00">OmegaOfficerGeneratorPlugin</text>
 </a>
 </g>
 </g>
-<!-- Node14&#45;&gt;Node15 -->
-<g id="edge15" class="edge">
-<title>Node14&#45;&gt;Node15</title>
+<!-- Node15&#45;&gt;Node16 -->
+<g id="edge16" class="edge">
+<title>Node15&#45;&gt;Node16</title>
 <path fill="none" stroke="midnightblue" d="M786.5,-171.34C810.58,-173.37 836.33,-175.53 860.91,-177.6"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="786.55,-167.83 776.29,-170.48 785.96,-174.81 786.55,-167.83"/>
 </g>
-<!-- Node16 -->
-<g id="node16" class="node">
-<title>Node16</title>
-<g id="a_node16"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html" target="_top" xlink:title=" ">
+<!-- Node17 -->
+<g id="node17" class="node">
+<title>Node17</title>
+<g id="a_node17"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="861,-123.5 861,-153.5 1098,-153.5 1098,-123.5 861,-123.5"/>
 <text text-anchor="start" x="869" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.themes.</text>
 <text text-anchor="middle" x="979.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">RemnantOfficerGeneratorPlugin</text>
 </a>
 </g>
 </g>
-<!-- Node14&#45;&gt;Node16 -->
-<g id="edge16" class="edge">
-<title>Node14&#45;&gt;Node16</title>
+<!-- Node15&#45;&gt;Node17 -->
+<g id="edge17" class="edge">
+<title>Node15&#45;&gt;Node17</title>
 <path fill="none" stroke="midnightblue" d="M786.5,-154.02C810.58,-152.07 836.33,-149.99 860.91,-148"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="785.97,-150.55 776.29,-154.84 786.54,-157.52 785.97,-150.55"/>
 </g>
-<!-- Node17&#45;&gt;Node12 -->
-<g id="edge18" class="edge">
-<title>Node17&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M510.31,-418.55C518.84,-419.2 527.43,-419.86 535.96,-420.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="510.55,-415.06 500.32,-417.78 510.02,-422.04 510.55,-415.06"/>
+<!-- Node18&#45;&gt;Node12 -->
+<g id="edge19" class="edge">
+<title>Node18&#45;&gt;Node12</title>
+<path fill="none" stroke="midnightblue" d="M510.41,-407.5C527.61,-407.5 545.01,-407.5 561.77,-407.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="510.32,-404 500.32,-407.5 510.32,-411 510.32,-404"/>
+</g>
+<!-- Node18&#45;&gt;Node13 -->
+<g id="edge20" class="edge">
+<title>Node18&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M472.24,-424.11C508.28,-429.74 548.3,-435.99 583.49,-441.49"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="472.61,-420.62 462.19,-422.53 471.53,-427.54 472.61,-420.62"/>
 </g>
 </g>
 </svg>

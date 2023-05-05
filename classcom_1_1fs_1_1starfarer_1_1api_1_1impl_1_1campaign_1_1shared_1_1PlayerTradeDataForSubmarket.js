@@ -32,6 +32,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTr
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a1adb9e74721160c6a8c7b5b4bf07e297", null ],
     [ "setAccumulatedPlayerTradeValueForNegative", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#af03fe73ca31d5f1718b829cc28bb27c7", null ],
     [ "setAccumulatedPlayerTradeValueForPositive", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a055669b09ac99ba37de8c7382a8458d4", null ],
+    [ "setSubmarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a8307564c404817d8b96be5815dd12e13", null ],
     [ "setTotalPlayerTradeValue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#afe1f7a7bac6b3fc8189976cb2ebcc28c", null ],
     [ "accumulatedPlayerTradeValueForNegative", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#a99e6fdfd69b12856a2939c53e4a8cf09", null ],
     [ "accumulatedPlayerTradeValueForPositive", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html#ad2bc3dd6778231550f26879a9b080bf2", null ],

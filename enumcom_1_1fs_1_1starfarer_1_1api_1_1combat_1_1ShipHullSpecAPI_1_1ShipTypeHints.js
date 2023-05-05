@@ -9,6 +9,8 @@ var enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHi
     [ "HIDE_IN_CODEX", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints.html#a3e16359871c87ac65499edaa3d500750", null ],
     [ "INDEPENDENT_ROTATION", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints.html#ad02814ad6647fe96b2ada62539b5fdbc", null ],
     [ "LINER", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints.html#a775cca16b4a3670b0f330b02fe0add10", null ],
+    [ "MISSILE_HARDPOINTS_ROTATE", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints.html#ab2606b36ff995723dfb049b5b1cc821b", null ],
+    [ "NEVER_DODGE_MISSILES", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints.html#a2ebe876ba1353c7d848b6613343b021d", null ],
     [ "NO_AUTO_ESCORT", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints.html#a5f3f01bb0aa16b452701049fb1bb7da5", null ],
     [ "NO_NEURAL_LINK", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints.html#ae0d8058ee884d20caa4045177aeb2acd", null ],
     [ "PHASE", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShipTypeHints.html#acc45dd526ba4e18ff4ac31797a808f67", null ],

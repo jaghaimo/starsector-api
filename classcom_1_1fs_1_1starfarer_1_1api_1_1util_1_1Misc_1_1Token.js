@@ -5,6 +5,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token =
     [ "getColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html#af0d0c6ae570de6ae9d54e74187f91b2c", null ],
     [ "getFloat", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html#a4c140d12fd560c6ba07dd66f84998aa2", null ],
     [ "getInt", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html#ab7380dd5fa6859b1d6be966d4caff6d3", null ],
+    [ "getObject", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html#a29f9e9eadcaba5305ab139ee49d4cd31", null ],
     [ "getString", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html#aa7f197a559dc3d86c5c5ee9f277860d0", null ],
     [ "getStringWithTokenReplacement", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html#a1d98d0ee0f69ff53a91f272e8945561f", null ],
     [ "getVarNameAndMemory", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1Misc_1_1Token.html#a185e70ae35e1ecd5654529dcbd52b3a0", null ],

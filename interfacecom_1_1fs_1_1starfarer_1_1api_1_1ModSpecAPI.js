@@ -14,9 +14,11 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI =
     [ "getName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#a1ef8d22cbd132e92734f7e7e6b181f53", null ],
     [ "getPath", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#a8f90b864c054944c86b1ba823f831be7", null ],
     [ "getRequiredMemoryMB", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#a01ad58ffeeb5fe4c41b5a9cbff91a47e", null ],
+    [ "getSortString", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#aa77a8d38867d60c341e415ba2b986b78", null ],
     [ "getVersion", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#abaadea79ddde1e5aed18152b6bb40bd6", null ],
     [ "getVersionInfo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#a8894b3614fdc1b29ed505d633ea0e93b", null ],
     [ "isTotalConversion", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#ab7f8c67a750aab0a5e2006614a2d53fc", null ],
     [ "isUtility", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#af17f51455b6044d42332b6a04fdb2ff5", null ],
-    [ "setRequiredMemoryMB", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#a6e36b7ec61cccc19139e4af9cb68d2fe", null ]
+    [ "setRequiredMemoryMB", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#a6e36b7ec61cccc19139e4af9cb68d2fe", null ],
+    [ "setSortString", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ModSpecAPI.html#a7622485b6127fa535e1db594f05fa004", null ]
 ];

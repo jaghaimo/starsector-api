@@ -19,11 +19,13 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI =
     [ "hasOptionTooltipAppender", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a3df9331b300da0fd99c68f30a711f0bf", null ],
     [ "hasSelector", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a5ec8963ac061e9b89dc97c8d5a6394b7", null ],
     [ "optionHasConfirmDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a59f1a6505d38311368ed0283b05d2065", null ],
+    [ "removeOption", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#aabf7acec75867a53acd3be820670af6c", null ],
     [ "restoreSavedOptions", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a2de7cd4ba063e6548a1327de22ea0a7a", null ],
     [ "setEnabled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a85df434482e937a7ceb5a1f253030623", null ],
     [ "setOptionText", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a4f99aa7cf55bf50573b51c93e730ef19", null ],
     [ "setSelectorValue", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#ad45e73f0c969bca92213777682c09898", null ],
     [ "setShortcut", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#aeeb9e590eca47e04443cd9a45b89fd39", null ],
+    [ "setStoryOptionParams", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a12585983f20db6f5b1be6b65d381686d", null ],
     [ "setTooltip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a07ed2d2ef9d8f4426b3c691e93657b93", null ],
     [ "setTooltipHighlightColors", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a10174dd8072332d827e991a22948d035", null ],
     [ "setTooltipHighlights", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#a281064b48840ca1d4dadb2e68e00a36c", null ]

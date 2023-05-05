@@ -15,5 +15,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI_
     [ "isDisabled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI_1_1ShipEngineAPI.html#af687689f757c4fb6a594d09807eac57f", null ],
     [ "isPermanentlyDisabled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI_1_1ShipEngineAPI.html#a600c8f50ab4c75af7f6914f5150da863", null ],
     [ "isSystemActivated", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI_1_1ShipEngineAPI.html#af7efe4d9b4a46108c91d8a194c42bb1a", null ],
+    [ "repair", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI_1_1ShipEngineAPI.html#af530086f912cbc0e97b44e3a978fc673", null ],
     [ "setHitpoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI_1_1ShipEngineAPI.html#a6b1b27fd3a6d321e806d0a34ee48a8d6", null ]
 ];

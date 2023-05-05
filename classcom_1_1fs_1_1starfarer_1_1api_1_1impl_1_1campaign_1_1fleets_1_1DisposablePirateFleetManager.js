@@ -1,5 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposablePirateFleetManager =
 [
+    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposablePirateFleetManager.html#ae54f00efdddd4d68c1c502e6261d6649", null ],
     [ "getDesiredNumFleetsForSpawnLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposablePirateFleetManager.html#ad0c4495287696b04b8151159a0698770", null ],
     [ "getLargestMarketIfSystemHasBounty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposablePirateFleetManager.html#ae5dac50bf53ae8bd142c0c40a5d1fc12", null ],
     [ "getMultForTier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposablePirateFleetManager.html#a8e00db66d38c2a0a7b473805c7e1d63d", null ],

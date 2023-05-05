@@ -19,5 +19,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlue
     [ "performRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html#a14b28cf82b7f09eaa7a0eddfc577b94f", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html#a602b94ed52ee6b982a9d79dec9da86db", null ],
     [ "shouldRemoveOnRightClickAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html#aa10a6211ca6d32c3992a5a4092d1edc2", null ],
+    [ "cachedFighters", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html#a87d9597c95757ce9a75b853efbb6167b", null ],
+    [ "cachedShips", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html#aa340bfa65fd9211cafd1bbd7b86c365a", null ],
+    [ "cachedWeapons", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html#a156ae65aafb81d9fa1992cccd411075e", null ],
     [ "tags", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html#a882b275e7ba05eada269f7658a4d8cea", null ]
 ];

@@ -17,6 +17,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Ba
     [ "addPostUpkeepSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ad9cc8c66ee9f8bbf726283d5fc59fdcf", null ],
     [ "addRightAfterDescriptionSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a45d5e25a2b9e47b580528f0b88a87d55", null ],
     [ "addStabilityPostDemandSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a67d08c28114a428ef8cfca9aa6e2ec2f", null ],
+    [ "addUnknownCoreDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a8a703bbb76a0ddd92793483a98b69ead", null ],
     [ "adjustCommodityDangerLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1401c6deb0837e93cc5f7c8efc1382be", null ],
     [ "adjustItemDangerLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af6e472b7cfe7d2b130b7b81b126b604f", null ],
     [ "adjustMarineTokensToRaidItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a7a58b9082cf76e92d2b5bf9fe2c08f78", null ],

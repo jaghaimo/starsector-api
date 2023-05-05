@@ -4,6 +4,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI =
     [ "ProductionItemType", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI_1_1ProductionItemType.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI_1_1ProductionItemType" ],
     [ "addItem", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#aefc98045a986ba16529e722e824441fe", null ],
     [ "addItem", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a53b9dfb21af5b8e92b034b8f9ceb8525", null ],
+    [ "addItem", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#acf11b9f125d4b6955cb83f528b953ea3", null ],
     [ "clear", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a2a7568ff0d969425f94b3a6c4bf59deb", null ],
     [ "clone", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#adb3b553af83245834f993f97127920be", null ],
     [ "createSampleItem", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a8f11c90f705e4b12f33cf28666604326", null ],

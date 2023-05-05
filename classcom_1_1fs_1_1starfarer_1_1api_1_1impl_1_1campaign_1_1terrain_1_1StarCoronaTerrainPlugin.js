@@ -35,6 +35,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCor
     [ "getFlareFadeInMin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a653767238464f76775a03104b176e99c", null ],
     [ "getFlareFadeOutMax", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a31e0f52d1355ed0c1bb5735e417e8808", null ],
     [ "getFlareFadeOutMin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#ad5bc11fe485c16ff28f707b0f4df99c2", null ],
+    [ "getFlareManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a2262f8e297d12719df4cef6ba63798e8", null ],
     [ "getFlareMaxSmallCount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#afdf7afc36fa9c815620ef8f153fa6792", null ],
     [ "getFlareMinSmallCount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a91654e90747417b6b13dabfd7d948389", null ],
     [ "getFlareOccurrenceAngle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#ac116cfe210627ce87479e654c4557b69", null ],

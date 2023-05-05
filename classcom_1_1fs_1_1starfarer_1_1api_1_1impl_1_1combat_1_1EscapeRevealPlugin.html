@@ -108,8 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae8b96fb8317c007efbbcf3ae6f62b65c"><td class="memItemLeft" align="right" valign="top"><a id="ae8b96fb8317c007efbbcf3ae6f62b65c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>EscapeRevealPlugin</b> (<a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html">BattleCreationContext</a> context)</td></tr>
 <tr class="separator:ae8b96fb8317c007efbbcf3ae6f62b65c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac2f5628dc00cc7039885d8ef1cb4dd2"><td class="memItemLeft" align="right" valign="top"><a id="aac2f5628dc00cc7039885d8ef1cb4dd2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html">CombatEngineAPI</a> engine)</td></tr>
+<tr class="memitem:aac2f5628dc00cc7039885d8ef1cb4dd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html#aac2f5628dc00cc7039885d8ef1cb4dd2">init</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html">CombatEngineAPI</a> engine)</td></tr>
 <tr class="separator:aac2f5628dc00cc7039885d8ef1cb4dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b38edebd09709a4e149ae198411ab0f"><td class="memItemLeft" align="right" valign="top"><a id="a1b38edebd09709a4e149ae198411ab0f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>advance</b> (float amount, List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html">InputEventAPI</a> &gt; events)</td></tr>
@@ -137,6 +136,33 @@ Private Attributes</h2></td></tr>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>elapsed</b> = 0f</td></tr>
 <tr class="separator:a1b818105cd5b3c90b334f4f3a2bd84bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aac2f5628dc00cc7039885d8ef1cb4dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac2f5628dc00cc7039885d8ef1cb4dd2">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.fs.starfarer.api.impl.combat.EscapeRevealPlugin.init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html">CombatEngineAPI</a>&#160;</td>
+          <td class="paramname"><em>engine</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Deprecated, not guaranteed to be called before advance() is called for an EveryFrameCombatPlugin. Can still be relied on if the EveryFrameCombatPlugin.advance() method checks for any fields being set in <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html#aac2f5628dc00cc7039885d8ef1cb4dd2">init()</a> being null. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">engine</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#addec3dedcaa837bfdb0712c36d17e060">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/combat/EscapeRevealPlugin.java</li>
 </ul>

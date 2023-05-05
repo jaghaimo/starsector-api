@@ -16,6 +16,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager =
     [ "removeModsAlreadyInVariant", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#ae83404602619ac98b11b8721ab168b05", null ],
     [ "removeUnsuitedMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#aa00da64ccb769b9ce0ef265301a13791", null ],
     [ "setDHull", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a76922488328336d5d55254db10f762a5", null ],
+    [ "assumeAllShipsAreAutomated", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a43bfe080c52e43a92c5eb9840aec19f9", null ],
     [ "MAX_DMODS_FROM_COMBAT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#ab2e120698b1e1a0729b0ea1ba43f4668", null ],
     [ "reduceNextDmodsBy", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html#a91df53237b9493c6e4ffb41301e45e57", null ]
 ];

@@ -34,5 +34,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_
     [ "interestingConditions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1DerelictThemeGenerator.html#a48e3b335deac733fc4cf2affeb496ebb", null ],
     [ "interestingConditionsWithoutHabitable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1DerelictThemeGenerator.html#a984c8aea16ca552119a37ca68837bd66", null ],
     [ "interestingConditionsWithRuins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1DerelictThemeGenerator.html#a291d6fb7c77b7009b218197a3544a174", null ],
-    [ "SALVAGE_SPECIAL_FRACTION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1DerelictThemeGenerator.html#a23e95259299836c40c5c74d876d7e845", null ]
+    [ "SALVAGE_SPECIAL_FRACTION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1DerelictThemeGenerator.html#a23e95259299836c40c5c74d876d7e845", null ],
+    [ "TOPOGRAPHIC_DATA_FRACTION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1DerelictThemeGenerator.html#a4c2062731c91d2a31c0046e7b513deda", null ]
 ];

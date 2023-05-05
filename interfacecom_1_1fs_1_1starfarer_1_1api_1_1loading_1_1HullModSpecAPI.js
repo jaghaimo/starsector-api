@@ -17,6 +17,8 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI =
     [ "getId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a65294d509421231b6de516ebc5952745", null ],
     [ "getManufacturer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#ac302c8affef641396b0b9961ad7d64b7", null ],
     [ "getRarity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a2c7ebcf2c286da97716e52eb7c4ad20f", null ],
+    [ "getSModDescription", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a22d9d4ca1423a1bb61368bb52b36f967", null ],
+    [ "getSModEffectFormat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#acde3b4ecc062cd4bbe477d60683d1898", null ],
     [ "getSpriteName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a63104ac79c205fab17b034be567c7a80", null ],
     [ "getTags", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a7d17fc77b76699a020ba49910019c82a", null ],
     [ "getTier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a808b6ed5bb5b1f650b2a72ba40810695", null ],
@@ -40,6 +42,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI =
     [ "setId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a14f5c167f9cee57e39aeb0248d3c5df7", null ],
     [ "setManufacturer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#ae88cea77e40191d4bd2c6e1f1043d0a5", null ],
     [ "setRarity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a2550a1bbb00c9e8fc18c5ad972b3263a", null ],
+    [ "setSModEffectFormat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a2984e08c45a286c031c1711aa123cce5", null ],
     [ "setSpriteName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a881ae687e462e07b97d9de69806fe344", null ],
     [ "setTier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html#a8bf7671faaa9ee32f53ba913cbb87887", null ]
 ];

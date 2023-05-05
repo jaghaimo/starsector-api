@@ -23,6 +23,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Conditions 
     [ "FRONTIER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Conditions.html#ad960b5db210124d261d292f5cc7f5132", null ],
     [ "HABITABLE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Conditions.html#af2943da6558834de8401708ed9487afa", null ],
     [ "HIGH_GRAVITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Conditions.html#a340a254493c28298cb5797114bfaeef8", null ],
+    [ "HOSTILE_ACTIVITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Conditions.html#abf6a77778ab65d755100350d1f8389dc", null ],
     [ "HOT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Conditions.html#a09388b24f036bc8fbced2846f1acb543", null ],
     [ "ICE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Conditions.html#ac3651a8ecae71c2b480c34c6dd4f6407", null ],
     [ "INDUSTRIAL_POLITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Conditions.html#a761b5b5f2b85f0ccb97e632aeb2b2f10", null ],

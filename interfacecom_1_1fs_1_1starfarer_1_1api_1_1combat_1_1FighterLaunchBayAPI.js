@@ -1,6 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI =
 [
     [ "getCurrRate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#a1e985c134c0ffdee5023b62a8155f1df", null ],
+    [ "getCurrReplacementIntervalDuration", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#a960c251c19b70e2c6be4fcefc4a930be", null ],
     [ "getExtraDeploymentLimit", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#a1694f9d20d6bd6cd953bdf14e4104fab", null ],
     [ "getExtraDeployments", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#a7daf69fd378397cf6aaf0f4f0476d0db", null ],
     [ "getExtraDuration", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#a56318e0f5c00c9c146415aea7942c377", null ],
@@ -8,6 +9,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI =
     [ "getLandingLocation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#ac45d238bb5451ea0cc8ffbcb72b99d4f", null ],
     [ "getNumLost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#a993fe1e4016aa1391061cf5ea10b2d7c", null ],
     [ "getShip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#af9423d8cb1798941758a52164ce28733", null ],
+    [ "getTimeUntilNextReplacement", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#a3acfc8b3709ffecd4f31c528100ee4c5", null ],
     [ "getWeaponSlot", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#a8ad4e0cc7a7dd8d10a8fecadd077b991", null ],
     [ "getWing", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#ac6138598c11d3724bdb0f48165739e7e", null ],
     [ "land", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterLaunchBayAPI.html#ab1d449325e04e3faa9177cc103646e72", null ],

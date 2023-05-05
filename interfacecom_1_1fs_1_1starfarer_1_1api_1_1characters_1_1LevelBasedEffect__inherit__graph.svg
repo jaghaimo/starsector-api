@@ -66,9 +66,9 @@
 <path fill="none" stroke="midnightblue" d="M102.35,-361.08C139.78,-331.22 206.71,-277.82 239.43,-251.71"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="100.03,-358.45 94.39,-367.43 104.39,-363.92 100.03,-358.45"/>
 </g>
-<!-- Node101 -->
+<!-- Node102 -->
 <g id="node48" class="node">
-<title>Node101</title>
+<title>Node102</title>
 <g id="a_node48"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MarketSkillEffect.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="red" points="185,-172.5 185,-202.5 334,-202.5 334,-172.5 185,-172.5"/>
 <text text-anchor="start" x="193" y="-190.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.characters.</text>
@@ -76,15 +76,15 @@
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node101 -->
+<!-- Node1&#45;&gt;Node102 -->
 <g id="edge55" class="edge">
-<title>Node1&#45;&gt;Node101</title>
+<title>Node1&#45;&gt;Node102</title>
 <path fill="none" stroke="midnightblue" d="M85.06,-357.9C100.58,-321.09 134.68,-251.81 185,-212.5 189.89,-208.68 195.39,-205.43 201.13,-202.66"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="81.74,-356.79 81.18,-367.37 88.21,-359.44 81.74,-356.79"/>
 </g>
-<!-- Node113 -->
+<!-- Node114 -->
 <g id="node49" class="node">
-<title>Node113</title>
+<title>Node114</title>
 <g id="a_node49"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ShipSkillEffect.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="red" points="185,-367.5 185,-397.5 334,-397.5 334,-367.5 185,-367.5"/>
 <text text-anchor="start" x="193" y="-385.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.characters.</text>
@@ -92,9 +92,9 @@
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node113 -->
+<!-- Node1&#45;&gt;Node114 -->
 <g id="edge56" class="edge">
-<title>Node1&#45;&gt;Node113</title>
+<title>Node1&#45;&gt;Node114</title>
 <path fill="none" stroke="midnightblue" d="M159.39,-382.5C167.84,-382.5 176.38,-382.5 184.71,-382.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="159.14,-379 149.14,-382.5 159.14,-386 159.14,-379"/>
 </g>
@@ -741,10 +741,10 @@
 <!-- Node75 -->
 <g id="node42" class="node">
 <title>Node75</title>
-<g id="a_node42"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level5A.html" target="_top" xlink:title=" ">
+<g id="a_node42"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DerelictContingent_1_1Level2.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="370,-196.5 370,-226.5 561,-226.5 561,-196.5 370,-196.5"/>
 <text text-anchor="start" x="378" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
-<text text-anchor="middle" x="465.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">FieldRepairs.Level5A</text>
+<text text-anchor="middle" x="465.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">DerelictContingent.Level2</text>
 </a>
 </g>
 </g>
@@ -757,10 +757,10 @@
 <!-- Node76 -->
 <g id="node43" class="node">
 <title>Node76</title>
-<g id="a_node43"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level5B.html" target="_top" xlink:title=" ">
+<g id="a_node43"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level5A.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="370,-147.5 370,-177.5 561,-177.5 561,-147.5 370,-147.5"/>
 <text text-anchor="start" x="378" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
-<text text-anchor="middle" x="465.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">FieldRepairs.Level5B</text>
+<text text-anchor="middle" x="465.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">FieldRepairs.Level5A</text>
 </a>
 </g>
 </g>
@@ -773,10 +773,10 @@
 <!-- Node77 -->
 <g id="node44" class="node">
 <title>Node77</title>
-<g id="a_node44"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FleetLogistics_1_1Level1B.html" target="_top" xlink:title=" ">
+<g id="a_node44"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FieldRepairs_1_1Level5B.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="370,-98.5 370,-128.5 561,-128.5 561,-98.5 370,-98.5"/>
 <text text-anchor="start" x="378" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
-<text text-anchor="middle" x="465.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">FleetLogistics.Level1B</text>
+<text text-anchor="middle" x="465.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">FieldRepairs.Level5B</text>
 </a>
 </g>
 </g>
@@ -789,10 +789,10 @@
 <!-- Node78 -->
 <g id="node45" class="node">
 <title>Node78</title>
-<g id="a_node45"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration_1_1Level1.html" target="_top" xlink:title=" ">
+<g id="a_node45"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1FleetLogistics_1_1Level1B.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="370,-49.5 370,-79.5 561,-79.5 561,-49.5 370,-49.5"/>
 <text text-anchor="start" x="378" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
-<text text-anchor="middle" x="465.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">HullRestoration.Level1</text>
+<text text-anchor="middle" x="465.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">FleetLogistics.Level1B</text>
 </a>
 </g>
 </g>
@@ -805,10 +805,10 @@
 <!-- Node79 -->
 <g id="node46" class="node">
 <title>Node79</title>
-<g id="a_node46"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration_1_1Level4A.html" target="_top" xlink:title=" ">
+<g id="a_node46"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration_1_1Level1.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="370,-0.5 370,-30.5 561,-30.5 561,-0.5 370,-0.5"/>
 <text text-anchor="start" x="378" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
-<text text-anchor="middle" x="465.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">HullRestoration.Level4A</text>
+<text text-anchor="middle" x="465.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">HullRestoration.Level1</text>
 </a>
 </g>
 </g>
@@ -821,10 +821,10 @@
 <!-- Node80 -->
 <g id="node47" class="node">
 <title>Node80</title>
-<g id="a_node47"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration_1_1Level4B.html" target="_top" xlink:title=" ">
+<g id="a_node47"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1HullRestoration_1_1Level4A.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="370,-343.5 370,-373.5 561,-373.5 561,-343.5 370,-343.5"/>
 <text text-anchor="start" x="378" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.skills.</text>
-<text text-anchor="middle" x="465.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">HullRestoration.Level4B</text>
+<text text-anchor="middle" x="465.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">HullRestoration.Level4A</text>
 </a>
 </g>
 </g>
@@ -834,9 +834,9 @@
 <path fill="none" stroke="midnightblue" d="M279.83,-259.28C300.07,-281.7 333.9,-315.27 370,-334.5 376.42,-337.92 383.36,-340.87 390.45,-343.41"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="282.25,-256.74 273.01,-251.58 277.01,-261.38 282.25,-256.74"/>
 </g>
-<!-- Node113&#45;&gt;Node71 -->
+<!-- Node114&#45;&gt;Node71 -->
 <g id="edge57" class="edge">
-<title>Node113&#45;&gt;Node71</title>
+<title>Node114&#45;&gt;Node71</title>
 <path fill="none" stroke="midnightblue" d="M344.26,-392.76C352.63,-393.79 361.17,-394.84 369.65,-395.88"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="344.5,-389.27 334.15,-391.53 343.65,-396.22 344.5,-389.27"/>
 </g>

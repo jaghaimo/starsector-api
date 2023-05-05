@@ -109,8 +109,7 @@ Collaboration diagram for com.fs.starfarer.api.impl.campaign.skills.CoordinatedM
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aef4992b892cc29ecfa6f2bb86507618f"><td class="memItemLeft" align="right" valign="top"><a id="aef4992b892cc29ecfa6f2bb86507618f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html">CombatEngineAPI</a> engine)</td></tr>
+<tr class="memitem:aef4992b892cc29ecfa6f2bb86507618f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#aef4992b892cc29ecfa6f2bb86507618f">init</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html">CombatEngineAPI</a> engine)</td></tr>
 <tr class="separator:aef4992b892cc29ecfa6f2bb86507618f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5234a675239dea3dcd297543c16c78cc"><td class="memItemLeft" align="right" valign="top"><a id="a5234a675239dea3dcd297543c16c78cc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>advance</b> (float amount, List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html">InputEventAPI</a> &gt; events)</td></tr>
@@ -180,6 +179,33 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>skipFrames</b> = 0</td
 Set&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html">CombatFleetManagerAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>needsCleanup</b> = new HashSet&lt;<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html">CombatFleetManagerAPI</a>&gt;()</td></tr>
 <tr class="separator:af3bfb11a93a074ea2ef0b2f8c74a3c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aef4992b892cc29ecfa6f2bb86507618f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef4992b892cc29ecfa6f2bb86507618f">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.fs.starfarer.api.impl.campaign.skills.CoordinatedManeuversScript.init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html">CombatEngineAPI</a>&#160;</td>
+          <td class="paramname"><em>engine</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Deprecated, not guaranteed to be called before advance() is called for an EveryFrameCombatPlugin. Can still be relied on if the EveryFrameCombatPlugin.advance() method checks for any fields being set in <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html#aef4992b892cc29ecfa6f2bb86507618f">init()</a> being null. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">engine</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html#addec3dedcaa837bfdb0712c36d17e060">com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/com/fs/starfarer/api/impl/campaign/skills/CoordinatedManeuversScript.java</li>
 </ul>

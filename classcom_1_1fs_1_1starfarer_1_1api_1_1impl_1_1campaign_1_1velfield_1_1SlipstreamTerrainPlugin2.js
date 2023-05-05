@@ -80,6 +80,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1Slipst
     [ "despawnNoise", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#ab57fb807678495b5e5f487f384f63207", null ],
     [ "dynamic", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a359ecfb2f65952e49d632d9ec6b1e79d", null ],
     [ "encounterPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#aa7d5e521535b962990e4524bb0f41366", null ],
+    [ "FUEL_USE_MODIFIER_DESC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#aa166b83f33d81d2b172a9d8882468fc7", null ],
     [ "FUEL_USE_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#ab3d5aeb769e9cf8884b95c04fa68f49c", null ],
     [ "layers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a78cf988cf1729b84d28ae42dbcc51ff5", null ],
     [ "lengthDivisor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a79582207e74b073d1f4431e99d71eac5", null ],

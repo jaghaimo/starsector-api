@@ -7,6 +7,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerAc
     [ "getPlayerTradeData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerActivityTracker.html#a4be6738594df993a2b5a8102a19308df", null ],
     [ "getProfitabilityData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerActivityTracker.html#ac4c3a19c15c555cf15f0f8aea56290f8", null ],
     [ "getRepChangeTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerActivityTracker.html#ae5c770bcf9a4f51677d920c9533e76f4", null ],
+    [ "getSubmarketTradeData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerActivityTracker.html#a7a5f73cfa841bc0191d27a2fd0460a82", null ],
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerActivityTracker.html#aa4723c7bf79809b1bef42831784be641", null ],
     [ "updateLastVisit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerActivityTracker.html#a37c6d319e1834b9ef29abe6e6c5d271a", null ],
     [ "lastVisit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerActivityTracker.html#a185a0a4743f3aa9ae05158643f8e5747", null ],

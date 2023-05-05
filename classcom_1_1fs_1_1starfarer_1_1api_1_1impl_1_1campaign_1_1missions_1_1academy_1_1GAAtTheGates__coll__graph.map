@@ -1,7 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.missions.academy.GAAtTheGates" name="com.fs.starfarer.api.impl.campaign.missions.academy.GAAtTheGates">
-<area shape="rect" id="node1" title=" " alt="" coords="3353,2135,3684,2176"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABaseMission.html" title=" " alt="" coords="2810,1420,3141,1461"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html" title=" " alt="" coords="2444,700,2744,741"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3333,2135,3664,2176"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GABaseMission.html" title=" " alt="" coords="2790,1420,3121,1461"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html" title=" " alt="" coords="2424,700,2724,741"/>
 <area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html" title=" " alt="" coords="1924,700,2224,741"/>
 <area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html" title=" " alt="" coords="1451,1219,1751,1260"/>
 <area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="929,1655,1177,1696"/>
@@ -46,7 +46,7 @@
 <area shape="rect" id="node43" title=" " alt="" coords="1488,463,1715,504"/>
 <area shape="rect" id="node44" title=" " alt="" coords="1435,5,1768,47"/>
 <area shape="rect" id="node45" title=" " alt="" coords="1435,71,1768,112"/>
-<area shape="rect" id="node46" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CurrentLocationChangedListener.html" title=" " alt="" coords="2852,2135,3099,2176"/>
+<area shape="rect" id="node46" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CurrentLocationChangedListener.html" title=" " alt="" coords="2832,2135,3079,2176"/>
 <area shape="rect" id="node48" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="349,2188,544,2229"/>
-<area shape="rect" id="node49" title=" " alt="" coords="2793,2252,3157,2293"/>
+<area shape="rect" id="node49" title=" " alt="" coords="2773,2252,3137,2293"/>
 </map>

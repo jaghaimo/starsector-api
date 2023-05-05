@@ -44,6 +44,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1ev
     [ "KEY_FAILED_RECENTLY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a292f521e3b1f93cd99a05903b1f873d1", null ],
     [ "KEY_SAW_DELIVERY_EVENT_RECENTLY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a85dd01adcea7b2293d59228a18f5fb9f", null ],
     [ "playerCargoCap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f8e4fb9245cea3b3d435a506347486d", null ],
+    [ "playerFuelCap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a306316d86e84b98e77194346c3f133e5", null ],
     [ "PROB_HIGHER_CAPACITY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af06656d1e2d9ab8dbfa3d0e5069ddae4", null ],
     [ "PROB_TO_SHOW", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#aeb6c7fcaf95bd85564efc6c17771c619", null ],
     [ "reward", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#af40eab71b65b1a18e5a490cba261c557", null ],

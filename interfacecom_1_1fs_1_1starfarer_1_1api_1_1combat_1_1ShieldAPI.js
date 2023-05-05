@@ -17,6 +17,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI =
     [ "getUpkeep", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a8fa89c9cacebbd9387a7b40b34902eac", null ],
     [ "isOff", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a5ed957656abbcfad416194b47a6e0156", null ],
     [ "isOn", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a99c335c3aeddb551c1b4d2ed9a66a7d2", null ],
+    [ "isSkipRendering", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a03f05065a805c47c1ff8b2fccd5438aa", null ],
     [ "isWithinArc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a55c57052a83813cc385ddc74c6d7ba8e", null ],
     [ "setActiveArc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a5206ebf05aae0688c82c3e8a11a844e9", null ],
     [ "setArc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a3210c7ac6f2a70f82eca1a9023e3c657", null ],
@@ -27,6 +28,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI =
     [ "setRadius", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a849ddfdea1a3355f9ef76ae745828c80", null ],
     [ "setRingColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a511d66b17fe0d6937ac350c5fcd92b26", null ],
     [ "setRingRotationRate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a2c40625223e6817066c8bce749163417", null ],
+    [ "setSkipRendering", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a3f16a4c90b62e3fc07b1f31dcbbebf36", null ],
     [ "setType", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a097728ccc08df0705c088a59def2a244", null ],
     [ "toggleOff", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a65e34c1c1d6d5a855e2decec8dcd2243", null ],
     [ "toggleOn", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#a2a61cff1f4ef83e74b19f0cb0ce6e234", null ]

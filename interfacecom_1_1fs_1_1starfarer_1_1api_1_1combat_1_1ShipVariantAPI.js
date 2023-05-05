@@ -43,6 +43,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI =
     [ "getOriginalVariant", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a4bfab0356b0e44b400198be4d9b4d822", null ],
     [ "getPermaMods", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a188cc8e1aefec76ce95694497cee3571", null ],
     [ "getSlot", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ae355e6dbee8ecb6431086eab7f2c72a0", null ],
+    [ "getSModdedBuiltIns", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#abbd3fe984ee81d80e79460e0b65a696e", null ],
     [ "getSMods", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a2f91227a6d9ed15706ab957e026d4426", null ],
     [ "getSortedMods", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a26319986e068cae0abed213fcaed9ea8", null ],
     [ "getSource", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ae8d960f900e161b3811bd77fa511b28a", null ],

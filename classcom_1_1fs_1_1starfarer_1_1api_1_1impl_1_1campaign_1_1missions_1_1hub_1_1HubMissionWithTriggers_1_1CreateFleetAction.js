@@ -3,6 +3,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_
     [ "CreateFleetAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1CreateFleetAction.html#a68664ee37856c892e025666dcef16611", null ],
     [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1CreateFleetAction.html#a2f50714dc44e9ef5f833d4af967383e1", null ],
     [ "allWeapons", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1CreateFleetAction.html#ad44b769d9be710512ffbac40ab5e47c7", null ],
+    [ "combatFleetPointsOverride", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1CreateFleetAction.html#a2501946420dac4457cd96df3b467df1e", null ],
     [ "doNotIntegrateAICores", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1CreateFleetAction.html#a4f21ac6a2c9ef10ae373b339aad07557", null ],
     [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1CreateFleetAction.html#a2941132c27b0a08b74a7dbabd6236e02", null ],
     [ "fQuality", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1CreateFleetAction.html#aba58078cb23cd4f101c85f530c7e56de", null ],

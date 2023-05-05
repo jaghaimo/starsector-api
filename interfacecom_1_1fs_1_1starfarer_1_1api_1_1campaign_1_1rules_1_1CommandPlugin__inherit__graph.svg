@@ -37,10 +37,10 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AbortWait.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AbortMission.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-2254.5 444,-2284.5 647,-2284.5 647,-2254.5 444,-2254.5"/>
 <text text-anchor="start" x="452" y="-2272.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-2261.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbortWait</text>
+<text text-anchor="middle" x="545.5" y="-2261.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbortMission</text>
 </a>
 </g>
 </g>
@@ -53,10 +53,10 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ActivateAbility.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AbortWait.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-2205.5 444,-2235.5 647,-2235.5 647,-2205.5 444,-2205.5"/>
 <text text-anchor="start" x="452" y="-2223.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-2212.5" font-family="Helvetica,sans-Serif" font-size="10.00">ActivateAbility</text>
+<text text-anchor="middle" x="545.5" y="-2212.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbortWait</text>
 </a>
 </g>
 </g>
@@ -69,10 +69,10 @@
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddAbility.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AcceptMission.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-2156.5 444,-2186.5 647,-2186.5 647,-2156.5 444,-2156.5"/>
 <text text-anchor="start" x="452" y="-2174.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-2163.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddAbility</text>
+<text text-anchor="middle" x="545.5" y="-2163.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcceptMission</text>
 </a>
 </g>
 </g>
@@ -85,10 +85,10 @@
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
-<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddCredits.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ActivateAbility.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-2107.5 444,-2137.5 647,-2137.5 647,-2107.5 444,-2107.5"/>
 <text text-anchor="start" x="452" y="-2125.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-2114.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddCredits</text>
+<text text-anchor="middle" x="545.5" y="-2114.5" font-family="Helvetica,sans-Serif" font-size="10.00">ActivateAbility</text>
 </a>
 </g>
 </g>
@@ -101,10 +101,10 @@
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
-<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddOption.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddAbility.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-2058.5 444,-2088.5 647,-2088.5 647,-2058.5 444,-2058.5"/>
 <text text-anchor="start" x="452" y="-2076.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-2065.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddOption</text>
+<text text-anchor="middle" x="545.5" y="-2065.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddAbility</text>
 </a>
 </g>
 </g>
@@ -117,10 +117,10 @@
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
-<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddPotentialContact.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddCredits.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-2009.5 444,-2039.5 647,-2039.5 647,-2009.5 444,-2009.5"/>
 <text text-anchor="start" x="452" y="-2027.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-2016.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddPotentialContact</text>
+<text text-anchor="middle" x="545.5" y="-2016.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddCredits</text>
 </a>
 </g>
 </g>
@@ -133,10 +133,10 @@
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
-<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="red" points="444,-1960.5 444,-1990.5 647,-1990.5 647,-1960.5 444,-1960.5"/>
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddOption.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="444,-1960.5 444,-1990.5 647,-1990.5 647,-1960.5 444,-1960.5"/>
 <text text-anchor="start" x="452" y="-1978.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1967.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddRemoveCommodity</text>
+<text text-anchor="middle" x="545.5" y="-1967.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddOption</text>
 </a>
 </g>
 </g>
@@ -146,61 +146,61 @@
 <path fill="none" stroke="midnightblue" d="M308.14,-1167.69C311.77,-1291.45 333.88,-1833.71 444,-1951.5 447.19,-1954.91 450.76,-1957.87 454.61,-1960.44"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="311.63,-1167.55 307.85,-1157.66 304.64,-1167.75 311.63,-1167.55"/>
 </g>
-<!-- Node11 -->
+<!-- Node10 -->
 <g id="node10" class="node">
-<title>Node11</title>
-<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddSelector.html" target="_top" xlink:title=" ">
+<title>Node10</title>
+<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddPotentialContact.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1911.5 444,-1941.5 647,-1941.5 647,-1911.5 444,-1911.5"/>
 <text text-anchor="start" x="452" y="-1929.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1918.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddSelector</text>
+<text text-anchor="middle" x="545.5" y="-1918.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddPotentialContact</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node10 -->
+<g id="edge9" class="edge">
+<title>Node2&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M308.43,-1167.68C313.36,-1286.8 340.21,-1792.65 444,-1902.5 447.2,-1905.89 450.79,-1908.84 454.66,-1911.4"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="311.93,-1167.53 308.03,-1157.67 304.94,-1167.81 311.93,-1167.53"/>
+</g>
+<!-- Node11 -->
+<g id="node11" class="node">
+<title>Node11</title>
+<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveAnyItem.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="444,-1862.5 444,-1892.5 647,-1892.5 647,-1862.5 444,-1862.5"/>
+<text text-anchor="start" x="452" y="-1880.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
+<text text-anchor="middle" x="545.5" y="-1869.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddRemoveAnyItem</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node11 -->
-<g id="edge9" class="edge">
+<g id="edge10" class="edge">
 <title>Node2&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M308.43,-1167.68C313.36,-1286.8 340.21,-1792.65 444,-1902.5 447.2,-1905.89 450.79,-1908.84 454.66,-1911.4"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="311.93,-1167.53 308.03,-1157.67 304.94,-1167.81 311.93,-1167.53"/>
+<path fill="none" stroke="midnightblue" d="M308.78,-1167.85C315.09,-1282.53 346.59,-1751.63 444,-1853.5 447.22,-1856.87 450.83,-1859.8 454.7,-1862.36"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="312.26,-1167.4 308.23,-1157.6 305.27,-1167.77 312.26,-1167.4"/>
 </g>
 <!-- Node12 -->
-<g id="node11" class="node">
+<g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddShip.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="444,-1862.5 444,-1892.5 647,-1892.5 647,-1862.5 444,-1862.5"/>
-<text text-anchor="start" x="452" y="-1880.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1869.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddShip</text>
+<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddRemoveCommodity.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="red" points="444,-1813.5 444,-1843.5 647,-1843.5 647,-1813.5 444,-1813.5"/>
+<text text-anchor="start" x="452" y="-1831.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
+<text text-anchor="middle" x="545.5" y="-1820.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddRemoveCommodity</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node12 -->
-<g id="edge10" class="edge">
-<title>Node2&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M308.78,-1167.85C315.09,-1282.53 346.59,-1751.63 444,-1853.5 447.22,-1856.87 450.83,-1859.8 454.7,-1862.36"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="312.26,-1167.4 308.23,-1157.6 305.27,-1167.77 312.26,-1167.4"/>
-</g>
-<!-- Node13 -->
-<g id="node12" class="node">
-<title>Node13</title>
-<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddShipToOtherFleet.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="444,-1813.5 444,-1843.5 647,-1843.5 647,-1813.5 444,-1813.5"/>
-<text text-anchor="start" x="452" y="-1831.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1820.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddShipToOtherFleet</text>
-</a>
-</g>
-</g>
-<!-- Node2&#45;&gt;Node13 -->
 <g id="edge11" class="edge">
-<title>Node2&#45;&gt;Node13</title>
+<title>Node2&#45;&gt;Node12</title>
 <path fill="none" stroke="midnightblue" d="M309.17,-1167.85C316.92,-1277.61 352.89,-1710.52 444,-1804.5 447.25,-1807.85 450.87,-1810.76 454.76,-1813.3"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="312.65,-1167.45 308.47,-1157.71 305.67,-1167.93 312.65,-1167.45"/>
 </g>
 <!-- Node14 -->
 <g id="node13" class="node">
 <title>Node14</title>
-<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddStoryPoints.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddSelector.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1764.5 444,-1794.5 647,-1794.5 647,-1764.5 444,-1764.5"/>
 <text text-anchor="start" x="452" y="-1782.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1771.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddStoryPoints</text>
+<text text-anchor="middle" x="545.5" y="-1771.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddSelector</text>
 </a>
 </g>
 </g>
@@ -213,10 +213,10 @@
 <!-- Node15 -->
 <g id="node14" class="node">
 <title>Node15</title>
-<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddText.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddShip.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1715.5 444,-1745.5 647,-1745.5 647,-1715.5 444,-1715.5"/>
 <text text-anchor="start" x="452" y="-1733.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1722.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddText</text>
+<text text-anchor="middle" x="545.5" y="-1722.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddShip</text>
 </a>
 </g>
 </g>
@@ -229,10 +229,10 @@
 <!-- Node16 -->
 <g id="node15" class="node">
 <title>Node16</title>
-<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddTextSmall.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddShipToOtherFleet.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1666.5 444,-1696.5 647,-1696.5 647,-1666.5 444,-1666.5"/>
 <text text-anchor="start" x="452" y="-1684.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1673.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddTextSmall</text>
+<text text-anchor="middle" x="545.5" y="-1673.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddShipToOtherFleet</text>
 </a>
 </g>
 </g>
@@ -245,10 +245,10 @@
 <!-- Node17 -->
 <g id="node16" class="node">
 <title>Node17</title>
-<g id="a_node16"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddXP.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddStoryPoints.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1617.5 444,-1647.5 647,-1647.5 647,-1617.5 444,-1617.5"/>
 <text text-anchor="start" x="452" y="-1635.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1624.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddXP</text>
+<text text-anchor="middle" x="545.5" y="-1624.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddStoryPoints</text>
 </a>
 </g>
 </g>
@@ -261,10 +261,10 @@
 <!-- Node18 -->
 <g id="node17" class="node">
 <title>Node18</title>
-<g id="a_node17"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRep.html" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddText.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1568.5 444,-1598.5 647,-1598.5 647,-1568.5 444,-1568.5"/>
 <text text-anchor="start" x="452" y="-1586.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1575.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustRep</text>
+<text text-anchor="middle" x="545.5" y="-1575.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddText</text>
 </a>
 </g>
 </g>
@@ -277,10 +277,10 @@
 <!-- Node19 -->
 <g id="node18" class="node">
 <title>Node19</title>
-<g id="a_node18"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRepActivePerson.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddTextSmall.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1519.5 444,-1549.5 647,-1549.5 647,-1519.5 444,-1519.5"/>
 <text text-anchor="start" x="452" y="-1537.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1526.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustRepActivePerson</text>
+<text text-anchor="middle" x="545.5" y="-1526.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddTextSmall</text>
 </a>
 </g>
 </g>
@@ -293,10 +293,10 @@
 <!-- Node20 -->
 <g id="node19" class="node">
 <title>Node20</title>
-<g id="a_node19"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRepPerson.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AddXP.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1470.5 444,-1500.5 647,-1500.5 647,-1470.5 444,-1470.5"/>
 <text text-anchor="start" x="452" y="-1488.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1477.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustRepPerson</text>
+<text text-anchor="middle" x="545.5" y="-1477.5" font-family="Helvetica,sans-Serif" font-size="10.00">AddXP</text>
 </a>
 </g>
 </g>
@@ -309,10 +309,10 @@
 <!-- Node21 -->
 <g id="node20" class="node">
 <title>Node21</title>
-<g id="a_node20"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AnyNearbyFleetsHostileAndAware.html" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRep.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1421.5 444,-1451.5 647,-1451.5 647,-1421.5 444,-1421.5"/>
 <text text-anchor="start" x="452" y="-1439.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00">AnyNearbyFleetsHostileAndAware</text>
+<text text-anchor="middle" x="545.5" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustRep</text>
 </a>
 </g>
 </g>
@@ -325,10 +325,10 @@
 <!-- Node22 -->
 <g id="node21" class="node">
 <title>Node22</title>
-<g id="a_node21"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ArePatrolsNearby.html" target="_top" xlink:title=" ">
+<g id="a_node21"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRepActivePerson.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1372.5 444,-1402.5 647,-1402.5 647,-1372.5 444,-1372.5"/>
 <text text-anchor="start" x="452" y="-1390.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1379.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArePatrolsNearby</text>
+<text text-anchor="middle" x="545.5" y="-1379.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustRepActivePerson</text>
 </a>
 </g>
 </g>
@@ -341,10 +341,10 @@
 <!-- Node23 -->
 <g id="node22" class="node">
 <title>Node23</title>
-<g id="a_node22"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginConversation.html" target="_top" xlink:title=" ">
+<g id="a_node22"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AdjustRepPerson.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1323.5 444,-1353.5 647,-1353.5 647,-1323.5 444,-1323.5"/>
 <text text-anchor="start" x="452" y="-1341.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1330.5" font-family="Helvetica,sans-Serif" font-size="10.00">BeginConversation</text>
+<text text-anchor="middle" x="545.5" y="-1330.5" font-family="Helvetica,sans-Serif" font-size="10.00">AdjustRepPerson</text>
 </a>
 </g>
 </g>
@@ -357,10 +357,10 @@
 <!-- Node24 -->
 <g id="node23" class="node">
 <title>Node24</title>
-<g id="a_node23"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginMission.html" target="_top" xlink:title=" ">
+<g id="a_node23"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1AnyNearbyFleetsHostileAndAware.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1274.5 444,-1304.5 647,-1304.5 647,-1274.5 444,-1274.5"/>
 <text text-anchor="start" x="452" y="-1292.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1281.5" font-family="Helvetica,sans-Serif" font-size="10.00">BeginMission</text>
+<text text-anchor="middle" x="545.5" y="-1281.5" font-family="Helvetica,sans-Serif" font-size="10.00">AnyNearbyFleetsHostileAndAware</text>
 </a>
 </g>
 </g>
@@ -373,10 +373,10 @@
 <!-- Node25 -->
 <g id="node24" class="node">
 <title>Node25</title>
-<g id="a_node24"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastCancelPlayerAction.html" target="_top" xlink:title=" ">
+<g id="a_node24"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ApplyCRDamage.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1225.5 444,-1255.5 647,-1255.5 647,-1225.5 444,-1225.5"/>
 <text text-anchor="start" x="452" y="-1243.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1232.5" font-family="Helvetica,sans-Serif" font-size="10.00">BroadcastCancelPlayerAction</text>
+<text text-anchor="middle" x="545.5" y="-1232.5" font-family="Helvetica,sans-Serif" font-size="10.00">ApplyCRDamage</text>
 </a>
 </g>
 </g>
@@ -389,10 +389,10 @@
 <!-- Node26 -->
 <g id="node25" class="node">
 <title>Node26</title>
-<g id="a_node25"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastPlayerAction.html" target="_top" xlink:title=" ">
+<g id="a_node25"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ArePatrolsNearby.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1176.5 444,-1206.5 647,-1206.5 647,-1176.5 444,-1176.5"/>
 <text text-anchor="start" x="452" y="-1194.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1183.5" font-family="Helvetica,sans-Serif" font-size="10.00">BroadcastPlayerAction</text>
+<text text-anchor="middle" x="545.5" y="-1183.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArePatrolsNearby</text>
 </a>
 </g>
 </g>
@@ -405,10 +405,10 @@
 <!-- Node27 -->
 <g id="node26" class="node">
 <title>Node27</title>
-<g id="a_node26"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastPlayerWaitAction.html" target="_top" xlink:title=" ">
+<g id="a_node26"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginConversation.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1127.5 444,-1157.5 647,-1157.5 647,-1127.5 444,-1127.5"/>
 <text text-anchor="start" x="452" y="-1145.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1134.5" font-family="Helvetica,sans-Serif" font-size="10.00">BroadcastPlayerWaitAction</text>
+<text text-anchor="middle" x="545.5" y="-1134.5" font-family="Helvetica,sans-Serif" font-size="10.00">BeginConversation</text>
 </a>
 </g>
 </g>
@@ -421,10 +421,10 @@
 <!-- Node28 -->
 <g id="node27" class="node">
 <title>Node28</title>
-<g id="a_node27"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="red" points="444,-1078.5 444,-1108.5 647,-1108.5 647,-1078.5 444,-1078.5"/>
+<g id="a_node27"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BeginMission.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="444,-1078.5 444,-1108.5 647,-1108.5 647,-1078.5 444,-1078.5"/>
 <text text-anchor="start" x="452" y="-1096.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1085.5" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent</text>
+<text text-anchor="middle" x="545.5" y="-1085.5" font-family="Helvetica,sans-Serif" font-size="10.00">BeginMission</text>
 </a>
 </g>
 </g>
@@ -434,77 +434,77 @@
 <path fill="none" stroke="midnightblue" d="M390.27,-1125.39C416.87,-1119.89 446.11,-1113.84 471.92,-1108.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="389.3,-1122.01 380.22,-1127.47 390.72,-1128.87 389.3,-1122.01"/>
 </g>
-<!-- Node30 -->
+<!-- Node29 -->
 <g id="node28" class="node">
-<title>Node30</title>
-<g id="a_node28"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CaresAboutTransponder.html" target="_top" xlink:title=" ">
+<title>Node29</title>
+<g id="a_node28"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastCancelPlayerAction.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-1029.5 444,-1059.5 647,-1059.5 647,-1029.5 444,-1029.5"/>
 <text text-anchor="start" x="452" y="-1047.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-1036.5" font-family="Helvetica,sans-Serif" font-size="10.00">CaresAboutTransponder</text>
+<text text-anchor="middle" x="545.5" y="-1036.5" font-family="Helvetica,sans-Serif" font-size="10.00">BroadcastCancelPlayerAction</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node29 -->
+<g id="edge27" class="edge">
+<title>Node2&#45;&gt;Node29</title>
+<path fill="none" stroke="midnightblue" d="M339.93,-1122.19C366.93,-1106.03 406.82,-1083.81 444,-1069.5 453.73,-1065.75 464.21,-1062.42 474.6,-1059.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="338.04,-1119.25 331.29,-1127.42 341.66,-1125.24 338.04,-1119.25"/>
+</g>
+<!-- Node30 -->
+<g id="node29" class="node">
+<title>Node30</title>
+<g id="a_node29"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastPlayerAction.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="444,-980.5 444,-1010.5 647,-1010.5 647,-980.5 444,-980.5"/>
+<text text-anchor="start" x="452" y="-998.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
+<text text-anchor="middle" x="545.5" y="-987.5" font-family="Helvetica,sans-Serif" font-size="10.00">BroadcastPlayerAction</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node30 -->
-<g id="edge27" class="edge">
+<g id="edge28" class="edge">
 <title>Node2&#45;&gt;Node30</title>
-<path fill="none" stroke="midnightblue" d="M339.93,-1122.19C366.93,-1106.03 406.82,-1083.81 444,-1069.5 453.73,-1065.75 464.21,-1062.42 474.6,-1059.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="338.04,-1119.25 331.29,-1127.42 341.66,-1125.24 338.04,-1119.25"/>
+<path fill="none" stroke="midnightblue" d="M326.72,-1119.54C351.14,-1091.87 395.93,-1045.93 444,-1020.5 451.31,-1016.63 459.24,-1013.35 467.33,-1010.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="324.01,-1117.32 320.1,-1127.16 329.3,-1121.91 324.01,-1117.32"/>
 </g>
 <!-- Node31 -->
-<g id="node29" class="node">
+<g id="node30" class="node">
 <title>Node31</title>
-<g id="a_node29"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CargoScan.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="444,-980.5 444,-1010.5 647,-1010.5 647,-980.5 444,-980.5"/>
-<text text-anchor="start" x="452" y="-998.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-987.5" font-family="Helvetica,sans-Serif" font-size="10.00">CargoScan</text>
+<g id="a_node30"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BroadcastPlayerWaitAction.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="444,-931.5 444,-961.5 647,-961.5 647,-931.5 444,-931.5"/>
+<text text-anchor="start" x="452" y="-949.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
+<text text-anchor="middle" x="545.5" y="-938.5" font-family="Helvetica,sans-Serif" font-size="10.00">BroadcastPlayerWaitAction</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node31 -->
-<g id="edge28" class="edge">
+<g id="edge29" class="edge">
 <title>Node2&#45;&gt;Node31</title>
-<path fill="none" stroke="midnightblue" d="M326.72,-1119.54C351.14,-1091.87 395.93,-1045.93 444,-1020.5 451.31,-1016.63 459.24,-1013.35 467.33,-1010.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="324.01,-1117.32 320.1,-1127.16 329.3,-1121.91 324.01,-1117.32"/>
+<path fill="none" stroke="midnightblue" d="M320,-1118.24C340.59,-1080.75 385.3,-1009.16 444,-971.5 450.05,-967.62 456.67,-964.34 463.52,-961.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="316.71,-1116.96 315.06,-1127.42 322.88,-1120.27 316.71,-1116.96"/>
 </g>
 <!-- Node32 -->
-<g id="node30" class="node">
+<g id="node31" class="node">
 <title>Node32</title>
-<g id="a_node30"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CargoScanApplyResult.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="444,-931.5 444,-961.5 647,-961.5 647,-931.5 444,-931.5"/>
-<text text-anchor="start" x="452" y="-949.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-938.5" font-family="Helvetica,sans-Serif" font-size="10.00">CargoScanApplyResult</text>
+<g id="a_node31"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="red" points="444,-882.5 444,-912.5 647,-912.5 647,-882.5 444,-882.5"/>
+<text text-anchor="start" x="452" y="-900.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
+<text text-anchor="middle" x="545.5" y="-889.5" font-family="Helvetica,sans-Serif" font-size="10.00">CallEvent</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node32 -->
-<g id="edge29" class="edge">
-<title>Node2&#45;&gt;Node32</title>
-<path fill="none" stroke="midnightblue" d="M320,-1118.24C340.59,-1080.75 385.3,-1009.16 444,-971.5 450.05,-967.62 456.67,-964.34 463.52,-961.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="316.71,-1116.96 315.06,-1127.42 322.88,-1120.27 316.71,-1116.96"/>
-</g>
-<!-- Node33 -->
-<g id="node31" class="node">
-<title>Node33</title>
-<g id="a_node31"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CheckSetting.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="444,-882.5 444,-912.5 647,-912.5 647,-882.5 444,-882.5"/>
-<text text-anchor="start" x="452" y="-900.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-889.5" font-family="Helvetica,sans-Serif" font-size="10.00">CheckSetting</text>
-</a>
-</g>
-</g>
-<!-- Node2&#45;&gt;Node33 -->
 <g id="edge30" class="edge">
-<title>Node2&#45;&gt;Node33</title>
+<title>Node2&#45;&gt;Node32</title>
 <path fill="none" stroke="midnightblue" d="M315.63,-1117.97C332.15,-1072.12 374.09,-973.44 444,-922.5 449.3,-918.64 455.14,-915.36 461.24,-912.6"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="312.33,-1116.83 312.32,-1127.43 318.93,-1119.15 312.33,-1116.83"/>
 </g>
 <!-- Node34 -->
 <g id="node32" class="node">
 <title>Node34</title>
-<g id="a_node32"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ClearActiveMission.html" target="_top" xlink:title=" ">
+<g id="a_node32"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CaresAboutTransponder.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-833.5 444,-863.5 647,-863.5 647,-833.5 444,-833.5"/>
 <text text-anchor="start" x="452" y="-851.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-840.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClearActiveMission</text>
+<text text-anchor="middle" x="545.5" y="-840.5" font-family="Helvetica,sans-Serif" font-size="10.00">CaresAboutTransponder</text>
 </a>
 </g>
 </g>
@@ -517,10 +517,10 @@
 <!-- Node35 -->
 <g id="node33" class="node">
 <title>Node35</title>
-<g id="a_node33"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionApplyRepLoss.html" target="_top" xlink:title=" ">
+<g id="a_node33"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CargoScan.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-784.5 444,-814.5 647,-814.5 647,-784.5 444,-784.5"/>
 <text text-anchor="start" x="452" y="-802.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-791.5" font-family="Helvetica,sans-Serif" font-size="10.00">CustomsInspectionApplyRepLoss</text>
+<text text-anchor="middle" x="545.5" y="-791.5" font-family="Helvetica,sans-Serif" font-size="10.00">CargoScan</text>
 </a>
 </g>
 </g>
@@ -533,10 +533,10 @@
 <!-- Node36 -->
 <g id="node34" class="node">
 <title>Node36</title>
-<g id="a_node34"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionApplyResult.html" target="_top" xlink:title=" ">
+<g id="a_node34"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CargoScanApplyResult.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-735.5 444,-765.5 647,-765.5 647,-735.5 444,-735.5"/>
 <text text-anchor="start" x="452" y="-753.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-742.5" font-family="Helvetica,sans-Serif" font-size="10.00">CustomsInspectionApplyResult</text>
+<text text-anchor="middle" x="545.5" y="-742.5" font-family="Helvetica,sans-Serif" font-size="10.00">CargoScanApplyResult</text>
 </a>
 </g>
 </g>
@@ -549,10 +549,10 @@
 <!-- Node37 -->
 <g id="node35" class="node">
 <title>Node37</title>
-<g id="a_node35"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult.html" target="_top" xlink:title=" ">
+<g id="a_node35"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CheckSetting.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-686.5 444,-716.5 647,-716.5 647,-686.5 444,-686.5"/>
 <text text-anchor="start" x="452" y="-704.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-693.5" font-family="Helvetica,sans-Serif" font-size="10.00">CustomsInspectionGenerateResult</text>
+<text text-anchor="middle" x="545.5" y="-693.5" font-family="Helvetica,sans-Serif" font-size="10.00">CheckSetting</text>
 </a>
 </g>
 </g>
@@ -565,10 +565,10 @@
 <!-- Node38 -->
 <g id="node36" class="node">
 <title>Node38</title>
-<g id="a_node36"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DeactivateAbility.html" target="_top" xlink:title=" ">
+<g id="a_node36"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ClearActiveMission.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-637.5 444,-667.5 647,-667.5 647,-637.5 444,-637.5"/>
 <text text-anchor="start" x="452" y="-655.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-644.5" font-family="Helvetica,sans-Serif" font-size="10.00">DeactivateAbility</text>
+<text text-anchor="middle" x="545.5" y="-644.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClearActiveMission</text>
 </a>
 </g>
 </g>
@@ -581,10 +581,10 @@
 <!-- Node39 -->
 <g id="node37" class="node">
 <title>Node39</title>
-<g id="a_node37"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DespawnEntity.html" target="_top" xlink:title=" ">
+<g id="a_node37"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionApplyRepLoss.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-588.5 444,-618.5 647,-618.5 647,-588.5 444,-588.5"/>
 <text text-anchor="start" x="452" y="-606.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-595.5" font-family="Helvetica,sans-Serif" font-size="10.00">DespawnEntity</text>
+<text text-anchor="middle" x="545.5" y="-595.5" font-family="Helvetica,sans-Serif" font-size="10.00">CustomsInspectionApplyRepLoss</text>
 </a>
 </g>
 </g>
@@ -597,10 +597,10 @@
 <!-- Node40 -->
 <g id="node38" class="node">
 <title>Node40</title>
-<g id="a_node38"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DismissDialog.html" target="_top" xlink:title=" ">
+<g id="a_node38"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionApplyResult.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-539.5 444,-569.5 647,-569.5 647,-539.5 444,-539.5"/>
 <text text-anchor="start" x="452" y="-557.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-546.5" font-family="Helvetica,sans-Serif" font-size="10.00">DismissDialog</text>
+<text text-anchor="middle" x="545.5" y="-546.5" font-family="Helvetica,sans-Serif" font-size="10.00">CustomsInspectionApplyResult</text>
 </a>
 </g>
 </g>
@@ -613,10 +613,10 @@
 <!-- Node41 -->
 <g id="node39" class="node">
 <title>Node41</title>
-<g id="a_node39"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DoCanAffordCheck.html" target="_top" xlink:title=" ">
+<g id="a_node39"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CustomsInspectionGenerateResult.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-490.5 444,-520.5 647,-520.5 647,-490.5 444,-490.5"/>
 <text text-anchor="start" x="452" y="-508.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">DoCanAffordCheck</text>
+<text text-anchor="middle" x="545.5" y="-497.5" font-family="Helvetica,sans-Serif" font-size="10.00">CustomsInspectionGenerateResult</text>
 </a>
 </g>
 </g>
@@ -629,10 +629,10 @@
 <!-- Node42 -->
 <g id="node40" class="node">
 <title>Node42</title>
-<g id="a_node40"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DumpMemory.html" target="_top" xlink:title=" ">
+<g id="a_node40"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DeactivateAbility.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-441.5 444,-471.5 647,-471.5 647,-441.5 444,-441.5"/>
 <text text-anchor="start" x="452" y="-459.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">DumpMemory</text>
+<text text-anchor="middle" x="545.5" y="-448.5" font-family="Helvetica,sans-Serif" font-size="10.00">DeactivateAbility</text>
 </a>
 </g>
 </g>
@@ -645,10 +645,10 @@
 <!-- Node43 -->
 <g id="node41" class="node">
 <title>Node43</title>
-<g id="a_node41"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1EndConversation.html" target="_top" xlink:title=" ">
+<g id="a_node41"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DespawnEntity.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-392.5 444,-422.5 647,-422.5 647,-392.5 444,-392.5"/>
 <text text-anchor="start" x="452" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">EndConversation</text>
+<text text-anchor="middle" x="545.5" y="-399.5" font-family="Helvetica,sans-Serif" font-size="10.00">DespawnEntity</text>
 </a>
 </g>
 </g>
@@ -661,10 +661,10 @@
 <!-- Node44 -->
 <g id="node42" class="node">
 <title>Node44</title>
-<g id="a_node42"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireAll.html" target="_top" xlink:title=" ">
+<g id="a_node42"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DismissDialog.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-343.5 444,-373.5 647,-373.5 647,-343.5 444,-343.5"/>
 <text text-anchor="start" x="452" y="-361.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">FireAll</text>
+<text text-anchor="middle" x="545.5" y="-350.5" font-family="Helvetica,sans-Serif" font-size="10.00">DismissDialog</text>
 </a>
 </g>
 </g>
@@ -677,10 +677,10 @@
 <!-- Node45 -->
 <g id="node43" class="node">
 <title>Node45</title>
-<g id="a_node43"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html" target="_top" xlink:title=" ">
+<g id="a_node43"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DoCanAffordCheck.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-294.5 444,-324.5 647,-324.5 647,-294.5 444,-294.5"/>
 <text text-anchor="start" x="452" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">FireBest</text>
+<text text-anchor="middle" x="545.5" y="-301.5" font-family="Helvetica,sans-Serif" font-size="10.00">DoCanAffordCheck</text>
 </a>
 </g>
 </g>
@@ -693,10 +693,10 @@
 <!-- Node46 -->
 <g id="node44" class="node">
 <title>Node46</title>
-<g id="a_node44"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FleetDesc.html" target="_top" xlink:title=" ">
+<g id="a_node44"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1DumpMemory.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-245.5 444,-275.5 647,-275.5 647,-245.5 444,-245.5"/>
 <text text-anchor="start" x="452" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">FleetDesc</text>
+<text text-anchor="middle" x="545.5" y="-252.5" font-family="Helvetica,sans-Serif" font-size="10.00">DumpMemory</text>
 </a>
 </g>
 </g>
@@ -709,10 +709,10 @@
 <!-- Node47 -->
 <g id="node45" class="node">
 <title>Node47</title>
-<g id="a_node45"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1GiveOtherFleetAssignment.html" target="_top" xlink:title=" ">
+<g id="a_node45"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1EndConversation.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-196.5 444,-226.5 647,-226.5 647,-196.5 444,-196.5"/>
 <text text-anchor="start" x="452" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">GiveOtherFleetAssignment</text>
+<text text-anchor="middle" x="545.5" y="-203.5" font-family="Helvetica,sans-Serif" font-size="10.00">EndConversation</text>
 </a>
 </g>
 </g>
@@ -725,10 +725,10 @@
 <!-- Node48 -->
 <g id="node46" class="node">
 <title>Node48</title>
-<g id="a_node46"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HailPlayer.html" target="_top" xlink:title=" ">
+<g id="a_node46"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1Faction__CMD.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-147.5 444,-177.5 647,-177.5 647,-147.5 444,-147.5"/>
 <text text-anchor="start" x="452" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">HailPlayer</text>
+<text text-anchor="middle" x="545.5" y="-154.5" font-family="Helvetica,sans-Serif" font-size="10.00">Faction_CMD</text>
 </a>
 </g>
 </g>
@@ -741,10 +741,10 @@
 <!-- Node49 -->
 <g id="node47" class="node">
 <title>Node49</title>
-<g id="a_node47"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HasAttentionOfAuthorities.html" target="_top" xlink:title=" ">
+<g id="a_node47"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireAll.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-98.5 444,-128.5 647,-128.5 647,-98.5 444,-98.5"/>
 <text text-anchor="start" x="452" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">HasAttentionOfAuthorities</text>
+<text text-anchor="middle" x="545.5" y="-105.5" font-family="Helvetica,sans-Serif" font-size="10.00">FireAll</text>
 </a>
 </g>
 </g>
@@ -757,10 +757,10 @@
 <!-- Node50 -->
 <g id="node48" class="node">
 <title>Node50</title>
-<g id="a_node48"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HideSecondPerson.html" target="_top" xlink:title=" ">
+<g id="a_node48"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FireBest.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-49.5 444,-79.5 647,-79.5 647,-49.5 444,-49.5"/>
 <text text-anchor="start" x="452" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">HideSecondPerson</text>
+<text text-anchor="middle" x="545.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">FireBest</text>
 </a>
 </g>
 </g>
@@ -773,10 +773,10 @@
 <!-- Node51 -->
 <g id="node49" class="node">
 <title>Node51</title>
-<g id="a_node49"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HideThirdPerson.html" target="_top" xlink:title=" ">
+<g id="a_node49"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1FleetDesc.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="444,-0.5 444,-30.5 647,-30.5 647,-0.5 444,-0.5"/>
 <text text-anchor="start" x="452" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.rulecmd.</text>
-<text text-anchor="middle" x="545.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">HideThirdPerson</text>
+<text text-anchor="middle" x="545.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">FleetDesc</text>
 </a>
 </g>
 </g>

@@ -19,5 +19,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAP
     [ "queueIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#addcd1eeedee0d5f54b835fc36b12a631", null ],
     [ "removeAllThatShouldBeRemoved", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#a1f81257456e3eebd46f1c2f78739cab6", null ],
     [ "removeIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#a493d18dfd2bb0824849f267604eab821", null ],
+    [ "sortIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#a72eb44cc7ab9042ecdb5aa6c22e84747", null ],
     [ "unqueueIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelManagerAPI.html#a4ff2c2cfb225e6ffd58a58c757e1e407", null ]
 ];

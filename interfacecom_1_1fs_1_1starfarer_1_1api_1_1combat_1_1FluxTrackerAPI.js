@@ -25,5 +25,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI =
     [ "showOverloadFloatyIfNeeded", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#ae9361d5beab198c2ccef044a7cf97622", null ],
     [ "showOverloadFloatyIfNeeded", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a80ddcd336e02382d1f28ffaedf37e070", null ],
     [ "stopOverload", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#adf48643817fb148b3a6c92df8fcfeb1c", null ],
-    [ "stopVenting", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#aa31a71bfe51f0386076c482cf99254a1", null ]
+    [ "stopVenting", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#aa31a71bfe51f0386076c482cf99254a1", null ],
+    [ "ventFlux", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#aee51673070bbaf6f05b30eef97b395a7", null ]
 ];

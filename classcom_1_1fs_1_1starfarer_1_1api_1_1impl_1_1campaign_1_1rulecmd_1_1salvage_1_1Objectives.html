@@ -149,6 +149,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>removeRepairCosts</b>
 <tr class="memitem:acbb20a5968617cd04ddb5f7fd6806f6a"><td class="memItemLeft" align="right" valign="top"><a id="acbb20a5968617cd04ddb5f7fd6806f6a"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>canActivate</b> (String type)</td></tr>
 <tr class="separator:acbb20a5968617cd04ddb5f7fd6806f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bddabca6adb436f4c1e31bd0a12fe09"><td class="memItemLeft" align="right" valign="top"><a id="a5bddabca6adb436f4c1e31bd0a12fe09"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>canBurst</b> ()</td></tr>
+<tr class="separator:a5bddabca6adb436f4c1e31bd0a12fe09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09b0a0c4b35a5172f74030fa8ade3e61"><td class="memItemLeft" align="right" valign="top"><a id="a09b0a0c4b35a5172f74030fa8ade3e61"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateMemory</b> ()</td></tr>
 <tr class="separator:a09b0a0c4b35a5172f74030fa8ade3e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +167,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printHackDesc</b> ()<
 <tr class="memitem:a8ef7b228c4a81278ac2ac7f3508b9781"><td class="memItemLeft" align="right" valign="top"><a id="a8ef7b228c4a81278ac2ac7f3508b9781"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printRepairCost</b> (boolean withPrompt)</td></tr>
 <tr class="separator:a8ef7b228c4a81278ac2ac7f3508b9781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66db775e3cfd4cec1281f42e2aeb010e"><td class="memItemLeft" align="right" valign="top"><a id="a66db775e3cfd4cec1281f42e2aeb010e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printBurstCost</b> (boolean withPrompt)</td></tr>
+<tr class="separator:a66db775e3cfd4cec1281f42e2aeb010e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46040a96c45665659f4c69b9fcaf60e9"><td class="memItemLeft" align="right" valign="top"><a id="a46040a96c45665659f4c69b9fcaf60e9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printSalvage</b> ()</td></tr>
 <tr class="separator:a46040a96c45665659f4c69b9fcaf60e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,6 +191,12 @@ String[]&#160;</td><td class="memItemRight" valign="bottom"><b>getRepairResource
 <tr class="memitem:af1de6abe33f4a8c13f266960c0fb6ee9"><td class="memItemLeft" align="right" valign="top"><a id="af1de6abe33f4a8c13f266960c0fb6ee9"></a>
 int[]&#160;</td><td class="memItemRight" valign="bottom"><b>getRepairQuantities</b> ()</td></tr>
 <tr class="separator:af1de6abe33f4a8c13f266960c0fb6ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5c0c8575da855e84bebe8a91eee25d"><td class="memItemLeft" align="right" valign="top"><a id="aac5c0c8575da855e84bebe8a91eee25d"></a>
+int[]&#160;</td><td class="memItemRight" valign="bottom"><b>getBurstQuantities</b> ()</td></tr>
+<tr class="separator:aac5c0c8575da855e84bebe8a91eee25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd70609d320b561ba58e4a7267afa80f"><td class="memItemLeft" align="right" valign="top"><a id="afd70609d320b561ba58e4a7267afa80f"></a>
+String[]&#160;</td><td class="memItemRight" valign="bottom"><b>getBurstResources</b> ()</td></tr>
+<tr class="separator:afd70609d320b561ba58e4a7267afa80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html">com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin</a></td></tr>
 <tr class="memitem:ae859f2f32964a8a7bf504be999e3f7fe inherit pub_methods_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin"><td class="memItemLeft" align="right" valign="top"><a id="ae859f2f32964a8a7bf504be999e3f7fe"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>doesCommandAddOptions</b> ()</td></tr>
@@ -195,15 +207,33 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>getOptionOrder</b> (Li
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a8fd2f50ef2df43613bd3acae4f68c37a"><td class="memItemLeft" align="right" valign="top"><a id="a8fd2f50ef2df43613bd3acae4f68c37a"></a>
-static final float&#160;</td><td class="memItemRight" valign="bottom"><b>SALVAGE_FRACTION</b> = 0.5f</td></tr>
-<tr class="separator:a8fd2f50ef2df43613bd3acae4f68c37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74c39de4b35768ef879c4452267b4214"><td class="memItemLeft" align="right" valign="top"><a id="a74c39de4b35768ef879c4452267b4214"></a>
+static String&#160;</td><td class="memItemRight" valign="bottom"><b>BURST_RANGE</b> = &quot;$COB_burstRange&quot;</td></tr>
+<tr class="separator:a74c39de4b35768ef879c4452267b4214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df296e8dcce6fe3c5123c85f88a5c3e"><td class="memItemLeft" align="right" valign="top"><a id="a1df296e8dcce6fe3c5123c85f88a5c3e"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>BURST_RANGE_MAKESHIFT</b> = 10</td></tr>
+<tr class="separator:a1df296e8dcce6fe3c5123c85f88a5c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61886b65640f90b8fe7e42dff9fd0d43"><td class="memItemLeft" align="right" valign="top"><a id="a61886b65640f90b8fe7e42dff9fd0d43"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>BURST_RANGE_DOMAIN</b> = 15</td></tr>
+<tr class="separator:a61886b65640f90b8fe7e42dff9fd0d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82d58a590523a4fe91e26436e18001b"><td class="memItemLeft" align="right" valign="top"><a id="aa82d58a590523a4fe91e26436e18001b"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>BURST_RANGE_SCAVENGER_MIN</b> = 5</td></tr>
+<tr class="separator:aa82d58a590523a4fe91e26436e18001b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a483e65a0b9075b5f249a89e7f5e1c362"><td class="memItemLeft" align="right" valign="top"><a id="a483e65a0b9075b5f249a89e7f5e1c362"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>BURST_RANGE_SCAVENGER_MAX</b> = 10</td></tr>
+<tr class="separator:a483e65a0b9075b5f249a89e7f5e1c362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed26b199ff86864abdfd8882fb8f5ac"><td class="memItemLeft" align="right" valign="top"><a id="aeed26b199ff86864abdfd8882fb8f5ac"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>SALVAGE_FRACTION</b> = 0.5f</td></tr>
+<tr class="separator:aeed26b199ff86864abdfd8882fb8f5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a60b064f58e867a5d12edf3ef7995f859"><td class="memItemLeft" align="right" valign="top"><a id="a60b064f58e867a5d12edf3ef7995f859"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html">SectorEntityToken</a> entity)</td></tr>
 <tr class="separator:a60b064f58e867a5d12edf3ef7995f859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b3413398f7fbda24bc6471fa03b898"><td class="memItemLeft" align="right" valign="top"><a id="ab9b3413398f7fbda24bc6471fa03b898"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>doBurst</b> ()</td></tr>
+<tr class="separator:ab9b3413398f7fbda24bc6471fa03b898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3985a0193473489882ff28ebd3c2660d"><td class="memItemLeft" align="right" valign="top"><a id="a3985a0193473489882ff28ebd3c2660d"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>hasRepImpact</b> ()</td></tr>
 <tr class="separator:a3985a0193473489882ff28ebd3c2660d"><td class="memSeparator" colspan="2">&#160;</td></tr>

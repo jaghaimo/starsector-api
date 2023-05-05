@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI =
 [
+    [ "addEntity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ab3924e6faeb132c58c8273f488151f54", null ],
     [ "addFloatingDamageText", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a58cc2c27bb4d9426d8d702864e2161a5", null ],
     [ "addFloatingText", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae7dabe5516a6fea1d52b8754822b5fdf", null ],
     [ "addFloatingTextAlways", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a7b1b2b5c5e4708cccb316f7b8b840243", null ],
@@ -10,6 +11,8 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI =
     [ "addNebulaParticle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#adab0ce106e494d7dddf7e32375954e90", null ],
     [ "addNebulaParticle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03153631df82153915e5a87e74852bed", null ],
     [ "addNebulaSmokeParticle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ab2132723d34a6fad8db3548a7c23615d", null ],
+    [ "addNebulaSmoothParticle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a4702eee534e943cc14948dda258b50e2", null ],
+    [ "addNebulaSmoothParticle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a5b91c369615df52cb4ba1022062f6deb", null ],
     [ "addNegativeNebulaParticle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#aa3db80b60ea661a653cb5b64d8fed756", null ],
     [ "addNegativeParticle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a8eb1739229a215ada43d2361f0699599", null ],
     [ "addNegativeSwirlyNebulaParticle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#afb2d0f78a7a9c4f5cf858dcadf580f53", null ],
@@ -23,6 +26,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI =
     [ "applyDamage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ad642823a422eaaffd17fa8fce5e59466", null ],
     [ "applyDamageModifiersToSpawnedProjectileWithNullWeapon", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#aaa51f0392775d502de8bb01d0452f147", null ],
     [ "createFakeWeapon", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac40400fe9ee715e4b19c8c5e7e850033", null ],
+    [ "createFXDrone", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03eec6c2504502280c84e1086a84ec8c", null ],
     [ "endCombat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#acec99984e0b2ffa00caa8f690a3e3a51", null ],
     [ "endCombat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ac9a77658459703cdf9e97445fc4f61cc", null ],
     [ "getAiGridAsteroids", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a2e9f51415d0f7fb81a951f840eeb467f", null ],

@@ -31,5 +31,9 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecA
     [ "isSupplies", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#ad5a960e2316327d0c10e4785e4868e0f", null ],
     [ "setBaseDanger", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a9631afe052f6945b79dfd676d1d8c1bb", null ],
     [ "setBasePrice", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a2cd9b7ac368d4fa4d2e0a02400a2603a", null ],
-    [ "setExportValue", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a4931f385f42ee214a88b1e162b0ffb45", null ]
+    [ "setDemandClass", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a7f420f39e11b8ddba00593027fe31d71", null ],
+    [ "setExportValue", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a4931f385f42ee214a88b1e162b0ffb45", null ],
+    [ "setIconName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#ab24f1250c7fdd3769c69e06c9640f264", null ],
+    [ "setName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a03ca8183dac97e724f716269f7d50cf2", null ],
+    [ "setOrder", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html#a99cda92e512e95b0e309c8742000dfce", null ]
 ];

@@ -1,6 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI =
 [
     [ "applySpecChanges", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html#a78e781e248c870a8ff1ab76eef94c545", null ],
+    [ "changeType", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html#aa1f72d08addff55b903de2bc4dd24c29", null ],
     [ "getLightColorOverrideIfStar", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html#aa18eb3c87aa5d58698ada60db51519fc", null ],
     [ "getSpec", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html#a97e2cdcc6c6dd3a12012113b9b60dc25", null ],
     [ "getTypeId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html#a68bea2c43822f438bf2286dd52cc9503", null ],

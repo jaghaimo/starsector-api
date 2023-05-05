@@ -11,6 +11,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AmmoTrackerAPI =
     [ "setAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AmmoTrackerAPI.html#a4c6f5b160c77c29b8d6ac002d84fc623", null ],
     [ "setAmmoPerSecond", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AmmoTrackerAPI.html#ad11a60a3888eae7cbf26535c0b69f047", null ],
     [ "setMaxAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AmmoTrackerAPI.html#ae74170e594cc1331635cded5bc5b43af", null ],
+    [ "setReloadProgress", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AmmoTrackerAPI.html#ad9c35a12c184a9e6fca741fff9b25208", null ],
     [ "setReloadSize", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AmmoTrackerAPI.html#af0a09270dbea22feebfbf2e44ed9107f", null ],
     [ "usesAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AmmoTrackerAPI.html#ab729ee191ae3171c0a825d7909f3bb7b", null ]
 ];

@@ -19,6 +19,11 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI =
     [ "getTags", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a9cfd2ad7bada8efffd984e0b051edb45", null ],
     [ "hasTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a0e066702f6c84ff651ea8b3725320b84", null ],
     [ "setBaseDanger", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a704ffe995fa0143721eda2334a5b7cc9", null ],
+    [ "setBasePrice", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#ae550fba31bc32e6baddf42629a5c2091", null ],
     [ "setDesc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a86fb4c08fc646cbdfc08d260fb2ef749", null ],
-    [ "setManufacturer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a72d5908830f697c643e356fed6c40060", null ]
+    [ "setIconName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#aa8f63579992a0e44bb6b168a5adc5129", null ],
+    [ "setManufacturer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a72d5908830f697c643e356fed6c40060", null ],
+    [ "setName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a2e7b26f38ec241a0b9a8354a5112abef", null ],
+    [ "setOrder", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#aa2a145f73a57021995a523e0170455ce", null ],
+    [ "setParams", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html#a80c5a5492b8f8abce756207887009f79", null ]
 ];

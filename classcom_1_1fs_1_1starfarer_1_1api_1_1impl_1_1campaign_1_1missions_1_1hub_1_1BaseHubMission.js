@@ -197,6 +197,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_
     [ "getTerrainTypeAOrAn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#aaff88815fbc08592dc7e715d89bcea91", null ],
     [ "getToCompleteText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a04289056187d5f8259bf613e147f2149", null ],
     [ "getTriggerPrefix", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ab2835c812d7639a584d543d7844ac4ba", null ],
+    [ "getTriggers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a0d24ddd995e256bd41a63c91136acd25", null ],
     [ "getUnits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a22c548e43316bdd6a68ab6447a0644ca", null ],
     [ "getWithoutArticle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#ac26c8874965beac89c32def11c2a1c05", null ],
     [ "getXPReward", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html#a926ab04074275eabdc3bfb5349651c94", null ],

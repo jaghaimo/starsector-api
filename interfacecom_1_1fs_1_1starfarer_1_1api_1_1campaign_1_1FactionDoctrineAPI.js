@@ -12,6 +12,8 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI =
     [ "getFleets", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a149a15c15144996827f54f7d5986ea56", null ],
     [ "getNumShips", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a1f7d24ffc3e07798d3ba72c91b078cf6", null ],
     [ "getOfficerQuality", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a428c104b6f10f7511d08d1f48c12b8b1", null ],
+    [ "getOfficerSkills", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#ac8fd8b6d48b2c0ee060b80598877fa69", null ],
+    [ "getOfficerSkillsShuffleProbability", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#aa30c72d069e7c32731b9a5d574f18900", null ],
     [ "getPhaseShips", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a9d7d207d2e33031db4ae6f3e34666545", null ],
     [ "getShipQuality", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a521c9e907efbf481d0341b3625f6f449", null ],
     [ "getShipQualityContribution", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a91e6bca3a700c33e1279444a46216346", null ],

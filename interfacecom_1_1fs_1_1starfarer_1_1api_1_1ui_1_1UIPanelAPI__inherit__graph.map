@@ -1,6 +1,8 @@
 <map id="com.fs.starfarer.api.ui.UIPanelAPI" name="com.fs.starfarer.api.ui.UIPanelAPI">
-<area shape="rect" id="node1" title=" " alt="" coords="91,95,239,136"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1CustomPanelAPI.html" title=" " alt="" coords="5,184,153,225"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html" title=" " alt="" coords="177,184,325,225"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIComponentAPI.html" title=" " alt="" coords="91,5,239,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="201,104,349,145"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1CustomPanelAPI.html" title=" " alt="" coords="398,5,546,47"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1EventProgressBarAPI.html" title=" " alt="" coords="397,71,547,112"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ScrollPanelAPI.html" title=" " alt="" coords="398,136,546,177"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html" title=" " alt="" coords="398,201,546,243"/>
+<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIComponentAPI.html" title=" " alt="" coords="5,104,153,145"/>
 </map>

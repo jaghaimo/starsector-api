@@ -14,6 +14,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1
     [ "doIncident", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ab5f6f7200dd5e7e430e3387e131c083f", null ],
     [ "getArrowData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#aa48c80678375c1292aead784fc1ac52d", null ],
     [ "getCellsForBase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a499c5e6aecb0b9289f6a54708fd9a0d6", null ],
+    [ "getCellsForMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#aff883fd5ccaa7dfdcfce032d0e93b8ad", null ],
     [ "getClosestBase", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#ac458ba4b8e8d68dbb6abb9edf433f7f2", null ],
     [ "getCommMessageSound", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4588de174fd59cbc21a73025aeaa4ec2", null ],
     [ "getFactionForUIColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a0ee783c835a4509b0c740099006f540d", null ],

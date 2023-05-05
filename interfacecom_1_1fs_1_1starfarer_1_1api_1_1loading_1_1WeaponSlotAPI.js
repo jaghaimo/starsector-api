@@ -17,6 +17,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI =
     [ "isStationModule", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a92d4287d558a37c3ae7d07428f21d38e", null ],
     [ "isSystemSlot", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a2f8c112441e498d6922cdf0a5cb76e52", null ],
     [ "isTurret", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a6e7071ee8b1b16eee2a76b72cd4e487a", null ],
+    [ "isWeaponSlot", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a4a72e34875af4677f76543e8d1e4788c", null ],
     [ "setAngle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a0bf83a3d0f25aef645425747b7603b44", null ],
     [ "setArc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a73ca3a5c2f2238c82cbfa260513f1313", null ],
     [ "setRenderOrderMod", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a37b7bdd5fc8d42b4942fe883cfe50dc6", null ],

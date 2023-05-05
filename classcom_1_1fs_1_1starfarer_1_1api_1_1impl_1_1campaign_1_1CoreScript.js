@@ -22,8 +22,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript =
     [ "reportPlayerReputationChange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a9559c93ef871aba138f573dd10c09111", null ],
     [ "reportPlayerReputationChange", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a48acc4d497c5a0059ca5a5a4c9aad82f", null ],
     [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#ab4b0e93a5041c6218182290f20a7a8f8", null ],
-    [ "updateSlipstreamVisibility", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a89bc31ae478baea686381d58a972c35e", null ],
-    [ "currentStream", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a04edc5a7c77ca44117ae109e2810c356", null ],
     [ "deltaFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#a389d1abb24f8f2f854492212706b2271", null ],
     [ "firstFrame", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#af608b3ef54df0485a9b73a7cc7b17fee", null ],
     [ "highestDelta", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html#ac4208ff2dd09b5e74c9a759b10b4800d", null ],

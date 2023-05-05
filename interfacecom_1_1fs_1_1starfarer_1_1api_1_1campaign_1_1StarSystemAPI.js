@@ -44,6 +44,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI =
     [ "setLightColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a759566c46d3d1a57757d6f4686284500", null ],
     [ "setMapGridHeightOverride", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a4f7e6bbb4034c2c7c520e0391067bfe6", null ],
     [ "setMapGridWidthOverride", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#ac56bcdb15893946be03137e8faaaadbc", null ],
+    [ "setMaxRadiusInHyperspace", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#acb61662d0c0a60eb86e56cf4d5c5e9c5", null ],
     [ "setProcgen", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#a5561251b3fc39004f1d87b051eff0ddd", null ],
     [ "setSecondary", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#ad2594a52833d517ba035af8e171adcc7", null ],
     [ "setStar", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html#ada5a07d00000b69f1b912dc64c85ccc3", null ],

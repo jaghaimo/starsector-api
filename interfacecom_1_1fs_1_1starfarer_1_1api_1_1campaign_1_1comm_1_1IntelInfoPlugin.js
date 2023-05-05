@@ -3,6 +3,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugi
     [ "ArrowData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1ArrowData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1ArrowData" ],
     [ "IntelSortTier", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1IntelSortTier.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1IntelSortTier" ],
     [ "ListInfoMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1ListInfoMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1ListInfoMode" ],
+    [ "TableRowClickData", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1TableRowClickData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1TableRowClickData" ],
     [ "autoAddCampaignMessage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a03e0c9af4a93cc215e4cd51ad70de182", null ],
     [ "buttonPressCancelled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#aa42e658543ccb9b2be914aa823dc6cce", null ],
     [ "buttonPressConfirmed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#aed5c27e43e831f568df3956e6670e222", null ],
@@ -51,6 +52,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugi
     [ "setPlayerVisibleTimestamp", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a857fdf0ad9cd520348cada8613b7b1d3", null ],
     [ "shouldRemoveIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a23a9f90b32e6b8b41e4e7473f0bb3637", null ],
     [ "storyActionConfirmed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a2350cf73edbb5c079d35b0b2467062e2", null ],
+    [ "tableRowClicked", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#ae83ff2ab75100a2d112067c074369ef2", null ],
     [ "LIST_ITEM_TEXT_WIDTH", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#aa0d93aa9f53a1dc60adeb04d85f22031", null ],
     [ "NEW_DAYS", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#ab7ad313f84ad732a5769392c31a9bf0e", null ]
 ];

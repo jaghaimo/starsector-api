@@ -1,0 +1,8 @@
+var enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_1_1Stage =
+[
+    [ "HYPERFIELD_OPTIMIZATION", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_1_1Stage.html#a9a50a543eef7f966f7435a3dc3a23c84", null ],
+    [ "SLIPSTREAM_DETECTION", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_1_1Stage.html#a77a74d6f1366f395dc71c8dfab8e62ae", null ],
+    [ "SLIPSTREAM_NAVIGATION", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_1_1Stage.html#a0cf074ef9a3d7bfc9c8455ae534489b6", null ],
+    [ "START", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_1_1Stage.html#a16275c6d37398bfecd9544cd9e36740e", null ],
+    [ "TOPOGRAPHIC_DATA", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_1_1Stage.html#ae8a3471aa068b477264ed075e56217e9", null ]
+];

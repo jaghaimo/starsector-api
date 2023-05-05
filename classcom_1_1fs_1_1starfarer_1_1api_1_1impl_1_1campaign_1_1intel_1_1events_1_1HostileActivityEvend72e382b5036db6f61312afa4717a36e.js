@@ -1,0 +1,8 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEvend72e382b5036db6f61312afa4717a36e =
+[
+    [ "factorData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEvend72e382b5036db6f61312afa4717a36e.html#a33c912758db77e101b95877ce4b996ba", null ],
+    [ "maxMag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEvend72e382b5036db6f61312afa4717a36e.html#a4383e980fe27b869cd4cb7537bc7a543", null ],
+    [ "sortMag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEvend72e382b5036db6f61312afa4717a36e.html#a052c6a87030c2657a19420bb2d697729", null ],
+    [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEvend72e382b5036db6f61312afa4717a36e.html#a3ee0fc196646657c1ca4fbd1708e2a24", null ],
+    [ "totalMag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEvend72e382b5036db6f61312afa4717a36e.html#aa61c5968d71cbdf34a46d00d16629c8b", null ]
+];

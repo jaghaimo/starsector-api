@@ -24,6 +24,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DebugFlags =
     [ "RAID_DEBUG", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DebugFlags.html#a4eb50325f5b8a0784efc1e4087ef7576", null ],
     [ "SEND_UPDATES_WHEN_NO_COMM", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DebugFlags.html#a3ba9a42ccf447a2ca466c13127556ae8", null ],
     [ "SLIPSTREAM_DEBUG", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DebugFlags.html#a8b4c992d57f4b2f685a8c814004b4f7d", null ],
+    [ "USE_SLIPSTREAM_VISIBILITY_IN_DEBUG_MODE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DebugFlags.html#a58e595989d728c7d85c4c63624df3e47", null ],
     [ "WEAPONS_HAVE_COST", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DebugFlags.html#a725ee48f8d0e3fc6951d34fe3f74c761", null ],
     [ "WITH_HYPER_STATION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DebugFlags.html#af1618a96e98caa578c5676025058263c", null ]
 ];

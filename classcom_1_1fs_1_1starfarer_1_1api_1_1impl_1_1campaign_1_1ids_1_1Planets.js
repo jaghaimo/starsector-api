@@ -1,6 +1,11 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets =
 [
     [ "ARID", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html#ac309e15556c2c576ed0cccc20f0356d1", null ],
+    [ "BARREN", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html#a13d72e9f95ea6d9f1729fde44e57deff", null ],
+    [ "BARREN2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html#a4d855cf25e33d67bdfb65b13bee47cb5", null ],
+    [ "BARREN3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html#ab225218ed61525aa28144a9d0a21ae38", null ],
+    [ "BARREN_CASTIRON", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html#abf5d5be0f6b7cf43c3fe295be8bdd950", null ],
+    [ "BARREN_VENUSLIKE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html#a1a2ef5decf4379dabf065ddb22666402", null ],
     [ "CAT_HAB1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html#a5c353934186bd3880ad63b33ea1fb3f1", null ],
     [ "CAT_HAB2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html#af73b0495d24b0ceeee464fd0cb0e0447", null ],
     [ "CAT_HAB3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html#a11297075902ec1cd42914f82df0b16bb", null ],

@@ -21,7 +21,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerM
     [ "getOfficer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a60ff5eee9c9b6a5c76b7597318fa9f5a", null ],
     [ "getOfficerDuration", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a3506708714adf135f166f7bc3a8f3592", null ],
     [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a523b89bc987b726dc3f865ed77397620", null ],
-    [ "pickPortrait", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a623ad6da2c23a34310d6a3d6d3a4242e", null ],
+    [ "pickPortraitPreferNonDuplicate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a568549c5c938188c8a1d709c30d10fc7", null ],
     [ "pickSkill", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a2f023d2ecdbc1079efa64355fb02a70c", null ],
     [ "pruneFromRemovedMarkets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#a737aeaf993141a52093c3344b9115707", null ],
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#ae8ff755c1d57a304c5aa6f679ab6446c", null ],

@@ -10,6 +10,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPl
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html#a048c7c83a33448a8e7b9037d1eecebfe", null ],
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html#a8e05a0c1e6433c9e4ce6a18af4dd581f", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html#ae1939d90e1d22813226bf698f39e70ee", null ],
+    [ "setGlowColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html#aa04fa7783524dd9dcadb3a3e43bd84b1", null ],
+    [ "setLightColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html#a971d891ae34f8f616035eae55c58ad1e", null ],
     [ "flicker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html#a25ad05dbc38fcc229dbf29b46d8b71f9", null ],
     [ "glow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html#a5b9f356bd90310fd14b2eeaf9184ec2f", null ],
     [ "GLOW_COLOR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html#a203c63540cddb8e8238d4e8eb51e96ad", null ],

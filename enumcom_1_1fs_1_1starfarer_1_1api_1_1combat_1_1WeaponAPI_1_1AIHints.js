@@ -30,5 +30,6 @@ var enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1AIHints =
     [ "SHOW_IN_CODEX", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1AIHints.html#a76a95e8ff5126319b49fd8935f31e819", null ],
     [ "STRIKE", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1AIHints.html#ab9d381a126a1638dcc7254018c18ccaf", null ],
     [ "SYSTEM", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1AIHints.html#a0a5bef489e2f3c3bb6691e1c4267fe92", null ],
+    [ "USE_LESS_VS_SHIELDS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1AIHints.html#a84dc739b90bd1041b62463882968a02f", null ],
     [ "USE_VS_FRIGATES", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI_1_1AIHints.html#a935eb70c670cb1d342524870a04ff0ae", null ]
 ];

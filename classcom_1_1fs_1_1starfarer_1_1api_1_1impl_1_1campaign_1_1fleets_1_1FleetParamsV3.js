@@ -1,6 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3 =
 [
     [ "FleetParamsV3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a6893b78eff894cdc0afdfaade6c2303a", null ],
+    [ "FleetParamsV3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a130124940cf72924d1e4e7a4ac00e687", null ],
     [ "FleetParamsV3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a520aa42c56275bb6cd258edd090ca633", null ],
     [ "FleetParamsV3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#af777283ce44e823bf161552a96a405ad", null ],
     [ "getTotalPts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a7dc4964bc3d2ffcad87c3166e35b3a35", null ],
@@ -30,6 +31,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetPar
     [ "linerPts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a52fdbafaa17ac65acc3431b2f1c58292", null ],
     [ "locInHyper", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a5ca7365ef420e3dd3824bfa64e476f4a", null ],
     [ "maxNumShips", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a7a75639a6cdb731780832c8019a57c35", null ],
+    [ "maxOfficersToAdd", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a3d6ac63476ec940c62fb0a6de9114933", null ],
     [ "maxShipSize", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a205e98fa11056caf8f60b56dfe2528ab", null ],
     [ "minShipSize", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a51599592844bba70f59786e8d035b67b", null ],
     [ "mode", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#aaea20ecec55c4c6a62edf82e4260bb0d", null ],

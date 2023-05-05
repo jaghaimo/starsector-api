@@ -5,6 +5,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGh
     [ "checkSensorBursts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostManager.html#ac16e61a4c0677437393441f350a0f6d6", null ],
     [ "getGhostFor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostManager.html#aab5f018da4a2723f264df1d76cb287b5", null ],
     [ "getGhostManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostManager.html#a005940a78a0203a2ff811f2ca67494ea", null ],
+    [ "getGhosts", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostManager.html#a417d5b82583a9d25b7840d1b859f76c2", null ],
     [ "getRandom", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostManager.html#a246b708c4a99f75993bb77bad2dda1ce", null ],
     [ "hasGhostOfClass", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostManager.html#a519319a9a7e8219c5cf781a146717a7d", null ],
     [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostManager.html#aa412f5ac0e9ac934b7f3045b947ed8c4", null ],

@@ -1,0 +1,9 @@
+<map id="com.fs.starfarer.api.impl.campaign.rulecmd.HA_CMD.StationKingScript" name="com.fs.starfarer.api.impl.campaign.rulecmd.HA_CMD.StationKingScript">
+<area shape="rect" id="node1" title=" " alt="" coords="300,169,571,211"/>
+<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="45,5,212,47"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html" title=" " alt="" coords="27,71,230,112"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1EconomyTickListener.html" title=" " alt="" coords="5,136,252,177"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="5,201,252,243"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CurrentLocationChangedListener.html" title=" " alt="" coords="5,267,252,308"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyPlayerHostileActListener.html" title=" " alt="" coords="5,332,252,373"/>
+</map>

@@ -259,6 +259,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_
     [ "triggerSetEntityFlagPermanent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#af5d4f178bc1007784c2a3e7b478c047a", null ],
     [ "triggerSetEntityToPickedJumpPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a0f429836246a2e5a72e77f90f4ccd582", null ],
     [ "triggerSetFleetAlwaysPursue", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a60db410bcd81071269c8260222da04ca", null ],
+    [ "triggerSetFleetCombatFleetPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a20286251e221e6455cc128c73207a885", null ],
     [ "triggerSetFleetCommander", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#abe9a635dcd5375f7ce1f4fac9034d469", null ],
     [ "triggerSetFleetComposition", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a030007ca20d7348e07f0158c23a7abb8", null ],
     [ "triggerSetFleetCompositionNoSupportShips", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a4d89cbe40d352a807e17f334f2aa1d48", null ],

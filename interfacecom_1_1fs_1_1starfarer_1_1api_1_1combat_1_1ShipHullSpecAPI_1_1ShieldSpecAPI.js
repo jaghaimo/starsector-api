@@ -10,5 +10,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1Shiel
     [ "getRadius", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a547fd838265d338b9bf69b438eee43a2", null ],
     [ "getRingColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a66ecc67dd53189a512c6b5697c37ce46", null ],
     [ "getType", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a94d84bf05a209eceb91828050c5a71fc", null ],
-    [ "getUpkeepCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a59b1aa485a479cb5a3fce18f739cbbb2", null ]
+    [ "getUpkeepCost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a59b1aa485a479cb5a3fce18f739cbbb2", null ],
+    [ "setInnerColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#aebb1912b6167d781ab1fb66588f5638c", null ],
+    [ "setRingColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI_1_1ShieldSpecAPI.html#a8761767be58be44dbdfca9f8a7598eaf", null ]
 ];

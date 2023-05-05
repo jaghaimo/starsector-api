@@ -16,6 +16,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1Bluepr
     [ "notifyEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a474b7ed04402854e4078451776da60d7", null ],
     [ "pickItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#afab9e66dd5d1f484a83dae5b8c5ce13f", null ],
     [ "reportAboutToShowLootToPlayer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a9028305bb3df8afba7810f2d8dd26e5a", null ],
+    [ "reportSpecialCargoGainedFromRecoveredDerelict", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#a5b364c92f1b6d203889affcdd35c5941", null ],
     [ "updateInteractionDataImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#ac6ea71720dbaaf87d6d45cf33d5fd3de", null ],
     [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#ad76f52293c5a27faf6473e8acf55da7d", null ],
     [ "FREQ_FIGHTER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BlueprintIntel.html#abca39d5ee1029b8a6739274ef4a1b898", null ],

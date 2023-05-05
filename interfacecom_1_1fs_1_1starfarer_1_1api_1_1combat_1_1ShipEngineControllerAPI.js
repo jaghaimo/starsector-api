@@ -15,6 +15,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI 
     [ "getFlameoutFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#ab3f6c82751df985ffcfb43053a1a3f50", null ],
     [ "getMaxSpeedWithoutBoost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a0f932d6b15929f8a6d8e36122a8c685d", null ],
     [ "getShipEngines", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#abc393b136f575b45eb73ed4efdbcbe04", null ],
+    [ "getTurnDeceleration", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a99cfcdd4c1b508af3ac2e598041099d4", null ],
     [ "isAccelerating", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a00f87df0c0f48c4f72460a297222ecc5", null ],
     [ "isAcceleratingBackwards", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a43f21c5f9657d123986a4bc4a9c57791", null ],
     [ "isDecelerating", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#ade6bbd748c1c6e513653611f7f8dbc12", null ],

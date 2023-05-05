@@ -8,5 +8,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1
     [ "getMaxDifficulty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnantPlus.html#a0a41b304db6b7ee6bb8a3c9761c9fa0c", null ],
     [ "getMinDifficulty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnantPlus.html#af6d5c339093da7101f8e52645a93603c", null ],
     [ "isRepeatableGlobally", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnantPlus.html#a2f9586d06c10d46f3af9979eeafe5598", null ],
+    [ "notifyAccepted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnantPlus.html#ad7b37612a70f21bba7abfe979facc711", null ],
+    [ "ACCEPTED_KEY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnantPlus.html#a4db75191ffbfc38fc1c132fd34664c15", null ],
     [ "PROB_IN_SYSTEM_WITH_BASE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CBRemnantPlus.html#a487ceb308e8c2970ef4bba73570933fe", null ]
 ];

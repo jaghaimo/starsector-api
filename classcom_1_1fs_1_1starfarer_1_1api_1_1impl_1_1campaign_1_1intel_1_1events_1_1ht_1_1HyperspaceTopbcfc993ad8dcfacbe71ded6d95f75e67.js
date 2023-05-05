@@ -1,0 +1,5 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopbcfc993ad8dcfacbe71ded6d95f75e67 =
+[
+    [ "RecentTopographyReadings", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopbcfc993ad8dcfacbe71ded6d95f75e67.html#a8119c8697b65b19f9de6e619a7598ab2", null ],
+    [ "loc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopbcfc993ad8dcfacbe71ded6d95f75e67.html#a9656826676cd9f8cea58d8e22b696742", null ]
+];

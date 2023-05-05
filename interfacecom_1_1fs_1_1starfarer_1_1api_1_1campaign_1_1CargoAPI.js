@@ -47,10 +47,12 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI =
     [ "initPartialsIfNeeded", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#aa82c93ed8c56814180cbb84a6a2665ff", null ],
     [ "isEmpty", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a8e90450940b0ae7c46450a04219d0959", null ],
     [ "isFreeTransfer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a7f617c7e8673feb3c37e18cac00d000c", null ],
+    [ "isUnlimitedStacks", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#addfa03aac9c1d3c444cf4dcb256c87fc", null ],
     [ "removeAll", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a31160aeb2243359154256fda3bfea2ed", null ],
     [ "removeCommodity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a89424bab7f924dde156bdbfbbd33a603", null ],
     [ "removeCrew", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#afa92a63e50e7d20d446add1070236422", null ],
     [ "removeEmptyStacks", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#af32194aa5868e41be9aa544594057a72", null ],
+    [ "removeFighters", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a002271ce20c6852c6e9a573646d36c3b", null ],
     [ "removeFuel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a1c7d0543349b55ad585b69c45eba887d", null ],
     [ "removeItems", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a58b502616e01d21d1c1e105baa5df8eb", null ],
     [ "removeMarines", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a3e75c9e343998a2e05bd3bf38ba388a5", null ],
@@ -59,6 +61,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI =
     [ "removeWeapons", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a6c2ce2f4b137e546755c38916ac7e017", null ],
     [ "setFreeTransfer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a3888c06b4c627ab599e17504c29074b0", null ],
     [ "setOrigSource", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#aab38ba53038faecd69e8b8a2c76454af", null ],
+    [ "setUnlimitedStacks", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#aa249b6aee91300e5dc670803ebdad96e", null ],
     [ "sort", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a794c304a1bd710f6fd3ee16e39aecd6b", null ],
     [ "updateSpaceUsed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a0340b7b03b920c48a188d3387962820a", null ]
 ];

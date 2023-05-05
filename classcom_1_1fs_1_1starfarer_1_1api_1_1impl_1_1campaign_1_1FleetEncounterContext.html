@@ -195,6 +195,12 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>adjustPlayerReputa
 <tr class="memitem:a238b22364359664b10ce834e3fe98624"><td class="memItemLeft" align="right" valign="top"><a id="a238b22364359664b10ce834e3fe98624"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setTextPanelForXPGain</b> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html">TextPanelAPI</a> textPanelForXPGain)</td></tr>
 <tr class="separator:a238b22364359664b10ce834e3fe98624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54737242ac099e9dc420bab76306946b"><td class="memItemLeft" align="right" valign="top"><a id="a54737242ac099e9dc420bab76306946b"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isNoHarryBecauseOfStation</b> ()</td></tr>
+<tr class="separator:a54737242ac099e9dc420bab76306946b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19912c0a411dad78f4c5c3d6c3bf327a"><td class="memItemLeft" align="right" valign="top"><a id="a19912c0a411dad78f4c5c3d6c3bf327a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setNoHarryBecauseOfStation</b> (boolean noHarryBecauseOfStation)</td></tr>
+<tr class="separator:a19912c0a411dad78f4c5c3d6c3bf327a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a494d964ac4f5c92fa01971e52f51d655"><td class="memItemLeft" align="right" valign="top"><a id="a494d964ac4f5c92fa01971e52f51d655"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>applyAfterBattleEffectsIfThereWasABattle</b> ()</td></tr>
 <tr class="separator:a494d964ac4f5c92fa01971e52f51d655"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -481,9 +487,18 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>isAutoresolve</b> 
 <tr class="memitem:a75c9efd6252ae40170a6b2b215806cbd"><td class="memItemLeft" align="right" valign="top"><a id="a75c9efd6252ae40170a6b2b215806cbd"></a>
 boolean&#160;</td><td class="memItemRight" valign="bottom"><b>alreadyAdjustedRep</b> = false</td></tr>
 <tr class="separator:a75c9efd6252ae40170a6b2b215806cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd1761f41cd1c8d9c9d9e16dcd77fe2e"><td class="memItemLeft" align="right" valign="top"><a id="abd1761f41cd1c8d9c9d9e16dcd77fe2e"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>noHarryBecauseOfStation</b> = false</td></tr>
+<tr class="separator:abd1761f41cd1c8d9c9d9e16dcd77fe2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79bca736338facf7c468e42312c94197"><td class="memItemLeft" align="right" valign="top"><a id="a79bca736338facf7c468e42312c94197"></a>
 <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetEncounterContextPlugin_1_1EngagementOutcome.html">EngagementOutcome</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lastOutcome</b> = null</td></tr>
 <tr class="separator:a79bca736338facf7c468e42312c94197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a4651bd161abe00bb31c825d54ccdab"><td class="memItemLeft" align="right" valign="top"><a id="a2a4651bd161abe00bb31c825d54ccdab"></a>
+List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>recoverableShips</b> = new ArrayList&lt;<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a>&gt;()</td></tr>
+<tr class="separator:a2a4651bd161abe00bb31c825d54ccdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7e7f3ed853d5a385d12885f4d59fb36"><td class="memItemLeft" align="right" valign="top"><a id="ac7e7f3ed853d5a385d12885f4d59fb36"></a>
+List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>storyRecoverableShips</b> = new ArrayList&lt;<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a>&gt;()</td></tr>
+<tr class="separator:ac7e7f3ed853d5a385d12885f4d59fb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33eddabaaa90178365af579aabd8ffb5"><td class="memItemLeft" align="right" valign="top"><a id="a33eddabaaa90178365af579aabd8ffb5"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>playerFPHullDamageToEnemies</b> = 0f</td></tr>
 <tr class="separator:a33eddabaaa90178365af579aabd8ffb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -517,12 +532,6 @@ boolean&#160;</td><td class="memItemRight" valign="bottom"><b>computedDifficulty
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a2a4651bd161abe00bb31c825d54ccdab"><td class="memItemLeft" align="right" valign="top"><a id="a2a4651bd161abe00bb31c825d54ccdab"></a>
-List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>recoverableShips</b> = new ArrayList&lt;<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a>&gt;()</td></tr>
-<tr class="separator:a2a4651bd161abe00bb31c825d54ccdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7e7f3ed853d5a385d12885f4d59fb36"><td class="memItemLeft" align="right" valign="top"><a id="ac7e7f3ed853d5a385d12885f4d59fb36"></a>
-List&lt; <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>storyRecoverableShips</b> = new ArrayList&lt;<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html">FleetMemberAPI</a>&gt;()</td></tr>
-<tr class="separator:ac7e7f3ed853d5a385d12885f4d59fb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26ba73b23efa2066adfd995ed0f4dd25"><td class="memItemLeft" align="right" valign="top"><a id="a26ba73b23efa2066adfd995ed0f4dd25"></a>
 Random&#160;</td><td class="memItemRight" valign="bottom"><b>salvageRandom</b> = null</td></tr>
 <tr class="separator:a26ba73b23efa2066adfd995ed0f4dd25"><td class="memSeparator" colspan="2">&#160;</td></tr>

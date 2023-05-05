@@ -32,7 +32,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1Tutori
     [ "pick", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a7a885926256677e6bce9fe39f21ba28c", null ],
     [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a162bcc658bde9529c47df301d1117034", null ],
     [ "saveNag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a268cbc580c52d25b2261bf328bff044f", null ],
-    [ "updateStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a5dad389d4716f73b4ebe7edee9d08ea2", null ],
+    [ "updateStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a3c76aa6efc8132ad813d4ee216309357", null ],
     [ "ancyra", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a4be406101525057753753a2fc1093ea2", null ],
     [ "dataContact", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#acf5b21ca763ea057b582d8ecec28a09f", null ],
     [ "derinkuyu", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a8d9e6d89626e49ae0f1c056296342812", null ],
