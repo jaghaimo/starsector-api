@@ -21,15 +21,15 @@ public class HTPoints {
 	public static int SCAVENGER_MAX = 10;
 	
 	// various ASB scans
-	public static int SCAN_BLACK_HOLE_LONG_RANGE = 10;
-	public static int SCAN_BLACK_HOLE_SHORT_RANGE = 30;
+	public static int SCAN_BLACK_HOLE_LONG_RANGE = 15;
+	public static int SCAN_BLACK_HOLE_SHORT_RANGE = 40;
 	public static int SCAN_ION_STORM = 50;
 	public static int SCAN_NEBULA = 15;
 	public static int SCAN_BINARY = 20;
 	public static int SCAN_TRINARY = 30;
 	public static int SCAN_GAS_GIANT = 5;
 	public static int SCAN_NEUTRON_STAR = 10;
-	public static int SCAN_PULSAR_BEAM = 15;
+	public static int SCAN_PULSAR_BEAM = 25;
 	
 	// from data found as a salvage special, see TopographicDataSpecial
 	public static int LOW_MIN = 10;

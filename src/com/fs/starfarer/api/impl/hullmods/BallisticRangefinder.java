@@ -91,7 +91,11 @@ public class BallisticRangefinder extends BaseHullMod {
 //			if (weapon.getSlot() == null || weapon.getSlot().getWeaponType() != WeaponType.BALLISTIC) {
 //				return 0f;
 //			}
-			if (weapon.getType() != WeaponType.BALLISTIC && weapon.getType() != WeaponType.HYBRID) {
+			if (weapon.getSpec() == null) {
+				return 0f;
+			}
+			if (weapon.getSpec().getMountType() != WeaponType.BALLISTIC && 
+					weapon.getSpec().getMountType() != WeaponType.HYBRID) {
 				return 0f;
 			}
 			if (weapon.hasAIHint(AIHints.PD)) {

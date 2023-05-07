@@ -8,7 +8,6 @@ import org.apache.log4j.Logger;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
@@ -247,11 +246,11 @@ public class FactionHostilityIntel extends BaseIntelPlugin {
 //		info.addSkillPanel(person, opad);
 //		info.addSkillPanelOneColumn(person, opad);
 		
-		PlanetAPI jangala = (PlanetAPI) Global.getSector().getEntityById("jangala");
-		info.showPlanetInfo(jangala, opad);
-		info.showPlanetInfo(jangala, 100, 100, true, opad);
-		info.showPlanetInfo(jangala, 50, 50, false, opad);
-		info.showPlanetInfo(jangala, width, width, true, opad);
+//		PlanetAPI jangala = (PlanetAPI) Global.getSector().getEntityById("jangala");
+//		info.showPlanetInfo(jangala, opad);
+//		info.showPlanetInfo(jangala, 100, 100, true, opad);
+//		info.showPlanetInfo(jangala, 50, 50, false, opad);
+//		info.showPlanetInfo(jangala, width, width, true, opad);
 	}
 	
 //    @Override

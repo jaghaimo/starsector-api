@@ -83,6 +83,10 @@ public class ANewHope extends HubMissionWithSearch {
         triggerOrderFleetInterceptPlayer();
         triggerFleetMakeImportant(null, Stage.GO_TO_VOLTURN);
         endTrigger();
+        
+        beginStageTrigger(Stage.COMPLETED);
+		triggerSetGlobalMemoryValue("$anh_missionCompleted", true);
+		endTrigger();
 		
 		return true;
 	}

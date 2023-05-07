@@ -498,7 +498,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 //		}
 		//if (stageId == Stage.START) return null;
 	
-		if (EnumSet.of(Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4, Stage.MINOR_EVENT, 
+		if (EnumSet.of(Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4, 
 				Stage.INCREASED_DEFENSES, Stage.START).contains(esd.id)) {
 			return Global.getSettings().getSpriteName("events", "hostile_activity_" + ((Stage)esd.id).name());
 		}

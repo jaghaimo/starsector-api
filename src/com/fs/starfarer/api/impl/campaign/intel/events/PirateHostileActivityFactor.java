@@ -239,7 +239,8 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 		
 		for (StarSystemAPI system : Misc.getPlayerSystems(false)) {
 			float mag = getEffectMagnitude(system);
-			if (mag < 0.2f) {
+			if (mag < 0.2f && stage.id != Stage.MINOR_EVENT) {
+			//if (mag < 0.2f) {
 				continue;
 			}
 			picker.add(system, mag * mag);

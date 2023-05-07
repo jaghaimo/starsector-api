@@ -61,7 +61,9 @@ public class MiscPilgrimFleetCreator extends BaseMiscFleetCreatorPlugin {
 	@Override
 	public MiscRouteData createRouteParams(MiscFleetRouteManager manager, Random random) {
 		MarketAPI from = pickSourceMarket(manager);
+		if (from == null) return null;
 		SectorEntityToken to = pickDestShrine(manager, from);
+		if (to == null) return null;
 		
 //		from = Global.getSector().getEconomy().getMarket("chalcedon");
 //		to = Global.getSector().getEconomy().getMarket("eochu_bres").getPrimaryEntity();

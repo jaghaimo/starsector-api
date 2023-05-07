@@ -24,7 +24,7 @@ public class IncreasedMaintenance extends BaseHullMod {
 	public String getDescriptionParam(int index, HullSize hullSize, ShipAPI ship) {
 		float effect = 1f;
 		if (ship != null) effect = ship.getMutableStats().getDynamic().getValue(Stats.DMOD_EFFECT_MULT);
-		if (index == 0) return "" + (int)((1f + (SUPPLY_USE_MULT - 1f) * effect - 1f) * 100f) + "%";
+		if (index == 0) return "" + (int)Math.round((1f + (SUPPLY_USE_MULT - 1f) * effect - 1f) * 100f) + "%";
 		if (index == 1) return "" + (int)Math.round(CREW_PERCENT * effect) + "%";
 		if (index == 2) return "" + Math.round(MAX_CR_PENALTY * 100f * effect) + "%";
 		if (index >= 3) return CompromisedStructure.getCostDescParam(index, 3);
