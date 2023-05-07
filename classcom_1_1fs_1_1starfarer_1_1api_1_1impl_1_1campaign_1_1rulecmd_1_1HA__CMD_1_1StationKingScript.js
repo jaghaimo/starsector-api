@@ -1,30 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript =
 [
-    [ "StationKingScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a553edb493a624a2a1de5e4c5aa182311", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a90ad3637c60b6ce770a6ee82d335a744", null ],
-    [ "createTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a5486d90deaca3e86cc98ddbdaa30ca54", null ],
-    [ "endDeal", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a6a465201633286995a0cc49b0a16b6bb", null ],
-    [ "getTooltipWidth", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#ac6f0ee0aca40ec1b23f805cc434e54c1", null ],
     [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a50658d0b46c131028201e6f047b321c7", null ],
-    [ "isTooltipExpandable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a3477cac614ef5fdff10b3ea48a42e7e2", null ],
-    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a17792424a6b7cda6298980a6473e66a2", null ],
     [ "reportBattleOccurred", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a00c741974cf9719a980bb7aee4af1e42", null ],
-    [ "reportCurrentLocationChanged", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a61dfa25a4547c681833bc6872ae7cbd6", null ],
-    [ "reportEconomyMonthEnd", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#aac8584b33c7e61db4d2d12f1b4607385", null ],
-    [ "reportEconomyTick", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#ae666c3af457c048af2594772f9b3848d", null ],
-    [ "reportFleetDespawnedToListener", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a2ef5e8ab2d48c9a76bc28fb90ce8ab23", null ],
-    [ "reportRaidForValuablesFinishedBeforeCargoShown", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a45edcfa3749fdcab96c2c4ecc0c624bf", null ],
-    [ "reportRaidToDisruptFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a72b95f6191fa73bc0b159080e355eefa", null ],
-    [ "reportSaturationBombardmentFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a01bfea04c7e7d2652935c0bc70f77f46", null ],
-    [ "reportTacticalBombardmentFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a86c4a7cfcd627f32eeb57e6afe1b1ebe", null ],
-    [ "resetMercCheckDelay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a293b0cd83a9632f291c6e6c16c851c97", null ],
-    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a89b1cb28c9d01842f5fa9f5b1a6a3a74", null ],
-    [ "setDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a3f96f987381e03e0b940be7591d6dc8f", null ],
-    [ "spawnMerc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a0a401c033586b1393196227a60a2af0e", null ],
-    [ "done", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a26fa6216b96ad1e63de100cfef0001f0", null ],
-    [ "intel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a8e0594c43aff07670821d9d3d39e3f32", null ],
-    [ "mercProbMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a07a4b24ae44fa9bc7ab51612c50b6916", null ],
-    [ "random", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a8a25f9f2194895f297f78b8e587cb89e", null ],
-    [ "spawnMerc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#ae19bcf68041da57da001cbf9925980a9", null ],
-    [ "untilMercCheck", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a078719171b9a91da579f3c9973e121fc", null ]
+    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a89b1cb28c9d01842f5fa9f5b1a6a3a74", null ]
 ];

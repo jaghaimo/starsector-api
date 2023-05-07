@@ -1,16 +1,16 @@
 <map id="com.fs.starfarer.api.impl.campaign.missions.hub.MissionTrigger.TriggerActionContext" name="com.fs.starfarer.api.impl.campaign.missions.hub.MissionTrigger.TriggerActionContext">
-<area shape="rect" id="node1" title=" " alt="" coords="1167,358,1467,399"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html" title=" " alt="" coords="280,22,475,63"/>
-<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html" title=" " alt="" coords="801,74,995,115"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html" title=" " alt="" coords="801,298,995,339"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,245,475,286"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="801,139,995,181"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,358,231,399"/>
-<area shape="rect" id="node11" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="499,358,724,399"/>
-<area shape="rect" id="node14" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html" title=" " alt="" coords="512,417,711,458"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="280,139,475,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="863,489,933,516"/>
-<area shape="rect" id="node10" title=" " alt="" coords="824,540,972,567"/>
-<area shape="rect" id="node12" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html" title=" " alt="" coords="748,591,1048,633"/>
-<area shape="rect" id="node13" title=" " alt="" coords="785,657,1011,698"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1167,347,1467,387"/>
+<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html" title=" " alt="" coords="748,5,1048,45"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="801,225,995,265"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="280,159,475,199"/>
+<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html" title=" " alt="" coords="801,69,995,109"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,284,231,324"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html" title=" " alt="" coords="512,284,711,324"/>
+<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="499,344,724,384"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="280,225,475,265"/>
+<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html" title=" " alt="" coords="801,477,995,517"/>
+<area shape="rect" id="node11" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html" title=" " alt="" coords="280,435,475,475"/>
+<area shape="rect" id="node12" title=" " alt="" coords="863,542,933,567"/>
+<area shape="rect" id="node13" title=" " alt="" coords="824,591,972,617"/>
+<area shape="rect" id="node14" title=" " alt="" coords="785,641,1011,681"/>
 </map>

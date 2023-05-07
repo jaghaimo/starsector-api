@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer_1_1EnergyBoltCohererRangeModifier =
-[
-    [ "EnergyBoltCohererRangeModifier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer_1_1EnergyBoltCohererRangeModifier.html#a308bb4a6018fcf0845cf77e8e148d26a", null ],
-    [ "getWeaponBaseRangeFlatMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer_1_1EnergyBoltCohererRangeModifier.html#ad10cafe6e581bd04933dfb39f12b438d", null ],
-    [ "getWeaponBaseRangeMultMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer_1_1EnergyBoltCohererRangeModifier.html#a68c0cc22e19e24a408622d727a45669f", null ],
-    [ "getWeaponBaseRangePercentMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1EnergyBoltCoherer_1_1EnergyBoltCohererRangeModifier.html#a704c85d6be8d9d9dd1d3aaba95defe3a", null ]
-];

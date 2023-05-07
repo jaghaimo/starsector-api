@@ -1,10 +1,10 @@
 <map id="com.fs.starfarer.api.impl.campaign.skills.CommRelayScript" name="com.fs.starfarer.api.impl.campaign.skills.CommRelayScript">
-<area shape="rect" id="node1" title=" " alt="" coords="817,103,1072,144"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="471,5,674,47"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="236,5,417,47"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="5,5,187,47"/>
-<area shape="rect" id="node5" title=" " alt="" coords="467,71,679,112"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="482,136,663,177"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="236,136,417,177"/>
-<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html" title=" " alt="" coords="482,201,663,243"/>
+<area shape="rect" id="node1" title=" " alt="" coords="817,101,1072,141"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="471,5,674,45"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="236,5,417,45"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="5,5,187,45"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html" title=" " alt="" coords="482,69,663,109"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="482,133,663,173"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="236,133,417,173"/>
+<area shape="rect" id="node8" title=" " alt="" coords="467,197,679,237"/>
 </map>

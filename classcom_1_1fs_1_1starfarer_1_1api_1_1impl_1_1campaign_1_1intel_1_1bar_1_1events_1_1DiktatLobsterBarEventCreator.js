@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DiktatLobsterBarEventCreator =
-[
-    [ "createBarEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DiktatLobsterBarEventCreator.html#a60ded3f10f639a3e8c9463b12113d0d4", null ],
-    [ "getBarEventFrequencyWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DiktatLobsterBarEventCreator.html#addb9a26163b091b2a330a44f7dff37ab", null ]
-];

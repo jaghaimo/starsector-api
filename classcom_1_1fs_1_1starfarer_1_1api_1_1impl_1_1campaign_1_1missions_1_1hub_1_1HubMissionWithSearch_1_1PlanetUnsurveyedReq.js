@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnsurveyedReq =
-[
-    [ "PlanetUnsurveyedReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnsurveyedReq.html#a216d2adc0d60a60c61484b1cd86e200b", null ],
-    [ "PlanetUnsurveyedReq", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnsurveyedReq.html#a4f4dc8393009302f7e89b6cac079d005", null ],
-    [ "planetMatchesRequirement", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnsurveyedReq.html#a7a2dc34d62d42b4fbed6122bfdc9b53b", null ],
-    [ "negate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetUnsurveyedReq.html#a079841aa8f3f8daf1a9d95f7ab16117c", null ]
-];

@@ -1,25 +1,4 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket =
 [
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#ae02aebdfacb83f05a571d1ccc75e4502", null ],
-    [ "apply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a32f9984ebb12a3cc98bf4e0d228712ae", null ],
-    [ "createTooltipAfterDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a469d7f8c8af80517f33077c757338360", null ],
-    [ "get", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a2fba742a9b0e047768224a3441e37739", null ],
-    [ "getAccessBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a3450a23fb732955f7119acf57bfd63e3", null ],
-    [ "getDaysActive", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a0139976a9cbc62ad27faf63ee6c6f8e1", null ],
-    [ "getImmigrationBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#ab35df2157388a2a7a2addd3d6e416015", null ],
-    [ "getStabilityPenalty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a32b233451f927e7c68202c23f309747f", null ],
-    [ "isTransient", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a461028e59ff4733b52efc3f024b60505", null ],
-    [ "modifyIncoming", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a5030f0468b9ad1bd66b970859715df85", null ],
-    [ "runWhilePaused", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a964302477ca7d16188e053b39abbb254", null ],
-    [ "setDaysActive", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a9a1e8799a37c0ff67ed950b44478763d", null ],
-    [ "unapply", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#ab0f347f73c34a0fc8d8407f4d7b5869d", null ],
-    [ "daysActive", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a5f0f573fe942dc7fbd5c304921fcda9b", null ],
-    [ "MAX_ACCESS_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#ac91f40311ec8c530daa45c7cc1d91be8", null ],
-    [ "MAX_DAYS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a0f2b9367231e6faf9e9cd9013d23b5b1", null ],
-    [ "MAX_GROWTH", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a6439d2d6f73d4f9e77c2b12aed69da33", null ],
-    [ "MAX_STABILITY_PENALTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#adc714589e1cda6c4c667ca63cc0a9e66", null ],
-    [ "MIN_ACCESS_BONUS", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a950677123051ec22b4a5c8fd8703d5aa", null ],
-    [ "MIN_GROWTH", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a27e1d66e2bd4755d7022506d458617a5", null ],
-    [ "MIN_STABILITY_PENALTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#ac134d2b54e86f7aefd2823609611e26b", null ],
-    [ "OFFICER_MERC_PROB_MOD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a0a22064cd77309746f1a657fa5392beb", null ]
+    [ "isTransient", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html#a461028e59ff4733b52efc3f024b60505", null ]
 ];

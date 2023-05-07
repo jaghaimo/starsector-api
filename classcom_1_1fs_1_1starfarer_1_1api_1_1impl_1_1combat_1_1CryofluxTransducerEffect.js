@@ -1,21 +1,5 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect =
 [
-    [ "ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect_1_1ParticleData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect_1_1ParticleData" ],
-    [ "CryofluxTransducerEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a3466e40d5415c7747913ae708296e20e", null ],
-    [ "CryofluxTransducerEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#ad8807b06748e468b72c7843dc516748f", null ],
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a41ceb60031534548dbf11defae544e8d", null ],
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a4d29ffa9463fcea0c88b33d8ae264671", null ],
-    [ "getActiveLayers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#ac5db98f47ee0de4d0ebf973b507244d0", null ],
-    [ "getRenderRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a6bdaf0d7572b019baed60c532f4e99fe", null ],
-    [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a105864a3ceb396cc66e8449f77f310bb", null ],
-    [ "isExpired", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#afb46bbc5b29394755527f4972bbf014d", null ],
-    [ "onFire", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a6ccad67f5eb9ae31e3017f8e306446ef", null ],
-    [ "onHit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a16ddfdf14916bef893bc0b6e31518f8d", null ],
-    [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#aacfa41cb775db3d817d2abf019f27054", null ],
-    [ "baseFacing", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#ae61c42fca65824829f50de134c51fa6e", null ],
-    [ "layers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#add755e81a5c0e05438df658a41a71247", null ],
-    [ "particles", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a7b3ec9a3ee7a7eb674cc831629a593c6", null ],
-    [ "prev", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a2e76cceeacf6b7ee178a35ffba8738d8", null ],
-    [ "proj", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a3a172eac04ef6b93193142fff2f877ff", null ],
-    [ "trails", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a4f071356fbc81072938684fe9cdaec9e", null ]
+    [ "ParticleData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect_1_1ParticleData.html", null ],
+    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html#a4d29ffa9463fcea0c88b33d8ae264671", null ]
 ];

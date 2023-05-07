@@ -1,5 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_1_1HAEFactorDangerData =
-[
-    [ "factor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_1_1HAEFactorDangerData.html#a639ca580f046c2c1683259fcfa18f199", null ],
-    [ "mag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_1_1HAEFactorDangerData.html#ac9693b78829ba57c9585f3a132a625e1", null ]
-];

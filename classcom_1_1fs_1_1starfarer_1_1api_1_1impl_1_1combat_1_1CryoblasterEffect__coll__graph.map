@@ -1,13 +1,13 @@
 <map id="com.fs.starfarer.api.impl.combat.CryoblasterEffect" name="com.fs.starfarer.api.impl.combat.CryoblasterEffect">
-<area shape="rect" id="node1" title=" " alt="" coords="641,284,849,325"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="299,76,536,117"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,47"/>
-<area shape="rect" id="node4" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,71,199,112"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,148,199,189"/>
-<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html" title=" " alt="" coords="327,153,508,195"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html" title=" " alt="" coords="327,219,508,260"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html" title=" " alt="" coords="327,284,508,325"/>
-<area shape="rect" id="node9" title=" " alt="" coords="295,349,540,391"/>
-<area shape="rect" id="node10" title=" " alt="" coords="382,415,453,442"/>
-<area shape="rect" id="node11" title=" " alt="" coords="297,467,538,508"/>
+<area shape="rect" id="node1" title=" " alt="" coords="641,280,849,320"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="299,76,536,116"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,45"/>
+<area shape="rect" id="node4" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,69,199,109"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,145,199,185"/>
+<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html" title=" " alt="" coords="327,152,508,192"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html" title=" " alt="" coords="327,216,508,256"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html" title=" " alt="" coords="327,280,508,320"/>
+<area shape="rect" id="node8" title=" " alt="" coords="297,344,538,384"/>
+<area shape="rect" id="node10" title=" " alt="" coords="382,409,453,434"/>
+<area shape="rect" id="node11" title=" " alt="" coords="295,459,540,499"/>
 </map>

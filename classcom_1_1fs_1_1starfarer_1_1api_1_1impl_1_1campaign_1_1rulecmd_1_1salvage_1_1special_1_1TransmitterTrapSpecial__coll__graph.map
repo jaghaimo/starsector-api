@@ -1,52 +1,52 @@
 <map id="com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial" name="com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TransmitterTrapSpecial">
-<area shape="rect" id="node1" title=" " alt="" coords="3217,449,3580,491"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html" title=" " alt="" coords="1435,299,1797,340"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html" title=" " alt="" coords="894,5,1213,47"/>
-<area shape="rect" id="node4" title=" " alt="" coords="902,71,1205,112"/>
-<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="956,136,1151,177"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="349,355,544,396"/>
-<area shape="rect" id="node19" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="929,1233,1177,1275"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,571,231,612"/>
-<area shape="rect" id="node40" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html" title=" " alt="" coords="954,629,1153,671"/>
-<area shape="rect" id="node50" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="637,571,863,612"/>
-<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="349,129,544,171"/>
-<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html" title=" " alt="" coords="956,265,1151,307"/>
-<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html" title=" " alt="" coords="956,331,1151,372"/>
-<area shape="rect" id="node11" title=" " alt="" coords="1018,527,1089,554"/>
-<area shape="rect" id="node16" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html" title=" " alt="" coords="2396,632,2651,673"/>
-<area shape="rect" id="node18" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html" title=" " alt="" coords="1466,1269,1766,1311"/>
-<area shape="rect" id="node12" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html" title=" " alt="" coords="956,396,1151,437"/>
-<area shape="rect" id="node13" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html" title=" " alt="" coords="956,461,1151,503"/>
-<area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Trans842a2d9cb55d70d2bec9c0dcd12c1019.html" title=" " alt="" coords="2777,517,3140,559"/>
-<area shape="rect" id="node15" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci94e51af396b9f0721ebe1b0e0552adfe.html" title=" " alt="" coords="2364,517,2683,559"/>
-<area shape="rect" id="node17" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html" title=" " alt="" coords="1917,691,2217,732"/>
-<area shape="rect" id="node20" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html" title=" " alt="" coords="330,1233,563,1275"/>
-<area shape="rect" id="node21" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html" title=" " alt="" coords="903,893,1203,935"/>
-<area shape="rect" id="node22" title=" " alt="" coords="902,958,1205,1014"/>
-<area shape="rect" id="node23" title=" " alt="" coords="887,1037,1220,1079"/>
-<area shape="rect" id="node24" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html" title=" " alt="" coords="903,1103,1203,1144"/>
-<area shape="rect" id="node25" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionHub.html" title=" " alt="" coords="903,1168,1203,1209"/>
-<area shape="rect" id="node26" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1TimeLimitData.html" title=" " alt="" coords="903,1299,1203,1340"/>
-<area shape="rect" id="node27" title=" " alt="" coords="361,1657,533,1683"/>
-<area shape="rect" id="node43" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionTrigger.html" title=" " alt="" coords="903,2081,1203,2123"/>
-<area shape="rect" id="node28" title=" " alt="" coords="887,1364,1220,1405"/>
-<area shape="rect" id="node29" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html" title=" " alt="" coords="956,1429,1151,1471"/>
-<area shape="rect" id="node30" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1HubMissionResult.html" title=" " alt="" coords="903,1781,1203,1823"/>
-<area shape="rect" id="node31" title=" " alt="" coords="1001,1847,1105,1874"/>
-<area shape="rect" id="node32" title=" " alt="" coords="1027,1495,1079,1522"/>
-<area shape="rect" id="node33" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersonImportance.html" title=" " alt="" coords="956,1585,1151,1627"/>
-<area shape="rect" id="node34" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FullName_1_1Gender.html" title=" " alt="" coords="954,1651,1153,1692"/>
-<area shape="rect" id="node35" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html" title=" " alt="" coords="941,1716,1166,1757"/>
-<area shape="rect" id="node36" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="976,1899,1131,1940"/>
-<area shape="rect" id="node37" title=" " alt="" coords="1004,1965,1103,1991"/>
-<area shape="rect" id="node38" title=" " alt="" coords="887,2016,1220,2057"/>
-<area shape="rect" id="node39" title=" " alt="" coords="887,697,1220,739"/>
-<area shape="rect" id="node41" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html" title=" " alt="" coords="956,828,1151,869"/>
-<area shape="rect" id="node42" title=" " alt="" coords="887,763,1220,804"/>
-<area shape="rect" id="node44" title=" " alt="" coords="280,2113,613,2155"/>
-<area shape="rect" id="node45" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1ConditionChecker.html" title=" " alt="" coords="297,2048,597,2089"/>
-<area shape="rect" id="node46" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html" title=" " alt="" coords="1970,756,2165,797"/>
-<area shape="rect" id="node47" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html" title=" " alt="" coords="1977,821,2158,863"/>
-<area shape="rect" id="node48" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_1_1ShipPickMode.html" title=" " alt="" coords="1970,887,2165,928"/>
-<area shape="rect" id="node49" title=" " alt="" coords="2032,475,2103,502"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3217,1164,3580,1204"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html" title=" " alt="" coords="1435,293,1797,333"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci0c23cb623422966b4963c997c750605b.html" title=" " alt="" coords="894,5,1213,45"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html" title=" " alt="" coords="956,69,1151,109"/>
+<area shape="rect" id="node5" title=" " alt="" coords="1018,517,1089,542"/>
+<area shape="rect" id="node16" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html" title=" " alt="" coords="2396,1928,2651,1968"/>
+<area shape="rect" id="node24" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission.html" title=" " alt="" coords="1466,1268,1766,1308"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="349,491,544,531"/>
+<area shape="rect" id="node12" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="956,133,1151,173"/>
+<area shape="rect" id="node25" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="929,631,1177,671"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,1816,231,1856"/>
+<area shape="rect" id="node17" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="637,2045,863,2085"/>
+<area shape="rect" id="node20" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html" title=" " alt="" coords="954,1860,1153,1900"/>
+<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html" title=" " alt="" coords="956,197,1151,237"/>
+<area shape="rect" id="node9" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html" title=" " alt="" coords="956,261,1151,301"/>
+<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html" title=" " alt="" coords="956,325,1151,365"/>
+<area shape="rect" id="node11" title=" " alt="" coords="902,389,1205,429"/>
+<area shape="rect" id="node13" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="349,133,544,173"/>
+<area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Trans842a2d9cb55d70d2bec9c0dcd12c1019.html" title=" " alt="" coords="2777,1928,3140,1968"/>
+<area shape="rect" id="node15" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageSpeci94e51af396b9f0721ebe1b0e0552adfe.html" title=" " alt="" coords="2364,1992,2683,2032"/>
+<area shape="rect" id="node18" title=" " alt="" coords="2032,1938,2103,1963"/>
+<area shape="rect" id="node19" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI_1_1ShipPickMode.html" title=" " alt="" coords="1970,1988,2165,2028"/>
+<area shape="rect" id="node21" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html" title=" " alt="" coords="1970,2103,2165,2143"/>
+<area shape="rect" id="node22" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html" title=" " alt="" coords="1977,2167,2158,2207"/>
+<area shape="rect" id="node23" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html" title=" " alt="" coords="1917,1823,2217,1863"/>
+<area shape="rect" id="node26" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html" title=" " alt="" coords="330,631,563,671"/>
+<area shape="rect" id="node27" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMission.html" title=" " alt="" coords="903,1475,1203,1515"/>
+<area shape="rect" id="node28" title=" " alt="" coords="902,1539,1205,1594"/>
+<area shape="rect" id="node29" title=" " alt="" coords="1001,1618,1105,1643"/>
+<area shape="rect" id="node30" title=" " alt="" coords="887,1668,1220,1708"/>
+<area shape="rect" id="node31" title=" " alt="" coords="887,1732,1220,1772"/>
+<area shape="rect" id="node32" title=" " alt="" coords="887,1796,1220,1836"/>
+<area shape="rect" id="node33" title=" " alt="" coords="887,1924,1220,1964"/>
+<area shape="rect" id="node34" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html" title=" " alt="" coords="956,567,1151,607"/>
+<area shape="rect" id="node35" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1TimeLimitData.html" title=" " alt="" coords="903,1411,1203,1451"/>
+<area shape="rect" id="node36" title=" " alt="" coords="361,1874,533,1899"/>
+<area shape="rect" id="node48" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionTrigger.html" title=" " alt="" coords="903,1988,1203,2028"/>
+<area shape="rect" id="node37" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1HubMissionResult.html" title=" " alt="" coords="903,695,1203,735"/>
+<area shape="rect" id="node38" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionHub.html" title=" " alt="" coords="903,759,1203,799"/>
+<area shape="rect" id="node39" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html" title=" " alt="" coords="903,823,1203,863"/>
+<area shape="rect" id="node40" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="976,887,1131,927"/>
+<area shape="rect" id="node41" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html" title=" " alt="" coords="956,951,1151,991"/>
+<area shape="rect" id="node42" title=" " alt="" coords="887,1015,1220,1055"/>
+<area shape="rect" id="node43" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html" title=" " alt="" coords="941,1079,1166,1119"/>
+<area shape="rect" id="node44" title=" " alt="" coords="1004,1143,1103,1169"/>
+<area shape="rect" id="node45" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersonImportance.html" title=" " alt="" coords="956,1232,1151,1272"/>
+<area shape="rect" id="node46" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FullName_1_1Gender.html" title=" " alt="" coords="954,1296,1153,1336"/>
+<area shape="rect" id="node47" title=" " alt="" coords="1027,1361,1079,1386"/>
+<area shape="rect" id="node49" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseHubMission_1_1ConditionChecker.html" title=" " alt="" coords="297,1924,597,1964"/>
+<area shape="rect" id="node50" title=" " alt="" coords="280,1988,613,2028"/>
 </map>

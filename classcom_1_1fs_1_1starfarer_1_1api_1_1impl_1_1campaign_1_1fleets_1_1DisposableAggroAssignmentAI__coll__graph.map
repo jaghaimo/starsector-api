@@ -1,18 +1,18 @@
 <map id="com.fs.starfarer.api.impl.campaign.fleets.DisposableAggroAssignmentAI" name="com.fs.starfarer.api.impl.campaign.fleets.DisposableAggroAssignmentAI">
-<area shape="rect" id="node1" title=" " alt="" coords="1495,400,1749,441"/>
-<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="71,5,237,47"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html" title=" " alt="" coords="395,144,649,185"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html" title=" " alt="" coords="1139,355,1393,396"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PlayerVisibleFleetManager.html" title=" " alt="" coords="748,245,1003,287"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="31,188,277,229"/>
-<area shape="rect" id="node7" title=" " alt="" coords="123,71,185,98"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="77,253,231,295"/>
-<area shape="rect" id="node9" title=" " alt="" coords="5,123,303,164"/>
-<area shape="rect" id="node10" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html" title=" " alt="" coords="778,444,973,485"/>
-<area shape="rect" id="node11" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html" title=" " alt="" coords="425,444,619,485"/>
-<area shape="rect" id="node12" title=" " alt="" coords="779,365,972,421"/>
-<area shape="rect" id="node13" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="1169,513,1363,555"/>
-<area shape="rect" id="node14" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="778,511,973,552"/>
-<area shape="rect" id="node15" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="409,511,635,552"/>
-<area shape="rect" id="node16" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="778,576,973,617"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1495,128,1749,168"/>
+<area shape="rect" id="node2" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="71,5,237,45"/>
+<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html" title=" " alt="" coords="395,172,649,212"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html" title=" " alt="" coords="778,108,973,148"/>
+<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html" title=" " alt="" coords="1139,188,1393,228"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html" title=" " alt="" coords="425,108,619,148"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="1169,379,1363,419"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="778,379,973,419"/>
+<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="409,379,635,419"/>
+<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="778,443,973,483"/>
+<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PlayerVisibleFleetManager.html" title=" " alt="" coords="748,260,1003,300"/>
+<area shape="rect" id="node12" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="31,69,277,109"/>
+<area shape="rect" id="node13" title=" " alt="" coords="123,134,185,159"/>
+<area shape="rect" id="node14" title=" " alt="" coords="5,184,303,224"/>
+<area shape="rect" id="node15" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="77,261,231,301"/>
+<area shape="rect" id="node16" title=" " alt="" coords="779,181,972,235"/>
 </map>

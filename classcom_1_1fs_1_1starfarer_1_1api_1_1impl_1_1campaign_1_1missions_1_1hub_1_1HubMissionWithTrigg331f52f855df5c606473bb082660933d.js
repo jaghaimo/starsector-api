@@ -1,6 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg331f52f855df5c606473bb082660933d =
-[
-    [ "PickLocationInHyperspaceAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg331f52f855df5c606473bb082660933d.html#ae52ad7caa62381ebbae063633aa8b8e6", null ],
-    [ "doAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg331f52f855df5c606473bb082660933d.html#ac9a7669dc57de714cd831b6d8280e910", null ],
-    [ "system", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTrigg331f52f855df5c606473bb082660933d.html#a6dced8f26631333ba4d2d921b5025978", null ]
-];

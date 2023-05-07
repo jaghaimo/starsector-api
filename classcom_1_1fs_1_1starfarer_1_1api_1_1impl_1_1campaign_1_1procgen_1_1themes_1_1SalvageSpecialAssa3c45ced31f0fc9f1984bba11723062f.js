@@ -1,8 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssa3c45ced31f0fc9f1984bba11723062f =
-[
-    [ "TopographicDataSpecialCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssa3c45ced31f0fc9f1984bba11723062f.html#a01b0fa21456929c7afee0069f5daf19c", null ],
-    [ "createSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssa3c45ced31f0fc9f1984bba11723062f.html#ae397c875b721bad6ed3bdde66ba01184", null ],
-    [ "max", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssa3c45ced31f0fc9f1984bba11723062f.html#a537a48d79be51aa345bc6d6e5c805044", null ],
-    [ "min", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssa3c45ced31f0fc9f1984bba11723062f.html#a9ce0e82972a6b3d0fc375c6512ce909d", null ],
-    [ "random", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1SalvageSpecialAssa3c45ced31f0fc9f1984bba11723062f.html#aba728cd15615e30e21ea06f0a99cc925", null ]
-];

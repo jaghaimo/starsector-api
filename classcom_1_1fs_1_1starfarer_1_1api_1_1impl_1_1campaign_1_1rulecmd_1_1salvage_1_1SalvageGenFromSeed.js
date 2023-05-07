@@ -1,10 +1,6 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed =
 [
-    [ "SalvageDefenderModificationPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFr0fbcd416ff1be4659031e9afd4edb469.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFr0fbcd416ff1be4659031e9afd4edb469" ],
+    [ "SalvageDefenderModificationPlugin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFr0fbcd416ff1be4659031e9afd4edb469.html", null ],
     [ "SalvageDefenderModificationPluginImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSe153cb471dc7087f7726aa24a04df0947.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSe153cb471dc7087f7726aa24a04df0947" ],
-    [ "SDMParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed_1_1SDMParams.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed_1_1SDMParams" ],
-    [ "execute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed.html#a5fdb5b65188555378572ba4239db6d5d", null ],
-    [ "DEFEATED_DERELICT_STR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed.html#ad96ced3a16feae84bbff0e33dc171653", null ],
-    [ "DEFEATED_TO_ADDED_FACTOR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed.html#a1be3a4c5e2576b653ca58f413cd98ff9", null ],
-    [ "DEFEATED_TO_QUALITY_FACTOR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed.html#a0c023ad00b641c9cd222e16fd8be5d98", null ]
+    [ "SDMParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1SalvageGenFromSeed_1_1SDMParams.html", null ]
 ];

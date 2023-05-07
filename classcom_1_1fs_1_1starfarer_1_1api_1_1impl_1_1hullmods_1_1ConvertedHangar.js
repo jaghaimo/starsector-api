@@ -1,25 +1,5 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar =
 [
     [ "addPostDescriptionSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a3ea10a1bf56aab838184580fd2a2bcb7", null ],
-    [ "applyEffectsBeforeShipCreation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ad4cc9678985f2bf7caf560eefc808576", null ],
-    [ "applyEffectsToFighterSpawnedByShip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a1fdac6e718116cb38aaceeb1fd0bc453", null ],
-    [ "computeCRMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ab3a3ef7f42329b83a1196062f4ac0843", null ],
-    [ "computeDPModifier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a4b4334ee837b28fa0e9674e172f87514", null ],
-    [ "getFighterOPCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ac2f20a82721e8990f757704d5205c15d", null ],
-    [ "getFighterSkin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a2497d906b583b6a9454d6bd7d4e0e956", null ],
-    [ "getFighterSkin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a67699e9283adcf5346e5247e93f003fd", null ],
-    [ "getFighterWings", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ab5aceb4caddbf502b99a39f7c35dd2c2", null ],
-    [ "getSModDescriptionParam", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a3d546b9824db218fef20612f2ad57509", null ],
-    [ "getUnapplicableReason", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#aec2b48361074102e50db9b8d2aa1631b", null ],
-    [ "isApplicableToShip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a495d87ab69709f272453b3f4df28b1ee", null ],
-    [ "setFighterSkin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a59c9b09c638016baf808770dd23a53f2", null ],
-    [ "shouldAddDescriptionToTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a720767f7920627b3499d0f4fad104f43", null ],
-    [ "CR_THRESHOLD_UNINSTALLABLE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a910ec429507b5af3f87c4b82bb92aa64", null ],
-    [ "CREW_REQ", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#aff0d7b36df380b87b480ac881705dc6f", null ],
-    [ "FIGHTER_OP_PER_DP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a0eb029f8b23299a65b3ecbb4a8fdeb30", null ],
-    [ "MIN_DP", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a407a51002da92ffcb05d36e2cbdfdb2e", null ],
-    [ "REARM_TIME_FRACTION", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a684f68790194e5810910d082be0fef22", null ],
-    [ "REPLACEMENT_TIME_MULT", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a60527f78f6573c47756875405d4b5719", null ],
-    [ "SMOD_CAPITAL", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a2639f94b0614698f833a881428bc8303", null ],
-    [ "SMOD_CRUISER", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a5c5764ffa867d111bb18ded492800ab8", null ]
+    [ "shouldAddDescriptionToTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a720767f7920627b3499d0f4fad104f43", null ]
 ];

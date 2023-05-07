@@ -1,7 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileAc52865bf538ac664a26630597a6d6cd21 =
-[
-    [ "HAPatherCellsEventData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileAc52865bf538ac664a26630597a6d6cd21.html#a88fcef2815fba38f6213c03ea797293c", null ],
-    [ "cells", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileAc52865bf538ac664a26630597a6d6cd21.html#a5b75ee4661473d2339a935e2040d52b0", null ],
-    [ "market", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileAc52865bf538ac664a26630597a6d6cd21.html#a42ebc95bb57ddbfec51b44fd1d151561", null ],
-    [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileAc52865bf538ac664a26630597a6d6cd21.html#a42524235f4335f83a4d4c963af974f1b", null ]
-];

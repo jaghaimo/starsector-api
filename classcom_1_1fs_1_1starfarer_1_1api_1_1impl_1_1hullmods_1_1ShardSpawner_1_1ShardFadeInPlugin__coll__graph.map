@@ -1,9 +1,9 @@
 <map id="com.fs.starfarer.api.impl.hullmods.ShardSpawner.ShardFadeInPlugin" name="com.fs.starfarer.api.impl.hullmods.ShardSpawner.ShardFadeInPlugin">
-<area shape="rect" id="node1" title=" " alt="" coords="801,71,1021,112"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="467,5,669,47"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="236,5,417,47"/>
-<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="5,5,187,47"/>
-<area shape="rect" id="node5" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html" title=" " alt="" coords="477,71,659,112"/>
-<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="477,136,659,177"/>
-<area shape="rect" id="node7" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="236,136,417,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="801,69,1021,109"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="467,5,669,45"/>
+<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="236,5,417,45"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="5,5,187,45"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="477,69,659,109"/>
+<area shape="rect" id="node6" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="236,69,417,109"/>
+<area shape="rect" id="node7" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html" title=" " alt="" coords="477,133,659,173"/>
 </map>

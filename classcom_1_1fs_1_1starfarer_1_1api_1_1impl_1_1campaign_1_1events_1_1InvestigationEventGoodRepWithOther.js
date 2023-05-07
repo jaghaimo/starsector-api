@@ -1,27 +1,9 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther =
 [
-    [ "InvestigationGoodRepData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWite71b1276c7972a88d9323000d9224ff2.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWite71b1276c7972a88d9323000d9224ff2" ],
-    [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a442c652515724ed8e01cc75958a73e3f", null ],
+    [ "InvestigationGoodRepData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWite71b1276c7972a88d9323000d9224ff2.html", null ],
     [ "callEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#af59f4efc9e207f9e920a2f80c63a3ef1", null ],
-    [ "endEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#aa7c171436055da62d7669015d1743460", null ],
-    [ "getEventName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a67003d8bde9ce88e04349d5eebc05a68", null ],
-    [ "getHighlights", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a9252bc5977bd590a38ade8f0d763d61a", null ],
-    [ "getTokenReplacements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#add80d6dbdb0d4457eb0ef3eac75d26bd", null ],
+    [ "getHighlights", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#ae75ad9184a6dface908e9accc2249387", null ],
+    [ "getTokenReplacements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a36a1d4baeacb73eae7349978ff4d7a10", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#aa9534c988f4f832ef9660750a73d6cab", null ],
-    [ "isDone", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a9867b0190dbe0fbfbdd3a18412a7978b", null ],
-    [ "pickMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#aca8557ab5304c680ca525a2e6ff831d6", null ],
-    [ "startEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a8035d83fd3b37559f483c233b7e4bc91", null ],
-    [ "bribeAmount", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a5a38f94a248c698a5bf309e7d004b119", null ],
-    [ "bribed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#ab3920da8005ccf49041a7212adaebc1a", null ],
-    [ "duration", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a822221beaf82406ffac8edc435eedf28", null ],
-    [ "elapsedDays", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a469d98e2e3b86355d10fb51c76d9d703", null ],
-    [ "ended", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a50379de55d9f7259e08d6cd264ca3fa5", null ],
-    [ "guiltProb", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a5173d33b5d4bc83083306de801167aa1", null ],
-    [ "investigator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a7fd9c347908626aadc6167e18e795619", null ],
-    [ "log", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a25bf603504c394251146a3d4eaf7122e", null ],
-    [ "numPrior", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a7c917fa2c66c66b412128fdd8b72702f", null ],
-    [ "other", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#ab92858aeeb1ac2f9a5e3f94884c7cdc1", null ],
-    [ "PERSON_CHECKOUT_REASON", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a6250c2e3551c40a68f9e952fbb64ef9a", null ],
-    [ "punishment", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#aae8da6046dbec00fb96a33803acfc39f", null ],
-    [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a01ac793a3343e87e90906045db1f6098", null ]
+    [ "startEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html#a8035d83fd3b37559f483c233b7e4bc91", null ]
 ];

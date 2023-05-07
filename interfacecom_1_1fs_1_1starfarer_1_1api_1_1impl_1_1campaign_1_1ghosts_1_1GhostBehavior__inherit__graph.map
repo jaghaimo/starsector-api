@@ -1,20 +1,20 @@
 <map id="com.fs.starfarer.api.impl.campaign.ghosts.GhostBehavior" name="com.fs.starfarer.api.impl.campaign.ghosts.GhostBehavior">
-<area shape="rect" id="node1" title=" " alt="" coords="5,496,268,537"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html" title=" " alt="" coords="316,496,579,537"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBCircle.html" title=" " alt="" coords="627,5,889,47"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBDartAround.html" title=" " alt="" coords="627,71,889,112"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBEchoMovement.html" title=" " alt="" coords="627,136,889,177"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollow.html" title=" " alt="" coords="627,201,889,243"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollowClosely.html" title=" " alt="" coords="627,267,889,308"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollowStream.html" title=" " alt="" coords="627,332,889,373"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html" title=" " alt="" coords="627,397,889,439"/>
-<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFromFixed.html" title=" " alt="" coords="627,463,889,504"/>
-<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection.html" title=" " alt="" coords="627,528,889,569"/>
-<area shape="rect" id="node12" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirectionWithWobble.html" title=" " alt="" coords="627,593,889,635"/>
-<area shape="rect" id="node13" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoTo.html" title=" " alt="" coords="627,659,889,700"/>
-<area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIntercept.html" title=" " alt="" coords="627,724,889,765"/>
-<area shape="rect" id="node15" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeadPlayerTo.html" title=" " alt="" coords="627,789,889,831"/>
-<area shape="rect" id="node16" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html" title=" " alt="" coords="627,855,889,896"/>
-<area shape="rect" id="node17" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBStayInPlace.html" title=" " alt="" coords="627,920,889,961"/>
-<area shape="rect" id="node18" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBStormArea.html" title=" " alt="" coords="627,985,889,1027"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,485,268,525"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html" title=" " alt="" coords="316,485,579,525"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBCircle.html" title=" " alt="" coords="627,5,889,45"/>
+<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBDartAround.html" title=" " alt="" coords="627,69,889,109"/>
+<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBEchoMovement.html" title=" " alt="" coords="627,133,889,173"/>
+<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollow.html" title=" " alt="" coords="627,197,889,237"/>
+<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollowClosely.html" title=" " alt="" coords="627,261,889,301"/>
+<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBFollowStream.html" title=" " alt="" coords="627,325,889,365"/>
+<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFrom.html" title=" " alt="" coords="627,389,889,429"/>
+<area shape="rect" id="node10" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoAwayFromFixed.html" title=" " alt="" coords="627,453,889,493"/>
+<area shape="rect" id="node11" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirection.html" title=" " alt="" coords="627,517,889,557"/>
+<area shape="rect" id="node12" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirectionWithWobble.html" title=" " alt="" coords="627,581,889,621"/>
+<area shape="rect" id="node13" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoTo.html" title=" " alt="" coords="627,645,889,685"/>
+<area shape="rect" id="node14" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIntercept.html" title=" " alt="" coords="627,709,889,749"/>
+<area shape="rect" id="node15" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeadPlayerTo.html" title=" " alt="" coords="627,773,889,813"/>
+<area shape="rect" id="node16" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBLeviathanCalfRun.html" title=" " alt="" coords="627,837,889,877"/>
+<area shape="rect" id="node17" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBStayInPlace.html" title=" " alt="" coords="627,901,889,941"/>
+<area shape="rect" id="node18" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBStormArea.html" title=" " alt="" coords="627,965,889,1005"/>
 </map>

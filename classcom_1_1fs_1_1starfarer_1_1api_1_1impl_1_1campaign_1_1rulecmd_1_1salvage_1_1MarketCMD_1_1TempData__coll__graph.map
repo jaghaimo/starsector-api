@@ -1,10 +1,10 @@
 <map id="com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.TempData" name="com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.TempData">
-<area shape="rect" id="node1" title=" " alt="" coords="499,201,817,243"/>
-<area shape="rect" id="node2" title=" " alt="" coords="51,5,278,47"/>
-<area shape="rect" id="node3" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html" title=" " alt="" coords="67,71,262,112"/>
-<area shape="rect" id="node4" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1RaidType.html" title=" " alt="" coords="5,136,324,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="22,201,307,243"/>
-<area shape="rect" id="node6" title=" " alt="" coords="35,267,294,308"/>
-<area shape="rect" id="node7" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1BombardType.html" title=" " alt="" coords="5,332,324,373"/>
-<area shape="rect" id="node8" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html" title=" " alt="" coords="52,397,277,439"/>
+<area shape="rect" id="node1" title=" " alt="" coords="499,197,817,237"/>
+<area shape="rect" id="node2" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1RaidType.html" title=" " alt="" coords="5,5,324,45"/>
+<area shape="rect" id="node3" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD_1_1BombardType.html" title=" " alt="" coords="5,69,324,109"/>
+<area shape="rect" id="node4" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html" title=" " alt="" coords="67,133,262,173"/>
+<area shape="rect" id="node5" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html" title=" " alt="" coords="52,197,277,237"/>
+<area shape="rect" id="node6" title=" " alt="" coords="51,261,278,301"/>
+<area shape="rect" id="node7" title=" " alt="" coords="35,325,294,365"/>
+<area shape="rect" id="node8" title=" " alt="" coords="22,389,307,429"/>
 </map>

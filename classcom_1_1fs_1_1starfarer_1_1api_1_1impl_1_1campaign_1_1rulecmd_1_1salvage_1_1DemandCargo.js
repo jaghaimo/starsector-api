@@ -1,26 +1,4 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo =
 [
-    [ "DemandData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo_1_1DemandData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo_1_1DemandData" ],
-    [ "DemandCargo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a464e944f404b657a768e7bced3ad270a", null ],
-    [ "computeAndPrintDemands", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a882cdaf47f06c81d051573215ec54cbb", null ],
-    [ "execute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a15fdf8188b8c10a2fc8c40f91cb0773a", null ],
-    [ "getRandom", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a5f9ca935fc1a7da6487e965c58721920", null ],
-    [ "selectCores", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a4fc94f17e352b5f975e8c6fafdb927c4", null ],
-    [ "buysAICores", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#ad41b1193391437c62e1e5fd4796b9b4f", null ],
-    [ "data", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a2df8670f59fb3aa1bbe358d75ae14e82", null ],
-    [ "dialog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a580e91904f6627769098404d3c579866", null ],
-    [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#ad234177167ea5430e50a0c515d10147c", null ],
-    [ "entityFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#aaf03484e75745acd8de13e4fe8463ebc", null ],
-    [ "faction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a49ae85ec2c52d5eae0c8020b6356740e", null ],
-    [ "memory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#ae5438f1c3b671c775543f10c7b6678a6", null ],
-    [ "memoryMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a02ab7a9c0ed69d60a03f60248b1fc94e", null ],
-    [ "options", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a75c533de99eeb32da0af2507de52b5d5", null ],
-    [ "otherFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a4ec6b94066238af7f11513e65e3445f5", null ],
-    [ "person", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a57a1c78f368fae66446c499d57e44233", null ],
-    [ "playerCargo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a5f27914112a827acc9c35d32e39bab35", null ],
-    [ "playerFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a8883e642f75d3dd44684de57ca1976f3", null ],
-    [ "playerFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a28b17ebdcdf7eadb643dcb70eeac27c4", null ],
-    [ "repMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#ab6685e190ae9e39afa58e78333662424", null ],
-    [ "text", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#a0bc64f79c0d73d2c0303f491c2c6adfb", null ],
-    [ "valueMult", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo.html#af0339a2e6bdd9eff34d7fb8c527c2dbf", null ]
+    [ "DemandData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1DemandCargo_1_1DemandData.html", null ]
 ];

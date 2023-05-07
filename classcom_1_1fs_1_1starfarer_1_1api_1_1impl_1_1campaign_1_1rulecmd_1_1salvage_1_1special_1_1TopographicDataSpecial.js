@@ -1,7 +1,4 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1TopographicDataSpecial =
 [
-    [ "TopographicDataSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Topog52c2ee1702813d47495e1ed5a7e53e2b.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Topog52c2ee1702813d47495e1ed5a7e53e2b" ],
-    [ "TopographicDataSpecial", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1TopographicDataSpecial.html#ae331fc3fadef80b5211d91846e4c8b19", null ],
-    [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1TopographicDataSpecial.html#af7012ff26722371014dd4106c211f0e3", null ],
-    [ "data", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1TopographicDataSpecial.html#ad40381c93e93ea0eaeb991b2acdb5712", null ]
+    [ "TopographicDataSpecialData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1Topog52c2ee1702813d47495e1ed5a7e53e2b.html", null ]
 ];

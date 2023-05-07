@@ -1,27 +1,4 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers =
 [
-    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers_1_1Stage.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers_1_1Stage" ],
-    [ "addDescriptionForNonEndStage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#afa266f487514a2dfba0c8a61ca74c560", null ],
-    [ "addNextStepText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a2558e82a23a4a46ac8344c87aca4fbb2", null ],
-    [ "callAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#ad93654bff32a2e746fb7610afce12be5", null ],
-    [ "create", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#aeec799d4fcc4be05285f1daa98d72bf5", null ],
-    [ "getBaseName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#aecb6ddaa1db7fef492da33abd6909dad", null ],
-    [ "getPostfixForState", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a3be0dd0b980e95689e8a38634710197a", null ],
-    [ "updateInteractionDataImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#ae35c03992c7ae201974be12cbe1406c1", null ],
-    [ "caden", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#ad240556ec2d5d5112b31c0acfdc8007d", null ],
-    [ "debris", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#ad2c5e2a1fb4b7aa35bedf75cf412d734", null ],
-    [ "EXTACT_AGENT_RAID_DIFFICULTY", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a924de1e502b39842be8802e58e9a963d", null ],
-    [ "hyder", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a8e460273768da40e5f2bacd659e5f27e", null ],
-    [ "macario", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a7a3d5738cb71fba55052baa6742fa714", null ],
-    [ "marineLosses", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a130cd63913e4db2790a0cd17388c72ea", null ],
-    [ "marineLossesMax", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a4ae94d887605d4b52061da2b8a0385ca", null ],
-    [ "marineLossesMin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a62e606a8ce62492d53e3675de4dceaa1", null ],
-    [ "patrolSecond", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#ac86d827379727b98c0853549c3e21352", null ],
-    [ "ram", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a9049c99ee478690a2a3d3b009481e180", null ],
-    [ "sindria", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#ac5dd3906ce220012dd90b0238548cf4f", null ],
-    [ "umbra", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a8a04af534012c935e360602ae620b3f8", null ],
-    [ "volturn", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a53107cad05deb2c38edf2af62e347307", null ],
-    [ "xpRewardHigh", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a48b7994679138dfdaf9357f96e9db8df", null ],
-    [ "xpRewardLow", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#aa44f2393daba20e5b6ef5f207a253feb", null ],
-    [ "xpRewardMedium", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers.html#a48cf58777f54989b5cd8abd80d1ab6a6", null ]
+    [ "Stage", "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1askonia_1_1TheUsurpers_1_1Stage.html", null ]
 ];

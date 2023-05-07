@@ -1,11 +1,11 @@
 <map id="com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator" name="com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator">
-<area shape="rect" id="node1" title=" " alt="" coords="5,235,208,276"/>
-<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MonthlyReportNodeTooltipCreator.html" title=" " alt="" coords="291,5,512,47"/>
-<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OverheadTooltipCreator.html" title=" " alt="" coords="291,71,512,112"/>
-<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseFactorTooltip.html" title=" " alt="" coords="256,136,547,177"/>
-<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html" title=" " alt="" coords="263,201,539,243"/>
-<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html" title=" " alt="" coords="266,267,537,308"/>
-<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html" title=" " alt="" coords="270,332,533,373"/>
-<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SpacerObligation.html" title=" " alt="" coords="270,397,533,439"/>
-<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1BaseTooltipCreator.html" title=" " alt="" coords="327,463,475,504"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,229,208,269"/>
+<area shape="rect" id="node2" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1MonthlyReportNodeTooltipCreator.html" title=" " alt="" coords="291,5,512,45"/>
+<area shape="rect" id="node3" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1OverheadTooltipCreator.html" title=" " alt="" coords="291,69,512,109"/>
+<area shape="rect" id="node4" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseFactorTooltip.html" title=" " alt="" coords="256,133,547,173"/>
+<area shape="rect" id="node5" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html" title=" " alt="" coords="263,197,539,237"/>
+<area shape="rect" id="node6" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html" title=" " alt="" coords="266,261,537,301"/>
+<area shape="rect" id="node7" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html" title=" " alt="" coords="270,325,533,365"/>
+<area shape="rect" id="node8" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1SpacerObligation.html" title=" " alt="" coords="270,389,533,429"/>
+<area shape="rect" id="node9" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1BaseTooltipCreator.html" title=" " alt="" coords="327,453,475,493"/>
 </map>

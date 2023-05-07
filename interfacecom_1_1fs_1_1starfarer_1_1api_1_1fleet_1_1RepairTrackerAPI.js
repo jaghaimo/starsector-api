@@ -1,29 +1,12 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI =
 [
-    [ "CREvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI_1_1CREvent.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI_1_1CREvent" ],
+    [ "CREvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI_1_1CREvent.html", null ],
     [ "applyCREvent", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a2e5fc52f1201722b757a0301f8bd0a76", null ],
     [ "applyCREvent", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#ad61e9ffec3110481412d986566210afe", null ],
     [ "computeRepairednessFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#ad5ac338d6f6735dc332216bcf83cd65c", null ],
     [ "getBaseCR", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#aec5f1812706ae1c5638541f4ff0045a2", null ],
     [ "getCR", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a1238ad515072fb792ed380005630d01c", null ],
-    [ "getCRPriorToMothballing", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a1f3277b683af056fce54ebcd4020ad7e", null ],
-    [ "getDecreaseRate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a537c0f0cf1067a4e982367ee9127eb9b", null ],
-    [ "getFuelFromScuttling", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a4797c508319c17340a3110ceab03829c", null ],
-    [ "getHeavyMachineryFromScuttling", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a947a9a00974cc9ba7635ebfb1ea0847a", null ],
     [ "getMaxCR", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#af40440bad1d19137d18b6f0829c90e18", null ],
     [ "getNoSupplyCRLossEvent", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a521f0ffb80647a50ffda75d6c74da462", null ],
-    [ "getRecentEvents", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a7f8c941c60400e2009ff70b1660385e8", null ],
-    [ "getRecoveryRate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a0a913434abd55d3e9c1c62b7c66f74ce", null ],
-    [ "getRemainingRepairTime", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a1f3c1c1f569f8d596f72faf9d521570d", null ],
-    [ "getRepairRatePerDay", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a52e1a61f98474bea433f96d18867f73a", null ],
-    [ "getSuppliesFromScuttling", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#acfd641cbeb9caf31a326ceeae5ad2d92", null ],
-    [ "isCrashMothballed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a290e829837d5b7c9e7e5aab3e65d8ad2", null ],
-    [ "isMothballed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#aefc1109997766a1e9d7f998046e54d23", null ],
-    [ "isSuspendRepairs", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#ac6e7929e7ef578fb976a4562a7c9104e", null ],
-    [ "performRepairsFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a20ea29eec34651a8405b7f2b8c7b2746", null ],
-    [ "setCR", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a16514e5ecaeda7ef627a055109182c4b", null ],
-    [ "setCrashMothballed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#afcedf97a4741a678d03a0bf2f94e3bc6", null ],
-    [ "setCRPriorToMothballing", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a631d2ce7770196341ba512ce38725388", null ],
-    [ "setMothballed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a0abf00e55db7bdf47429286a5b4d2aa8", null ],
-    [ "setSuspendRepairs", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a7f0d52cd2ba3ab6220fd154c5a437721", null ]
+    [ "setCR", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1RepairTrackerAPI.html#a16514e5ecaeda7ef627a055109182c4b", null ]
 ];
