@@ -1,5 +1,10 @@
 var NAVTREEINDEX18 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1TerrainRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,64],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionHub.html":[0,0,0,0,0,0,5,0,11,3,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionTrigger_1_1TriggerAction.html":[0,0,0,0,0,0,5,0,11,3,14,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLEntry.html":[0,0,0,0,0,0,5,0,12,4],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStat.html":[0,0,0,0,0,0,5,0,12,7],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1EntityGenDataSpec.html":[0,0,0,0,0,0,5,0,14,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlanetConditionGenerator_1_1ConditionGenerator.html":[0,0,0,0,0,0,5,0,14,25,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html":[0,0,0,0,0,0,5,0,14,38],

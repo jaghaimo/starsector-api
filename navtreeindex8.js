@@ -1,5 +1,9 @@
 var NAVTREEINDEX8 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a90ad3637c60b6ce770a6ee82d335a744":[0,0,0,0,0,0,5,0,15,56,0,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html":[0,0,0,0,0,0,5,0,15,65],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HailPlayer.html":[0,0,0,0,0,0,5,0,15,57],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HasAttentionOfAuthorities.html":[0,0,0,0,0,0,5,0,15,58],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HideFirstPerson.html":[0,0,0,0,0,0,5,0,15,59],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HideSecondPerson.html":[0,0,0,0,0,0,5,0,15,60],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HideThirdPerson.html":[0,0,0,0,0,0,5,0,15,61],
@@ -12,6 +16,7 @@ var NAVTREEINDEX8 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSeenByPatrols.html":[0,0,0,0,0,0,5,0,15,69],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSoughtByPatrols.html":[0,0,0,0,0,0,5,0,15,70],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html":[0,0,0,0,0,0,5,0,15,71],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD.html#ab0568b2cb0c25696cf398b54baf830b2":[0,0,0,0,0,0,5,0,15,71,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD_1_1DelayedInstallItemScript.html":[0,0,0,0,0,0,5,0,15,71,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD_1_1FusionLampColorChanger.html":[0,0,0,0,0,0,5,0,15,71,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1KantaCMD_1_1FusionLampColorChanger.html#a4cf8b307eb8e077290ea05864dd54f42":[0,0,0,0,0,0,5,0,15,71,1,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX8 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AdvancedCountermeasures_1_1Level2.html":[0,0,0,0,0,0,5,0,17,0,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AdvancedCountermeasures_1_1Level3A.html":[0,0,0,0,0,0,5,0,17,0,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AdvancedCountermeasures_1_1Level3B.html":[0,0,0,0,0,0,5,0,17,0,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AptitudeDesc.html":[0,0,0,0,0,0,5,0,17,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AptitudeDesc_1_1Level0.html":[0,0,0,0,0,0,5,0,17,1,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips.html":[0,0,0,0,0,0,5,0,17,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level0.html":[0,0,0,0,0,0,5,0,17,2,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level1.html":[0,0,0,0,0,0,5,0,17,2,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level2.html":[0,0,0,0,0,0,5,0,17,2,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AptitudeDesc.html":[0,0,0,0,0,0,5,0,17,1]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX9 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AptitudeDesc_1_1Level0.html":[0,0,0,0,0,0,5,0,17,1,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips.html":[0,0,0,0,0,0,5,0,17,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level0.html":[0,0,0,0,0,0,5,0,17,2,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level1.html":[0,0,0,0,0,0,5,0,17,2,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AutomatedShips_1_1Level2.html":[0,0,0,0,0,0,5,0,17,2,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AuxiliarySupport.html":[0,0,0,0,0,0,5,0,17,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1AuxiliarySupport_1_1Level1.html":[0,0,0,0,0,0,5,0,17,3,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1BallisticMastery.html":[0,0,0,0,0,0,5,0,17,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX9 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level2A.html":[0,0,0,0,0,0,5,0,17,57,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level2B.html":[0,0,0,0,0,0,5,0,17,57,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level3.html":[0,0,0,0,0,0,5,0,17,57,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level3B.html":[0,0,0,0,0,0,5,0,17,57,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering.html":[0,0,0,0,0,0,5,0,17,58],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level1.html":[0,0,0,0,0,0,5,0,17,58,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level2.html":[0,0,0,0,0,0,5,0,17,58,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level3.html":[0,0,0,0,0,0,5,0,17,58,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level4.html":[0,0,0,0,0,0,5,0,17,58,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level3B.html":[0,0,0,0,0,0,5,0,17,57,7]
 };

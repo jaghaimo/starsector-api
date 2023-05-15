@@ -1,5 +1,10 @@
 var NAVTREEINDEX11 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamSegment.html":[0,0,0,0,0,0,5,0,21,3,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParams.html":[0,0,0,0,0,0,5,0,21,2,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParticle.html":[0,0,0,0,0,0,5,0,21,2,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html":[0,0,0,0,0,0,5,0,21,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#a4698cc80a9fab5b7895ca260c5485d58":[0,0,0,0,0,0,5,0,21,4,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#a66ba179645fcb22462a19f06368261f8":[0,0,0,0,0,0,5,0,21,4,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#add3230ccc3de57cd8e6b36f7e03db520":[0,0,0,0,0,0,5,0,21,4,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#af4bc52b1cbb041c179999dc1f7d4f308":[0,0,0,0,0,0,5,0,21,4,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX11 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MilitarizedSubsystems.html":[0,0,0,0,0,0,5,2,42],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html":[0,0,0,0,0,0,5,2,43],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html#a7fd3a3a9e5b2e1f3cd8ea029830cb538":[0,0,0,0,0,0,5,2,43,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html#ac6c5b529e6ae5d5f314d87bd7990e03e":[0,0,0,0,0,0,5,2,43,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html#ad1e72302958cd56beab021e9a8cf5652":[0,0,0,0,0,0,5,2,43,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader_1_1MissileAutoloaderData.html":[0,0,0,0,0,0,5,2,43,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader_1_1ReloadCapacityData.html":[0,0,0,0,0,0,5,2,43,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html":[0,0,0,0,0,0,5,2,44],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html":[0,0,0,0,0,0,5,2,45]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html#ac6c5b529e6ae5d5f314d87bd7990e03e":[0,0,0,0,0,0,5,2,43,2]
 };

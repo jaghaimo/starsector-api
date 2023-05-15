@@ -1,5 +1,10 @@
 var NAVTREEINDEX12 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html#ad1e72302958cd56beab021e9a8cf5652":[0,0,0,0,0,0,5,2,43,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader_1_1MissileAutoloaderData.html":[0,0,0,0,0,0,5,2,43,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader_1_1ReloadCapacityData.html":[0,0,0,0,0,0,5,2,43,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html":[0,0,0,0,0,0,5,2,44],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html":[0,0,0,0,0,0,5,2,45],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html":[0,0,0,0,0,0,5,2,46],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html#a9fe4dc6c90694cb7e02740a196040628":[0,0,0,0,0,0,5,2,46,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralInterface.html#ae0034fbf4089cb8b18a23a0da8865ee9":[0,0,0,0,0,0,5,2,46,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX12 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel_1_1TutStage.html":[0,0,0,0,0,0,5,0,4,11,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_1_1Ending.html":[0,0,0,0,0,0,5,0,5,6,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent_1_1SkillPickPreference.html":[0,0,0,0,0,0,5,0,5,11,1],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent_1_1SkillPickPreference.html#a9f4816f9ebccdc5bdf7ce71b366fb8ef":[0,0,0,0,0,0,5,0,5,11,1,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent_1_1PickMode.html":[0,0,0,0,0,0,5,0,5,16,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent_1_1DistressEventType.html":[0,0,0,0,0,0,5,0,5,0,3,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1SizeFilterMode.html":[0,0,0,0,0,0,5,0,6,15,1],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory_1_1MercType.html":[0,0,0,0,0,0,5,0,6,14,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory_1_1PatrolType.html":[0,0,0,0,0,0,5,0,6,14,1]
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent_1_1SkillPickPreference.html#a9f4816f9ebccdc5bdf7ce71b366fb8ef":[0,0,0,0,0,0,5,0,5,11,1,0]
 };

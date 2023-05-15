@@ -1,5 +1,10 @@
 var NAVTREEINDEX17 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ad0868371720d059655a832bd6010fbfa":[0,0,0,0,0,0,2,50,14],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ae371e026f6aba0cf138569c35f533b69":[0,0,0,0,0,0,2,50,10],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ae3974401ecaf5200831a5573a8435e70":[0,0,0,0,0,0,2,50,15],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#aebf6f573262f5a09b9d32fe195aff733":[0,0,0,0,0,0,2,50,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#af2a2b1fa997d6c3225a1e5cf4d504635":[0,0,0,0,0,0,2,50,4],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#af56ffd0121c43edbd6db696d27ac046f":[0,0,0,0,0,0,2,50,7],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileRenderDataAPI.html":[0,0,0,0,0,0,2,51],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileRenderDataAPI.html#ab7b5eac73583a901718487b5e2b6e8c6":[0,0,0,0,0,0,2,51,0],
@@ -226,12 +231,12 @@ var NAVTREEINDEX17 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historia737e60c4808d3e5d9412abd0120ed627.html":[0,0,0,0,0,0,5,0,10,0,0,0,11,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historiabc24949840d03ccd3f1da79a95c3699e.html":[0,0,0,0,0,0,5,0,10,0,0,0,8,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1EventFactor.html":[0,0,0,0,0,0,5,0,10,4,9],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityCause.html":[0,0,0,0,0,0,5,0,10,4,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityCause2.html":[0,0,0,0,0,0,5,0,10,4,15],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityCause2.html#a4607d92c1886231ec7250f08dd436d61":[0,0,0,0,0,0,5,0,10,4,15,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityFactor.html":[0,0,0,0,0,0,5,0,10,4,17],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityPlugin.html":[0,0,0,0,0,0,5,0,10,4,19],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityPlugin.html#aed58e5805875d35969cb9c5d010015d7":[0,0,0,0,0,0,5,0,10,4,19,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityCause.html":[0,0,0,0,0,0,5,0,10,4,18],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityCause2.html":[0,0,0,0,0,0,5,0,10,4,19],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityCause2.html#a4607d92c1886231ec7250f08dd436d61":[0,0,0,0,0,0,5,0,10,4,19,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityFactor.html":[0,0,0,0,0,0,5,0,10,4,21],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityPlugin.html":[0,0,0,0,0,0,5,0,10,4,23],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityPlugin.html#aed58e5805875d35969cb9c5d010015d7":[0,0,0,0,0,0,5,0,10,4,23,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidDelegate.html":[0,0,0,0,0,0,5,0,10,8,8,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel_1_1RaidStage.html":[0,0,0,0,0,0,5,0,10,8,8,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1CustomBountyCreator.html":[0,0,0,0,0,0,5,0,11,2,15],
@@ -244,10 +249,5 @@ var NAVTREEINDEX17 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1GenericRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,19],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,31],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,47],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1TerrainRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,64],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionHub.html":[0,0,0,0,0,0,5,0,11,3,13],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionTrigger_1_1TriggerAction.html":[0,0,0,0,0,0,5,0,11,3,14,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLEntry.html":[0,0,0,0,0,0,5,0,12,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStat.html":[0,0,0,0,0,0,5,0,12,7]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,47]
 };

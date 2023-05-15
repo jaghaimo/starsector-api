@@ -1,5 +1,10 @@
 var NAVTREEINDEX15 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html":[0,0,0,0,0,0,0,84],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI.html":[0,0,0,0,0,0,0,85],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI_1_1AbilitySlotAPI.html":[0,0,0,0,0,0,0,85,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI_1_1AbilitySlotsAPI.html":[0,0,0,0,0,0,0,85,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html":[0,0,0,0,0,0,0,87],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html#a78e781e248c870a8ff1ab76eef94c545":[0,0,0,0,0,0,0,87,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html#a97e2cdcc6c6dd3a12012113b9b60dc25":[0,0,0,0,0,0,0,87,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html#acaf7bf860fa0b0a5f2c44cf18eeb67e8":[0,0,0,0,0,0,0,87,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX15 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GateTransitListener.html#a0b55dc8d8a44c1c60ca77de61aff5bcc":[0,0,0,0,0,0,0,5,25,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GroundRaidObjectivesListener.html":[0,0,0,0,0,0,0,5,26],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GroundRaidObjectivesListener.html#ae7525f60e1a9b3fb303276dd5c3d2d17":[0,0,0,0,0,0,0,5,26,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1IndustryOptionProvider.html":[0,0,0,0,0,0,0,5,27],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ListenerManagerAPI.html":[0,0,0,0,0,0,0,5,28],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1MarineLossesStatModifier.html":[0,0,0,0,0,0,0,5,30],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1NavigationDataSectionListener.html":[0,0,0,0,0,0,0,5,31],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ObjectiveEventListener.html":[0,0,0,0,0,0,0,5,32],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1PatherCellListener.html":[0,0,0,0,0,0,0,5,33]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1IndustryOptionProvider.html":[0,0,0,0,0,0,0,5,27]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX16 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ListenerManagerAPI.html":[0,0,0,0,0,0,0,5,28],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1MarineLossesStatModifier.html":[0,0,0,0,0,0,0,5,30],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1NavigationDataSectionListener.html":[0,0,0,0,0,0,0,5,31],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ObjectiveEventListener.html":[0,0,0,0,0,0,0,5,32],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1PatherCellListener.html":[0,0,0,0,0,0,0,5,33],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1PlayerColonizationListener.html":[0,0,0,0,0,0,0,5,34],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ShipRecoveryListener.html":[0,0,0,0,0,0,0,5,35],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ShowLootListener.html":[0,0,0,0,0,0,0,5,36],
@@ -244,10 +249,5 @@ var NAVTREEINDEX16 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a7ae77a3512d9f9dda3bd141ba855c974":[0,0,0,0,0,0,2,50,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a90f5549da9ec959db9e470dfa46409c5":[0,0,0,0,0,0,2,50,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#aaf58ee2c995506b57e55eec2da1b067b":[0,0,0,0,0,0,2,50,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ac719fbda02f9ea41269eb740b1784aca":[0,0,0,0,0,0,2,50,13],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ad0868371720d059655a832bd6010fbfa":[0,0,0,0,0,0,2,50,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ae371e026f6aba0cf138569c35f533b69":[0,0,0,0,0,0,2,50,10],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ae3974401ecaf5200831a5573a8435e70":[0,0,0,0,0,0,2,50,15],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#aebf6f573262f5a09b9d32fe195aff733":[0,0,0,0,0,0,2,50,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#af2a2b1fa997d6c3225a1e5cf4d504635":[0,0,0,0,0,0,2,50,4]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ac719fbda02f9ea41269eb740b1784aca":[0,0,0,0,0,0,2,50,13]
 };

@@ -135,6 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad55d9604b8d1a620f9d60c70a4a7dfe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1376126a5ff9d303ecc43961d539291"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ae1376126a5ff9d303ecc43961d539291">getIcon</a> ()</td></tr>
 <tr class="separator:ae1376126a5ff9d303ecc43961d539291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7ed429116e0e99bed64655b28dfde8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html">TooltipCreator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aa7ed429116e0e99bed64655b28dfde8c">getStageTooltip</a> (Object stageId)</td></tr>
+<tr class="separator:aa7ed429116e0e99bed64655b28dfde8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51d8df726641e38a3326ff5d9de76051"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a51d8df726641e38a3326ff5d9de76051">getBarColor</a> ()</td></tr>
 <tr class="separator:a51d8df726641e38a3326ff5d9de76051"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72c9ce949d0205dc40a9feeeaf4941d1"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a72c9ce949d0205dc40a9feeeaf4941d1">getBarProgressIndicatorColor</a> ()</td></tr>
@@ -777,7 +779,7 @@ Static Public Attributes</h2></td></tr>
 static String&#160;</td><td class="memItemRight" valign="bottom"><b>KEY</b> = &quot;$hae_ref&quot;</td></tr>
 <tr class="separator:ad4d91da7d54c404683ad775e2a6e8d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad105bc30e254ba091ddb729aade0c55e"><td class="memItemLeft" align="right" valign="top"><a id="ad105bc30e254ba091ddb729aade0c55e" name="ad105bc30e254ba091ddb729aade0c55e"></a>
-static float&#160;</td><td class="memItemRight" valign="bottom"><b>FP_PER_POINT</b> = 20</td></tr>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>FP_PER_POINT</b> = Global.getSettings().getFloat(&quot;HA_fleetPointsPerPoint&quot;)</td></tr>
 <tr class="separator:ad105bc30e254ba091ddb729aade0c55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a></td></tr>
 <tr class="memitem:a78d4e00e402d57c4b2dd98012b52c202 inherit pub_static_attribs_classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a78d4e00e402d57c4b2dd98012b52c202">RANDOM_EVENT_NONE</a> = &quot;random_event_none&quot;</td></tr>
@@ -808,6 +810,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ad28e739e04c8981811bb8e4c2e804f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac04e5ef6277de8a395f3ec1341df830c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ac04e5ef6277de8a395f3ec1341df830c">addBulletPoints</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html">TooltipMakerAPI</a> info, <a class="el" href="enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin_1_1ListInfoMode.html">ListInfoMode</a> mode, boolean isUpdate, Color tc, float initPad)</td></tr>
 <tr class="separator:ac04e5ef6277de8a395f3ec1341df830c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24f893a837022dfa60d0db2ceb6d778"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#ab24f893a837022dfa60d0db2ceb6d778">getStageIcon</a> (Object stageId)</td></tr>
+<tr class="separator:ab24f893a837022dfa60d0db2ceb6d778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9292db44c05ff333d8542b28e7dfad5a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a9292db44c05ff333d8542b28e7dfad5a">getStageIconImpl</a> (Object stageId)</td></tr>
 <tr class="separator:a9292db44c05ff333d8542b28e7dfad5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa024b02d0dedb07e4a7d8f9ed37d1c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aaa024b02d0dedb07e4a7d8f9ed37d1c3">getStageImportance</a> (Object stageId)</td></tr>
@@ -1238,6 +1242,34 @@ Boolean&#160;</td><td class="memItemRight" valign="bottom"><b>forceAdd</b> = nul
 
 </div>
 </div>
+<a id="ab24f893a837022dfa60d0db2ceb6d778" name="ab24f893a837022dfa60d0db2ceb6d778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24f893a837022dfa60d0db2ceb6d778">&#9670;&#160;</a></span>getStageIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.getStageIcon </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>stageId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
+
+</div>
+</div>
 <a id="a9292db44c05ff333d8542b28e7dfad5a" name="a9292db44c05ff333d8542b28e7dfad5a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9292db44c05ff333d8542b28e7dfad5a">&#9670;&#160;</a></span>getStageIconImpl()</h2>
 
@@ -1288,6 +1320,26 @@ Boolean&#160;</td><td class="memItemRight" valign="bottom"><b>forceAdd</b> = nul
 <span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>
+
+</div>
+</div>
+<a id="aa7ed429116e0e99bed64655b28dfde8c" name="aa7ed429116e0e99bed64655b28dfde8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7ed429116e0e99bed64655b28dfde8c">&#9670;&#160;</a></span>getStageTooltip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html">TooltipCreator</a> com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.getStageTooltip </td>
+          <td>(</td>
+          <td class="paramtype">Object&#160;</td>
+          <td class="paramname"><em>stageId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html">com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel</a>.</p>

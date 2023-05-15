@@ -1,5 +1,10 @@
 var NAVTREEINDEX13 =
 {
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent_1_1PickMode.html":[0,0,0,0,0,0,5,0,5,16,0],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent_1_1DistressEventType.html":[0,0,0,0,0,0,5,0,5,0,3,0],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1SizeFilterMode.html":[0,0,0,0,0,0,5,0,6,15,1],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory_1_1MercType.html":[0,0,0,0,0,0,5,0,6,14,0],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactory_1_1PatrolType.html":[0,0,0,0,0,0,5,0,6,14,1],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1RouteLocationCalculator_1_1IntervalType.html":[0,0,0,0,0,0,5,0,6,34,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost_1_1DespawnReason.html":[0,0,0,0,0,0,5,0,7,3,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhostCreator_1_1OtherFleetType.html":[0,0,0,0,0,0,5,0,7,0,5,0],
@@ -16,7 +21,7 @@ var NAVTREEINDEX13 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1contacts_1_1ContactIntel_1_1ContactState.html":[0,0,0,0,0,0,5,0,10,2,0,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_1_1RandomizedStageType.html":[0,0,0,0,0,0,5,0,10,4,2,2],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel_1_1StageIconSize.html":[0,0,0,0,0,0,5,0,10,4,2,3],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_1_1Stage.html":[0,0,0,0,0,0,5,0,10,4,16,3],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel_1_1Stage.html":[0,0,0,0,0,0,5,0,10,4,20,3],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HyperspaceTopographyEventIntel_1_1Stage.html":[0,0,0,0,0,0,5,0,10,4,0,8,1],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIOrdersInteractionDialogPluginImpl_1_1OptionId.html":[0,0,0,0,0,0,5,0,10,5,4,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspecti2c90f9ea07def774c537c9e4ffd33c18.html":[0,0,0,0,0,0,5,0,10,5,0,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX13 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1MusicPlayerPlugin.html#a021d171d42bd4334c4211e22a3fbc2f5":[0,0,0,0,0,0,25,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1MusicPlayerPlugin.html#a70ff3738cd6a424aef11686a1528f518":[0,0,0,0,0,0,25,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html":[0,0,0,0,0,0,27],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html#a7e737390a93b3bcb11608cb64b30a30d":[0,0,0,0,0,0,27,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html":[0,0,0,0,0,0,28],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a0730936fad1c2fcd100ec78ee29e74f4":[0,0,0,0,0,0,28,23],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a13d481c402941f3c45a6413ccca6d036":[0,0,0,0,0,0,28,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a16fd0a278a8800f305f7a1fa4d0d6e8f":[0,0,0,0,0,0,28,19],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a1de51b2581a4a902d40b888284cadc9b":[0,0,0,0,0,0,28,5]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html#a7e737390a93b3bcb11608cb64b30a30d":[0,0,0,0,0,0,27,0]
 };

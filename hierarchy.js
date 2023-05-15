@@ -1061,6 +1061,10 @@ var hierarchy =
           [ "com.fs.starfarer.api.impl.campaign.intel.events.PirateHostileActivityFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html", null ]
         ] ],
         [ "com.fs.starfarer.api.impl.campaign.intel.events.BaseOneTimeFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseOneTimeFactor.html", [
+          [ "com.fs.starfarer.api.impl.campaign.intel.events.HALuddicPathDealFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HALuddicPathDealFactor.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.events.HAPatherBaseDestroyedFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HAPatherBaseDestroyedFactor.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.events.HAPirateBaseDestroyedFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HAPirateBaseDestroyedFactor.html", null ],
+          [ "com.fs.starfarer.api.impl.campaign.intel.events.HAPirateKingDealFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HAPirateKingDealFactor.html", null ],
           [ "com.fs.starfarer.api.impl.campaign.intel.events.HAShipsDestroyedFactor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HAShipsDestroyedFactor.html", [
             [ "com.fs.starfarer.api.impl.campaign.intel.events.HAShipsDestroyedFactorHint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HAShipsDestroyedFactorHint.html", null ]
           ] ],

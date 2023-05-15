@@ -1,5 +1,10 @@
 var NAVTREEINDEX10 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering.html":[0,0,0,0,0,0,5,0,17,58],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level1.html":[0,0,0,0,0,0,5,0,17,58,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level2.html":[0,0,0,0,0,0,5,0,17,58,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level3.html":[0,0,0,0,0,0,5,0,17,58,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level4.html":[0,0,0,0,0,0,5,0,17,58,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level5.html":[0,0,0,0,0,0,5,0,17,58,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Salvaging.html":[0,0,0,0,0,0,5,0,17,59],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Salvaging_1_1Level1.html":[0,0,0,0,0,0,5,0,17,59,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX10 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2.html#a9184fcc01b00ecf6173a9c1cba6f415e":[0,0,0,0,0,0,5,0,21,3,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2.html#af32549ccf40163ed178151d5246c1f31":[0,0,0,0,0,0,5,0,21,3,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamParams2.html":[0,0,0,0,0,0,5,0,21,3,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamParticle.html":[0,0,0,0,0,0,5,0,21,3,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamSegment.html":[0,0,0,0,0,0,5,0,21,3,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParams.html":[0,0,0,0,0,0,5,0,21,2,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParticle.html":[0,0,0,0,0,0,5,0,21,2,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html":[0,0,0,0,0,0,5,0,21,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#a4698cc80a9fab5b7895ca260c5485d58":[0,0,0,0,0,0,5,0,21,4,8]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamParticle.html":[0,0,0,0,0,0,5,0,21,3,1]
 };

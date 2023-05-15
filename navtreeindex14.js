@@ -1,5 +1,10 @@
 var NAVTREEINDEX14 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html":[0,0,0,0,0,0,28],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a0730936fad1c2fcd100ec78ee29e74f4":[0,0,0,0,0,0,28,23],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a13d481c402941f3c45a6413ccca6d036":[0,0,0,0,0,0,28,6],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a16fd0a278a8800f305f7a1fa4d0d6e8f":[0,0,0,0,0,0,28,19],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a1de51b2581a4a902d40b888284cadc9b":[0,0,0,0,0,0,28,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a377372990f77e86afbec6243bd41ab76":[0,0,0,0,0,0,28,14],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a3bdd40a39c515f5c6d0b0c3d08c16478":[0,0,0,0,0,0,28,7],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a43a0f6750c9100daa95b9741fa8d9d19":[0,0,0,0,0,0,28,24],
@@ -244,10 +249,5 @@ var NAVTREEINDEX14 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_1_1OptionTooltipCreator.html":[0,0,0,0,0,0,0,81,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html":[0,0,0,0,0,0,0,83],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a542a622834154436f961042706f9a239":[0,0,0,0,0,0,0,83,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitalStationAPI.html":[0,0,0,0,0,0,0,82],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html":[0,0,0,0,0,0,0,84],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI.html":[0,0,0,0,0,0,0,85],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI_1_1AbilitySlotAPI.html":[0,0,0,0,0,0,0,85,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI_1_1AbilitySlotsAPI.html":[0,0,0,0,0,0,0,85,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html":[0,0,0,0,0,0,0,87]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitalStationAPI.html":[0,0,0,0,0,0,0,82]
 };

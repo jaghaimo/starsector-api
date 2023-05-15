@@ -1,5 +1,9 @@
 var NAVTREEINDEX7 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAfterDelay.html#a3c92c6b03bf0cf0a87af3b2cacb6d110":[0,0,0,0,0,0,5,0,11,3,8,66,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAfterDelay.html#a45ecbd9310cd7c983e01c4afa4de4b12":[0,0,0,0,0,0,5,0,11,3,8,66,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetRemnantConfigAction.html":[0,0,0,0,0,0,5,0,11,3,8,68],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SpawnDebrisFieldAction.html":[0,0,0,0,0,0,5,0,11,3,8,69],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SpawnDerelictAction.html":[0,0,0,0,0,0,5,0,11,3,8,70],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SpawnDerelictAction.html#abe37d2d2ce0c8981bb198d06975f6e60":[0,0,0,0,0,0,5,0,11,3,8,70,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SpawnEntityAction.html":[0,0,0,0,0,0,5,0,11,3,8,71],
@@ -245,9 +249,5 @@ var NAVTREEINDEX7 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html":[0,0,0,0,0,0,5,0,15,56,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a00c741974cf9719a980bb7aee4af1e42":[0,0,0,0,0,0,5,0,15,56,0,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a50658d0b46c131028201e6f047b321c7":[0,0,0,0,0,0,5,0,15,56,0,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a89b1cb28c9d01842f5fa9f5b1a6a3a74":[0,0,0,0,0,0,5,0,15,56,0,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a90ad3637c60b6ce770a6ee82d335a744":[0,0,0,0,0,0,5,0,15,56,0,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html":[0,0,0,0,0,0,5,0,15,65],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HailPlayer.html":[0,0,0,0,0,0,5,0,15,57],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HasAttentionOfAuthorities.html":[0,0,0,0,0,0,5,0,15,58]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HA__CMD_1_1StationKingScript.html#a89b1cb28c9d01842f5fa9f5b1a6a3a74":[0,0,0,0,0,0,5,0,15,56,0,3]
 };

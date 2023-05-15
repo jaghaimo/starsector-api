@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1HandMeDownFreighter.html":[0,0,0,0,0,0,5,0,11,19],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1HijackingMission.html":[0,0,0,0,0,0,5,0,11,20],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1JailbreakMission.html":[0,0,0,0,0,0,5,0,11,21],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1LuddicPilgrimTransport.html":[0,0,0,0,0,0,5,0,11,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1PirateSystemBounty.html":[0,0,0,0,0,0,5,0,11,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1PirateSystemBounty.html#ac4bffbc076db7c5d78ed155c7dd4c2c6":[0,0,0,0,0,0,5,0,11,23,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1PirateSystemBounty_1_1BountyResult.html":[0,0,0,0,0,0,5,0,11,23,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetInflaterAction.html":[0,0,0,0,0,0,5,0,11,3,8,64],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAction.html":[0,0,0,0,0,0,5,0,11,3,8,65],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAfterDelay.html":[0,0,0,0,0,0,5,0,11,3,8,66],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAfterDelay.html#a39f1ab54f79722e5d8ba4838bb0859f7":[0,0,0,0,0,0,5,0,11,3,8,66,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAfterDelay.html#a3c92c6b03bf0cf0a87af3b2cacb6d110":[0,0,0,0,0,0,5,0,11,3,8,66,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAfterDelay.html#a45ecbd9310cd7c983e01c4afa4de4b12":[0,0,0,0,0,0,5,0,11,3,8,66,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetRemnantConfigAction.html":[0,0,0,0,0,0,5,0,11,3,8,68],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SpawnDebrisFieldAction.html":[0,0,0,0,0,0,5,0,11,3,8,69]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers_1_1SetMemoryValueAfterDelay.html#a39f1ab54f79722e5d8ba4838bb0859f7":[0,0,0,0,0,0,5,0,11,3,8,66,2]
 };
