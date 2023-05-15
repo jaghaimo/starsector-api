@@ -25,6 +25,8 @@ import com.fs.starfarer.api.util.Range;
 
 public class PirateBasePirateActivityCause2 extends BaseHostileActivityCause2 {
 
+	public static boolean DEAL_PROVIDES_NEGATIVE_PROGRESS = true;
+	
 	public static float MAX_MAG = 0.5f;
 	
 	
@@ -95,10 +97,24 @@ public class PirateBasePirateActivityCause2 extends BaseHostileActivityCause2 {
 			Color descColor = getDescColor(intel);
 			Color progressColor = getProgressColor(intel);
 			
+			//DEAL_PROVIDES_NEGATIVE_PROGRESS = true;
+			//DEAL_PROVIDES_NEGATIVE_PROGRESS = false;
+			
 			if (base.playerHasDealWithBaseCommander()) {
-				progressStr = EventFactor.NEGATED_FACTOR_PROGRESS;
-				descColor = Misc.getGrayColor();
+				if (DEAL_PROVIDES_NEGATIVE_PROGRESS) {
+					int p = getProgressForBase(base);
+					progressStr = "+" + p;
+					if (p < 0) progressStr = "" + p;
+					descColor = Misc.getTextColor();
+				} else {
+					progressStr = EventFactor.NEGATED_FACTOR_PROGRESS;
+					descColor = Misc.getGrayColor();
+				}
 				progressColor = Misc.getPositiveHighlightColor();
+			} else {
+				if (DEAL_PROVIDES_NEGATIVE_PROGRESS) {
+					descColor = Misc.getTextColor();
+				}
 			}
 			
 			info.addRowWithGlow(Alignment.LMID, descColor, "    " + desc,
@@ -145,9 +161,13 @@ public class PirateBasePirateActivityCause2 extends BaseHostileActivityCause2 {
 								Misc.getPositiveHighlightColor(), "agreement");
 						
 						int payment = HA_CMD.computePirateProtectionPaymentPerMonth(base);
+						String extra = "";
+						if (DEAL_PROVIDES_NEGATIVE_PROGRESS) {
+							extra = " instead of providing a reduction in progress";
+						}
 						tooltip.addPara("Assuming current colony income levels, this agreement costs "
 								+ "you %s per month. If it was not in effect, "
-								+ "this base would contribute %s points of event progress per month.", opad,
+								+ "this base would contribute %s points of event progress per month" + extra + ".", opad,
 								Misc.getHighlightColor(),
 								Misc.getDGSCredits(payment), "" + progress);
 						
@@ -196,13 +216,32 @@ public class PirateBasePirateActivityCause2 extends BaseHostileActivityCause2 {
 	
 
 	protected int getProgressForBase(PirateBaseIntel base) {
-		if (!ignoreDeal && base.playerHasDealWithBaseCommander()) {
-			return 0;
+		if (!DEAL_PROVIDES_NEGATIVE_PROGRESS) {
+			if (!ignoreDeal && base.playerHasDealWithBaseCommander()) {
+				return 0;
+			}
+		}
+		
+		boolean ignore = ignoreDeal;
+		
+		if (!ignore && DEAL_PROVIDES_NEGATIVE_PROGRESS) {
+			ignoreDeal = true;
 		}
 		int total = 0;
 		for (StarSystemAPI system : getSystemsAffectedBy(base)) {
 			total += getProgressForSystem(system);
 		}
+		
+		if (!ignore && DEAL_PROVIDES_NEGATIVE_PROGRESS) {
+			ignoreDeal = false;
+		}
+		
+		if (DEAL_PROVIDES_NEGATIVE_PROGRESS) {
+			if (!ignoreDeal && base.playerHasDealWithBaseCommander()) {
+				total *= -1;
+			}
+		}
+		
 		return total;
 	}
 	

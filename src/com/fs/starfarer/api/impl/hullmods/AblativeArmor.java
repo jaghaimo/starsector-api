@@ -10,6 +10,7 @@ public class AblativeArmor extends BaseHullMod {
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		stats.getEffectiveArmorBonus().modifyMult(id, ARMOR_MULT);
+		stats.getMinArmorFraction().modifyMult(id, ARMOR_MULT);
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {

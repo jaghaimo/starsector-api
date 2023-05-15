@@ -191,6 +191,12 @@ public class SensorArrayEntityPlugin extends BaseCampaignObjectivePlugin {
 	
 	protected void respondToFalseSensorReadings(CampaignFleetAPI fleet) {
 		if (fleet.isStationMode()) return;
+		if (fleet.getAI() == null) {
+			return;
+		}
+		if (fleet.getAI().getAssignmentsCopy() == null) {
+			return;
+		}
 		
 		MemoryAPI mem = fleet.getMemoryWithoutUpdate();
 		if (mem.getBoolean(MemFlags.FLEET_NOT_CHASING_GHOST)) {

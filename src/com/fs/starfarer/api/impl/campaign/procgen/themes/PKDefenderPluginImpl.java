@@ -90,6 +90,13 @@ public class PKDefenderPluginImpl extends BaseGenericPlugin implements SalvageDe
 			makeAICoreSkillsGoodForLowTech(curr, true);
 			curr.getRepairTracker().setCR(curr.getRepairTracker().getMaxCR());
 		}
+		
+		for (FleetMemberAPI curr : fleet.getFleetData().getMembersListCopy()) {
+			v = curr.getVariant().clone();
+			v.setSource(VariantSource.REFIT);
+			curr.setVariant(v, false, false);
+		}
+		
 		if (fleet.getInflater() instanceof DefaultFleetInflater) {
 			DefaultFleetInflater dfi = (DefaultFleetInflater) fleet.getInflater();
 			DefaultFleetInflaterParams dfip = (DefaultFleetInflaterParams)dfi.getParams();

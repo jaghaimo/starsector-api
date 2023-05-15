@@ -456,6 +456,9 @@ public class KantaCMD extends BaseCommandPlugin {
 			Global.getSector().addScript(new KantaFavorTrigger());
 		} else if ("abortFavor".equals(action)) {
 			Global.getSector().removeScriptsOfClass(KantaFavorTrigger.class);
+		} else if ("alreadyDidFavor".equals(action)) {
+			return !Global.getSector().hasScript(KantaFavorTrigger.class) && playerHasProtection();
+					//!Global.getSector().getMemoryWithoutUpdate().getBoolean("$affk_inProgress");
 		} else if ("installFusionLamp".equals(action)) {
 			SpecialItemData data = new SpecialItemData(Items.ORBITAL_FUSION_LAMP, null);
 			InstallableItemEffect effect = ItemEffectsRepo.ITEM_EFFECTS.get(data.getId());
@@ -512,7 +515,7 @@ public class KantaCMD extends BaseCommandPlugin {
 			
 			HostileActivityEventIntel intel = HostileActivityEventIntel.get();
 			if (intel != null) {
-				intel.addFactor(new KantasProtectionOneTimeFactor(-50));
+				intel.addFactor(new KantasProtectionOneTimeFactor(-Global.getSettings().getInt("HA_kantaProtection")), dialog);
 			}
 		} else if ("loseProtection".equals(action)) {
 			loseProtection(dialog);

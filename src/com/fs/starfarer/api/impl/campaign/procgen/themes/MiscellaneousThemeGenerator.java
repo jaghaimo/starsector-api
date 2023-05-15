@@ -947,6 +947,7 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 		
 		SectorEntityToken cache = BaseThemeGenerator.addSalvageEntity(system, Entities.HIDDEN_CACHE, Factions.NEUTRAL);
 		cache.getMemoryWithoutUpdate().set(PK_CACHE_KEY, true);
+		cache.addTag(Tags.NOT_RANDOM_MISSION_TARGET);
 		//cache.getLocation().set(10000, 10000);
 		cache.setCircularOrbit(field, 0, 0, 100f);
 		Misc.setDefenderOverride(cache, new DefenderDataOverride(Factions.HEGEMONY, 1f, 20, 20, 1));

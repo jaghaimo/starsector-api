@@ -806,6 +806,7 @@ public class BaseSkillEffectDescription implements CustomSkillDescription {
 		for (FleetMemberAPI curr : data.getMembersListCopy()) {
 			if (curr.isMothballed()) continue;
 			if (!Misc.isAutomated(curr)) continue;
+			if (Automated.isAutomatedNoPenalty(curr)) continue;
 			float mult = 1f;
 			int pts = (int) Math.round(getPoints(curr, stats));
 			//if (curr.getCaptain().isAICore()) {

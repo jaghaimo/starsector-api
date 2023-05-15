@@ -23,6 +23,11 @@ public class MissionFleetAutoDespawn implements EveryFrameScript {
 	
 	protected int framesWithNoAssignment = 0;
 	public void advance(float amount) {
+		
+//		System.out.println("MFAD: " + fleet.getName());
+//		if (fleet.getName().equals("Courier")) {
+//			System.out.println("fwefwf23f");
+//		}
 		boolean missionImportant = fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.ENTITY_MISSION_IMPORTANT);
 		FleetAssignmentDataAPI ad = fleet.getCurrentAssignment();
 		// make a hopefully reasonable guess that the fleet should stop chasing the player, if that's what it's doing

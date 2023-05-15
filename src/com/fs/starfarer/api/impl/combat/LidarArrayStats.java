@@ -136,7 +136,7 @@ public class LidarArrayStats extends BaseShipSystemScript {
 			if (needsUnapply) {
 				unmodify(id, stats);
 				for (WeaponAPI w : ship.getAllWeapons()) {
-					if (!w.isDecorative() && w.getSlot().isHardpoint() &&
+					if (!w.isDecorative() && w.getSlot().isHardpoint() && !w.isBeam() &&
 							(w.getType() == WeaponType.BALLISTIC || w.getType() == WeaponType.ENERGY)) {
 						w.setGlowAmount(0, null);
 					}
@@ -162,7 +162,7 @@ public class LidarArrayStats extends BaseShipSystemScript {
 				unmodify(id, stats);
 				for (WeaponAPI w : ship.getAllWeapons()) {
 					if (w.getSlot().isSystemSlot()) continue;
-					if (!w.isDecorative() && w.getSlot().isHardpoint() &&
+					if (!w.isDecorative() && w.getSlot().isHardpoint() && !w.isBeam() &&
 							(w.getType() == WeaponType.BALLISTIC || w.getType() == WeaponType.ENERGY)) {
 						w.setGlowAmount(0, null);
 					}
@@ -181,7 +181,7 @@ public class LidarArrayStats extends BaseShipSystemScript {
 					w.setForceNoFireOneFrame(true);
 				}
 			} else {
-				if (!(!w.isDecorative() && w.getSlot().isHardpoint() && 
+				if (!(!w.isDecorative() && w.getSlot().isHardpoint() && !w.isBeam() &&
 						(w.getType() == WeaponType.BALLISTIC || w.getType() == WeaponType.ENERGY))) {
 					w.setForceNoFireOneFrame(true);
 				}
@@ -192,7 +192,7 @@ public class LidarArrayStats extends BaseShipSystemScript {
 		
 		float lidarRange = 500;
 		for (WeaponAPI w : ship.getAllWeapons()) {
-			if (!w.isDecorative() && w.getSlot().isHardpoint() &&
+			if (!w.isDecorative() && w.getSlot().isHardpoint() && !w.isBeam() &&
 					(w.getType() == WeaponType.BALLISTIC || w.getType() == WeaponType.ENERGY)) {
 				lidarRange = Math.max(lidarRange, w.getRange());
 				w.setGlowAmount(effectLevel, glowColor);

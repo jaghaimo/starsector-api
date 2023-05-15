@@ -101,6 +101,8 @@ public class Waystation extends BaseIndustry {
 				lr.getStockpilingBonus(Commodities.FUEL).unmodifyFlat(getModId(0));
 				lr.getStockpilingBonus(Commodities.SUPPLIES).unmodifyFlat(getModId(0));
 				lr.getStockpilingBonus(Commodities.CREW).unmodifyFlat(getModId(0));
+				lr.getStockpilingBonus(Commodities.VOLATILES).unmodifyFlat(getModId(0));
+				lr.getStockpilingBonus(Commodities.RARE_METALS).unmodifyFlat(getModId(0));
 			}
 		}
 	}

@@ -177,6 +177,10 @@ public class PirateRaidActionStage extends ActionStage implements FleetActionDel
 	protected void updateRoutes() {
 		resetRoutes();
 		
+		if (playerTargeted) {
+			intel.sendEnteredSystemUpdate();
+		}
+		
 		
 		FactionAPI faction = intel.getFaction();
 		

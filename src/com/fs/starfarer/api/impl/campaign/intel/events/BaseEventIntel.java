@@ -373,7 +373,7 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 	}
 	public TooltipCreator getStageTooltip(Object stageId) {
 		final EventStageData esd = getDataFor(stageId);
-		if (esd == null || (esd.randomized && esd.rollData == null)) {
+		if (esd == null || (esd.randomized && (esd.rollData == null || RANDOM_EVENT_NONE.equals(esd.rollData)))) {
 			return new TooltipCreator() {
 				public boolean isTooltipExpandable(Object tooltipParam) {
 					return false;
@@ -449,7 +449,7 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 	
 	protected String getStageIcon(Object stageId) {
 		EventStageData esd = getDataFor(stageId);
-		if (esd == null || (esd.randomized && esd.rollData == null)) {
+		if (esd == null || (esd.randomized && (esd.rollData == null || RANDOM_EVENT_NONE.equals(esd.rollData)))) {
 			if (esd.randomType == RandomizedStageType.GOOD) {
 				return Global.getSettings().getSpriteName("events", "stage_unknown_good");
 			} else if (esd.randomType == RandomizedStageType.BAD) {

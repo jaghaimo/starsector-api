@@ -3195,11 +3195,12 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 					crewLosses.addCrew((f1 - 1) * c.getCrew());
 				}
 				
+				float lost = c.getCrew() * f1;
 				// both fighters and normal ships
-				c.transfer(c.getCrew() * f1, crewLosses);
+				c.transfer(lost, crewLosses);
 				
 				if (player) {
-					playerLosses.addCrew(c.getCrew() * f1);
+					playerLosses.addCrew(lost);
 					playerCapacityLost += member.getMaxCrew() * f1;
 				}
 			}
@@ -3223,6 +3224,9 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			float totalCrew = cargo.getTotalCrew();
 			float marines = cargo.getMarines();
 			float recoverableTotal = recoverable.getCrew() + recoverable.getMarines();
+			
+			//recoverableTotal = 0f; // uncomment to let recoverable crew not be lost due to being over capacity
+			
 			float total = totalCrew + marines + recoverableTotal;
 			if (maxCrew + playerCapacityLost > 0) {
 				total *= playerCapacityLost / (maxCrew + playerCapacityLost);
@@ -3236,7 +3240,8 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 				//float toLose = Math.min(maxExtraLoss, total - maxCrew);
 				float toLose = total - maxCrew;
 				if (toLose > 0) {
-					recoverable.clear();
+					//recoverable.clear();
+					recoverable.transfer(Math.min(recoverableTotal, toLose), null);
 					toLose -= recoverableTotal;
 					total -= recoverableTotal;
 					

@@ -138,6 +138,8 @@ public class DisposableHostileActivityFleetManager extends DisposableFleetManage
 			if (!(factor instanceof HostileActivityFactor)) {
 				continue;
 			}
+			//if (factor instanceof LuddicPathHostileActivityFactor) continue;
+			
 			HostileActivityFactor curr = (HostileActivityFactor) factor;
 			int count = 0;
 			for (ManagedFleetData data : active) {

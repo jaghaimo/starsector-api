@@ -416,28 +416,30 @@ public class ExplosionEntityPlugin extends BaseCustomEntityPlugin {
 				strikeDamage = HyperspaceTerrainPlugin.STORM_MAX_STRIKE_DAMAGE;
 			}
 			
-			float currCR = member.getRepairTracker().getBaseCR();
-			float crDamage = Math.min(currCR, strikeDamage);
-			
-			if (crDamage > 0) {
-				member.getRepairTracker().applyCREvent(-crDamage, "explosion_" + entity.getId(),
-													"Damaged by explosion");
-			}
-			
-			float hitStrength = member.getStats().getArmorBonus().computeEffective(member.getHullSpec().getArmorRating());
-			//hitStrength *= strikeDamage / crPerDep;
-			int numHits = (int) (strikeDamage / 0.1f);
-			if (numHits < 1) numHits = 1;
-			for (int j = 0; j < numHits; j++) {
-				member.getStatus().applyDamage(hitStrength);
-			}
-			//member.getStatus().applyHullFractionDamage(1f);
-			if (member.getStatus().getHullFraction() < 0.01f) {
-				member.getStatus().setHullFraction(0.01f);
-				picker.remove(member);
-			} else {
-				float w = picker.getWeight(member);
-				picker.setWeight(picker.getItems().indexOf(member), w * 0.5f);
+			if (strikeDamage > 0) {
+				float currCR = member.getRepairTracker().getBaseCR();
+				float crDamage = Math.min(currCR, strikeDamage);
+				
+				if (crDamage > 0) {
+					member.getRepairTracker().applyCREvent(-crDamage, "explosion_" + entity.getId(),
+														"Damaged by explosion");
+				}
+				
+				float hitStrength = member.getStats().getArmorBonus().computeEffective(member.getHullSpec().getArmorRating());
+				//hitStrength *= strikeDamage / crPerDep;
+				int numHits = (int) (strikeDamage / 0.1f);
+				if (numHits < 1) numHits = 1;
+				for (int j = 0; j < numHits; j++) {
+					member.getStatus().applyDamage(hitStrength);
+				}
+				//member.getStatus().applyHullFractionDamage(1f);
+				if (member.getStatus().getHullFraction() < 0.01f) {
+					member.getStatus().setHullFraction(0.01f);
+					picker.remove(member);
+				} else {
+					float w = picker.getWeight(member);
+					picker.setWeight(picker.getItems().indexOf(member), w * 0.5f);
+				}
 			}
 			//picker.remove(member);
 		}

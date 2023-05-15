@@ -41,6 +41,7 @@ public class RaidIntel extends BaseIntelPlugin implements RouteFleetSpawner {
 
 	public static Object UPDATE_FAILED = new Object();
 	public static Object UPDATE_RETURNING = new Object();
+	public static Object ENTERED_SYSTEM_UPDATE = new Object();
 	
 	public static enum RaidStageStatus {
 		ONGOING,
@@ -94,6 +95,10 @@ public class RaidIntel extends BaseIntelPlugin implements RouteFleetSpawner {
 //			}
 //		}
 		defenderStr = WarSimScript.getEnemyStrength(getFaction(), system);
+	}
+	
+	public void sendEnteredSystemUpdate() {
+		//sendUpdateIfPlayerHasIntel(ENTERED_SYSTEM_UPDATE, false);
 	}
 	
 	public StarSystemAPI getSystem() {
@@ -282,7 +287,7 @@ public class RaidIntel extends BaseIntelPlugin implements RouteFleetSpawner {
 			if (stage instanceof OrganizeStage) {
 				eta += Math.max(0f, stage.getMaxDays() - stage.getElapsed());
 			} else if (stage instanceof AssembleStage) {
-				eta += Math.max(0f, 10f - stage.getElapsed());
+				eta += Math.max(0f, 20f - stage.getElapsed());
 			} else if (stage instanceof TravelStage) {
 				float travelDays = RouteLocationCalculator.getTravelDays(getAssembleStage().gatheringPoint, system.getHyperspaceAnchor());
 				eta += Math.max(0f, travelDays - stage.getElapsed());
@@ -331,19 +336,23 @@ public class RaidIntel extends BaseIntelPlugin implements RouteFleetSpawner {
 		}
 		
 		if (isUpdate) {
-			if (failStage < 0) {
-				info.addPara("Colonies in the " + system.getNameWithLowercaseType() + " have been raided", 
-				  	 	 	tc, initPad);
+			if (getListInfoParam() == ENTERED_SYSTEM_UPDATE) {
+				info.addPara("Arrived in-system", tc, initPad);
 			} else {
-				info.addPara("The raid on the " + system.getNameWithLowercaseType() + " has failed", 
-			  	 	 	tc, initPad);
+				if (failStage < 0) {
+					info.addPara("Colonies in the " + system.getNameWithLowercaseType() + " have been raided", 
+					  	 	 	tc, initPad);
+				} else {
+					info.addPara("The raid on the " + system.getNameWithLowercaseType() + " has failed", 
+				  	 	 	tc, initPad);
+				}
 			}
 		} else {
 			info.addPara(system.getNameWithLowercaseType(), 
 					  	 tc, initPad);
 		}
 		initPad = 0f;
-		if (eta > 1 && failStage < 0) {
+		if (eta > 1 && failStage < 0 && getListInfoParam() != ENTERED_SYSTEM_UPDATE) {
 			String days = getDaysString(eta);
 			info.addPara("Estimated %s " + days + " until arrival", 
 					initPad, tc, h, "" + (int)Math.round(eta));

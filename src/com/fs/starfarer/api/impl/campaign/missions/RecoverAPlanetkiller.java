@@ -28,6 +28,9 @@ public class RecoverAPlanetkiller extends HubMissionWithSearch {
 		FAILED,
 	}
 	
+	public static boolean startedAtPather() {
+		return Global.getSector().getMemoryWithoutUpdate().getBoolean("$pk_startedAtPather");
+	}
 	public static boolean startedAtNexus() {
 		return Global.getSector().getMemoryWithoutUpdate().getBoolean("$pk_startedAtNexus");
 	}
@@ -59,7 +62,6 @@ public class RecoverAPlanetkiller extends HubMissionWithSearch {
 	@Override
 	protected boolean create(MarketAPI createdAt, boolean barEvent) {
 		//genRandom = Misc.random;
-		
 		setPersonOverride(null);
 		
 		setStoryMission();
@@ -77,6 +79,9 @@ public class RecoverAPlanetkiller extends HubMissionWithSearch {
 		if (startedAtNexus()) {
 			setStartingStage(Stage.RECOVER_PK);
 		} else {
+			if (nexus == null || !nexus.isAlive() || getNexusSystem() == null) {
+				return false;
+			}
 			setStartingStage(Stage.GO_TO_NEXUS);
 		}
 		
@@ -86,8 +91,6 @@ public class RecoverAPlanetkiller extends HubMissionWithSearch {
 //		setRepFactionChangesVeryHigh();
 //		setRepPersonChangesVeryHigh();
 		
-		// TODO: handle this when the PK is handed over, 
-		// not in the mission - the mission ends when you recover the PK
 		setRepPenaltyFaction(0f);
 		setRepPenaltyPerson(0f);
 		
@@ -101,7 +104,6 @@ public class RecoverAPlanetkiller extends HubMissionWithSearch {
 		triggerSetGlobalMemoryValue("$pk_recovered", true);
 		triggerSetGlobalMemoryValue("$pk_missionCompleted", true);
 		endTrigger();
-
 		
 		return true;
 	}
@@ -137,8 +139,12 @@ public class RecoverAPlanetkiller extends HubMissionWithSearch {
 			set("$pk_stage", ((Enum)getCurrentStage()).name());
 		}
 		
-		set("$pk_nexusSystemName", ns.getNameWithLowercaseTypeShort());
-		set("$pk_pkSystemName", pks.getNameWithLowercaseTypeShort());
+		if (ns != null) {
+			set("$pk_nexusSystemName", ns.getNameWithLowercaseTypeShort());
+		}
+		if (pks != null) {
+			set("$pk_pkSystemName", pks.getNameWithLowercaseTypeShort());
+		}
 	}
 	
 	@Override

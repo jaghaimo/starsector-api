@@ -159,7 +159,7 @@ public class BaseRaidStage implements RaidStage {
 	}
 	protected void updateStatusBasedOnReaching(SectorEntityToken dest, boolean giveReturnOrders, boolean requireNearTarget) {
 		List<RouteData> routes = getRoutes();
-		float maxRange = 1000f;
+		float maxRange = 2000f;
 		if (!requireNearTarget) {
 			maxRange = 10000000f;
 		}

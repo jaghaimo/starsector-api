@@ -264,8 +264,8 @@ public class BallisticRangefinder extends BaseHullMod {
 		else c = g;
 		tooltip.addRow(Alignment.MID, c, "Small / Medium",
 				Alignment.MID, c, "+" + (int) (BONUS_SMALL_1 * HYBRID_MULT),
-				Alignment.MID, g, "+" + (int) HYBRID_BONUS_MIN,
-				Alignment.MID, g, "+" + (int) HYBRID_BONUS_MIN,
+				Alignment.MID, c, "+" + (int) HYBRID_BONUS_MIN,
+				Alignment.MID, c, "+" + (int) HYBRID_BONUS_MIN,
 				Alignment.MID, c, "" + (int)BONUS_MAX_1);
 		
 		if (largest == WeaponSize.LARGE) c = h;

@@ -552,16 +552,18 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 		Color h = Misc.getHighlightColor();
 		
 		if (getListInfoParam() == SHOW_GATE_SCAN_COUNT) {
-			if (GateEntityPlugin.getNumGatesScanned() >= 6)
-			{
-				// We don't want to end up writing 7/6 if the player gets excitable about scanning before talking to Daud -dgb
-				info.addPara("%s Gates scanned", pad, tc, Misc.getHighlightColor(), "6 / 6");
-			}
-			else
-			{
+//			if (GateEntityPlugin.getNumGatesScanned() >= 6)
+//			{
+//				// We don't want to end up writing 7/6 if the player gets excitable about scanning before talking to Daud -dgb
+				// I kind of think we do - it looks confusing if they scan but the number doesn't go up
+				// and in most cases there's no notification, if it's over 6, anyway -am
+//				info.addPara("%s Gates scanned", pad, tc, Misc.getHighlightColor(), "6 / 6");
+//			}
+//			else
+//			{
 				info.addPara("%s Gates scanned", pad, tc, Misc.getHighlightColor(), 
 						"" + GateEntityPlugin.getNumGatesScanned() + " / 6");
-			}
+//			}
 			return true;
 			
 		}

@@ -39,6 +39,9 @@ import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseManager;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.PirateBaseTier;
+import com.fs.starfarer.api.impl.campaign.intel.events.HALuddicPathDealFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.HAPirateKingDealFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel;
 import com.fs.starfarer.api.impl.campaign.intel.events.PirateBasePirateActivityCause2;
 import com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission;
 import com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetAutoDespawn;
@@ -73,11 +76,15 @@ public class HA_CMD extends BaseCommandPlugin {
 	}
 	public static boolean playerHasPatherAgreement() {
 		//if (true) return true;
-		return Global.getSector().getPlayerMemoryWithoutUpdate().getBoolean(PATHER_AGREEMENT);
+		// second part is to make 0.96a-RC8 saves work now that the correct variable is being set
+		return Global.getSector().getPlayerMemoryWithoutUpdate().getBoolean(PATHER_AGREEMENT) ||
+				Global.getSector().getMemoryWithoutUpdate().getBoolean(PATHER_AGREEMENT);
 	}
 	public static boolean playerPatherAgreementIsPermanent() {
 		//if (true) return true;
-		return Global.getSector().getPlayerMemoryWithoutUpdate().getBoolean(PATHER_AGREEMENT_PERMANENT);
+		// second part is to make 0.96a-RC8 saves work now that the correct variable is being set
+		return Global.getSector().getPlayerMemoryWithoutUpdate().getBoolean(PATHER_AGREEMENT_PERMANENT) || 
+				Global.getSector().getMemoryWithoutUpdate().getBoolean(PATHER_AGREEMENT_PERMANENT);
 	}
 	
 	public static float getPlayerPatherAgreementDays() {
@@ -423,13 +430,25 @@ public class HA_CMD extends BaseCommandPlugin {
 			PirateBaseIntel base = PirateBaseIntel.getIntelFor(dialog.getInteractionTarget());
 			if (base == null) return false;
 			
-			return !PirateBasePirateActivityCause2.getColoniesAffectedBy(base).isEmpty();
+			return baseInvolved(system, base);
 		} else if ("addStationKingScript".equals(action)) {
 			Global.getSoundPlayer().playUISound("ui_rep_raise", 1f, 1f);
 			PirateBaseIntel base = PirateBaseIntel.getIntelFor(dialog.getInteractionTarget());
 			if (base == null) return false;
 			base.getSystem().addScript(new StationKingScript(base));
-			base.sendUpdate(PirateBaseIntel.DEAL_MADE_PARAM, text);
+			
+			// feels extraneous given the below also sending an update
+			//base.sendUpdate(PirateBaseIntel.DEAL_MADE_PARAM, text);
+			
+			HostileActivityEventIntel ha = HostileActivityEventIntel.get();
+			if (ha != null) {
+				int tier = base.getTier().ordinal();
+				if (tier < 0) tier = 0;
+				if (tier > 4) tier = 4;
+				int points = -1 * Global.getSettings().getIntFromArray("HA_pirateBase", tier);
+				HAPirateKingDealFactor factor = new HAPirateKingDealFactor(points);
+				ha.addFactor(factor, dialog);
+			}
 			
 			Misc.adjustRep(base.getBaseCommander(), RepRewards.HIGH, text);
 			Misc.adjustRep(base.getBaseCommander().getFaction().getId(), RepRewards.MEDIUM, text);
@@ -487,7 +506,21 @@ public class HA_CMD extends BaseCommandPlugin {
 				Misc.giveStandardReturnToSourceAssignments(curr, true);
 			}
 			
+			HostileActivityEventIntel ha = HostileActivityEventIntel.get();
+			if (ha != null) {
+				int points = -1 * Global.getSettings().getInt("HA_megaTithe");
+				HALuddicPathDealFactor factor = new HALuddicPathDealFactor(points);
+				ha.addFactor(factor, dialog);
+			}
+			
 			return true;
+		} else if ("gavePKToPather".equals(action)) {
+			HostileActivityEventIntel ha = HostileActivityEventIntel.get();
+			if (ha != null) {
+				int points = -1 * Global.getSettings().getInt("HA_givePK");
+				HALuddicPathDealFactor factor = new HALuddicPathDealFactor(points);
+				ha.addFactor(factor, dialog);
+			}
 		} else if ("computeMegaTithe".equals(action)) {
 			float credits = cargo.getCredits().get();
 			
@@ -518,6 +551,11 @@ public class HA_CMD extends BaseCommandPlugin {
 		return false;
 	}
 
-	
+	public static boolean baseInvolved(StarSystemAPI system, PirateBaseIntel base) {
+		if (system == null) return false;
+		if (base == null) return false;
+		
+		return !PirateBasePirateActivityCause2.getColoniesAffectedBy(base).isEmpty();
+	}
 	
 }

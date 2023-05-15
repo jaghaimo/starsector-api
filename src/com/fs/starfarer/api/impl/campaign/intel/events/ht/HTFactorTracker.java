@@ -171,12 +171,14 @@ public class HTFactorTracker implements EveryFrameScript {
 		
 		String id = ionStorm.getEntity().getId();
 		
-		if (scanned.contains(id)) {
-			addMessage("Ion storm already scanned");
-		} else if (ionStorm.containsEntity(pf)) {
-			HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(
-					new HTScanFactor("Ion storm scanned (" + planet.getName() + ")", HTPoints.SCAN_ION_STORM), null);
-			scanned.add(id);
+		if (ionStorm.containsEntity(pf)) {
+			if (scanned.contains(id)) {
+				addMessage("Ion storm already scanned");
+			} else {
+				HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(
+						new HTScanFactor("Ion storm scanned (" + planet.getName() + ")", HTPoints.SCAN_ION_STORM), null);
+				scanned.add(id);
+			}
 		}
 	}
 	
@@ -250,12 +252,14 @@ public class HTFactorTracker implements EveryFrameScript {
 		String id = "systemtypescan_" + system.getId();
 		float range = pf.getLocation().length();
 		
-		if (scanned.contains(id)) {
-			addMessage("Center of star system already scanned");
-		} else if (range < 2000) {
-			HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(
-					new HTScanFactor(type + " scanned (" + system.getBaseName() + ")", points), null);
-			scanned.add(id);
+		if (range < 2000) {
+			if (scanned.contains(id)) {
+				addMessage("Center of star system already scanned");
+			} else {
+				HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(
+						new HTScanFactor(type + " scanned (" + system.getBaseName() + ")", points), null);
+				scanned.add(id);
+			}
 		}
 	}
 	

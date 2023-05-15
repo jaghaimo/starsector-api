@@ -183,7 +183,7 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 			createInitialOptions();
 			break;
 		case DUMP_PLANETKILLER_CONT_1:
-			addText("At your command the planetkiller, locked in its cradle, is boosted toward the very center of the black hole, up and over the plane of the accretion disc.\n"
+			addText("At your command the planetkiller, locked in its cradle, is boosted toward the very center of the black hole, up and over the plane of the accretion disc.\n\n"
 					+ "With a flash only a little more than noise in the sensor telemetry, it is gone."); //, like tears in rain"); - OMG Alex, you're killing me -dgb
 			AddRemoveCommodity.addItemLossText(new SpecialItemData(Items.PLANETKILLER, null), 1, dialog.getTextPanel());
 			Global.getSector().getPlayerStats().addStoryPoints(1, dialog.getTextPanel(), false);
@@ -317,7 +317,7 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 //		}
 		
 		
-		if (hasPK()) {
+		if (hasPK() && blackHole == true) {
 			options.addOption("Dump the planetkiller weapon into the black hole", OptionId.DUMP_PLANETKILLER, null);
 		}
 		

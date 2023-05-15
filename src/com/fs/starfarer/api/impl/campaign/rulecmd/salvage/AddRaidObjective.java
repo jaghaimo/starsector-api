@@ -32,7 +32,8 @@ import com.fs.starfarer.api.util.Misc.Token;
  * specifies a trigger to call when going back from the raid menu, and that doesn't make sense in the context of 
  * a "normal" raid.
  * 
- * AddRaidObjective <icon id> <name to show> <danger> <xp gained> <trigger to run when successful>
+ * AddRaidObjective <icon id> <name to show> <danger> <xp gained> <trigger to run when successful> 
+ * 				<optional:show in custom raid menu only> <optional: tooltip>
  */
 public class AddRaidObjective extends BaseCommandPlugin {
 
@@ -115,11 +116,12 @@ public class AddRaidObjective extends BaseCommandPlugin {
 		public String trigger;
 		public String tooltip;
 		public int xp = 0;
+		public boolean showInCustomOnly;
 		public RaidDangerLevel danger;
 		public MarketAPI market;
 		public SectorEntityToken entity;
 		
-		public CustomRaidObjectiveAdder(MarketAPI market, SectorEntityToken entity, String icon, String name, String trigger, int xp, RaidDangerLevel danger, String tooltip) {
+		public CustomRaidObjectiveAdder(MarketAPI market, SectorEntityToken entity, String icon, String name, String trigger, int xp, RaidDangerLevel danger, boolean showInCustomOnly, String tooltip) {
 			this.market = market;
 			this.entity = entity;
 			this.icon = icon;
@@ -128,6 +130,7 @@ public class AddRaidObjective extends BaseCommandPlugin {
 			this.tooltip = tooltip;
 			this.xp = xp;
 			this.danger = danger;
+			this.showInCustomOnly = showInCustomOnly;
 			for (CustomRaidObjectiveAdder adder : Global.getSector().getListenerManager().getListeners(CustomRaidObjectiveAdder.class)) {
 				if (adder.name.equals(name) && adder.trigger.equals(trigger)) {
 					return;
@@ -137,7 +140,7 @@ public class AddRaidObjective extends BaseCommandPlugin {
 			Global.getSector().addScript(this);
 		}
 		public void advance(float amount) {
-			if (amount > 0) {
+			if (amount > 0 && !done) {
 				for (CustomRaidObjectiveAdder adder : Global.getSector().getListenerManager().getListeners(CustomRaidObjectiveAdder.class)) {
 					if (adder.name.equals(name) && adder.trigger.equals(trigger)) {
 						Global.getSector().getListenerManager().removeListener(this);
@@ -156,11 +159,10 @@ public class AddRaidObjective extends BaseCommandPlugin {
 		public void modifyRaidObjectives(MarketAPI market, SectorEntityToken entity, List<GroundRaidObjectivePlugin> objectives, RaidType type, int marineTokens, int priority) {
 			if (priority != 0) return;
 			
-			boolean customOnly = entity == null || entity.getMemoryWithoutUpdate().contains("$raidContinueTrigger");
-			if (customOnly && type != RaidType.CUSTOM_ONLY) return;
 			if (type == RaidType.DISRUPT) return;
+			if (type != RaidType.CUSTOM_ONLY && showInCustomOnly) return;
 			
-			if (customOnly && entity != null &&
+			if (type == RaidType.CUSTOM_ONLY && entity != null &&
 					entity.getMemoryWithoutUpdate().contains("$raidRestrictToTrigger")) {
 				String restrict = entity.getMemoryWithoutUpdate().getString("$raidRestrictToTrigger");
 				if (restrict != null && !restrict.isEmpty() && !restrict.equals(trigger)) {
@@ -187,6 +189,7 @@ public class AddRaidObjective extends BaseCommandPlugin {
 				}
 			}
 			if (found) {
+				advance(0.1f); // triggers removal of objective
 				dialog.getInteractionTarget().getMemoryWithoutUpdate().set("$raidMarinesLost", data.marinesLost, 0);
 				FireAll.fire(null, dialog, memoryMap, trigger);
 			}
@@ -202,15 +205,29 @@ public class AddRaidObjective extends BaseCommandPlugin {
 		int xp = (int) params.get(3).getFloat(memoryMap);
 		String trigger = params.get(4).getString(memoryMap);
 		
+		boolean showInCustomOnly = false;
+		
 		String tooltip = null;
 		if (params.size() > 5) {
-			tooltip = params.get(5).getStringWithTokenReplacement(params.get(5).getString(memoryMap), dialog, memoryMap);
+			if (params.size() > 6) {
+				showInCustomOnly = params.get(5).getBoolean(memoryMap);
+				tooltip = params.get(6).getStringWithTokenReplacement(params.get(5).getString(memoryMap), dialog, memoryMap);
+			} else {
+				String str = params.get(5).getString(memoryMap);
+				if (str != null) {
+					if (str.toLowerCase().equals("true") || str.toLowerCase().equals("false")) {
+						showInCustomOnly = params.get(5).getBoolean(memoryMap);
+					} else {
+						tooltip = params.get(5).getStringWithTokenReplacement(params.get(5).getString(memoryMap), dialog, memoryMap);
+					}
+				}
+			}
 		}
 
 		SectorEntityToken entity = dialog.getInteractionTarget();
 		MarketAPI market = entity.getMarket();
 		
-		new CustomRaidObjectiveAdder(market, entity, icon, name, trigger, xp, danger, tooltip);
+		new CustomRaidObjectiveAdder(market, entity, icon, name, trigger, xp, danger, showInCustomOnly, tooltip);
 		
 		return true;
 	}

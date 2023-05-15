@@ -358,7 +358,7 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 	public Set<String> getIntelTags(SectorMapAPI map) {
 		Set<String> tags = super.getIntelTags(map);
 		tags.add(Tags.INTEL_EXPLORATION);
-		tags.remove(Tags.INTEL_MAJOR_EVENT);
+		//tags.remove(Tags.INTEL_MAJOR_EVENT);
 		return tags;
 	}
 
@@ -440,6 +440,9 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 
 				boolean unapplicable = false;
 				Industry spaceport = market.getIndustry(Industries.SPACEPORT);
+				if (spaceport == null) {
+					spaceport = market.getIndustry(Industries.MEGAPORT);
+				}
 				if (spaceport == null || !spaceport.isFunctional()) {
 					unapplicable = true;
 				}

@@ -86,19 +86,27 @@ public class BaseHostileActivityFactor extends BaseEventFactor implements Hostil
 		return 1000;
 	}
 
-	public float getEffectMagnitudeAdjustedBySuppression(StarSystemAPI system) {
-		float mag = getEffectMagnitude(system);
-		//float s = intel.computeSuppressionAmount();
-		// currently, keep fleets the same size when suppressed, too
-		// otherwise, the fights just get less fun as you're trying to suppress more
-		return mag;
-	}
+//	public float getEffectMagnitudeAdjustedBySuppression(StarSystemAPI system) {
+//		float mag = getEffectMagnitude(system);
+//		//float s = intel.computeSuppressionAmount();
+//		// currently, keep fleets the same size when suppressed, too
+//		// otherwise, the fights just get less fun as you're trying to suppress more
+//		return mag;
+//	}
 	
-	public float getEffectMagnitude(StarSystemAPI system) {
+	public float getEffectMagnitude(StarSystemAPI system) {//, boolean adjustByEventProgress) {
 		float mag = 0f;
 		for (HostileActivityCause2 cause : causes) {
 			mag += cause.getMagnitudeContribution(system);
 		}
+//		if (adjustByEventProgress) {
+//			float f = intel.getProgressFraction();
+//			float add = f * 0.5f;
+//			add = Math.min(add, 1f - mag); wefwefwefewfwe
+//			if (mag < f) {
+//				mag = Misc.interpolate(mag, f, 0.5f);
+//			}
+//		}
 		return mag;
 	}
 

@@ -113,6 +113,10 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 		int difficulty = 0;
 		difficulty += (int) Math.round(f * 7f);
 		
+		
+		int min = (int) Math.round(intel.getProgressFraction() * 6f);
+		if (difficulty < min) difficulty = min;
+		
 		difficulty += random.nextInt(4);
 		
 		FleetCreatorMission m = new FleetCreatorMission(random);
@@ -205,6 +209,7 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 	}
 	
 	public void rollEvent(HostileActivityEventIntel intel, EventStageData stage) {
+//		if (true) return;
 		HAERandomEventData data = new HAERandomEventData(this, stage);
 		stage.rollData = data;
 		intel.sendUpdateIfPlayerHasIntel(data, false);
@@ -219,7 +224,7 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 	
 		float mag = getEffectMagnitude(target);
 		
-		float raidFP = 500f * (0.5f + Math.min(1f, mag) * 0.5f);
+		float raidFP = 1000f * (0.5f + Math.min(1f, mag) * 0.5f);
 		raidFP *= 0.85f + 0.3f * intel.getRandom().nextFloat();
 		
 		if (stage.id == Stage.MINOR_EVENT) {

@@ -48,29 +48,32 @@ public class LuddicPilgrimTransport extends HubMissionWithBarEvent {
 	
 	@Override
 	protected boolean create(MarketAPI createdAt, boolean barEvent) {
+		// if already accepted by the player, abort
+		if (!setGlobalReference("$lpt_ref", "$lpt_inProgress")) {
+			return false;
+		}
+		
 		//genRandom = Misc.random;
 		
 		//if (Factions.PIRATES.equals(createdAt.getFaction().getId())) return false;
 		
 		source_market = createdAt;
 		
-		
-		
 		// let's just whitelist core worlds. Should be based on places that plausibly have a significant/interesting Luddic population
-		if (! ( source_market.getId().equals("chicomoztoc") ||
-				!source_market.getId().equals("mazalot") ||
-				!source_market.getId().equals("ilm") ||
-				!source_market.getId().equals("volturn") ||
-				!source_market.getId().equals("jangala") ||
-				!source_market.getId().equals("epiphany") ||
-				!source_market.getId().equals("cibola") ||
-				!source_market.getId().equals("madeira") ||
-				!source_market.getId().equals("chalcedon") ||
-				!source_market.getId().equals("tartessus") ||
-				!source_market.getId().equals("hesperus") ||
-				!source_market.getId().equals("fikenhild") ||
-				!source_market.getId().equals("athulf") ||
-				!source_market.getId().equals("suddene")) ) {
+		if ( !( source_market.getId().equals("chicomoztoc") ||
+				source_market.getId().equals("mazalot") ||
+				source_market.getId().equals("ilm") ||
+				source_market.getId().equals("volturn") ||
+				source_market.getId().equals("jangala") ||
+				source_market.getId().equals("epiphany") ||
+				source_market.getId().equals("cibola") ||
+				source_market.getId().equals("madeira") ||
+				source_market.getId().equals("chalcedon") ||
+				source_market.getId().equals("tartessus") ||
+				source_market.getId().equals("hesperus") ||
+				source_market.getId().equals("fikenhild") ||
+				source_market.getId().equals("athulf") ||
+				source_market.getId().equals("suddene")) ) {
 			return false;
 			}
 		
@@ -178,7 +181,7 @@ public class LuddicPilgrimTransport extends HubMissionWithBarEvent {
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		if (currentStage == Stage.TRANSPORT) {
-			info.addPara("Transport a small part of Luddic pilgrims to " + destination_entity.getName() + 
+			info.addPara("Transport a small party of Luddic pilgrims to " + destination_entity.getName() + 
 					" in the " + destination_system.getNameWithLowercaseTypeShort() + ".", opad,
 					h, Misc.getWithDGS(quantity));
 			
@@ -190,7 +193,7 @@ public class LuddicPilgrimTransport extends HubMissionWithBarEvent {
 	public boolean addNextStepText(TooltipMakerAPI info, Color tc, float pad) {
 		Color h = Misc.getHighlightColor();
 		if (currentStage == Stage.TRANSPORT) {
-			info.addPara("Transport a small part of Luddic pilgrims to " + destination_entity.getName() + 
+			info.addPara("Transport a small party of Luddic pilgrims to " + destination_entity.getName() + 
 					" in the " + destination_system.getNameWithLowercaseTypeShort(), pad, tc,
 					h, Misc.getWithDGS(quantity));
 			return true;

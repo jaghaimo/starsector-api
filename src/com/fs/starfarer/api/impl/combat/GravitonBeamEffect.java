@@ -78,7 +78,7 @@ public class GravitonBeamEffect implements BeamEffectPlugin {
 				bonus = DAMAGE_PERCENT_ONE;
 			} else if (beams == 2) {
 				bonus = DAMAGE_PERCENT_TWO;
-			} else if (beams == 3) {
+			} else if (beams >= 3) {
 				bonus = DAMAGE_PERCENT_THREE;
 			}
 			

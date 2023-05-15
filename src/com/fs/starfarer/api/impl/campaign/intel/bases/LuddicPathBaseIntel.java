@@ -98,6 +98,15 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 	
 	protected Random random = new Random();
 	
+	public static LuddicPathBaseIntel getIntelFor(StarSystemAPI system) {
+		for (IntelInfoPlugin intel : Global.getSector().getIntelManager().getIntel(LuddicPathBaseIntel.class)) {
+			if (((LuddicPathBaseIntel)intel).getSystem() == system) {
+				return (LuddicPathBaseIntel) intel;
+			}
+		}
+		return null;
+	}
+	
 	public LuddicPathBaseIntel(StarSystemAPI system, String factionId) {
 		this.system = system;
 	

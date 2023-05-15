@@ -73,7 +73,7 @@ public class EnergyBoltCoherer extends BaseHullMod {
 		
 		if (!Misc.isAutomated(ship)) {
 			tooltip.addPara("Originally designed by the Tri-Tachyon Corporation for use on its combat droneships, "
-					+ "the coherence field strengh has to be dialed down to allow operation on crewed vessels.", opad);
+					+ "the coherence field strength has to be dialed down to allow operation on crewed vessels.", opad);
 			tooltip.addPara("Increases the base range of all non-beam Energy and Hybrid weapons by %s.", opad, h,
 					"" + (int)CREWED_RANGE_BONUS);
 			tooltip.addPara("The coherence field is unstable under combat conditions, with stresses on the hull "

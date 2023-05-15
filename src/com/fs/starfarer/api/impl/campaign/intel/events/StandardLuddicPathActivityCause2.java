@@ -91,6 +91,27 @@ public class StandardLuddicPathActivityCause2 extends BaseHostileActivityCause2 
 		if (HA_CMD.playerHasPatherAgreement()) return 0;
 		
 		int progress = (int) Math.round(getTotalPatherInterest());
+		
+		float unit = Global.getSettings().getFloat("patherProgressUnit");
+		float mult = Global.getSettings().getFloat("patherProgressMult");
+		//progress = 200;
+		int rem = progress;
+		float adjusted = 0;
+		while (rem > unit) {
+			adjusted += unit;
+			rem -= unit;
+			rem *= mult;
+		}
+		adjusted += rem;
+		
+		int reduced = Math.round(adjusted);
+		if (progress > 0 && reduced < 1) reduced = 1;
+		progress = reduced;
+		
+//		int reduced = (int) Math.round(Math.pow(progress, 0.8f));
+//		if (progress > 0 && reduced <= 0) reduced = 1;
+//		progress = reduced;
+		
 		return progress;
 	}
 	
@@ -104,12 +125,19 @@ public class StandardLuddicPathActivityCause2 extends BaseHostileActivityCause2 
 			float noCells = Global.getSettings().getFloat("patherProgressMultNoCells");
 			float sleeperCells = Global.getSettings().getFloat("patherProgressMultSleeperCells");
 			float activeCells = Global.getSettings().getFloat("patherProgressMultActiveCells");
+			
+//			noCells = 0f;
+//			sleeperCells = 0.25f;
+//			activeCells = 1f;
 			total += getPatherInterest(system, noCells, sleeperCells, activeCells);
 		}
 		return total;
 	}
 	
-	public float getPatherInterest(StarSystemAPI system, float multIfNoCells, float multIfSleeper, float multIfActive) {
+	public static float getPatherInterest(StarSystemAPI system, float multIfNoCells, float multIfSleeper, float multIfActive) {
+		return getPatherInterest(system, multIfNoCells, multIfSleeper, multIfActive, false);
+	}
+	public static float getPatherInterest(StarSystemAPI system, float multIfNoCells, float multIfSleeper, float multIfActive, boolean countCellsOnly) {
 		float total = 0f;
 		List<MarketAPI> markets = Misc.getMarketsInLocation(system, Factions.PLAYER);
 		for (MarketAPI market : markets) {
@@ -124,6 +152,7 @@ public class StandardLuddicPathActivityCause2 extends BaseHostileActivityCause2 
 			}
 
 			float interest = LuddicPathBaseManager.getLuddicPathMarketInterest(market);
+			if (countCellsOnly) interest = 1f;
 			total += (interest * mult);
 		}
 		return total;

@@ -90,7 +90,7 @@ public class LuddicPathHostileActivityFactor extends BaseHostileActivityFactor i
 				days = Math.round(days);
 				String dStr = "days";
 				if ((int)days == 1) dStr = "day";
-				tooltip.addPara("You've tithed a signficant amount to the Pathers, and their fleets and "
+				tooltip.addPara("You've %s a signficant amount to the Pathers, and their fleets and "
 						+ "ground-based cells should leave your colonies alone for another %s " + dStr + ".",
 						initPad, new Color[] {p, h}, "tithed", "" + (int)days);
 			} else {
@@ -126,7 +126,7 @@ public class LuddicPathHostileActivityFactor extends BaseHostileActivityFactor i
 	public CampaignFleetAPI createFleet(StarSystemAPI system, Random random) {
 		
 		float f = 0f;
-		f += getEffectMagnitudeAdjustedBySuppression(system);
+		f += getEffectMagnitude(system);
 		
 		if (f > 1f) f = 1f;
 		
@@ -140,7 +140,7 @@ public class LuddicPathHostileActivityFactor extends BaseHostileActivityFactor i
 		} else {
 			difficulty = 3;
 			difficulty += (int) Math.round(f * 5f);
-			difficulty += random.nextInt(4);
+			difficulty += random.nextInt(6);
 		}
 		
 		
@@ -324,6 +324,8 @@ public class LuddicPathHostileActivityFactor extends BaseHostileActivityFactor i
 	}
 	
 	public void rollEvent(HostileActivityEventIntel intel, EventStageData stage) {
+//		if (true) return;
+		
 		MarketAPI market = pickTargetMarket();
 		LuddicPathCellsIntel cells = LuddicPathCellsIntel.getCellsForMarket(market);
 		HAERandomEventData data = new HAERandomEventData(this, stage);

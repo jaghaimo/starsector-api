@@ -225,20 +225,22 @@ public class StarCoronaTerrainPlugin extends BaseRingTerrain implements AuroraRe
 				float loss = (-1f * recoveryRate + -1f * lossRate * adjustedLossMult) * days * 0.01f;
 				float curr = member.getRepairTracker().getBaseCR();
 				if (loss > curr) loss = curr;
-				if (inFlare) {
-					member.getRepairTracker().applyCREvent(loss, "flare", "Solar flare effect");
-				} else {
-					member.getRepairTracker().applyCREvent(loss, "corona", "Star corona effect");
+				if (resistance > 0) { // not actually resistance, the opposite
+					if (inFlare) {
+						member.getRepairTracker().applyCREvent(loss, "flare", "Solar flare effect");
+					} else {
+						member.getRepairTracker().applyCREvent(loss, "corona", "Star corona effect");
+					}
+					
+					float peakFraction = 1f / Math.max(1.3333f, 1f + params.crLossMult * intensity);
+					float peakLost = 1f - peakFraction;
+					peakLost *= resistance;
+					
+					float degradationMult = 1f + (params.crLossMult * intensity * resistance) / 2f;
+					
+					member.getBuffManager().addBuffOnlyUpdateStat(new PeakPerformanceBuff(buffId + "_1", 1f - peakLost, buffDur));
+					member.getBuffManager().addBuffOnlyUpdateStat(new CRLossPerSecondBuff(buffId + "_2", degradationMult, buffDur));
 				}
-				
-				float peakFraction = 1f / Math.max(1.3333f, 1f + params.crLossMult * intensity);
-				float peakLost = 1f - peakFraction;
-				peakLost *= resistance;
-				
-				float degradationMult = 1f + (params.crLossMult * intensity * resistance) / 2f;
-				
-				member.getBuffManager().addBuffOnlyUpdateStat(new PeakPerformanceBuff(buffId + "_1", 1f - peakLost, buffDur));
-				member.getBuffManager().addBuffOnlyUpdateStat(new CRLossPerSecondBuff(buffId + "_2", degradationMult, buffDur));
 			}
 			
 			// "wind" effect - adjust velocity
