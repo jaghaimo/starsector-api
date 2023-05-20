@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1RecoveryOperations_1_1Level3B.html":[0,0,0,0,0,0,5,0,17,57,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering.html":[0,0,0,0,0,0,5,0,17,58],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level1.html":[0,0,0,0,0,0,5,0,17,58,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ReliabilityEngineering_1_1Level2.html":[0,0,0,0,0,0,5,0,17,58,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2.html#a8cae84793bfe002b9179beb2e3b1bc60":[0,0,0,0,0,0,5,0,21,3,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2.html#a9184fcc01b00ecf6173a9c1cba6f415e":[0,0,0,0,0,0,5,0,21,3,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2.html#af32549ccf40163ed178151d5246c1f31":[0,0,0,0,0,0,5,0,21,3,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamParams2.html":[0,0,0,0,0,0,5,0,21,3,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamParticle.html":[0,0,0,0,0,0,5,0,21,3,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamParams2.html":[0,0,0,0,0,0,5,0,21,3,0]
 };

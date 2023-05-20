@@ -4,6 +4,8 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI =
     [ "StatModValueGetter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1StatModValueGetter.html", null ],
     [ "TooltipCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html", null ],
     [ "TooltipLocation", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipLocation.html", null ],
+    [ "addCheckbox", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a7e2d9218e423932a713bd177069729b3", null ],
+    [ "addCheckbox", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#ab3ea39b9074b97c129e96e3b073d5f3b", null ],
     [ "addCustomDoNotSetPosition", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#ad3b5cdfe589ee2c075eeac600e3489f0", null ],
     [ "addIconGroupAndCenter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a46c3db0f3996ff6ab2afc1a7d01d2e63", null ],
     [ "addRow", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#ab1ccec69fdd688c4764ff3386bb7c783", null ],

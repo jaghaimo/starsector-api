@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitalStationAPI.html":[0,0,0,0,0,0,0,82],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html":[0,0,0,0,0,0,0,84],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI.html":[0,0,0,0,0,0,0,85],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersistentUIDataAPI_1_1AbilitySlotAPI.html":[0,0,0,0,0,0,0,85,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GateTransitListener.html":[0,0,0,0,0,0,0,5,25],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GateTransitListener.html#a0b55dc8d8a44c1c60ca77de61aff5bcc":[0,0,0,0,0,0,0,5,25,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GroundRaidObjectivesListener.html":[0,0,0,0,0,0,0,5,26],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GroundRaidObjectivesListener.html#ae7525f60e1a9b3fb303276dd5c3d2d17":[0,0,0,0,0,0,0,5,26,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1IndustryOptionProvider.html":[0,0,0,0,0,0,0,5,27]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1GroundRaidObjectivesListener.html#ae7525f60e1a9b3fb303276dd5c3d2d17":[0,0,0,0,0,0,0,5,26,1]
 };

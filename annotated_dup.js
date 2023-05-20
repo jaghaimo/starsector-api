@@ -1226,6 +1226,7 @@ var annotated_dup =
                   [ "Highlight", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1Highlight.html", null ],
                   [ "HighlightComms", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HighlightComms.html", null ],
                   [ "HT_CMD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1HT__CMD.html", null ],
+                  [ "ImportanceAtLeast", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ImportanceAtLeast.html", null ],
                   [ "IncreaseSmugglingSuspicion", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IncreaseSmugglingSuspicion.html", null ],
                   [ "InstallCommSniffer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1InstallCommSniffer.html", null ],
                   [ "IsSeenByAnyFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1IsSeenByAnyFleet.html", null ],

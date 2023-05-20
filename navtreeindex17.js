@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ac719fbda02f9ea41269eb740b1784aca":[0,0,0,0,0,0,2,50,13],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ad0868371720d059655a832bd6010fbfa":[0,0,0,0,0,0,2,50,14],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ae371e026f6aba0cf138569c35f533b69":[0,0,0,0,0,0,2,50,10],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ae3974401ecaf5200831a5573a8435e70":[0,0,0,0,0,0,2,50,15],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1EntityRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1GenericRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1MarketRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,19],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,31],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1StarSystemRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,47]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch_1_1PlanetRequirement.html":[0,0,0,0,0,0,5,0,11,3,7,31]
 };

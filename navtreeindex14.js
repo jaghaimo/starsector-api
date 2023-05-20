@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html#a7e737390a93b3bcb11608cb64b30a30d":[0,0,0,0,0,0,27,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html":[0,0,0,0,0,0,28],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a0730936fad1c2fcd100ec78ee29e74f4":[0,0,0,0,0,0,28,23],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a13d481c402941f3c45a6413ccca6d036":[0,0,0,0,0,0,28,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html#aeeb9e590eca47e04443cd9a45b89fd39":[0,0,0,0,0,0,0,81,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI_1_1OptionTooltipCreator.html":[0,0,0,0,0,0,0,81,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html":[0,0,0,0,0,0,0,83],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a542a622834154436f961042706f9a239":[0,0,0,0,0,0,0,83,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitalStationAPI.html":[0,0,0,0,0,0,0,82]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitAPI.html#a542a622834154436f961042706f9a239":[0,0,0,0,0,0,0,83,0]
 };

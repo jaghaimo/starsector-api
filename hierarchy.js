@@ -693,6 +693,7 @@ var hierarchy =
           [ "com.fs.starfarer.api.impl.campaign.rulecmd.RepLTE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepLTE.html", null ]
         ] ],
         [ "com.fs.starfarer.api.impl.campaign.rulecmd.RepIsAtWorst", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepIsAtWorst.html", [
+          [ "com.fs.starfarer.api.impl.campaign.rulecmd.ImportanceAtLeast", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ImportanceAtLeast.html", null ],
           [ "com.fs.starfarer.api.impl.campaign.rulecmd.RepGTE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepGTE.html", null ]
         ] ],
         [ "com.fs.starfarer.api.impl.campaign.rulecmd.RepairAll", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAll.html", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1IndustryOptionProvider.html":[0,0,0,0,0,0,0,5,27],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ListenerManagerAPI.html":[0,0,0,0,0,0,0,5,28],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1MarineLossesStatModifier.html":[0,0,0,0,0,0,0,5,30],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1NavigationDataSectionListener.html":[0,0,0,0,0,0,0,5,31],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a788251b7887cf8274d874e90def2a64e":[0,0,0,0,0,0,2,50,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a7ae77a3512d9f9dda3bd141ba855c974":[0,0,0,0,0,0,2,50,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a90f5549da9ec959db9e470dfa46409c5":[0,0,0,0,0,0,2,50,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#aaf58ee2c995506b57e55eec2da1b067b":[0,0,0,0,0,0,2,50,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ac719fbda02f9ea41269eb740b1784aca":[0,0,0,0,0,0,2,50,13]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#aaf58ee2c995506b57e55eec2da1b067b":[0,0,0,0,0,0,2,50,11]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html#ac6c5b529e6ae5d5f314d87bd7990e03e":[0,0,0,0,0,0,5,2,43,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html#ad1e72302958cd56beab021e9a8cf5652":[0,0,0,0,0,0,5,2,43,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader_1_1MissileAutoloaderData.html":[0,0,0,0,0,0,5,2,43,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader_1_1ReloadCapacityData.html":[0,0,0,0,0,0,5,2,43,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelPanel_1_1AttackResult.html":[0,0,0,0,0,0,5,0,4,10,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel_1_1TutStage.html":[0,0,0,0,0,0,5,0,4,11,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent_1_1Ending.html":[0,0,0,0,0,0,5,0,5,6,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent_1_1SkillPickPreference.html":[0,0,0,0,0,0,5,0,5,11,1],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent_1_1SkillPickPreference.html#a9f4816f9ebccdc5bdf7ce71b366fb8ef":[0,0,0,0,0,0,5,0,5,11,1,0]
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent_1_1SkillPickPreference.html":[0,0,0,0,0,0,5,0,5,11,1]
 };

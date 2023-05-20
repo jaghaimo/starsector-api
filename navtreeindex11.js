@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamParticle.html":[0,0,0,0,0,0,5,0,21,3,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2_1_1SlipstreamSegment.html":[0,0,0,0,0,0,5,0,21,3,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParams.html":[0,0,0,0,0,0,5,0,21,2,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin_1_1SlipstreamParticle.html":[0,0,0,0,0,0,5,0,21,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MalfunctioningComms.html":[0,0,0,0,0,0,5,2,41],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MilitarizedSubsystems.html":[0,0,0,0,0,0,5,2,42],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html":[0,0,0,0,0,0,5,2,43],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html#a7fd3a3a9e5b2e1f3cd8ea029830cb538":[0,0,0,0,0,0,5,2,43,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html#ac6c5b529e6ae5d5f314d87bd7990e03e":[0,0,0,0,0,0,5,2,43,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1MissileAutoloader.html#a7fd3a3a9e5b2e1f3cd8ea029830cb538":[0,0,0,0,0,0,5,2,43,4]
 };

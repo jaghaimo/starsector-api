@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent_1_1SkillPickPreference.html#a9f4816f9ebccdc5bdf7ce71b366fb8ef":[0,0,0,0,0,0,5,0,5,11,1,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent_1_1PickMode.html":[0,0,0,0,0,0,5,0,5,16,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent_1_1DistressEventType.html":[0,0,0,0,0,0,5,0,5,0,3,0],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetFactoryV3_1_1SizeFilterMode.html":[0,0,0,0,0,0,5,0,6,15,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1MusicPlayerPlugin.html":[0,0,0,0,0,0,25],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1MusicPlayerPlugin.html#a021d171d42bd4334c4211e22a3fbc2f5":[0,0,0,0,0,0,25,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1MusicPlayerPlugin.html#a70ff3738cd6a424aef11686a1528f518":[0,0,0,0,0,0,25,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html":[0,0,0,0,0,0,27],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html#a7e737390a93b3bcb11608cb64b30a30d":[0,0,0,0,0,0,27,0]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1Script.html":[0,0,0,0,0,0,27]
 };
