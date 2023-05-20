@@ -8,9 +8,9 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.ActionType;
 import com.fs.starfarer.api.campaign.ai.FleetAssignmentDataAPI;
 import com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI;
-import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.ActionType;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.util.IntervalUtil;
@@ -144,6 +144,10 @@ public class MilitaryResponseScript implements EveryFrameScript {
 	protected void respond(CampaignFleetAPI fleet) {
 		unrespond(fleet);
 		
+//		if (fleet.getContainingLocation() != null && fleet.getContainingLocation().getName().startsWith("Corvus")) {
+//			System.out.println("fwefwe");
+//		}
+		//fleet.getAssignmentsCopy().get(0)
 		Misc.setFlagWithReason(fleet.getMemoryWithoutUpdate(), 
 								MemFlags.FLEET_MILITARY_RESPONSE, params.responseReason, true, (1.5f + (float) Math.random()) * 0.2f);
 		
@@ -169,9 +173,15 @@ public class MilitaryResponseScript implements EveryFrameScript {
 	protected void unrespond(CampaignFleetAPI fleet) {
 		Misc.setFlagWithReason(fleet.getMemoryWithoutUpdate(), 
 							   MemFlags.FLEET_MILITARY_RESPONSE, params.responseReason, false, 0f);
+		boolean firstOrbitPassive = true;
 		for (FleetAssignmentDataAPI curr : fleet.getAI().getAssignmentsCopy()) {
 			if (RESPONSE_ASSIGNMENT.equals(curr.getCustom())) {
 				fleet.getAI().removeAssignment(curr);
+			} else if (curr.getAssignment() == FleetAssignment.ORBIT_PASSIVE && firstOrbitPassive) {
+				// "preparing for patrol" or some such, very likely - don't want to go back to that
+				// after the response is done
+				fleet.getAI().removeAssignment(curr);
+				firstOrbitPassive = false;
 			}
 		}
 	}

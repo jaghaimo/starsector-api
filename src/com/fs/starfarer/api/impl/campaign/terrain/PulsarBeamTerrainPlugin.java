@@ -237,16 +237,16 @@ public class PulsarBeamTerrainPlugin extends BaseRingTerrain implements PulsarRe
 				
 				if (resistance > 0) {
 					member.getRepairTracker().applyCREvent(loss, "corona", "Pulsar beam effect");
-					
-					float peakFraction = 1f / Math.max(1.3333f, 1f + params.crLossMult * intensity);
-					float peakLost = 1f - peakFraction;
-					peakLost *= resistance;
-					
-					float degradationMult = 1f + (params.crLossMult * intensity * resistance) / 2f;
-					
-					member.getBuffManager().addBuffOnlyUpdateStat(new PeakPerformanceBuff(buffId + "_1", 1f - peakLost, buffDur));
-					member.getBuffManager().addBuffOnlyUpdateStat(new CRLossPerSecondBuff(buffId + "_2", degradationMult, buffDur));
 				}
+				
+				float peakFraction = 1f / Math.max(1.3333f, 1f + params.crLossMult * intensity);
+				float peakLost = 1f - peakFraction;
+				peakLost *= resistance;
+				
+				float degradationMult = 1f + (params.crLossMult * intensity * resistance) / 2f;
+				
+				member.getBuffManager().addBuffOnlyUpdateStat(new PeakPerformanceBuff(buffId + "_1", 1f - peakLost, buffDur));
+				member.getBuffManager().addBuffOnlyUpdateStat(new CRLossPerSecondBuff(buffId + "_2", degradationMult, buffDur));
 			}
 			
 			// "wind" effect - adjust velocity

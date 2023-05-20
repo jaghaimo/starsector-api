@@ -202,7 +202,7 @@ public class PKDefenderPluginImpl extends BaseGenericPlugin implements SalvageDe
 				MiscellaneousThemeGenerator.PK_CACHE_KEY)) {
 			return 2;
 		}
-		return 0;
+		return -1;
 	}
 	public float getQuality(SDMParams p, float quality, Random random, boolean withOverride) {
 		return quality;

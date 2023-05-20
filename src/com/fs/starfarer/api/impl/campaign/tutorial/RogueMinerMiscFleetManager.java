@@ -2,12 +2,15 @@ package com.fs.starfarer.api.impl.campaign.tutorial;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.CommDirectoryEntryAPI;
+import com.fs.starfarer.api.campaign.CommDirectoryEntryAPI.EntryType;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.SourceBasedFleetManager;
 import com.fs.starfarer.api.impl.campaign.ids.Abilities;
@@ -39,6 +42,16 @@ public class RogueMinerMiscFleetManager extends SourceBasedFleetManager {
 			if (source.getMarket() != null && source.getMarket().isInEconomy()) {
 				source.setFaction(Factions.INDEPENDENT);
 				source.getMarket().setFactionId(Factions.INDEPENDENT);
+				
+				if (source.getMarket().getCommDirectory() != null &&
+						source.getMarket().getCommDirectory().getEntriesCopy() != null) {
+					for (CommDirectoryEntryAPI entry : source.getMarket().getCommDirectory().getEntriesCopy()) {
+						if (entry.getType() == EntryType.PERSON && entry.getEntryData() instanceof PersonAPI) {
+							PersonAPI p = (PersonAPI) entry.getEntryData();
+							p.setFaction(Factions.INDEPENDENT);
+						}
+					}
+				}
 				
 				FactionAPI ind = Global.getSector().getFaction(Factions.INDEPENDENT);
 				if (source.getMarket() != null && source.getMarket().getSubmarket(Submarkets.SUBMARKET_OPEN) != null) {

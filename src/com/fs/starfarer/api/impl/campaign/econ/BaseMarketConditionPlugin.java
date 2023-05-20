@@ -178,6 +178,7 @@ public class BaseMarketConditionPlugin implements MarketConditionPlugin {
 			} else {
 				tokens.put("$marketSystem", "hyperspace");
 			}
+			tokens.put("$marketName", market.getName());
 			tokens.put("$market", market.getName());
 		}
 		

@@ -251,12 +251,13 @@ public class FactionHostilityIntel extends BaseIntelPlugin {
 //		info.showPlanetInfo(jangala, 100, 100, true, opad);
 //		info.showPlanetInfo(jangala, 50, 50, false, opad);
 //		info.showPlanetInfo(jangala, width, width, true, opad);
+//		info.addCheckbox(300, 20, "Test", "TEST", UICheckboxSize.LARGE, 10f);
 	}
 	
 //    @Override
 //	public void buttonPressConfirmed(Object buttonId, IntelUIAPI ui) {
 //		super.buttonPressConfirmed(buttonId, ui);
-//		System.out.println("TESTING");
+//		System.out.println("TESTING " + buttonId);
 //	}
 //
 //	private static void addBlueprintEntry(TooltipMakerAPI listPanel, ShipVariantAPI blueprint) {

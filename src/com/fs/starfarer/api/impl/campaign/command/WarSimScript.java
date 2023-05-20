@@ -550,6 +550,8 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 		return getDangerFor(getFactionStrength(factionId, system), getEnemyStrength(factionId, system));
 	}
 	public static LocationDanger getDangerFor(float factionStrength, float enemyStrength) {
+		if (enemyStrength < 100) return LocationDanger.NONE;
+		
 		float f = enemyStrength / Math.max(1f, factionStrength + enemyStrength);
 		for (LocationDanger level : LocationDanger.vals) {
 			float test = level.enemyStrengthFraction + (level.next().enemyStrengthFraction - level.enemyStrengthFraction) * 0.5f;

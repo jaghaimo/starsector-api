@@ -1797,7 +1797,16 @@ public abstract class HubMissionWithSearch extends HubMissionWithTriggers {
 
 	
 	protected void findMatchingMarkets() {
-		List<MarketAPI> markets = Global.getSector().getEconomy().getMarketsCopy();
+		List<MarketAPI> markets = new ArrayList<MarketAPI>();;
+		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
+			if (market.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) {
+				continue;
+			}
+			if (market.getPlanetEntity() != null && market.getPlanetEntity().hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) {
+				continue;
+			}
+			markets.add(market);
+		}
 //		System.out.println("BEGIN");
 //		for (MarketAPI curr : markets) {
 //			System.out.println(curr.getName());

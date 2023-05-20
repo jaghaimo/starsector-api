@@ -7,6 +7,7 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.ai.FleetAssignmentDataAPI;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.util.Misc;
 
@@ -28,6 +29,10 @@ public class MissionFleetAutoDespawn implements EveryFrameScript {
 //		if (fleet.getName().equals("Courier")) {
 //			System.out.println("fwefwf23f");
 //		}
+//		System.out.println(fleet.getName());
+//		if (fleet.getName().equals("Mercenary Bounty Hunter")) {
+//			System.out.println("efwefweew");
+//		}
 		boolean missionImportant = fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.ENTITY_MISSION_IMPORTANT);
 		FleetAssignmentDataAPI ad = fleet.getCurrentAssignment();
 		// make a hopefully reasonable guess that the fleet should stop chasing the player, if that's what it's doing
@@ -35,9 +40,19 @@ public class MissionFleetAutoDespawn implements EveryFrameScript {
 		if (ad != null && 
 				(ad.getAssignment() == FleetAssignment.INTERCEPT || ad.getAssignment() == FleetAssignment.FOLLOW) &&
 				ad.getTarget() == Global.getSector().getPlayerFleet() &&
-				!fleet.isInCurrentLocation() && !missionImportant) {
-			float dist = Misc.getDistanceLY(fleet, Global.getSector().getPlayerFleet());
-			if (dist > 4f) {
+				!missionImportant) {
+			CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
+			if (!fleet.isInCurrentLocation()) { 
+				float dist = Misc.getDistanceLY(fleet, Global.getSector().getPlayerFleet());
+				if (dist > 4f) {
+					fleet.removeFirstAssignment();
+					if (fleet.getCurrentAssignment() == null) {
+						Misc.giveStandardReturnToSourceAssignments(fleet);
+					}
+				}
+			}
+			else if (fleet.isHostileTo(pf) && fleet.getFaction() != null && 
+					!fleet.getFaction().isHostileTo(Factions.PLAYER)) {
 				fleet.removeFirstAssignment();
 				if (fleet.getCurrentAssignment() == null) {
 					Misc.giveStandardReturnToSourceAssignments(fleet);

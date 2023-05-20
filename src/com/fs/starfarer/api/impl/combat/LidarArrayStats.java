@@ -176,6 +176,7 @@ public class LidarArrayStats extends BaseShipSystemScript {
 
 		for (WeaponAPI w : ship.getAllWeapons()) {
 			if (w.getSlot().isSystemSlot()) continue;
+			if (w.getType() == WeaponType.MISSILE) continue;
 			if (state == State.IN) {
 				if (!(w.isDecorative() && w.getSpec().hasTag(Tags.LIDAR))) {
 					w.setForceNoFireOneFrame(true);

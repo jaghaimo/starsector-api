@@ -40,7 +40,8 @@ public class DModManager {
 	public static boolean setDHull(ShipVariantAPI variant) {
 		//if (!variant.getHullSpec().isDHull()) {
 		variant.setSource(VariantSource.REFIT);
-		if (!variant.isDHull()) {
+		//if (!variant.isDHull()) {
+		if (!variant.getHullSpec().isDefaultDHull()) {
 			String dHullId = Misc.getDHullId(variant.getHullSpec());
 			ShipHullSpecAPI dHull = Global.getSettings().getHullSpec(dHullId);
 			variant.setHullSpecAPI(dHull);

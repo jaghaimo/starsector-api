@@ -527,6 +527,8 @@ public class KantaCMD extends BaseCommandPlugin {
 	}
 
 	public static void loseProtection(InteractionDialogAPI dialog) {
+		if (!playerHasProtection()) return;
+		
 		PersonAPI kanta = People.getPerson(People.KANTA);
 		if (kanta != null) {
 			Misc.incrUntrustwortyCount();

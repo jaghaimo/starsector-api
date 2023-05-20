@@ -1260,6 +1260,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				} else {
 					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
 				}
+				person.addTag(Tags.CONTACT_MILITARY);
 				
 				market.getCommDirectory().addPerson(person);
 				market.addPerson(person);
@@ -1296,6 +1297,8 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
 				}
 				
+				person.addTag(Tags.CONTACT_MILITARY);
+				
 				market.getCommDirectory().addPerson(person);
 				market.addPerson(person);
 				ip.addPerson(person);
@@ -1324,6 +1327,8 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 					person.setImportanceAndVoice(PersonImportance.VERY_LOW, StarSystemGenerator.random);
 				}
 				
+				person.addTag(Tags.CONTACT_TRADE);
+				
 				market.getCommDirectory().addPerson(person);
 				market.addPerson(person);
 				ip.addPerson(person);
@@ -1346,6 +1351,11 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 					person.setImportanceAndVoice(PersonImportance.VERY_LOW, StarSystemGenerator.random);
 				}
 				
+				person.addTag(Tags.CONTACT_MILITARY);
+				person.addTag(Tags.CONTACT_TRADE);
+				if (StarSystemGenerator.random.nextFloat() < 0.2f) {
+					person.addTag(Tags.CONTACT_UNDERWORLD);
+				}
 				
 				market.getCommDirectory().addPerson(person);
 				market.addPerson(person);
@@ -1368,6 +1378,8 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 				} else {
 					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
 				}
+				
+				person.addTag(Tags.CONTACT_TRADE);
 				
 				market.getCommDirectory().addPerson(person);
 				market.addPerson(person);

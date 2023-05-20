@@ -2738,6 +2738,8 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 	}
 	
 	public SectorEntityToken spawnDerelict(DerelictShipData shipData, LocData data) {
+		if (shipData == null) return null;
+		
 		if (!data.updateLocIfNeeded(this, Entities.WRECK)) return null;
 		
 		SectorEntityToken entity = BaseThemeGenerator.addSalvageEntity(genRandom, data.system, Entities.WRECK, Factions.NEUTRAL, shipData);

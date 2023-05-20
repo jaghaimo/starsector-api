@@ -1952,6 +1952,8 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		float missile = 0f;
 		float total = 0f;
 		
+		boolean civ = member.isCivilian();
+		
 		for (String slotId : member.getVariant().getFittedWeaponSlots()) {
 			WeaponSlotAPI slot = member.getVariant().getSlot(slotId);
 			if (slot.isDecorative() || slot.isSystemSlot()) continue;
@@ -1963,6 +1965,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			case MEDIUM: w = 2f; break;
 			case SMALL: w = 1f; break;
 			}
+			if (civ) w *= 0.1f;
 			WeaponType type = weapon.getType();
 			if (type == WeaponType.BALLISTIC) { 
 				ballistic += w;

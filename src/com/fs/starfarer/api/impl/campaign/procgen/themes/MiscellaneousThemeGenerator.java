@@ -185,6 +185,8 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 					if (curr.isMoon()) continue;
 					if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;
 					
+					if (curr.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
+					
 					float dist = system.getLocation().length() + random.nextFloat() * 6000;
 					if (curr.getMarket().hasCondition(Conditions.HABITABLE)) {
 						if (dist > habDist) {
@@ -300,6 +302,8 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 	protected void addSolarShadesAndMirrors(ThemeGenContext context) {
 		
 		int num = 2 + random.nextInt(3);
+		
+		//System.out.println("RANDOM CHECK: " + random.nextLong());
 		
 		if (DEBUG) System.out.println("Adding up to " + num + " solar shades and mirrors");
 		List<Constellation> list = new ArrayList<Constellation>(context.constellations);
@@ -774,6 +778,7 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 					if (curr.isGasGiant()) continue;
 					if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;
 					if (curr.getCircularOrbitRadius() < 6000) continue;
+					if (curr.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
 					count++;
 				}
 				

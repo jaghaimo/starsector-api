@@ -141,7 +141,9 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		if (random.nextFloat() < officerProb) {
 			boolean merc = random.nextFloat() < mercProb;
 			AvailableOfficer officer = createOfficer(merc, market, random);
-			officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(officer.person.getFaction(), officer.person.getGender()));
+			//officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(officer.person.getFaction(), officer.person.getGender()));
+			// always independent at this point
+			officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(market.getFaction(), officer.person.getGender()));
 			officer.timeRemaining = dur;
 			addAvailable(officer);
 			log.info("Added officer at " + officer.marketId + "");
@@ -149,7 +151,8 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 			if (random.nextFloat() < officerProb * additionalProb) {
 				merc = random.nextFloat() < mercProb;
 				officer = createOfficer(merc, market, random);
-				officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(officer.person.getFaction(), officer.person.getGender()));
+				//officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(officer.person.getFaction(), officer.person.getGender()));
+				officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(market.getFaction(), officer.person.getGender()));
 				officer.timeRemaining = dur;
 				addAvailable(officer);
 				log.info("Added officer at [" + officer.marketId + "]");
@@ -159,7 +162,8 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 		if (random.nextFloat() < adminProb) {
 			AvailableOfficer officer = createAdmin(market, random);
 			officer.timeRemaining = dur;
-			officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(officer.person.getFaction(), officer.person.getGender()));
+			//officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(officer.person.getFaction(), officer.person.getGender()));
+			officer.person.setPortraitSprite(pickPortraitPreferNonDuplicate(market.getFaction(), officer.person.getGender()));
 			addAvailableAdmin(officer);
 			log.info("Added admin at [" + officer.marketId + "]");
 		}
@@ -262,6 +266,9 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 	}
 	
 	public static String pickPortraitPreferNonDuplicate(FactionAPI faction, Gender gender) {
+		if (faction == null) {
+			faction = Global.getSector().getFaction(Factions.INDEPENDENT);
+		}
 		WeightedRandomPicker<String> all = faction.getPortraits(gender);
 		WeightedRandomPicker<String> picker = new WeightedRandomPicker<String>();
 		

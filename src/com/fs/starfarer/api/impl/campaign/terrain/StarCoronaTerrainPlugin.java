@@ -231,16 +231,15 @@ public class StarCoronaTerrainPlugin extends BaseRingTerrain implements AuroraRe
 					} else {
 						member.getRepairTracker().applyCREvent(loss, "corona", "Star corona effect");
 					}
-					
-					float peakFraction = 1f / Math.max(1.3333f, 1f + params.crLossMult * intensity);
-					float peakLost = 1f - peakFraction;
-					peakLost *= resistance;
-					
-					float degradationMult = 1f + (params.crLossMult * intensity * resistance) / 2f;
-					
-					member.getBuffManager().addBuffOnlyUpdateStat(new PeakPerformanceBuff(buffId + "_1", 1f - peakLost, buffDur));
-					member.getBuffManager().addBuffOnlyUpdateStat(new CRLossPerSecondBuff(buffId + "_2", degradationMult, buffDur));
 				}
+				
+				// needs to be applied when resistance is 0 to immediately cancel out the debuffs (by setting them to 0)
+				float peakFraction = 1f / Math.max(1.3333f, 1f + params.crLossMult * intensity);
+				float peakLost = 1f - peakFraction;
+				peakLost *= resistance;
+				float degradationMult = 1f + (params.crLossMult * intensity * resistance) / 2f;
+				member.getBuffManager().addBuffOnlyUpdateStat(new PeakPerformanceBuff(buffId + "_1", 1f - peakLost, buffDur));
+				member.getBuffManager().addBuffOnlyUpdateStat(new CRLossPerSecondBuff(buffId + "_2", degradationMult, buffDur));
 			}
 			
 			// "wind" effect - adjust velocity

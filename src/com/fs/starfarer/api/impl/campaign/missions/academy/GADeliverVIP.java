@@ -268,6 +268,11 @@ public class GADeliverVIP extends GABaseMission {
 		
 		setDefaultGARepRewards();
 		
+//		beginStageTrigger(Stage.DELIVER_VIP);
+//		LocData data = new LocData(EntityLocationType.HIDDEN_NOT_NEAR_STAR, null, system);
+//		triggerSpawnShipGraveyard(Factions.REMNANTS, 10, 10, data);
+//		endTrigger();
+		
 		piratePayment = genRoundNumber(40000, 60000);
 		mercPayment = getCreditsReward() / 2;
 		

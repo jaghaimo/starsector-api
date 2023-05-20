@@ -247,7 +247,6 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 					}
 					gen.addCommanderAndOfficers(fleet, null, random);
 				}
-				
 				for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 					if (member.isStation()) {
 						AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(Commodities.ALPHA_CORE);
@@ -280,7 +279,7 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 				return 1;
 			}
 			
-			return 0;
+			return -1;
 		}
 		public float getQuality(SDMParams p, float quality, Random random, boolean withOverride) {
 			if (withOverride) return quality;

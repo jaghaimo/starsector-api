@@ -181,7 +181,8 @@ public class PatrolAssignmentAIV4 extends RouteFleetAssignmentAI implements Flee
 
 	@Override
 	public void advance(float amount) {
-//		if (Misc.getDistance(Global.getSector().getPlayerFleet(), fleet) < fleet.getRadius()) {
+//		if (fleet.isInCurrentLocation() && 
+//				Misc.getDistance(Global.getSector().getPlayerFleet(), fleet) < fleet.getRadius()) {
 //			System.out.println("ewfwefwe");
 //		}
 		super.advance(amount);

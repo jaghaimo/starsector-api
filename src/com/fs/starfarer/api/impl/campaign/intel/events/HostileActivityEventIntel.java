@@ -833,7 +833,8 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		
 		if (!battle.isPlayerInvolved()) return;
 		
-		if (Global.getSector().getCurrentLocation() instanceof StarSystemAPI) {
+		if (Global.getSector().getCurrentLocation() instanceof StarSystemAPI &&
+				battle.getPlayerSide().contains(primaryWinner)) {
 			StarSystemAPI system = (StarSystemAPI) Global.getSector().getCurrentLocation(); 
 			for (CampaignFleetAPI otherFleet : battle.getNonPlayerSideSnapshot()) {
 				if (otherFleet.isStationMode()) {

@@ -134,10 +134,23 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 			
 			StarSystemAPI sysFrom = data.from.getStarSystem();
 			StarSystemAPI sysTo = data.to.getStarSystem();
+			
+//			if (sysFrom.getName().startsWith("Rama") ||
+//					sysTo.getName().startsWith("Rama")) {
+//				System.out.println("32ff32f23");
+//			}
+			
 			LocationDanger dFrom = WarSimScript.getDangerFor(factionId, sysFrom);
 			LocationDanger dTo = WarSimScript.getDangerFor(factionId, sysTo);
 			
 			LocationDanger danger = dFrom.ordinal() > dTo.ordinal() ? dFrom : dTo;
+			
+			if (sysFrom != null && sysFrom.isCurrentLocation()) {
+				// the player is in the from location, don't auto-lose the trade fleet
+				// let it get destroyed by actual fleets, if it does
+				danger = LocationDanger.NONE;
+			}
+			
 //			if (danger != LocationDanger.NONE) {
 //				System.out.println("efwe234523fwe " + danger.name());
 //				dFrom = WarSimScript.getDangerFor(factionId, sysFrom);

@@ -65,6 +65,8 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 	
 	protected SavedShipControlState prevState;
 	protected SavedShipControlState savedState;
+	
+	protected PersonAPI playerPerson;
 
 	public void saveControlState(ShipAPI ship) {
 		prevState = savedState;
@@ -299,7 +301,14 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 			}
 		}
 		
-		PersonAPI player = playerShip.getCaptain();
+		PersonAPI player = playerPerson; 
+		if (player == null) {
+			player = playerShip.getCaptain();
+			if (!player.isDefault() && playerPerson == null) {
+				playerPerson = player;
+			}
+		}
+		
 		for (ShipAPI ship : linked) {
 			if (ship.getCaptain() != player) {
 				ship.setCaptain(player);

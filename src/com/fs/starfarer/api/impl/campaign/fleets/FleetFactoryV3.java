@@ -1651,14 +1651,20 @@ public class FleetFactoryV3 {
 		Set<String> usePriorityOnly = new HashSet<String>();
 		
 		if (params.mode == ShipPickMode.PRIORITY_THEN_ALL) {
-			if (faction.getNumAvailableForRole(ShipRoles.COMBAT_CAPITAL, ShipPickMode.PRIORITY_ONLY) > 0) {
-				priorityCapitalPicker.add(ShipRoles.COMBAT_CAPITAL, doctrine.getWarships());
+			float num = faction.getVariantWeightForRole(ShipRoles.COMBAT_CAPITAL, ShipPickMode.PRIORITY_ONLY);
+			if (num > 0) {
+				//priorityCapitalPicker.add(ShipRoles.COMBAT_CAPITAL, doctrine.getWarships() + 1);
+				priorityCapitalPicker.add(ShipRoles.COMBAT_CAPITAL, num);
 			}
-			if (faction.getNumAvailableForRole(ShipRoles.CARRIER_LARGE, ShipPickMode.PRIORITY_ONLY) > 0) {
-				priorityCapitalPicker.add(ShipRoles.CARRIER_LARGE, doctrine.getCarriers());
+			num = faction.getVariantWeightForRole(ShipRoles.CARRIER_LARGE, ShipPickMode.PRIORITY_ONLY);
+			if (num > 0) {
+				//priorityCapitalPicker.add(ShipRoles.CARRIER_LARGE, doctrine.getCarriers() + 1);
+				priorityCapitalPicker.add(ShipRoles.CARRIER_LARGE, num);
 			}
-			if (faction.getNumAvailableForRole(ShipRoles.PHASE_CAPITAL, ShipPickMode.PRIORITY_ONLY) > 0) {
-				priorityCapitalPicker.add(ShipRoles.PHASE_CAPITAL, doctrine.getPhaseShips());
+			num = faction.getVariantWeightForRole(ShipRoles.PHASE_CAPITAL, ShipPickMode.PRIORITY_ONLY);
+			if (num > 0) {
+				//priorityCapitalPicker.add(ShipRoles.PHASE_CAPITAL, doctrine.getPhaseShips() + 1);
+				priorityCapitalPicker.add(ShipRoles.PHASE_CAPITAL, num);
 			}
 			
 			if (params.mode == ShipPickMode.PRIORITY_THEN_ALL) {
