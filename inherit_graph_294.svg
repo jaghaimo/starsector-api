@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d1/d69/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="197,-390 0,-390 0,-360 197,-360 197,-390"/>
 <text text-anchor="start" x="8" y="-378" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="98.5" y="-367" font-family="Helvetica,sans-Serif" font-size="10.00">SensorGhostCreator</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d3/d96/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="430,-390 233,-390 233,-360 430,-360 430,-390"/>
 <text text-anchor="start" x="241" y="-378" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.</text>
 <text text-anchor="middle" x="331.5" y="-367" font-family="Helvetica,sans-Serif" font-size="10.00">BaseSensorGhostCreator</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d1/d39/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ChargerGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ChargerGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-750 466,-750 466,-720 689,-720 689,-750"/>
 <text text-anchor="start" x="474" y="-738" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-727" font-family="Helvetica,sans-Serif" font-size="10.00">ChargerGhostCreator</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d2/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EchoGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EchoGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-702 466,-702 466,-672 689,-672 689,-702"/>
 <text text-anchor="start" x="474" y="-690" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-679" font-family="Helvetica,sans-Serif" font-size="10.00">EchoGhostCreator</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d2/d52/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1EncounterTricksterGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-654 466,-654 466,-624 689,-624 689,-654"/>
 <text text-anchor="start" x="474" y="-642" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-631" font-family="Helvetica,sans-Serif" font-size="10.00">EncounterTricksterGhostCreator</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="da/d43/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1GuideGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1GuideGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-606 466,-606 466,-576 689,-576 689,-606"/>
 <text text-anchor="start" x="474" y="-594" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-583" font-family="Helvetica,sans-Serif" font-size="10.00">GuideGhostCreator</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="d4/db1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1LeviathanCalfGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1LeviathanCalfGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-558 466,-558 466,-528 689,-528 689,-558"/>
 <text text-anchor="start" x="474" y="-546" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-535" font-family="Helvetica,sans-Serif" font-size="10.00">LeviathanCalfGhostCreator</text>
@@ -117,7 +117,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="d4/d8c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1LeviathanGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1LeviathanGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-510 466,-510 466,-480 689,-480 689,-510"/>
 <text text-anchor="start" x="474" y="-498" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-487" font-family="Helvetica,sans-Serif" font-size="10.00">LeviathanGhostCreator</text>
@@ -133,7 +133,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="dc/dd7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1MinnowGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1MinnowGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-462 466,-462 466,-432 689,-432 689,-462"/>
 <text text-anchor="start" x="474" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-439" font-family="Helvetica,sans-Serif" font-size="10.00">MinnowGhostCreator</text>
@@ -149,7 +149,7 @@
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="d3/d67/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1NoGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1NoGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-414 466,-414 466,-384 689,-384 689,-414"/>
 <text text-anchor="start" x="474" y="-402" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-391" font-family="Helvetica,sans-Serif" font-size="10.00">NoGhostCreator</text>
@@ -165,7 +165,7 @@
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="d9/d3d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RacerGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RacerGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-366 466,-366 466,-336 689,-336 689,-366"/>
 <text text-anchor="start" x="474" y="-354" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-343" font-family="Helvetica,sans-Serif" font-size="10.00">RacerGhostCreator</text>
@@ -181,7 +181,7 @@
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="df/d49/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RemnantGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RemnantGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-318 466,-318 466,-288 689,-288 689,-318"/>
 <text text-anchor="start" x="474" y="-306" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-295" font-family="Helvetica,sans-Serif" font-size="10.00">RemnantGhostCreator</text>
@@ -197,7 +197,7 @@
 <!-- Node12 -->
 <g id="node13" class="node">
 <title>Node12</title>
-<g id="a_node13"><a xlink:href="dd/d55/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RemoraGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1RemoraGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-270 466,-270 466,-240 689,-240 689,-270"/>
 <text text-anchor="start" x="474" y="-258" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">RemoraGhostCreator</text>
@@ -213,7 +213,7 @@
 <!-- Node13 -->
 <g id="node14" class="node">
 <title>Node13</title>
-<g id="a_node14"><a xlink:href="d3/dd3/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ShipGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ShipGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-222 466,-222 466,-192 689,-192 689,-222"/>
 <text text-anchor="start" x="474" y="-210" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-199" font-family="Helvetica,sans-Serif" font-size="10.00">ShipGhostCreator</text>
@@ -229,7 +229,7 @@
 <!-- Node14 -->
 <g id="node15" class="node">
 <title>Node14</title>
-<g id="a_node15"><a xlink:href="de/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1StormTricksterGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1StormTricksterGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-174 466,-174 466,-144 689,-144 689,-174"/>
 <text text-anchor="start" x="474" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">StormTricksterGhostCreator</text>
@@ -245,7 +245,7 @@
 <!-- Node15 -->
 <g id="node16" class="node">
 <title>Node15</title>
-<g id="a_node16"><a xlink:href="df/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1StormcallerGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1StormcallerGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-126 466,-126 466,-96 689,-96 689,-126"/>
 <text text-anchor="start" x="474" y="-114" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00">StormcallerGhostCreator</text>
@@ -261,7 +261,7 @@
 <!-- Node16 -->
 <g id="node17" class="node">
 <title>Node16</title>
-<g id="a_node17"><a xlink:href="d6/d7f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1TestGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1TestGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-78 466,-78 466,-48 689,-48 689,-78"/>
 <text text-anchor="start" x="474" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">TestGhostCreator</text>
@@ -277,7 +277,7 @@
 <!-- Node17 -->
 <g id="node18" class="node">
 <title>Node17</title>
-<g id="a_node18"><a xlink:href="d0/db9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhostCreator.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhostCreator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="689,-30 466,-30 466,0 689,0 689,-30"/>
 <text text-anchor="start" x="474" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.ghosts.types.</text>
 <text text-anchor="middle" x="577.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ZigguratGhostCreator</text>

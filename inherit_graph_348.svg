@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="df/d13/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionHub.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionHub.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="225,-30 0,-30 0,0 225,0 225,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="112.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">MissionHub</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d7/d32/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="486,-30 261,-30 261,0 486,0 486,-30"/>
 <text text-anchor="start" x="269" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.missions.hub.</text>
 <text text-anchor="middle" x="373.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">BaseMissionHub</text>

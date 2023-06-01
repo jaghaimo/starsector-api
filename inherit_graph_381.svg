@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="de/d64/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="203,-150 0,-150 0,-120 203,-120 203,-150"/>
 <text text-anchor="start" x="8" y="-138" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.</text>
 <text text-anchor="middle" x="101.5" y="-127" font-family="Helvetica,sans-Serif" font-size="10.00">TerrainGenPlugin</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="df/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AccretionDiskGenPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AccretionDiskGenPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="442,-270 239,-270 239,-240 442,-240 442,-270"/>
 <text text-anchor="start" x="247" y="-258" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.</text>
 <text text-anchor="middle" x="340.5" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">AccretionDiskGenPlugin</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AsteroidBeltGenPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AsteroidBeltGenPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="442,-222 239,-222 239,-192 442,-192 442,-222"/>
 <text text-anchor="start" x="247" y="-210" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.</text>
 <text text-anchor="middle" x="340.5" y="-199" font-family="Helvetica,sans-Serif" font-size="10.00">AsteroidBeltGenPlugin</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d2/d5b/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AsteroidFieldGenPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1AsteroidFieldGenPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="442,-174 239,-174 239,-144 442,-144 442,-174"/>
 <text text-anchor="start" x="247" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.</text>
 <text text-anchor="middle" x="340.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">AsteroidFieldGenPlugin</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d2/d66/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="442,-126 239,-126 239,-96 442,-96 442,-126"/>
 <text text-anchor="start" x="247" y="-114" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.</text>
 <text text-anchor="middle" x="340.5" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00">MagFieldGenPlugin</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="d8/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NebulaSmallGenPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NebulaSmallGenPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="442,-78 239,-78 239,-48 442,-48 442,-78"/>
 <text text-anchor="start" x="247" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.</text>
 <text text-anchor="middle" x="340.5" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">NebulaSmallGenPlugin</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="d9/d56/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1RingGenPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="442,-30 239,-30 239,0 442,0 442,-30"/>
 <text text-anchor="start" x="247" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.</text>
 <text text-anchor="middle" x="340.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">RingGenPlugin</text>

@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="da/d9c/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BeamEffectPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BeamEffectPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="136,-174 0,-174 0,-144 136,-144 136,-174"/>
 <text text-anchor="start" x="8" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.</text>
 <text text-anchor="middle" x="68" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">BeamEffectPlugin</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="df/dd3/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BeamEffectPluginWithReset.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BeamEffectPluginWithReset.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="319.5,-318 180.5,-318 180.5,-288 319.5,-288 319.5,-318"/>
 <text text-anchor="start" x="188.5" y="-306" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.</text>
 <text text-anchor="middle" x="250" y="-295" font-family="Helvetica,sans-Serif" font-size="10.00">BeamEffectPluginWithReset</text>
@@ -37,7 +37,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d8/d48/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GravitonBeamEffect.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GravitonBeamEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="328,-270 172,-270 172,-240 328,-240 328,-270"/>
 <text text-anchor="start" x="180" y="-258" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="250" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">GravitonBeamEffect</text>
@@ -53,7 +53,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="db/dfb/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1IonBeamEffect.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1IonBeamEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="328,-222 172,-222 172,-192 328,-192 328,-222"/>
 <text text-anchor="start" x="180" y="-210" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="250" y="-199" font-family="Helvetica,sans-Serif" font-size="10.00">IonBeamEffect</text>
@@ -69,7 +69,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="d1/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PaladinEffect.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PaladinEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="328,-174 172,-174 172,-144 328,-144 328,-174"/>
 <text text-anchor="start" x="180" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="250" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">PaladinEffect</text>
@@ -85,7 +85,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="d8/d10/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="328,-126 172,-126 172,-96 328,-96 328,-126"/>
 <text text-anchor="start" x="180" y="-114" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="250" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00">RiftCascadeEffect</text>
@@ -101,7 +101,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="df/d32/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftLanceEffect.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftLanceEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="328,-78 172,-78 172,-48 328,-48 328,-78"/>
 <text text-anchor="start" x="180" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="250" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">RiftLanceEffect</text>
@@ -117,7 +117,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="d7/dce/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TachyonLanceEffect.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TachyonLanceEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="328,-30 172,-30 172,0 328,0 328,-30"/>
 <text text-anchor="start" x="180" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="250" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">TachyonLanceEffect</text>
@@ -133,7 +133,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d7/dd6/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NSLanceEffectSavedCopy.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NSLanceEffectSavedCopy.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="520,-318 364,-318 364,-288 520,-288 520,-318"/>
 <text text-anchor="start" x="372" y="-306" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="442" y="-295" font-family="Helvetica,sans-Serif" font-size="10.00">NSLanceEffectSavedCopy</text>

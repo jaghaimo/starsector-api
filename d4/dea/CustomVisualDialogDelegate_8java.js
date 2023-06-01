@@ -1,5 +1,0 @@
-var CustomVisualDialogDelegate_8java =
-[
-    [ "com.fs.starfarer.api.campaign.CustomVisualDialogDelegate", "d3/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate.html", "d3/d3f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate" ],
-    [ "com.fs.starfarer.api.campaign.CustomVisualDialogDelegate.DialogCallbacks", "dc/d25/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate_1_1DialogCallbacks.html", "dc/d25/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate_1_1DialogCallbacks" ]
-];

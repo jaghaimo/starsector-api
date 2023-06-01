@@ -1,0 +1,28 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI =
+[
+    [ "getBandIndex", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#aac4be5a5a7e2c5d7c98bd9ef598b1ca7", null ],
+    [ "getBandWidthInEngine", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#aaada37c28d0769b635d8d9e033f038f2", null ],
+    [ "getBandWidthInTexture", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#ae120e193b9ea752a11f88916a23de78a", null ],
+    [ "getCategory", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a4610f2ae7de0fb08c8fc7ac1ab6f63d4", null ],
+    [ "getColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a0c042c399a02d850d6bafb84868429b1", null ],
+    [ "getFocus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a3e9188f5b69c4d2be3e4a2d780c4d848", null ],
+    [ "getKey", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a2faf44ed315e3183621f9caf8ae8a232", null ],
+    [ "getMiddleRadius", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#ac1bf18614fa3833aa3ab516b93aa383d", null ],
+    [ "getMinSpiralRadius", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#afd63816c4976cb9bb5b9bd7ef02eaf08", null ],
+    [ "getOrbitDays", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a3428dbc41fa9e5d104f53331518fc1fd", null ],
+    [ "getSpiralFactor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a094bdd36153558be368146360aa7012f", null ],
+    [ "getSpriteCategory", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#aee375a7091607cc5e376bc9dfd480b45", null ],
+    [ "getSpriteKey", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a544bdf1ef2fa275e206206b9e4c98a0d", null ],
+    [ "isSpiral", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a69f7903af954a46208d47df3defc66e1", null ],
+    [ "setBandIndex", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a84e8c38e883c5996a181513176230e13", null ],
+    [ "setBandWidthInEngine", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a3a1a5c5d894d02804c82c869801f44d0", null ],
+    [ "setBandWidthInTexture", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a8fb88187ba0967115e652ed5c57c8837", null ],
+    [ "setCategory", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#acea4871bb6e75bfb9024295c62b0f55f", null ],
+    [ "setColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a994ed6a53b32e8560828b12cb1dbe59f", null ],
+    [ "setFocus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#ad00ea32cfc19c68fbfb8c2a2f34579d1", null ],
+    [ "setMiddleRadius", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a285fbefc85a8a8c87dfc3ac5b213fea7", null ],
+    [ "setMinSpiralRadius", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#abe0425928b2e346280711c270e750707", null ],
+    [ "setOrbitDays", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a131868689b9e84278fd12b7a44bafa55", null ],
+    [ "setSpiral", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a0dbe1acba067fbae4202a8afa33098ad", null ],
+    [ "setSpiralFactor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html#a2c3cdfffb0005ead417c3686280a6618", null ]
+];

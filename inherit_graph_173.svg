@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d6/dfd/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleObjectiveEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="136,-78 0,-78 0,-48 136,-48 136,-78"/>
 <text text-anchor="start" x="8" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.</text>
 <text text-anchor="middle" x="68" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">BattleObjectiveEffect</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="dc/de1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="328,-78 172,-78 172,-48 328,-48 328,-78"/>
 <text text-anchor="start" x="180" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="250" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">BaseBattleObjectiveEffect</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d3/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CommRelayEffect.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CommRelayEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="520,-126 364,-126 364,-96 520,-96 520,-126"/>
 <text text-anchor="start" x="372" y="-114" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="442" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00">CommRelayEffect</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d4/d6a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NavBuoyEffect.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NavBuoyEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="520,-78 364,-78 364,-48 520,-48 520,-78"/>
 <text text-anchor="start" x="372" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="442" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">NavBuoyEffect</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="d6/d92/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorArrayEffect.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorArrayEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="520,-30 364,-30 364,0 520,0 520,-30"/>
 <text text-anchor="start" x="372" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="442" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">SensorArrayEffect</text>

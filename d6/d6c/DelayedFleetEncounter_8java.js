@@ -1,7 +1,0 @@
-var DelayedFleetEncounter_8java =
-[
-    [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter", "d6/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html", "d6/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter" ],
-    [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter.Stage", "d9/da9/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1Stage.html", "d9/da9/enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1Stage" ],
-    [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter.CanSpawnFleetConditionChecker", "d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1CanSpawnFleetConditionChecker.html", "d1/dc1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1CanSpawnFleetConditionChecker" ],
-    [ "com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter.DFEPlaceFleetAction", "dc/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html", "dc/d9c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction" ]
-];

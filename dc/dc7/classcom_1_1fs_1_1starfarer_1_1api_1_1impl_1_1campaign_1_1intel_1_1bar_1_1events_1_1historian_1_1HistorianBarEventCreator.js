@@ -1,8 +1,0 @@
-var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator =
-[
-    [ "createBarEvent", "dc/dc7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html#ab88ff357ab1fb2c40e7013e1e5098e7c", null ],
-    [ "getBarEventAcceptedTimeoutDuration", "dc/dc7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html#ae999bd9919eeb25e4d044c041ae245f0", null ],
-    [ "getBarEventActiveDuration", "dc/dc7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html#a60dfcf8d20a7eef252bd96ffa23848b5", null ],
-    [ "getBarEventTimeoutDuration", "dc/dc7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html#a142baf9a799c89d0ccbc57886d63cff6", null ],
-    [ "isPriority", "dc/dc7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1HistorianBarEventCreator.html#a6cbe08176e098ccadd0a179c5aa1a7bf", null ]
-];

@@ -1,4 +1,0 @@
-var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1MarineLossesStatModifier =
-[
-    [ "modifyMarineLossesStatPreRaid", "d8/d5d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1MarineLossesStatModifier.html#a375e966f21ccc3219b017a6ac12e1dd2", null ]
-];

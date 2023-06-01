@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d4/de9/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CampaignObjective.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="348,-654 182,-654 182,-624 348,-624 348,-654"/>
 <text text-anchor="start" x="190" y="-642" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="265" y="-631" font-family="Helvetica,sans-Serif" font-size="10.00">CampaignObjective</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d6/d84/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCampaignObjectivePlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-654 400,-654 400,-624 566,-624 566,-654"/>
 <text text-anchor="start" x="408" y="-642" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-631" font-family="Helvetica,sans-Serif" font-size="10.00">BaseCampaignObjectivePlugin</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="da/d29/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CommRelayEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="784,-702 618,-702 618,-672 784,-672 784,-702"/>
 <text text-anchor="start" x="626" y="-690" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="701" y="-679" font-family="Helvetica,sans-Serif" font-size="10.00">CommRelayEntityPlugin</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d1/da1/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NavBuoyEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1NavBuoyEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="784,-654 618,-654 618,-624 784,-624 784,-654"/>
 <text text-anchor="start" x="626" y="-642" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="701" y="-631" font-family="Helvetica,sans-Serif" font-size="10.00">NavBuoyEntityPlugin</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="da/dd8/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SensorArrayEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="784,-606 618,-606 618,-576 784,-576 784,-606"/>
 <text text-anchor="start" x="626" y="-594" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="701" y="-583" font-family="Helvetica,sans-Serif" font-size="10.00">SensorArrayEntityPlugin</text>
@@ -85,7 +85,7 @@
 <!-- Node19 -->
 <g id="node6" class="node">
 <title>Node19</title>
-<g id="a_node6"><a xlink:href="d9/d2d/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="146,-342 0,-342 0,-312 146,-312 146,-342"/>
 <text text-anchor="start" x="8" y="-330" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="73" y="-319" font-family="Helvetica,sans-Serif" font-size="10.00">CustomCampaignEntityPlugin</text>
@@ -95,7 +95,7 @@
 <!-- Node5 -->
 <g id="node7" class="node">
 <title>Node5</title>
-<g id="a_node7"><a xlink:href="d5/d0a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="348,-342 182,-342 182,-312 348,-312 348,-342"/>
 <text text-anchor="start" x="190" y="-330" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="265" y="-319" font-family="Helvetica,sans-Serif" font-size="10.00">BaseCustomEntityPlugin</text>
@@ -117,7 +117,7 @@
 <!-- Node6 -->
 <g id="node8" class="node">
 <title>Node6</title>
-<g id="a_node8"><a xlink:href="d6/d97/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CargoPodsEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-606 400,-606 400,-576 566,-576 566,-606"/>
 <text text-anchor="start" x="408" y="-594" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-583" font-family="Helvetica,sans-Serif" font-size="10.00">CargoPodsEntityPlugin</text>
@@ -133,7 +133,7 @@
 <!-- Node7 -->
 <g id="node9" class="node">
 <title>Node7</title>
-<g id="a_node9"><a xlink:href="de/d71/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CryosleeperEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CryosleeperEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-558 400,-558 400,-528 566,-528 566,-558"/>
 <text text-anchor="start" x="408" y="-546" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-535" font-family="Helvetica,sans-Serif" font-size="10.00">CryosleeperEntityPlugin</text>
@@ -149,7 +149,7 @@
 <!-- Node8 -->
 <g id="node10" class="node">
 <title>Node8</title>
-<g id="a_node10"><a xlink:href="de/d08/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DerelictShipEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DerelictShipEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-510 400,-510 400,-480 566,-480 566,-510"/>
 <text text-anchor="start" x="408" y="-498" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-487" font-family="Helvetica,sans-Serif" font-size="10.00">DerelictShipEntityPlugin</text>
@@ -165,7 +165,7 @@
 <!-- Node9 -->
 <g id="node11" class="node">
 <title>Node9</title>
-<g id="a_node11"><a xlink:href="dd/dbf/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-462 400,-462 400,-432 566,-432 566,-462"/>
 <text text-anchor="start" x="408" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-439" font-family="Helvetica,sans-Serif" font-size="10.00">ExampleCustomEntityPlugin</text>
@@ -181,7 +181,7 @@
 <!-- Node10 -->
 <g id="node12" class="node">
 <title>Node10</title>
-<g id="a_node12"><a xlink:href="da/da7/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExplosionEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node12"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExplosionEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-414 400,-414 400,-384 566,-384 566,-414"/>
 <text text-anchor="start" x="408" y="-402" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-391" font-family="Helvetica,sans-Serif" font-size="10.00">ExplosionEntityPlugin</text>
@@ -197,7 +197,7 @@
 <!-- Node11 -->
 <g id="node13" class="node">
 <title>Node11</title>
-<g id="a_node13"><a xlink:href="de/df9/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node13"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-366 400,-366 400,-336 566,-336 566,-366"/>
 <text text-anchor="start" x="408" y="-354" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-343" font-family="Helvetica,sans-Serif" font-size="10.00">FusionLampEntityPlugin</text>
@@ -213,7 +213,7 @@
 <!-- Node12 -->
 <g id="node14" class="node">
 <title>Node12</title>
-<g id="a_node14"><a xlink:href="dc/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GateEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node14"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1GateEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-318 400,-318 400,-288 566,-288 566,-318"/>
 <text text-anchor="start" x="408" y="-306" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-295" font-family="Helvetica,sans-Serif" font-size="10.00">GateEntityPlugin</text>
@@ -229,7 +229,7 @@
 <!-- Node13 -->
 <g id="node15" class="node">
 <title>Node13</title>
-<g id="a_node15"><a xlink:href="d8/d31/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1HiddenCacheEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node15"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1HiddenCacheEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-270 400,-270 400,-240 566,-240 566,-270"/>
 <text text-anchor="start" x="408" y="-258" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">HiddenCacheEntityPlugin</text>
@@ -245,7 +245,7 @@
 <!-- Node14 -->
 <g id="node16" class="node">
 <title>Node14</title>
-<g id="a_node16"><a xlink:href="da/dc0/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SupplyCacheEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node16"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1SupplyCacheEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-222 400,-222 400,-192 566,-192 566,-222"/>
 <text text-anchor="start" x="408" y="-210" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-199" font-family="Helvetica,sans-Serif" font-size="10.00">SupplyCacheEntityPlugin</text>
@@ -261,7 +261,7 @@
 <!-- Node15 -->
 <g id="node17" class="node">
 <title>Node15</title>
-<g id="a_node17"><a xlink:href="d5/d94/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1WarningBeaconEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node17"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1WarningBeaconEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="566,-174 400,-174 400,-144 566,-144 566,-174"/>
 <text text-anchor="start" x="408" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="483" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">WarningBeaconEntityPlugin</text>
@@ -277,7 +277,7 @@
 <!-- Node16 -->
 <g id="node18" class="node">
 <title>Node16</title>
-<g id="a_node18"><a xlink:href="d1/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node18"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="582,-126 384,-126 384,-96 582,-96 582,-126"/>
 <text text-anchor="start" x="392" y="-114" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.velfield.</text>
 <text text-anchor="middle" x="483" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00">SlipstreamEntityPlugin</text>
@@ -293,7 +293,7 @@
 <!-- Node17 -->
 <g id="node19" class="node">
 <title>Node17</title>
-<g id="a_node19"><a xlink:href="d2/d6a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2.html" target="_top" xlink:title=" ">
+<g id="a_node19"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamEntityPlugin2.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="582,-78 384,-78 384,-48 582,-48 582,-78"/>
 <text text-anchor="start" x="392" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.velfield.</text>
 <text text-anchor="middle" x="483" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">SlipstreamEntityPlugin2</text>
@@ -309,7 +309,7 @@
 <!-- Node18 -->
 <g id="node20" class="node">
 <title>Node18</title>
-<g id="a_node20"><a xlink:href="dd/d17/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node20"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1TurbulenceEntityPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="582,-30 384,-30 384,0 582,0 582,-30"/>
 <text text-anchor="start" x="392" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.velfield.</text>
 <text text-anchor="middle" x="483" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">TurbulenceEntityPlugin</text>

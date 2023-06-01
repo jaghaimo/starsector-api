@@ -1,5 +1,0 @@
-var RemnantStationFleetManager_8java =
-[
-    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantStationFleetManager", "d7/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantStationFleetManager.html", "d7/da2/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantStationFleetManager" ],
-    [ "com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantStationFleetManager.RemnantSystemEPGenerator", "da/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantStationFleb50e0f19d17c939fd288d2e6ebd345d6.html", "da/dbc/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantStationFleb50e0f19d17c939fd288d2e6ebd345d6" ]
-];

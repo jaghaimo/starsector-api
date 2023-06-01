@@ -1,0 +1,28 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub =
+[
+    [ "BaseMissionHub", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a3871c496d2985f8270a8e14f837dad4a", null ],
+    [ "accept", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a7c8826f4fdc429bef25d189d41df8f20", null ],
+    [ "callEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#ab8fe6e6b41640f4ca9cee1aef1e92b33", null ],
+    [ "doCleanup", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#aeebbe9833f9695d4ed77236b967c7d50", null ],
+    [ "getOfferedMissions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#aaa31ed76c4300d4f5224930f8cde7fea", null ],
+    [ "getOpenOptionText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#af812ba7caf95642e3e3c7fb42ad49794", null ],
+    [ "getPerson", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a1e522dca7a8fdae706ed9a82b1b54cb4", null ],
+    [ "getUpdateInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#aab762b79dcc348f2beb60affca8fc581", null ],
+    [ "listMissions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#af361025270ab5ad3dd97799e401df502", null ],
+    [ "prepare", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a098220fa622ead8479495284e5d43807", null ],
+    [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#aee3ec3f7b8520a4aea577af742185ebd", null ],
+    [ "setPerson", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a5af0b5b8b0c8f2f3b2b0a2015503b746", null ],
+    [ "updateCountAndFirstInlineBlurb", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a19a0fd7e69ffbb2f68fdb0d3b152bc6d", null ],
+    [ "updateMissionCreatorsFromSpecs", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a355cf777c1b02ba7f1fb14ea194c1141", null ],
+    [ "updateOfferedMissions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a308ae61305531b2a62e028a9a137db10", null ],
+    [ "creators", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a4acc1609178bda8e6e8e4af3ba7cce40", null ],
+    [ "daysSinceLastUpdate", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a69bcfdb55bcf457a1076e097de1cb4f7", null ],
+    [ "lastUpdated", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a9a378e518d5b4b3c9eb09205925a7493", null ],
+    [ "lastUpdatedSeeds", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a038c3101e95b8746e32f621d4f80ece2", null ],
+    [ "missionGenRandom", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#af2cac37b538c84c0d24b65b82d2c046d", null ],
+    [ "offered", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a72f6ffd8e66a0524abf1062a79a36f2f", null ],
+    [ "person", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#addffb4b69683a2d8da775247004051e6", null ],
+    [ "recentlyAcceptedTimeout", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#a405c8bcb4abd43658ddaadbba9367f07", null ],
+    [ "seed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#aba1c55db59749dcdb08f12cf5977d925", null ],
+    [ "timeout", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1BaseMissionHub.html#aa04c84538b05ec039b19af51968d5f5a", null ]
+];

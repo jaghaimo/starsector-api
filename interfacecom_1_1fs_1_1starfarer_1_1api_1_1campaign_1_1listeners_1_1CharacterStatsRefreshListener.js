@@ -1,0 +1,5 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CharacterStatsRefreshListener =
+[
+    [ "reportAboutToRefreshCharacterStatEffects", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CharacterStatsRefreshListener.html#aababace12d438de3c436a69d7dec9b60", null ],
+    [ "reportRefreshedCharacterStatEffects", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CharacterStatsRefreshListener.html#a04220f15c4f848d40ff555bca71bf8fd", null ]
+];

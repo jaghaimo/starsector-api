@@ -20,7 +20,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d2/dfd/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil_1_1BucketIterator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="233,-78 83,-78 83,-48 233,-48 233,-78"/>
 <text text-anchor="start" x="91" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.util.</text>
 <text text-anchor="middle" x="158" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">CollisionGridUtil.BucketIterator</text>
@@ -36,7 +36,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="dc/d19/classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1SaveableIterator.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="216,-30 100,-30 100,0 216,0 216,-30"/>
 <text text-anchor="start" x="108" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.util.</text>
 <text text-anchor="middle" x="158" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">SaveableIterator&lt; T &gt;</text>

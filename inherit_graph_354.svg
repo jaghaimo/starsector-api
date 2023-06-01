@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="dc/d0f/interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStat.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStat.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="186,-222 0,-222 0,-192 186,-192 186,-222"/>
 <text text-anchor="start" x="8" y="-210" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="93" y="-199" font-family="Helvetica,sans-Serif" font-size="10.00">PLStat</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="de/d8f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLStat.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="408,-222 222,-222 222,-192 408,-192 408,-222"/>
 <text text-anchor="start" x="230" y="-210" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="315" y="-199" font-family="Helvetica,sans-Serif" font-size="10.00">BasePLStat</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="dd/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatCargo.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatCargo.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="630,-414 444,-414 444,-384 630,-384 630,-414"/>
 <text text-anchor="start" x="452" y="-402" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="537" y="-391" font-family="Helvetica,sans-Serif" font-size="10.00">PLStatCargo</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d7/d1c/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatColonies.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatColonies.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="630,-366 444,-366 444,-336 630,-336 630,-366"/>
 <text text-anchor="start" x="452" y="-354" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="537" y="-343" font-family="Helvetica,sans-Serif" font-size="10.00">PLStatColonies</text>
@@ -69,7 +69,7 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="db/d0f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatCredits.html" target="_top" xlink:title=" ">
+<g id="a_node5"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatCredits.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="630,-318 444,-318 444,-288 630,-288 630,-318"/>
 <text text-anchor="start" x="452" y="-306" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="537" y="-295" font-family="Helvetica,sans-Serif" font-size="10.00">PLStatCredits</text>
@@ -85,7 +85,7 @@
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="d1/d65/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatCrew.html" target="_top" xlink:title=" ">
+<g id="a_node6"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatCrew.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="630,-270 444,-270 444,-240 630,-240 630,-270"/>
 <text text-anchor="start" x="452" y="-258" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="537" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">PLStatCrew</text>
@@ -101,7 +101,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="da/d6d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatFleet.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatFleet.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="630,-222 444,-222 444,-192 630,-192 630,-222"/>
 <text text-anchor="start" x="452" y="-210" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="537" y="-199" font-family="Helvetica,sans-Serif" font-size="10.00">PLStatFleet</text>
@@ -117,7 +117,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="d9/d2d/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatFuel.html" target="_top" xlink:title=" ">
+<g id="a_node8"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatFuel.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="630,-174 444,-174 444,-144 630,-144 630,-174"/>
 <text text-anchor="start" x="452" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="537" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">PLStatFuel</text>
@@ -133,7 +133,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="dd/d06/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatLevel.html" target="_top" xlink:title=" ">
+<g id="a_node9"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatLevel.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="630,-126 444,-126 444,-96 630,-96 630,-126"/>
 <text text-anchor="start" x="452" y="-114" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="537" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00">PLStatLevel</text>
@@ -149,7 +149,7 @@
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="da/d9f/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatMarines.html" target="_top" xlink:title=" ">
+<g id="a_node10"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatMarines.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="630,-78 444,-78 444,-48 630,-48 630,-78"/>
 <text text-anchor="start" x="452" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="537" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">PLStatMarines</text>
@@ -165,7 +165,7 @@
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="dd/d9a/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatSupplies.html" target="_top" xlink:title=" ">
+<g id="a_node11"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatSupplies.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="630,-30 444,-30 444,0 630,0 630,-30"/>
 <text text-anchor="start" x="452" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.plog.</text>
 <text text-anchor="middle" x="537" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">PLStatSupplies</text>

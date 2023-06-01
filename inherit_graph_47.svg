@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d0/d01/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1AbandonMarketPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="169,-78 0,-78 0,-48 169,-48 169,-78"/>
 <text text-anchor="start" x="8" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.econ.</text>
 <text text-anchor="middle" x="84.5" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">AbandonMarketPlugin</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="db/d5e/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1AbandonMarketPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="406.5,-78 240.5,-78 240.5,-48 406.5,-48 406.5,-78"/>
 <text text-anchor="start" x="248.5" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="323.5" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">AbandonMarketPluginImpl</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="d6/da5/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseGenericPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseGenericPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="167.5,-30 1.5,-30 1.5,0 167.5,0 167.5,-30"/>
 <text text-anchor="start" x="9.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="84.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">BaseGenericPlugin</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d0/dfe/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1PKDefenderPluginImpl.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="442,-30 205,-30 205,0 442,0 442,-30"/>
 <text text-anchor="start" x="213" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.procgen.themes.</text>
 <text text-anchor="middle" x="323.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">PKDefenderPluginImpl</text>

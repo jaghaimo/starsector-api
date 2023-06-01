@@ -1,0 +1,25 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec =
+[
+    [ "TerrainGenDataSpec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a94366c6dfe944cd8921a676435abc30a", null ],
+    [ "addTag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#ac9420261f9780d08fab5dd70f2a9e087", null ],
+    [ "getCategory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#ade6b5ec488f62025a4b7fc408fdd01e7", null ],
+    [ "getFrequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a466df0d9b64358c62180ba3a49efcafe", null ],
+    [ "getHabOffsetAVERAGE", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a8f70bba5c43a63930b8acb85a2324c1f", null ],
+    [ "getHabOffsetMax", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a4c0740ce96f4cdd6b70d4c83b01b9c25", null ],
+    [ "getHabOffsetMin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a71795b9f2fd01e6edc3857b3ca168ce7", null ],
+    [ "getHabOffsetOLD", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a6c5619bd6c1c64e4b125e7f1c2ed5e93", null ],
+    [ "getHabOffsetYOUNG", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#af20f20088e1aa7bc85150199e4e5cb0b", null ],
+    [ "getId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#afd8e0e7f3d70c3aabca7d58b3dbe79c4", null ],
+    [ "getMaxColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#ae36699f906ef41273300a348851ab8ac", null ],
+    [ "getMaxOrbits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#aa47f5689102633eca736a97a8020f049", null ],
+    [ "getMaxRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a37f1b6dbbda6d78c0cb575182a6b0bb1", null ],
+    [ "getMinColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a165cd18af8aa449d89523ec5ec4a6eec", null ],
+    [ "getMinOrbits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a695c84763d14549a7ad5075e7b0a990d", null ],
+    [ "getMinRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a785685395b7c4ea63b06474d8650f358", null ],
+    [ "getMultiplier", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a40baeb6e221f37a9891d0264c551f912", null ],
+    [ "getMultipliers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#aac892016110a074c2468b1d588c0c998", null ],
+    [ "getProbOrbits", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a4605cc649d0b82ab1d6c59a56ce67cd7", null ],
+    [ "getTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a5a5c73f3e19a77e7d96026b140f5f92f", null ],
+    [ "hasTag", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a0dcbb334412fc8ed37b51743c3b53d26", null ],
+    [ "toString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenDataSpec.html#a96a9cc474bac3794a5379e4430ab6011", null ]
+];

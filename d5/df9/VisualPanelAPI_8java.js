@@ -1,4 +1,0 @@
-var VisualPanelAPI_8java =
-[
-    [ "com.fs.starfarer.api.campaign.VisualPanelAPI", "d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html", "d1/d60/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI" ]
-];

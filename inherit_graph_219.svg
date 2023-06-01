@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="db/dca/interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ProximityExplosionEffect.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ProximityExplosionEffect.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="136,-78 0,-78 0,-48 136,-48 136,-78"/>
 <text text-anchor="start" x="8" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.</text>
 <text text-anchor="middle" x="68" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">ProximityExplosionEffect</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="dc/d88/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamMineExplosion.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftBeamMineExplosion.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="328,-126 172,-126 172,-96 328,-96 328,-126"/>
 <text text-anchor="start" x="180" y="-114" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="250" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00">RiftBeamMineExplosion</text>
@@ -37,7 +37,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="dc/d51/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeMineExplosion.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="328,-78 172,-78 172,-48 328,-48 328,-78"/>
 <text text-anchor="start" x="180" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="250" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">RiftCascadeMineExplosion</text>
@@ -53,7 +53,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="d4/d25/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftLanceMineExplosion.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftLanceMineExplosion.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="328,-30 172,-30 172,0 328,0 328,-30"/>
 <text text-anchor="start" x="180" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.combat.</text>
 <text text-anchor="middle" x="250" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">RiftLanceMineExplosion</text>

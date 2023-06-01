@@ -11,7 +11,7 @@
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<g id="a_node1"><a xlink:href="d2/dc5/interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin.html" target="_top" xlink:title=" ">
+<g id="a_node1"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="161,-30 0,-30 0,0 161,0 161,-30"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
 <text text-anchor="middle" x="80.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ReputationActionResponsePlugin</text>
@@ -21,7 +21,7 @@
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:href="d2/d61/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreReputationPlugin.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreReputationPlugin.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="363,-30 197,-30 197,0 363,0 363,-30"/>
 <text text-anchor="start" x="205" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.impl.campaign.</text>
 <text text-anchor="middle" x="280" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">CoreReputationPlugin</text>

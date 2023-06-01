@@ -1,4 +1,0 @@
-var KantasProtectionPirateActivityCause2_8java =
-[
-    [ "com.fs.starfarer.api.impl.campaign.intel.events.KantasProtectionPirateActivityCause2", "d3/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1KantasProtectionPirateActivityCause2.html", "d3/d13/classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1KantasProtectionPirateActivityCause2" ]
-];
